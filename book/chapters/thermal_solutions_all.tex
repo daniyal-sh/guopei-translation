@@ -1,0 +1,1884 @@
+\begin{solution}{2.01}
+\textit{Method 1.}\quad Since the rotational speed of the pump is $\omega$ revolutions per minute and the volume of gas extracted per minute is $c$ litres, the volume of gas extracted in one revolution of the pump is
+\[
+v=\frac{c}{\omega}.
+\]
+Let the pressure in the vessel after the pump has extracted the gas once be $p_1$; then
+\[
+p_1(V+v)=p_0V,
+\]
+that is,
+\[
+p_1=\left(\frac{V}{V+v}\right)p_0=\left(\frac{V}{V+c/\omega}\right)p_0.
+\]
+Let the pressure in the vessel after $n$ strokes be $p_n$; then from the above analysis,
+\[
+p_n=\left(\frac{V}{V+c/\omega}\right)^{\!n}p_0,
+\qquad
+n=\frac{\ln\dfrac{p_n}{p_0}}{\ln\left(\dfrac{V}{V+c/\omega}\right)}.
+\]
+The time taken is
+\[
+t=\frac{n}{\omega}=\frac{\ln\dfrac{p_0}{p_n}}{\omega\ln\left(1+\dfrac{c}{V\omega}\right)}.
+\]
+When $p_n=10^{-2}p_0$,
+\[
+t=\frac{2\ln 10}{\omega\ln\left(1+\dfrac{c}{\omega V}\right)}.
+\]
+If $\dfrac{c}{\omega V}\ll 1$, then
+\[
+t=\frac{V}{c}\ln\frac{p_0}{p_n}=2\,\frac{V}{c}\ln 10\approx 4.606\,\frac{V}{c}\ (\text{min}).
+\]
+
+\textit{Method 2.}\quad Suppose that in time $\dd t$ the pump extracts a volume of gas $\dd v=c\,\dd t$, and the pressure in the vessel is $p+\dd p$; then
+\[
+(p+\dd p)(V+c\,\dd t)=pV,
+\]
+that is,
+\[
+\frac{\dd p}{p}=-\frac{c}{V}\,\dd t.
+\]
+Integrating both sides gives
+\[
+t=\frac{V}{c}\ln\frac{p_0}{p}=\frac{V}{c}\ln\frac{p_0}{10^{-2}p_0}=\frac{2V}{c}\ln 10=4.606\,\frac{V}{c}\ (\text{min}).
+\]
+\end{solution}
+
+\begin{solution}{2.02}
+Since the interaction potential energy $E_p$ of the two atoms in a diatomic molecule is
+\[
+E_p=E_p(0)\left[\left(\frac{r_0}{r}\right)^{12}-\left(\frac{r_0}{r}\right)^{6}\right],
+\]
+the interaction force $F(r)$ between the two atoms is
+\[
+F(r)=-\frac{\partial E_p}{\partial r}=12\,\frac{E_p(0)}{r_0}\left[\left(\frac{r_0}{r}\right)^{13}-\left(\frac{r_0}{r}\right)^{7}\right].
+\]
+If, when the temperature of the system is $T$, the vibrational energy of the molecule is not large, the two atoms in the molecule will perform simple harmonic motion about the equilibrium position. Expanding $F(r)$ in a Taylor series about $r=r_0$ and keeping the term linear in $(r-r_0)$, we obtain
+\[
+F(r)=-\frac{72E_p(0)}{r_0^2}(r-r_0)=-Kx.
+\]
+Since, when the system is in equilibrium, the mean kinetic energy and the mean potential energy of the molecular vibration are both $\dfrac{1}{2}kT$,
+\[
+\frac{1}{2}K\overline{x^2}=\frac{1}{2}K\,\overline{(r-r_0)^2}=\frac{1}{2}kT.
+\]
+Because the molecule performs simple harmonic motion, $\bar{r}=r_0$, and hence the mean square deviation of $r$ is
+\[
+\overline{(r-\bar{r})^2}=\frac{k}{K}T=\frac{k}{72E_p(0)}\cdot r_0^2.
+\]
+\end{solution}
+
+\begin{solution}{2.03}
+According to the theory of Brownian motion, or the random-walk model, let the distance of the molecule from the origin be $x$; then
+\[
+\overline{x^2}=2Dt=\frac{l^2}{\tau}t=\overline{v_x}\cdot\lambda\cdot t,
+\]
+that is,
+\[
+t=\frac{\overline{x^2}}{\overline{v_x}\lambda}.
+\]
+Because
+\[
+\frac{1}{2}m\overline{v_x^2}=\frac{1}{2}kT,
+\qquad
+\lambda=\frac{1}{\sqrt{2}\,n\sigma},
+\qquad
+n=\frac{p}{kT},
+\qquad
+\sigma=\pi d^2,
+\]
+we have
+\[
+\overline{v_x}\approx\sqrt{\frac{kT}{m}},
+\]
+and hence
+\[
+t=\frac{\overline{x^2}\sqrt{2}\,\pi d^2 p}{kT}\left(\frac{m}{kT}\right)^{1/2}
+=\frac{\overline{x^2}\sqrt{2}\,\pi d^2 p}{kT}\left(\frac{M}{RT}\right)^{1/2}.
+\]
+Substituting $x=1\times10^{3}$, $d=3\times10^{-10}$, $M=29\times10^{-3}$, $p=1.013\times10^{5}$, $T=273$, $k=1.38\times10^{-23}$, $R=8.31$ into the above expression gives
+\[
+t=3.6\times10^{10}\ (\text{s}).
+\]
+\end{solution}
+
+\begin{solution}{2.04}
+From the concept, in the kinetic theory of molecules, of the number of molecules striking unit area of the wall in unit time, it is known that the intensity $I$ of the molecular beam flowing out of the small hole is
+\[
+I=\frac{1}{4}n\overline{v}=\frac{1}{4}n\sqrt{\frac{8kT}{\pi m}}.
+\]
+Because
+\[
+p=nkT,
+\]
+we have
+\[
+I=\frac{1}{4}\frac{p}{kT}\sqrt{\frac{8kT}{\pi m}}=\frac{p}{\sqrt{2\pi mkT}}.
+\]
+Differentiating both sides of the above expression gives
+\[
+\frac{1}{I}\frac{\dd I}{\dd T}=\frac{1}{p}\frac{\dd p}{\dd T}-\frac{1}{2T}.
+\]
+Because
+\[
+\frac{\dd p}{\dd T}=\frac{l}{T(v_g-v_L)}=\frac{l}{v_gT}=\frac{lMp}{RT^2},
+\]
+where $v_g\gg v_L$ and the equation of state of an ideal gas have been used, we have
+\[
+\frac{1}{I}\frac{\dd I}{\dd T}=\frac{Ml}{RT^2}-\frac{1}{2T}=\frac{1}{T}\left(\frac{Ml}{RT}-\frac{1}{2}\right).
+\]
+\end{solution}
+
+\begin{solution}{2.05}
+(1) The change of the system from the state $(V_1,T_1)$ to the state $(V_2,T_1)$ is an isothermal process. Since
+\[
+\dd Q_1=T\,\dd S_1=\dd U+p\,\dd V,
+\qquad
+U=C_{Vm}T-\frac{a}{V}+U_0,
+\qquad
+\left(p+\frac{a}{V^2}\right)(V-b)=RT,
+\]
+we have
+\[
+\dd U=C_{Vm}\,\dd T+\frac{a}{V^2}\,\dd V,
+\]
+and hence
+\[
+\dd Q_1=C_{Vm}\,\dd T+\left(\frac{a}{V^2}+p\right)\dd V=C_{Vm}\,\dd T+\frac{RT}{V-b}\,\dd V.
+\]
+Integrating the above expression gives
+\[
+Q_1=RT_1\ln\frac{V_2-b}{V_1-b}.
+\]
+
+(2) Since the system passes adiabatically from the state $(V_2,T_1)$ to the state $(V_3,T_2)$, the work $W$ done by the system on the outside is
+\[
+W=-\Delta U=C_{Vm}(T_2-T_1)+\left(\frac{a}{V_3}-\frac{a}{V_2}\right).
+\]
+Because the equation of an adiabatic process of one mole of a van der Waals gas is
+\[
+\left(p+\frac{a}{V^2}\right)(V-b)^{1+\frac{R}{C_{Vm}}}=\text{constant}=A,
+\qquad
+\text{or}\quad
+T(V-b)^{R/C_{Vm}}=\text{constant}=B,
+\]
+we obtain from this
+\[
+V_3=b+\left(\frac{T_1}{T_2}\right)^{C_{Vm}/R}\cdot(V_2-b).
+\]
+Substituting this into the expression for $W$ gives the work done by the system on the outside in the adiabatic process.
+
+Alternatively, $W$ may also be found as follows:
+\[
+\begin{aligned}
+W&=\int_{V_2}^{V_3}p\,\dd V=\int_{V_2}^{V_3}\left[\frac{A}{(V-b)^n}-\frac{a}{V^2}\right]\dd V
+=\frac{A}{1-n}\left[(V_3-b)^{1-n}-(V_2-b)^{1-n}\right]\\[2pt]
+&\quad +a\left(\frac{1}{V_3}-\frac{1}{V_2}\right),
+\end{aligned}
+\]
+where $n=1+R/C_{Vm}$. Because
+\[
+A=\left(p_3+\frac{a}{V_3^2}\right)(V_3-b)^n=\left(p_2+\frac{a}{V_2^2}\right)(V_2-b)^n,
+\]
+we have
+\[
+W=\frac{R}{1-n}(T_2-T_1)+a\left(\frac{1}{V_3}-\frac{1}{V_2}\right)
+=C_{Vm}(T_2-T_1)+a\left(\frac{1}{V_3}-\frac{1}{V_2}\right),
+\]
+which is the same as the result obtained above.
+
+(3) The change of the system from the state $(V_3,T_2)$ to the state $(V_4,T_2)$ is an isothermal process, and the heat $Q_2$ absorbed is
+\[
+Q_2=RT_2\ln\frac{V_4-b}{V_3-b}.
+\]
+Hence the efficiency of the system in one cyclic process is
+\[
+\eta=1-\frac{|Q_2|}{Q_1}
+=1-\frac{RT_2\ln\dfrac{V_3-b}{V_4-b}}{RT_1\ln\dfrac{V_2-b}{V_1-b}}.
+\]
+Because
+\[
+\left(p_3+\frac{a}{V_3^2}\right)(V_3-b)^n=\left(p_2+\frac{a}{V_2^2}\right)(V_2-b)^n,
+\]
+\[
+\left(p_4+\frac{a}{V_4^2}\right)(V_4-b)^n=\left(p_1+\frac{a}{V_1^2}\right)(V_1-b)^n,
+\]
+\[
+\left(p+\frac{a}{V^2}\right)(V-b)=RT,
+\]
+we have
+\[
+\frac{V_3-b}{V_4-b}=\frac{V_2-b}{V_1-b}.
+\]
+Substituting the above result into $\eta$ gives
+\[
+\eta=1-\frac{T_2}{T_1}.
+\]
+This is Carnot's theorem.
+\end{solution}
+
+\begin{solution}{2.06}
+(1) Since the equation of a polytropic process of one mole of a van der Waals gas is
+\[
+\left(p+\frac{a}{v^2}\right)(v-b)^n=\text{constant},
+\]
+where
+\[
+n=1-\frac{R}{C-C_V},
+\]
+and here $C$ and $C_V$ are respectively the molar heat capacity and the molar heat capacity at constant volume, we have
+\[
+C=C_V+\frac{R}{1-n}.
+\]
+Hence
+\[
+Q=\int_{T_1}^{T_2}C\,\dd T=\int_{T_1}^{T_2}\left(C_V+\frac{R}{1-n}\right)\dd T
+=\left(C_V+\frac{R}{1-n}\right)(T_2-T_1)
+=(m-1)\left(C_V+\frac{R}{1-n}\right)T_1.
+\]
+
+(2) Let the final state of the process be $(T_2,V_2)$. Then, since
+\[
+\left(p+\frac{a}{v^2}\right)(v-b)^n=\text{constant},
+\qquad\text{and}\qquad
+\left(p+\frac{a}{v^2}\right)(v-b)=RT,
+\]
+substituting the initial state $(p_1,v_1,T_1)$ and the final state $(p_2,v_2,T_2)$ into the above two expressions gives
+\[
+\left(p_1+\frac{a}{v_1^2}\right)(v_1-b)^n=\left(p_2+\frac{a}{v_2^2}\right)(v_2-b)^n,
+\]
+\[
+\left(p_1+\frac{a}{v_1^2}\right)(v_1-b)=RT_1,
+\qquad
+\left(p_2+\frac{a}{v_2^2}\right)(v_2-b)=RT_2.
+\]
+Therefore
+\[
+\frac{v_2-b}{v_1-b}=\left(\frac{T_2}{T_1}\right)^{\frac{1}{1-n}}=m^{\frac{1}{1-n}},
+\]
+that is,
+\[
+v_2=b+(v_1-b)\,m^{\frac{1}{1-n}}.
+\]
+Since
+\[
+\left(p+\frac{a}{v^2}\right)(v-b)^n=\text{constant},
+\qquad
+\left(p+\frac{a}{v^2}\right)(v-b)=RT,
+\]
+we have
+\[
+RT(v-b)^{n-1}=\text{constant}.
+\]
+Hence
+\[
+\left(p+\frac{a}{v^2}\right)(v-b)^{n-1}=RT_1(v_1-b)^{n-1},
+\]
+and we obtain
+\[
+p=\frac{RT_1(v_1-b)^{n-1}}{(v-b)^n}-\frac{a}{v^2}.
+\]
+Thus the work done by the system on the outside is
+\[
+\begin{aligned}
+W'&=\int_{v_1}^{v_2}p\,\dd v
+=\int_{v_1}^{v_2}\left[\frac{RT_1(v_1-b)^{n-1}}{(v-b)^n}-\frac{a}{v^2}\right]\dd v\\
+&=\frac{RT_1}{1-n}\left[\left(\frac{v_1-b}{v_2-b}\right)^{n-1}-1\right]
++a\left(\frac{1}{v_2}-\frac{1}{v_1}\right)\\
+&=\frac{RT_1}{1-n}(m-1)
++a\left[\frac{1}{b+(v_1-b)\,m^{\frac{1}{1-n}}}-\frac{1}{v_1}\right].
+\end{aligned}
+\]
+
+(3)
+\[
+\Delta S=\int\frac{\dd Q}{T}=\int_{T_1}^{T_2}\frac{C\,\dd T}{T}=C\ln\frac{T_2}{T_1}
+=\left(C_V+\frac{R}{1-n}\right)\ln m.
+\]
+\end{solution}
+
+\begin{solution}{2.07}
+As shown in Fig. 2.07, consider a thin layer of air of area $A$ and thickness $\dd z$ at height $z$. It is in mechanical equilibrium, so that
+\[
+(p+\dd p)\cdot A=pA-M'g,
+\]
+\[
+M'=n\cdot m\cdot A\,\dd z,
+\]
+where $p$ is the gas pressure, $M'$ the mass of this thin layer of air, $n$ the number density of gas molecules at that place, and $g$ the acceleration due to gravity. From the above two equations we obtain
+\begin{equation}
+\frac{\dd p}{\dd z}=-nmg=-\frac{p}{kT}mg \tag{1}
+\end{equation}
+
+Suppose that 1 mol of gas rises by $\dd z$, its temperature changing from $T$ to $T+\dd T$, and that the process is adiabatic; when the gas is regarded as an ideal gas, we have
+\[
+T^{\gamma}p^{1-\gamma}=\text{constant}.
+\]
+Differentiating the above expression with respect to $p$ gives
+\begin{equation}
+\frac{\dd T}{\dd p}=\frac{\gamma-1}{\gamma}\frac{T}{p}. \tag{2}
+\end{equation}
+From (1) and (2) we obtain the rate of change of the atmospheric temperature with height:
+\[
+\frac{\dd T}{\dd z}=\frac{\dd T}{\dd p}\cdot\frac{\dd p}{\dd z}
+=-\frac{\gamma-1}{\gamma}\frac{m}{k}g
+=-\frac{\gamma-1}{\gamma}\frac{M}{R}g,
+\]
+where $M=N_A\cdot m$ is the molar mass of air.
+
+At ordinary temperatures, $C_p=\dfrac{7}{2}R$, $C_V=\dfrac{5}{2}R$, $\gamma=C_p/C_V=\dfrac{7}{5}$, $M=28.96\unitv{g\cdot mol^{-1}}$, $R=8.31\unitv{J\cdot mol^{-1}K^{-1}}$. Substituting these data into the above expression gives
+\[
+\frac{\dd T}{\dd z}
+=-\frac{\left(\dfrac{7}{5}-1\right)}{7/5}\cdot\frac{28.96\times10^{-3}\times10}{8.31}
+=-10\times10^{-3}\ (\text{K/m}).
+\]
+The above expression shows that, under the conditions given in the problem, the temperature of the air falls by 10 degrees for every 1 kilometre of ascent.
+
+\begin{figbox}{2.07}
+\begin{tikzpicture}[scale=1.0,>=latex]
+  % slab
+  \draw[thickline] (0,0) rectangle (4.4,1.5);
+  \foreach \x/\y in {0.5/0.35,1.1/0.95,1.75/0.45,2.45/1.1,3.05/0.55,3.75/1.0,2.15/0.2,3.35/1.2,0.85/1.25,2.85/0.2}
+     \fill (\x,\y) circle (0.7pt);
+  \node[above] at (4.05,1.5) {$A$};
+  % pressure acting from above
+  \draw[force] (0.95,2.75)--(0.95,1.55);
+  \node[right] at (0.98,2.45) {$p+\dd p$};
+  % pressure acting from below
+  \draw[force] (0.95,-1.15)--(0.95,-0.05);
+  \node[right] at (0.98,-0.85) {$p$};
+  % weight
+  \draw[force] (2.55,1.35)--(2.55,0.15);
+  \node[right] at (2.58,0.75) {$M'g$};
+  % thickness
+  \draw[dim] (4.75,0)--(4.75,1.5);
+  \node[right] at (4.78,0.75) {$\dd z$};
+\end{tikzpicture}
+\end{figbox}
+
+\end{solution}
+
+\begin{solution}{2.08}
+Imagine that thermal radiation is taken as the working substance and is made to perform the Carnot cycle shown in Fig. 2.08. Because
+\[
+p=\frac{1}{3}u=\frac{1}{3}\sigma T^4,
+\]
+the isothermal process of this system is just an isobaric process.
+
+\begin{figbox}{2.08}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  \draw[axis] (0,0)--(7.4,0) node[right] {$V$};
+  \draw[axis] (0,0)--(0,5.1) node[above] {$p$};
+  \node[below left] at (0,0) {$O$};
+  \coordinate (P1) at (1.9,4.0);
+  \coordinate (P2) at (3.9,4.0);
+  \coordinate (P3) at (6.11,2.2);
+  \coordinate (P4) at (2.97,2.2);
+  \draw[thickline,postaction={decorate},decoration={markings,mark=at position 0.55 with {\arrow{>}}}]
+     (P1)--(P2);
+  \draw[thickline,domain=3.9:6.11,samples=60,postaction={decorate},
+        decoration={markings,mark=at position 0.5 with {\arrow{>}}}]
+     plot (\x,{24.56/(\x^1.3333)});
+  \draw[thickline,postaction={decorate},decoration={markings,mark=at position 0.55 with {\arrow{>}}}]
+     (P3)--(P4);
+  \draw[thickline,domain=1.9:2.97,samples=60,postaction={decorate},
+        decoration={markings,mark=at position 0.5 with {\arrow{<}}}]
+     plot (\x,{9.41/(\x^1.3333)});
+  \node[above left] at (P1) {$1$};
+  \node[above right] at (P2) {$2$};
+  \node[below right] at (P3) {$3$};
+  \node[below left] at (P4) {$4$};
+\end{tikzpicture}
+\end{figbox}
+
+Since the internal energy $U$ of the system is
+\[
+U=V\cdot u=V\sigma T^4,
+\]
+we have
+\[
+\dd Q=\dd U+p\,\dd V=\dd(V\sigma T^4)+\frac{1}{3}\sigma T^4\,\dd V
+=\frac{4}{3}\sigma T^4\,\dd V+4\sigma T^3V\,\dd T.
+\]
+From the above expression it is seen that, for the isothermal process $1\to2$, the heat absorbed by the system is
+\[
+Q_1=\frac{4}{3}\sigma T_1^4(V_2-V_1),
+\]
+and for the isothermal process $3\to4$, the heat absorbed by the system is
+\[
+Q_2=\frac{4}{3}\sigma T_2^4(V_4-V_3).
+\]
+For an adiabatic process $\dd Q=0$, so
+\[
+\frac{4}{3}\sigma T^4\,\dd V+4\sigma T^3V\,\dd T=0,
+\]
+that is,
+\[
+\frac{\dd V}{V}=-3\frac{\dd T}{T},\qquad \ln VT^3=\text{constant},
+\]
+so
+\[
+VT^3=\text{constant}.
+\]
+Since both $2\to3$ and $4\to1$ are adiabatic processes,
+\[
+V_1T_1^3=V_4T_2^3,\qquad V_2T_1^3=V_3T_2^3.
+\]
+Hence
+\[
+\frac{V_1}{V_2}=\frac{V_4}{V_3},
+\qquad
+\frac{V_3-V_4}{V_2-V_1}=\left(\frac{T_1}{T_2}\right)^3.
+\]
+Therefore
+\[
+\eta=1-\frac{|Q_2|}{Q_1}
+=1-\frac{T_2^4(V_3-V_4)}{T_1^4(V_2-V_1)}
+=1-\frac{T_2}{T_1}.
+\]
+\end{solution}
+
+\begin{solution}{2.09}
+Because the gas is dilute and the motion of the plate is comparatively slow, it may be considered that the motion of the plate does not affect the distribution function of the molecules of the gas with respect to velocity. As shown in Fig. 2.09, suppose that the collision between a molecule and the plate is elastic. Then, relative to the reference frame at rest with the plate, a molecule of velocity $v$ collides with the plate with velocity $v_x+V$, its component in the $x$ direction is $-(v_x+V)$, and its component in the $x$ direction relative to the ground frame is $-(v_x+2V)$. Hence, with respect to the ground frame, the increment of the velocity of this molecule in the $x$ direction is
+\[
+-(v_x+2V)-v_x=-2(v_x+V),
+\]
+and the corresponding momentum acquired by the plate in the $x$ direction is
+\[
+2m(v_x+V).
+\]
+
+\begin{figbox}{2.09}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  % axis
+  \draw[axis] (-3.3,0)--(3.5,0) node[right] {$x$};
+  % plate
+  \draw[thickline] (0,-2.4)--(0,2.5);
+  % plate velocity
+  \draw[force] (0,2.5)--(-1.15,2.5);
+  \node[above] at (-0.6,2.55) {$V$};
+  % gases
+  \node at (-2.45,0.6) {$1$};
+  \node at (2.45,0.6) {$2$};
+  % incoming molecule
+  \draw[thickline,postaction={decorate},decoration={markings,mark=at position 0.55 with {\arrow{>}}}]
+     (-2.9,2.1)--(0,0);
+  \node[above right] at (-1.75,1.25) {$v$};
+  % reflected molecule
+  \draw[thickline,postaction={decorate},decoration={markings,mark=at position 0.6 with {\arrow{>}}}]
+     (0,0)--(-2.55,-1.75);
+  \node[below left] at (-1.45,-0.95) {$v$};
+\end{tikzpicture}
+\end{figbox}
+
+In the time $\dd t$, among the molecules of velocity $v$, those that can collide with the part of the plate of area $\dd A$ must lie in the volume whose height is $(v_x+V)\cdot\dd t$ and whose base is $\dd A$; their number is
+\[
+\dd N=n\cdot(v_x+V)f(v)\,\dd v_x\,\dd v_y\,\dd v_z\,\dd A.
+\]
+Therefore, in the time $\dd t$, the momentum acquired by the plate $A$ in the $x$ direction is
+\[
+\dd k_1=2mn(v_x+V)^2\cdot A f(v)\,\dd v\,\dd t.
+\]
+The force $f_1$ exerted on the plate by the gas 1 on the left is
+\[
+\begin{aligned}
+f_1&=\frac{\dd k_1}{\dd t}
+=\int_{-V}^{\infty}\iint_{-\infty}^{\infty}2mnA(v_x+V)^2f(v_x)f(v_y)f(v_z)\,\dd v_x\,\dd v_y\,\dd v_z\\
+&=\int_{-V}^{\infty}2mnA(v_x+V)^2f(v_x)\,\dd v_x.
+\end{aligned}
+\]
+Similarly, the force $f_2$ exerted on the plate $A$ by the gas 2 on the right along the $x$ direction is
+\[
+f_2=\int_{V}^{\infty}2mnA(v_x-V)^2f(v_x)\,\dd v_x.
+\]
+The resultant force $f$ on the plate along the $x$ direction is
+\[
+f=f_1-f_2=\int_{-V}^{\infty}2mnA(v_x+V)^2f(v_x)\,\dd v_x
+-\int_{V}^{\infty}2mnA(v_x-V)^2f(v_x)\,\dd v_x.
+\]
+Because the plate moves slowly, $V$ is a small quantity, so the above expression may be written approximately as
+\[
+\begin{aligned}
+f&=\int_{0}^{\infty}2mnA(v_x+V)^2f(v_x)\,\dd v_x
+-\int_{0}^{\infty}2mnA(v_x-V)^2f(v_x)\,\dd v_x\\
+&=2mnA\int_{0}^{\infty}4\cdot Vv_xf(v_x)\,\dd v_x
+=8mnAV\left(\frac{kT}{2\pi m}\right)^{1/2}
+=2mnA\overline{v}\,V.
+\end{aligned}
+\]
+This shows that the resistance experienced by a plate moving slowly in air is proportional to the velocity $V$ of the plate, to the cross-sectional area $A$ of the plate, to the number density $n$ of the molecules of the air, and to the mean speed of the molecules of the air.
+\end{solution}
+
+\begin{solution}{2.10}
+Because the isothermal compressibility $\kappa_T$ of the system is
+\[
+\kappa_T=-\frac{1}{V}\left(\frac{\dd V}{\dd p}\right)_T=4.75\times10^{-5}\ (\text{atm}^{-1}),
+\]
+for an isothermal process with $\kappa$ constant we have
+\[
+\frac{\dd V}{V}=-\kappa\,\dd p,
+\qquad
+\ln\frac{V}{V_0}=-\kappa(p-p_0),
+\]
+that is,
+\[
+V=V_0\ee^{-\kappa(p-p_0)}.
+\]
+Let the density of water at a flat liquid surface be $\rho_0$, and let the density of the same mass $M$ of water, in a small droplet at the same temperature and under the same atmospheric pressure, be $\rho$; then
+\[
+M=V\rho=V_0\rho_0,
+\]
+that is,
+\[
+V=V_0\rho_0/\rho.
+\]
+Hence the density of the droplet is
+\[
+\rho=\rho_0\ee^{\kappa(p-p_0)}.
+\]
+If the small droplet is spherical, the pressure inside the droplet is
+\[
+p=p_0+\frac{2\alpha}{r},
+\]
+where $p_0$ is the atmospheric pressure and $r$ the radius of the droplet. Hence the density of the droplet is
+\[
+\rho=\rho_0\ee^{2\kappa\alpha/r}.
+\]
+Because
+\[
+\frac{2\kappa\alpha}{r}
+=2\times4.75\times10^{-5}\times(1.013\times10^{5})^{-1}
+\times\frac{7.24\times10^{-2}}{1.0\times10^{-8}}
+=6.79\times10^{-3}
+\]
+is a small quantity, we have
+\[
+\rho=\rho_0\left(1+\frac{2\kappa\alpha}{r}\right)
+=\rho_0(1+6.79\times10^{-3})
+=1.01\times10^{3}\ \unitv{kg\cdot m^{-3}}.
+\]
+\end{solution}
+
+\begin{solution}{2.11}
+(1) Suppose that the gas in the container is in a state of equilibrium, that the temperature of the system is $T$ and that the number of molecules is $N$. Because of the influence of gravity, the number density of molecules $n$ depends on the height $z$, that is,
+\[
+n=n_0\ee^{-\frac{mg}{kT}z},
+\]
+where $n_0$ is the number density of molecules at $z=0$, i.e. at the bottom of the container, $k$ is Boltzmann's constant, $m$ is the mass of a molecule, and $g$ is the acceleration due to gravity. Hence
+\[
+\dd n=-\frac{n_0mg}{kT}\ee^{-\frac{mg}{kT}z}\dd z.
+\]
+Therefore
+\[
+N=A\int \dd n=n_0A\int_0^L \dd\bigl(\ee^{-\frac{mg}{kT}z}\bigr)
+=n_0A\bigl(\ee^{-\frac{mgL}{kT}}-1\bigr).
+\]
+The internal energy of the system is
+\[
+U=N\bar{\epsilon}+N\bar{\epsilon}_p,
+\]
+where $\bar{\epsilon}_p$ is the average gravitational potential energy of a molecule and $\bar{\epsilon}$ is the average energy apart from the gravitational potential energy (such as the sum of the translational, rotational and vibrational energies).
+\[
+\begin{aligned}
+\bar{\epsilon}_p&=\frac{A}{N}\int mgz\cdot \dd n
+=\frac{An_0}{N}\left(mgz\,\ee^{-\frac{mg}{kT}z}\Big|_0^L-mg\int_0^L \ee^{-\frac{mg}{kT}z}\dd z\right)\\[2pt]
+&=\frac{n_0A}{N}\Bigl[mgL\,\ee^{-\frac{mgL}{kT}}+kT\bigl(\ee^{-\frac{mgL}{kT}}-1\bigr)\Bigr]
+=\frac{mgL\,\ee^{-\frac{mgL}{kT}}}{\bigl(\ee^{-\frac{mgL}{kT}}-1\bigr)}+kT.
+\end{aligned}
+\]
+Since
+\[
+C_V=\left(\frac{\partial U}{\partial T}\right)_V
+=N\frac{\partial \bar{\epsilon}}{\partial T}+N\frac{\partial \bar{\epsilon}_p}{\partial T},
+\]
+therefore
+\[
+\begin{aligned}
+C_{Vm}&=N_A\frac{\partial \bar{\epsilon}}{\partial T}+N_A\frac{\partial \bar{\epsilon}_p}{\partial T}
+=C'_{Vm}+N_AmgL\frac{\partial}{\partial T}\left(\frac{\ee^{-\frac{mgL}{kT}}}{\ee^{-\frac{mgL}{kT}}-1}\right)+N_Ak\\[2pt]
+&=C'_{Vm}-R\left(\frac{mgL}{kT}\right)^2\frac{\ee^{-\frac{mgL}{kT}}}{\bigl(\ee^{-\frac{mgL}{kT}}-1\bigr)^2}+R,
+\end{aligned}
+\]
+where $C'_{Vm}$ is the molar heat capacity of one mole of ideal gas when gravity is not considered.
+
+(2) When $T\to0$, the molecules of the ideal gas possess only translational kinetic energy, i.e. the degrees of freedom of rotation and vibration are frozen, so $C'_{Vm}=\dfrac{3}{2}R$; and $\ee^{-\frac{mgL}{kT}}\to0$, therefore
+\[
+\lim_{T\to0}C_{Vm}=\frac{3}{2}R+R=\frac{5}{2}R.
+\]
+(2) When $T\to\infty$,
+\[
+C_{Vm}=
+\begin{cases}
+\dfrac{3}{2}R & \text{monatomic gas},\\[8pt]
+\dfrac{7}{2}R & \text{diatomic gas}.
+\end{cases}
+\]
+Since
+\[
+\lim_{T\to\infty}\ee^{-\frac{mgL}{kT}}=\ee^{-0}=1,
+\]
+that is, $\dfrac{mgL}{kT}$ is a small quantity, therefore
+\[
+\lim_{T\to\infty}\bigl(\ee^{-\frac{mgL}{kT}}-1\bigr)^2=\left(\frac{mgL}{kT}\right)^2.
+\]
+Thus
+\[
+C_{Vm}=C'_{Vm}-R+R=C'_{Vm}=
+\begin{cases}
+\dfrac{3}{2}R & \text{monatomic gas},\\[8pt]
+\dfrac{7}{2}R & \text{diatomic gas}.
+\end{cases}
+\]
+\end{solution}
+
+\begin{solution}{2.12}
+Construct a small Carnot cycle as shown in the figure; then its efficiency is
+\[
+\eta=\frac{W'}{Q}=\frac{\Delta T}{T},
+\]
+\[
+W'=\Delta p\,(V_g-V_L),
+\]
+\[
+Q=L,
+\]
+where $V_g$ and $V_L$ are the volumes of the gas and of the liquid when the system is at temperature $T$ and pressure $p+\Delta p$, and $L$ is the heat absorbed when the liquid is entirely converted into gas at the same temperature, that is, the latent heat of phase change. Since the process $AB$ is an isothermal and isobaric process,
+\[
+Q=H(g)-H(L),
+\]
+where $H(g)$ and $H(L)$ are the enthalpies of the gas and of the liquid at the beginning and at the end of the process respectively. Since
+\[
+H_g(T)-H_g(0)=\int_0^T C_{gp}\dd T=C_{gp}\cdot T,
+\]
+similarly
+\[
+H_L(T)=C_{Lp}\cdot T+H_L(0),
+\]
+where $C_{gp}$ and $C_{Lp}$ are the heat capacities at constant pressure of the gas and of the liquid respectively. Therefore
+\[
+L=(C_{gp}-C_{Lp})\cdot T+[H_g(0)-H_L(0)]=(C_{gp}-C_{Lp})\cdot T+L(0).
+\]
+Substituting $W'$ and $L=Q$ into the expression for $\eta$ gives
+\[
+\frac{(V_g-V_L)\dd p}{(C_{gp}-C_{Lp})\cdot T+L(0)}=\frac{\dd T}{T}.
+\]
+Since
+\[
+V_g\gg V_L,\qquad V_g=\frac{\nu RT}{p},
+\]
+where $\nu$ is the number of moles of the gas. Substituting $V_g$ into the above expression gives
+\[
+\dd p=\bigl[(C_{gp}-C_{Lp})\cdot T+L(0)\bigr]\frac{p\,\dd T}{R T^2}.
+\]
+Integrating the above expression gives
+\[
+p=A\ee^{-L(0)/RT}\cdot T^{(C_{gp}-C_{Lp})/R}.
+\]
+
+\begin{figbox}{2.12}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  % axes
+  \draw[axis] (0,0)--(8.0,0) node[right] {$V$};
+  \draw[axis] (0,0)--(0,5.0) node[above] {$p$};
+  \node[below left] at (0,0) {$O$};
+  % upper isotherm (T, pressure p+dp)
+  \draw[thickline] (1.62,4.62) .. controls (1.98,3.55) and (2.10,2.95) .. (2.30,2.60)
+      -- (6.30,2.60) .. controls (6.75,2.58) and (7.05,2.50) .. (7.35,2.38);
+  % lower isotherm (T-dT, pressure p)
+  \draw[thickline] (1.98,4.55) .. controls (2.32,3.45) and (2.38,2.35) .. (2.55,1.92)
+      -- (6.10,1.92) .. controls (6.58,1.90) and (6.90,1.82) .. (7.25,1.70);
+  % adiabatic sides of the cycle
+  \draw[thickline] (2.30,2.60)--(2.55,1.92);
+  \draw[thickline] (6.30,2.60)--(6.10,1.92);
+  % points
+  \fill (2.30,2.60) circle (1.4pt) node[below left] {$A$};
+  \fill (6.30,2.60) circle (1.4pt) node[above left] {$B$};
+  \fill (6.10,1.92) circle (1.4pt) node[below left] {$C$};
+  \fill (2.55,1.92) circle (1.4pt) node[below right] {$D$};
+  % labels of the isotherms
+  \node[below] at (6.75,2.52) {$T$};
+  \node[below] at (6.95,1.80) {$T-\Delta T$};
+  % pressure levels
+  \draw[dashedline] (0,2.60)--(2.30,2.60);
+  \draw[dashedline] (0,1.92)--(2.55,1.92);
+  \draw[dim] (0.60,1.92)--(0.60,2.60) node[midway,right] {$\Delta p$};
+\end{tikzpicture}
+\end{figbox}
+\end{solution}
+
+\begin{solution}{2.13}
+\begin{figbox}{2.13}
+\begin{tikzpicture}[scale=0.9,>=latex]
+  % metal blocks
+  \draw[thickline] (0,0) rectangle (2.6,2.2);
+  \draw[thickline] (2.78,0) rectangle (5.38,2.2);
+  \node at (1.3,1.1) {$A$};
+  \node at (4.08,1.1) {$B$};
+  % labels of temperatures
+  \node[above] at (1.3,2.3) {$T_1$};
+  \node[above] at (4.08,2.3) {$T_2$};
+  % thin poorly conducting layer
+  \fill[gray!40] (2.6,0) rectangle (2.78,2.2);
+\end{tikzpicture}
+\end{figbox}
+
+(1) As shown in the figure, $A$ and $B$ are two pieces of metal of very large heat capacity, and between them is a substance of very poor thermal conductivity inserted at time $t$. Since the heat it conducts per unit time is $P_Q\Delta T$, the heat $\Delta Q_A$ lost by metal $A$ in the time $\Delta t$ is
+\[
+\Delta Q_A=-P_Q\Delta T\cdot\Delta t.
+\]
+But since the heat capacity of metal $A$ is very large, the loss of this heat does not change its temperature; hence after the time $\Delta t$ the increment of the entropy of metal $A$, $\Delta S_A$, is
+\[
+\Delta S_A=\frac{\Delta Q_A}{T_1}=-\frac{P_Q\Delta T\Delta t}{T_1}=-\frac{P_Q(T_1-T_2)\Delta t}{T_1}.
+\]
+(2) Similarly, after the time $\Delta t$ the increment of the entropy of metal $B$ is
+\[
+\Delta S_B=\frac{\Delta Q_B}{T_2}=\frac{P_Q\Delta T\Delta t}{T_2}=\frac{P_Q(T_1-T_2)\Delta t}{T_2}.
+\]
+After $\Delta t$ the total entropy change of the two systems is
+\[
+\Delta S=\Delta S_A+\Delta S_B=P_Q(T_1-T_2)\Delta t\left(\frac{1}{T_2}-\frac{1}{T_1}\right)=\frac{P_Q\Delta t\cdot(T_1-T_2)^2}{T_1T_2}.
+\]
+Since $(T_1-T_2)^2>0$, therefore
+\[
+\Delta S>0.
+\]
+(3) Suppose that after a sufficiently long time the whole system reaches thermal equilibrium at temperature $T$, and that the isolating substance is very thin and absorbs no heat; then
+\[
+C_A(T_1-T)=C_B(T-T_2).
+\]
+Hence the common temperature $T$ finally reached by metals $A$ and $B$ is
+\[
+T=\frac{C_AT_1+C_BT_2}{C_A+C_B}.
+\]
+Let the temperature of metal $A$ at a certain instant be $T_1'$; when the temperature changes by $\dd T_1'$, the change of its entropy is
+\[
+\dd S_A=\frac{C_A\dd T_1'}{T_1'}.
+\]
+Hence the increment of the entropy of $A$ while its temperature changes from $T_1$ to $T$ is
+\[
+\Delta S_A=C_A\int_{T_1}^{T}\frac{\dd T_1'}{T_1'}=C_A\ln\frac{T}{T_1}
+=C_A\ln\left[\frac{C_AT_1+C_BT_2}{T_1(C_A+C_B)}\right].
+\]
+Similarly, the increment of the entropy of metal $B$ is
+\[
+\Delta S_B=C_B\int_{T_2}^{T}\frac{\dd T_2'}{T_2'}=C_B\ln\frac{T}{T_2}
+=C_B\ln\left[\frac{C_AT_1+C_BT_2}{T_2(C_A+C_B)}\right].
+\]
+When equilibrium is reached, the increment of the entropy of the system, $\Delta S$, is
+\[
+\Delta S=\Delta S_A+\Delta S_B
+=\ln\left[\left(\frac{C_AT_1+C_BT_2}{C_A+C_B}\right)^{(C_A+C_B)}\Big/T_1^{C_A}\cdot T_2^{C_B}\right].
+\]
+\end{solution}
+
+\begin{solution}{2.14}
+\begin{figbox}{2.14}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  \draw[axis] (-0.4,0)--(5.2,0) node[right] {$x$};
+  \draw[axis] (0,-0.4)--(0,3.8) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \fill (4.0,2.6) circle (1.6pt) node[right] {$P(x,y)$};
+\end{tikzpicture}
+\end{figbox}
+
+As shown in the figure, suppose that among the $N$ steps the drunkard takes in reaching the point $P$, he walks $n$ steps to the right, $n'$ steps to the left, $m$ steps upwards and $m'$ steps downwards; then
+\[
+n-n'=\frac{x}{l};\qquad m-m'=\frac{y}{l};\qquad n+n'+m+m'=N.
+\]
+From the above three equations we obtain
+\[
+\begin{cases}
+n=\dfrac{1}{2}\left[N+\left(\dfrac{x}{l}-\dfrac{y}{l}\right)\right]-m',\\[10pt]
+n'=\dfrac{1}{2}\left[N-\left(\dfrac{x}{l}+\dfrac{y}{l}\right)\right]-m',\\[10pt]
+m=\dfrac{y}{l}+m'.
+\end{cases}
+\]
+Hence the probability that the drunkard, after $N$ steps, is at the point $P(x,y)$ is
+\[
+W(P)=\sum_{m'=0}^{\frac{1}{2}\left[N-\left(\frac{x}{l}+\frac{y}{l}\right)\right]}
+\frac{N!}{n!\,n'!\,m!\,m'!}\,p_+^{n}p_-^{n'}q_+^{m}q_-^{m'},
+\]
+where $p_+$, $p_-$, $q_+$ and $q_-$ denote respectively the probabilities that the drunkard walks one step to the right, to the left, upwards and downwards, and satisfy the following relation:
+\[
+p_++p_-+q_++q_-=1.
+\]
+Since $n$, $n'$, $m$ and $m'$ are all positive integers, when $\dfrac{x}{l}+\dfrac{y}{l}$ is even $N$ must be even, and when $\dfrac{x}{l}+\dfrac{y}{l}$ is odd $N$ must be odd. The summation in the expression for $W(P)$ extends from $m'=0$ to the value of $m'$ for which $n'=0$.
+
+For example, let $x=3l$, $y=2l$, $N=11$. Then the following 4 kinds of walk exist: $(m'=0,\ m=2,\ n'=3,\ n=6)$; $(m'=1,\ m=3,\ n'=2,\ n=5)$; $(m'=2,\ m=4,\ n'=1,\ n=4)$; $(m'=3,\ m=5,\ n'=0,\ n=3)$. Substituting these sets of numbers into the expression for $W(P)$ and summing, one obtains the probability that the drunkard reaches the point $P$ within 11 steps.
+
+Again, if $p_+=p_-=q_+=q_-=\dfrac{1}{4}$, $x=0$, $y=0$, $N=2N'$, then
+\[
+n=n',\qquad m=m',\qquad 2n+2m=2N',\qquad n+m=N',
+\]
+hence the probability that the drunkard returns to the origin after $2N'$ steps is
+\[
+W(O)=\sum_{m}\frac{N!}{(n!)^2(m!)^2}\cdot\left(\frac{1}{4}\right)^{N}
+=\sum_{n}\frac{N!}{(n!)^2\left[\left(\dfrac{N}{2}-n\right)!\right]^2}\cdot\left(\frac{1}{4}\right)^{N}.
+\]
+\end{solution}
+
+\begin{solution}{2.15}
+\textit{Method 1.}\quad Let the radius of the copper ball be $r$, its density $\rho_1$ and its specific heat $c_1$, and let the heat it gives out through its surface per unit time be $\kappa_1$; then the heat $Q_1$ it gives out in the time $\Delta t_1$ is
+\begin{equation}
+Q_1=\kappa_1\Delta t_1=M_1\cdot c_1\Delta T_1, \tag{1}
+\end{equation}
+where $M_1$ is the mass of the copper ball, that is,
+\[
+M_1=\frac{4}{3}\pi r^3\rho_1.
+\]
+Similarly, for the aluminium ball, the heat $Q_2$ it gives out in the time $\Delta t_2$ is
+\begin{equation}
+Q_2=\kappa_2\Delta t_2=M_2c_2\Delta T_2. \tag{2}
+\end{equation}
+Since the two small balls have the same radius $r$, their surfaces are both blackened, and the conditions outside the spherical surfaces are also completely the same, therefore
+\[
+\kappa_1=\kappa_2,\qquad\text{and}\qquad M_2=\frac{4}{3}\pi r^3\rho_2.
+\]
+Hence from (1) and (2) we obtain
+\[
+\frac{c_1}{c_2}=\frac{\Delta t_1}{\Delta t_2}\cdot\frac{M_2}{M_1}
+=\frac{\Delta t_1}{\Delta t_2}\cdot\frac{\rho_2}{\rho_1}
+=\frac{14.2\times2.7}{10\times8.9}=0.43.
+\]
+
+\textit{Method 2.}\quad Since the blackened small ball is placed in a cavity at temperature $T_0$, the rate at which heat is transferred between the ball and the walls of the cavity is
+\[
+\frac{\dd Q}{\dd t}=A\sigma(T^4-T_0^4),
+\]
+where $A$ is the surface area of the small ball, $\sigma$ is the Stefan--Boltzmann constant, whose experimental value is $5.6703\times10^{-8}\ \mathrm{W/(m^2\cdot K^4)}$, and $T$ is the temperature of the small ball. After the ball has lost heat $\dd Q$, its temperature falls by $\dd T$, so
+\[
+\dd Q=Mc\,\dd T.
+\]
+Substituting into the above expression gives
+\[
+Mc\frac{\dd T}{\dd t}=A\sigma(T^4-T_0^4),
+\qquad\text{or}\qquad
+\frac{\dd T}{(T^4-T_0^4)}=\frac{A\sigma}{Mc}\dd t.
+\]
+For the copper ball,
+\[
+\int_{276.15}^{274.15}\frac{\dd T}{(T^4-T_0^4)}=\frac{A_1\sigma}{M_1c_1}\Delta t_1.
+\]
+For the aluminium ball,
+\[
+\int_{276.15}^{274.15}\frac{\dd T}{(T^4-T_0^4)}=\frac{A_2\sigma}{M_2c_2}\Delta t_2.
+\]
+From the above two expressions it is known that
+\[
+\frac{A_1\sigma}{M_1c_1}\Delta t_1=\frac{A_2\sigma}{M_2c_2}\Delta t_2.
+\]
+Since $A_1=A_2$, therefore
+\[
+\frac{c_1}{c_2}=\frac{M_2}{M_1}\cdot\frac{\Delta t_1}{\Delta t_2}=0.43.
+\]
+\end{solution}
+
+\begin{solution}{2.16}
+(1) Let the mass of the solid water (ice) be $m_s$ and the mass of the liquid water be $m_l$; then the fraction $y$ of the water that is solid is
+\[
+y=\frac{m_s}{m_s+m_l}.
+\]
+Let the total mass of the system be $m$, and let the specific volume of water at temperature $T_f$ and pressure $p_f$ be $v_l$ and that of ice be $v_s$; further let
+\[
+V_2=mv_l,\qquad V_1=mv_s,\qquad V_1+V_2=m(v_l+v_s),
+\]
+which are respectively the volumes of the system when it is entirely water or entirely ice at temperature $T_f$ and pressure $p_f$. Then
+\[
+V_2-V_1=m(v_l-v_s),\qquad V=m_sv_s+m_lv_l,
+\]
+where $V$ is the volume in the state $(T_f,p_f)$, that is, the volume in the initial state $(T_i,p_i)$. Substituting into the expression for $y$ gives
+\[
+y=\frac{m_s(v_l-v_s)}{V_2-V_1}
+=\frac{m_sv_l-(V-m_lv_l)}{V_2-V_1}
+=\frac{mv_l-V}{V_2-V_1}
+=\frac{V_2-V}{V_2-V_1}
+=\frac{V_2-V}{m(v_l-v_s)}.
+\]
+Since
+\[
+\dd V=\left(\frac{\partial V}{\partial T}\right)_p\dd T+\left(\frac{\partial V}{\partial p}\right)_T\dd p,
+\qquad
+\alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p,
+\qquad
+\kappa=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_T,
+\]
+therefore
+\[
+\dd V=V(\alpha\,\dd T-\kappa\,\dd p).
+\]
+Since $\alpha$ and $\kappa$ are constants during the process $(T_i,p_i)\to(T_f,p_f)$, integration of the above expression gives
+\[
+\int_V^{V_2}\frac{\dd V}{V}=\alpha\Delta T-\kappa\Delta p,
+\]
+that is,
+\[
+\ln\frac{V_2}{V}=\alpha\Delta T-\kappa\Delta p,
+\qquad\text{so}\qquad
+V=V_2\exp(-\alpha\Delta T+\kappa\Delta p).
+\]
+Substituting into the expression for $y$ gives
+\[
+y=\frac{V_2}{m(v_l-v_s)}\bigl[1-\exp(-\alpha\Delta T+\kappa\Delta p)\bigr]
+=\frac{v_l}{(v_l-v_s)}\bigl[1-\exp(-\alpha\Delta T+\kappa\Delta p)\bigr].
+\]
+Since $\alpha\Delta T$ and $\kappa\Delta p$ are small quantities, the above expression becomes
+\[
+y=\frac{v_l}{v_l-v_s}(\alpha\Delta T-\kappa\Delta p).
+\]
+(2) Substituting $v_l=1.0908\times10^{-3}$, $v_s=1.1928\times10^{-3}$, $\alpha=-67\times10^{-6}$, $\kappa=12.04\times10^{-11}$, $\Delta T=(T_f-T_i)=-5$ and $\Delta p=p_f-p_i=5.98\times10^{7}-1.01\times10^{5}=5.97\times10^{7}$ into the expression for $y$ gives
+\[
+\begin{aligned}
+y&=\frac{1.0908\times10^{-3}}{(1.0908-1.1928)\times10^{-3}}
+\bigl[-67\times10^{-6}\times(-5)-12.04\times10^{-11}\times5.97\times10^{7}\bigr]\\[4pt]
+&=\frac{1.0908\times10^{-3}}{-1.02\times10^{-4}}\times(-6.853\times10^{-3})
+=7.33\times10^{-2}=7.33\%.
+\end{aligned}
+\]
+\end{solution}
+
+\begin{solution}{2.17}
+(1) As shown in Fig.~(1) of this problem, an atom of mass $m$ collides perpendicularly with the surface element $\dd s$ on the surface of the small ball with speed $\bar{v}$. Since the small ball moves with speed $v_0$ in the direction opposite to the $x$-axis, and the collision is elastic, the change of the momentum of the atom along the direction $\vec{n}$ (the normal to the surface element $\dd s$) after the collision is
+\[
+m(\bar{v}+v_0\cos\theta)-[-m(\bar{v}+v_0\cos\theta)]=2m(\bar{v}+v_0\cos\theta).
+\]
+Hence the momentum $\Delta p$ gained by the small ball in the direction $\vec{n}$ is
+\begin{equation}
+\Delta p=-2m(\bar{v}+v_0\cos\theta). \tag{1}
+\end{equation}
+
+\begin{figbox}{2.17(1)}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  % sphere
+  \draw[thickline] (0,0) circle (1.7);
+  \fill (0,0) circle (1.2pt) node[above right] {$O$};
+  % x axis
+  \draw[axis] (0,0)--(3.4,0) node[right] {$x$};
+  % velocity of the ball
+  \draw[force] (-1.75,0.9)--(-3.1,0.9) node[midway,above] {$v_0$};
+  % point of collision and the normal
+  \coordinate (P) at (-1.393,-0.975);
+  \fill (P) circle (1.4pt);
+  \draw[dashedline] (0,0)--(P);
+  \draw[dashedline] (0,0)--(-2.6,0);
+  \draw[thickline] (-1.0,0) arc (180:215:1.0);
+  \node at (-1.16,0.20) {$\theta$};
+  \node at (-1.92,-0.48) {$\dd s$};
+  % the normal n and the incident atom
+  \draw[dashedline] (P)--(-2.4,-1.68);
+  \node at (-2.46,-1.24) {$\vec{n}$};
+  \draw[force] (-3.15,-2.21)--(P);
+  \node at (-2.95,-1.72) {$\bar{v}$};
+  \node at (-3.22,-2.44) {$m$};
+\end{tikzpicture}
+\end{figbox}
+
+The increment of the energy of the small ball $\Delta E$ is
+\[
+\Delta E=\frac{(p+\Delta p)^2}{2m'}-\frac{p^2}{2m'},
+\]
+where $p=m'v_0$, therefore
+\[
+\begin{aligned}
+\Delta E&=\frac{1}{2m'}\bigl[p^2+2p\cdot\Delta p+(\Delta p)^2-p^2\bigr]\\[2pt]
+&=\frac{1}{2m'}\bigl[-2m'v_0\cdot2m(\bar{v}+v_0\cos\theta)\cos\theta+4m^2(\bar{v}+v_0\cos\theta)^2\bigr]\\[2pt]
+&=-2mv_0(\bar{v}+v_0\cos\theta)\cos\theta+\frac{2m}{m'}(\bar{v}+v_0\cos\theta)^2.
+\end{aligned}
+\]
+(2) When the small ball enters a rarefied ideal gas, it is bombarded by the surrounding atoms from all directions. It is known (as given in the problem) that the number of collisions between the atoms and the small ball per unit time is $\lambda n\bar{v}$; since $v_0\ll\bar{v}$, it may be considered that the motion of the small ball does not affect the equilibrium state in which the ideal gas is, and hence the number of collisions per unit time with unit area is $\dfrac{\lambda n\bar{v}}{4\pi r^2}$. From part (1) of the solution of Problem 2.17 it is known that the number of molecules colliding with the surface element $\dd s$ of the small ball in the time $\dd t$ is
+\[
+\frac{\lambda n\bar{v}}{4\pi r^2}\,\dd s\cdot\dd t.
+\]
+Since the increment of the momentum gained by each molecule in the direction $\vec{n}$ is $2m(\bar{v}+v_0\cos\theta)$, the increment of the momentum gained by the small ball in the time $\dd t$ through $\dd s$ (along the direction opposite to $\vec{n}$) is
+\[
+\dd k=2m(\bar{v}+v_0\cos\theta)\cdot\frac{\lambda n\bar{v}}{4\pi r^2}\,\dd s\,\dd t.
+\]
+Then the normal force $\dd f$ acting on $\dd s$ is
+\[
+\dd f=\frac{\dd k}{\dd t}=\frac{1}{2}\,\frac{m\lambda n\bar{v}}{\pi r^2}(\bar{v}+v_0\cos\theta)\,\dd s.
+\]
+It is also seen from the figure that the components of this force $\dd f$ in the $y$ and $z$ directions give a resultant force of zero, and only the component in the $x$ direction survives. The resultant force in the $x$ direction is
+\[
+\begin{aligned}
+f&=\int \dd f\cos\theta
+=\frac{1}{2}\,\frac{m\lambda n\bar{v}}{\pi r^2}\int_0^{\pi}(\bar{v}+v_0\cos\theta)\cos\theta\,r^2\sin\theta\,\dd\theta\int_0^{2\pi}\dd\varphi\\[2pt]
+&=-m\lambda n\bar{v}\cdot v_0\cdot\frac{1}{3}\cos^3\theta\Big|_0^{\pi}
+=\frac{2}{3}m\lambda n\bar{v}v_0.
+\end{aligned}
+\]
+After the small ball is acted on by the resisting force, its velocity $v$ will change; from the above expression,
+\[
+f=m'\frac{\dd v}{\dd t}=-\frac{2}{3}m\lambda n\bar{v}\,v,
+\]
+\[
+\frac{\dd v}{v}=-\frac{2}{3}\,\frac{m\lambda n\bar{v}}{m'}\cdot\dd t.
+\]
+Integrating the above expression gives
+\[
+\ln\frac{v}{v_0}=-\frac{2}{3}\,\frac{m\lambda n\bar{v}}{m'}t,
+\qquad
+v=v_0\ee^{-\frac{2}{3}\frac{m\lambda n\bar{v}}{m'}t}.
+\]
+The energy $E$ of the small ball is
+\[
+E=\frac{1}{2}m'v^2=\frac{1}{2}m'v_0^2\ee^{-\frac{4}{3}\frac{m\lambda n\bar{v}}{m'}t}.
+\]
+The rate of change of the energy $E$, $\dfrac{\dd E}{\dd t}$, is
+\[
+\frac{\dd E}{\dd t}=-\frac{2}{3}m\lambda n\bar{v}v_0^2\ee^{-\frac{4}{3}\frac{m\lambda n\bar{v}}{m'}t}.
+\]
+When $t\to\infty$, the velocity of the directed motion of the small ball is 0, and the energy of the directed motion is $E=0$. At this time the small ball, under the action of the surrounding gas molecules, performs random motion, that is, Brownian motion. From the theory of Brownian motion it is known that the average translational kinetic energy of the small ball is equal to the average translational kinetic energy $\bar{\varepsilon}$ of the molecules:
+\[
+\bar{\varepsilon}=\frac{3}{2}kT',
+\]
+where $T'$ is the temperature finally reached by the ideal gas after absorbing the heat $Q$ produced by the frictional resistance suffered by the small ball. Since $Q$ is equal to the work done by the resisting force $f$, that is, to the decrease of the kinetic energy of the directed motion of the small ball, therefore
+\[
+Q=\frac{1}{2}m'v_0^2.
+\]
+When the gas absorbs heat, the average translational kinetic energy of every molecule increases. Let the temperature of the system at $t=\infty$ be $T'$; then
+\[
+\frac{3}{2}kT'=\frac{3}{2}kT+\frac{Q}{NN_A}=\frac{3}{2}kT+\frac{1}{2}\frac{m'v_0^2}{NN_A},
+\]
+\[
+T'=T+\frac{1}{3}\frac{m'v_0^2}{NR},
+\]
+where $R=N_A\cdot k$ is the gas constant and $N$ is the number of moles of the ideal gas.
+
+(3) Let the temperature of the system at a certain instant be $T''$; then from the above expression it is known that
+\[
+\frac{3}{2}k\,\dd T''=\frac{\dd Q}{NN_A},\qquad \dd Q=\frac{3}{2}NR\,\dd T''.
+\]
+When the system formed by the ideal gas and the small ball is isolated from the surroundings and absorbs heat $\dd Q$, its entropy increment $\dd S$ is
+\[
+\dd S=\frac{\dd Q}{T''}=\frac{3}{2}NR\,\frac{\dd T''}{T''}.
+\]
+Hence when $t\to\infty$ the entropy increment of the system, $\Delta S$, is
+\[
+\begin{aligned}
+\Delta S&=\int \dd S=\int_T^{T'}\frac{3}{2}NR\,\frac{\dd T''}{T''}
+=\frac{3}{2}NR\ln\frac{T'}{T}=\frac{3}{2}NR\ln\left(1+\frac{1}{3}\frac{m'v_0^2}{NRT}\right)\\[2pt]
+&=\frac{3}{2}NR\ln\left(1+\frac{8}{3}\frac{m'v_0^2}{\pi NM\bar{v}^2}\right)\approx\frac{4km'v_0^2}{\pi m(\bar{v})^2}.
+\end{aligned}
+\]
+In the above approximation use has been made of $m'\sim NM$ and $(\bar{v})^2\gg v_0^2$.
+
+\begin{figbox}{2.17(2)}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  % sphere
+  \draw[thickline] (0,0) circle (1.7);
+  \fill (0,0) circle (1.2pt) node[above left] {$O$};
+  % x axis
+  \draw[axis] (0,0)--(3.4,0) node[right] {$x$};
+  % velocity of the ball
+  \draw[force] (-1.75,0.9)--(-3.1,0.9) node[midway,above] {$v_0$};
+  % point of collision
+  \coordinate (P) at (-1.393,-0.975);
+  \fill (P) circle (1.4pt);
+  \draw[dashedline] (0,0)--(P);
+  \draw[dashedline] (0,0)--(-2.3,0);
+  \draw[thickline] (-1.0,0) arc (180:215:1.0);
+  \node at (-1.12,0.22) {$\theta$};
+  \node at (-1.92,-0.48) {$\dd s$};
+  % molecule velocity
+  \draw[force] (-3.0,-2.1)--(P);
+  \node at (-3.35,-2.40) {$v$};
+\end{tikzpicture}
+\end{figbox}
+
+(4) As shown in Fig.~(2), the molecules of velocity $\vec{v}$ that collide with the surface element $\dd s$ in the time $\dd t$ must be located in a cylinder of height $(v_x+v_0\cos\theta)\dd t$ and base $\dd S$. The number of molecules of velocity $\vec{v}$ in this volume is $nf(v)\dd v$, so the number $\dd\Gamma$ of molecules of velocity $\vec{v}$ colliding with $\dd s$ per unit time is
+\begin{equation}
+\begin{aligned}
+\dd\Gamma&=(v_x+v_0\cos\theta)nf(v)\dd v\,\dd S\\
+&=n(v_x+v_0\cos\theta)f(v)\dd v\,r^2\sin\theta\,\dd\theta\,\dd\varphi
+\end{aligned}\tag{2}
+\end{equation}
+The number $\Gamma$ of molecules colliding with the small ball per unit time is
+\[
+\Gamma=\int \dd\Gamma
+=\int_0^{2\pi}\dd\varphi\int_0^{\pi}\dd\theta
+\int_{-v_0\cos\theta}^{\infty}\dd v_x\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\dd v_y\,\dd v_z
+\cdot nr^2(v_x+v_0\cos\theta)\sin\theta.
+\]
+Since $v_0\cos\theta$ is a small quantity, the above expression becomes
+\[
+\Gamma=4\pi nr^2\int_0^{\infty}v_xf(v_x)\dd v_x
+=4\pi nr^2\cdot\left(\frac{m}{2\pi kT}\right)^{1/2}\frac{kT}{m}
+=n\pi r^2\bar{v}=\lambda n\bar{v}.
+\]
+Hence $\lambda=\pi r^2$, which is the collision cross-section between the small ball and the molecules.
+\end{solution}
+
+\begin{solution}{2.18}
+(1) As shown in the figure, the efficiency of the cycle is
+\begin{equation*}
+\eta = \frac{W'}{Q_1}.
+\end{equation*}
+Here $W'$ is the work done by the system on the exterior, that is, the area of $\triangle ABC$ in
+the figure, namely
+\begin{equation*}
+W' = \frac{1}{2}(p_2-p_1)(V_2-V_3)
+= \frac{1}{2}\,p_1\left(2V_1-\frac{1}{2}V_1\right)
+= \frac{3}{4}\,p_1V_1 .
+\end{equation*}
+
+The heat $Q_1$ absorbed by the system during the cycle is equal to the sum of the heats absorbed
+in the processes $AB$, $BC$ and $CA$. Since $BC$ is an isobaric compression, the exterior does
+work on the system, the temperature falls and the internal energy decreases, so this is a
+heat-releasing process. In the process $CA$ the temperature of the system increases
+monotonically, i.e. the internal energy increases monotonically, while the system does work on
+the exterior, so it must absorb heat from the exterior. From the given conditions it is known
+that $T_A=T_B$, so in the process $AB$ the temperature does not vary monotonically; hence in
+this process the system absorbs heat in a certain range and releases heat in another range. For
+this reason we first find the relation between the heat absorbed by the system and the process.
+Since
+\begin{equation*}
+\dd Q = C_{V,m}\dd T + p\,\dd V = \frac{3}{2}R\,\dd T + p\,\dd V,
+\end{equation*}
+\begin{equation*}
+pV = RT,\qquad p\,\dd V + V\,\dd p = R\,\dd T,
+\end{equation*}
+therefore
+\begin{equation*}
+\dd Q = \frac{C_{V,m}}{R}\left(p\,\dd V + V\,\dd p\right).
+\end{equation*}
+
+Since the equation of the process $AB$ is
+\begin{equation*}
+p = a + bV,
+\end{equation*}
+and since
+\begin{equation*}
+p_2 = a + bV_1,\qquad p_1 = a + bV_2,
+\end{equation*}
+we have
+\begin{equation*}
+b = \frac{p_2-p_1}{V_1-V_2} = -\frac{p_2-p_1}{V_2-V_1} = -\frac{p_1}{V_1};
+\qquad a = 3p_1 .
+\end{equation*}
+Thus
+\begin{equation*}
+p = 3p_1 - \frac{p_1}{V_1}V = p_1\left(3-\frac{V}{V_1}\right),
+\end{equation*}
+\begin{equation*}
+\dd p = -\frac{p_1}{V_1}\,\dd V .
+\end{equation*}
+Substituting into the expression for $\dd Q$, we obtain
+\begin{equation*}
+\dd Q = \frac{C_{V,m}}{R}\left[p_1\left(3-\frac{V}{V_1}\right)\dd V
+- \frac{p_1}{V_1}V\,\dd V\right]
+= \frac{C_{V,m}}{R}\,p_1\left(3-2\frac{V}{V_1}\right)\dd V .
+\end{equation*}
+
+\begin{figbox}{2.18}
+\begin{tikzpicture}[scale=0.9]
+  \draw[axis] (0,0) -- (7.2,0) node[right] {$V$};
+  \draw[axis] (0,0) -- (0,5.2) node[above] {$p$};
+  \node[below left] at (0,0) {$O$};
+  \coordinate (C) at (2.2,1.6);
+  \coordinate (A) at (4.0,3.2);
+  \coordinate (B) at (6.4,1.6);
+  \draw[thickline] (C) -- (A) -- (B) -- cycle;
+  \draw[dashedline] (A) -- (4.0,0);
+  \draw[dashedline] (C) -- (2.2,0);
+  \draw[dashedline] (B) -- (6.4,0);
+  \draw[dashedline] (2.2,1.6) -- (6.4,1.6);
+  \node[left] at (0,3.2) {$p_2$};
+  \node[left] at (0,1.6) {$p_1$};
+  \node[below] at (2.2,0) {$V_3$};
+  \node[below] at (4.0,0) {$V_1$};
+  \node[below] at (6.4,0) {$V_2$};
+  \node[above] at (A) {$A$};
+  \node[left] at (C) {$C$};
+  \node[right] at (B) {$B$};
+\end{tikzpicture}
+\end{figbox}
+
+It is seen from the above expression that when $\left(3-2\dfrac{V}{V_1}\right)>0$, i.e. when
+$V<\dfrac{3}{2}V_1$, the volume of the system increases and the system absorbs heat; and when
+$V>\dfrac{3}{2}V_1$, it releases heat. Hence the heat absorbed by the system in the process $AB$
+is
+\begin{equation*}
+Q_{AB} = \int \dd Q
+= \frac{C_{V,m}}{R}\,p_1\int_{V_1}^{\frac{3}{2}V_1}
+\left(3-2\frac{V}{V_1}\right)\dd V
+= \frac{C_{V,m}}{R}\,p_1\left[3V-\frac{V^2}{V_1}\right]_{V_1}^{\frac{3}{2}V_1}
+= \frac{C_{V,m}}{4R}\,p_1V_1 .
+\end{equation*}
+
+For the process $CA$, the heat absorbed is
+\begin{align*}
+Q_{CA} &= \Delta U + W'
+= C_{V,m}\left(T_A-T_C\right) + \frac{1}{2}\left(p_2-p_1\right)\left(V_1-V_3\right)\\
+&= C_{V,m}\left(\frac{p_2V_1}{R}-\frac{p_1V_3}{R}\right)
++ \frac{1}{2}\,p_1\cdot\frac{V_1}{2}\\
+&= \frac{C_{V,m}}{R}\left(2p_1V_1-\frac{1}{2}p_1V_1\right)
+= \frac{3}{2}C_{V,m}p_1V_1 .
+\end{align*}
+
+Therefore
+\begin{equation*}
+Q = Q_{AB} + Q_{CA}
+= \frac{C_{V,m}}{4R}\,p_1V_1 + \frac{3C_{V,m}}{2R}\,p_1V_1
+= \frac{7}{4}\frac{C_{V,m}}{R}\,p_1V_1 ,
+\end{equation*}
+\begin{equation*}
+\eta = \frac{W'}{Q} = \frac{3}{7}\frac{C_{V,m}}{R} = \frac{9}{14} = 64.3\%,
+\end{equation*}
+where use has been made of $C_{V,m}=\dfrac{3}{2}R$.
+
+(2) Since the process $BC$ is one in which the temperature falls continuously, its highest
+temperature is $T_B$, while the process $CA$ is one in which the temperature increases
+monotonically, its highest temperature being $T_A$, and $T_A=T_B$. Hence the highest temperature
+in the cycle may occur within the process $AB$. For this reason we first find the relation
+between the temperature and the volume in the process $AB$.
+
+Since
+\begin{equation*}
+\begin{cases}
+p = p_1\left(3-\dfrac{V}{V_1}\right),\\[4pt]
+pV = RT,
+\end{cases}
+\end{equation*}
+therefore
+\begin{align*}
+T &= \frac{p_1}{R}\left(3-\frac{V}{V_1}\right)V,\\
+\frac{\dd T}{\dd V} &= \frac{p_1}{R}\left(3-2\frac{V}{V_1}\right)=0,
+\qquad V=\frac{3}{2}V_1,\\
+\frac{\dd^2T}{\dd V^2} &= -\frac{2p_1}{RV_1}<0 .
+\end{align*}
+Hence
+\begin{equation*}
+T_{\max} = \frac{9}{4}\,\frac{p_1V_1}{R}.
+\end{equation*}
+
+(3) Since the equation of the process $AB$ is $p=p_1\left(3-\dfrac{V}{V_1}\right)$, which cannot
+be written in the form $pV^n=\text{const}$, the process $AB$ is not a polytropic process.
+
+Since $BC$ is an isobaric process, it is a polytropic process.
+
+Since $CA$ is a straight line, it can be written as $p=c+dV$. Substituting the $p$ and $V$ of
+points $C$ and $A$ into this equation gives $p_1=c+\dfrac{1}{2}dV_1$, $p_2=c+dV_1$. From these,
+$d=\dfrac{2p_1}{V_1}$, $c=0$. Therefore the process equation of the process $CA$ is
+\begin{equation*}
+p = \frac{2p_1}{V_1}V,\qquad\text{i.e.}\quad pV^{-1}=\text{const}.
+\end{equation*}
+The polytropic index is $n=-1$, hence the process $CA$ is a polytropic process.
+\end{solution}
+
+\begin{solution}{2.19}
+(1) Since all the water vapour that enters the narrow tube condenses into liquid, the number
+$\dd N$ of molecules that enter the narrow tube and condense into water during the time $\dd t$
+is just the number by which the water vapour decreases during the same time:
+\begin{equation*}
+\dd N = -\frac{1}{4}n\bar{v}\cdot\dd t,
+\end{equation*}
+where $n$ is the molecular number density of the water vapour and $\bar{v}$ its mean speed. From
+this expression it is seen that the decrease, during $\dd t$, of the water-vapour molecules per
+unit volume in the container is
+\begin{equation*}
+\dd n = \dd\left(\frac{N}{V}\right) = -\frac{1}{4}\frac{n}{V}\bar{v}\,\dd t .
+\end{equation*}
+Since $p=nkT$, therefore
+\begin{equation*}
+\dd p = -\frac{1}{4}\frac{p}{V}\bar{v}\,\dd t,\qquad
+\frac{\dd p}{p} = -\frac{1}{4}\frac{\bar{v}}{V}\,\dd t .
+\end{equation*}
+Integrating the above expression, the pressure $p$ and the molecular number density $n$ in the
+container at time $t$ are respectively
+\begin{equation*}
+p = p_0\ee^{-\frac{\bar{v}}{4V}t},\qquad
+n = n_0\ee^{-\frac{\bar{v}}{4V}t},
+\end{equation*}
+where $p_0$ and $n_0$ are the pressure and the molecular number density of the water vapour at
+$t=0$.
+
+(2) Since the mean energy of each molecule is
+\begin{equation*}
+\bar{\varepsilon} = \bar{\varepsilon}_{\text{trans}} + \bar{\varepsilon}_{\text{rot}}
++ \bar{\varepsilon}_{\text{vib}},
+\end{equation*}
+for a molecule striking the wall (i.e. entering the narrow tube) the mean translational kinetic
+energy $\bar{\varepsilon}_{\text{trans}}$ is
+\begin{equation*}
+\bar{\varepsilon}_{\text{trans}} = 2kT .
+\end{equation*}
+Since a water molecule has 3 rotational degrees of freedom and 3 vibrational degrees of freedom,
+\begin{equation*}
+\bar{\varepsilon}_{\text{rot}} = \frac{3}{2}kT,\qquad
+\bar{\varepsilon}_{\text{vib}} = \frac{1}{2}\times 6kT = 3kT .
+\end{equation*}
+Therefore
+\begin{equation*}
+\bar{\varepsilon} = 2kT + \frac{3}{2}kT + 3kT = 6\frac{1}{2}kT .
+\end{equation*}
+Since the number of collisions with the wall per unit time at time $t$, i.e. the number entering
+the narrow tube, is
+\begin{equation*}
+\dd N = \frac{1}{4}n\bar{v} = \frac{1}{4}n_0\bar{v}\ee^{-\frac{\bar{v}}{4V}t},
+\end{equation*}
+when these molecules condense into liquid, the water vapour loses energy
+\begin{equation*}
+\dd E = \bar{\varepsilon}\,\dd N = \frac{13}{8}n_0\bar{v}kT\ee^{-\frac{\bar{v}}{4V}t}.
+\end{equation*}
+When the temperature of the water vapour is room temperature, its vibrational degrees of freedom
+are frozen, so
+\begin{equation*}
+\bar{\varepsilon} = \frac{7}{2}kT .
+\end{equation*}
+Therefore
+\begin{equation*}
+\dd E = \bar{\varepsilon}\,\dd N = \frac{7}{8}n_0\bar{v}kT\ee^{-\frac{\bar{v}}{4V}t}.
+\end{equation*}
+
+\begin{commentary}
+This problem involves two basic pieces of knowledge, which are used directly in the solution.
+The first is that the number of molecules striking the wall per unit time is
+$\dd\Gamma=\dfrac{1}{4}n\bar{v}$; this can be derived directly from Maxwell's distribution law.
+The second is that the mean translational kinetic energy of the molecules striking the wall is
+$\bar{\varepsilon}_{\text{trans}}=2kT$; this can be obtained from the distribution function of the
+speeds of the molecules striking the wall.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{2.20}
+Let the spherical soap film have radius $R$ and charge $Q$; then the potential $\phi$ at the
+surface of the film is
+\begin{equation*}
+\phi = \frac{Q}{4\pi\varepsilon_0R}.
+\end{equation*}
+Suppose that the soap film undergoes an isothermal process in which its radius changes from $R$
+to $R+\dd R$; then the work $\dd W$ done by the exterior on the film is
+\begin{equation*}
+\dd W = \dd W_1 + \dd W_2 = (p_i-p_0)\cdot\dd V - Q\,\dd\phi,
+\end{equation*}
+where $\dd W_1=(p_i-p_0)\dd V$ is the work done by the gases inside and outside, and
+$\dd W_2=-Q\,\dd\phi$ is the work done by the electric field.
+
+Since in an isothermal process the work done by the exterior on the liquid (here the soap liquid
+film) is equal to the increment of the free energy of the liquid, i.e. $\dd W=\dd F=\sigma\,\dd A$,
+therefore
+\begin{equation*}
+(p_i-p_0)\dd V - Q\,\dd\phi = \sigma\,\dd A .
+\end{equation*}
+Because
+\begin{equation*}
+V = \frac{4}{3}\pi R^3,\qquad \dd V = 4\pi R^2\,\dd R,\qquad
+\dd\phi = -\frac{Q}{4\pi\varepsilon_0R^2}\cdot\dd R,
+\end{equation*}
+\begin{equation*}
+A = 2\times 4\pi R^2,\qquad \dd A = 16\pi R\,\dd R,
+\end{equation*}
+therefore
+\begin{equation*}
+(p_i-p_0)\cdot 4\pi R^2\,\dd R + \frac{Q^2}{4\pi\varepsilon_0R^2}\,\dd R
+= 16\pi\sigma R\,\dd R,
+\end{equation*}
+i.e.
+\begin{equation*}
+\Delta p = p_i - p_0 = \frac{4\sigma}{R} - \frac{Q^2}{\varepsilon_0\left(4\pi R^2\right)^2}.
+\end{equation*}
+
+\begin{commentary}
+The key to this problem is $\dd W=\sigma\,\dd A$. Its meaning is: for a liquid of constant volume
+or for a surface of zero volume, in a reversible isothermal process the work $\dd W$ done by the
+exterior on the system is equal to the increment $\dd F$ of the free energy, and $F=\sigma A$,
+where $A$ is the surface area of the liquid and $\sigma$ the surface-tension coefficient. Since
+$\sigma$ is a function of the temperature only and is independent of $A$, in an isothermal
+process $\dd F=\sigma\,\dd A$.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{2.21}
+As shown in the figure, let a point $A$ on the liquid surface at the mouth of the U-tube and a
+point $B$ inside the tube lie in the same horizontal plane, and let points $C$ and $D$ lie in the
+same horizontal plane. Then
+\begin{equation*}
+p_A = p_B = p_C - \rho gh_2 = p_D - \rho gh_2 .
+\end{equation*}
+Therefore
+\begin{equation*}
+\Delta p = p_A - p_0 = -\rho gh_2 .
+\end{equation*}
+This shows that the pressure difference between the inside and the outside of the liquid surface
+at the tube mouth is $-\rho gh_2$. When $h_2$ is positive, that is, when point $A$ lies above the
+horizontal liquid surface, $h_2>0$, and then
+\begin{equation*}
+\Delta p < 0 .
+\end{equation*}
+At this time the pressure at point $A$ inside the liquid surface is smaller than the atmospheric
+pressure outside the surface, so the liquid surface must be a concave surface.
+
+When $h_2=0$, $\Delta p=0$, i.e. $p_A=p_0$; at this time the liquid surface must be a flat
+surface.
+
+When $h_2<0$, that is, when the tube mouth $A$ lies below the horizontal liquid surface,
+$\Delta p>0$. Hence at this time the liquid surface must be a convex surface. As $h_2$ continues
+to decrease, i.e. as the mouth of the U-tube is lowered further below the liquid surface, the
+surface bulges further downwards and the liquid drop is elongated. When the weight of the liquid
+drop exceeds the upward component of the surface tension, the drop falls; when the tube mouth is
+lowered still further, the liquid flows out continuously from the tube mouth.
+
+\begin{figbox}{2.21}
+\begin{tikzpicture}[scale=0.85]
+  % ---- panel (a): tube mouth above the free surface ----
+  \begin{scope}
+    \fill[black!10] (-2.2,-1.7) rectangle (2.2,0);
+    \draw[thickline] (-2.2,0.55) -- (-2.2,-1.7) -- (2.2,-1.7) -- (2.2,0.55);
+    \draw[thickline] (-2.2,0) -- (2.2,0);
+    % tube (drawn over the liquid, white interior)
+    \fill[white] (-0.55,-1.35) rectangle (0.55,1.55);
+    \draw[thickline] (-0.55,-1.35) -- (-0.55,1.55);
+    \draw[thickline] (0.55,-1.35) -- (0.55,1.55);
+    % liquid column in the tube with a concave meniscus
+    \fill[black!10] (-0.55,-1.35) -- (-0.55,0.85)
+      .. controls (-0.20,0.55) and (0.20,0.55) .. (0.55,0.85) -- (0.55,-1.35) -- cycle;
+    \draw[thickline] (-0.55,0.85) .. controls (-0.20,0.55) and (0.20,0.55) .. (0.55,0.85);
+    \node[above] at (0,0.60) {$A$};
+    \fill (-0.22,0.30) circle (1.1pt) node[right] {$B$};
+    \draw[dashedline] (0.55,0) -- (1.35,0);
+    \draw[dashedline] (0.55,0.85) -- (1.35,0.85);
+    \draw[dim] (1.15,0) -- (1.15,0.85) node[midway,right] {$h_2$};
+    \node at (0,1.95) {(a)};
+  \end{scope}
+  % ---- panel (b): tube mouth below the free surface ----
+  \begin{scope}[xshift=6.2cm]
+    \fill[black!10] (-2.2,-1.7) rectangle (2.2,0);
+    \draw[thickline] (-2.2,0.55) -- (-2.2,-1.7) -- (2.2,-1.7) -- (2.2,0.55);
+    \draw[thickline] (-2.2,0) -- (2.2,0);
+    % bent tube, white interior
+    \fill[white] (-0.35,-1.0) -- (-0.35,0.30) -- (1.55,0.30) -- (1.55,-0.75)
+      -- (0.95,-0.75) -- (0.95,-0.30) -- (0.35,-0.30) -- (0.35,-1.0) -- cycle;
+    \draw[thickline] (-0.35,-1.0) -- (-0.35,0.30) -- (1.55,0.30) -- (1.55,-0.75);
+    \draw[thickline] (0.35,-1.0) -- (0.35,-0.30) -- (0.95,-0.30) -- (0.95,-0.75);
+    % convex surface (pendant drop) at the mouth
+    \fill[black!10] (0.95,-0.75) .. controls (1.10,-1.20) and (1.40,-1.20) .. (1.55,-0.75) -- cycle;
+    \draw[thickline] (0.95,-0.75) .. controls (1.10,-1.20) and (1.40,-1.20) .. (1.55,-0.75);
+    \fill (0.05,0) circle (1.1pt) node[above left] {$C$};
+    \fill (0.75,0) circle (1.1pt) node[above left] {$D$};
+    \draw[dashedline] (1.55,0) -- (1.85,0);
+    \draw[dashedline] (1.55,-0.75) -- (1.85,-0.75);
+    \draw[dim] (1.75,0) -- (1.75,-0.75) node[midway,right] {$h_2$};
+    \node at (0,1.95) {(b)};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+When discussing surface-tension problems one must bear in mind that the contact angle between
+the liquid surface and the wall of the vessel is determined only by the properties of the liquid
+and of the solid with which it is in contact. Hence, in the discussion of this problem, that is,
+while $h_2$ changes from greater than zero to less than zero, the contact angle between the
+liquid and the capillary tube does not change. When $h_2=0$ the liquid surface is flat, which
+does not mean that the liquid surface is perpendicular to the tube wall, but represents the
+situation in which the liquid surface is in contact with the wall of the tube mouth of a certain
+thickness. The contact angle between the liquid surface and the tube wall is the same as in the
+case $h_2>0$ with a concave surface. When $h_2<0$, the liquid surface comes into contact with the
+outer wall of the tube mouth and forms an upward surface-tension pull acting on the liquid drop;
+at this time the liquid surface is a convex surface.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{2.22}
+(1) Since $V=\dfrac{4}{3}\pi R^3 = n\cdot\dfrac{4}{3}\pi r^3$, therefore
+\begin{equation*}
+r = n^{-1/3}\cdot R\qquad\text{or}\qquad n=\left(\frac{R}{r}\right)^3 .
+\end{equation*}
+The work $W$ done by the exterior in the isothermal process is
+\begin{align*}
+W &= \sigma\cdot\Delta A = \sigma\left(n\cdot 4\pi r^2-4\pi R^2\right)
+= \sigma\left(\frac{R^3}{r^3}\,4\pi r^2-4\pi R^2\right)
+= 4\pi R^2\sigma\left(\frac{R}{r}-1\right)\\
+&= 4\pi R^2\left(a-bT\right)\left(\frac{R}{r}-1\right).
+\end{align*}
+
+(2)
+\begin{equation*}
+\Delta Q = T\Delta S = -T\frac{\dd\sigma}{\dd T}\Delta A
+= 4\pi R^2bT\left(\frac{R}{r}-1\right),
+\end{equation*}
+where use has been made of $\Delta S = -\dfrac{\dd\sigma}{\dd T}\cdot\Delta A$.
+
+(3) Since
+\begin{align*}
+\Delta U &= W + \Delta Q = 4\pi\sigma R^2\left(\frac{R}{r}-1\right)
+- T\frac{\dd\sigma}{\dd T}\Delta A\\
+&= 4\pi R^2\left(\frac{R}{r}-1\right)\left(\sigma-T\frac{\dd\sigma}{\dd T}\right)
+= 4\pi R^2\cdot a\left(\frac{R}{r}-1\right),
+\end{align*}
+the increment $\Delta S$ of the entropy of the system during the process is
+\begin{equation*}
+\Delta S = -\frac{\dd\sigma}{\dd T}\Delta A
+= -4\pi R^2\left(\frac{R}{r}-1\right)(-b)
+= 4\pi R^2b\left(\frac{R}{r}-1\right).
+\end{equation*}
+
+\begin{commentary}
+For a liquid whose volume remains constant, after an isothermal process the work done by the
+exterior on the system can only be work done on the liquid surface. For such a system the
+relation $\sigma(T)$ between the surface-tension coefficient $\sigma$ and the temperature $T$ is
+essentially the equation of state of the system. The thermodynamic quantities describing the
+system are then $\sigma$, $T$ and the surface area $A$. The entropy of the system is
+$S=-\left(\dfrac{\dd\sigma}{\dd T}\right)A$, and the internal energy is
+$U=\left[\sigma-T\left(\dfrac{\dd\sigma}{\dd T}\right)\right]\cdot A$.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{2.23}
+Since, when the saturated vapour pressure of water is equal to the atmospheric pressure above the
+liquid surface, the temperature of the saturated vapour is just the boiling point $T_c$ of water,
+and since, when water boils, the relation between its saturated vapour pressure and the
+temperature is given by the Clapeyron equation
+\begin{equation*}
+\frac{\dd p}{\dd T_c} = \frac{l}{T_c\left(v_g-v_l\right)},
+\end{equation*}
+where $l$ is the heat of vaporization of water at $T_c$, and $v_g$ and $v_l$ are the specific
+volumes of the gas and of the liquid phase respectively. Since $v_g\gg v_l$ and $Mpv_g=RT$, the
+above expression becomes
+\begin{equation*}
+\frac{\dd p}{\dd T_c} = \frac{l}{T_cv_g}
+= \frac{pl_m}{T_c^2R}
+\qquad\text{or}\qquad
+\frac{\dd p}{p} = \frac{l_m\,\dd T_c}{RT_c^2},
+\end{equation*}
+where $l_m$ is the molar heat of vaporization of water vapour. Further, since the pressure of the
+air varies with height, i.e.
+\begin{equation*}
+\dd p = -\rho g\,\dd z = -nmg\,\dd z = -\frac{mgp}{kT_0}\,\dd z
+= -\frac{M_0gp}{RT_0}\,\dd z,
+\end{equation*}
+where $M_0$ is the molar mass of air, $g$ the acceleration of gravity and $T_0$ the temperature
+of the air. From the above two expressions we obtain
+\begin{equation*}
+\frac{\dd T_c}{T_c^2} = -\frac{M_0g}{l_mT_0}\,\dd z .
+\end{equation*}
+Integrating both sides gives
+\begin{equation*}
+\frac{1}{T_c} = \frac{M_0g}{l_mT_0}z + c .
+\end{equation*}
+When $z=0$, $T_c=\SI{373.15}{K}$; substituting this gives
+$c=\dfrac{1}{\SI{373.15}{K}}$. Hence
+\begin{equation*}
+\frac{1}{T_c} = \frac{M_0g}{l_mT_0}z + \frac{1}{\SI{373.15}{K}} .
+\end{equation*}
+The above expression shows that as $z$ increases, $T_c$ decreases. But the expression holds only
+in the range in which $l_m$ does not vary with temperature.
+\end{solution}
+
+\begin{solution}{2.24}
+As shown in the figure, $\circ$ denotes a normal lattice site and $\times$ an interstitial
+position.
+
+\begin{figbox}{2.24}
+\begin{tikzpicture}[scale=0.72]
+  \foreach \i in {0,1,2,3,4} {
+    \foreach \j in {0,1,2,3,4} {
+      \draw[thickline] (\j,\i) circle (0.11);
+    }
+  }
+  \foreach \i in {0,1,2,3} {
+    \foreach \j in {0,1,2,3} {
+      \draw[thickline] ({\j+0.5},{\i+0.5}) ++(-0.09,-0.09) -- ++(0.18,0.18);
+      \draw[thickline] ({\j+0.5},{\i+0.5}) ++(-0.09,0.09) -- ++(0.18,-0.18);
+    }
+  }
+  \node[below] at (2,-0.55) {$\circ$ normal site,\quad $\times$ interstitial position};
+\end{tikzpicture}
+\end{figbox}
+
+(1) Since, when $N$ atoms are situated at normal lattice sites, their thermodynamic probability
+$W_1^T$ and the entropy $S_1$ of the system are respectively
+\begin{equation*}
+W_1^T = N!,\qquad S_1 = k\ln W_1^T = k\ln N!,
+\end{equation*}
+when $n$ atoms are situated at interstitial positions, there are $N-n$ atoms at the $N$ normal
+lattice sites, and the number of complexions is
+\begin{equation*}
+(N-n)!\,\frac{N!}{n!\,(N-n)!} = \frac{N!}{n!}.
+\end{equation*}
+Similarly, the number of complexions with $n$ atoms at the $N$ interstitial positions is
+\begin{equation*}
+\frac{N!}{(N-n)!}.
+\end{equation*}
+Therefore the total number of complexions, i.e. the thermodynamic probability $W_2$, for $N-n$
+of the $N$ atoms to be at normal lattice sites while $n$ atoms are at interstitial positions, is
+\begin{equation*}
+W_2^T = \frac{N!}{(N-n)!\,n!}\cdot\frac{N!}{n!\,(N-n)!}.
+\end{equation*}
+The entropy $S_2$ of the system is
+\begin{equation*}
+S_2 = k\ln W_2^T .
+\end{equation*}
+The increment $\Delta S$ of the entropy of the system is
+\begin{equation*}
+\Delta S = S_2 - S_1
+= k\ln\left[\frac{N!}{(N-n)!\,n!}\right]^2
+= 2k\ln\frac{N!}{(N-n)!\,n!}.
+\end{equation*}
+
+(2) Since the energy of an atom increases by $u$ when it moves from a normal position to an
+interstitial position, when $n$ atoms move from normal positions and become interstitial atoms
+the increment of the internal energy of the system is $\Delta U=nu$. Suppose that during this
+process the temperature of the system does not change and the work done by the exterior is zero,
+i.e. $\dd T=0$, $\dd W=0$; then, since
+\begin{equation*}
+\dd F = \dd U - T\,\dd S,
+\end{equation*}
+and the process is isothermal, $\dd F=\dd W=0$, and therefore
+\begin{equation*}
+\Delta U = T\Delta S .
+\end{equation*}
+Substituting $\Delta U=nu$ and the value of $\Delta S$ into the above expression gives
+\begin{equation*}
+nu = 2kT\ln\frac{N!}{n!\,(N-n)!}.
+\end{equation*}
+Let $n\ll N$; applying Stirling's formula $\ln N!=N\left(\ln N-1\right)$ to the above expression
+gives
+\begin{equation*}
+nu = 2kT\left(n\ln N-n\ln n\right) = 2nkT\ln\frac{N}{n}.
+\end{equation*}
+Hence
+\begin{equation*}
+n = N\ee^{-u/2kT}.
+\end{equation*}
+In the above calculation the approximation $\ln(N-n)=\ln N$ has been used.
+\end{solution}
+
+\begin{solution}{2.25}
+(1) Each segment of the one-dimensional chain is assigned a direction, either to the left or to
+the right. Suppose that $n$ of the $N$ segments point to the right; then necessarily $N-n$
+segments point to the left, and the distance $x$ between the two ends of the chain is
+\begin{equation*}
+x = \left[n-(N-n)\right]a,
+\end{equation*}
+while $n$ and $(N-n)$ are respectively
+\begin{equation*}
+n = \frac{1}{2}\left(\frac{x}{a}+N\right),\qquad
+N-n = \frac{1}{2}\left(N-\frac{x}{a}\right).
+\end{equation*}
+When $n$ of the $N$ segments point to the right, the thermodynamic probability of the system is
+\begin{equation*}
+W^T(n) = \frac{N!}{n!\,(N-n)!}.
+\end{equation*}
+Hence the entropy $S$ of the system is
+\begin{equation*}
+S = k\ln W^T = k\left[\ln N!-\ln n!-\ln(N-n)!\right].
+\end{equation*}
+Applying Stirling's formula
+\begin{equation*}
+\ln N! = N\left(\ln N-1\right),
+\end{equation*}
+we obtain
+\begin{align*}
+S &= k\left[N\ln N-n\ln n-(N-n)\ln(N-n)\right]\\
+&= k\left[N\ln 2N-\frac{1}{2}\left(\frac{x}{a}+N\right)\ln\left(\frac{x}{a}+N\right)
+-\frac{1}{2}\left(N-\frac{x}{a}\right)\ln\left(N-\frac{x}{a}\right)\right].
+\end{align*}
+When $x\to 0$,
+\begin{equation*}
+S = k\left[N\ln 2N-N\ln N\right] = kN\ln 2 .
+\end{equation*}
+At this time $S$ is maximum, i.e. the system is in the most disordered state.
+
+When $x\to Na$,
+\begin{equation*}
+S = 0 .
+\end{equation*}
+$S=0$ indicates the greatest order.
+
+(2) If every joint of the chain can move freely, then the internal energy of the chain system is
+independent of the length $x$. For an isothermal process the work done by the external force on
+the chain is equal to the increment of the free energy $F$ of the system (the chain), i.e.
+\begin{equation*}
+\dd W = \dd F,\qquad\text{and}\qquad \dd W = f\,\dd x,\quad
+F = U-T\,\dd S,\quad U=U(T).
+\end{equation*}
+Therefore
+\begin{equation*}
+f = \left(\frac{\partial F}{\partial x}\right)_T
+= -T\left(\frac{\partial S}{\partial x}\right)_T .
+\end{equation*}
+Applying the above expression $S=S(x)$, we obtain
+\begin{equation*}
+f = \frac{kT}{2a}\ln\left[\frac{1+\dfrac{x}{Na}}{1-\dfrac{x}{Na}}\right].
+\end{equation*}
+When $Na\gg x$, i.e. $\dfrac{x}{Na}\ll 1$, $\ln\left(1+\dfrac{x}{Na}\right)\approx\dfrac{x}{Na}$;
+therefore
+\begin{equation*}
+f = \frac{kT}{2a}\left(\frac{x}{Na}+\frac{x}{Na}\right) = \frac{kT}{Na^2}x .
+\end{equation*}
+This means that when the chain is folded very short, the force acting on it is proportional to the
+length of the chain.
+\end{solution}
+
+\begin{solution}{2.26}
+This is a binomial distribution problem. Since $N=400$, $n=210$, $p=q=\dfrac{1}{2}$, therefore
+\begin{equation*}
+W(n) = \frac{N!}{n!\,(N-n)!}\,p^nq^{N-n}.
+\end{equation*}
+Since $\bar{n}=Np=400\times\dfrac{1}{2}=200$, and $\bar{n}$ is very close to $n$, the above
+expression can be expanded into a Gaussian distribution, i.e.
+\begin{equation*}
+W(n) = \frac{1}{\sqrt{2\pi Npq}}\,\ee^{-\frac{(n-\bar{n})^2}{2Npq}}.
+\end{equation*}
+Substituting $N$, $n$, $\bar{n}$, $p$ and $q$ into the above expression gives
+\begin{align*}
+W(210) &= \frac{1}{\sqrt{2\pi\times 100}}\,\ee^{-\frac{10^2}{200}}
+= \frac{1}{10\sqrt{2\pi}}\,\ee^{-\frac{1}{2}}\\
+&= \frac{1}{25.07}\times\frac{1}{\sqrt{\ee}}
+= \frac{1}{25}\times\frac{1}{1.649} = 0.024 = 2.4\% .
+\end{align*}
+
+\begin{commentary}
+Besides being expandable into a Gaussian distribution in the neighbourhood of $n\approx\bar{n}$,
+the binomial distribution also has an important limiting case, the binomial--Poisson
+distribution. When
+\begin{equation*}
+p\ll 1\quad\text{and}\quad n\ll N,
+\end{equation*}
+the binomial distribution becomes the Poisson distribution
+\begin{equation*}
+W(n) = \frac{\lambda^n}{n!}\ee^{-\lambda},
+\end{equation*}
+where
+\begin{equation*}
+\lambda = Np .
+\end{equation*}
+\end{commentary}
+\end{solution}
+
+\begin{solution}{2.27}
+As shown in the figure, when the rod is in contact with two heat reservoirs at temperatures $T_1$
+and $T_2$ respectively and a steady state has been reached, let the temperature inside the rod be
+$T(x)$; then the heat $Q$ passing through the cross-section of area $A$ per unit time is
+constant, i.e.
+\begin{equation*}
+Q = \kappa\frac{\partial T}{\partial x}A = \text{constant},
+\end{equation*}
+
+\begin{figbox}{2.27}
+\begin{tikzpicture}[scale=0.85]
+  \draw[thickline] (-3.9,-1.2) rectangle (-2.4,1.2);
+  \draw[thickline] (2.4,-1.2) rectangle (3.9,1.2);
+  \node at (-3.15,0) {$T_1$};
+  \node at (3.15,0) {$T_2$};
+  % rod
+  \draw[thickline] (-2.4,0.35) -- (2.4,0.35);
+  \draw[thickline] (-2.4,-0.35) -- (2.4,-0.35);
+  \draw[thickline] (-2.4,0.35) -- (-2.4,-0.35);
+  \draw[thickline] (2.4,0.35) -- (2.4,-0.35);
+  % heat flow
+  \draw[force] (-0.6,0) -- (0.6,0);
+  \draw[dim] (-2.4,1.55) -- (2.4,1.55) node[midway,above] {$l$};
+  % x axis
+  \draw[axis] (-2.4,-1.75) -- (4.6,-1.75) node[right] {$x$};
+  \draw[thickline] (-2.4,-1.6) -- (-2.4,-1.9);
+  \node[below] at (-2.4,-1.9) {$O$};
+\end{tikzpicture}
+\end{figbox}
+where $\kappa$ is the thermal conductivity of the rod. Hence $\dfrac{\partial T}{\partial x}=a=$
+constant, and
+\begin{equation*}
+T = ax+b .
+\end{equation*}
+Since $T=T_1$ at $x=0$ and $T=T_2$ at $x=l$, therefore
+$a=-\dfrac{T_1-T_2}{l}$, $b=T_1$, and
+\begin{equation*}
+T = T_1-\frac{T_1-T_2}{l}x .
+\end{equation*}
+
+When the heat reservoirs are removed and the rod reaches equilibrium, the temperature is the same
+everywhere in the rod. Let it be $T_f$; then
+\begin{equation*}
+T_f = \frac{\displaystyle\int_0^l C_p\rho AT\,\dd x}{C_p\rho A\cdot l}
+= \frac{1}{l}\int_0^l(ax+b)\,\dd x = \frac{a}{2}l+b = \frac{1}{2}\left(T_1+T_2\right),
+\end{equation*}
+where $\rho$ is the density of the rod. Here $T_f$ is the final temperature of the rod, while $T$
+is the initial temperature of the system.
+
+Let the increment of the entropy of the part of the rod at $x$, of length $\dd x$, during the
+process in which the rod goes from the initial state (temperature $T$) to the final state
+(temperature $T_f$) be $\dd S(x)$; then
+\begin{equation*}
+\dd S(x) = \int\frac{\dd Q(x)}{T}
+= \int_T^{T_f}\frac{C_p\rho A\cdot\dd x\cdot\dd T}{T}
+= C_p\rho A\,\dd x\cdot\ln\left[\frac{T_1+T_2}{2\left(T_1+ax\right)}\right].
+\end{equation*}
+From the initial state to the final state the entropy increment $\Delta S$ of the whole rod is
+\begin{equation*}
+\Delta S = \int_0^l\dd S_x
+= C_p\rho A\left[\int_0^l\ln\frac{1}{2}\left(T_1+T_2\right)\dd x
+-\int_0^l\ln\left(T_1+ax\right)\dd x\right].
+\end{equation*}
+Let $T_1+ax=\xi$, $\ln\xi=y$; then $\xi=\ee^y$, $\dd\xi=\ee^y\,\dd y$, and therefore
+\begin{equation*}
+\int\ln\xi\cdot\dd\xi = \int y\ee^y\,\dd y = y\ee^y-\int\ee^y\,\dd y
+= (y-1)\ee^y = \left(\ln\xi-1\right)\xi .
+\end{equation*}
+Hence
+\begin{align*}
+\Delta S &= C_p\rho A\left\{l\ln\frac{1}{2}\left(T_1+T_2\right)
+-\frac{1}{a}\left[\ln\left(T_1+ax\right)-1\right]\cdot\left(T_1+ax\right)\right\}\\
+&= C_pM\left\{l\ln\frac{1}{2}\left(T_1+T_2\right)
++\frac{1}{T_1-T_2}\left[\left(\ln T_2-1\right)T_2-\left(\ln T_1-1\right)T_1\right]\right\}\\
+&= C_pM\left[l\ln\frac{1}{2}\left(T_1+T_2\right)
++\frac{T_2\ln T_2-T_1\ln T_1}{T_1-T_2}+1\right].
+\end{align*}
+\end{solution}
+
+\begin{solution}{2.28}
+When $n$ atoms in the crystal run from the $N$ normal lattice sites to the surface and form a new
+layer of surface atoms, the number of lattice sites of the crystal increases from $N$ to $N+n$,
+and $n$ vacancies are left in the interior. At this time the number of ways of arranging the $N$
+atoms on the $N+n$ lattice sites, i.e. the thermodynamic probability $W_2^T$, is
+\begin{equation*}
+W_2^T = \frac{(N+n)!}{n!},
+\end{equation*}
+while the number of ways of arranging the original $N$ atoms on the $N$ lattice sites, i.e. the
+thermodynamic probability $W_1^T$, is
+\begin{equation*}
+W_1^T = N! .
+\end{equation*}
+Hence after $n$ atoms have run to the surface, the increment $\Delta S$ of the entropy of the
+system (the crystal) is
+\begin{equation*}
+\Delta S = S_2-S_1 = k\ln W_2^T - k\ln W_1^T = k\ln\frac{(N+n)!}{n!\,N!}.
+\end{equation*}
+Since the atoms run from normal lattice sites to the surface under the condition that the
+temperature $T$ remains constant, and the volume of the crystal remains constant, the work done
+by the exterior is zero, i.e.
+\begin{equation*}
+\dd W = 0,\qquad \dd T = 0 .
+\end{equation*}
+Since the free energy $F$ of the system is
+\begin{equation*}
+F = U-TS,\qquad \dd F = \dd U - T\,\dd S - S\,\dd T,
+\end{equation*}
+for an isothermal process $\dd T=0$ and $\dd F=\dd W=0$, therefore
+\begin{equation*}
+\dd U = T\,\dd S,\qquad \Delta U = T\Delta S .
+\end{equation*}
+Here $U$ is the internal energy of the crystal, and $\Delta U$ is the increment of the internal
+energy when $n$ vacancies are created, so
+\begin{equation*}
+\Delta U = nu = T\Delta S = Tk\ln\frac{(N+n)!}{n!\,N!}.
+\end{equation*}
+Since $n$ and $N$ are both large quantities, Stirling's formula can be applied, giving
+\begin{equation*}
+\ln(N+n)! = (N+n)\left[\ln(N+n)-1\right],\quad
+\ln n! = n\left(\ln n-1\right),\quad
+\ln N! = N\left(\ln N-1\right).
+\end{equation*}
+Substituting into the expression for $nu$ gives
+\begin{equation*}
+nu = kT\cdot n\left[\ln(N+n)-\ln n\right],\qquad
+u = kT\ln\frac{N+n}{n}.
+\end{equation*}
+Therefore
+\begin{equation*}
+\frac{n}{N+n} = \ee^{-u/kT}.
+\end{equation*}
+Since $n\ll N$, therefore
+\begin{equation*}
+n = N\ee^{-u/kT},\qquad\text{or}\qquad \frac{n}{N} = \ee^{-u/kT}.
+\end{equation*}
+$\dfrac{n}{N}$ represents the probability of creating one Schottky defect at temperature $T$.
+\end{solution}
+

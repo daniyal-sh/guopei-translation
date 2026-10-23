@@ -1,0 +1,1174 @@
+\subsection*{Experiment 7.20 \quad Detection of an electromagnetic black box with an oscilloscope (II)}
+
+A black box is given which contains three electromagnetic elements (a resistance $R$, a capacitance $C$ and an inductance $L$) connected in a delta configuration. The three elements are connected respectively to terminals 1, 2 and 3 on the panel of the black box, the element between terminals 1 and 2 being $Z_1$, that between terminals 2 and 3 being $Z_2$, and that between terminals 1 and 3 being $Z_3$, as shown in the figure. The available instruments are to be used to identify and to measure them.
+
+\textbf{[Apparatus and materials available]}
+
+One black box, one dual-trace oscilloscope, one low-frequency signal generator, one resistance box, one single-pole double-throw switch, one capacitance box, graph paper, etc.
+
+\textbf{[Requirements]}
+
+(1) Determine what kind of elements the three elements in the black box are, and between which two terminals each of them is connected; draw the circuit diagram of their connection and briefly describe the method of identification.
+
+(2) Measure the values of these three elements.
+
+(3) If the value of an electrical element depends on some physical quantity, the relation between them must be measured.
+
+\begin{figbox}{7.20}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\coordinate (P1) at (0,0);
+\coordinate (P2) at (4.4,0);
+\coordinate (P3) at (2.2,3.5);
+\draw (P1) -- (P3) -- (P2) -- (P1);
+% Z3 on the left side
+\draw[fill=white,rotate around={57.85:(1.10,1.75)}] (0.75,1.60) rectangle (1.45,1.90);
+\node[left] at (0.66,1.95) {$Z_3$};
+% Z2 on the right side
+\draw[fill=white,rotate around={-57.85:(3.30,1.75)}] (2.95,1.60) rectangle (3.65,1.90);
+\node[right] at (3.74,1.95) {$Z_2$};
+% Z1 on the bottom side
+\draw[fill=white] (1.85,-0.15) rectangle (2.55,0.15);
+\node[below] at (2.20,-0.20) {$Z_1$};
+\fill (P1) circle (0.05); \node[below left] at (P1) {$1$};
+\fill (P2) circle (0.05); \node[below right] at (P2) {$2$};
+\fill (P3) circle (0.05); \node[above] at (P3) {$3$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{Solution 7.20}\quad \textbf{1. Determination of the types of the elements in the black box}
+
+\emph{Test 1.} Terminals 1 and 2 are connected with a wire, and the resistance $R$ is connected in series to terminal 2. The circuit is then simplified to that of Fig.~7.20(a)(1). The output voltage of the source is kept unchanged, the output frequency $f$ of the signal source is varied, and the variation of the voltage $U_R$ across $R$ is observed.
+
+\emph{Test 2.} Terminals 2 and 3 are short-circuited, and the resistance $R$ is connected in series to terminal 3; the circuit is simplified to that of Fig.~7.20(a)(2). The output voltage of the source is kept unchanged, the output frequency $f$ of the signal source is varied, and the variation of the voltage $U_R$ across $R$ is observed.
+
+\emph{Test 3.} Terminals 1 and 3 are short-circuited, and the resistance $R$ is connected in series to terminal 3; the circuit is simplified to that of Fig.~7.20(a)(3). The output voltage of the source is kept unchanged, the output frequency $f$ of the signal source is varied, and the variation of the voltage $U_R$ across $R$ is observed.
+
+\begin{figbox}{7.20(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.80,every node/.style={scale=0.8}]
+% ---------- test 1 ----------
+\begin{scope}
+\draw (0,2.6) -- (0,3.4) -- (0.9,3.4);
+\draw (0.9,3.25) rectangle (1.75,3.55); \node[above] at (1.32,3.60) {$Z_3$};
+\draw (1.75,3.4) -- (4.2,3.4) -- (4.2,2.6);
+\draw (0,2.6) -- (0,1.8) -- (0.9,1.8);
+\draw (0.9,1.65) rectangle (1.75,1.95); \node[below] at (1.32,1.60) {$Z_2$};
+\draw (1.75,1.8) -- (4.2,1.8) -- (4.2,2.6);
+\draw (4.2,2.6) -- (4.2,2.05);
+\draw (4.05,1.30) rectangle (4.35,2.05); \node[right] at (4.40,1.68) {$R_0$};
+\draw (4.2,1.30) -- (4.2,0) -- (0,0) -- (0,1.0);
+\draw (0,1.60) circle (0.28); \node at (0,1.60) {$\sim$};
+\draw (0,1.88) -- (0,2.6);
+\node[left] at (-0.10,1.20) {CH$_1$};
+\node[right] at (4.72,1.62) {CH$_2$};
+\node[left] at (-0.12,2.78) {\small $3$};
+\node[right] at (4.30,2.78) {\small $1,2$};
+\node[below] at (2.10,-0.18) {(1)};
+\end{scope}
+% ---------- test 2 ----------
+\begin{scope}[xshift=5.4cm]
+\draw (0,2.6) -- (0,3.4) -- (0.9,3.4);
+\draw (0.9,3.25) rectangle (1.75,3.55); \node[above] at (1.32,3.60) {$Z_1$};
+\draw (1.75,3.4) -- (4.2,3.4) -- (4.2,2.6);
+\draw (0,2.6) -- (0,1.8) -- (0.9,1.8);
+\draw (0.9,1.65) rectangle (1.75,1.95); \node[below] at (1.32,1.60) {$Z_3$};
+\draw (1.75,1.8) -- (4.2,1.8) -- (4.2,2.6);
+\draw (4.2,2.6) -- (4.2,2.05);
+\draw (4.05,1.30) rectangle (4.35,2.05); \node[right] at (4.40,1.68) {$R_0$};
+\draw (4.2,1.30) -- (4.2,0) -- (0,0) -- (0,1.0);
+\draw (0,1.60) circle (0.28); \node at (0,1.60) {$\sim$};
+\draw (0,1.88) -- (0,2.6);
+\node[left] at (-0.10,1.20) {CH$_1$};
+\node[right] at (4.72,1.62) {CH$_2$};
+\node[left] at (-0.12,2.78) {\small $1$};
+\node[right] at (4.30,2.78) {\small $2,3$};
+\node[below] at (2.10,-0.18) {(2)};
+\end{scope}
+% ---------- test 3 ----------
+\begin{scope}[xshift=10.8cm]
+\draw (0,2.6) -- (0,3.4) -- (0.9,3.4);
+\draw (0.9,3.25) rectangle (1.75,3.55); \node[above] at (1.32,3.60) {$Z_1$};
+\draw (1.75,3.4) -- (4.2,3.4) -- (4.2,2.6);
+\draw (0,2.6) -- (0,1.8) -- (0.9,1.8);
+\draw (0.9,1.65) rectangle (1.75,1.95); \node[below] at (1.32,1.60) {$Z_2$};
+\draw (1.75,1.8) -- (4.2,1.8) -- (4.2,2.6);
+\draw (4.2,2.6) -- (4.2,2.05);
+\draw (4.05,1.30) rectangle (4.35,2.05); \node[right] at (4.40,1.68) {$R_0$};
+\draw (4.2,1.30) -- (4.2,0) -- (0,0) -- (0,1.0);
+\draw (0,1.60) circle (0.28); \node at (0,1.60) {$\sim$};
+\draw (0,1.88) -- (0,2.6);
+\node[left] at (-0.10,1.20) {CH$_1$};
+\node[right] at (4.72,1.62) {CH$_2$};
+\node[left] at (-0.12,2.78) {\small $2$};
+\node[right] at (4.30,2.78) {\small $1,3$};
+\node[below] at (2.10,-0.18) {(3)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.20-1}\\[2pt]
+{\footnotesize
+\begin{tabular}{@{}l p{2.9cm} p{2.9cm} p{3.1cm}@{}}
+\toprule
+ & Test 1 & Test 2 & Test 3\\
+\midrule
+Resonance observed? & yes & no & no\\[4pt]
+Variation of $U_R$ as $f$ increases & at the resonant frequency, $U_R$ is a minimum & $U_R$ decreases & $U_R$ increases\\[4pt]
+Possible composition & $Z_2$ and $Z_3$ contain an inductance and a capacitance & $Z_1$ and $Z_3$ contain an inductance and a resistance & $Z_1$ and $Z_2$ contain a capacitance and a resistance\\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+From the above measurements the circuit and the relevant elements can be summarised as in Fig.~7.20(b), namely a resistance $R$ between terminals 1 and 2, a capacitance $C$ between terminals 2 and 3, and an inductance $L$ between terminals 1 and 3.
+
+\begin{figbox}{7.20(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (P1) at (0,0);
+\coordinate (P2) at (4.4,0);
+\coordinate (P3) at (2.2,3.5);
+\draw (P1) -- (P3) -- (P2);
+\draw (P1) -- (2.2,0);
+\draw (2.55,0) -- (P2);
+% R at the bottom
+\draw (2.20,-0.17) rectangle (2.55,0.17);
+\node[below] at (2.38,-0.20) {$R$};
+% inductance on 1-3
+\begin{scope}[rotate around={57.85:(1.10,1.75)}]
+\draw (0.62,1.75) -- (0.76,1.75);
+\draw (0.76,1.75) arc (90:-90:0.17);
+\draw (1.10,1.75) arc (90:-90:0.17);
+\draw (1.44,1.75) arc (90:-90:0.17);
+\draw (1.78,1.75) -- (1.90,1.75);
+\end{scope}
+\node[left] at (0.78,2.12) {$L$};
+% capacitance on 2-3
+\begin{scope}[rotate around={-57.85:(3.30,1.75)}]
+\draw (2.85,1.75) -- (3.13,1.75);
+\draw (3.13,1.48) -- (3.13,2.02);
+\draw (3.45,1.48) -- (3.45,2.02);
+\draw (3.45,1.75) -- (3.73,1.75);
+\end{scope}
+\node[right] at (3.74,1.95) {$C$};
+\fill (P1) circle (0.05); \node[below left] at (P1) {$1$};
+\fill (P2) circle (0.05); \node[below right] at (P2) {$2$};
+\fill (P3) circle (0.05); \node[above] at (P3) {$3$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2. Method of measuring the resistance $R$ and the capacitance $C$}
+
+Terminals 1 and 3 are short-circuited with a wire, and the black box, the resistance box, the oscilloscope and the signal generator are connected as in Fig.~7.20(c). When the frequency $f$ of the signal source is rather low, for example $f=20\,\mathrm{Hz}$, we may take approximately $1/(\omega C)\gg R$. The resistance box is adjusted to $R_0$ so that $U_2=\frac12U_1$ ($U_2$ being the voltage measured by CH$_2$ and $U_1$ that measured by CH$_1$); then $U_{R_0}=U_R$, and hence
+\[
+R=R_0=204\,\Omega .
+\]
+
+\begin{figbox}{7.20(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% left common rail (1 and 3)
+\draw (0,0) -- (0,3.4);
+% capacitance branch at the top
+\draw (0,3.4) -- (0.85,3.4);
+\draw (0.85,3.20) -- (0.85,3.60);
+\draw (1.00,3.20) -- (1.00,3.60);
+\draw (1.00,3.4) -- (3.30,3.4);
+\node[above] at (0.92,3.62) {$C$};
+% resistance branch in the middle
+\draw (0,1.9) -- (0.80,1.9);
+\draw (0.80,1.74) rectangle (1.70,2.06);
+\node[above] at (1.25,2.10) {$R$};
+\draw (1.70,1.9) -- (3.30,1.9);
+% node 2
+\fill (3.30,1.9) circle (0.05);
+\node[below] at (3.30,1.82) {$2$};
+\draw (3.30,3.4) -- (3.30,1.9);
+% resistance box R0
+\draw (3.30,1.9) -- (3.90,1.9);
+\draw (3.90,1.74) rectangle (4.80,2.06);
+\node[above] at (4.35,2.10) {$R_0$};
+\draw (4.80,1.9) -- (5.40,1.9) -- (5.40,0.85);
+% source at the bottom
+\draw (5.40,0.85) circle (0.28); \node at (5.40,0.85) {$\sim$};
+\draw (5.40,0.57) -- (5.40,0) -- (0,0);
+\node[right] at (5.75,0.85) {CH$_1$};
+% CH2 across R0
+\draw (3.90,2.60) -- (3.90,2.06);
+\draw (4.80,2.60) -- (4.80,2.06);
+\node[above] at (4.35,2.62) {CH$_2$};
+\node[left] at (-0.08,3.30) {\small $1,3$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.20(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% left rail (terminals 1 and 3)
+\draw (0,0) -- (0,3.3);
+% left block: C in parallel with R
+\draw (0,3.3) -- (1.35,3.3);
+\draw (1.35,3.10) -- (1.35,3.50);
+\draw (1.52,3.10) -- (1.52,3.50);
+\draw (1.52,3.3) -- (3.0,3.3);
+\node[above] at (1.44,3.52) {$C$};
+\draw (0,1.9) -- (1.0,1.9);
+\draw (1.00,1.74) rectangle (2.10,2.06);
+\node[above] at (1.55,2.10) {$R$};
+\draw (2.10,1.9) -- (3.0,1.9);
+% middle node 2
+\fill (3.0,3.3) circle (0.05);
+\node[above] at (3.0,3.38) {$2$};
+\draw (3.0,3.3) -- (3.0,1.9);
+% right block: C0 in parallel with R0
+\draw (3.0,3.3) -- (4.35,3.3);
+\draw (4.35,3.10) -- (4.35,3.50);
+\draw (4.52,3.10) -- (4.52,3.50);
+\draw (4.52,3.3) -- (6.0,3.3);
+\node[above] at (4.44,3.52) {$C_0$};
+\draw (3.0,1.9) -- (3.9,1.9);
+\draw (3.90,1.74) rectangle (5.00,2.06);
+\node[above] at (4.45,2.10) {$R_0$};
+\draw (5.00,1.9) -- (6.0,1.9);
+% right rail and source
+\draw (6.0,3.3) -- (6.0,0);
+\draw (6.0,0) -- (0,0);
+\draw (3.0,0) circle (0.28); \node at (3.0,0) {$\sim$};
+\node[below] at (3.0,-0.30) {CH$_1$};
+% CH2 across the right-hand block
+\draw[dashed] (3.0,3.3) -- (3.0,4.15);
+\draw[dashed] (5.60,3.3) -- (5.60,4.15);
+\draw (3.0,4.15) -- (4.05,4.15);
+\draw (4.55,4.15) -- (5.60,4.15);
+\node[above] at (4.30,4.17) {CH$_2$};
+\node[left] at (-0.08,3.22) {\small $3$};
+\node[left] at (-0.08,2.20) {\small $1$};
+\end{tikzpicture}
+\end{figbox}
+
+After the value of the resistance $R$ has been measured, the black box, the low-frequency signal generator, the oscilloscope and the capacitance box are connected as in Fig.~7.20(d). With the resistance box set to $R_0=R=204\,\Omega$ and the frequency taken as $f=1000\,\mathrm{Hz}$, the value $C_0$ of the external capacitance box is adjusted until $U_2=\frac12U_1$. The bridge is then balanced, the voltage drops across the capacitance $C$ and across the capacitance box $C_0$ are equal, and therefore
+\[
+C=C_0=0.100\,\mu\mathrm{F}.
+\]
+
+\textbf{3. Measurement of the inductance $L$ and of its characteristics}
+
+The black box, the low-frequency signal generator and the oscilloscope are connected as in Fig.~7.20(e), and the frequency $f$ of the signal generator is adjusted.
+
+\begin{figbox}{7.20(e)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% loop
+\draw (0.4,0.5) -- (0.4,3.1) -- (5.6,3.1) -- (5.6,0.5) -- (0.4,0.5);
+% inductance on the top rail
+\draw (0.4,3.1) -- (0.75,3.1);
+\draw (0.75,3.1) arc (90:-90:0.14);
+\draw (1.03,3.1) arc (90:-90:0.14);
+\draw (1.31,3.1) arc (90:-90:0.14);
+\draw (1.59,3.1) -- (2.05,3.1);
+\node[above] at (1.25,3.28) {$L$};
+% capacitance
+\draw (2.05,2.88) -- (2.05,3.32);
+\draw (2.25,2.88) -- (2.25,3.32);
+\draw (2.25,3.1) -- (2.85,3.1);
+\node[above] at (2.15,3.34) {$C$};
+% resistance box R0 on the top rail
+\draw (2.85,2.94) rectangle (4.05,3.26);
+\node[above] at (3.45,3.30) {$R_0$};
+\draw (4.05,3.1) -- (5.6,3.1);
+% resistance R on the bottom rail
+\draw (0.4,0.5) -- (1.30,0.5);
+\draw (1.30,0.34) rectangle (2.50,0.66);
+\node[below] at (1.90,0.30) {$R$};
+\draw (2.50,0.5) -- (2.95,0.5);
+% source
+\draw (2.95,0.5) circle (0.25); \node at (2.95,0.5) {$\sim$};
+\draw (3.20,0.5) -- (5.6,0.5);
+\node[below] at (2.95,0.18) {CH$_1$};
+% CH2 across the capacitance
+\draw (2.05,3.1) -- (2.05,3.90);
+\draw (2.85,3.1) -- (2.85,3.90);
+\draw (2.05,3.90) -- (2.31,3.90);
+\draw (2.59,3.90) -- (2.85,3.90);
+\node[above] at (2.45,3.92) {CH$_2$};
+\end{tikzpicture}
+\end{figbox}
+
+When the $LC$ circuit reaches resonance, the voltage $U_C$ measured across the capacitance $C$ is a maximum. From $\omega^2=1/(LC)$, with $C=0.100\,\mu\mathrm{F}$ and resonant frequency $f_0=3.30\,\mathrm{kHz}$, the inductance is obtained as
+ \(L=23.3\,\mathrm{mH}\) (the current through the inductance being \(I=8.29\,\mathrm{mA}\)).
+
+
+
+Since this inductance is a ferrite-core coil, the permeability of the magnetic medium is related to the current through the coil, and hence the inductance varies as the current increases. The data of the inductance against the current, and the corresponding graph, are omitted.
+
+\begin{commentary}
+A practical circuit is often a series or parallel combination of several elements and is comparatively complex. In order to examine the nature, the value and the quality of a given electronic element, a simple method is to short-circuit part of the elements, so that a complex circuit is reduced to a simple one; the circuit is then tested with an oscilloscope and with resistors, and the required results are obtained. This experimental method is very useful in physics experiments and in the testing of electronic circuits.
+\end{commentary}
+
+\subsection*{Experiment 7.21 \quad Identification of the elements in an electromagnetic black box with a multimeter}
+
+A black box has four terminals on its lid, numbered on the lid. Inside the box there are three elements connected in a certain way; between any two terminals there is at most one element, and possibly none or a short circuit. The three elements may be a battery, a resistance, a capacitance (of comparatively large capacitance), an inductance or a semiconductor diode. A multimeter is to be used to examine the box and to determine the names of the three elements and their connection diagram.
+
+\textbf{[Apparatus and materials available]}
+
+The black box to be examined, a multimeter, a low-frequency signal generator, connecting wires, etc. The terminals on the panel of the black box are numbered as shown in the figure.
+
+\textbf{[Requirements]}
+
+(1) Determine the names of the three elements in the black box and draw their connection diagram.
+
+(2) Explain the method of identification.
+
+\begin{figbox}{7.21}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0,0) rectangle (5.0,1.6);
+\fill (0.55,1.60) circle (0.08); \node[above] at (0.55,1.70) {$1$};
+\fill (4.45,1.60) circle (0.08); \node[above] at (4.45,1.70) {$2$};
+\fill (0.55,0) circle (0.08); \node[below] at (0.55,-0.10) {$4$};
+\fill (4.45,0) circle (0.08); \node[below] at (4.45,-0.10) {$3$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{Solution 7.21}\quad \textbf{1.} \emph{Determination of whether there is a battery in the box.} The voltage range of the multimeter shows that there is no battery in the box.
+
+\textbf{2.} \emph{Check whether there is a diode.} The ohmmeter range of the multimeter is used to measure the resistance between two terminals, and the positive and negative test leads are then interchanged. If the forward and reverse resistances differ greatly, a diode is present. For this black box no such phenomenon was found at any pair of terminals, so there is no diode in the box.
+
+\textbf{3.} \emph{Determination of how many capacitances and resistances are present.} The $\times100\,\Omega$ and $1\,\mathrm{k}\Omega$ ranges of the multimeter were used for the tests, and the measured results are shown in the table.
+
+\begin{center}
+{\small Table 7.21-1}\\[2pt]
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Terminal numbers & 1, 2 & 1, 3 & 1, 4 & 2, 3 & 2, 4 & 3, 4\\
+\midrule
+Charge--discharge phenomenon & none & yes & none & yes & none & yes\\
+Resistance between terminals & $R_{12}$ & $R_{13}$ & $R_{14}$ & $R_{23}$ & $R_{24}$ & $R_{34}$\\
+Measured resistance$/\Omega$ & 180 & $\infty$ & 200 & $\infty$ & 20 & $\infty$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+From the table it is seen that resistances exist between terminals 1 and 2, between 1 and 4 and between 2 and 4, and that $R_{14}=R_{12}+R_{24}$. According to these measured results there are three possible cases, as shown in Fig.~7.21(a)(1), (2) and (3).
+
+\begin{figbox}{7.21(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.86,every node/.style={scale=0.86}]
+% ---------- case (1): capacitance between 1 and 3 ----------
+\begin{scope}
+\coordinate (A) at (0,2.4); \coordinate (B) at (3.0,2.4);
+\coordinate (C) at (3.0,0); \coordinate (D) at (0,0);
+\draw (A) -- (0.75,2.4); \draw (0.75,2.25) rectangle (2.25,2.55); \draw (2.25,2.4) -- (B);
+\draw (B) -- (C) -- (D) -- (A);
+\draw (A) -- (C);
+\draw (B) -- (D);
+\draw[fill=white,rotate around={38.66:(1.5,1.2)}] (1.05,1.05) rectangle (1.95,1.35);
+\fill[white] (2.05,0.76) circle (0.30);
+\begin{scope}[rotate around={-38.66:(2.05,0.76)}]
+\draw (1.96,0.50) -- (1.96,1.02);
+\draw (2.14,0.50) -- (2.14,1.02);
+\end{scope}
+\node[below] at (1.5,-0.22) {(1)};
+\end{scope}
+% ---------- case (2): capacitance between 2 and 3 ----------
+\begin{scope}[xshift=4.0cm]
+\coordinate (A) at (0,2.4); \coordinate (B) at (3.0,2.4);
+\coordinate (C) at (3.0,0); \coordinate (D) at (0,0);
+\draw (A) -- (0.75,2.4); \draw (0.75,2.25) rectangle (2.25,2.55); \draw (2.25,2.4) -- (B);
+\draw (B) -- (D) -- (A);
+\draw (B) -- (D);
+\draw[fill=white,rotate around={38.66:(1.5,1.2)}] (1.05,1.05) rectangle (1.95,1.35);
+\draw (A) -- (C);
+\draw (B) -- (C);
+\draw[fill=white,draw=none] (2.74,1.02) rectangle (3.26,1.38);
+\draw (2.74,1.28) -- (3.26,1.28);
+\draw (2.74,1.12) -- (3.26,1.12);
+\node[below] at (1.5,-0.22) {(2)};
+\end{scope}
+% ---------- case (3): capacitance between 3 and 4 ----------
+\begin{scope}[xshift=8.0cm]
+\coordinate (A) at (0,2.4); \coordinate (B) at (3.0,2.4);
+\coordinate (C) at (3.0,0); \coordinate (D) at (0,0);
+\draw (A) -- (0.75,2.4); \draw (0.75,2.25) rectangle (2.25,2.55); \draw (2.25,2.4) -- (B);
+\draw (B) -- (C); \draw (C) -- (D) -- (A);
+\draw (B) -- (D);
+\draw[fill=white,rotate around={38.66:(1.5,1.2)}] (1.05,1.05) rectangle (1.95,1.35);
+\draw (A) -- (C);
+\draw (C) -- (D);
+\draw[fill=white,draw=none] (1.32,-0.26) rectangle (1.68,0.26);
+\draw (1.56,-0.26) -- (1.56,0.26);
+\draw (1.44,-0.26) -- (1.44,0.26);
+\node[below] at (1.5,-0.30) {(3)};
+\end{scope}
+% terminal labels
+\foreach \x in {0,4.0,8.0} {
+  \fill (\x,2.4) circle (0.05);
+  \fill (\x+3.0,2.4) circle (0.05);
+  \fill (\x+3.0,0) circle (0.05);
+  \fill (\x,0) circle (0.05);
+  \node[above left] at (\x+0.02,2.42) {\small $1$};
+  \node[above right] at (\x+2.98,2.42) {\small $2$};
+  \node[below right] at (\x+2.98,-0.02) {\small $3$};
+  \node[below left] at (\x+0.02,-0.02) {\small $4$};
+}
+\end{tikzpicture}
+\end{figbox}
+
+The output of the signal generator is applied between terminals 3 and 4, and the voltage between terminals 1 and 2 is measured. It is found that there is a voltage between 1 and 2, and one can therefore be certain that the capacitance is connected between terminals 1 and 3.
+
+\textbf{4.} \emph{Determination of whether the elements between 1 and 2 and between 2 and 4 are resistances or inductances.}
+
+The low-frequency signal generator (producing a sine wave), the AC current range of the multimeter and the element between terminals 1 and 2 on the panel are connected in series with wires. Keeping the sine-wave output voltage constant, observe whether the current in this series circuit varies; the experimental circuit is shown in Fig.~7.21(b). If, when the frequency of the sine wave output of the signal generator decreases, the AC current reading increases markedly, this shows that the element between 1 and 2 is an inductance. If the current does not vary with the frequency, it is a resistance. In the same way one can also distinguish whether the element between 2 and 4 is a resistance or an inductance.
+
+\begin{figbox}{7.21(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.88,every node/.style={scale=0.88}]
+\coordinate (A) at (0,2.4); \coordinate (B) at (3.0,2.4);
+\coordinate (C) at (3.0,0); \coordinate (D) at (0,0);
+\draw (A) -- (0.75,2.4); \draw (0.75,2.25) rectangle (2.25,2.55); \draw (2.25,2.4) -- (B);
+\draw (B) -- (C) -- (D) -- (A);
+\draw (B) -- (D);
+\draw[fill=white,rotate around={38.66:(1.5,1.2)}] (1.05,1.05) rectangle (1.95,1.35);
+% capacitance between 1 and 3
+\draw (A) -- (C);
+\fill[white] (2.05,0.76) circle (0.30);
+\begin{scope}[rotate around={-38.66:(2.05,0.76)}]
+\draw (1.96,0.50) -- (1.96,1.02);
+\draw (2.14,0.50) -- (2.14,1.02);
+\end{scope}
+% source and ammeter in series with the element 1-2
+\draw (A) -- (0,3.75) -- (0.45,3.75);
+\draw (0.45,3.75) circle (0.27); \node at (0.45,3.75) {$\sim$};
+\draw (0.72,3.75) -- (1.55,3.75);
+\draw (1.55,3.75) circle (0.25); \node at (1.55,3.75) {A};
+\draw (1.80,3.75) -- (3.0,3.75) -- (B);
+\node[above left] at (0.02,2.42) {\small $1$};
+\node[above right] at (2.98,2.42) {\small $2$};
+\node[below right] at (2.98,-0.02) {\small $3$};
+\node[below left] at (0.02,-0.02) {\small $4$};
+\end{tikzpicture}
+\end{figbox}
+
+The final result of this experiment is: the three elements in the black box are a resistance, an inductance and a capacitance, connected as shown in Fig.~7.21(c).
+
+\begin{figbox}{7.21(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.9,every node/.style={scale=0.9}]
+\coordinate (A) at (0,2.4); \coordinate (B) at (3.0,2.4);
+\coordinate (C) at (3.0,0); \coordinate (D) at (0,0);
+\draw (A) -- (0.75,2.4); \draw (0.75,2.25) rectangle (2.25,2.55); \draw (2.25,2.4) -- (B);
+\node[above] at (1.5,2.58) {$R$};
+\draw (B) -- (C) -- (D) -- (A);
+\draw (B) -- (D);
+% inductance between 2 and 4
+\fill[white] (1.05,0.84) circle (0.34);
+\begin{scope}[rotate around={38.66:(1.05,0.84)}]
+\draw (0.55,0.84) -- (0.62,0.84);
+\draw (0.62,0.84) arc (90:-90:0.13);
+\draw (0.88,0.84) arc (90:-90:0.13);
+\draw (1.14,0.84) arc (90:-90:0.13);
+\draw (1.40,0.84) -- (1.50,0.84);
+\end{scope}
+\node[below left] at (0.95,0.55) {$L$};
+% capacitance between 1 and 3
+\draw (A) -- (C);
+\fill[white] (2.05,0.76) circle (0.30);
+\begin{scope}[rotate around={-38.66:(2.05,0.76)}]
+\draw (1.96,0.50) -- (1.96,1.02);
+\draw (2.14,0.50) -- (2.14,1.02);
+\end{scope}
+\node[right] at (2.22,0.52) {$C$};
+\node[above left] at (0.02,2.42) {\small $1$};
+\node[above right] at (2.98,2.42) {\small $2$};
+\node[below right] at (2.98,-0.02) {\small $3$};
+\node[below left] at (0.02,-0.02) {\small $4$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.22 \quad Measurement of capacitance and inductance with an AC bridge}
+
+\textbf{[Apparatus and materials available]}
+
+A low-frequency signal generator, three resistance boxes, a standard capacitance $0.200\,\mu\mathrm{F}$, a transistor voltmeter (for AC use), the capacitance to be measured, the inductance to be measured, connecting wires, etc.
+
+\textbf{[Requirements]}
+
+(1) Write down the experimental principle and the formulae for measuring the unknown capacitance and the unknown inductance.
+
+(2) Write down the experimental method.
+
+(3) Measure the data and calculate the experimental results.
+
+\textbf{Solution 7.22}\quad \textbf{1.} The AC bridge circuit is shown in Fig.~7.22(a), in which the bridge arms $Z_1$, $Z_2$, $Z_3$ and $Z_4$ are complex impedances. An AC sine-wave source is used, and a transistor AC voltmeter is used to detect whether the bridge is balanced. When the AC bridge is balanced, the balance equation is
+\begin{equation}
+\frac{Z_1}{Z_4}=\frac{Z_2}{Z_3}. \tag{1}
+\end{equation}
+
+\begin{figbox}{7.22(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (T) at (2.6,4.2); \coordinate (B) at (2.6,0.6);
+\coordinate (L) at (0.6,2.4); \coordinate (R) at (4.6,2.4);
+\draw (L) -- (T) -- (R) -- (B) -- (L);
+\draw[fill=white,rotate around={45:(1.60,3.30)}] (1.25,3.15) rectangle (1.95,3.45);
+\node[left] at (1.16,3.52) {$Z_1$};
+\draw[fill=white,rotate around={-45:(3.60,3.30)}] (3.25,3.15) rectangle (3.95,3.45);
+\node[right] at (4.02,3.52) {$Z_2$};
+\draw[fill=white,rotate around={-45:(1.60,1.50)}] (1.25,1.35) rectangle (1.95,1.65);
+\node[left] at (1.16,1.33) {$Z_4$};
+\draw[fill=white,rotate around={45:(3.60,1.50)}] (3.25,1.35) rectangle (3.95,1.65);
+\node[right] at (4.02,1.33) {$Z_3$};
+% detector
+\draw (T) -- (2.6,3.32);
+\draw[fill=white] (2.6,3.02) circle (0.30);
+\node at (2.6,3.02) {D};
+\draw (2.6,2.72) -- (B);
+% source
+\draw (L) -- (0.6,-0.6) -- (2.32,-0.6);
+\draw (2.32,-0.6) circle (0.26); \node at (2.32,-0.6) {$\sim$};
+\draw (2.58,-0.6) -- (4.6,-0.6) -- (R);
+\node[above] at (2.6,4.26) {$1$};
+\node[below] at (2.6,0.54) {$2$};
+\end{tikzpicture}
+\end{figbox}
+
+When the unknown capacitance is measured, the circuit is connected as the capacitance bridge shown in Fig.~7.22(b), in which the unknown capacitance is represented by the capacitance $C_3$ and the loss resistance $r_3$. When the AC bridge is balanced,
+\[
+R_1\left(r_3-\frac{\mathrm{i}}{\omega C_3}\right)=R_2\left(R_4-\frac{\mathrm{i}}{\omega C_4}\right),
+\]
+where $\omega$ is the angular frequency of the alternating current and $\mathrm{i}=\sqrt{-1}$ is the imaginary unit. Equating the real and the imaginary parts separately gives
+\begin{equation}
+C_3=\frac{R_1}{R_2}\cdot C_4, \tag{2}
+\end{equation}
+\begin{equation}
+r_3=\frac{R_2}{R_1}\cdot R_4. \tag{3}
+\end{equation}
+
+\begin{figbox}{7.22(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (T) at (2.6,4.2); \coordinate (B) at (2.6,0.6);
+\coordinate (L) at (0.6,2.4); \coordinate (R) at (4.6,2.4);
+\draw (L) -- (T) -- (R) -- (B) -- (L);
+\draw[fill=white,rotate around={45:(1.60,3.30)}] (1.25,3.15) rectangle (1.95,3.45);
+\node[left] at (1.14,3.55) {$R_1$};
+\draw[fill=white,rotate around={-45:(3.60,3.30)}] (3.25,3.15) rectangle (3.95,3.45);
+\node[right] at (4.04,3.55) {$R_2$};
+% bottom-left arm: C4 and R4 in series
+\draw[fill=white,draw=none] (1.12,1.62) rectangle (1.52,1.98);
+\draw (1.22,1.83) -- (1.50,1.63);
+\draw (1.28,1.91) -- (1.56,1.71);
+\node[left] at (1.12,1.92) {$C_4$};
+\draw[fill=white,rotate around={-45:(2.05,1.05)}] (1.70,0.90) rectangle (2.40,1.20);
+\node[right] at (2.36,1.18) {$R_4$};
+% bottom-right arm: C3 and r3 in series
+\draw[fill=white,draw=none] (3.28,1.62) rectangle (3.68,1.98);
+\draw (3.38,1.63) -- (3.66,1.83);
+\draw (3.44,1.55) -- (3.72,1.75);
+\node[right] at (3.70,1.94) {$C_3$};
+\draw[fill=white,rotate around={45:(3.60,1.50)}] (3.25,1.35) rectangle (3.95,1.65);
+\node[right] at (4.02,1.30) {$r_3$};
+% detector
+\draw (T) -- (2.6,3.32);
+\draw[fill=white] (2.6,3.02) circle (0.30);
+\node at (2.6,3.02) {D};
+\draw (2.6,2.72) -- (B);
+% source
+\draw (L) -- (0.6,-0.6) -- (2.32,-0.6);
+\draw (2.32,-0.6) circle (0.26); \node at (2.32,-0.6) {$\sim$};
+\draw (2.58,-0.6) -- (4.6,-0.6) -- (R);
+\end{tikzpicture}
+\end{figbox}
+
+When the unknown inductance (an air-cored coil) is measured, the circuit is as shown in Fig.~7.22(c), in which $L_3$ and $r_3$ are respectively the inductance to be measured and its loss resistance, and $C_1$ is the standard capacitance. The balance equation of this AC bridge is
+\[
+r_3+\mathrm{i}\omega L_3=\left(\frac{1}{R_1}+\mathrm{i}\omega C_1\right)R_2R_4 .
+\]
+Equating the real and the imaginary parts separately gives
+\begin{equation}
+L_3=C_1R_2R_4, \tag{4}
+\end{equation}
+\begin{equation}
+r_3=\frac{R_2}{R_1}\cdot R_4. \tag{5}
+\end{equation}
+
+\begin{figbox}{7.22(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (T) at (2.6,4.2); \coordinate (B) at (2.6,0.6);
+\coordinate (L) at (0.6,2.4); \coordinate (R) at (4.6,2.4);
+\draw (L) -- (T) -- (R) -- (B) -- (L);
+% R1 on the top-left arm
+\draw[fill=white,rotate around={45:(1.60,3.30)}] (1.25,3.15) rectangle (1.95,3.45);
+\node[right] at (1.96,3.52) {$R_1$};
+% C1 in parallel with R1, outside the bridge
+\draw (0.90,2.70) -- (0.40,3.20) -- (0.40,3.90);
+\draw (0.55,3.90) -- (0.55,4.10);
+\draw (0.25,4.10) -- (0.25,4.30);
+\draw (0.25,4.30) -- (0.25,4.55) -- (1.75,4.55) -- (1.75,3.85);
+\node[left] at (0.18,3.98) {$C_1$};
+% R2 on the top-right arm
+\draw[fill=white,rotate around={-45:(3.60,3.30)}] (3.25,3.15) rectangle (3.95,3.45);
+\node[right] at (4.02,3.52) {$R_2$};
+% R4 on the bottom-left arm
+\draw[fill=white,rotate around={-45:(1.60,1.50)}] (1.25,1.35) rectangle (1.95,1.65);
+\node[left] at (1.16,1.35) {$R_4$};
+% L3 and r3 on the bottom-right arm
+\draw[fill=white,draw=none] (3.20,1.46) rectangle (3.60,1.82);
+\begin{scope}[rotate around={45:(3.40,1.50)}]
+\draw (3.18,1.50) -- (3.24,1.50);
+\draw (3.24,1.50) arc (90:-90:0.10);
+\draw (3.44,1.50) arc (90:-90:0.10);
+\draw (3.64,1.50) -- (3.70,1.50);
+\end{scope}
+\node[right] at (3.62,1.76) {$L_3$};
+\draw[fill=white,rotate around={45:(4.05,2.05)}] (3.75,1.90) rectangle (4.35,2.20);
+\node[right] at (4.36,2.08) {$r_3$};
+% detector
+\draw (T) -- (2.6,3.32);
+\draw[fill=white] (2.6,3.02) circle (0.30);
+\node at (2.6,3.02) {D};
+\draw (2.6,2.72) -- (B);
+% source
+\draw (L) -- (0.6,-0.6) -- (2.32,-0.6);
+\draw (2.32,-0.6) circle (0.26); \node at (2.32,-0.6) {$\sim$};
+\draw (2.58,-0.6) -- (4.6,-0.6) -- (R);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2. Measurement of the unknown capacitance and of the loss resistance}
+
+(1) The resistance boxes, the standard capacitance, the capacitance to be measured, the low-frequency signal generator and the transistor AC voltmeter are connected as in the circuit of Fig.~7.22(b).
+
+(2) The output frequency of the low-frequency signal generator is set to $1000\,\mathrm{Hz}$, suitable resistance values are chosen for the bridge arms, and the arm resistances are adjusted repeatedly until the indication of the transistor AC voltmeter is a minimum.
+
+(3) When the bridge has reached balance, the readings of the arms are recorded, and the capacitance and the loss resistance of the capacitance to be measured are found.
+
+(4) After the AC bridge has been balanced, the resistance of the adjusting element is changed slightly, so that the AC detector deviates from the balance position by a small amount, in order to measure the sensitivity of adjustment of the AC bridge and to find the uncertainty in the measurement of the capacitance to be measured.
+
+The method of measuring the inductance and the loss resistance of an inductor whose support is a non-magnetic dielectric is similar to the method of adjustment for measuring a capacitance. Only in Solution 7.22 the value of $R_4$ must be taken very small. But in Fig.~7.22(c) the value of the resistance $R_1$ connected in parallel with the standard capacitance must be taken large,
+so that the bridge can be balanced.
+
+\textbf{3. Experimental data and calculations}
+
+(1) \emph{Measurement of a capacitance with the capacitance bridge}
+
+The frequency of the source is $f=1000\,\mathrm{Hz}$, the effective value of the output voltage is $U=3\,\mathrm{V}$, the standard capacitance is $C_4=0.200\,\mu\mathrm{F}$, and $R_1=1000\,\Omega$. $R_2$ and $R_4$ are adjusted; at bridge balance $R_2=370.2\,\Omega$ and $R_4=3.7\,\Omega$. At this setting a change of $0.4\,\Omega$ in $R_2$, or of $0.6\,\Omega$ in $R_4$, changes the indication of the detector by one division.
+\[
+C_3=\frac{R_1}{R_2}\cdot C_4=\frac{1000}{370.2}\times0.200=0.540\,(\mu\mathrm{F}),
+\]
+\[
+r_3=\frac{R_2}{R_1}\cdot R_4=\frac{370.2}{1000}\times3.7=1.37\,(\Omega).
+\]
+The error of the capacitance measurement caused by the sensitivity of adjustment is
+\[
+\frac{\Delta C_3}{C_3}=\frac{0.04}{370.2}=0.011\%,
+\]
+and the error of the measurement of the loss resistance is
+\[
+\frac{\Delta r_3}{r_3}=\sqrt{\left(\frac{\Delta R_1}{R_1}\right)^2+\left(\frac{\Delta R_4}{R_4}\right)^2}
+=\sqrt{(0.011\%)^2+\left(\frac{0.06}{3.7}\right)^2}=1.6\%,
+\]
+\[
+\Delta C_3=C_3\times0.011\%=0.540\times0.011\%=0.6\times10^{-4}\,(\mu\mathrm{F}).
+\]
+The class of the resistance boxes is 0.1 (0.1\%), so the measurement error caused by the sensitivity of adjustment is far smaller than the systematic error introduced by the resistance boxes; the balance condition of this bridge therefore meets the requirements of the experiment.
+
+(2) \emph{Measurement of an inductance with the inductance bridge}
+
+The frequency is $f=1000\,\mathrm{Hz}$, the output voltage of the signal source is $U=3\,\mathrm{V}$, the standard capacitance is $C_1=0.200\,\mu\mathrm{F}$, and $R_2=1000\,\Omega$. At bridge balance $R_1=14\,500\,\Omega$ (adjustment sensitivity $0.9$ division per $100\,\Omega$) and $R_4=1683.0\,\Omega$ (adjustment sensitivity 1 division per $\Omega$). From (3) and (4),
+\[
+L_3=C_1R_2R_4=0.200\times10^{-6}\times1000\times1683=336.6\,(\mathrm{mH}).
+\]
+$C_1$ is of class 0.05, and $R_2$ and $R_4$ are of class 0.1; the relative error $\Delta L_3/L_3$ of $L_3$ caused by these is about $0.7\%$, while $\Delta L_3$ itself is very small, only about $0.02\,\mathrm{mH}$. The balance of this bridge meets the requirement that the measurement error (the error of adjustment sensitivity) be only $1/10$ of the total error, which shows that the bridge is well balanced. Moreover,
+\[
+r_3=\frac{R_2R_4}{R_1}=116.1\,\Omega .
+\]
+
+\subsection*{Experiment 7.23 \quad Characteristics and empirical formula of an InSb magnetoresistive element}
+
+A new type of semiconductor magnetoresistive sensor has a resistance which increases as the external magnetic field increases. When the external magnetic field is zero (apart from the Earth's field), its resistance is $R_0$. If the sensor is placed in the gap of an electromagnet with its sensitive surface perpendicular to the direction of the magnetic field in the gap, and the current through the electromagnet is gradually increased from a small value, the resistance $R$ of the sensor also increases. The change of resistance is $\Delta R=R-R_0$, and the relative change $\Delta R/R_0$ of the resistance of the sensor satisfies
+\begin{equation}
+\frac{\Delta R}{R_0}=aB^n, \tag{1}
+\end{equation}
+where $B$ is the magnetic flux density in the gap, perpendicular to the pole faces, measured with a digital teslameter; $a$ is a constant and $n$ is an exponent.
+
+\textbf{[Apparatus and materials available]}
+
+An electromagnet with a gap, a constant-current source (DC), a digital teslameter, one slide-wire rheostat, one voltmeter, one ammeter, a magnetoresistive sensor (with leads), one dry cell, one $400\,\Omega$ current-limiting resistor, and several connecting wires.
+
+\textbf{[Requirements]}
+
+(1) Since the core of the electromagnet is made of die steel, it may retain residual magnetism. Before the experiment the magnet must first be demagnetised; the method of demagnetisation is shown in the figure. After demagnetisation, record the value of $B_0$.
+
+(2) Measure the resistance $R_0$ of the magnetoresistive sensor when the magnetic flux density in the gap of the electromagnet is $B=0$.
+
+(3) Measure the relation $R$--$B$ of the resistance of the magnetoresistive sensor and enter the data in the table. Note that the current through the magnetoresistive sensor must always be less than $3\,\mathrm{mA}$.
+
+(4) Enter the data of the relation between $\Delta R/R$ and $B$ in the table, plot the graph of $\Delta R/R$ against $B$, find the magnetic flux density $B_r$ at the turning point of the curve, and, from the trend of the curve, find the best empirical formula.
+
+(5) If the output of the signal generator is connected to the electromagnet, with an output frequency in the range $f=10.0$--$100\,\mathrm{Hz}$, and the voltage across the energised electromagnet is applied to the $x$-axis of the oscilloscope while the voltage across the energised magnetoresistive sensor is applied to the $y$-axis, observe and record the Lissajous figure formed by the two sine voltages when the magnetic flux density in the middle of the gap is small, $B<B_r$, and explain the reason for this phenomenon.
+
+\begin{figbox}{7.23(a)}
+\begin{tikzpicture}[x=0.5cm,y=0.0072cm,>=Stealth,line width=0.5pt]
+\draw[->] (-6.4,0) -- (6.6,0) node[below] {$H$};
+\draw[->] (0,-350) -- (0,350) node[left] {$B$};
+% hysteresis loop
+\draw[line width=0.8pt] (-5,-250) to[out=55,in=215] (-1.41,0)
+  to[out=55,in=230] (0,93.8) to[out=40,in=200] (5,250);
+\draw[line width=0.8pt] (5,250) to[out=220,in=35] (1.41,0)
+  to[out=235,in=55] (0,-93.8) to[out=200,in=40] (-5,-250);
+% successive demagnetising cycles
+\draw[line width=0.6pt] (0,0) ellipse (2.2 and 1.0);
+\draw[line width=0.6pt] (0,0) ellipse (1.6 and 0.72);
+\draw[line width=0.6pt] (0,0) ellipse (1.0 and 0.45);
+\draw[line width=0.6pt] (0,0) ellipse (0.45 and 0.20);
+\end{tikzpicture}
+\end{figbox}
+
+
+\textbf{Solution 7.23}\quad \textbf{1.} Before the measurement the material of the electromagnet is first demagnetised. For example, the current through the coil of the electromagnet is increased from 0 to $600\,\mathrm{mA}$ and then reduced to 0; the direction of the current is then reversed with a double-pole double-throw switch, the current being increased from 0 to $500\,\mathrm{mA}$ and then reduced from $500\,\mathrm{mA}$ to 0. In this way the magnetising current is repeatedly reversed, the maximum current being reduced by $100\,\mathrm{mA}$ each time. When the residual magnetism has become small, the current may be reduced in smaller steps each time; finally the residual magnetism is eliminated and $B_0=0$.
+
+\textbf{2.} The arrangement for measuring the magnetoresistance effect is shown in Fig.~7.23(b). By adjusting the exciting current, different magnetic fields are produced; the current $I$ through the magnetoresistive sensor and the voltage $U$ across it are read, together with the corresponding magnetic flux density $B$ in the gap of the electromagnet. The experimental data are shown in the table below. The sensor is supplied from a constant-voltage source, $U=0.400\,\mathrm{V}$.
+
+\begin{figbox}{7.23(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+% iron core
+\draw[line width=4pt,black!55,line cap=round] (2.4,2.2) -- (2.4,5.4) -- (5.8,5.4) -- (5.8,3.4);
+\draw[line width=4pt,black!55,line cap=round] (2.4,2.2) -- (5.8,2.2) -- (5.8,2.6);
+\node at (5.35,3.60) {N};
+\node at (5.35,2.42) {S};
+% coil on the left yoke
+\draw (2.13,3.00) rectangle (2.67,4.60);
+\foreach \y in {3.2,3.4,...,4.4} { \draw (2.13,\y) -- (2.67,\y); }
+\node[left] at (2.05,3.80) {\small coil};
+% coil leads and circuit
+\draw (2.13,4.60) -- (1.20,4.60) -- (1.20,0.60) -- (2.20,0.60);
+\draw (2.20,0.44) rectangle (3.10,0.76);
+\node[below] at (2.65,0.38) {$R$};
+\draw (3.10,0.60) -- (3.38,0.60);
+\draw (3.38,0.60) circle (0.22); \node at (3.38,0.60) {A};
+\draw (3.60,0.60) -- (4.10,0.60) -- (4.10,1.60) -- (1.70,1.60) -- (1.70,3.00) -- (2.13,3.00);
+\draw (4.10,1.10) circle (0.20); \node at (4.10,1.10) {$\varepsilon$};
+% voltmeter across the coil
+\draw (1.20,4.10) -- (0.55,4.10) -- (0.55,3.75);
+\draw (0.55,3.35) circle (0.20); \node at (0.55,3.35) {V};
+\draw (0.55,3.15) -- (0.55,3.00) -- (1.70,3.00);
+% magnetoresistive sensor in the gap
+\draw[fill=black!25] (5.62,2.72) rectangle (5.94,3.10);
+\draw (5.94,2.80) -- (6.70,2.80) -- (6.70,1.28);
+\draw (6.20,0.85) rectangle (7.70,1.28);
+\node at (6.95,1.06) {\scriptsize sensor};
+\draw (6.70,0.85) -- (6.70,1.28);
+% teslameter probe
+\draw[fill=white] (5.55,3.16) rectangle (5.98,3.26);
+\node[right] at (6.02,3.21) {\scriptsize D};
+\draw (5.98,3.21) -- (6.75,3.21) -- (6.75,4.55);
+\draw (6.20,4.55) rectangle (7.70,4.98);
+\node at (6.95,4.76) {\scriptsize teslameter};
+\draw (6.75,4.55) -- (6.75,4.98);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.23-1\quad Relation between $\Delta R/R_0$ and $B$}\\[2pt]
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l*{15}{c}@{}}
+\toprule
+$I/\mathrm{mA}$ & 1.09 & 1.07 & 1.05 & 1.02 & 0.97 & 0.95 & 0.93 & 0.89 & 0.86 & 0.83 & 0.80 & 0.76 & 0.71 & 0.66 & 0.62\\
+$B/\mathrm{mT}$ & 0 & 16 & 25 & 34 & 46 & 51 & 58 & 67 & 79 & 98 & 125 & 185 & 252 & 327 & 406\\
+$R/\Omega$ & 367 & 374 & 381 & 392 & 412 & 421 & 430 & 449 & 465 & 482 & 500 & 526 & 563 & 606 & 645\\
+$\Delta R/R_0$ & 0.00 & 0.02 & 0.04 & 0.07 & 0.12 & 0.15 & 0.17 & 0.22 & 0.27 & 0.31 & 0.36 & 0.43 & 0.54 & 0.65 & 0.76\\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+Taking logarithms of both sides of (1) gives
+\begin{equation}
+\ln\frac{\Delta R}{R}=n\ln B+\ln a. \tag{2}
+\end{equation}
+Below $0.06\,\mathrm{T}$ a straight-line fit of $\ln(\Delta R/R)$ against $\ln B$ gives a correlation coefficient $r=0.9990$, $n=1.724$ and $\ln a=-8.725$. From a large number of measurements on different elements, the value of $n$ lies between 1.7 and 2.2. Above $0.12\,\mathrm{T}$ a straight-line fit of $\Delta R/R$ against $B$ gives a correlation coefficient $r=0.9992$, that is $n=1$ and $a=1.45\times10^{-3}$.
+
+From these data it follows that for the InSb magnetoresistive sensor the relation between $\Delta R/R_0$ and $B$ is approximately quadratic when $B<0.06\,\mathrm{T}$, whereas the relation between $\Delta R/R_0$ and $B$ is linear when $B>0.12\,\mathrm{T}$.
+
+
+
+\textbf{3.} The electromagnet is connected in the circuit of Fig.~7.23(c), in which the magnet is excited by an alternating sinusoidal magnetic field of frequency $10$--$100\,\mathrm{Hz}$. When $|B|<0.05\,\mathrm{T}$, a Lissajous figure formed by the voltage divider across the magnetoresistor and the input signal of the electromagnet can be displayed on the oscilloscope, as shown in Fig.~7.23(d). This is the AC frequency-doubling effect in a weak magnetic field.
+
+\begin{figbox}{7.23(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.9,every node/.style={scale=0.9}]
+% source branch on the left
+\draw (0.4,0.6) -- (0.4,1.10);
+\draw (0.15,1.10) -- (0.65,1.10);
+\draw (0.25,0.90) -- (0.55,0.90);
+\draw (0.25,0.60) -- (0.55,0.60);
+\draw (0.15,0.40) -- (0.65,0.40);
+\draw (0.4,0.40) -- (0.4,0.0) -- (4.8,0.0) -- (4.8,3.5);
+\node[left] at (0.10,0.75) {$\sim$};
+% rheostat R
+\draw (0.4,2.3) -- (0.4,1.10);
+\draw (0.25,2.3) rectangle (0.55,3.3);
+\draw[->] (0.90,2.85) -- (0.60,2.85);
+\node[right] at (0.92,2.85) {$R$};
+\draw (0.4,3.3) -- (0.4,3.8) -- (1.4,3.8);
+% electromagnet coil
+\draw (1.4,3.8) -- (1.4,3.75);
+\draw (1.4,3.30) rectangle (3.0,4.20);
+\foreach \x in {1.6,1.9,2.2,2.5,2.8} { \draw (\x,3.30) -- (\x,4.20); }
+\node[above] at (2.2,4.25) {\small coil};
+\draw (3.0,3.75) -- (4.8,3.75);
+% magnet poles
+\draw[line width=3pt,black!55,line cap=round] (2.0,2.35) -- (2.0,2.85);
+\draw[line width=3pt,black!55,line cap=round] (2.0,1.25) -- (2.0,1.75);
+\node at (1.75,2.70) {\small N};
+\node at (1.75,1.40) {\small S};
+% sensor in the gap
+\draw[fill=black!25] (1.90,1.90) rectangle (2.30,2.20);
+% coupling capacitor to channel 1
+\draw (2.30,2.05) -- (3.1,2.05);
+\draw (3.1,1.85) -- (3.1,2.25);
+\draw (3.25,1.85) -- (3.25,2.25);
+\draw (3.25,2.05) -- (4.0,2.05);
+\node[above] at (3.18,2.27) {$C$};
+% oscilloscope
+\draw (4.0,1.35) rectangle (6.4,3.05);
+\draw (4.55,2.20) circle (0.30);
+\draw (5.85,2.20) circle (0.30);
+\node at (4.55,2.20) {\small CH$_1$};
+\node at (5.85,2.20) {\small CH$_2$};
+\draw (4.0,2.05) -- (4.25,2.05) -- (4.25,2.20);
+\draw (4.8,3.05) -- (4.8,3.75);
+\draw (4.8,3.75) -- (4.8,2.20) -- (5.55,2.20);
+\node[below] at (5.2,1.32) {\small oscilloscope};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.23(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0,0) rectangle (6.0,3.0);
+\draw (0,1.5) -- (6.0,1.5);
+\draw (3.0,0) -- (3.0,3.0);
+\draw[line width=0.9pt] plot[smooth,tension=0.85] coordinates {
+(3.0,1.5) (2.4,2.35) (1.3,2.60) (0.6,1.5) (1.3,0.40) (2.4,0.65)
+(3.0,1.5) (3.6,2.35) (4.7,2.60) (5.4,1.5) (4.7,0.40) (3.6,0.65) (3.0,1.5)};
+\node[rotate=90,above] at (-0.30,1.5) {\small voltage across the magnetoresistor};
+\node[below] at (3.0,-0.10) {\small voltage across the electromagnet};
+\end{tikzpicture}
+\end{figbox}
+
+As regards the AC frequency-doubling effect: when the magnetoresistive element is in a weak AC magnetic field, $\Delta R/R(0)$ is approximately proportional to $B^2$, so the resistance $R$ in the field also varies periodically with time, which in turn causes the voltage division across $R$ to vary. Suppose that the current $I$ through the magnetoresistive element is constant and let $B=B_0\cos\omega t$; from $\Delta R/R(0)=aB^2$ (where $a$ is a constant) we have
+\[
+\begin{aligned}
+R(B)&=R(0)+\Delta R=R(0)+R(0)\times\frac{\Delta R}{R(0)}=R(0)+R(0)aB_0^2\cos^2\omega t\\
+&=R(0)+\frac12R(0)aB_0^2+\frac12R(0)aB_0^2\cos2\omega t .
+\end{aligned}
+\]
+The voltage across $R$ is
+\[
+\begin{aligned}
+U(B)&=I_0R(B)=I_0\left[R(0)+\frac12R(0)aB_0^2\right]+\frac12I_0R(0)aB_0^2\cos2\omega t\\
+&=U(0)+\tilde{U}\cos2\omega t .
+\end{aligned}
+\]
+Hence, although the angular frequency of the working current of the electromagnet is $\omega$, the angular frequency of the AC signal output by the magnetoresistive sensor is $2\omega$.
+
+\subsection*{Experiment 7.24 \quad Measurement of the Earth's magnetic field}
+
+The Earth itself is magnetic, so a magnetic field exists in the Earth and in the near-Earth space; it is called the geomagnetic field. The strength and the direction of the geomagnetic field vary with location (and even with time). The projection of the geomagnetic field vector $\vec{B}$ on the horizontal plane is called the horizontal component $B_\parallel$ of the geomagnetic field. Given Helmholtz coils, a compass, a DC supply, a DC ammeter, etc., the horizontal component $B_\parallel$ of the geomagnetic field can be measured.
+
+\textbf{[Apparatus and materials available]}
+
+Helmholtz coils (number of turns of each coil $N=310$; diameter of the coils $R=16.2\,\mathrm{cm}$), a stabilised DC supply, a DC ammeter, a compass with an angular scale, a spirit level, connecting wires, etc., as shown in the figure.
+
+\textbf{[Requirements]}
+
+(1) State the principle of the experiment and the experimental formulae.
+
+(2) Briefly describe the experimental method.
+
+(3) Measure and calculate the results.
+
+\begin{figbox}{7.24}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.9,every node/.style={scale=0.9}]
+% base plate
+\draw (0.4,0.2) -- (7.6,0.2) -- (8.0,0.8) -- (0.8,0.8) -- cycle;
+% supports
+\draw (1.5,0.8) -- (1.5,1.5) -- (2.0,1.5) -- (2.0,0.8);
+\draw (6.0,0.8) -- (6.0,1.5) -- (6.5,1.5) -- (6.5,0.8);
+% left coil (ellipse in perspective)
+\draw[line width=1.1pt] (2.6,2.9) ellipse (0.42 and 1.35);
+\draw[line width=1.1pt] (5.9,2.9) ellipse (0.42 and 1.35);
+% connecting bar
+\draw (0.8,1.65) -- (0.8,4.2) -- (2.6,4.2);
+\draw (5.9,4.2) -- (7.6,4.2) -- (7.6,1.65);
+\node[above] at (4.25,4.22) {\small Helmholtz coils};
+% compass at the centre
+\draw (4.25,2.55) circle (0.55);
+\draw (4.25,2.55) circle (0.05);
+\draw[->] (4.25,2.55) -- (4.55,2.95);
+\draw[->] (4.25,2.55) -- (4.02,2.30);
+\node[below] at (4.25,1.94) {\small compass};
+% leads
+\draw (2.6,1.55) -- (2.6,1.0) -- (5.9,1.0) -- (5.9,1.55);
+\draw (2.6,1.0) -- (1.2,1.0);
+\draw (7.6,1.0) -- (6.8,1.0);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{Solution 7.24}\quad The magnetic field at the midpoint of the common axis of the Helmholtz coils is
+
+\[
+B'=\frac{\mu_0NI}{\bar{R}}\cdot\frac{8}{5^{3/2}},
+\]
+where $N$ is the number of turns of the coil, $I$ the current through the coil, $\bar{R}$ the mean radius of the Helmholtz coils, and $\mu_0$ the permeability of vacuum, $\mu_0=4\pi\times10^{-7}\,\mathrm{T\cdot m/A}$.
+
+\textbf{1.} The base plate of the Helmholtz coils is adjusted to be horizontal, and a compass is placed at the centre of the common axis of the coils, as shown in the figure. The plane of the coils, before any current is passed, is first made parallel to the direction of the magnetic needle of the compass. The DC supply, the ammeter and the Helmholtz coils are then connected in series. When a current is passed through the Helmholtz coils, the magnetic flux density $B'$ on their axis is necessarily perpendicular to the horizontal component $B_\parallel$ of the geomagnetic field, as shown in Fig.~7.24(a). The magnetic needle of the compass is acted upon simultaneously by the magnetic torques produced by the two fields $B_\parallel$ and $B'$, so that it deviates from the horizontal component of the geomagnetic field and makes an angle $\theta$ with it. From Fig.~7.24(a),
+\begin{equation}
+\frac{B'}{B_\parallel}=\tan\theta . \tag{1}
+\end{equation}
+
+\begin{figbox}{7.24(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (5.4,0) node[below] {$B'$};
+\draw[->] (0,0) -- (0,4.6) node[left] {$B_\parallel$};
+\draw[dashed] (1.55,4.25) -- (1.55,0);
+\draw[dashed] (1.55,4.25) -- (0,4.25);
+\draw[line width=1.2pt] (0,0) -- (1.55,4.25);
+\node[right] at (1.60,4.30) {N};
+\node[below] at (0.28,-0.14) {S};
+\draw (0,2.5) arc (90:70:2.5);
+\node[left] at (0.42,3.00) {$\theta$};
+\fill (0,0) circle (0.05);
+\end{tikzpicture}
+\end{figbox}
+
+Combining (1) with the formula for the magnetic field on the axis of the Helmholtz coils gives
+\[
+B_\parallel=\frac{8\mu_0}{5^{3/2}}\cdot\frac{NI}{\bar{R}\tan\theta},
+\]
+that is,
+\begin{equation}
+I=\frac{5^{3/2}\bar{R}B_\parallel}{8\mu_0N}\tan\theta=C\tan\theta . \tag{2}
+\end{equation}
+In (2), $C=\dfrac{5^{3/2}\bar{R}}{8\mu_0N}\cdot B_\parallel$. At a given place $B_\parallel$ is a fixed value, and $\bar{R}$ and $N$ are also fixed, so $C$ is a constant. Equation (2) shows that the current $I$ through the galvanometer is proportional to the tangent of the deflection angle $\theta$ of the magnetic needle; for this reason the arrangement is also called a tangent galvanometer. It is only necessary to measure the relation between $I$ and $\tan\theta$ and to obtain $C$ from the slope; the horizontal component $B_\parallel$ of the geomagnetic field can then be found from the formula for $C$.
+
+\textbf{2. Experimental method}
+
+The experimental circuit is shown in Fig.~7.24(b). In the figure $G$ is the tangent galvanometer (actually the Helmholtz coils of the tangent galvanometer), $K$ is a reversing switch, and $\varepsilon$ is a stabilised DC supply. The experimental steps are as follows.
+
+(1) Connect the circuit as in Fig.~7.24(b).
+
+\begin{figbox}{7.24(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% coil G
+\draw (0.4,1.2) -- (0.4,3.2);
+\draw (0.4,1.2) -- (1.2,1.2) -- (1.2,1.75);
+\draw (1.2,2.65) -- (1.2,3.2) -- (0.4,3.2);
+\draw (1.2,2.20) circle (0.45);
+\node at (1.2,2.20) {G};
+% leads to the reversing switch
+\draw (1.2,1.75) -- (2.6,1.75);
+\draw (1.2,2.65) -- (2.6,2.65);
+\draw (2.6,1.75) -- (2.6,1.55);
+\draw (2.6,2.65) -- (2.6,2.85);
+\draw (2.60,2.85) circle (0.05); \draw (2.60,1.55) circle (0.05);
+\draw (2.6,2.85) -- (2.95,3.05); \node[right] at (2.95,3.05) {$K$};
+\draw (2.6,1.55) -- (2.95,1.35);
+\draw (2.95,3.05) circle (0.05); \draw (2.95,1.35) circle (0.05);
+% cross connections of the reversing switch
+\draw (2.95,3.05) -- (3.45,2.55) -- (3.45,2.35);
+\draw (2.95,1.35) -- (3.45,1.85) -- (3.45,1.65);
+\draw (2.95,3.05) -- (3.45,1.35);
+\draw (2.95,1.35) -- (3.45,3.05);
+\draw (3.45,3.05) -- (4.0,3.05) -- (4.0,3.55);
+\draw (3.45,1.35) -- (4.0,1.35);
+% ammeter and top rail
+\draw (4.0,3.55) -- (4.9,3.55);
+\draw (4.9,3.55) circle (0.25); \node at (4.9,3.55) {A};
+\draw (5.15,3.55) -- (6.4,3.55) -- (6.4,1.35);
+% bottom branch with rheostat and source
+\draw (4.0,1.35) -- (5.4,1.35);
+\draw (5.4,1.19) rectangle (6.1,1.51);
+\node[below] at (5.75,1.13) {$R$};
+\draw (6.1,1.35) -- (6.4,1.35);
+\draw (6.4,1.35) -- (6.4,0.75) -- (5.85,0.75);
+\draw (5.85,0.45) -- (5.85,1.05);
+\draw (5.65,0.59) -- (5.65,0.91);
+\draw (5.65,0.75) -- (4.6,0.75) -- (4.6,1.35) -- (4.0,1.35);
+\node[below] at (5.72,0.40) {$\varepsilon$};
+\end{tikzpicture}
+\end{figbox}
+
+(2) Adjust the levelling screws of the base of the tangent galvanometer so that the bubble in the middle of the spirit level is at the centre. Place the compass at the midpoint of the common axis of the coils, so that the plane of the coils is parallel to the direction of the magnetic needle and at the same time the magnetic needle coincides with the ``0'' line of the graduated circle.
+
+(3) Switch on the supply and increase the input current $I$ of the tangent galvanometer step by step, obtaining a series of corresponding deflection angles $\theta$ of the magnetic needle. For each deflection angle $\theta$ two readings $\theta'$ and $\theta''$ can be obtained simultaneously from the compass, as shown in Fig.~7.24(c). The direction of the current $I$ is also reversed with the reversing switch, and the
+ deflection angles before and after the reversal, $\theta_+$ and $\theta_-$, are obtained, so that
+\[
+\theta=\frac14\left(\theta'_++\theta'_-+\theta''_++\theta''_-\right).
+\]
+
+\begin{figbox}{7.24(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0,0) circle (1.75);
+\draw[dashed] (0,1.75) -- (0,-1.75);
+\draw[line width=1.1pt] (0,0) -- (-0.22,1.55);
+\draw[line width=1.1pt] (0,0) -- (0.22,-1.55);
+\node[above] at (-0.22,1.58) {\small N};
+\node[below] at (0.22,-1.58) {\small S};
+\fill (0,0) circle (0.05);
+\node[above] at (0,1.86) {\small $0$};
+\draw (0,1.10) arc (90:96:1.10);
+\node[left] at (-0.14,1.12) {\small $\theta'$};
+\draw (0,-1.10) arc (270:278:1.10);
+\node[right] at (0.14,-1.12) {\small $\theta''$};
+\end{tikzpicture}
+\end{figbox}
+
+(4) Plot the graph of $I$ against $\tan\theta$, and calculate the value of $B_\parallel$ from the slope of the straight line.
+
+\textbf{3.} The radius of the Helmholtz coils is $\bar{R}=16.2\,\mathrm{cm}$ and the number of turns is $N=310$. The data of the relation between $I$ and $\tan\theta$ are omitted. The measured horizontal component of the geomagnetic field is $B_\parallel=2.91\times10^{-5}\,\mathrm{T}$; compared with the value measured in the open air outside the building in Shanghai, this value is about $20\%$ smaller, which is caused by the screening effect of the steel material of the building.
+
+\subsection*{Experiment 7.25 \quad Measurement of the magnetisation curve and the hysteresis loop of a ferromagnetic material with a Hall sensor}
+
+\textbf{[Apparatus and materials available]}
+
+A stabilised DC current source, a multirange ammeter, a digital teslameter (with a probe mounted on a graduated travelling device), a ring-shaped magnetic material to be measured (with a $0.2\,\mathrm{cm}$ gap; $2000$ turns of wire are wound on the sample, whose cross-section is $2.00\,\mathrm{cm}\times2.00\,\mathrm{cm}$), a double-pole double-throw switch, a ruler, connecting wires, etc.
+
+\textbf{[Requirements]}
+
+(1) Measure the relation between the residual magnetic flux density $B$ in the gap of the sample and the position $x$, and find the extent of the region of uniform field.
+
+(2) Measure the initial magnetisation curve of the sample; demagnetise the sample before the measurement.
+
+(3) Measure the hysteresis loop of the die-steel sample; magnetically train the sample before the measurement.
+
+(4) Measure the mean magnetic path length $\bar{l}$ of the sample and the width $l_g$ of the gap, correct the coercive force $H_c$ and the field strength $H_m$ at saturation, and find the saturation magnetic flux density $B_m$.
+
+\textbf{Solution 7.25}\quad \textbf{1.} The wiring of the instruments is shown in Fig.~7.25(a).
+
+\begin{figbox}{7.25(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% instrument boxes
+\draw (0,4.30) rectangle (2.10,5.10);
+\node at (1.05,4.70) {\scriptsize\begin{tabular}{c}stabilised\\DC source\end{tabular}};
+\draw (2.40,4.30) rectangle (4.60,5.10);
+\node at (3.50,4.82) {\scriptsize reversing switch};
+\draw (2.62,4.42) -- (2.92,4.42); \draw (2.92,4.42) -- (3.25,4.68);
+\draw (3.25,4.68) -- (3.58,4.42); \draw (3.58,4.42) -- (4.38,4.68);
+\draw (2.92,4.62) -- (3.25,4.36); \draw (3.25,4.36) -- (3.58,4.62);
+\fill (2.62,4.42) circle (0.035); \fill (2.62,4.62) circle (0.035);
+\fill (4.38,4.42) circle (0.035); \fill (4.38,4.62) circle (0.035);
+\draw (4.90,4.30) rectangle (6.70,5.10);
+\node at (5.80,4.70) {\scriptsize\begin{tabular}{c}multirange\\ammeter\end{tabular}};
+% connections
+\draw (2.10,4.70) -- (2.40,4.70);
+\draw (4.60,4.70) -- (4.90,4.70);
+\draw (6.70,4.70) -- (7.42,4.70);
+% ring sample
+\draw[line width=2.6pt,black!60] (7.90,4.70) ellipse (0.42 and 0.62);
+\draw[line width=2.6pt,black!60] (7.90,4.70) ellipse (0.22 and 0.38);
+\draw[white,line width=3pt] (8.22,4.45) -- (8.35,4.95);
+\node[below] at (7.90,4.00) {\scriptsize sample};
+% return lead
+\draw (7.90,4.08) -- (7.90,3.65) -- (1.05,3.65) -- (1.05,4.30);
+% teslameter and probe
+\draw (5.90,2.30) rectangle (8.30,3.10);
+\node at (7.10,2.70) {\scriptsize digital teslameter};
+\draw (8.30,2.95) -- (8.75,2.95) -- (8.75,4.35) -- (8.42,4.35);
+\draw[fill=white] (8.30,4.30) rectangle (8.55,4.40);
+\node[above] at (8.42,4.42) {\scriptsize probe};
+\end{tikzpicture}
+\end{figbox}
+
+The relation $B$--$x$ measured with the teslameter is given in the following table.
+
+\begin{center}
+{\small Table 7.25-1\quad Relation between $B$ and $x$}\\[2pt]
+\begin{tabular}{@{}cccccccc@{}}
+\toprule
+$x/\mathrm{mm}$ & $B/\mathrm{mT}$ & $x/\mathrm{mm}$ & $B/\mathrm{mT}$ & $x/\mathrm{mm}$ & $B/\mathrm{mT}$ & $x/\mathrm{mm}$ & $B/\mathrm{mT}$\\
+\midrule
+$-10.0$ & 130.7 & $-4.0$ & 168.1 & 1.0 & 168.4 & 6.0 & 167.4\\
+$-9.0$  & 165.3 & $-3.0$ & 168.3 & 2.0 & 168.4 & 7.0 & 166.8\\
+$-8.0$  & 166.1 & $-2.0$ & 168.4 & 3.0 & 168.4 & 8.0 & 165.3\\
+$-7.0$  & 167.0 & $-1.0$ & 168.4 & 4.0 & 168.4 & 9.0 & 160.6\\
+$-6.0$  & 167.4 & 0.0   & 168.4 & 5.0 & 168.0 & 10.0 & 123.1\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+From the data in the table it is seen that the magnetic flux density is uniform in the range from $x_1=-4.0\,\mathrm{mm}$ to $x_2=5.0\,\mathrm{mm}$, that is, over $\Delta x=0.9\,\mathrm{cm}$. In the following measurements the sensitive element of the teslameter probe should be placed within this uniform region, with its sensing surface perpendicular to the direction of $B$.
+
+\textbf{2.} The initial magnetisation curve of the sample is measured after the sample has first been demagnetised. The magnetising current is repeatedly reversed while its amplitude is gradually reduced from the maximum value to zero, so that finally the residual magnetism $B$ of the sample is zero. The $B$--$H$ relation is then measured.
+
+\textbf{3.} Magnetic training is carried out before the hysteresis loop of the die steel is measured. From the initial magnetisation curve one can find the current $I_m$ through the magnetising coil when $B$ increases very slowly. This current $I_m$ is then kept constant, and the double-pole reversing switch is thrown back and forth 50 times for magnetic training; when the switch is operated, the time from contact to separation of the contacts should be made rather long, so that sparking is avoided. Magnetic training makes the hysteresis loop symmetrical.
+
+\textbf{4.} The mean magnetic path length $\bar{l}$ and the gap width $l_g$ of the die-steel sample are measured, and $H$ is corrected by means of formula (1). The sample is shown in Fig.~7.25(b).
+
+If there is a small gap $l_g$ in the magnetic circuit of the iron core, the mean magnetic path length in the iron core is $\bar{l}$, the number of turns of the coil on the core is $N$, and the current through it is $I$, then by the circuital law
+\begin{equation}
+H\bar{l}+H_gl_g=NI. \tag{1}
+\end{equation}
+In (1), $H_g$ is the magnetic field strength in the gap. Generally speaking, this is the magnetic flux density in the iron core. When the gap is very narrow, that is, when the length and the width of the rectangular cross-section of the iron core are $\gg l_g$ and the mean magnetic path length $\bar{l}\gg l_g$, we have
+\begin{equation}
+B_g\cdot S_g=B\cdot S. \tag{2}
+\end{equation}
+In (2), $S_g$ is the cross-sectional area of the magnetic path in the gap and $S$ that in the iron core. Under the above conditions $S_g\approx S$, so $B=B_g$, where $B_g$ is the magnetic flux density $B$ at the middle of the iron core to be measured. Moreover, in the gap,
+\begin{equation}
+B_g=\mu_0\mu_rH_g. \tag{3}
+\end{equation}
+In (3), $\mu_0$ is the permeability of vacuum and $\mu_r$ the relative permeability; in the gap $\mu_r=1$. Hence $H_g=B/\mu_0$, and (1) can be written as
+\begin{equation}
+H\bar{l}+\frac{1}{\mu_0}Bl_g=NI, \tag{4}
+\end{equation}
+\begin{equation}
+\therefore\quad H=\left(NI-\frac{1}{\mu_0}\cdot Bl_g\right)\Big/\bar{l}. \tag{5}
+\end{equation}
+
+\begin{figbox}{7.25(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% outer and inner rectangles of the ring
+\draw (0.6,0.4) rectangle (6.2,3.6);
+\draw[fill=white] (2.0,1.4) rectangle (4.8,2.6);
+% the gap in the top branch
+\draw[fill=white] (5.0,3.62) rectangle (5.18,2.58);
+\draw (5.0,2.6) -- (5.0,3.6);
+\draw (5.18,2.6) -- (5.18,3.6);
+% dimension a
+\draw[<->] (0.6,-0.28) -- (6.2,-0.28);
+\node[below] at (3.4,-0.30) {$a$};
+% dimension b
+\draw[<->] (-0.28,0.4) -- (-0.28,3.6);
+\node[left] at (-0.30,2.0) {$b$};
+% dimension c
+\draw[<->] (4.8,3.80) -- (6.2,3.80);
+\node[above] at (5.5,3.82) {$c$};
+% dimension d
+\draw[<->] (5.55,0.4) -- (5.55,1.4);
+\node[right] at (5.58,0.9) {$d$};
+% gap width
+\draw[<->] (5.0,4.25) -- (5.18,4.25);
+\node[above] at (5.09,4.30) {$l_g$};
+\end{tikzpicture}
+\end{figbox}
+
+The sample was measured with a metre rule: $a=10.00\,\mathrm{cm}$, $b=6.00\,\mathrm{cm}$, $c=d=2.00\,\mathrm{cm}$;
+\[
+\bar{l}=10.00\times2+6.00\times2-2.00\times4-0.20=23.8\,(\mathrm{cm});
+\]
+and $l_g=0.20\,\mathrm{cm}$. In (5), $B$ is measured directly, $N$ is known, $I$ is read from the ammeter, and $\mu_0$ is a constant. The uncorrected $B$--$H$ curve is shown in Fig.~7.25(c).
+
+\begin{figbox}{7.25(c)}
+\begin{tikzpicture}[x=0.50cm,y=0.0072cm,>=Stealth,line width=0.5pt]
+\draw[->] (-6.4,0) -- (6.6,0) node[above right] {$H/(\mathrm{kA\cdot m^{-1}})$};
+\draw[->] (0,-350) -- (0,350) node[left] {$B/\mathrm{mT}$};
+\foreach \h in {-5.5,-3.5,-1.5,1.5,3.5,5.5} {
+  \draw (\h,0) -- (\h,-12);
+  \node[below] at (\h,-14) {\small \h};
+}
+\foreach \b in {-300,-200,-100,100,200,300} {
+  \draw (0,\b) -- (-0.16,\b);
+  \node[left] at (-0.22,\b) {\small \b};
+}
+\node[below] at (0,-14) {\small 0};
+% hysteresis loop
+\draw[line width=0.8pt] plot[smooth,tension=0.8] coordinates {
+(-5.0,-290) (-3.0,-235) (-1.41,0) (-0.5,75) (0,93.8) (1.0,190) (2.5,265) (5.0,290)
+(3.0,235) (1.41,0) (0.5,-75) (0,-93.8) (-1.0,-190) (-2.5,-265) (-5.0,-290)};
+\node[circle,draw,inner sep=1.2pt,fill=white] at (0,93.8) {};
+\node[draw,inner sep=1.1pt,rotate=45,fill=white] at (-1.41,0) {};
+\end{tikzpicture}
+\par\smallskip
+{\small $\circ$ marks the remanence: $93.8\,\mathrm{mT}$;\quad $\diamond$ marks the coercive force: $-1410\,\mathrm{A/m}$}
+\end{figbox}
+
+Substituting $N=2000$ turns, $I$, $\bar{l}$, $l_g$ and $B$ into formula (5) gives the corresponding $H$; the $B$--$H$ curve obtained in this way is the true static magnetisation curve of the die-steel material. The corrected $B$--$H$ curve is omitted.

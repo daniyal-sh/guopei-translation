@@ -1,0 +1,1260 @@
+\section*{The 32nd International Physics Olympiad}
+
+\begin{center}
+\small Translated and compiled by Zheng Yongling, Jiang Zuimin and Lu Shenlong, Fudan University
+\end{center}
+
+\subsection*{Theoretical Problems}
+
+\subsection*{Problem 1}
+
+\subsubsection*{Part A. The klystron}
+
+A klystron is used to amplify high-frequency signals. A klystron consists essentially of two cavities separated by a distance $b$, each cavity containing a pair of parallel plates, as shown in Fig.~32.1.
+
+\begin{figbox}{32.1}
+\begin{tikzpicture}[scale=0.95]
+  % beam axis
+  \draw[dashedline] (-4.4,0) -- (5.0,0);
+  % input cavity plates
+  \draw[thickline] (-3.3,-0.9) -- (-3.3,-0.12);
+  \draw[thickline] (-3.3,0.12) -- (-3.3,0.9);
+  \draw[thickline] (-2.9,-0.9) -- (-2.9,-0.12);
+  \draw[thickline] (-2.9,0.12) -- (-2.9,0.9);
+  % drift tube
+  \draw[thickline] (-2.9,0.55) -- (0.9,0.55);
+  \draw[thickline] (-2.9,-0.55) -- (0.9,-0.55);
+  % output cavity plates
+  \draw[thickline] (0.9,-0.9) -- (0.9,-0.12);
+  \draw[thickline] (0.9,0.12) -- (0.9,0.9);
+  \draw[thickline] (1.3,-0.9) -- (1.3,-0.12);
+  \draw[thickline] (1.3,0.12) -- (1.3,0.9);
+  % dimensions
+  \draw[dim] (-3.3,1.05) -- (-2.9,1.05) node[midway,above] {$a$};
+  \draw[dim] (-2.9,1.05) -- (0.9,1.05) node[midway,above] {$b$};
+  \draw[dim] (0.9,1.05) -- (1.3,1.05) node[midway,above] {$a$};
+  % incoming beam
+  \draw[force] (-4.35,0) -- (-3.55,0) node[midway,above] {$v_0$};
+  % labels
+  \node[below] at (-3.1,-1.0) {input cavity};
+  \node[below] at (1.6,-1.0) {output cavity};
+  % phase shifter loop
+  \draw[thickline] (1.1,-0.9) -- (1.1,-2.1) -- (2.1,-2.1);
+  \draw[thickline] (0.4,-2.1) -- (-3.1,-2.1) -- (-3.1,-0.9);
+  \draw[thickline] (0.4,-1.75) rectangle (2.1,-2.45);
+  \node[align=center,font=\small] at (1.25,-2.1) {phase\\ shifter};
+  \draw[thickline] (0.4,-2.1) -- (0.15,-2.1);
+  \draw (0.0,-2.1) circle (0.15);
+  \draw[thickline] (-0.15,-2.1) -- (-3.1,-2.1);
+\end{tikzpicture}
+\end{figbox}
+
+A beam of electrons with initial velocity $v_0$ passes through small holes in the plates and traverses the whole system. The high-frequency signal to be amplified is applied to the two pairs of electrode plates with a certain phase difference (one period corresponds to a phase of $2\pi$), thereby producing an alternating horizontal electric field in each cavity. When the electric field in the input cavity points to the right, the electrons entering the cavity are decelerated; conversely, when the electric field points to the left, the electrons are accelerated. In this way, the electrons emerging from the input cavity will, after travelling a certain distance, bunch together into short electron bunches. If the output cavity is located at the place where the short electron bunches are formed, then, provided the phase of the voltage applied to it is chosen appropriately, the electric field in the output cavity will absorb energy from the electron beam. Suppose that the voltage signal is a square wave of period $T=1.0\times10^{-9}\unitv{s}$ and voltage $V=\pm0.5\unitv{V}$. The initial velocity of the electron beam is $v_0=2.0\times10^{6}\unitv{m/s}$, and the specific charge of the electron is $e/m=1.76\times10^{11}\unitv{C/kg}$. Assume that the spacing $a$ is very small, so that the transit time of an electron through a cavity can be neglected. Keeping 4 significant figures, calculate:
+
+\begin{enumerate}
+\item[(a)] the distance $b$ over which the electrons can bunch into short electron bunches. Write your result on the answer sheet. (1.5 points)
+\item[(b)] the required phase difference between the output cavity and the input cavity, provided by the phase shifter. Write your result on the answer sheet. (1.0 point)
+\end{enumerate}
+
+\subsubsection*{Part B. Molecular spacing}
+
+Let $d_L$ and $d_V$ denote respectively the average spacing of water molecules in the liquid phase and in the vapour phase. Assume that both phases are at $100\degree$C and at a pressure of one atmosphere, and that the water vapour may be treated as an ideal gas. Using the following data, calculate the ratio $d_V/d_L$. Write your data on the answer sheet. (2.5 points)
+
+\begin{itemize}
+\item Density of water in the liquid phase: $\rho_L=1.0\times10^{3}\unitv{kg/m^3}$
+\item Molar mass of water: $M=1.8\times10^{-2}\unitv{kg/mol}$
+\item One atmosphere: $p_a=1.0\times10^{5}\unitv{N/m^2}$
+\item Gas constant: $R=8.3\unitv{J/(mol\cdot K)}$
+\item Avogadro constant: $N_A=6.0\times10^{23}\unitv{mol^{-1}}$
+\end{itemize}
+
+\subsubsection*{Part C. A simple sawtooth signal generator}
+
+A sawtooth voltage waveform $V_0$ can be obtained at the terminals of the capacitor $C$ in Fig.~32.2. In the figure, $R$ is a variable resistor, $V_s$ is an ideal battery, and $SG$ is a spark gap consisting of two electrodes whose separation is adjustable. When the voltage across $SG$ exceeds the breakdown voltage $V_f$, the air between the two electrodes is broken down; the spark gap then becomes a short circuit, and remains short-circuited until the voltage between its electrodes becomes very small.
+
+\begin{figbox}{32.2}
+\begin{tikzpicture}[scale=0.95]
+  % outer loop
+  \draw[thickline] (0,0) -- (4.2,0) -- (4.2,2.4) -- (2.6,2.4);
+  \draw[thickline] (1.3,2.4) -- (0,2.4) -- (0,1.5);
+  \draw[thickline] (0,0.85) -- (0,0);
+  % battery
+  \draw[thickline] (-0.45,1.25) -- (0.45,1.25);
+  \draw[thickline] (-0.22,0.95) -- (0.22,0.95);
+  \draw[thickline] (0,0.95) -- (0,0.85);
+  \draw[thickline] (0,1.25) -- (0,1.5);
+  \node[left] at (-0.5,1.1) {$V_s$};
+  % switch
+  \draw[thickline] (0,1.5) -- (0.12,1.9);
+  \draw[thickline] (0,2.4) -- (0,2.15);
+  \node[left] at (-0.1,1.95) {$S$};
+  % resistor R
+  \draw[thickline] (1.3,2.4) -- (1.5,2.4);
+  \draw[thickline] (1.5,2.4) -- (1.65,2.65) -- (1.85,2.15) -- (2.05,2.65) -- (2.25,2.15) -- (2.45,2.65) -- (2.6,2.4);
+  \draw[thickline] (2.6,2.4) -- (4.2,2.4);
+  \node[above] at (2.05,2.65) {$R$};
+  % spark gap branch
+  \draw[thickline] (2.7,2.4) -- (2.7,1.65);
+  \draw[thickline] (2.45,1.65) -- (2.95,1.65);
+  \draw[thickline] (2.45,1.45) -- (2.95,1.45);
+  \draw[thickline] (2.7,1.45) -- (2.7,0);
+  \node[right] at (3.0,1.6) {$SG$};
+  % capacitor C
+  \draw[thickline] (4.2,1.55) -- (3.75,1.55);
+  \draw[thickline] (4.2,1.35) -- (3.75,1.35);
+  \draw[thickline] (4.2,2.4) -- (4.2,1.55);
+  \draw[thickline] (4.2,1.35) -- (4.2,0);
+  \node[right] at (4.35,1.45) {$C$};
+  % output terminals
+  \fill (4.2,2.4) circle (1.5pt);
+  \fill (4.2,0) circle (1.5pt);
+  \draw[thickline] (4.55,2.4) -- (4.55,1.9);
+  \draw[thickline] (4.55,1.0) -- (4.55,0);
+  \draw[force] (4.75,1.45) -- (4.75,1.95);
+  \node[right] at (4.8,1.6) {$V_0$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{enumerate}
+\item[(a)] After the switch is closed, plot the waveform of the voltage $V_0$ as a function of time. (0.5 points)
+\item[(b)] Under what condition can an almost linear sawtooth voltage waveform $V_0$ be obtained? Write the result on the answer sheet. (0.2 points)
+\item[(c)] Assuming that the above condition is satisfied, derive a simple expression for the period $T$ of this waveform. Write the result on the answer sheet. (0.4 points)
+\item[(d)] If only the period is to be changed, what should be changed (only $R$, or only $SG$, or both $R$ and $SG$)? Write the result on the answer sheet. (0.2 points)
+\item[(e)] If only the amplitude is to be changed, what should be changed (only $R$, or only $SG$, or both $R$ and $SG$)? Write the result on the answer sheet. (0.2 points)
+\item[(f)] Given another variable power supply, design and draw a new circuit, and indicate the two terminals from which the output voltage waveform $V_0'$ shown in Fig.~32.3 can be obtained. (1.0 point)
+\end{enumerate}
+
+\begin{figbox}{32.3}
+\begin{tikzpicture}[scale=0.9]
+  \draw[axis] (0,0) -- (5.2,0) node[right] {$t$};
+  \draw[axis] (0,0) -- (0,2.4) node[above] {$V_0$};
+  \draw[dashedline] (0,2.0) -- (5.0,2.0);
+  \node[left] at (0,2.0) {$V_f$};
+  \draw[thickline] (0,0) -- (1.2,2.0) -- (1.2,0) -- (2.4,2.0) -- (2.4,0) -- (3.6,2.0) -- (3.6,0) -- (4.8,2.0) -- (4.8,0);
+\end{tikzpicture}
+\end{figbox}
+
+\subsubsection*{Part D. Atomic beam}
+
+In Fig.~32.4, a group of atoms in an oven is heated to a certain temperature $T$, and these atoms emerge in the horizontal direction through a small hole of diameter $D$ in the side of the oven (the size of $D$ is comparable with atomic dimensions), thus forming an atomic beam. When this beam of atoms has travelled a horizontal distance $L$, estimate the diameter of the beam. Let the mass of an atom be $M$. Write your result on the answer sheet. (2.5 points)
+
+\begin{figbox}{32.4}
+\begin{tikzpicture}[scale=0.9]
+  % oven with a hole in the right wall
+  \draw[thickline] (0,0) -- (2.2,0) -- (2.2,0.7);
+  \draw[thickline] (2.2,0.85) -- (2.2,1.15);
+  \draw[thickline] (2.2,1.35) -- (2.2,2.0) -- (0,2.0) -- (0,0);
+  \foreach \x/\y in {0.3/0.3,0.7/1.5,0.5/0.9,1.1/0.4,1.3/1.2,1.7/0.7,1.9/1.6,1.0/1.7,1.8/0.2,0.2/1.1,1.5/0.25,0.9/0.55}
+    \fill (\x,\y) circle (2pt);
+  \draw[dashedline] (2.35,1.0) -- (6.4,1.0);
+  \draw[thickline] (2.3,0.9) -- (6.0,0.2);
+  \draw[thickline] (2.3,1.1) -- (6.0,1.8);
+  \draw[dim] (2.5,1.0) -- (2.5,1.1);
+  \draw[dim] (2.3,0.78) -- (2.3,1.22);
+  \node[right] at (2.55,1.15) {$D$};
+  \draw[dim] (2.2,-0.35) -- (6.0,-0.35);
+  \node[below] at (4.1,-0.38) {$L$};
+  \node[below] at (1.1,-0.05) {oven at temperature $T$};
+  \node[below] at (1.1,-0.75) {atoms of mass $M$};
+  \draw[force] (1.1,-0.42) -- (1.4,-0.1);
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Solutions}
+
+\subsection*{Problem 1}
+
+\subsubsection*{Part A}
+
+(a) The electrons are decelerated during the first half period and accelerated during the second half. Let the velocity after deceleration be $v_{\text{ret}}$ and that after acceleration be $v_{\text{acc}}$; then
+\begin{align*}
+v_{\text{ret}}&=\sqrt{v_0^2-2(e/m)V}=1.956\times10^{6}\unitv{m/s},\\
+v_{\text{acc}}&=\sqrt{v_0^2+2(e/m)V}=2.044\times10^{6}\unitv{m/s}.
+\end{align*}
+After a time $t$ the two kinds of electrons have travelled the distances
+\[
+x_{\text{ret}}=v_{\text{ret}}t,\qquad x_{\text{acc}}=v_{\text{acc}}(t-T/2).
+\]
+Setting $x_{\text{ret}}=x_{\text{acc}}$, we obtain the time at which the electrons bunch into a short beam:
+\[
+t_b=\frac{v_{\text{acc}}T}{2(v_{\text{acc}}-v_{\text{ret}})}=11.61T.
+\]
+Hence
+\[
+b=v_{\text{ret}}t_b=2.272\times10^{-2}\unitv{m}.
+\]
+
+(b) Phase shift:
+\[
+\Delta\varphi=\pm\left(\frac{t_b}{T}-n\right)2\pi=\pm0.61\times2\pi=\pm220\degree,
+\]
+or
+\[
+\Delta\varphi=\pm140\degree.
+\]
+
+\subsubsection*{Part B}
+
+Treating the water vapour as an ideal gas, its density is
+\[
+\rho_V=\frac{Mp_a}{RT}.
+\]
+Hence
+\[
+\frac{d_V}{d_L}=\left(\frac{\rho_L}{\rho_V}\right)^{1/3}
+=\left(\frac{RT\rho_L}{Mp_a}\right)^{1/3}\approx12.
+\]
+
+\subsubsection*{Part C}
+
+\begin{enumerate}
+\item[(a)] As shown in Fig.~32.5.
+\item[(b)] $V_s\gg V_f$.
+\item[(c)] After the switch is closed, the output voltage as a function of time is
+\[
+V=V_s\left(1-\ee^{-t/RC}\right).
+\]
+Setting $V=V_f$, and since $V_f\ll V_s$, we must have
+\[
+t=T\ll RC,\qquad \ee^{-T/RC}\approx1-\frac{T}{RC},
+\]
+\[
+V_f\approx V_s\left[1-\left(1-\frac{T}{RC}\right)\right]=V_s\frac{T}{RC},
+\]
+\[
+T=RC\frac{V_f}{V_s}.
+\]
+\item[(d)] $R$.
+\item[(e)] Change $R$ and $SG$ simultaneously so that $RV_f=\text{constant}$.
+\item[(f)] Either of the two circuits below is acceptable.
+\end{enumerate}
+
+\begin{figbox}{32.5}
+\begin{tikzpicture}[scale=0.9]
+  \draw[axis] (0,0) -- (5.4,0) node[right] {$t$};
+  \draw[axis] (0,0) -- (0,2.6) node[above] {$V_0$};
+  \draw[dashedline] (0,2.3) -- (5.2,2.3);
+  \draw[dashedline] (0,1.7) -- (5.2,1.7);
+  \node[left] at (0,2.3) {$V_s$};
+  \node[left] at (0,1.7) {$V_f$};
+  \draw[thickline] (0,0) .. controls (0.7,0.9) and (1.1,1.7) .. (1.3,1.7) -- (1.3,0);
+  \draw[thickline] (1.3,0) .. controls (2.0,0.9) and (2.4,1.7) .. (2.6,1.7) -- (2.6,0);
+  \draw[thickline] (2.6,0) .. controls (3.3,0.9) and (3.7,1.7) .. (3.9,1.7) -- (3.9,0);
+  \draw[thickline] (3.9,0) .. controls (4.6,0.9) and (5.0,1.7) .. (5.2,1.7);
+  \draw[dim] (1.3,-0.2) -- (2.6,-0.2) node[midway,below] {$T$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{32.6(a)}
+\begin{tikzpicture}[scale=0.85]
+  \draw[thickline] (0,0) -- (4.4,0) -- (4.4,2.4) -- (2.5,2.4);
+  \draw[thickline] (1.2,2.4) -- (0,2.4) -- (0,1.45);
+  \draw[thickline] (0,0) -- (0,0.55);
+  % battery V_s - V_f
+  \draw[thickline] (-0.4,0.85) -- (0.4,0.85);
+  \draw[thickline] (-0.2,0.55) -- (0.2,0.55);
+  \draw[thickline] (0,0.85) -- (0,1.45);
+  \node[left] at (-0.45,0.7) {$V_s-V_f$};
+  \node[above] at (0,0.9) {$+$};
+  % switch
+  \draw[thickline] (0,1.45) -- (0.12,1.85);
+  \node[left] at (-0.05,1.85) {$S$};
+  % resistor R across output
+  \draw[thickline] (1.2,2.4) -- (1.4,2.4);
+  \draw[thickline] (1.4,2.4) -- (1.55,2.65) -- (1.75,2.15) -- (1.95,2.65) -- (2.15,2.15) -- (2.35,2.65) -- (2.5,2.4);
+  \draw[thickline] (2.5,2.4) -- (3.2,2.4);
+  \node[above] at (1.95,2.65) {$R$};
+  \draw[thickline] (1.2,2.4) -- (1.2,3.0);
+  \draw[thickline] (2.5,2.4) -- (2.5,3.0);
+  \node[above] at (1.2,3.0) {$+$};
+  \node[above] at (2.5,3.0) {$-$};
+  \node[above] at (1.85,3.05) {$V_0'$};
+  % spark gap
+  \draw[thickline] (3.2,2.4) -- (3.2,1.65);
+  \draw[thickline] (2.95,1.65) -- (3.45,1.65);
+  \draw[thickline] (2.95,1.45) -- (3.45,1.45);
+  \draw[thickline] (3.2,1.45) -- (3.2,0);
+  \node[right] at (3.5,1.55) {$SG$};
+  % capacitor
+  \draw[thickline] (4.4,1.6) -- (3.95,1.6);
+  \draw[thickline] (4.4,1.4) -- (3.95,1.4);
+  \draw[thickline] (4.4,2.4) -- (4.4,1.6);
+  \draw[thickline] (4.4,1.4) -- (4.4,0);
+  \node[right] at (4.55,1.5) {$C$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{32.6(b)}
+\begin{tikzpicture}[scale=0.85]
+  \draw[thickline] (0,0) -- (4.5,0) -- (4.5,2.4) -- (2.2,2.4);
+  \draw[thickline] (1.1,2.4) -- (0,2.4) -- (0,1.45);
+  \draw[thickline] (0,0) -- (0,0.55);
+  % battery
+  \draw[thickline] (-0.4,0.85) -- (0.4,0.85);
+  \draw[thickline] (-0.2,0.55) -- (0.2,0.55);
+  \draw[thickline] (0,0.85) -- (0,1.45);
+  \node[left] at (-0.45,0.7) {$V_s$};
+  \node[above] at (0,0.9) {$+$};
+  % switch
+  \draw[thickline] (0,1.45) -- (0.12,1.85);
+  \node[left] at (-0.05,1.85) {$S$};
+  % resistor
+  \draw[thickline] (0,2.4) -- (1.1,2.4);
+  \draw[thickline] (1.1,2.4) -- (1.25,2.65) -- (1.45,2.15) -- (1.65,2.65) -- (1.85,2.15) -- (2.05,2.65) -- (2.2,2.4);
+  \draw[thickline] (2.2,2.4) -- (4.5,2.4);
+  \node[above] at (1.65,2.65) {$R$};
+  % spark gap
+  \draw[thickline] (2.9,2.4) -- (2.9,1.65);
+  \draw[thickline] (2.65,1.65) -- (3.15,1.65);
+  \draw[thickline] (2.65,1.45) -- (3.15,1.45);
+  \draw[thickline] (2.9,1.45) -- (2.9,0);
+  \node[right] at (3.2,1.55) {$SG$};
+  % capacitor
+  \draw[thickline] (4.5,1.7) -- (4.05,1.7);
+  \draw[thickline] (4.5,1.5) -- (4.05,1.5);
+  \draw[thickline] (4.5,2.4) -- (4.5,1.7);
+  \draw[thickline] (4.5,1.5) -- (4.5,1.05);
+  \node[right] at (4.65,1.6) {$C$};
+  % battery V_f below C
+  \draw[thickline] (4.1,1.05) -- (4.9,1.05);
+  \draw[thickline] (4.25,0.75) -- (4.75,0.75);
+  \draw[thickline] (4.5,0.75) -- (4.5,0);
+  \node[right] at (4.95,0.9) {$V_f$};
+  \node[below] at (4.75,0.72) {$+$};
+  % output
+  \draw[thickline] (4.5,1.7) -- (5.2,1.7);
+  \draw[thickline] (4.5,1.5) -- (5.2,1.5);
+  \node[right] at (5.25,1.6) {$V_0'$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsubsection*{Part D}
+
+When the atomic beam passes through the hole of diameter $D$, the quantum-mechanical uncertainty relation gives for the $y$-component of its momentum
+\[
+\Delta p_y\approx \frac{\hbar}{D},\quad \frac{h}{D},\quad \frac{h}{2D}.
+\]
+The corresponding velocity components are
+\[
+\Delta v_y\approx \frac{\hbar}{MD},\quad \frac{h}{MD},\quad \frac{h}{2MD}.
+\]
+The diameter of the atomic beam increases by the amount $\Delta D=2\Delta v_y t$, where $t$ is the time of flight.
+
+When the oven temperature is $T$, the kinetic energy of an atom as it leaves the hole is
+\[
+E_k=\frac{1}{2}Mv^2=\frac{3}{2}kT,\quad kT,\quad \frac{1}{2}kT.
+\]
+Hence
+\[
+v=\sqrt{\frac{3kT}{M}},\quad \sqrt{\frac{2kT}{M}},\quad \sqrt{\frac{kT}{M}}.
+\]
+The atomic beam travels the distance $L$ in the time $t=L/v$; therefore
+\begin{align*}
+\Delta D&=2\Delta v_y t\approx2\frac{L}{v}\frac{\hbar}{MD}
+=\frac{2L\hbar}{MD}\sqrt{\frac{M}{3kT}}\\
+&=\frac{2L\hbar}{D\sqrt{3MkT}},
+\end{align*}
+or by substituting the other corresponding quantities above. Thus the new diameter of the atomic beam after travelling the distance $L$ is
+\[
+D_{\text{new}}=D+\frac{2L\hbar}{D\sqrt{3MkT}},
+\]
+or the expression obtained by substituting the other corresponding quantities above.
+
+\subsection*{Problem 2}
+
+\subsubsection*{Binary star system}
+
+(a) As is well known, most stars form binary systems. One kind of binary system consists of an ordinary star of mass $m_0$ and radius $R$, and a compact neutron star of larger mass $M$, revolving around each other. In all that follows, ignore the motion of the Earth. The following information is obtained from observations of this binary system:
+
+\begin{enumerate}
+\item[(1)] The maximum angular displacement of the ordinary star is $\Delta\theta$, while the maximum angular displacement of the neutron star is $\Delta\varphi$ (Fig.~32.7).
+\item[(2)] The time required to change from one state of maximum displacement (I) to the other state of maximum displacement (II) is $\tau$.
+\item[(3)] The radiation characteristics of the ordinary star show that its surface temperature is $T$, and that the energy radiated per unit time per unit area at the Earth's surface is $P$.
+\item[(4)] Because of the gravitational field of the ordinary star, the calcium lines in this radiation differ from the normal wavelength $\lambda_0$ by $\Delta\lambda$ [in this calculation the mass of a photon of wavelength $\lambda$ may be taken as $h/(c\lambda)$].
+\end{enumerate}
+
+Find an expression for the distance $l$ from the Earth to this binary system, using only the observed quantities and universal constants. Write your result on the answer sheet. (7.0 points)
+
+(b) Assume that $M\gg m_0$, and that the ordinary star moves essentially in a circular orbit of radius $r_0$ around the neutron star. Assume that the ordinary star begins to emit gas toward the neutron star with velocity $v_0$ (relative to the ordinary star) (Fig.~32.8). In this problem consider only the gravitational action of the neutron star, and neglect the change in the orbit of the ordinary star. Find the distance of closest approach $r_f$ of the gas to the neutron star (Fig.~32.8). Write your result on the answer sheet. (3.0 points)
+
+\begin{figbox}{32.7}
+\begin{tikzpicture}[scale=0.85]
+  % telescope
+  \draw[thickline] (-0.55,0) -- (-0.22,0.55) -- (0.22,0.55) -- (0.55,0) -- cycle;
+  \node[below] at (0,-0.05) {telescope};
+  % rays
+  \foreach \x in {-3.4,-1.7,1.7,3.4}
+    \draw[dashedline] (0,0.55) -- (\x,4.0);
+  % star positions
+  \draw[thickline] (-3.4,4.0) circle (0.16);
+  \draw[thickline] (3.4,4.0) circle (0.16);
+  \fill (-1.7,4.0) circle (2.5pt);
+  \fill (1.7,4.0) circle (2.5pt);
+  % state labels
+  \node[above] at (-2.55,4.35) {I};
+  \node[above] at (2.55,4.35) {II};
+  % angle marks
+  \draw (0,0.55) ++(64:1.65) arc (64:116:1.65);
+  \node at (0,1.95) {$\Delta\varphi$};
+  \draw (0,0.55) ++(45:2.72) arc (45:135:2.72);
+  \node at (0,3.25) {$\Delta\theta$};
+  % legend
+  \draw[thickline] (4.1,3.4) circle (0.13);
+  \node[right] at (4.35,3.4) {ordinary star};
+  \fill (4.1,2.6) circle (2.5pt);
+  \node[right] at (4.35,2.6) {neutron star};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{32.8}
+\begin{tikzpicture}[scale=0.9]
+  % neutron star
+  \fill (0,0) circle (3pt);
+  \node[left] at (-0.1,-0.15) {$M$};
+  % ordinary star
+  \draw[thickline] (0,3.8) circle (0.18);
+  \node[above] at (0,3.98) {$m_0$};
+  \fill (0,3.8) circle (2pt);
+  \node[right] at (0.15,3.8) {$\dd m$};
+  % r0
+  \draw[dashedline] (0,0) -- (0,3.62);
+  \node[right] at (0.15,1.9) {$r_0$};
+  % v0
+  \draw[force] (0,3.5) -- (0,2.6);
+  \node[right] at (0.08,3.05) {$v_0$};
+  % trajectory
+  \draw[dashedline] (0,3.8) .. controls (-1.2,2.8) and (-2.2,1.0) .. (-1.8,-0.2)
+    .. controls (-1.3,-1.2) and (-0.2,-1.7) .. (0.9,-2.2);
+  % closest approach
+  \coordinate (F) at (-1.85,-0.25);
+  \draw[dim] (0,0) -- (F);
+  \node[below left] at (F) {$r_f$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Solutions}
+
+\subsection*{Problem 2}
+
+(a) The centre of mass of the binary system may be regarded as fixed. Let $r_1$ be the distance of the ordinary star from the centre of mass and $r_2$ that of the neutron star; from Fig.~32.7,
+\begin{equation}
+r_1=l(\Delta\theta/2),\qquad r_2=l(\Delta\varphi/2). \tag{1}
+\end{equation}
+Hence
+\begin{equation}
+l=\frac{2(r_1+r_2)}{\Delta\theta+\Delta\varphi}. \tag{2}
+\end{equation}
+It is seen that the value of $l$ depends on $r_1+r_2$. From Newton's law of motion, and noting the relation between the angular velocity $\omega$ of the binary system and the observed quantity $\tau$,
+\[
+\omega=\frac{2\pi}{2\tau}=\frac{\pi}{\tau},
+\]
+we have
+\[
+\frac{GMm_0}{(r_1+r_2)^2}=m_0\left(\frac{\pi}{\tau}\right)^2r_1,
+\]
+\[
+\frac{GMm_0}{(r_1+r_2)^2}=M\left(\frac{\pi}{\tau}\right)^2r_2.
+\]
+From these two equations,
+\[
+\frac{r_1}{r_2}=\frac{M}{m_0},
+\]
+and
+\begin{equation}
+Gm_0=\left(\frac{\pi}{\tau}\right)^2r_2(r_1+r_2)^2. \tag{3}
+\end{equation}
+It is seen that the value of $r_1+r_2$ depends on $m_0$, while $m_0$ can be found from the gravitational redshift of the spectrum. From energy conservation, and noting the relation between the photon mass and the wavelength, we have
+\[
+\frac{hc}{\lambda_0}-\frac{Gm_0}{R}\frac{h}{c\lambda_0}=\frac{hc}{\lambda_0+\Delta\lambda}.
+\]
+Hence
+\begin{equation}
+R=\frac{Gm_0(\lambda_0+\Delta\lambda)}{c^2\Delta\lambda}. \tag{4}
+\end{equation}
+Thus $m_0$ is related to $R$. But $R$ can be related to the observed quantity $P$:
+\begin{equation}
+P=\sigma T^4\frac{4\pi R^2}{4\pi l^2}=\sigma T^4\frac{R^2}{l^2}. \tag{5}
+\end{equation}
+From equations (1), (2), (3), (4) and (5) the value of $l$ expressed in terms of the observed quantities is obtained:
+\begin{equation}
+l=\left[\frac{2\tau c}{\pi(\Delta\theta+\Delta\varphi)}\right]
+\left[\frac{2\Delta\lambda(P/\sigma T^4)^{1/2}}{\Delta\varphi(\lambda_0+\Delta\lambda)}\right]^{1/2}. \tag{6}
+\end{equation}
+
+(b) The angular momentum of the gas element $\dd m$ is conserved:
+\begin{equation}
+r_0^2\omega_0\,\dd m=r_f^2\omega_f\,\dd m, \tag{7}
+\end{equation}
+\[
+\omega_f=\frac{\omega_0 r_0^2}{r_f^2},
+\]
+where $\omega_f$ is the angular velocity of the element when it is closest to the neutron star. The quantity $\omega_0$ is determined by the dynamical relation of the original state:
+\begin{equation}
+\omega_0^2=\frac{GM}{r_0^3}. \tag{8}
+\end{equation}
+The energy of the element is conserved, that is,
+\begin{equation}
+\frac{1}{2}\dd m\left(v_0^2+r_0^2\omega_0^2\right)-\frac{GM\,\dd m}{r_0}
+=\frac{1}{2}\dd m\,r_f^2\omega_f^2-\frac{GM\,\dd m}{r_f}. \tag{9}
+\end{equation}
+Combining equations (7), (8) and (9), we obtain
+\[
+v_0^2-\frac{GM}{r_0}=\frac{GMr_0}{r_f^2}-\frac{2GM}{r_f}.
+\]
+That is,
+\[
+\left(v_0^2-\frac{GM}{r_0}\right)r_f^2+2GMr_f-GMr_0=0.
+\]
+Solving this quadratic equation for $r_f$, we obtain
+\begin{equation}
+r_f=\frac{v_0\sqrt{GMr_0}-GM}{v_0^2r_0-GM}\,r_0. \tag{10}
+\end{equation}
+
+\subsection*{Problem 3}
+
+\subsubsection*{Magnetohydrodynamic generator}
+
+A horizontal rectangular plastic pipe, closed at the top, bottom, front and back, has width $w$ and height $h$, and is filled with mercury of resistivity $\rho$. A pressure difference $p$ produced by a turbine gives the fluid a constant flow velocity $v_0$. On each of the front and rear side faces of the pipe there is a copper plate of length $L$, as shown in the figure. The actual motion of the fluid is very complicated; for simplicity the following assumptions are made:
+
+\begin{enumerate}
+\item[(1)] In spite of the viscosity of the fluid, the velocity is uniform over the whole cross-section.
+\item[(2)] The velocity of the fluid is always proportional to the net external force acting on it.
+\item[(3)] The fluid is incompressible.
+\end{enumerate}
+
+\begin{figbox}{32.9}
+\begin{tikzpicture}[scale=0.9]
+  \def\dx{1.5}
+  \def\dy{0.9}
+  % front face
+  \draw[thickline] (0,0) rectangle (4.2,1.6);
+  % back face
+  \draw[thickline] (\dx,\dy) rectangle (4.2+\dx,1.6+\dy);
+  % connecting edges
+  \draw[thickline] (0,0) -- (\dx,\dy);
+  \draw[thickline] (4.2,0) -- (4.2+\dx,\dy);
+  \draw[thickline] (0,1.6) -- (\dx,1.6+\dy);
+  \draw[thickline] (4.2,1.6) -- (4.2+\dx,1.6+\dy);
+  % copper plates on front and back faces
+  \fill[gray!25] (1.1,0) rectangle (2.9,1.6);
+  \fill[gray!25] (1.1+\dx,\dy) rectangle (2.9+\dx,1.6+\dy);
+  \draw[thickline] (1.1,0) rectangle (2.9,1.6);
+  \draw[thickline] (1.1+\dx,\dy) rectangle (2.9+\dx,1.6+\dy);
+  % magnetic field arrows
+  \foreach \x in {1.5,2.0,2.5} \draw[force] (\x,0.15) -- (\x,1.15);
+  \node[right] at (2.65,0.55) {$\vec{B}$};
+  % flow velocity
+  \draw[force] (-0.8,0.8) -- (-0.1,0.8);
+  \node[above] at (-0.45,0.8) {$v$};
+  % width w
+  \draw[dim] (0,-0.75) -- (\dx,\dy-0.75);
+  \node[below] at (0.75,-0.45) {$w$};
+  % height h
+  \draw[dim] (4.2+\dx+0.25,\dy) -- (4.2+\dx+0.25,1.6+\dy);
+  \node[right] at (4.35+\dx,0.85+\dy) {$h$};
+  % length L
+  \draw[dim] (1.1,-0.45) -- (2.9,-0.45);
+  \node[below] at (2.0,-0.5) {$L$};
+  % circulating current arrows
+  \draw[force,->,>=stealth] (-0.9,1.9) arc (120:240:0.55);
+  \draw[force,->,>=stealth] (5.9,1.9) arc (60:-60:0.55);
+  % coordinate axes
+  \begin{scope}[shift={(5.5,-0.7)}]
+    \draw[axis] (0,0) -- (0.9,0) node[right] {$\hat{i}$};
+    \draw[axis] (0,0) -- (0.55,0.45) node[right] {$\hat{j}$};
+    \draw[axis] (0,0) -- (0,0.9) node[above] {$\hat{k}$};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+The two front and rear side faces made of copper are short-circuited externally. A uniform magnetic field $\vec{B}$ directed vertically upward is applied only in the region between the two copper side faces. The arrangement is shown in the figure, which also shows the unit vectors $\hat{i}$, $\hat{j}$, $\hat{k}$ used in the answers.
+
+\begin{enumerate}
+\item[(a)] Find the force exerted by the magnetic field on the fluid (express it in terms of $L$, $B$, $h$, $w$, $\rho$ and the new steady velocity $v$ after the magnetic field is applied). Write the result on the answer sheet. (2.0 points)
+\item[(b)] Derive an expression for the new steady velocity $v$ of the fluid after the magnetic field is applied (in terms of $v_0$, $p$, $L$, $B$ and $\rho$). Write the result on the answer sheet. (3.0 points)
+\item[(c)] To increase the velocity to its original value $v_0$, the power of the turbine must be increased. Derive an expression for the increased power. Write the result on the answer sheet. (2.0 points)
+\item[(d)] The magnetic field is now removed, and water flowing with velocity $v_0$ replaces the mercury. An electromagnetic wave of a single frequency $f$ is sent along the direction of the water flow. Let the refractive index of water be $n$ and $v_0\ll c$. Derive an expression for the additional phase difference, caused by the motion of the fluid, of the electromagnetic wave between its entry into and its exit from the region between the two side faces of length $L$. Write the result on the answer sheet. (3.0 points)
+\end{enumerate}
+
+\subsection*{Solutions}
+
+\subsection*{Problem 3}
+
+(a)
+\[
+\mathcal{E}=vBw,\qquad I=\frac{vBw}{(\rho w/Lh)}=\frac{vBLh}{\rho}.
+\]
+Therefore
+\[
+F=IBw=\frac{vB^2Lhw}{\rho}.
+\]
+The direction of this force is along the negative $x$-axis, that is, opposite to the flow velocity.
+
+(b)
+\[
+\frac{v}{v_0}=\frac{phw-F}{phw}=1-\frac{F}{phw}.
+\]
+Substituting the expression for $F$, we obtain
+\[
+v=v_0\left[1+\frac{v_0B^2L}{p\rho}\right]^{-1},
+\]
+or
+\[
+v=\frac{v_0p\rho}{p\rho+v_0B^2L}.
+\]
+
+(c) To increase the velocity to its original value $v_0$, the pump must increase the pressure by $\Delta p$ in order to overcome the force exerted by the magnetic field on the current (which is opposite to the pressure force):
+\[
+\Delta p\,hw=F,
+\]
+where $F$ is the value of $F$ when the velocity is $v=v_0$. The increase in power is $\Delta P=\Delta p\,hw\,v_0=Fv_0$. Substituting the value of $F$ at $v=v_0$ into this expression, we obtain
+\[
+\Delta P=\frac{v_0^2B^2Lhw}{\rho}.
+\]
+
+(d) The speed of light in stationary water is $u=c/n$. The speed in water flowing with velocity $v$, according to the relativistic velocity addition formula, is
+\[
+u'=\frac{c/n+v}{1+(c/n)v/c^2}=\frac{c/n+v}{1+v/(nc)}.
+\]
+For low flow velocities ($v\ll c$), neglecting quantities of order $v^2/c^2$ and higher in the factor $(1+v/nc)^{-1}$, we obtain
+\begin{align*}
+u'&=\frac{c/n+v}{1+v/(nc)}\approx\left(\frac{c}{n}+v\right)\left(1-\frac{v}{nc}\right)\\
+&\approx\frac{c}{n}+v\left(1-\frac{1}{n^2}\right).
+\end{align*}
+Thus
+\[
+\Delta u=u'-u=v\left(1-\frac{1}{n^2}\right),
+\]
+and
+\[
+\Delta\varphi=2\pi f\,\Delta T.
+\]
+Since $T=L/u$,
+\[
+\Delta T=\frac{\Delta u\,L}{u^2}\approx\frac{Lv}{c^2}(n^2-1).
+\]
+With $v=v_0$, therefore,
+\[
+\Delta\varphi=2\pi f\frac{L}{c^2}(n^2-1)v_0.
+\]
+
+\subsection*{Experimental Problems}
+
+\subsection*{Problem 4}
+
+\subsubsection*{Rotating liquid}
+
+This experiment consists of three main parts:
+
+\begin{enumerate}
+\item[(1)] Study the shape of the surface of a rotating liquid and determine the acceleration due to gravity.
+\item[(2)] Study the rotating liquid as an optical system.
+\item[(3)] Determine the refractive index of the liquid.
+\end{enumerate}
+
+When a cylindrical container filled with liquid rotates uniformly with angular velocity $\omega$ about the vertical axis through its centre, the surface of the liquid becomes a paraboloid (Fig.~32.10). In equilibrium, let the tangent plane at a point $P(x,y)$ on the liquid surface make an angle $\theta$ with the horizontal; then
+\begin{equation}
+\tan\theta=\omega^2x/g\qquad\text{for }|x|\le R, \tag{1}
+\end{equation}
+where $R$ is the radius of the container and $g$ the acceleration due to gravity.
+
+It can further be shown that, for $\omega<\omega_{\max}$ (where $\omega_{\max}$ is the angular velocity at which the centre of the rotating liquid surface just touches the bottom of the container), when $x=x_0=R/\sqrt{2}$,
+\begin{equation}
+y(x_0)=h_0, \tag{2}
+\end{equation}
+that is, the height of the rotating liquid there is the same as its height when the liquid is not rotating.
+
+The shape of the surface of the rotating liquid is the paraboloid given by the equation
+\begin{equation}
+y=y_0+\frac{x^2}{4C}. \tag{3}
+\end{equation}
+The vertex of the paraboloid is at $V(0,y_0)$ and its focus at $F(0,y_0+C)$. When rays parallel to the axis of symmetry (the optical axis) are reflected from this paraboloid, they all meet at the focus $F$ (Fig.~32.10).
+
+\begin{figbox}{32.10}
+\begin{tikzpicture}[scale=0.9]
+  % axes
+  \draw[axis] (-3.9,0) -- (4.1,0) node[right] {$x$};
+  \draw[axis] (0,-0.2) -- (0,4.1) node[above] {$y$};
+  % container walls and bottom
+  \draw[thickline] (-3.2,0) -- (-3.2,3.2);
+  \draw[thickline] (3.2,0) -- (3.2,3.2);
+  \draw[thickline] (-3.2,0) -- (3.2,0);
+  % parabola y = 1.25 + x^2/8
+  \draw[thickline,domain=-3.2:3.2,samples=80] plot (\x,{1.25+\x*\x/8});
+  % h0 level
+  \draw[dashedline] (-3.2,1.89) -- (3.2,1.89);
+  \node[left] at (-3.35,2.02) {$h_0$};
+  \draw[dim] (-3.55,0) -- (-3.55,1.89);
+  % vertex and focus
+  \fill (0,1.25) circle (2pt);
+  \node[below right] at (0.12,1.15) {$V(0,y_0)$};
+  \fill (0,3.25) circle (2pt);
+  \node[right] at (0.3,3.3) {$F(0,y_0+C)$};
+  % point P
+  \coordinate (P) at (2.6,2.095);
+  \fill (P) circle (2pt);
+  \node[above left] at (2.52,2.17) {$P(x,y)$};
+  % tangent at P
+  \draw[thickline] (1.85,1.61) -- (3.25,2.52);
+  \draw[dashedline] (2.0,2.095) -- (3.3,2.095);
+  \draw (2.6,2.095) ++(0.5,0) arc (0:33:0.5);
+  \node at (3.12,2.27) {$\theta$};
+  % R
+  \draw[dim] (0,-0.55) -- (3.2,-0.55);
+  \node[below] at (1.6,-0.72) {$R$};
+  % rotation arrow
+  \draw[force,->,>=stealth] (0,3.8) ++(150:0.55) arc (150:30:0.55);
+  \node at (0,4.1) {$\omega$};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize Original depth $h_0$; the parabolic surface produced when a vessel of radius $R$ rotates about the $y$-axis with constant angular velocity $\omega$, showing the inclination $\theta$ at a point $P(x,y)$, the vertex $V$ and the focus $F$.}
+\end{figbox}
+
+\subsubsection*{Apparatus}
+
+\begin{enumerate}
+\item[(1)] A cylindrical rigid plastic cup filled with liquid glycerine, with millimetre scales pasted on the bottom and on the side wall.
+\item[(2)] A turntable driven by a small DC motor; the motor is supplied by a DC power supply with adjustable voltage, by means of which the angular velocity of the turntable can be controlled.
+\item[(3)] A horizontally placed transparent screen, on which transparent or translucent coordinate paper can be placed. The position of the screen can be adjusted in the vertical or horizontal direction.
+\item[(4)] A laser pen fixed on a support. The position of the laser pen can be adjusted. The cap on its head is interchangeable.
+\item[(5)] One replacement cap for the laser pen.
+\item[(6)] A ruler.
+\item[(7)] A marker pen.
+\item[(8)] A stopwatch. Its left button resets, its middle button selects the working mode, and its right button starts or stops the timing.
+\item[(9)] A grating marked with 500 or 1000 lines/mm.
+\item[(10)] A spirit level.
+\item[(11)] Protective goggles.
+\end{enumerate}
+
+\subsubsection*{Precautions}
+
+\begin{enumerate}
+\item[(1)] Do not look directly into the laser beam. Note that the laser beam reflected from a mirror-like surface is also very dangerous; for safety, always use protective goggles.
+\item[(2)] Throughout the experiment, handle the cup containing glycerine with care when moving it.
+\item[(3)] The turntable has been levelled in advance; the spirit level is used only to adjust the horizontal position of the transparent screen.
+\item[(4)] During the whole experiment you will observe several spots on the screen; they are formed by beams reflected or refracted at the interfaces between the air, the liquid, the screen and the cup. Make sure that the beam you measure is the one required by the experiment.
+\item[(5)] The rotation speed must be changed slowly, and you must wait long enough for the liquid to reach equilibrium before making measurements.
+\end{enumerate}
+
+\subsubsection*{Experimental procedure}
+
+\subsubsection*{Part 1. Determination of $g$ with a rotating liquid (7.5 points)}
+
+\begin{enumerate}
+\item[(1)] Derive equation (1).
+\item[(2)] Measure the height $h_0$ of the liquid in the container and the inner diameter $2R$ of the container.
+\item[(3)] Insert a screen between the light source and the container; measure the distance $H$ between the turntable and the screen (Fig.~32.11).
+\item[(4)] Adjust the laser pen so that the beam is vertically downward and passes through the liquid surface at a horizontal distance $x_0=R/\sqrt{2}$ from the centre of the container.
+\item[(5)] Slowly rotate the turntable. Take care not to let the centre of the rotating liquid surface touch the bottom of the container.
+\item[(6)] It is known that at $x_0=R/\sqrt{2}$, whatever the angular velocity $\omega$, the height of the liquid surface there is the same as when the liquid is stationary. Use this fact to measure the inclination $\theta$ of the tangent plane to the liquid surface at $x_0$ for different angular velocities $\omega$, and thereby determine the acceleration due to gravity $g$ experimentally.
+\item[(7)] Tabulate the measured and calculated values for each $\omega$.
+\item[(8)] Draw a graph in order to calculate $g$.
+\item[(9)] Calculate the value of $g$ and its experimental error.
+\item[(10)] Write $2R$, $x_0$, $h_0$, $H$ and the experimentally determined value of $g$ and its error on the answer sheet.
+\end{enumerate}
+
+\begin{figbox}{32.11}
+\begin{tikzpicture}[scale=0.8]
+  % turntable
+  \draw[thickline] (-2.4,0) rectangle (2.4,-0.15);
+  % container
+  \draw[thickline] (-2.0,0) -- (-2.0,2.8);
+  \draw[thickline] (2.0,0) -- (2.0,2.8);
+  \draw[thickline] (-2.0,0) -- (2.0,0);
+  \fill[gray!15] (-2.0,0) rectangle (2.0,1.8);
+  \draw[thickline] (-2.0,1.8) -- (2.0,1.8);
+  % axis
+  \draw[dashedline] (0,1.8) -- (0,5.9);
+  % screen with a small hole
+  \draw[thickline] (-3.0,5.9) -- (-0.12,5.9);
+  \draw[thickline] (0.12,5.9) -- (3.0,5.9);
+  \draw[thickline] (-3.0,5.75) -- (-0.12,5.75);
+  \draw[thickline] (0.12,5.75) -- (3.0,5.75);
+  % laser pen and bracket
+  \draw[thickline] (-0.3,6.4) rectangle (0.3,7.0);
+  \draw[thickline] (0,6.4) -- (0,6.0);
+  \draw[thickline] (-1.0,6.7) -- (-0.3,6.7);
+  \draw[thickline] (-1.0,6.7) -- (-1.0,5.9);
+  % beam
+  \draw[force] (0,6.35) -- (0,1.85);
+  % H dimension
+  \draw[dim] (3.4,0) -- (3.4,5.9);
+  \node[right] at (3.45,2.95) {$H$};
+  % h0 dimension
+  \draw[dim] (2.45,0) -- (2.45,1.8);
+  \node[right] at (2.5,0.9) {$h_0$};
+  % R dimension
+  \draw[dim] (0,-0.45) -- (2.0,-0.45);
+  \node[below] at (1.0,-0.47) {$R$};
+  % motor and controller
+  \draw[thickline] (-0.7,-0.15) rectangle (0.7,-0.95);
+  \draw[thickline] (-3.0,-0.15) rectangle (-2.2,-0.95);
+  \draw[thickline] (-2.2,-0.55) -- (-0.7,-0.55);
+  \draw[thickline] (-2.6,-0.95) -- (-2.6,-1.45);
+  \node[below] at (-2.6,-1.45) {220 Vac};
+  % rotation arrow
+  \draw[force] (0.6,2.15) arc (0:300:0.6 and 0.16);
+  \node[right] at (0.72,2.3) {$\omega$};
+  % labels
+  \node[left] at (-1.05,6.85) {1};
+  \node[left] at (-3.1,5.82) {2};
+  \node at (0,-0.75) {3};
+  \node at (-2.6,-0.75) {4};
+  \node[right] at (2.45,-0.08) {5};
+  \node[right] at (0.2,-0.3) {6};
+  \node[right] at (2.05,2.45) {7};
+\end{tikzpicture}
+\end{figbox}
+
+\noindent 1. laser pen on a stand; 2. transparent screen; 3. motor; 4. motor controller; 5. turntable; 6. rotating shaft; 7. cylindrical container.
+
+\subsubsection*{Part 2. Optical system}
+
+In this part of the experiment the rotating liquid is regarded as an imaging optical system. Since the curvature of the liquid surface varies with the angular velocity of rotation, the focal length of this optical system depends on $\omega$.
+
+\subsubsection*{(a) Study of the focal length (5.5 points)}
+
+\begin{enumerate}
+\item[(1)] Adjust the laser pen so that the laser beam is directed vertically downward onto the centre of the bottom of the cup. Mark the point where the beam intersects the screen as $P$. The line joining the centre of the bottom of the cup to this point is the optical axis of the system (Fig.~32.11).
+\item[(2)] Since the liquid surface acts like a parabolic mirror, any beam parallel to the optical axis will pass through the focus $F$ on the optical axis after reflection from this paraboloid.
+\item[(3)] Adjust the rotation speed so that the focus falls on the screen. Measure the angular velocity and the distance $H$ between the screen and the turntable.
+\item[(4)] Repeat the above steps for different values of $H$.
+\item[(5)] Enter the measured values of $2R$ and $h_0$, and the measured value of $\omega$ corresponding to each $H$, on the answer sheet.
+\item[(6)] Using your measured data, draw a graph and find the relation between the focal length and the angular velocity. For simplicity you may take approximately $H-h_0$ as the focal length. Write your result on the answer sheet.
+\end{enumerate}
+
+\subsubsection*{(b) Analysis of the ``image'' (that is, what you see on the screen) (3.5 points)}
+
+In this part of the experiment you will analyse the ``image'' produced by this optical system. To this end, proceed as follows.
+
+\begin{enumerate}
+\item[(1)] Unscrew the cap of the laser pen counterclockwise.
+\item[(2)] Screw on clockwise the new cap of the laser pen (placed in the sealed bag). Your laser pen can now form a clear pattern rather than a thin beam.
+\item[(3)] Adjust the position of the laser pen so that the laser beam falls almost vertically near the centre of the cup.
+\item[(4)] Place a sheet of translucent coordinate paper on the horizontal screen near the cup, so that the incident laser beam does not hit the translucent paper while the reflected laser beam can fall on it.
+\item[(5)] With the liquid not rotating, observe the size and orientation of the ``image'' formed by the emerging laser beam, and the size and orientation of the ``image'' formed by the reflected laser beam.
+\item[(6)] Start rotating the liquid, gradually increasing the rotation speed to the maximum that the apparatus can reach, while observing the changes of the ``image'' on the screen. As $\omega$ increases, you will see several different frequency ranges, in which the properties of the ``image'' are completely different. In order to describe these observations, add rows to the table on the answer sheet, fill in each row the frequency range observed above, and complete the table using the symbols provided. The meanings of these symbols are explained on the answer sheet.
+\end{enumerate}
+
+\subsubsection*{Part 3. Refractive index (3.5 points)}
+
+In this part of the experiment we shall use a grating to determine the refractive index of the given liquid. When a monochromatic beam of wavelength $\lambda$ is incident normally on a diffraction grating, the maximum of the diffraction pattern is observed at $\alpha_m$, where $\alpha_m$ satisfies the equation
+\begin{equation}
+m\lambda=d\sin\alpha_m, \tag{4}
+\end{equation}
+where $m$ is the order of diffraction and $d$ is the grating constant. In this part of the experiment a diffraction grating is used to determine the wavelength of the laser and the refractive index of the liquid (Fig.~32.12).
+
+\begin{enumerate}
+\item[(1)] Use the grating to measure the wavelength of the laser pen, and write your result on the answer sheet.
+\item[(2)] Immerse the grating vertically in the liquid and place it at the centre of the cup.
+\item[(3)] Adjust the laser beam so that it enters the liquid through the wall of the cup and is incident normally on the grating.
+\item[(4)] Observe the diffraction pattern on the millimetre scale pasted on the opposite side wall of the cup, and make the necessary measurements.
+\item[(5)] Use your measurements to calculate the refractive index of the liquid (ignore the effect of the plastic cup on the light path).
+\item[(6)] Write your experimental results on the answer sheet.
+\end{enumerate}
+
+\begin{figbox}{32.12}
+\begin{tikzpicture}[scale=0.9]
+  % container
+  \draw[thickline] (0,0) circle (3.0);
+  \node at (2.55,2.35) {4};
+  % diameter lines
+  \draw[dashedline] (-3.0,0) -- (3.0,0);
+  \draw[dashedline] (0,-3.0) -- (0,3.0);
+  % grating at centre
+  \draw[thickline] (-0.06,-0.45) rectangle (0.06,0.45);
+  \node[below right] at (0.05,-0.5) {2};
+  % laser pen
+  \draw[thickline] (3.35,-0.18) rectangle (4.35,0.18);
+  \node[above] at (3.85,0.3) {3};
+  \draw[force] (3.35,0) -- (0.1,0);
+  % diffracted rays
+  \draw[thickline] (0,0) -- (-2.6,1.5);
+  \draw[thickline] (0,0) -- (-2.6,-1.5);
+  % angle
+  \draw (0,0) ++(180:0.8) arc (180:150:0.8);
+  \node at (-1.15,0.28) {$\alpha_m$};
+  % R
+  \draw[dim] (0,0) -- (2.1,2.1);
+  \node[right] at (1.55,1.6) {$R$};
+  % scale label
+  \node[left] at (-3.05,0.9) {1};
+\end{tikzpicture}
+\end{figbox}
+
+\noindent 1. side wall with scale; 2. grating on a support; 3. laser pen; 4. cylindrical container.
+
+\subsection*{Solutions to the Experimental Problems}
+
+\subsubsection*{Part 1. Determination of the acceleration due to gravity}
+
+\subsubsection*{Theoretical derivation}
+
+Consider a small element of mass $m$ on the liquid surface. When it is in equilibrium (Fig.~32.13),
+\[
+N\cos\theta=mg,
+\]
+\[
+N\sin\theta=m\omega^2x.
+\]
+The shape of the liquid surface can be derived as follows:
+\[
+\tan\theta=\frac{\dd y}{\dd x},\qquad \frac{\dd y}{\dd x}=\frac{\omega^2x}{g},
+\]
+hence
+\[
+y=\frac{\omega^2x^2}{2g}+y_0
+\]
+($y_0$ being the height at $x=0$). For a certain point $x=x_0$, the height $h_0$ of the liquid surface is the same as when the liquid is not rotating. In this case,
+\begin{equation}
+h_0=y_0+\frac{\omega^2x_0^2}{2g}, \tag{1}
+\end{equation}
+and
+\[
+x_0^2=\frac{2g(h_0-y_0)}{\omega^2}.
+\]
+Since the volume of the liquid is unchanged,
+\[
+\pi R^2h_0=\int_0^R y(2\pi x\,\dd x)
+=2\pi\int_0^R\left(y_0+\frac{\omega^2x^2}{2g}\right)x\,\dd x,
+\]
+\begin{equation}
+y_0=h_0-\frac{\omega^2R^2}{4g}. \tag{2}
+\end{equation}
+From equations (1) and (2) we obtain
+\[
+x_0=\frac{R}{\sqrt{2}}.
+\]
+
+\begin{figbox}{32.13}
+\begin{tikzpicture}[scale=1.25]
+  % liquid surface
+  \draw[thickline,domain=-2.2:2.2,samples=60] plot (\x,{0.35*\x*\x});
+  % element m
+  \coordinate (M) at (1.15,0.463);
+  \fill (M) circle (2pt);
+  \node[above right] at (1.28,0.72) {$m$};
+  % tangent
+  \draw[thickline] (0.62,0.036) -- (1.70,0.906);
+  % horizontal through m
+  \draw[dashedline] (0.05,0.463) -- (1.9,0.463);
+  \draw (M) ++(0.45,0) arc (0:39:0.45);
+  \node at (1.85,0.65) {$\theta$};
+  % normal
+  \draw[force] (M) -- ++(129:1.05);
+  \node[above left] at (0.25,1.38) {$\vec{N}$};
+  % weight
+  \draw[force] (M) -- ++(0,-1.0);
+  \node[right] at (1.22,-0.08) {$m\vec{g}$};
+  % centrifugal
+  \draw[force] (M) -- ++(1.0,0);
+  \node[right] at (2.2,0.46) {$m\omega^2x$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsubsection*{Experimental part}
+
+The measured values of $h_0$, $H$, $x_0$ and other quantities are given in Table 32.1.
+
+\begin{table}[h]
+\centering
+\small
+\caption*{Table 32.1}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$2R/\unitv{mm}$ & $x_0/\unitv{mm}$ & $h_0/\unitv{mm}$ & $H/\unitv{mm}$\\
+\hline
+145.0 & 51.0 & 30.0 & 160.0\\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent$H-h_0=130.0\unitv{mm}$.
+
+For rotations with small angular velocity, the time $10T$ taken by the disc to complete 10 periods is measured; for rotations with larger angular velocity, the time $15\sim20T$ taken to complete 15 to 20 periods is measured. Using
+\[
+\tan(2\theta)=\frac{x}{H-h_0},\qquad \omega=\frac{2\pi}{T}
+\]
+(where $x$ is the horizontal distance between the intersection of the reflected beam with the transparent screen and the incident beam), the experimental data are tabulated as follows. Plotting $\tan\theta$ against $\omega^2$ gives Fig.~32.14.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption*{Table 32.2}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$r$ & $10T$ & $\omega$ & $\tan2\theta$ & $\theta$ & $\theta$ & $\tan\theta$ & $\omega^2$\\
+\scriptsize mm & \scriptsize s & \scriptsize rad\,s$^{-1}$ & & \scriptsize rad & \scriptsize deg & & \scriptsize (rad\,s$^{-1}$)$^2$\\
+\hline
+11 & 21.34 & 2.94 & 0.08 & 0.04 & 2.4 & 0.04 & 8.67\\
+20 & 15.80 & 3.98 & 0.15 & 0.08 & 4.4 & 0.08 & 15.81\\
+26 & 14.22 & 4.42 & 0.20 & 0.10 & 5.7 & 0.10 & 19.52\\
+30 & 12.99 & 4.84 & 0.23 & 0.11 & 6.5 & 0.11 & 23.40\\
+40 & 11.74 & 5.35 & 0.31 & 0.15 & 8.6 & 0.15 & 28.64\\
+51 & 10.43 & 6.01 & 0.39 & 0.19 & 10.7 & 0.19 & 36.15\\
+56 & 9.90 & 6.35 & 0.43 & 0.20 & 11.7 & 0.21 & 40.28\\
+65 & 9.40 & 6.68 & 0.50 & 0.23 & 13.3 & 0.24 & 44.68\\
+70 & 9.08 & 6.92 & 0.54 & 0.25 & 14.2 & 0.25 & 47.88\\
+85 & 8.39 & 7.49 & 0.65 & 0.29 & 16.6 & 0.30 & 56.08\\
+100 & 7.71 & 8.15 & 0.77 & 0.33 & 18.8 & 0.34 & 66.41\\
+112 & 7.43 & 8.46 & 0.86 & 0.36 & 20.4 & 0.37 & 71.51\\
+132 & 7.00 & 8.98 & 1.02 & 0.40 & 22.7 & 0.42 & 80.57\\
+\hline
+61.4 & 11.19 & 6.20 & 0.47 & 0.21 & 11.98 & 0.21 & 41.51\\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent(The mean values in the last row of the table are used only for calculating the error.)
+
+\begin{figbox}{32.14}
+\begin{tikzpicture}[scale=0.95]
+  % grid
+  \foreach \i in {0,1,...,10} {
+    \draw[gray!35,very thin] (\i*0.8,0) -- (\i*0.8,6.3);
+  }
+  \foreach \j in {0,1,...,9} {
+    \draw[gray!35,very thin] (0,\j*0.7) -- (8.0,\j*0.7);
+  }
+  % axes
+  \draw[axis] (0,0) -- (8.3,0) node[right] {$(\omega/\unitv{rad\cdot s^{-1}})^2$};
+  \draw[axis] (0,0) -- (0,6.6) node[above] {$\tan\theta$};
+  % tick labels x
+  \foreach \i/\v in {0/0,2/20,4/40,6/60,8/80} {
+    \draw (\i*0.8,0) -- (\i*0.8,-0.08);
+    \node[below] at (\i*0.8,-0.08) {\v};
+  }
+  \node[below] at (10*0.8,-0.08) {100};
+  \draw (8.0,0) -- (8.0,-0.08);
+  % tick labels y
+  \foreach \j/\v in {0/0.00,1/0.05,2/0.10,3/0.15,4/0.20,5/0.25,6/0.30,7/0.35,8/0.40,9/0.45} {
+    \draw (0,\j*0.7) -- (-0.08,\j*0.7);
+    \node[left] at (-0.1,\j*0.7) {\v};
+  }
+  % data points
+  \foreach \x/\y in {0.694/0.56,1.265/1.12,1.562/1.40,1.872/1.54,2.291/2.10,2.892/2.66,3.222/2.94,3.574/3.36,3.830/3.50,4.486/4.20,5.313/4.76,5.721/5.18,6.446/5.88}
+    \fill (\x,\y) circle (1.8pt);
+  % best-fit line
+  \draw[thickline] (0,0.15) -- (7.2,5.95);
+\end{tikzpicture}
+\end{figbox}
+
+The slope of the straight line in Fig.~32.14 is $0.00520\unitv{(s/rad)^2}$; therefore
+\[
+g=\frac{x_0}{\text{slope}}=\frac{5.10}{0.00520}\unitv{cm/s^2}=981\unitv{cm/s^2}.
+\]
+
+\subsubsection*{Error calculation}
+\[
+g=\frac{\omega^2x_0}{\tan\theta},
+\]
+\[
+\frac{\Delta g}{g}=\sqrt{2\left(\frac{\Delta\omega}{\omega}\right)^2
++\left(\frac{\Delta x_0}{x_0}\right)^2
++\left(\frac{\Delta\tan\theta}{\tan\theta}\right)^2}
+\]
+(here the uncertainty propagation formula is used),
+\[
+\frac{\Delta\omega}{\omega}=\frac{\Delta T}{T},
+\]
+\[
+\frac{\Delta\tan\theta}{\tan\theta}\approx\frac{\Delta\theta}{\theta}
+\qquad\text{(from the graph, }\tan\theta\approx\theta\text{)},
+\]
+\[
+\theta\approx\frac{x}{H-h_0},\qquad
+\frac{\Delta\theta}{\theta}=\sqrt{\left(\frac{\Delta x}{x}\right)^2
++\left(\frac{\Delta H}{H}\right)^2
++\left(\frac{\Delta h_0}{h_0}\right)^2},
+\]
+\[
+\frac{\Delta g}{g}=\sqrt{2\left(\frac{\Delta T}{T}\right)^2
++\left(\frac{\Delta x_0}{x_0}\right)^2
++\left(\frac{\Delta x}{x}\right)^2
++\left(\frac{\Delta H}{H}\right)^2
++\left(\frac{\Delta h_0}{h_0}\right)^2}.
+\]
+Since $H=160.0\unitv{mm}$, $\Delta H=1\unitv{mm}$, $h_0=30.0\unitv{mm}$, $\Delta h_0=1\unitv{mm}$, $\bar{x}=61.4\unitv{mm}$, $\Delta\bar{x}=1\unitv{mm}$, $\bar{T}=1.1\unitv{s}$, $\Delta T=0.01\unitv{s}$, $x_0=51.0\unitv{mm}$ and $\Delta x_0=1\unitv{mm}$, we obtain
+\[
+g=(981\pm42)\unitv{cm/s^2}.
+\]
+
+$*$ Note: by the method of least squares,
+\[
+g=982\unitv{cm/s^2},
+\]
+with standard deviation $\sigma=33\unitv{cm/s^2}$.
+
+$**$ Using linear approximation, the slope of $\tan\theta$ against $\omega^2$ is $0.00518$, with a standard deviation of $5.14\times10^{-5}$; therefore
+\[
+\frac{\Delta g}{g}=\sqrt{\left[\frac{\Delta(\text{slope})}{\text{slope}}\right]^2
++\left(\frac{\Delta x_0}{x_0}\right)^2}=0.023,
+\]
+\[
+g=(981\pm23)\unitv{cm/s^2}.
+\]
+
+\subsubsection*{Part 2. Measurement of the focal length and analysis of the image}
+
+(a) The experimental data are tabulated as follows. Plotting $\lg(H-h_0)$ against $\lg\omega$ gives Fig.~32.15.
+
+\begin{table}[h]
+\centering
+\small
+\caption*{Table 32.3}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$H/\unitv{mm}$ & $10T/\unitv{s}$ & $\omega/\unitv{rad\cdot s^{-1}}$ & $\lg\omega$ & $(H-h_0)/\unitv{mm}$ & $\lg(H-h_0)$\\
+\hline
+158 & 10.31 & 6.09 & 0.784921 & 128 & 2.107\\
+209 & 13.19 & 4.76 & 0.677935 & 179 & 2.253\\
+190 & 11.70 & 5.37 & 0.729994 & 160 & 2.204\\
+150 & 9.80 & 6.41 & 0.806954 & 120 & 2.079\\
+129 & 9.21 & 6.82 & 0.83392 & 99 & 1.996\\
+119 & 8.75 & 7.18 & 0.856172 & 89 & 1.949\\
+110 & 8.10 & 7.76 & 0.889695 & 80 & 1.903\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figbox}{32.15}
+\begin{tikzpicture}[scale=0.95]
+  % grid
+  \foreach \i in {0,...,20} \draw[gray!35,very thin] (\i*0.3,0) -- (\i*0.3,6.0);
+  \foreach \j in {0,...,12} \draw[gray!35,very thin] (0,\j*0.5) -- (6.0,\j*0.5);
+  % axes
+  \draw[axis] (0,0) -- (6.3,0) node[right] {$\lg\omega$};
+  \draw[axis] (0,0) -- (0,6.3) node[above] {$\lg(H-h_0)$};
+  % x ticks
+  \foreach \i/\v in {0/0.6,5/0.7,10/0.8,15/0.9,20/1.0} {
+    \draw (\i*0.3,0) -- (\i*0.3,-0.08);
+    \node[below] at (\i*0.3,-0.08) {\v};
+  }
+  % y ticks
+  \foreach \j/\v in {0/0.8,2/0.9,4/1.0,6/1.1,8/1.2,10/1.3,12/1.4} {
+    \draw (0,\j*0.5) -- (-0.08,\j*0.5);
+    \node[left] at (-0.1,\j*0.5) {\v};
+  }
+  % data points
+  \foreach \x/\y in {1.17/4.53,1.95/4.04,2.78/3.07,3.10/2.79,3.51/1.96,3.84/1.49,4.35/1.03}
+    \fill (\x,\y) circle (1.8pt);
+  % fitted line
+  \draw[thickline] (0.9,4.95) -- (4.6,0.78);
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize Relation between $\tan\theta$ and $\omega^2$ at $x_0$.}
+\end{figbox}
+
+From Fig.~32.15, the focal length $f$ is a power function of $\omega$: $f=A\omega^n$ with $n\approx-1.7$. (One may also plot $(H-h_0)$ against $1/\omega^2$.)
+
+Noting that for the paraxial region of a spherical mirror we have
+\[
+\tan\theta=\frac{\omega^2x}{g},\qquad \theta\approx\frac{x}{R}\approx\tan\theta,
+\]
+this gives
+\[
+R=\frac{g}{\omega^2},\qquad\text{or}\qquad f=\frac{R}{2}=\frac{g}{2\omega^2}.
+\]
+If the measurement is made in the paraxial region, then $n\approx-2$.
+
+(b) Use the appropriate symbols to describe the pattern formed by reflection that you observe on the screen.
+
+\begin{table}[h]
+\centering
+\small
+\caption*{Table 32.4}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\omega$ range & Direction & Size trend & Image property\\
+\scriptsize rad\,s$^{-1}$ & & & \\
+\hline
+$\omega=0$ & ER & & V\\
+\hline
+$0<\omega<8.2^{*}$ & ER & D & V\\
+\hline
+$0<\omega<6.3^{**}$ & & & \\
+\hline
+$8.2<\omega<14.6^{**}$ & INV & I & R\\
+\hline
+$6.3<\omega<14.0^{**}$ & & & \\
+\hline
+$14.6<\omega<\omega_{\max}^{*}$ & ER & NC & V\\
+\hline
+$14.0<\omega<\omega_{\max}^{**}$ & & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent$^{*}$ For $H=110\unitv{mm}$. \quad $^{**}$ For $H=240\unitv{mm}$.
+
+\noindent The value of $\omega$ is determined by $H$, $h_0$ and other quantities.
+
+\subsubsection*{Notes}
+
+\begin{enumerate}
+\item[(1)] Orientation (compared with the object beam observed on the transparent screen): INV---inverted; ER---erect.
+\item[(2)] Change of the size of the pattern as $\omega$ increases: I---increases; D---decreases; NC---unchanged.
+\item[(3)] Property of the image for different frequency ranges: if the screen is above the focus, write R; if the screen is below the focus, write V.
+\end{enumerate}
+
+\subsubsection*{Part 3. Measurement of the refractive index}
+
+\subsubsection*{Measurement of the wavelength}
+
+When both the grating and the screen are in air, the light is incident normally. Let $L$ be the distance between the screen and the grating, $x$ the distance of a diffraction spot from the central spot on the screen, and $m$ the order of diffraction.
+
+\begin{align*}
+&L=225\unitv{mm},\quad \bar{x}=77\unitv{mm},\quad \text{for }m=\pm1,\quad d=\frac{1}{500}\unitv{mm},\\
+&\tan\alpha=\frac{\bar{x}}{L}=\frac{77}{225}=0.342,\qquad \alpha=18.89\degree,\\
+&\lambda=\frac{1}{500}\sin\alpha=647.6\unitv{nm}.
+\end{align*}
+
+\begin{align*}
+&L=128.0\unitv{mm},\quad \bar{x}=44.0\unitv{mm},\quad \text{for }m=\pm1,\quad d=\frac{1}{500}\unitv{mm},\\
+&\tan\alpha=\frac{44.0}{128.0}=0.344,\qquad \alpha=18.97\degree,\\
+&\lambda=\frac{1}{500}\sin\alpha=650.2\unitv{nm}.
+\end{align*}
+
+\begin{align*}
+&L=128.0\unitv{mm},\quad \bar{x}=111.0\unitv{mm},\quad \text{for }m=\pm2,\quad d=\frac{1}{500}\unitv{mm},\\
+&\tan\alpha=\frac{111}{128}=0.867,\qquad \alpha=40.9\degree,\\
+&\lambda=\frac{1}{2\times500}\sin\alpha=655.1\unitv{nm}.
+\end{align*}
+
+The mean value of $\lambda$ is
+\[
+\bar{\lambda}=651.0\unitv{nm}.
+\]
+
+\subsubsection*{Measurement of the refractive index}
+
+When both the grating and the screen are in the liquid, the light is incident normally. From the measurements above,
+\[
+2R=145.0\unitv{mm}.
+\]
+The distance of a diffraction spot from the central spot, measured along the curved surface, is $R\alpha$. It is found that
+\[
+R\bar{\alpha}=17.0\unitv{mm},\qquad\text{for }m=\pm1,
+\]
+\[
+\bar{\alpha}=0.234\unitv{rad}.
+\]
+From
+\[
+n=\frac{m\lambda}{d\sin\alpha},
+\]
+we obtain
+\[
+n=1.40.
+\]
+If the curvature of the surface is ignored, then
+\[
+\tan\alpha=\frac{17.0}{72.5}=0.234,\qquad \alpha=13.20\degree,
+\]
+\[
+n=\frac{\lambda}{d\sin\alpha}
+=\frac{650.9\unitv{nm}}{\frac{1}{500}\unitv{mm}\times10^{6}\sin\alpha}=1.43.
+\]

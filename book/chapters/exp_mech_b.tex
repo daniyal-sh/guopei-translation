@@ -1,0 +1,867 @@
+﻿\subsection*{Experiment 6.13\quad Measuring the speed and the acceleration of a slider sliding on an inclined air track}
+
+On an air track adjusted to a certain inclination, use a flat light-blocking plate to measure the speed of the slider after it has slid \SI{50.0}{cm} from rest and the acceleration of the slider during its descent.
+
+\noindent\textit{[Available apparatus]}
+
+An air track already adjusted to an inclination and connected to compressed air (a metre rule is pasted along one side of the track), a slider, a flat light-blocking plate, two light gates, a photoelectric timer, a vernier calliper.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the formulas of the experimental principle.
+\item Write down the plan of the experimental design.
+\item Draw up a table of the original data.
+\item Obtain the experimental result graphically.
+\end{enumerate}
+
+\begin{hint}{6.13}
+\textbf{1.} The flat light-blocking plate has already been fixed on the slider and need not be adjusted in the experiment.
+
+\textbf{2.} One of the two light gates need not be moved during the experiment.
+\end{hint}
+
+\noindent\textit{Instructions for the photoelectric timer:}
+
+(1) \textit{Light gate.} It consists of one light-emitting tube and one photodiode, and is fixed on the air track by a bracket (held by two screws; to move the bracket, loosen the screws and move it by grasping the base of the bracket with both hands).
+
+(2) \textit{Timer.} Plug in the power supply; the light-emitting tube of the light gate lights up and the display of the timer shows ``0''. When the flat light-blocking plate passes through the light gate and blocks the light once, the display shows ``1'' and at the same time the timer starts timing. If the plate passes through the light gate a second time, the display shows ``2'' and at the same time the timer stops timing; a moment later it displays a number, and this number is the time interval between the two passages of the plate through the light gate (that is, between the first and the second blocking of the light). The unit of the digits before the decimal point on the display of the timer is the second.
+
+If the count is to be restarted, press the ``zero clearing'' key; the data recorded by the timer are then erased and the display again shows ``0''.
+
+\medskip
+\noindent\textbf{Solution 6.13.}\quad \textbf{1.} If a body slides down a straight smooth inclined plane and the air resistance and the friction of the plane may be neglected, the body moves with uniform acceleration under the action of a constant force (the component of gravity along the plane), and its law of motion satisfies
+\begin{equation}\tag{1}
+v^{2}=v_0^{2}+2as,
+\end{equation}
+where $v_0$ and $v$ are the instantaneous speeds of the body at $t=0$ and at $t=t$ respectively, $s$ is the distance travelled by the body during the time interval $t$, and $a$ is the acceleration of the body. The experimental arrangement is shown in Fig.~6.13(a).
+
+One end of the air track, which is horizontal when unloaded, is raised by a metal block of height $h$;
+
+\begin{figbox}{6.13(a)}
+\begin{tikzpicture}[scale=0.9]
+% table surface
+\draw[thickline] (-5.0,0)--(4.9,0);
+% metal block under the left end
+\draw[thickline,fill=black!15] (-4.55,0)--(-3.90,0)--(-3.90,0.66)--(-4.55,0.66)--cycle;
+% track (slightly inclined)
+\draw[thickline,fill=black!5] (-4.40,0.66)--(4.45,0.18)--(4.45,0.34)--(-4.40,0.82)--cycle;
+% right support foot
+\draw[thickline] (3.95,0.19)--(3.95,0);
+\draw[thickline] (3.72,0)--(4.18,0);
+% slider
+\draw[thickline,fill=black!12] (-1.70,0.63)--(-0.70,0.59)--(-0.70,0.90)--(-1.70,0.94)--cycle;
+% light-blocking plate on the slider
+\draw[thickline,fill=black!35] (-1.28,0.91)--(-1.21,0.91)--(-1.21,1.32)--(-1.28,1.32)--cycle;
+% light gate straddling the track
+\draw[thickline,fill=black!8] (2.75,0.22)--(2.90,0.22)--(2.90,1.32)--(2.75,1.32)--cycle;
+\draw[thickline] (2.75,1.28)--(2.30,1.26);
+\draw[thickline] (2.75,0.30)--(2.30,0.28);
+\draw[thickline] (2.82,0.22)--(2.82,0);
+% height h
+\draw[dim] (-3.72,0)--(-3.72,0.66);
+\node[right,font=\scriptsize] at (-3.70,0.33) {$h$};
+% distance L between the two foot screws
+\draw[dashedline] (-4.22,0)--(-4.22,-0.58);
+\draw[dashedline] (3.95,0)--(3.95,-0.58);
+\draw[dim] (-4.22,-0.58)--(3.95,-0.58);
+\node[below,font=\scriptsize] at (-0.14,-0.58) {$L$};
+% labels
+\node[above,font=\scriptsize] at (-2.90,1.40) {slider};
+\draw[thickline] (-2.62,1.34)--(-1.75,0.95);
+\node[above,font=\scriptsize] at (0.10,1.48) {light-blocking plate};
+\draw[thickline] (-0.20,1.42)--(-1.20,1.34);
+\node[above,font=\scriptsize] at (3.55,1.62) {light gate};
+\draw[thickline] (3.35,1.56)--(2.92,1.32);
+\node[font=\scriptsize] at (-2.30,0.18) {air track};
+\end{tikzpicture}
+\end{figbox}
+
+\noindent let the distance between the foot screws at the two ends of the air track be $L$. Then the acceleration of the body sliding down the inclined air track is
+\begin{equation}\tag{2}
+a=g\sin\theta=g\,\frac{h}{L},
+\end{equation}
+where $g$ is the acceleration due to gravity and $\theta$ is the angle of inclination of the track surface to the horizontal.
+
+If the body slides down from rest from the top of the air track, and the speeds $v_1,v_2,\dots,v_7$ of the body at different positions $A_1,A_2,\dots,A_7$ are measured in turn by the photoelectric timing method, as shown in Fig.~6.13(b), and the corresponding distances $s_1,s_2,\dots,s_7$ travelled are recorded, then a $v^{2}$--$s$ graph is plotted on graph paper. If a straight line is obtained, this shows that the body moves with uniform acceleration under the action of a constant force, and the slope of the graph is $2a$. Once the acceleration $a$ has been found, the acceleration due to gravity $g$ can also be found, provided the values of $h$ and $L$ have been measured.
+
+\begin{figbox}{6.13(b)}
+\begin{tikzpicture}[scale=0.9]
+% track
+\draw[thickline] (0,1.00)--(9.40,0.00);
+% horizontal reference
+\draw[dashedline] (0,1.00)--(9.40,1.00);
+\draw (1.70,1.00) arc (0:-6.07:1.70);
+\node[font=\scriptsize] at (1.90,0.84) {$\theta$};
+% position marks
+\foreach \x/\lab in {1.10/A_1,2.20/A_2,3.30/A_3,4.40/A_4,8.60/A_0}
+  {\pgfmathsetmacro\yy{1.0-0.1064*\x}
+   \draw[thickline] (\x-0.07,\yy+0.06)--(\x+0.07,\yy-0.06);
+   \node[below,font=\scriptsize] at (\x,\yy-0.20) {$\lab$};}
+\node[font=\scriptsize] at (6.40,0.28) {$\cdots$};
+% speed arrows
+\foreach \x/\lab in {1.10/v_4,2.20/v_3,3.30/v_2,4.40/v_1}
+  {\pgfmathsetmacro\yy{1.0-0.1064*\x}
+   \draw[force] (\x-0.32,\yy+0.52)--(\x+0.20,\yy+0.52);
+   \node[above,font=\scriptsize] at (\x-0.10,\yy+0.58) {$\lab$};}
+% distance s_1
+\draw[dashedline] (1.10,0.85)--(1.10,-0.45);
+\draw[dashedline] (8.60,0.08)--(8.60,-0.45);
+\draw[dim] (1.10,-0.45)--(8.60,-0.45);
+\node[below,font=\scriptsize] at (4.85,-0.45) {$s_1$};
+\end{tikzpicture}
+\end{figbox}
+
+Usually the length of the light-blocking plate on the slider is $\Delta l$ and the blocking time displayed by the digital timer is $\Delta t$; then the average speed of the slider as it passes through the light gate is
+\begin{equation*}
+v=\frac{\Delta l}{\Delta t}.
+\end{equation*}
+If the length $\Delta l$ of the light-blocking plate is made sufficiently small, so that the time during which the plate passes through the light gate is very short, the above average speed is approximately the instantaneous speed.
+
+\textbf{2. Experimental data}
+
+\noindent\textit{Determination of the $v^{2}$--$s$ relation}
+
+The length of the light-blocking plate is $\Delta l=\SI{1.000}{cm}$, and the speed of the slider is $v=\Delta l/\Delta t$, where $\Delta t$ is the blocking time of the slider. The point $A_0$ is the position of the fixed light gate, whose reading on the scale of the air track is \SI{130.00}{cm}; $A_i$ are the positions of the light gate placed in turn at the various observation points. The distance between $A_i$ and $A_0$ is $s_i=A_0-A_i$. The height of the block is $h=\SI{4.26}{mm}$. The measured data are given in the table below.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.13}\\[3pt]
+\begin{tabular}{cccccc}
+\toprule
+No. & $A_i/\mathrm{cm}$ & $s/\mathrm{cm}$ & $\Delta t/10^{-4}\,\mathrm{s}$ & $v/\mathrm{cm\cdot s^{-1}}$ & $v^{2}/\mathrm{cm^{2}\cdot s^{-2}}$\\
+\midrule
+1 & 40.00 & 90.00 & 123.2 & 81.17 & 6\,589\\
+2 & 50.00 & 80.00 & 129.0 & 77.52 & 6\,009\\
+3 & 60.00 & 70.00 & 136.4 & 73.31 & 5\,375\\
+4 & 70.00 & 60.00 & 143.2 & 69.83 & 4\,877\\
+5 & 80.00 & 50.00 & 153.6 & 65.10 & 4\,239\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+Plotting the $v^{2}$--$s$ graph (Fig.~6.13(c)) gives a straight line. The slope of the line may also be found by the method of least squares.
+
+By the method of least squares the slope is $k=\SI{58.32}{cm^2/s^2}$ and the intercept $b=\SI{1335.4}{cm^2/s^2}$; hence the acceleration is $a=\SI{29.16}{cm/s^2}$, and the correlation coefficient is $r=0.99943$. The linearity is good, that is, the body moves with uniform acceleration when acted on by a constant force. From the equation of the line
+\begin{equation*}
+v^{2}=k\cdot s+b
+\end{equation*}
+it follows that when $v=0$, $s_i=-\dfrac{b}{k}=\SI{-22.89}{cm}$; that is, the value of $s_i=A_0-A_i$ at the point where the speed of the slider is zero is \SI{-22.89}{cm} ($A_i=\SI{152.89}{cm}$). The speed of the body at \SI{50.00}{cm} from its starting point at rest is
+\begin{equation*}
+v=\sqrt{k\cdot s'+b}
+=\sqrt{58.32\times\left[130.00-(152.89-50.00)\right]+1335.4}
+=\SI{54.00}{cm/s}.
+\end{equation*}
+
+\begin{figbox}{6.13(c)}
+\begin{tikzpicture}[scale=0.95]
+% grid
+\foreach \i in {0,1,...,50}{
+  \pgfmathsetmacro\xx{\i*0.16}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,30}{
+  \pgfmathsetmacro\yy{\j*0.15}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(8.0,\yy);
+}
+% axes
+\draw[axis] (0,0)--(8.45,0);
+\node[below,font=\scriptsize] at (3.80,-0.40) {$s/\mathrm{cm}$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.72,2.30) {$v^{2}/(10^{2}\,\mathrm{cm^{2}\cdot s^{-2}})$};
+% x ticks
+\foreach \v in {50,60,70,80,90,100}{
+  \pgfmathsetmacro\xx{(\v-50)*0.16}
+  \draw (\xx,0)--(\xx,-0.10);
+  \node[below,font=\scriptsize] at (\xx,-0.10) {\v};
+}
+% y ticks
+\foreach \v in {40,50,60,70}{
+  \pgfmathsetmacro\yy{(\v-40)*0.15}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+% fitted line
+\draw[thickline] (0.30,0.50)--(7.45,4.50);
+% data points
+\fill (0.64,0.69) circle (1.6pt);
+\fill (6.08,3.735) circle (1.6pt);
+\node[right,font=\scriptsize] at (0.80,0.60) {$(54.00,\ 44.6)$};
+\node[left,font=\scriptsize] at (5.95,3.80) {$(88.00,\ 64.9)$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 6.14\quad Measuring the acceleration due to gravity with a simple pendulum}
+
+The period of oscillation of a simple pendulum is $T=2\pi\sqrt{l/g}$, where the pendulum length $l$ is the distance from the point of suspension to the centre of gravity of the pendulum bob. Use the following apparatus to measure the acceleration due to gravity $g$.
+
+\noindent\textit{[Available apparatus]}
+
+A support stand, an irregular ball, a metre rule, a stopwatch, fine thread.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Derive the formula for the determination of the acceleration due to gravity $g$.
+\item Write down the experimental procedure briefly.
+\item Record the measured data and obtain the experimental result.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.14.}\quad From the formula for the period of oscillation of a simple pendulum,
+\begin{equation}\tag{1}
+T^{2}=\frac{4\pi^{2}}{g}\,(l_1+r).
+\end{equation}
+In equation (1), $l_1$ is the length of the thread from the upper point of suspension of the pendulum to the point where the thread is attached to the ball, while $r$ is the distance from the point of attachment to the centre of gravity of the irregular ball, and $l=l_1+r$. If the length $l_1$ is changed to six different values, six corresponding values of the period can be measured. Taking $l_1$ as the independent variable and the period $T$ as the dependent variable, draw a straight line on graph paper; its slope gives $4\pi^{2}/g$, and the reciprocal of this value multiplied by $4\pi^{2}$ gives the acceleration due to gravity. Besides processing the data graphically, one may also process them by the method of successive differences: measure the six corresponding thread lengths $l_1,l_2,\dots,l_6$, and measure the corresponding periods $T_1,T_2,\dots,T_6$ with the stopwatch. The method of successive differences gives
+\begin{align*}
+T_6^{2}-T_3^{2}&=\frac{4\pi^{2}}{g}\,(l_6-l_3),\\[2pt]
+T_5^{2}-T_2^{2}&=\frac{4\pi^{2}}{g}\,(l_5-l_2),\\[2pt]
+T_4^{2}-T_1^{2}&=\frac{4\pi^{2}}{g}\,(l_4-l_1),
+\end{align*}
+\begin{equation*}
+g=4\pi^{2}\left[\frac{l_6+l_5+l_4-l_3-l_2-l_1}
+{T_6^{2}+T_5^{2}+T_4^{2}-T_3^{2}-T_2^{2}-T_1^{2}}\right].
+\end{equation*}
+
+\noindent\textit{Experimental procedure:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Suspend the irregular ball from the clamping fixture of the support stand with fine thread, and make the distance $l_1$ between the point of suspension and the ball as large as possible, for example \SI{100.0}{cm}.
+\item Take the passage of the irregular ball through the vertical position of the thread as the starting point and the end point of the timing, and record with the stopwatch the time of 50 oscillations; divide by 50 to obtain the period of oscillation $T_6$ of the simple pendulum. The angle of swing is less than $5\degree$.
+\item Change the length of the thread in turn to \SI{90.0}{cm}, \SI{80.0}{cm}, \SI{70.0}{cm}, \SI{60.0}{cm} and \SI{50.0}{cm}, and measure respectively the periods of oscillation $T_5$, $T_4$, $T_3$, $T_2$ and $T_1$ of the pendulum.
+\item Process the data by the method of successive differences and find the acceleration due to gravity $g$.
+\end{enumerate}
+
+\subsection*{Experiment 6.15\quad Accurate measurement of the acceleration due to gravity with a simple pendulum}
+
+\noindent\textit{[Available apparatus]}
+
+An experimental simple-pendulum apparatus with adjustable pendulum length, in which the pendulum is provided with a metre rule, a small magnet, a Hall-switch sensor and a counter-timer (produced by Fudan Tianxin Company), one sheet of graph paper, one ruler, and one vernier calliper.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Measure the period of oscillation of the simple pendulum with the Hall switch and the timer.
+\item It is known that the period of oscillation $T$ of a simple pendulum depends on the angle of swing $\theta$:
+\begin{equation*}
+T=2\pi\sqrt{\frac{L}{g}}\left[1+\frac{1}{4}\sin^{2}\left(\frac{\theta}{2}\right)\right].
+\end{equation*}
+Design an experimental method by which the acceleration due to gravity $g$ of this region can be measured accurately.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.15.}\quad When the period can be measured accurately with the Hall-switch sensor together with the timer, the influence of the angle of swing $\theta$ on the period $T$ must be taken into account, that is, the second-order approximation $\frac{1}{4}\sin^{2}(\theta/2)$ cannot be neglected; moreover, the influence of air damping on the decay of the oscillation period must also be considered, so the number of oscillations should not be too large. In this experiment the double period $2T$ corresponding to different amplitudes $\theta_m$ is measured, and a graph of $2T$ against $\sin^{2}(\theta_m/2)$ is plotted. Extrapolating this straight line to find the intercept (the value of $2T_0$) at $\theta_m=0$ gives the period $T_0$, and hence the correct value of the acceleration due to gravity $g$. The experimental arrangement is shown in the figure.
+
+\begin{figbox}{6.15}
+\begin{tikzpicture}[scale=0.95]
+% base and column
+\draw[thickline] (-1.35,0)--(1.20,0);
+\draw[thickline,fill=black!10] (-1.35,0)--(-1.35,-0.14)--(1.20,-0.14)--(1.20,0)--cycle;
+\draw[thickline,fill=black!5] (0.60,0)--(0.90,0)--(0.90,5.90)--(0.60,5.90)--cycle;
+% top arm
+\draw[thickline,fill=black!5] (-1.45,5.62)--(1.20,5.62)--(1.20,5.90)--(-1.45,5.90)--cycle;
+% suspension and thread
+\draw[thickline] (-0.55,5.62)--(-0.55,3.62);
+\draw[thickline,fill=black!8] (-0.55,3.32) circle (0.30);
+% small magnet under the ball
+\draw[thickline,fill=black!55] (-0.66,2.82)--(-0.44,2.82)--(-0.44,2.98)--(-0.66,2.98)--cycle;
+% Hall switch and its bracket
+\draw[thickline,fill=black!25] (-0.74,2.42)--(-0.36,2.42)--(-0.36,2.66)--(-0.74,2.66)--cycle;
+\draw[thickline] (-0.36,2.54)--(0.60,2.54);
+% horizontal ruler
+\draw[thickline,fill=black!4] (-2.20,1.52)--(0.95,1.52)--(0.95,1.68)--(-2.20,1.68)--cycle;
+\foreach \x in {-2.10,-1.90,...,0.90}{\draw[thickline] (\x,1.68)--(\x,1.76);}
+\foreach \x in {-2.10,-1.60,-1.10,-0.60,-0.10,0.40,0.90}{\draw[thickline] (\x,1.68)--(\x,1.83);}
+% projection of the two positions on to the ruler
+\draw[dashedline] (-0.55,3.02)--(-0.55,1.83);
+\draw[dashedline] (0.30,2.30)--(0.30,1.83);
+\node[below,font=\scriptsize] at (-0.55,1.50) {$A$};
+\node[below,font=\scriptsize] at (0.30,1.50) {$A$};
+% cable and counter-timer
+\draw[thickline] (-0.74,2.48)--(-2.40,2.48)--(-2.40,0.62);
+\draw[thickline,fill=black!6] (-2.45,0.10)--(-1.45,0.10)--(-1.45,0.62)--(-2.45,0.62)--cycle;
+\draw[thickline,fill=black!15] (-2.35,0.32)--(-1.85,0.32)--(-1.85,0.54)--(-2.35,0.54)--cycle;
+% callout numbers
+\node[font=\scriptsize] at (-0.90,3.00) {1};
+\node[font=\scriptsize] at (-0.92,2.46) {2};
+\node[font=\scriptsize] at (-2.25,0.20) {3};
+\node[font=\scriptsize] at (1.05,1.45) {4};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize 1.\ Small magnet; 2.\ Hall switch; 3.\ Counter-timer; 4.\ Horizontal ruler.}
+\end{figbox}
+
+\noindent\textit{Experimental method:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Adjust the pendulum length so that, at rest, the magnetic field produced by the NdFeB magnet at the lower end of the small iron ball is aimed exactly at the position of the Hall switch and can make the Hall switch conduct (the distance between the two is about \SI{0.8}{cm} to \SI{1}{cm}).
+\item Record the distance $L$ from the point of suspension of the thread to the centre of gravity of the small ball. Adjust the timer; the preset count of the switch should not be large. In this experiment a count of 4 may be used, that is, two periods are measured.
+\item Pull the small ball from the middle position to the position $A$, measure the position of point $A$ with the adjusted horizontal ruler, and calculate the angle of swing by means of trigonometry.
+\end{enumerate}
+
+The experimental results are given in the table below.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.15}\quad Measured values of $2T$\\[3pt]
+\begin{tabular}{cccccccc}
+\toprule
+$x/\mathrm{cm}$ & $\sin^{2}\left(\dfrac{\theta}{2}\right)$ & \multicolumn{6}{c}{$2T/\mathrm{s}$}\\
+\cmidrule(lr){3-8}
+ & & 1 & 2 & 3 & 4 & 5 & Mean\\
+\midrule
+15.00 & 0.018\,14 & 3.052 & 3.052 & 3.051 & 3.052 & 3.053 & 3.052\,4\\
+20.00 & 0.032\,73 & 3.064 & 3.064 & 3.064 & 3.063 & 3.063 & 3.063\,6\\
+25.00 & 0.052\,19 & 3.077 & 3.077 & 3.076 & 3.077 & 3.077 & 3.076\,8\\
+30.00 & 0.077\,20 & 3.097 & 3.096 & 3.096 & 3.096 & 3.096 & 3.096\,2\\
+35.00 & 0.108\,80 & 3.122 & 3.122 & 3.123 & 3.123 & 3.123 & 3.122\,6\\
+40.00 & 0.148\,78 & 3.156 & 3.156 & 3.154 & 3.156 & 3.156 & 3.155\,6\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\noindent Length of the suspension thread $L_1=(56.20\pm0.05)\ \mathrm{cm}$;
+
+\noindent radius of the pendulum ball $r=(1.000\pm0.002)\ \mathrm{cm}$;
+
+\noindent pendulum length $L=L_1+r=(57.20\pm0.05)\ \mathrm{cm}$; $x$ is the horizontal distance of the small ball from the central position.
+
+Fitting a straight line to the data of $2T$ against $\sin^{2}\left(\dfrac{\theta}{2}\right)$ in the table gives the correlation coefficient $r=0.9995$, the slope $(0.790\pm0.013)\ \mathrm{s}$ and the intercept $(3.0369\pm0.0011)\ \mathrm{s}$; that is, $T_0=\SI{1.5185}{s}$. Substituting this value into $T_0=2\pi\sqrt{L/g}$ gives the acceleration due to gravity $g=\SI{9.794}{m/s^2}$. Compared with the acceleration due to gravity in the Shanghai region, $g=\SI{9.79407}{m/s^2}$, the error is extremely small.
+
+\noindent\textit{Points to be noted in the experiment:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item The small ball must move in one plane. This can be checked by observing whether the indicator lamp of the timer suddenly lights up each time the small ball passes through the equilibrium position.
+\item If the Hall switch is too close to the magnet, a timing error will also arise; if it is too far, counts may be missed. The distance between the Hall switch and the magnet should be set at the critical distance for conduction (the light-emitting diode lights up).
+\end{enumerate}
+
+\begin{commentary}
+This experiment adopts the experimental idea of Galileo's extrapolation method for studying physical laws: by measuring the relation between the period and the angle of swing, the period of oscillation at an extremely small angle of swing is obtained by extrapolation, and the acceleration due to gravity is thereby determined accurately. This important idea of experimental design is frequently used in the teaching of physics experiments.
+
+Besides the air track and the simple pendulum described above, a spring oscillator can also be used to measure the acceleration due to gravity; the following problem may serve as a reference.
+\end{commentary}
+
+\subsection*{Experiment 6.16\quad Measuring the acceleration due to gravity with a spring oscillator}
+
+\noindent\textit{[Available apparatus]}
+
+A Jolly balance (spring, weight pan, adjustable support, vernier scale, weights, small magnet); a switch-type Hall sensor and a counter-timer, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Determine the stiffness coefficient $k$ of the spring by measuring the period of oscillation of the spring oscillator, and write down the corresponding formula.
+\item When the period $T$ of the spring oscillator is measured, the relative uncertainty of the measurement is required to be $\le 0.5\%$. Suppose that, with the Hall switch working together with the timer, the total uncertainty of the starting and stopping operations in each measurement of the period is $\le\pm\SI{0.02}{s}$.
+\item The mass of the spring itself is $m_0=\SI{14.79}{g}$; one third of it should be counted as the effective mass $\rho m_0$ of the oscillator ($\rho\approx\frac{1}{3}$). The total mass of the weights plus the magnet is \SI{20.80}{g}.
+\item Write down the formula for measuring the acceleration due to gravity with this spring, and carry out the measurement. Compare the measured result with the acceleration due to gravity in the Shanghai region.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.16.}\quad \textbf{1.} Fix one end of the spring at the upper support of the stand, hang a \SI{20.00}{g} weight (made of iron) on the lower end of the spring, and attach a small NdFeB magnet to the lower end of the weight. A Hall switch is fixed below the small magnet, the distance between them being about \SI{1}{cm}. Pull the weight downwards by hand so that it leaves the equilibrium position slightly, and then release it; the body then performs simple harmonic motion about the equilibrium point, and its period is
+\begin{equation}\tag{1}
+T=2\pi\sqrt{\frac{m+\rho m_0}{k}},
+\end{equation}
+where $\rho$ is a coefficient to be determined, whose value is approximately $1/3$, $m_0$ is the mass of the spring itself, $\rho m_0$ is the effective mass of the spring, and $k$ is the stiffness coefficient of the spring. Pull the spring gently to set it oscillating, and the time of 50 oscillations can be measured. Repeating the measurement three times, the mean value of 50 periods is \SI{43.54}{s}, so the period of oscillation of the spring is $T=\SI{0.8708}{s}$. Obviously the uncertainty of this period is less than $0.5\%$. Substituting $m=\SI{20.80}{g}$, $m_0=\SI{14.79}{g}$, $\rho=\frac{1}{3}$ and $T=\SI{0.8708}{s}$ gives the stiffness coefficient $k=\SI{1.340}{N/m}$.
+
+\textbf{2.} A spring is deformed (extended or compressed) under the action of an external force. Within the elastic limit, Hooke's law states that the external force $F$ is proportional to its deformation $\Delta y$, that is,
+\begin{equation}\tag{2}
+F=k\cdot\Delta y,
+\end{equation}
+where $k$ is the stiffness coefficient of the spring. A small plane mirror is pasted on the movable jaw of the vernier calliper, so that the graduation line on the small mirror is aligned with the base plate of the weight pan, and the mass $m_i$ of the weights and the reading $r_i$ on the calliper are recorded. For each addition of \SI{1}{g} (or removal of \SI{1}{g}) of weights, the data of the $m_i$--$y_i$ relation are recorded. The experimental data are given in the table below.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.16}\\[3pt]
+\begin{tabular}{cccc}
+\toprule
+$m_i/\mathrm{g}$ & $y_i/\mathrm{mm}$ (weights added) & $y_i'/\mathrm{mm}$ (weights removed) & $\bar y_i/\mathrm{mm}$\\
+\midrule
+11.00 & 19.80 & 19.88 & 19.84\\
+12.00 & 26.96 & 26.80 & 26.88\\
+13.00 & 34.36 & 34.28 & 34.32\\
+14.00 & 41.56 & 41.70 & 41.63\\
+15.00 & 48.80 & 49.12 & 48.96\\
+16.00 & 56.34 & 56.30 & 56.32\\
+17.00 & 63.22 & 63.80 & 63.51\\
+18.00 & 70.88 & 71.00 & 70.94\\
+19.00 & 77.96 & 78.04 & 78.00\\
+20.00 & 85.50 & 85.50 & 85.50\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\noindent After processing by the method of successive differences, it is found that for each addition of \SI{5.00}{g} of weights to the pan the spring extends on average by $\Delta\bar y=\SI{36.528}{mm}$. From $m_i g=k\cdot\Delta y_i$, where $g$ is the acceleration due to gravity, $\Delta y_i=\dfrac{g}{k}\cdot m_i$. Substituting $\Delta\bar y$ and \SI{5.00}{g} into this expression gives
+\begin{equation*}
+\frac{g}{k}=\frac{36.528}{5.000}=\SI{7.306}{m/kg}.
+\end{equation*}
+Substituting $k=\SI{1.340}{N/m}$ gives
+\begin{equation*}
+g=k\cdot 7.306=9.7895\ (\mathrm{m/s^2})=\SI{9.790}{m/s^2}.
+\end{equation*}
+Compared with the acceleration due to gravity in the Shanghai region, $g=\SI{9.79407}{m/s^2}$, the percentage uncertainty is less than $0.1\%$.
+
+\subsection*{Experiment 6.17\quad Determination of the density of oil (mechanics experiment, 1st Asian Physics Olympiad)}
+
+\noindent\textit{[Available apparatus]}
+
+A test tube (with a uniform cross-section over most of its middle, except near the two ends), a large vessel containing water, a ruler, a dropper, graph paper, absorbent cotton wool, absorbent paper, a rubber band used as a marker of a fixed position, distilled water (density \SI{1.00}{g/cm^3}), and oil (in a plastic cup).
+
+\noindent\textit{[Requirements]}
+
+In the experiment the density of the oil is to be determined without measuring the dimensions of the test tube, and oil and water must not be put into the test tube at the same time. The report on the experiment should include the following:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the theoretical basis of the analysis of the experiment (write down the relevant formulas);
+\item a brief account of the method and the steps of the experiment;
+\item the final result for the density of the oil;
+\item the errors and their sources.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.17.}\quad \textbf{1. Method of the experiment}
+
+This experiment is an application of Archimedes' law. The experimental arrangement is shown in Fig.~6.17(a). In the figure the test tube is assumed to be upright (that is, perpendicular to the water surface), and the same reference point is used in measuring the levels of the water and of the oil. In Fig.~6.17(a), $l_z$ is the distance from the water surface to the reference point, and $l_c$ is the distance from the surface of the liquid to be measured to the reference point. In order to apply Archimedes' law correctly in the experiment, the volume occupied by the liquid inside the tube and the volume of water displaced by the test tube must be expressed accurately; Fig.~6.17(b) therefore marks in more detail the parameters relating to the dimensions of the test tube.
+
+\begin{figbox}{6.17(a)}
+\begin{tikzpicture}[scale=0.95]
+% vessel
+\draw[thickline] (-2.20,0)--(-2.20,3.10);
+\draw[thickline] (2.20,0)--(2.20,3.10);
+\draw[thickline] (-2.20,0)--(2.20,0);
+% water
+\fill[black!6] (-2.15,0.03) rectangle (2.15,2.60);
+\draw[thickline] (-2.15,2.60)--(2.15,2.60);
+% test tube
+\draw[thickline,fill=white] (-0.55,3.45)--(-0.55,0.75)
+  .. controls (-0.55,0.30) and (-0.20,0.20) .. (0,0.20)
+  .. controls (0.20,0.20) and (0.55,0.30) .. (0.55,0.75)
+  --(0.55,3.45);
+% liquid inside the tube (level below the water surface outside)
+\fill[black!12] (-0.50,0.36) rectangle (0.50,1.55);
+\draw[thickline] (-0.50,1.55)--(0.50,1.55);
+% reference point
+\draw[dashedline] (-0.85,0.70)--(0.85,0.70);
+\node[right,font=\scriptsize] at (0.87,0.70) {$A$};
+% dimension l_z
+\draw[dashedline] (-0.90,2.60)--(-1.70,2.60);
+\draw[dashedline] (-0.90,0.70)--(-1.70,0.70);
+\draw[dim] (-1.50,2.60)--(-1.50,0.70);
+\node[left,font=\scriptsize] at (-1.52,1.65) {$l_z$};
+% dimension l_c
+\draw[dashedline] (0.60,1.55)--(1.55,1.55);
+\draw[dashedline] (0.60,0.70)--(1.55,0.70);
+\draw[dim] (1.35,1.55)--(1.35,0.70);
+\node[right,font=\scriptsize] at (1.37,1.12) {$l_c$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{6.17(b)}
+\begin{tikzpicture}[scale=0.95]
+% tube wall
+\draw[thickline,fill=black!8] (-0.55,4.10)--(-0.32,4.10)--(-0.32,0.55)
+  .. controls (-0.32,0.10) and (-0.05,0.00) .. (0.00,0.00)
+  .. controls (0.05,0.00) and (0.32,0.10) .. (0.32,0.55)
+  --(0.32,4.10)--(0.55,4.10)--(0.55,0.55)
+  .. controls (0.55,-0.25) and (0.22,-0.32) .. (0.00,-0.32)
+  .. controls (-0.22,-0.32) and (-0.55,-0.25) .. (-0.55,0.55)--cycle;
+% inner cavity
+\draw[thickline,fill=white] (-0.32,4.10)--(-0.32,0.55)
+  .. controls (-0.32,0.14) and (-0.06,0.06) .. (0.00,0.06)
+  .. controls (0.06,0.06) and (0.32,0.14) .. (0.32,0.55)--(0.32,4.10)--cycle;
+% reference point
+\draw[dashedline] (-0.75,1.10)--(0.75,1.10);
+\node[right,font=\scriptsize] at (0.78,1.10) {$A$};
+% labels
+\draw[thickline] (-1.30,3.60)--(-0.57,3.55);
+\node[left,font=\scriptsize,align=right] at (-1.32,3.60) {outer area $S_z$};
+\draw[thickline] (-1.30,2.85)--(-0.34,2.80);
+\node[left,font=\scriptsize,align=right] at (-1.32,2.85) {inner area $S_c$};
+\draw[thickline] (1.45,2.10)--(0.55,2.05);
+\node[right,font=\scriptsize,align=left] at (1.47,2.10) {uniform\\ cross-section};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize $A$ is the common fixed reference point.}
+\end{figbox}
+
+\textbf{2. Theoretical derivation}
+
+All the physical quantities needed in the theoretical derivation and their definitions are as follows.
+
+$S_c$ is the inner cross-sectional area of the test tube at point $A$; $S_z$ is the outer cross-sectional area of the test tube at point $A$; $V_o$ is the inner volume of the test tube below point $A$; $V_e$ is the outer volume of the test tube below point $A$ ($V_o$ plus the volume of the glass below point $A$).
+
+$l_z$ is the distance from point $A$ to the outside of the test tube, and $l_c$ is the distance from point $A$ to the surface of the liquid inside the test tube; $\rho_c$ is the density of the liquid inside the test tube; $\rho_w$ is the density of water; $\rho_o$ is the density of the oil; and $M$ is the mass of the empty test tube.
+
+When equilibrium is reached, the Archimedean buoyant force $F_A$ is equal to the total weight $W$ of the test tube and the liquid inside it. From Figs.~6.17(a) and 6.17(b) and from the physical quantities given above, the following expressions are obtained:
+\begin{equation}\tag{1}
+F_A=(V_e+S_z l_z)\rho_w g,
+\end{equation}
+\begin{equation}\tag{2}
+W=(M+V_o\rho_c+S_c l_c\rho_c)g.
+\end{equation}
+From the condition of equilibrium,
+\begin{equation*}
+(V_e+S_z l_z)\rho_w=M+(V_o+S_c l_c)\rho_c.
+\end{equation*}
+This relation may be written in the form
+\begin{equation}\tag{3}
+l_z=C+D l_c,
+\end{equation}
+where
+\begin{equation*}
+C=\frac{M+V_o\rho_c-V_e\rho_w}{\rho_w S_z},
+\end{equation*}
+\begin{equation*}
+D=\frac{\rho_c S_c}{\rho_w S_z}.
+\end{equation*}
+
+\noindent From the above equations it can be seen that the coefficient $D$ in (3) relies on $l_c$ and $l_z$ having a common zero point; therefore the reference point $A$ may be chosen at any convenient point in the part of the test tube where the cross-section is uniform.
+
+In the measurement, a certain amount of water is first put into the test tube, and $l_c$ and $l_z$ are measured with the ruler; this gives one set of data. Adding some more water gives another set of experimental data $l_c'$ and $l_z'$. Plotting five such points gives the value of $D_1$, that is,
+\begin{equation}\tag{4}
+D_1=\frac{S_c}{S_z}.
+\end{equation}
+Then pour the water out of the test tube, wipe the tube dry with absorbent cotton wool and absorbent paper, drip oil into the test tube and repeat the above steps; the value of $D_2$ is obtained, that is,
+\begin{equation}\tag{5}
+D_2=\frac{\rho_o S_c}{\rho_w S_z}.
+\end{equation}
+Solving equations (4) and (5) then gives
+\begin{equation}\tag{6}
+\rho_o=\left(\frac{D_2}{D_1}\right)\rho_w.
+\end{equation}
+
+\textbf{3. Experimental results}
+
+The data measured in the experiment are given in the table below. Figures 6.17(c) and 6.17(d) are plotted from the data of the table.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.17}\quad Measured experimental data\\[3pt]
+\begin{tabular}{cccccccc}
+\toprule
+\multicolumn{2}{c}{water in tube} & \multicolumn{2}{c}{oil in tube} & \multicolumn{2}{c}{water in tube} & \multicolumn{2}{c}{oil in tube}\\
+\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+$l_c/\mathrm{cm}$ & $l_z/\mathrm{cm}$ & $l_c/\mathrm{cm}$ & $l_z/\mathrm{cm}$ & $l_c/\mathrm{cm}$ & $l_z/\mathrm{cm}$ & $l_c/\mathrm{cm}$ & $l_z/\mathrm{cm}$\\
+\midrule
+3.70 & 11.70 & 5.70 & 12.50 & 5.20 & 12.90 & 6.40 & 13.00\\
+4.50 & 12.30 & 6.00 & 12.60 & 5.30 & 13.00 & 6.80 & 13.30\\
+4.90 & 12.60 & 6.00 & 12.80 & 5.70 & 13.30 & 7.20 & 13.50\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\noindent The slope of the straight line in Fig.~6.17(c) gives $D_1=0.809$, and that of the straight line in Fig.~6.17(d) gives $D_2=0.686$; finally the density of the oil is
+\begin{equation*}
+\rho_o=\SI{0.848}{g/cm^3}.
+\end{equation*}
+
+\begin{figbox}{6.17(c)}
+\begin{tikzpicture}[scale=0.9]
+% grid
+\foreach \i in {0,1,...,12}{
+  \pgfmathsetmacro\xx{\i*0.5}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,6}{
+  \pgfmathsetmacro\yy{\j*0.75}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(6.0,\yy);
+}
+% axes
+\draw[axis] (0,0)--(6.35,0);
+\node[below,font=\scriptsize] at (3.10,-0.55) {$l_c/\mathrm{cm}$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.78,2.30) {$l_z/\mathrm{cm}$};
+% x ticks
+\foreach \v in {3.0,3.5,4.0,4.5,5.0,5.5,6.0}{
+  \pgfmathsetmacro\xx{(\v-3.0)*2}
+  \draw (\xx,0)--(\xx,-0.10);
+  \node[below,font=\scriptsize] at (\xx,-0.10) {\v};
+}
+% y ticks
+\foreach \v in {11.0,11.5,12.0,12.5,13.0,13.5,14.0}{
+  \pgfmathsetmacro\yy{(\v-11.0)*1.5}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+% fitted line
+\draw[thickline] (0,0.18)--(6.0,3.82);
+% data points
+\foreach \px/\py in {1.4/1.05,3.0/1.95,3.8/2.40,4.4/2.85,4.6/3.00,5.4/3.45}
+  {\fill (\px,\py) circle (1.4pt);}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{6.17(d)}
+\begin{tikzpicture}[scale=0.9]
+\foreach \i in {0,1,...,12}{
+  \pgfmathsetmacro\xx{\i*0.5}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,8}{
+  \pgfmathsetmacro\yy{\j*0.5625}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(6.0,\yy);
+}
+\draw[axis] (0,0)--(6.35,0);
+\node[below,font=\scriptsize] at (3.10,-0.55) {$l_c/\mathrm{cm}$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.78,2.30) {$l_z/\mathrm{cm}$};
+\foreach \v in {5.0,5.5,6.0,6.5,7.0,7.5,8.0}{
+  \pgfmathsetmacro\xx{(\v-5.0)*2}
+  \draw (\xx,0)--(\xx,-0.10);
+  \node[below,font=\scriptsize] at (\xx,-0.10) {\v};
+}
+\foreach \v in {12.0,12.5,13.0,13.5,14.0}{
+  \pgfmathsetmacro\yy{(\v-12.0)*2.25}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+\draw[thickline] (0,0.02)--(5.80,4.52);
+\foreach \px/\py in {1.4/1.125,2.0/1.35,2.0/1.80,2.8/2.25,3.6/2.925,4.4/3.375}
+  {\fill (\px,\py) circle (1.4pt);}
+\end{tikzpicture}
+\end{figbox}
+
+The sources of error in this experiment are mainly two:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item During the experiment the test tube is not always kept vertical.
+\item Owing to the surface tension of the liquid and similar effects, the liquid surface is slightly curved, and this affects the readings.
+\end{enumerate}
+
+\noindent\textit{Points to note:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item For a typical test tube the ratio $S_c/S_z$ is $0.8$ and not $1$.
+\item The surfaces of the water and of the oil whose positions are measured must lie in the part of the test tube where the cross-section is uniform.
+\item In order to determine the values of $D_1$ and $D_2$, at least five points must be measured so that a well-fitting straight line can be drawn. In the experiment the data must be taken over a range of \SI{2}{cm} to \SI{2.5}{cm}.
+\end{enumerate}
+
+\begin{commentary}
+This problem requires the candidates to apply Archimedes' law to solve a practical problem, to set up a correct mathematical model, and to possess a certain ability in theoretical derivation: how to establish a linear equation and, by finding its slope, to obtain the relation between the quantity to be measured and the known quantities, and finally to determine the density of the oil. The design idea of the problem and its requirements on the experimental operation are both outstanding. Because the five Chinese contestants had paid attention to training in experimental ability, they all scored relatively high marks on this problem.
+\end{commentary}
+
+\subsection*{Experiment 6.18\quad Investigation of the relation between the vibration frequency of a tuning fork and the mass on its symmetric arms (mechanics experiment, 3rd Asian Physics Olympiad)}
+
+\noindent\textit{[Aim]}
+
+To investigate how the vibration frequency of a tuning fork varies with the mass of identical blocks attached at a fixed position on the two arms of the fork, and hence to determine the unknown mass of a pair of blocks $X$ attached to the fork.
+
+\noindent\textit{[Basic concepts and knowledge]}
+
+(1) \textit{Stroboscope}
+
+This experiment uses a stroboscope, a simple electronic device with a discharge lamp which emits intense light for a short time at very uniform intervals. With a stroboscope the frequency of rotation or vibration of a body can be measured without touching the moving body directly.
+
+\noindent\textit{[Points to note]}
+
+A stroboscope has a limited life, that is, a maximum number of flashes; it should be switched off when not in use.
+
+Consider a particle moving in a circle, illuminated by a stroboscope. If the flash frequency is a multiple, or a submultiple, of the frequency of the particle's motion, the particle will appear to be stationary. Hence the period of the circular motion of the particle can be determined by adjusting the frequency of the flashing light.
+
+Suppose that a particle rotates with frequency $x$ Hz and that the flash frequency of the stroboscope is $y$ Hz. Then during the time interval $1/y$ s between two successive flashes the body turns through $2\pi x/y$ rad.
+
+If $x/y$ is irrational, it cannot be expressed as the ratio of two integers; the particle then does not appear stationary but seems to rotate slowly forwards or backwards, according to whether the ratio $x/y$ is somewhat smaller or somewhat larger than a nearby rational number.
+
+If $y/x=q/p$, where $p$ and $q$ are integers, the stroboscope flashes $q$ times in every $p$ complete periods. Furthermore, if $p$ and $q$ have no common divisor (as is assumed throughout the experiment), each flash illuminates the body in a different position, so that under the flashing light the body presents $q$ different stationary positions.
+
+If $q$ becomes very large, it is difficult to count the number of stationary positions presented by the rotating body.
+
+The theory given above for a rotating body may be applied equally to a tuning fork executing simple harmonic motion, because the vibration may be regarded as the projection of circular motion on a given diameter. In this case, however, the vibrating body retraces the same path after every half period, so that a coincidence (although unlikely) may occur in which the pattern in one half period is the same as that in the next half period; this leads to only one figure being recorded instead of two (although the intensity is still doubled). Such coincidences should be avoided in the observations.
+
+(2) \textit{Determination of fundamental synchronism}
+
+When the stroboscope flashes exactly once for each revolution or vibration of the body, the body appears to stand at one fixed position; this is synchronism of the two. It must be pointed out, however, that similar indistinguishable results also occur when the flash frequency is a submultiple of the frequency of the body's motion. Thus, if the frequency of the moving body is completely unknown, a safe procedure for adjusting to fundamental synchronism is to start from a high frequency and, after many images have been seen, to lower the flash frequency slowly until a single image appears for the first time. In all the measurements this procedure is used to check whether fundamental synchronism has been reached.
+
+(3) \textit{Multiple frequency}
+
+When the flash frequency of the stroboscope is higher than the vibration frequency of the observed body, this flash frequency is called a multiple frequency of the vibration frequency of the body. The opposite case, in which the flash frequency is lower than the frequency of the moving body, is called a submultiple frequency.
+
+If the flash frequency of the stroboscope is $q$ times the frequency of the rotating body, several images are observed. In this case a single rotating particle appears as several stationary images distributed at equal intervals around the circle. For twice the frequency, $q/p=2$, two images separated by an angle $\pi$ are produced. For three times the frequency, $q/p=3$, three images are produced at angular distances $2\pi/3$, and so on. The frequency of rotation of the particle is then equal to the flash frequency divided by the number of images observed. Generally, if $q\gg p>1$, the stroboscope flashes $q$ times while the particle makes $p$ revolutions, so that $q$ stationary positions still appear.
+
+(4) \textit{Submultiple frequency}
+
+Here $q/p$ is less than 1. If the flash frequency of the stroboscope is exactly $1/p$ of the frequency of the body's motion, where $p>1$, then the body moves through $p$ revolutions during each flash interval, yet only one image of the body is presented. If $p\gg q>1$, the stroboscope flashes $q$ times while the body makes $p$ complete revolutions, and the number of stationary images seen is $q$.
+
+(5) \textit{Adjustable-frequency tuning fork}
+
+Once an adjustable-frequency tuning fork (equivalent to an ordinary tuning fork) is set vibrating, it vibrates at a certain fundamental frequency without harmonics. The two arms of the fork are symmetric when viewed from either side, so that the motions of the two arms are exactly opposite, and at any instant they exert equal and opposite forces on the central stem. The net force on the central stem is zero and it does not vibrate; hence the stem may be gripped firmly without causing any unwanted damping of the vibration. For the same reason the two arms of the fork cannot vibrate in phase, because in-phase vibration would produce a finite oscillating force on the central stem, and this force would make such a vibration decay very quickly.
+
+The fundamental frequency of a tuning fork can be reduced by loading identical blocks symmetrically on its two arms (the blocks loaded on the two arms of the fork must be symmetric). For such a loaded fork the period of vibration $T$ is given by
+\begin{equation*}
+T^{2}=A(m+B),
+\end{equation*}
+where $A$ is a constant which depends on the mechanical properties of the material of the fork, on its size and on its shape; $B$ is a constant related to the effective mass of each vibrating arm; and $m$ is the mass of the loading (including the mass of the clamp).
+
+\noindent\textit{[Available apparatus]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item A stroboscope with a digital frequency display.
+\item A small flashlight.
+\item A tuning fork, on each of whose arms a block of \SI{31.6}{g} marked with numbers and lines is symmetrically loaded; the centre of mass of the block coincides with point $P$ ($P$ is clearly marked on each arm but is covered by the block).
+\item Two clamps with detachable handles; the handles are used only when the clamps have to be opened, and are removed during the experiment.
+\item One pair of identical blocks of unknown mass.
+\item Blocks of the following known masses (in pairs): blocks of \SI{5}{g}, \SI{10}{g}, \SI{15}{g}, \SI{20}{g} and \SI{25}{g}.
+\item Five sheets of standard graph paper.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.18.}\quad \textit{Experimental steps and experimental results}
+
+(1) \textit{Measurement of fundamental synchronism and of multiple frequencies}
+
+Make the flashes of the stroboscope reach fundamental synchronism with the vibration of the tuning fork whose two arms carry the \SI{31.6}{g} blocks. Temporarily take this pair of blocks off the arms, check and confirm that the centre of mass of the blocks falls on point $P$, and then mount them again and carry out the measurement. Record the flash frequency of the stroboscope at synchronism. Keeping the flash frequency higher than the frequency of the fork, find as many flash frequencies as possible at which stationary images can be observed (the arrows drawn on the arms), and determine the values of $q/p$ corresponding to them. The $f$--$q/p$ relation for $q\ge p$ is shown in Fig.~6.18(a).
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.18-1}\\[3pt]
+\begin{tabular}{ccc}
+\toprule
+Stroboscope frequency $f/\mathrm{Hz}$ & Number of stationary images & $q/p$\\
+\midrule
+64.5  & 1 & 1\\
+86.3  & 4 & $4/3$\\
+96.9  & 3 & $3/2$\\
+129.4 & 2 & 2\\
+193.9 & 3 & 3\\
+258.3 & 4 & 4\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\begin{figbox}{6.18(a)}
+\begin{tikzpicture}[scale=0.9]
+% grid
+\foreach \i in {0,1,...,5}{
+  \pgfmathsetmacro\xx{\i*1.28}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,7}{
+  \pgfmathsetmacro\yy{\j*0.6429}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(6.4,\yy);
+}
+\draw[axis] (0,0)--(6.75,0);
+\node[below,font=\scriptsize] at (3.20,-0.58) {$q/p$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.90,2.30) {$f/\mathrm{Hz}$};
+\foreach \v in {0,1,2,3,4,5}{
+  \pgfmathsetmacro\xx{\v*1.28}
+  \draw (\xx,0)--(\xx,-0.10);
+  \node[below,font=\scriptsize] at (\xx,-0.10) {\v};
+}
+\foreach \v in {0,50,100,150,200,250,300,350}{
+  \pgfmathsetmacro\yy{\v*0.012857}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+\draw[thickline] (0,0)--(5.35,3.465);
+\foreach \px/\py in {1.28/0.829,1.707/1.110,1.92/1.246,2.56/1.664,3.84/2.493,5.12/3.321}
+  {\fill (\px,\py) circle (1.4pt);}
+\end{tikzpicture}
+\end{figbox}
+
+(2) \textit{Measurement of submultiple frequencies}
+
+Keep the flash frequency lower than the fundamental frequency of the fork (whose two arms carry the \SI{31.6}{g} blocks) and find all the observable flash frequencies at which stable stationary images are produced. Tabulate the readings (in order of decreasing $q/p$) and plot a straight-line graph of all the observed flashes against $q/p$ (for the fork whose arms carry the \SI{31.6}{g} blocks).
+
+The $f$--$q/p$ graph for $q\le p$ is given in Table 6.18-2 and Fig.~6.18(b).
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.18-2}\\[3pt]
+\begin{tabular}{ccc}
+\toprule
+Stroboscope frequency $f/\mathrm{Hz}$ & Number of stationary images & $q/p$\\
+\midrule
+64.5 & 1 & 1\\
+48.5 & 3 & $3/4$\\
+43.1 & 2 & $2/3$\\
+38.8 & 3 & $3/5$\\
+32.2 & 1 & $1/2$\\
+21.5 & 1 & $1/3$\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\begin{figbox}{6.18(b)}
+\begin{tikzpicture}[scale=0.9]
+\foreach \i in {0,1,...,4}{
+  \pgfmathsetmacro\xx{\i*1.6}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,8}{
+  \pgfmathsetmacro\yy{\j*0.5625}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(6.4,\yy);
+}
+\draw[axis] (0,0)--(6.75,0);
+\node[below,font=\scriptsize] at (3.20,-0.58) {$q/p$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.90,2.30) {$f/\mathrm{Hz}$};
+\foreach \v/\lab in {0/0,1.6/0.25,3.2/0.50,4.8/0.75,6.4/1.00}{
+  \draw (\v,0)--(\v,-0.10);
+  \node[below,font=\scriptsize] at (\v,-0.10) {\lab};
+}
+\foreach \v in {10,20,30,40,50,60,70,80}{
+  \pgfmathsetmacro\yy{\v*0.05625}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+\draw[thickline] (0,0)--(6.4,3.628);
+\foreach \px/\py in {2.133/1.209,3.2/1.811,3.84/2.183,4.267/2.424,4.8/2.728,6.4/3.628}
+  {\fill (\px,\py) circle (1.4pt);}
+\end{tikzpicture}
+\end{figbox}
+
+(3) \textit{Determination of the mass of the pair of unknown blocks $x$}
+
+Take the \SI{31.6}{g} blocks off the two arms of the tuning fork and measure the vibration frequency of the fork with no blocks on its arms; then measure the vibration frequencies of the fork when blocks of known masses \SI{5.0}{g}, \SI{10.0}{g}, \SI{15.0}{g}, \SI{20.0}{g} and \SI{25.0}{g} are loaded on both arms. Note that the mass marked on a block is the total mass of the clamp holding the block together with the block. Finally replace the blocks of known mass by the unknown blocks, measure the vibration frequency of the fork at that time, and determine the mass $x$. Note that the mass $x$ includes the mass of the clamp (the handles of the clamps have now been removed). The experimental results are given in Table 6.18-3 and Fig.~6.18(c). Fitting a straight line to the data of Table 6.18-3 according to the formula $T^{2}=A(m+B)$ gives $A=\SI{5.85e-6}{s^2/g}$, $B=\SI{9.85}{g}$ and a correlation coefficient $r=0.9997$. From the $T^{2}$--$m$ graph the slope is $A=\SI{5.85e-6}{s^2/g}$ and the intercept on the $x$ axis is $-B=\SI{-9.85}{g}$. For the body of unknown mass $x$, $f=\SI{85.6}{Hz}$ and $T^{2}=f^{-2}=\SI{13.6e-4}{s^2}$; substituting into the formula $T^{2}=5.85\times10^{-6}(m+9.85)$ gives the mass of the body to be measured as $m_x=\SI{13.4}{g}$.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\textbf{Table 6.18-3}\\[3pt]
+\begin{tabular}{cccccc}
+\toprule
+$m/\mathrm{g}$ & 5.0 & 10.0 & 15.0 & 20.0 & 25.0\\
+\midrule
+$f/\mathrm{Hz}$ & 106.9 & 92.0 & 82.8 & 75.6 & 70.6\\
+$T^{2}/\mathrm{s^{2}}$ & $8.75\times10^{-5}$ & $1.18\times10^{-4}$ & $1.46\times10^{-4}$ & $1.75\times10^{-4}$ & $2.01\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\begin{figbox}{6.18(c)}
+\begin{tikzpicture}[scale=0.9]
+\foreach \i in {0,1,...,6}{
+  \pgfmathsetmacro\xx{\i*1.0667}
+  \draw[black!25,line width=0.25pt] (\xx,0)--(\xx,4.5);
+}
+\foreach \j in {0,1,...,5}{
+  \pgfmathsetmacro\yy{\j*0.9}
+  \draw[black!25,line width=0.25pt] (0,\yy)--(6.4,\yy);
+}
+\draw[axis] (0,0)--(6.75,0);
+\node[below,font=\scriptsize] at (3.20,-0.58) {$m/\mathrm{g}$};
+\draw[axis] (0,0)--(0,4.85);
+\node[rotate=90,above,font=\scriptsize] at (-0.95,2.30) {$T^{2}\times10^{-4}/\mathrm{s^{2}}$};
+\foreach \v in {0,5,10,15,20,25,30}{
+  \pgfmathsetmacro\xx{\v*0.21333}
+  \draw (\xx,0)--(\xx,-0.10);
+  \node[below,font=\scriptsize] at (\xx,-0.10) {\v};
+}
+\foreach \v in {0.5,1.0,1.5,2.0,2.5}{
+  \pgfmathsetmacro\yy{\v*1.8}
+  \draw (0,\yy)--(-0.10,\yy);
+  \node[left,font=\scriptsize] at (-0.10,\yy) {\v};
+}
+\draw[thickline] (0,1.037)--(6.4,4.196);
+\foreach \px/\py in {1.067/1.575,2.133/2.124,3.2/2.628,4.267/3.15,5.333/3.618}
+  {\fill (\px,\py) circle (1.4pt);}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+In this experiment the fundamental frequency must be measured accurately and confirmed repeatedly before the experiment can be done well. A few students treated twice the multiple frequency as the fundamental frequency when processing the data, which easily leads to errors in the measured result. Since the concepts of multiple and submultiple frequencies are not studied in the basic physics courses of secondary school and university, the students had to understand the material on the spot, carry out the investigation and complete a design-type experiment; this reflects their ability of analysis and experiment.
+\end{commentary}

@@ -1,0 +1,1426 @@
+\begin{center}
+{\Large\bfseries Electromagnetic Experiments}
+\end{center}
+
+\subsection*{Experiment 7.01 \quad Measurement of the resistance of a medium-value resistor by two different methods, with a comparison}
+
+\textbf{[Apparatus and materials available]}
+
+Three 1.5\,V dry cells (type-A dry cells), an ammeter of range $0$--$500\,\mu$A (scale division $10\,\mu$A per division), a voltmeter of range $0$--$1$\,V ($0.02$\,V per division), a resistance box, three single-pole switches, one resistor $R_x$ to be measured, one galvanometer, one slide-wire rheostat, and a number of connecting wires.
+
+\textbf{Solution 7.01}\quad \textbf{1. Measurement of a resistance by the voltmeter--ammeter method}
+
+Measuring a medium-value resistance with pointer-type voltmeters and ammeters is a common method of resistance measurement. However, the internal resistance $R_V$ of a practical pointer-type voltmeter is not infinite, and the internal resistance $R_A$ of the ammeter is not zero; moreover, when a resistance is measured, whether the ammeter is connected inside or outside has a comparatively large influence on the result for an unknown resistance. The measuring circuit is shown in Fig.~7.01(a). Throwing the blade of the single-pole double-throw switch to 1 or to 2 represents respectively the ammeter-inside or the ammeter-outside connection. When the ammeter is connected inside, the voltage measured is the sum of the voltages across the resistor $R_x$ under test and across the ammeter; when the ammeter is connected outside, the current measured by the ammeter is the total current through the resistor $R_x$ under test and the voltmeter. If the internal resistance $R_V$ of the voltmeter is known, or the internal resistance $R_A$ of the ammeter is known, then the magnitude of the error of the measured result can be estimated and a correction can be made.
+
+\begin{figbox}{7.01(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% main loop
+\draw (0,0) -- (0,4.4);
+\draw (0,4.4) -- (0.55,4.4);
+% Rx
+\draw (0.55,4.24) rectangle (1.75,4.56);
+\node at (1.15,4.62) {$R_x$};
+\draw (1.75,4.4) -- (2.6,4.4);
+% ammeter
+\draw (3.03,4.4) circle (0.27);
+\node at (3.03,4.40) {$A$};
+\draw (2.6,4.4) -- (3.03,4.4);
+\draw (3.30,4.4) -- (4.5,4.4);
+\draw (4.5,4.4) -- (5.9,4.4) -- (5.9,0) -- (5.35,0);
+% supply switch S
+\draw (5.35,0) -- (5.05,0);
+\draw (5.05,0) -- (4.75,0.28);
+\node[below] at (5.05,-0.05) {$S$};
+\draw (4.75,0) -- (4.62,0);
+% battery
+\draw (4.62,0) -- (4.12,0);
+\draw (4.12,-0.30) -- (4.12,0.30);
+\draw (3.92,-0.17) -- (3.92,0.17);
+\draw (3.92,0) -- (3.40,0);
+\node[above] at (3.8,0.34) {$\varepsilon$};
+% rheostat
+\draw (3.40,0) -- (2.35,0);
+\draw (2.35,-0.17) rectangle (1.25,0.17);
+\draw[->] (1.15,0.62) -- (1.72,0.10);
+\node[above] at (1.8,0.62) {$R$};
+\draw (1.25,0) -- (0,0);
+% voltmeter branch
+\draw (0,2.4) -- (0.95,2.4);
+\draw (1.49,2.4) circle (0.27);
+\node at (1.49,2.40) {$V$};
+\draw (1.76,2.4) -- (2.6,2.4);
+% changeover switch K
+\fill (2.6,2.4) circle (0.045);
+\draw (2.6,2.4) -- (3.18,3.10);
+\node[left] at (2.55,2.5) {$K$};
+% contact 2 (up to node Q)
+\draw (2.6,3.30) circle (0.045);
+\draw (2.6,3.30) -- (2.6,4.4);
+\node[right] at (2.70,3.42) {$2$};
+\fill (2.6,4.4) circle (0.045);
+% contact 1 (right, up to node after A)
+\draw (3.60,2.4) circle (0.045);
+\draw (3.60,2.4) -- (4.5,2.4) -- (4.5,4.4);
+\node[above] at (3.62,2.44) {$1$};
+\fill (4.5,4.4) circle (0.045);
+\end{tikzpicture}
+\end{figbox}
+
+Following the wiring of Fig.~7.01(a), the experimental results are as shown in Table~7.01-1.
+
+\begin{center}
+{\small Table 7.01-1}\\[2pt]
+\begin{tabular}{cccccc}
+\toprule
+& \multicolumn{2}{c}{$U/\mathrm{V}$} & & \multicolumn{2}{c}{$U/\mathrm{V}$}\\
+\cmidrule(lr){2-3}\cmidrule(lr){5-6}
+$I/\mu\mathrm{A}$ & $K$ at position 1 & $K$ at position 2 & $I/\mu\mathrm{A}$ & $K$ at position 1 & $K$ at position 2\\
+\midrule
+50  & 0.180 & 0.102 & 250 & 0.920 & 0.516\\
+100 & 0.362 & 0.204 & 300 & $>1$  & 0.628\\
+150 & 0.542 & 0.305 & 400 & $>1$  & 0.836\\
+200 & 0.740 & 0.414 &     &       &     \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+From the slope of the straight line in Table~7.01-1, the apparent resistance with the key $K$ at position 1 is $(R_x)_1=3.70\,\mathrm{k}\Omega$; with the key $K$ at position 2 the apparent resistance is $(R_x)_2=2.09\,\mathrm{k}\Omega$. It can be seen that for a resistor of a few kilo-ohms, because the internal resistance of the ammeter cannot be neglected (a $0$--$500\,\mu$A DC ammeter has an internal resistance of about $200\,\Omega$) or the internal resistance of the voltmeter is not large enough (the $0$--$1$\,V range of an MF30 multimeter has an internal resistance of $20\,000\,\Omega$), the voltmeter--ammeter method of measuring resistance introduces a comparatively large error.
+
+\textbf{2. Measurement of the voltage by the compensation method and of the current by the ammeter, to find the value of the unknown resistance $R_x$}
+
+The basic principle of measuring a voltage by the compensation method is shown in Fig.~7.01(b). When the terminals of like polarity of two DC sources are connected together and their electromotive forces are exactly equal in magnitude, the indication of the sensitive galvanometer $G$ is zero, no current flows in the loop, and the circuit is then in balance. Hence a circuit possessing this property (called an outside-compensation circuit) can be used to measure an unknown voltage or electromotive force by means of a known voltage or electromotive force. Its advantage is that, when a voltage is measured, no current has to be drawn from the circuit under test, so that the systematic error introduced by the current flowing through the voltmeter is avoided.
+
+\begin{figbox}{7.01(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0,0) -- (0,2.6);
+\draw (0,0) -- (1.87,0);
+\draw (0,2.6) -- (1.75,2.6);
+% upper source, positive terminal to the left
+\draw (1.75,2.28) -- (1.75,2.92);
+\draw (1.93,2.42) -- (1.93,2.78);
+\draw (1.93,2.6) -- (4.0,2.6);
+\node[above] at (1.84,2.95) {$\varepsilon_1$};
+% galvanometer
+\draw (4.0,2.6) -- (4.0,1.58);
+\fill[white] (4.0,1.3) circle (0.28);
+\draw (4.0,1.3) circle (0.28);
+\node at (4.0,1.30) {$G$};
+\draw (4.0,1.02) -- (4.0,0);
+% lower source, positive terminal to the left
+\draw (1.87,-0.32) -- (1.87,0.32);
+\draw (2.05,-0.18) -- (2.05,0.18);
+\draw (2.05,0) -- (4.0,0);
+\node[below] at (1.90,-0.34) {$\varepsilon_x$};
+\end{tikzpicture}
+\end{figbox}
+
+The circuit for measuring a voltage by the compensation method is shown in Fig.~7.01(c). The circuit inside the dashed frame replaces the voltmeter of Fig.~7.01(a); in it $\varepsilon_1$ is the compensating source and $R_0$ is a voltage divider (a slide-wire rheostat). By adjusting the position of the sliding contact $C$, different voltages $U_{BC}$ can be obtained, and these are measured with the voltmeter $V$. In the experiment the position of $C$ should be adjusted until the indication of the galvanometer $G$ is zero; then $U_{BC}$ must compensate the voltage $U_x$ across $R_x$, and the reading of the voltmeter $V$ is just $U_x$. A reliable sign that balance has been reached is that, on closing and opening the switch $K$, the needle of the galvanometer shows no tiny tremor whatever. The voltage drop across the resistor $R_x$ was measured by the compensation method, the current through $R_x$ was measured with the ammeter, and the data obtained are shown in Table~7.01-2.
+
+\begin{figbox}{7.01(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% dashed frame
+\draw[dashed] (0,0) rectangle (7.4,4.6);
+% divider R0
+\draw (0.9,2.85) rectangle (6.1,3.15);
+\node[above] at (5.1,3.20) {$R_0$};
+\node[left] at (0.86,3.30) {$B$};
+\node[right] at (6.14,3.30) {$D$};
+% source branch with e1 and K1
+\draw (0.9,3.0) -- (0.9,4.1) -- (1.65,4.1);
+\draw (1.65,3.80) -- (1.65,4.40);
+\draw (1.85,3.92) -- (1.85,4.28);
+\draw (1.85,4.1) -- (4.35,4.1);
+\node[above] at (1.75,4.42) {$\varepsilon_1$};
+% switch K1
+\draw (4.35,4.1) -- (4.55,4.1);
+\draw (4.55,4.1) -- (4.95,4.32);
+\node[above] at (4.62,4.38) {$K_1$};
+\draw (5.15,4.1) -- (6.1,4.1) -- (6.1,3.0);
+% slider C
+\draw (3.4,3.15) -- (3.4,1.5);
+\draw[->] (3.4,3.30) -- (3.4,3.16);
+\node[right] at (3.46,2.72) {$C$};
+\fill (3.4,2.2) circle (0.045);
+% voltmeter V between B and C
+\draw (0.9,3.0) -- (0.9,1.5) -- (1.28,1.5);
+\draw (1.82,1.5) circle (0.27);
+\node at (1.82,1.50) {$V$};
+\draw (2.09,1.5) -- (3.4,1.5);
+% galvanometer G between C and the external circuit
+\draw (3.4,2.2) -- (4.93,2.2);
+\draw (5.47,2.2) circle (0.27);
+\node at (5.47,2.20) {$G$};
+\draw (5.74,2.2) -- (7.0,2.2) -- (7.0,0);
+% external circuit: leads
+\draw (0.9,3.0) -- (0.3,3.0) -- (0.3,-2.1);
+\draw (7.0,0) -- (7.0,-2.1);
+\draw (0.3,-2.1) -- (2.35,-2.1);
+% battery
+\draw (2.35,-2.40) -- (2.35,-1.80);
+\draw (2.55,-2.26) -- (2.55,-1.94);
+\draw (2.55,-2.1) -- (4.30,-2.1);
+\node[below] at (2.45,-2.44) {$\varepsilon$};
+% switch K
+\draw (4.30,-2.1) -- (4.50,-2.1);
+\draw (4.50,-2.1) -- (4.90,-1.88);
+\node[below] at (4.55,-2.14) {$K$};
+\draw (5.10,-2.1) -- (7.0,-2.1);
+% Rx in the left lead
+\draw (0.13,-0.95) rectangle (0.47,-1.55);
+\node[left] at (0.09,-1.25) {$R_x$};
+% ammeter in the right lead
+\draw (7.0,-0.83) circle (0.27);
+\node at (7.0,-0.83) {$A$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.01-2}\\[2pt]
+\begin{tabular}{lccccc}
+\toprule
+$I/\mu\mathrm{A}$ & 50 & 100 & 200 & 300 & 390\\
+$U/\mathrm{V}$    & 0.117 & 0.234 & 0.466 & 0.700 & 0.912\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+From the slope of the $I$--$U$ graph (see Fig.~7.01(d)) one obtains $R_x=2.33\,\mathrm{k}\Omega$.
+
+\begin{figbox}{7.01(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (9.3,0) node[below] {$U/\mathrm{V}$};
+\draw[->] (0,0) -- (0,6.6) node[left] {$I/\mu\mathrm{A}$};
+\foreach \i in {1,2,...,20} {
+  \draw[black!35,line width=0.2pt] (\i*0.42,0) -- (\i*0.42,6.0);
+}
+\foreach \j in {1,2,...,12} {
+  \draw[black!35,line width=0.2pt] (0,\j*0.5) -- (8.4,\j*0.5);
+}
+\draw[line width=0.6pt] (0,0) -- (8.4,0);
+\draw[line width=0.6pt] (0,0) -- (0,6.0);
+\foreach \i in {0,2,4,6,8,10,12,14,16,18,20} {
+  \draw (\i*0.42,0) -- (\i*0.42,-0.08);
+}
+\foreach \i/\lab in {0/0,4/0.2,8/0.4,12/0.6,16/0.8,20/1.0} {
+  \node[below] at (\i*0.42,-0.10) {\small \lab};
+}
+\foreach \j/\lab in {2/100,4/200,6/300,8/400} {
+  \draw (0,\j*0.75) -- (-0.08,\j*0.75);
+  \node[left] at (-0.10,\j*0.75) {\small \lab};
+}
+% lines
+\draw[line width=0.9pt] (0,0) -- (8.4,4.05);
+\draw[line width=0.9pt] (0,0) -- (7.02,6.0);
+\draw[line width=0.9pt] (0,0) -- (7.83,6.0);
+\node[right,fill=white,inner sep=1pt] at (3.35,5.55) {\small $K$ at position 2};
+\node[right,fill=white,inner sep=1pt] at (5.85,4.32) {\small compensation method};
+\node[right,fill=white,inner sep=1pt] at (6.45,2.52) {\small $K$ at position 1};
+\end{tikzpicture}
+\end{figbox}
+
+From the figure it can be seen that with the key $K$ at position 1 the slope of the $I$--$U$ straight line is small and the measured resistance is too large, whereas with $K$ at position 2 the measured resistance is too small. When the voltage is measured by compensation, the resistance value obtained can truly reflect the resistance of this resistor.
+
+\subsection*{Experiment 7.02 \quad Measurement of the resistance of a medium-value resistor with a Wheatstone bridge}
+
+\textbf{[Apparatus and materials available]}
+
+Two type-A dry cells, three resistance boxes, one galvanometer, one resistor to be measured, a number of connecting wires, etc.
+
+\textbf{[Requirements]}
+
+(1) Draw the DC bridge circuit and write down the working principle of the DC bridge.
+
+(2) Use the DC bridge to measure the resistance of the unknown resistor.
+
+(3) Analyse the experimental error and estimate the standard uncertainty of a resistance measurement made with the DC bridge.
+
+\textbf{Solution 7.02}\quad \textbf{1.} The Wheatstone bridge is also called the DC bridge; its working principle is shown in Fig.~7.02(a).
+
+$R_A$, $R_B$, $R_x$ and $R_s$ are four resistors, and each side is called one arm of the bridge; the opposite corners 1 and 3 are connected to a DC source, while between the opposite corners 2 and 4 a galvanometer is connected, in order to detect whether there is a current between them. When the potentials at the two points 2 and 4 are equal, no current flows through the galvanometer, and the bridge is said to be balanced. That is, $i_{AB}R_A=i_{xs}R_x$; in the same way $i_{AB}R_B=i_{xs}R_s$, and hence
+\begin{equation}
+\frac{R_A}{R_B}=\frac{R_x}{R_s}. \tag{1}
+\end{equation}
+
+\begin{figbox}{7.02(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% diamond arms, with a gap for S2 on arm 1-2
+\draw (0,2) -- (0.113,2.098);
+\draw (0.62,2.54) -- (2.3,4) -- (4.6,2) -- (2.3,0) -- cycle;
+% source branch
+\draw (0,2) -- (0,-0.6) -- (1.25,-0.6);
+\draw (1.55,-0.6) -- (3.05,-0.6);
+\draw (3.05,-0.6) -- (3.42,-0.30);
+\draw (3.42,-0.6) -- (4.6,-0.6) -- (4.6,2);
+% battery
+\draw (1.25,-0.95) -- (1.25,-0.25);
+\draw (1.55,-0.82) -- (1.55,-0.38);
+\node[below] at (1.40,-0.97) {$\varepsilon$};
+\node[below] at (3.24,-0.62) {$S_1$};
+% galvanometer
+\draw (2.3,4) -- (2.3,2.23);
+\draw (2.3,1.67) -- (2.3,0);
+\draw[fill=white] (2.3,1.95) circle (0.28);
+\node at (2.3,1.95) {$G$};
+% switch S2 on arm 1-2
+\draw (0.113,2.098) -- (0.40,2.65);
+\node[left] at (0.30,2.74) {$S_2$};
+% R_A
+\draw[fill=white,rotate around={41:(1.16,3.01)}] (0.79,2.86) rectangle (1.53,3.16);
+\node[above left] at (0.86,3.32) {$R_A$};
+% R_B
+\draw[fill=white,rotate around={-41:(3.44,3.01)}] (3.07,2.86) rectangle (3.81,3.16);
+\node[above right] at (3.72,3.33) {$R_B$};
+% R_x
+\draw[fill=white,rotate around={-41:(1.16,0.99)}] (0.79,0.84) rectangle (1.53,1.14);
+\node[below left] at (0.88,0.70) {$R_x$};
+% R_s
+\draw[fill=white,rotate around={41:(3.44,0.99)}] (3.07,0.84) rectangle (3.81,1.14);
+\node[below right] at (3.74,0.70) {$R_s$};
+% nodes
+\fill (0,2) circle (0.05); \node[left] at (-0.06,2.05) {$1$};
+\fill (2.3,4) circle (0.05); \node[above] at (2.3,4.06) {$2$};
+\fill (4.6,2) circle (0.05); \node[right] at (4.66,2.05) {$3$};
+\fill (2.3,0) circle (0.05); \node[below] at (2.3,-0.06) {$4$};
+\end{tikzpicture}
+\end{figbox}
+
+This is the balance equation of the bridge. From the values of $R_A$, $R_B$ and $R_s$, the resistance $R_x$ to be measured can be calculated by means of (1).
+
+\textbf{2. Measurement error of the bridge}
+
+(1) \emph{Error introduced by the sensitivity of the bridge.} When the state of unbalance of the bridge cannot be detected by the galvanometer, the measured result $R_x$ has a corresponding uncertainty. In (1), $R_A$ and $R_B$ are fixed values. If balance is reached at $R_s=1000\,\Omega$, and when $R_s$ is adjusted to $1010\,\Omega$ the galvanometer deviates by one division from the zero point, then the error of $R_s$ caused by the adjustment is $1\,\Omega$; hence the uncertainty of the adjustment of $R_s$ is $U_s$, and from (1) one obtains
+\[
+\frac{U_{R_x}}{R_x}=\frac{U_{R_s}}{R_s}.
+\]
+Hence the uncertainty introduced by the sensitivity of the bridge can be found as
+\[
+U_{R_x}=\frac{R_x}{R_s}\cdot U_{R_s}.
+\]
+As regards the bridge, the ways of raising the sensitivity and reducing the error are: (a) generally speaking, when the four arms $R_A$, $R_B$, $R_s$, $R_x$ are approximately equal, the measurement error is smallest; (b) the larger the source voltage, the smaller the measurement error, but the permissible power of the elements of each arm must be taken into account; (c) a galvanometer of somewhat higher sensitivity should be chosen, though of course the sensitivity must not be too high, which would make the operation troublesome.
+
+(2) \emph{Error introduced by unequal arm resistances.} If the nominal values of the arms $R_A$ and $R_B$ are equal, the two can be interchanged to eliminate part of the error. That is, the readings $R_{s1}$ and $R_{s2}$ of the arm $R_s$ at balance before and after the interchange are measured separately; then from (1) one obtains
+\[
+R_x=\sqrt{R_{s1}\cdot R_{s2}}\approx\frac{R_{s1}+R_{s2}}{2}.
+\]
+This eliminates the systematic error introduced by the deviation of the nominal values of $R_A$ and $R_B$ from their actual values.
+
+The resistor to be measured is a metal-film resistor. The arms $R_A$ and $R_B$ both use resistance boxes of class 0.1, $0$--$9999\,\Omega$, and $R_s$ is a resistance box of class 0.1, $0$--$99\,999.9\,\Omega$; the source is a dry cell. The sensitivity of the galvanometer is $5\,\mu$A per division. The measured results are given in Table~7.02-1.
+
+\begin{center}
+{\small Table 7.02-1\quad Measured results for different bridge-arm ratios}\\[2pt]
+\begin{tabular}{cccccc}
+\toprule
+$R_A/\Omega$ & $R_B/\Omega$ & $R_s/\Omega$ & $\dfrac{\Delta R_s}{\Delta\theta}/(\Omega\ \text{per division})$ & $R_x/\Omega$ & $U_{R_x}/\Omega$\\
+\midrule
+1000  & 1000  & 355.0 & 12 & 355.0 & 1.2\\
+100.0 & 100.0 & 354.9 & 11 & 354.9 & 1.1\\
+100.0 & 1000  & 3530  & 340 & 353.0 & 3.4\\
+10.00 & 1000  & $3500\times10$ & $2000\times10^{-1}$ & $3.5\times10^{2}$ & $0.2\times10^{2}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+{\small Table 7.02-2\quad Results obtained after interchanging the bridge arms}\\[2pt]
+\begin{tabular}{lcccccc}
+\toprule
+& $R_A/\Omega$ & $R_B/\Omega$ & $R_s/\Omega$ & $R_A/\Omega$ & $R_B/\Omega$ & $R_s/\Omega$\\
+\midrule
+Before interchange & 1000 & 1000 & 354.8 & 100.0 & 100.0 & 356.0\\
+After interchange  & 1000 & 1000 & 354.6 & 100.0 & 100.0 & 353.4\\
+\midrule
+$R_s=\dfrac{R_{s1}+R_{s2}}{2}$ & & & 354.7 & & & 354.7\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Calculation of the uncertainty: in the above example the error is introduced by the sensitivity of the bridge, hence
+\[
+\frac{U_{B1}(R_x)}{R_x}=\frac{U_{B1}(R_s)}{R_s},
+\]
+and the maximum possible uncertainty introduced by the class of the bridge-arm elements is
+\[
+\frac{U_{B2}(R_x)}{R_x}=\sqrt{\left[\frac{U_{B2}(R_A)}{R_A}\right]^2+\left[\frac{U_{B2}(R_B)}{R_B}\right]^2+\left[\frac{U_{B2}(R_s)}{R_s}\right]^2}
+=\sqrt{\left(\frac{0.1}{100}\right)^2\times 3}=0.17\%.
+\]
+The total uncertainty is
+\[
+U(R_x)=\sqrt{\left[U_{B1}(R_x)\right]^2+\left[U_{B2}(R_x)\right]^2}=\sqrt{(1.2)^2+(0.6)^2}=1.4\,(\Omega).
+\]
+Hence the resistance measured with the bridge is
+\[
+R_x=(354.7\pm1.4)\,\Omega .
+\]
+
+\begin{commentary}
+The balanced bridge is a method of measuring resistance accurately by means of comparison, and it is very widely used. Besides the source voltage and the sensitivity of the galvanometer, the ratio of the bridge-arm resistances also has a great influence on the sensitivity of the bridge. Therefore one usually first makes a rough measurement of the resistance to be measured, and then makes the other three arms all of a resistance close to that of the resistor under test, so as to reduce the measurement error. In recent years the unbalanced bridge has become very common in electronic circuits and in the design of sensors. The points discussed in this experiment on raising the sensitivity of a bridge are also very useful for the design of an unbalanced bridge.
+\end{commentary}
+
+\subsection*{Experiment 7.03 \quad Measurement of a low resistance by the compensation method}
+
+\textbf{[Apparatus and materials available]}
+
+One DC constant-current power supply, one type-A cell (its electromotive force is accurately given; when the external resistance is above a few kilo-ohms its internal resistance may be neglected), two resistance boxes, one galvanometer, one switch, connecting wires, and a low resistance to be measured (of the order of $10^{-2}\,\Omega$).
+
+\textbf{[Points for attention]}
+
+(1) When the external resistance of the power supply is very small, the supply does not show an output voltage; the DC constant-current supply may then be set to current output, and by adjusting the current knob the current output value is displayed. The current should be chosen to be less than $2\,\mathrm{A}$.
+
+(2) The low resistance to be measured has four terminals: the $J$ terminals denote the current terminals and the $P$ terminals denote the voltage terminals; the resistance between $P$ and $P$ is required to be measured.
+
+\textbf{Solution 7.03}\quad The principle and the method of measuring a voltage by compensation are given in Solution 7.01, and the measuring circuit is similar. The difference is that the low resistance to be measured must have four terminals, and is called a four-terminal resistance. When a standard resistance or a low-value resistance is used, two further terminals should be added; the structure of a four-terminal resistance is shown in Fig.~7.03(a). When a resistance $R_{AB}$ is connected into a circuit, lead resistances and contact resistances are inevitably introduced; these are marked by dashed lines in Fig.~7.03(a), and the resistance of these additional parts is about $0.001\,\Omega$ or more. In most cases such a small additional resistance has little influence on the measurement; but if this resistance is a standard resistance, or if the resistance value is very small, then the effect of this factor should be considered. Suppose a low-value resistance has a resistance of $0.01\,\Omega$; then, because of the existence of the additional resistances, an error of at least $10\%$ is introduced, so four terminals must be used for standard resistances and low-value resistances. In Fig.~7.03(b), $J$ and $J'$ are the two current lead-in terminals, $R_{AB}$ denotes the standard resistance (made of an alloy wire) or the low-value resistance itself, and $P$ and $P'$ are two added potential lead-out terminals, which can be used for measuring a voltage.
+
+\begin{figbox}{7.03(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% current terminals
+\fill (0.5,0) circle (0.06);
+\draw (0.5,0.10) -- (0.5,0.42);
+\node[above] at (0.5,0.44) {$J$};
+% lead and contact resistance (dashed)
+\draw[dashed] (0.56,0) -- (1.15,0);
+% R_JA
+\draw (1.15,-0.18) rectangle (2.15,0.18);
+\node[above] at (1.65,0.22) {$R_{JA}$};
+% node A
+\draw (2.15,0) -- (2.60,0);
+\fill (2.60,0) circle (0.05);
+\node[below] at (2.60,-0.07) {$A$};
+\draw (2.60,0) -- (2.60,1.05);
+\node[above] at (2.60,1.07) {$P$};
+% R_AB
+\draw (2.60,0) -- (2.95,0);
+\draw (2.95,-0.18) rectangle (5.05,0.18);
+\node[above] at (4.00,0.22) {$R_{AB}$};
+\draw (5.05,0) -- (5.40,0);
+% node B
+\fill (5.40,0) circle (0.05);
+\node[below] at (5.40,-0.07) {$B$};
+\draw (5.40,0) -- (5.40,1.05);
+\node[above] at (5.40,1.07) {$P'$};
+% R_BJ
+\draw (5.40,0) -- (5.85,0);
+\draw (5.85,-0.18) rectangle (6.85,0.18);
+\node[above] at (6.35,0.22) {$R_{BJ}$};
+% lead and contact resistance (dashed)
+\draw[dashed] (6.85,0) -- (7.55,0);
+\fill (7.55,0) circle (0.06);
+\draw (7.55,0.10) -- (7.55,0.42);
+\node[right] at (7.60,0.30) {$J'$};
+% current arrow
+\draw[->] (0.5,-0.55) -- (0.95,-0.55);
+\node[below] at (0.62,-0.58) {$I$};
+\end{tikzpicture}
+\end{figbox}
+
+When a current $i$ is passed, the voltage between $P$ and $P'$ is $iR_{AB}$ and is independent of the voltages across the additional resistances $R_{JA}$ and $R_{JB}$. In this experiment, when the two voltages are compensated, no current flows through $P_A$ or $P_B$, that is, there is no voltage across the resistance of the potential leads, so the voltage measured must be the voltage of the resistor under test or of the standard resistor itself. If the current $i$ through this low-value resistor under test is known, the value of this low resistance can be calculated from the measured voltage.
+
+The wiring diagram of this experiment is shown in Fig.~7.03(b). When the indication of the galvanometer is zero, the voltage across the two ends of the voltage divider that has been set is equal to the voltage across the two ends $A$ and $B$ (compensation); hence, by the principle of voltage division, the voltage $U_{AB}$ across $A$ and $B$ is calculated, and the current $i$ through the low resistance can be read directly from the meter on the DC constant-current source; then
+\[
+R_{AB}=\frac{U_{AB}}{i}.
+\]
+
+\begin{figbox}{7.03(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% current circuit (lower part)
+\draw (0.30,2.0) -- (0.30,0.8) -- (0.75,0.8);
+\draw (0.95,1.10) -- (0.95,0.50);
+\draw (1.15,0.97) -- (1.15,0.63);
+\draw (1.15,0.8) -- (4.55,0.8);
+\draw (5.09,0.8) circle (0.27);
+\node at (5.09,0.80) {$A$};
+\draw (5.36,0.8) -- (5.90,0.8) -- (5.90,2.0);
+\node[below] at (1.05,0.46) {$\varepsilon'$};
+% the low resistance bar
+\draw (0.30,2.0) -- (0.90,2.0);
+\draw (0.90,1.84) rectangle (5.30,2.16);
+\node[above] at (3.10,2.20) {$R_{AB}$};
+\draw (5.30,2.0) -- (5.90,2.0);
+\fill (0.30,2.0) circle (0.06);
+\node[left] at (0.26,2.06) {$J$};
+\fill (5.90,2.0) circle (0.06);
+\node[right] at (5.94,2.06) {$J'$};
+% potential terminals
+\fill (1.60,2.0) circle (0.05);
+\fill (4.40,2.0) circle (0.05);
+\draw (1.60,2.0) -- (1.60,3.0);
+\draw (4.40,2.0) -- (4.40,3.0);
+\node[above] at (1.60,3.02) {$P_A$};
+\node[above] at (4.40,3.02) {$P_B$};
+\draw (1.60,3.0) -- (0.60,3.0) -- (0.60,4.2);
+% divider loop
+\draw (0.60,4.2) -- (5.90,4.2) -- (5.90,5.0);
+\draw (0.60,4.2) -- (0.60,5.0) -- (1.55,5.0);
+\draw (1.75,5.0) -- (2.75,5.0);
+\draw (2.75,4.84) rectangle (5.15,5.16);
+\draw (5.15,5.0) -- (5.90,5.0);
+\node[above] at (3.95,5.20) {$R_0$};
+% battery e (known)
+\draw (1.55,4.72) -- (1.55,5.28);
+\draw (1.75,4.86) -- (1.75,5.14);
+\node[above] at (1.65,5.32) {$\varepsilon$ (known)};
+% slider C to galvanometer
+\draw[->] (4.00,5.50) -- (4.00,5.18);
+\node[right] at (4.06,5.40) {$C$};
+\draw (4.00,5.50) -- (6.60,5.50) -- (6.60,3.85);
+\draw (6.60,3.31) circle (0.27);
+\node at (6.60,3.31) {$G$};
+\draw (6.60,3.04) -- (6.60,3.0) -- (4.40,3.0);
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.04 \quad Measurement of the resistance of a high-value resistor by the discharge method}
+
+\textbf{[Apparatus and materials available]}
+
+A DC power supply, a capacitor ($235\,\mu$F/10\,V non-polar capacitor, formed by connecting two $470\,\mu$F/10\,V electrolytic capacitors of opposite polarity in series), a pointer-type multimeter, a stopwatch, a switch, connecting wires, etc.
+
+\textbf{[Requirements]}
+
+(1) Write down the measuring formula for the resistance of a high-value resistor, the meaning of each symbol in the formula, and the experimental circuit diagram.
+
+(2) Measure the internal resistance of the 5\,V DC voltage range of a pointer-type multimeter.
+
+(3) Analyse the experimental error.
+
+\textbf{Solution 7.04}\quad The experimental circuit is as shown in Fig.~7.04(a). Throw the switch to 1 and connect the 5\,V DC supply; when the pointer multimeter on the 5\,V range indicates a voltage of 5\,V, disconnect the DC supply, connect the switch to 2 and at the same time press the stopwatch to start timing; when the voltage indication $U$ of the pointer multimeter has fallen to 2.5\,V, press the stopwatch button to stop timing. Record the half-life $T_{1/2}$ corresponding to the decrease of the capacitor voltage from 5\,V to 2.5\,V. After the capacitor has been charged, the law of discharge of the capacitor is
+\[
+U=U_0\ee^{-t/RC},
+\]
+where $U_0$ is the capacitor voltage at the beginning, $U$ the capacitor voltage at the time $t$ from the beginning of the discharge, $R$ the discharge resistance between the two plates of the capacitor (that is, the internal resistance of the 5\,V range), and $C$ the capacitance of the capacitor. When
+\[
+\frac{U}{U_0}=\frac{1}{2},
+\]
+we have $T_{1/2}/RC=\ln 2$, and therefore $RC=T_{1/2}/\ln 2=T_{1/2}/0.693$. If the value of the capacitance $C$ is known, this formula can be used to find the internal resistance $R$ of the 5\,V range of the pointer multimeter.
+
+\begin{figbox}{7.04(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% bottom rail
+\draw (0.40,0) -- (7.00,0);
+% left branch with battery
+\draw (0.40,0) -- (0.40,4.40);
+\draw (0.40,4.40) -- (0.62,4.40);
+\draw (0.62,4.10) -- (0.62,4.70);
+\draw (0.82,4.24) -- (0.82,4.56);
+\draw (0.82,4.40) -- (1.15,4.40);
+\node[above] at (0.72,4.72) {$\varepsilon$};
+% contact 1
+\draw (1.15,4.40) circle (0.045);
+\node[left] at (1.10,4.50) {$1$};
+% contact 2
+\draw (1.15,3.60) circle (0.045);
+\node[left] at (1.10,3.50) {$2$};
+\draw (1.15,3.60) -- (1.15,0);
+% switch blade, common at the top rail
+\fill (1.60,4.00) circle (0.045);
+\draw (1.60,4.00) -- (1.24,4.32);
+\node[right] at (1.64,4.04) {$K$};
+% top rail with R
+\draw (1.60,4.00) -- (2.20,4.00);
+\draw (2.20,3.85) rectangle (3.40,4.15);
+\node[above] at (2.80,4.20) {$R=1\,\mathrm{k}\Omega$};
+\draw (3.40,4.00) -- (4.60,4.00);
+% voltmeter branch
+\draw (4.60,4.00) -- (4.60,2.87);
+\draw (4.60,2.33) circle (0.27);
+\node at (4.60,2.33) {$V$};
+\draw (4.60,2.06) -- (4.60,0);
+\fill (4.60,4.00) circle (0.045);
+\fill (4.60,0) circle (0.045);
+% capacitor branch
+\draw (4.60,4.00) -- (6.40,4.00) -- (6.40,3.05);
+\draw (6.20,3.05) -- (6.60,3.05);
+\draw (6.20,2.65) -- (6.60,2.65);
+\draw (6.40,2.65) -- (6.40,0);
+\node[right] at (6.46,2.85) {$C$};
+\end{tikzpicture}
+\end{figbox}
+
+Experimental data example:
+
+The half-life was measured five times in all, and the mean value $\overline{T}_{1/2}=19.5\,\mathrm{s}$ was taken; it is known that $C=235\times10^{-6}\,\mathrm{F}$.
+\[
+\therefore\ R=\frac{T_{1/2}}{0.693C}=\frac{19.5}{0.693\times235\times10^{-6}}=120\times10^{3}\,(\Omega).
+\]
+
+In this experiment the main errors come from the accuracy of the capacitance of the two electrolytic capacitors in series and from the error that may be caused by timing with the stopwatch. The error of the nominal value of an electrolytic capacitor is about $5\%$, while the error of the stopwatch may reach $0.2\,\mathrm{s}$. These two items will affect the accuracy of the measured result.
+
+In this experiment two $470\,\mu$F/10\,V electrolytic capacitors are used, with their negative plates connected together and the two positive plates led out as the electrodes, forming one non-polar capacitor whose capacitance is $235\,\mu$F/10\,V.
+
+\subsection*{Experiment 7.05 \quad Measurement of the volt--ampere characteristic curve of a non-linear resistor}
+
+Measure the relation between the current $I$ through a 2CW-type silicon Zener diode and the voltage $U$ across its terminals, and give this curve.
+
+\textbf{[Apparatus and materials available]}
+
+A multirange voltmeter, a multirange ammeter, a galvanometer, a DC stabilised power supply, three resistance boxes, a slide-wire rheostat, the diode to be measured, a switch, graph paper, and connecting wires.
+
+\textbf{[Requirements]}
+
+(1) Draw the best measuring circuit.
+
+(2) Measure the forward and reverse current values through the diode and the corresponding voltage values (the current measuring range is not to exceed $\pm10\,\mathrm{mA}$).
+
+(3) Plot the $I$--$U$ curve on graph paper.
+
+(4) Explain the features of this characteristic curve section by section.
+
+\textbf{Solution 7.05}\quad The forward and reverse voltages of the 2CW diode are measured by the compensation method, so that the measurement uncertainty is smaller than that of the volt--ampere method. The particular measuring circuit is shown in Fig.~7.05. Note that the voltmeter is not connected directly to the diode: when $K_1$ and $K_2$ are closed, $R_3$ is adjusted until the current of the galvanometer $G$ is zero, and the voltage indicated by the voltmeter is then just the voltage across the diode. The advantage of this method is that the current of the diode is not used to deflect the meter, so the accuracy of the measurement is high.
+
+\begin{figbox}{7.05}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.82,every node/.style={scale=0.82}]
+% ---------- (a) forward ----------
+\begin{scope}
+\draw (0.3,0) -- (0.3,1.20);
+\draw (0.3,0.85) -- (0.3,2.85);
+% battery
+\draw (0.02,3.05) -- (0.58,3.05);
+\draw (0.12,2.85) -- (0.48,2.85);
+\draw (0.3,3.05) -- (0.3,3.6);
+% switch K1 on the left branch
+\draw (0.3,1.20) -- (0.62,1.42);
+\node[right] at (0.60,3.14) {$\varepsilon$};
+\node[right] at (0.66,1.28) {$K_1$};
+% top rail
+\draw (0.3,3.6) -- (0.95,3.6);
+\draw (0.95,3.44) rectangle (1.65,3.76);
+\node[above] at (1.30,3.80) {$R_1$};
+\draw (1.65,3.6) -- (2.7,3.6);
+\draw (2.7,3.6) -- (3.55,3.6);
+\draw (3.55,3.44) rectangle (4.25,3.76);
+\node[above] at (3.90,3.80) {$R_2$};
+\draw (4.25,3.6) -- (5.0,3.6);
+% right rail with R3
+\draw (5.0,3.6) -- (5.0,2.55);
+\draw (4.84,2.55) rectangle (5.16,1.85);
+\draw[->] (5.42,2.58) -- (5.20,2.10);
+\node[right] at (5.40,2.62) {$R_3$};
+\draw (5.0,1.85) -- (5.0,0);
+% voltmeter across R3
+\draw (5.0,2.55) -- (5.85,2.55) -- (5.85,2.04);
+\draw (5.85,1.82) circle (0.22);
+\node at (5.85,1.82) {$V$};
+\draw (5.85,1.60) -- (5.85,1.42) -- (5.0,1.42);
+% diode branch
+\draw (2.7,3.6) -- (2.7,2.98);
+\draw (2.7,2.74) circle (0.24);
+\node at (2.70,2.74) {mA};
+\draw (2.7,2.50) -- (2.7,2.20);
+\draw[fill=white] (2.45,2.20) -- (2.95,2.20) -- (2.70,1.80) -- cycle;
+\draw (2.45,1.80) -- (2.95,1.80);
+\draw (2.7,1.80) -- (2.7,0);
+\node[right] at (2.80,1.62) {2CW};
+% galvanometer branch
+\draw (2.7,2.20) -- (3.11,2.20);
+\draw (3.35,2.20) circle (0.24);
+\node at (3.35,2.20) {$G$};
+\draw (3.59,2.20) -- (3.95,2.20);
+\draw (3.95,2.20) -- (4.30,2.40);
+\draw (4.30,2.20) -- (4.55,2.20);
+\draw (4.55,2.20) -- (5.0,2.20);
+\node[below] at (4.15,2.12) {$K_2$};
+% bottom rail
+\draw (0.3,0) -- (5.0,0);
+\node[below] at (2.70,-0.10) {(a)};
+\end{scope}
+% ---------- (b) reverse ----------
+\begin{scope}[xshift=7.2cm]
+\draw (0.3,0) -- (0.3,1.20);
+\draw (0.3,0.85) -- (0.3,2.85);
+% battery
+\draw (0.02,3.05) -- (0.58,3.05);
+\draw (0.12,2.85) -- (0.48,2.85);
+\draw (0.3,3.05) -- (0.3,3.6);
+\draw (0.3,1.20) -- (0.62,1.42);
+\node[right] at (0.60,3.14) {$\varepsilon$};
+\node[right] at (0.66,1.28) {$K_1$};
+\draw (0.3,3.6) -- (0.95,3.6);
+\draw (0.95,3.44) rectangle (1.65,3.76);
+\node[above] at (1.30,3.80) {$R_1$};
+\draw (1.65,3.6) -- (2.7,3.6) -- (3.55,3.6);
+\draw (3.55,3.44) rectangle (4.25,3.76);
+\node[above] at (3.90,3.80) {$R_2$};
+\draw (4.25,3.6) -- (5.0,3.6);
+\draw (5.0,3.6) -- (5.0,2.55);
+\draw (4.84,2.55) rectangle (5.16,1.85);
+\draw[->] (5.42,2.58) -- (5.20,2.10);
+\node[right] at (5.40,2.62) {$R_3$};
+\draw (5.0,1.85) -- (5.0,0);
+\draw (5.0,2.55) -- (5.85,2.55) -- (5.85,2.04);
+\draw (5.85,1.82) circle (0.22);
+\node at (5.85,1.82) {$V$};
+\draw (5.85,1.60) -- (5.85,1.42) -- (5.0,1.42);
+% diode branch, diode reversed
+\draw (2.7,3.6) -- (2.7,2.98);
+\draw (2.7,2.74) circle (0.24);
+\node at (2.70,2.74) {mA};
+\draw (2.7,2.50) -- (2.7,2.20);
+\draw (2.45,2.20) -- (2.95,2.20);
+\draw[fill=white] (2.45,1.80) -- (2.95,1.80) -- (2.70,2.20) -- cycle;
+\draw (2.7,1.80) -- (2.7,0);
+\node[right] at (2.80,1.62) {2CW};
+\draw (2.7,2.20) -- (3.11,2.20);
+\draw (3.35,2.20) circle (0.24);
+\node at (3.35,2.20) {$G$};
+\draw (3.59,2.20) -- (3.95,2.20);
+\draw (3.95,2.20) -- (4.30,2.40);
+\draw (4.30,2.20) -- (4.55,2.20);
+\draw (4.55,2.20) -- (5.0,2.20);
+\node[below] at (4.15,2.12) {$K_2$};
+\draw (0.3,0) -- (5.0,0);
+\node[below] at (2.70,-0.10) {(b)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+The experimental data are shown in Tables 7.05-1 and 7.05-2.
+
+\begin{center}
+{\small Table 7.05-1\quad Forward $I$--$U$ data of the diode under test}\\[2pt]
+\begin{tabular}{l*{10}{c}}
+\toprule
+$I/\mathrm{mA}$ & 0.050 & 0.100 & 0.200 & 0.500 & 1.00 & 2.00 & 3.00 & 4.00 & 7.00 & 10.00\\
+$U/\mathrm{V}$  & 0.545 & 0.575 & 0.600 & 0.625 & 0.650 & 0.675 & 0.680 & 0.690 & 0.700 & 0.710\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+{\small Table 7.05-2\quad Reverse $I$--$U$ data of the diode under test}\\[2pt]
+\begin{tabular}{l*{10}{c}}
+\toprule
+$I/\mathrm{mA}$ & 0.100 & 0.300 & 0.500 & 1.00 & 2.00 & 3.00 & 4.00 & 6.00 & 8.00 & 10.00\\
+$U/\mathrm{V}$  & 1.65 & 2.08 & 2.30 & 2.55 & 2.90 & 3.05 & 3.20 & 3.45 & 3.55 & 3.70\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The above $I$--$U$ curves are omitted. From the data tables it can be seen that when a forward current is passed through the diode, the current increases slowly with the voltage as long as the terminal voltage is less than $0.7\,\mathrm{V}$, but once the voltage is greater than about $0.7\,\mathrm{V}$ the current increases abruptly. When a reverse current is passed through the diode, the current increases slowly with the voltage as long as the voltage across its terminals is less than $3.2\,\mathrm{V}$, but once the voltage is greater than $3.2\,\mathrm{V}$ the current increases abruptly. This is the reverse characteristic of the Zener diode, that is, its voltage-stabilising characteristic.
+
+\subsection*{Experiment 7.06 \quad Measurement of the basic characteristics of a solar cell}
+
+A solar cell can absorb light energy (electromagnetic waves) and convert the energy of the absorbed photons into electrical energy; it is used in spacecraft, artificial satellites and
+various environment-friendly instruments, and is an important energy converter in machinery. This experiment requires the accurate measurement of some characteristic parameters of a solar cell, so that solar energy may be used more efficiently.
+
+\textbf{[Introduction of the basic terms]}
+
+(1) Short-circuit current $I_{sc}$: the output current of the solar cell when the external circuit is short-circuited, that is, when the load resistance is zero.
+
+(2) Open-circuit voltage $U_{oc}$: the output voltage of the solar cell when the external circuit is open, that is, when the load resistance is infinite.
+
+(3) The maximum output power $P_m$ of the solar cell.
+
+(4) The fill factor $FF$ is defined as $P_m/(I_{sc}\cdot U_{oc})$; it is an important parameter representing the quality of a solar cell.
+
+\textbf{[Apparatus and materials available]}
+
+One 60\,W tungsten filament lamp, two multimeters, one slide-wire rheostat, one optical bench, one solar cell with its holder (including leads), a number of connecting wires, two sheets of graph paper, a stabilised DC power supply, etc.
+
+\textbf{[Requirements]}
+
+(1) Measure the $I$--$U$ characteristic of the solar cell under forward bias in complete darkness, and draw the measuring circuit.
+
+(2) Measure the $I$--$U$ characteristic of the solar cell under constant illumination, and draw the measuring circuit.
+
+(3) Find the short-circuit current $I_{sc}$, the open-circuit voltage $U_{oc}$ and the maximum output power $P_m$ of the solar cell.
+
+(4) Calculate the fill factor of the solar cell.
+
+\textbf{Solution 7.06}\quad \textbf{1.} Place the solar cell in a dark box, and connect the DC supply, the slide-wire rheostat, the voltmeter, the ammeter and the solar cell as in Fig.~7.06(a); measure the $I$--$U$ curve of the solar cell under forward bias.
+
+\begin{figbox}{7.06(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% left branch with source and rheostat
+\draw (0.4,0) -- (0.4,1.05);
+\draw (0.4,1.75) -- (0.4,3.2);
+\draw (0.15,1.75) -- (0.65,1.75);
+\draw (0.25,1.55) -- (0.55,1.55);
+\draw (0.25,1.25) -- (0.55,1.25);
+\draw (0.15,1.05) -- (0.65,1.05);
+\node[left] at (0.10,1.42) {$\varepsilon$};
+% top rail with rheostat R and ammeter
+\draw (0.4,3.2) -- (0.95,3.2);
+\draw (0.95,3.04) rectangle (1.75,3.36);
+\draw[->] (1.85,3.62) -- (1.50,3.40);
+\node[above] at (1.35,3.62) {$R$};
+\draw (1.75,3.2) -- (2.52,3.2);
+\draw (2.76,3.2) circle (0.24);
+\node at (2.76,3.20) {$A$};
+\draw (3.00,3.2) -- (3.80,3.2) -- (3.80,2.70);
+% solar cell
+\draw (3.55,2.70) -- (4.05,2.70);
+\draw (3.55,2.10) -- (4.05,2.10);
+\draw (3.80,2.10) -- (3.80,0);
+\draw (3.80,0) -- (0.4,0);
+% dark box
+\draw[dashed] (3.30,1.55) -- (5.20,1.55) -- (5.20,2.95) -- (3.30,2.95) -- cycle;
+\node[right] at (4.10,2.40) {\small solar cell};
+\node[right] at (5.25,2.25) {\small dark box};
+% voltmeter across the cell
+\draw (3.80,3.2) -- (3.10,3.2) -- (3.10,2.06);
+\draw (3.10,1.82) circle (0.24);
+\node at (3.10,1.82) {$V$};
+\draw (3.10,1.58) -- (3.10,0.60) -- (3.80,0.60);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.06(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.4,0) -- (0.4,1.05);
+\draw (0.4,1.75) -- (0.4,3.2);
+\draw (0.24,1.05) rectangle (0.56,1.75);
+\draw[->] (0.02,2.00) -- (0.36,1.66);
+\node[left] at (0.20,1.40) {$R$};
+\draw (0.4,3.2) -- (1.65,3.2);
+\draw (1.65,3.2) -- (2.52,3.2);
+\draw (2.76,3.2) circle (0.24);
+\node at (2.76,3.20) {$A$};
+\draw (3.00,3.2) -- (3.80,3.2) -- (3.80,2.70);
+% solar cell
+\draw (3.55,2.70) -- (4.05,2.70);
+\draw (3.55,2.10) -- (4.05,2.10);
+\draw (3.80,2.10) -- (3.80,0);
+\draw (3.80,0) -- (0.4,0);
+\node[right] at (4.12,2.40) {\small solar cell};
+\draw (3.80,3.2) -- (3.10,3.2) -- (3.10,2.06);
+\draw (3.10,1.82) circle (0.24);
+\node at (3.10,1.82) {$V$};
+\draw (3.10,1.58) -- (3.10,0.60) -- (3.80,0.60);
+% incident light
+\draw[->] (5.30,3.10) -- (4.35,2.75);
+\draw[->] (5.30,2.55) -- (4.35,2.42);
+\draw[->] (5.30,2.00) -- (4.35,2.08);
+\node[right] at (5.32,2.55) {\small light};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2.} Connect the solar cell as a source into the circuit, as shown in Fig.~7.06(b). The solar cell is placed under constant illumination (a 60\,W incandescent lamp is used for the illumination in this experiment); measure the current $I$ through the load resistance and the output voltage $U$ for different load resistances, calculate its output power $P$ under different loads, and hence determine the load resistance $R_m$ at the maximum output power $P_m$; obtain the short-circuit current $I_{sc}$ at $U=0$ and the open-circuit voltage $U_{oc}$ at $I=0$ from the $I$--$U$ graph, and calculate the fill factor $FF$.
+
+Experimental results:
+
+Under completely dark conditions, the current $I$ flowing through the solar cell and the voltage $U$ across the solar cell were measured when a forward bias was applied, and the $I$--$U$ graph shown in Fig.~7.06(c) was obtained. From the graph it can be seen that in the region below 4\,V the characteristic is non-linear, and that the $I$--$U$ relation fitted by a curve satisfies an exponential relation. When the voltage is larger, owing to the influence of other factors, $I$ and $U$ are basically in a linear relation.
+
+With no bias applied, the solar cell is placed under constant illumination. The solar cell is placed at a distance of 20\,cm from a 60\,W incandescent lamp.
+
+\begin{figbox}{7.06(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (6.6,0) node[below] {$U/\mathrm{V}$};
+\draw[->] (0,0) -- (0,5.6) node[left] {$I/\mathrm{mA}$};
+\foreach \i in {1,2,3,4,5,6} {
+  \draw (\i,0) -- (\i,-0.08);
+  \node[below] at (\i,-0.10) {\small \i};
+  \draw (0,\i) -- (-0.08,\i);
+  \node[left] at (-0.10,\i) {\small \i};
+}
+\node[below] at (0,-0.10) {\small 0};
+% characteristic curve
+\draw[line width=0.9pt] plot[smooth,tension=0.8] coordinates {
+(0,0.05) (0.5,0.05) (1,0.04) (1.5,0.04) (2,0.05) (2.5,0.06) (3,0.09)
+(3.4,0.14) (3.7,0.24) (4.0,0.45) (4.2,0.65) (4.4,0.95) (4.6,1.45)
+(4.8,2.2) (5.0,3.5) (5.2,5.3)};
+\end{tikzpicture}
+\par\smallskip
+{\small $I$--$U$ characteristic curve of the solar cell in complete darkness}
+\end{figbox}
+
+For different load resistances $R$, the output power $P$ of the solar cell is related to the load resistance $R$ as shown in Fig.~7.06(d), and the relation between the output current $I$ and the output voltage $U$ of the solar cell is shown in Fig.~7.06(e). From Fig.~7.06(e) it is found that the short-circuit current is $I_{sc}=1.85\,\mathrm{mA}$ and the open-circuit voltage is $U_{oc}=3.60\,\mathrm{V}$; from Fig.~7.06(d) it is found that when the load resistance is $R=1.8\,\mathrm{k}\Omega$ the maximum output power of the solar cell is $P_m=4.37\,\mathrm{mW}$. Finally the fill factor is calculated to be $FF=65.6\%$.
+
+\begin{figbox}{7.06(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (6.4,0) node[below] {$R/\mathrm{k}\Omega$};
+\draw[->] (0,0) -- (0,4.6);
+\node[left] at (-0.1,4.6) {\small $P/\mathrm{mW}$};
+\foreach \i in {10,20,30,40,50} {
+  \draw (\i/9.5,0) -- (\i/9.5,-0.08);
+  \node[below] at (\i/9.5,-0.10) {\small \i};
+}
+\foreach \p in {0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0,4.5,5.0} {
+  \draw (0,\p*0.85) -- (-0.08,\p*0.85);
+  \node[left] at (-0.10,\p*0.85) {\small \p};
+}
+\node[below] at (0,-0.10) {\small 0};
+\draw[line width=0.9pt] plot[smooth,tension=0.7] coordinates {
+(0.03,1.02) (0.06,2.13) (0.10,3.06) (0.15,3.53) (0.19,3.71) (0.25,3.49)
+(0.34,2.98) (0.47,2.38) (0.63,1.87) (0.95,1.36) (1.37,0.98) (2.11,0.66)
+(3.16,0.45) (4.21,0.34) (5.26,0.27)};
+\node[above] at (3.2,0.95) {\small $P$--$R$ curve};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.06(e)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (6.4,0) node[below] {$U/\mathrm{V}$};
+\draw[->] (0,0) -- (0,5.0) node[left] {$I/\mathrm{mA}$};
+\foreach \i in {1,2,3,4} {
+  \draw (\i*1.35,0) -- (\i*1.35,-0.08);
+  \node[below] at (\i*1.35,-0.10) {\small \i};
+}
+\foreach \j in {0.2,0.4,...,2.0} {
+  \draw (0,\j*2.1) -- (-0.08,\j*2.1);
+  \node[left] at (-0.10,\j*2.1) {\small \j};
+}
+\node[below] at (0,-0.10) {\small 0};
+% characteristic curve
+\draw[line width=0.9pt] plot[smooth,tension=0.7] coordinates {
+(0,3.885) (1.35,3.874) (2.70,3.843) (3.24,3.822) (3.78,3.570)
+(4.05,3.045) (4.32,2.310) (4.59,1.302) (4.73,0.714) (4.86,0)};
+% dashed construction for the maximum power point
+\draw[dashed] (3.24,0) -- (3.24,3.822);
+\draw[dashed] (0,3.822) -- (3.24,3.822);
+\node[below] at (3.24,-0.10) {\small $U_m$};
+\node[left] at (-0.10,3.822) {\small $I_m$};
+\node[above left] at (0.08,3.885) {\small $(0,\ 1.85)$};
+\node[above left] at (4.86,-0.02) {\small $(3.60,\ 0)$};
+\node[right] at (3.36,3.822) {\small $P_m$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+In measuring the volt--ampere characteristic curves of transistor devices such as PN junctions and solar cells, if pointer-type voltmeters and ammeters are used, then in order to eliminate the error introduced by the insufficiently large internal resistance of the pointer voltmeter, the best circuit measures the voltage by the compensation method. When a digital voltmeter is used, however, to measure the volt--ampere characteristic curve of a non-linear resistor, since the internal resistance of a digital voltmeter is mostly between $10^{6}\,\Omega$ and $10^{8}\,\Omega$, the compensation method need not be used; instead, a sampling resistor of suitable resistance may be connected in series in the circuit. The digital voltmeter can measure directly the voltage across the non-linear resistor and at the same time the voltage across the sampling resistor; if the resistance of the sampling resistor is known, the volt--ampere characteristic of the non-linear resistor can then be obtained.
+\end{commentary}
+
+\subsection*{Experiment 7.07 \quad Measurement of the internal resistance of a microammeter with a DC bridge, and its conversion into a voltmeter}
+
+\textbf{[Apparatus and materials available]}
+
+Three resistance boxes, one DC ammeter of range $100\,\mu$A, one variable resistor ($0$--$22\,\mathrm{k}\Omega$), one class-0.5 standard voltmeter (range $0$--$3$\,V), two switches, two type-A cells (1.5\,V), and a number of connecting wires.
+
+\textbf{[Requirements]}
+
+(1) Draw the circuit diagram for measuring the internal resistance of a meter with a DC bridge.
+
+(2) Write down the points for attention, the measurement steps and the calculation formula.
+
+(3) Measure the internal resistance of the meter.
+
+(4) Convert the $100\,\mu$A microammeter into a voltmeter of range 3\,V.
+
+(5) Find the percentage error when the reading of the converted meter is 2.40\,V.
+
+\textbf{Solution 7.07}\quad The circuit for measuring the internal resistance of the meter is shown in Fig.~7.07(a). A variable resistor is connected with one type-A cell to form a current-limiting circuit whose output current can be varied continuously; three resistance boxes, the ammeter to be measured and a switch are connected by wires into a bridge circuit. At the beginning, adjust the variable resistor so that the output current is rather small, and take the resistances of the bridge arms as $2$--$3\,\mathrm{k}\Omega$. Close and then break $S_1$, and observe whether the pointer of the meter deflects; if it does, adjust $R_4$ so that the pointer of the meter does not move when $S_1$ is closed and when it is opened. This shows that the potentials of the ends $a$ and $b$ of the bridge are equal. Then adjust the output current of the source to be larger, and continue the above process, observing whether the meter in the bridge stays still when $S_1$ is closed and opened. If the pointer does not move, the bridge is balanced. At this time $R_1$, $R_2$, $R_x$ and $R_4$ satisfy
+\[
+\frac{R_1}{R_2}=\frac{R_x}{R_4}.
+\]
+
+\begin{figbox}{7.07(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% bridge nodes
+\coordinate (A) at (2.6,3.6);
+\coordinate (B) at (2.6,0.6);
+\coordinate (C) at (0.6,2.1);
+\coordinate (D) at (4.6,2.1);
+\draw (C) -- (A) -- (D) -- (B) -- (C);
+% R1 on C-A
+\draw[fill=white,rotate around={56:(1.60,2.85)}] (1.25,2.70) rectangle (1.95,3.00);
+\node[left] at (1.20,3.05) {$R_1$};
+% R4 on A-D
+\draw[fill=white,rotate around={-56:(3.60,2.85)}] (3.25,2.70) rectangle (3.95,3.00);
+\node[right] at (3.98,3.05) {$R_4$};
+% Rx on C-B
+\draw[fill=white,rotate around={-56:(1.60,1.35)}] (1.25,1.20) rectangle (1.95,1.50);
+\node[left] at (1.20,1.15) {$R_x$};
+% R2 on D-B
+\draw[fill=white,rotate around={56:(3.60,1.35)}] (3.25,1.20) rectangle (3.95,1.50);
+\node[right] at (3.98,1.15) {$R_2$};
+% meter branch between A and B
+\draw (A) -- (2.6,2.75);
+\draw (2.6,2.45) circle (0.30);
+\draw[->] (2.45,2.45) -- (2.72,2.62);
+\node[below left] at (2.34,2.28) {\small $100\,\mu$A};
+\draw (2.6,2.15) -- (2.6,1.75);
+\draw (2.6,1.75) -- (2.86,1.92);
+\draw (2.6,1.45) -- (2.6,0.6);
+\node[right] at (2.90,1.80) {$S_1$};
+\fill (A) circle (0.05); \node[right] at (2.66,3.62) {$a$};
+\fill (B) circle (0.05); \node[right] at (2.66,0.62) {$b$};
+% source branch
+\draw (C) -- (0.6,-0.9) -- (1.15,-0.9);
+\draw (1.15,-0.9) rectangle (2.55,-0.55);
+\draw[->] (2.55,-0.20) -- (2.10,-0.50);
+\node[below] at (1.85,-0.95) {$R$};
+\draw (2.55,-0.72) -- (3.30,-0.72);
+\draw (3.30,-1.02) -- (3.30,-0.42);
+\draw (3.50,-0.88) -- (3.50,-0.56);
+\draw (3.50,-0.72) -- (4.10,-0.72);
+\draw (4.10,-0.72) -- (4.42,-0.50);
+\draw (4.42,-0.72) -- (4.6,-0.72) -- (4.6,2.1);
+\node[below] at (3.40,-1.05) {$\varepsilon$};
+\node[above] at (4.28,-0.40) {$S_2$};
+\end{tikzpicture}
+\end{figbox}
+
+Hence
+\[
+R_x=\frac{R_1\cdot R_4}{R_2}.
+\]
+This bridge is usually called a Thomson DC bridge.
+
+Experimental data: when the bridge is balanced, $R_1=2000\,\Omega$, $R_2=2000\,\Omega$, $R_4=1950\,\Omega$; then the internal resistance of the meter is $R_x=1950\,\Omega$.
+
+Connecting an additional resistance $R_M$ in series with the $100\,\mu$A ammeter of known internal resistance $R_g$ forms a voltmeter whose range is $U$, and then
+\[
+\frac{U}{R_M+R_g}=\frac{U_g}{R_g}.
+\]
+The design requires $U=3.000\,\mathrm{V}$, $R_g=R_x=1950\,\Omega$ and $U_g/R_g=100\,\mu$A, so that
+\[
+R_M=\frac{U}{100\times10^{-6}}-R_g=\frac{3.000}{100\times10^{-6}}-1950=28.1\times10^{3}\,(\Omega).
+\]
+
+Connecting the resistance $R_M$ in series as in Fig.~7.07(b) forms a voltmeter of range 3\,V. The variable resistor, a type-A cell, the standard voltmeter and the self-made voltmeter are connected into the circuit of Fig.~7.07(c). The variable resistor in the voltage-divider circuit is adjusted; when the reading of the standard voltmeter is 2.450\,V, the reading of the self-made voltmeter is 2.40\,V. Then the percentage difference between the readings of the self-made meter and of the standard meter is $2\%$.
+
+\begin{figbox}{7.07(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.3,0.9) circle (0.06);
+\draw (0.36,0.9) -- (0.64,0.9);
+\draw (0.90,0.90) circle (0.26);
+\node at (0.90,0.90) {$\mu$A};
+\draw (1.16,0.9) -- (1.75,0.9);
+\draw (1.75,0.74) rectangle (2.75,1.06);
+\node[above] at (2.25,1.10) {$R_M$};
+\draw (2.75,0.9) -- (3.30,0.9);
+\draw (3.30,0.9) circle (0.06);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.07(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.4,0) -- (0.4,1.20);
+\draw (0.4,1.90) -- (0.4,3.0);
+\draw (0.15,1.90) -- (0.65,1.90);
+\draw (0.25,1.70) -- (0.55,1.70);
+\draw (0.25,1.40) -- (0.55,1.40);
+\draw (0.15,1.20) -- (0.65,1.20);
+\node[left] at (0.10,1.55) {$E$};
+% divider R
+\draw (0.4,3.0) -- (1.20,3.0) -- (1.20,0) -- (0.4,0);
+\draw (1.02,1.10) rectangle (1.38,2.90);
+\node[right] at (1.42,2.80) {$R$};
+% slider
+\draw[->] (1.85,2.00) -- (1.40,2.00);
+% rails to the meters
+\draw (1.20,2.00) -- (3.90,2.00);
+\draw (1.20,0) -- (3.90,0);
+% standard voltmeter
+\draw (2.40,2.00) -- (2.40,1.36);
+\draw (2.40,1.10) circle (0.26);
+\node at (2.40,1.10) {$V_0$};
+\draw (2.40,0.84) -- (2.40,0);
+\node[below] at (2.40,-0.10) {\small standard meter};
+% meter under calibration
+\draw (3.40,2.00) -- (3.40,1.36);
+\draw (3.40,1.10) circle (0.26);
+\node at (3.40,1.10) {$V$};
+\draw (3.40,0.84) -- (3.40,0);
+\node[below] at (3.45,-0.42) {\small meter under calibration};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.08 \quad Conversion of a meter head into a multirange ammeter}
+
+Try to convert a meter head of internal resistance $360\,\Omega$ and range $500\,\mu$A into a multirange ammeter, with current ranges $I_1=100\,\mathrm{mA}$, $I_2=10\,\mathrm{mA}$ and $I_3=1\,\mathrm{mA}$.
+
+\textbf{[Apparatus and materials available]}
+
+One DC ammeter (range $0$--$500\,\mu$A, internal resistance $R_g=360\,\Omega$), three resistance boxes, a number of connecting wires, and one multimeter (used as a standard meter).
+
+\textbf{[Requirements]}
+
+(1) Draw the circuit diagram of the converted multirange ammeter.
+
+(2) Calculate the values of the shunt resistances $R_1$, $R_2$, $R_3$.
+
+(3) Connect the $500\,\mu$A meter head and the shunt resistances with wires to form a multirange ammeter.
+
+(4) Use the 1\,mA range of the multimeter as the standard value to calibrate the 1\,mA range of the converted ammeter.
+
+\textbf{Solution 7.08}\quad \textbf{1. Design of the current ranges and calculation of the shunt resistances}
+
+Connecting a shunt resistance $R_s$ in parallel with the ammeter can expand the range $I_g$ to $I$, that is,
+\[
+(I-I_g)\cdot R_s=I_g\cdot R_g,
+\]
+\[
+I=I_g\frac{R_g+R_s}{R_s}=NI_g.
+\]
+Hence, after a shunt resistance $R_s$ is connected in parallel with the ammeter, the current range is enlarged by a factor $N=(R_g+R_s)/R_s$. Conversely, if the enlarged range $I$ is known, the value of the required shunt resistance $R_s$ can be calculated, and from the above formula one obtains
+\[
+R_s=\frac{I_gR_g}{I-I_g}=\frac{R_g}{N-1}.
+\]
+
+The current ranges of a multimeter usually comprise several ranges, and the so-called closed shunt circuit shown in Fig.~7.08(a) is commonly adopted. In the figure the resistances $R_1$, $R_2$, $R_3$ are connected in series with one another and then connected in parallel with the meter head; $I_1$, $I_2$, $I_3$ are three different extended ranges, among which the range $I_3$ has the smallest current.
+
+The steps for calculating the shunt resistances are as follows.
+
+(1) According to the range $I_3$ of smallest current, first calculate the total resistance $R_s$ of the shunts. Because
+\[
+R_s(I_3-I_g)=R_gI_g,
+\]
+therefore
+\[
+R_s=\frac{R_gI_g}{I_3-I_g}.
+\]
+
+(2) Calculate the resistance values of the individual shunts. For the range $I_1$, the shunt resistance is $R_{s1}$, and $R_{s1}$ is in parallel with $(R_g+R_s-R_{s1})$, so
+\[
+R_{s1}(I_1-I_g)=(R_g+R_s-R_{s1})I_g,
+\]
+and hence
+\[
+R_{s1}=\frac{I_g(R_g+R_s)}{I_1}.
+\]
+From the expression for $R_s$ there is also
+\[
+I_g(R_g+R_s)=R_sI_3,
+\]
+so $R_{s1}$ can be expressed by the simpler formula
+\[
+R_{s1}=\frac{R_sI_3}{I_1}.
+\]
+In the same way, for the shunt resistance $R_{s2}$ of the range $I_2$ one obtains
+\[
+R_{s2}=\frac{R_sI_3}{I_2}.
+\]
+
+(3) Calculation of the values of the elements. From Fig.~7.08(a),
+\[
+R_1=R_{s1},\qquad R_2=R_{s2}-R_{s1},\qquad R_3=R_s-R_{s2}.
+\]
+Given $R_g=360\,\Omega$, $I_g=500\,\mu$A, $I_3=1\,\mathrm{mA}$, $I_2=10\,\mathrm{mA}$ and $I_1=100\,\mathrm{mA}$, then
+\[
+R_s=\frac{I_gR_g}{I_3-I_g}=\frac{360\times0.5}{1-0.5}=360\,(\Omega),
+\]
+\[
+R_1=\frac{R_sI_3}{I_1}=\frac{360\times1}{100}=3.6\,(\Omega),
+\]
+\[
+R_2=\frac{R_sI_3}{I_2}-R_1=\frac{360\times1}{10}-3.6=32.4\,(\Omega),
+\]
+\[
+R_3=\frac{R_sI_3}{I_3}-(R_1+R_2)=\frac{360\times1}{1}-(3.6+32.4)=324\,(\Omega).
+\]
+
+\begin{figbox}{7.08(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% top rail with meter
+\draw (0.8,4.2) -- (3.00,4.2);
+\draw (3.28,4.2) circle (0.28);
+\draw[->] (3.06,4.32) -- (3.40,4.14);
+\node[above] at (3.28,4.54) {$R_g$};
+\draw (3.56,4.2) -- (5.5,4.2);
+\node[above] at (4.35,4.32) {$I_g$};
+\draw[->] (4.55,4.20) -- (4.90,4.20);
+% side connections
+\draw (0.8,4.2) -- (0.8,2.6);
+\draw (0.8,2.6) -- (1.05,2.6);
+\draw (5.5,4.2) -- (5.5,2.6);
+\draw (5.5,2.6) -- (5.25,2.6);
+% shunt chain
+\draw (1.05,2.44) rectangle (2.15,2.76);
+\node[below] at (1.60,2.38) {$R_1$};
+\draw (2.15,2.6) -- (2.55,2.6);
+\draw (2.55,2.44) rectangle (3.65,2.76);
+\node[below] at (3.10,2.38) {$R_2$};
+\draw (3.65,2.6) -- (4.05,2.6);
+\draw (4.05,2.44) rectangle (5.25,2.76);
+\node[below] at (4.65,2.38) {$R_3$};
+% taps
+\fill (2.35,2.6) circle (0.05);
+\draw (2.35,2.6) -- (2.35,1.55);
+\fill (2.35,1.55) circle (0.05);
+\node[below] at (2.35,1.45) {$I_1$};
+\fill (3.85,2.6) circle (0.05);
+\draw (3.85,2.6) -- (3.85,1.85);
+\fill (3.85,1.85) circle (0.05);
+\node[right] at (3.92,1.80) {$I_2$};
+% common terminal and I3 terminal
+\draw (0.8,2.6) -- (0.8,1.35);
+\fill (0.8,1.35) circle (0.05);
+\node[below] at (0.75,1.25) {$-$};
+\draw (5.5,2.6) -- (5.5,1.35);
+\fill (5.5,1.35) circle (0.05);
+\node[right] at (5.56,1.30) {$I_3\,(I_g)$};
+% selector
+\draw[dashed] (4.55,1.35) -- (5.5,1.35);
+\draw (4.55,1.35) circle (0.06);
+\draw (4.55,1.35) -- (5.05,1.75);
+\node[below] at (4.50,1.24) {$+$};
+\end{tikzpicture}
+\end{figbox}
+
+(4) The converted 1\,mA ammeter is connected in series with the standard meter (the 1\,mA range of the multimeter) to form the circuit of Fig.~7.08(b). On the 1\,mA range, 6 to 7 points must be checked, and these must include the two points 0 and full scale. During the calibration the current in the circuit is adjusted so that the reading of the meter under calibration is an integer, and the reading of the standard meter is recorded at the same time; finally the calibration value of the meter under calibration is obtained: reading of the standard meter minus reading of the meter to be calibrated equals the calibration value.
+
+\begin{figbox}{7.08(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.4,0.9) -- (0.4,1.40);
+\draw (0.4,2.10) -- (0.4,2.60);
+\draw (0.15,2.10) -- (0.65,2.10);
+\draw (0.25,1.90) -- (0.55,1.90);
+\draw (0.25,1.60) -- (0.55,1.60);
+\draw (0.15,1.40) -- (0.65,1.40);
+\node[left] at (0.10,1.75) {$E$};
+\draw (0.4,2.6) -- (0.9,2.6);
+% rheostat R1
+\draw (0.9,2.44) rectangle (2.10,2.76);
+\draw[->] (2.10,3.30) -- (1.85,2.80);
+\node[above] at (1.45,2.80) {$R_1$};
+\draw (2.10,2.6) -- (3.27,2.6);
+% meter under calibration
+\draw (3.53,2.6) circle (0.26);
+\node at (3.53,2.60) {$A$};
+\draw (3.79,2.6) -- (4.82,2.6);
+\node[above] at (3.50,2.90) {\small calibrated meter};
+% standard meter
+\draw (5.08,2.6) circle (0.26);
+\node at (5.08,2.60) {$A_0$};
+\draw (5.34,2.6) -- (5.9,2.6) -- (5.9,1.05);
+\node[above] at (5.15,2.90) {\small standard meter};
+% R2 at the bottom
+\draw (5.9,1.05) -- (5.9,0.75);
+\draw (5.55,0.59) rectangle (5.9,0.91);
+\node[right] at (5.95,0.75) {$R_2$};
+\draw (5.55,0.75) -- (0.4,0.75);
+\draw (0.4,0.75) -- (0.4,0.90);
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.09 \quad Conversion of a microammeter into an ohmmeter}
+
+Try to convert a $200\,\mu$A microammeter into an ohmmeter with a mid-scale resistance of $1500\,\Omega$.
+
+\textbf{[Apparatus and materials available]}
+
+One $200\,\mu$A DC ammeter (internal resistance unknown), a 1.5\,V (DC) supply, three resistance boxes, two single-pole switches, a number of connecting wires, and one sheet of rectangular coordinate paper.
+
+\textbf{[Requirements]}
+
+(1) Measure the internal resistance $R_g$ of the microammeter.
+
+(2) Draw the circuit diagram of the ohmmeter; it is required that the error caused by a $20\%$ decrease of the electromotive force of the supply be no greater than $5\%$.
+
+(3) Build the ohmmeter and make a calibration curve.
+
+\textbf{Solution 7.09}\quad \textbf{1. Measurement of the internal resistance $R_g$ of the microammeter}
+
+From the given experimental conditions it is known that the internal resistance of the $200\,\mu$A ammeter is measured with the circuit shown in Fig.~7.09(a), the bridge method being used to measure the internal resistance of the ammeter; the measurement procedure is omitted. Experimental result: the internal resistance of the $200\,\mu$A ammeter is $R'_g=975\,\Omega$.
+
+\textbf{2. Drawing of the ohmmeter circuit}
+
+The mid-scale resistance is the value of the resistance measured when the pointer of the ohmmeter points to the centre of the scale of the meter head, that is, it is equal to the total internal resistance of the ohmmeter; at this time the measurement error of the ohmmeter is the smallest.
+
+In this problem the mid-scale resistance of the ohmmeter is required to be $1500\,\Omega$, that is, when the resistance to be measured is $R_x=0$ (the two test rods short-circuited) the pointer of the meter head has a full-scale deflection, and the current in the circuit at this time is
+\[
+I_g=\frac{E}{1500}=\frac{1.50}{1500}=1.00\,(\mathrm{mA}).
+\]
+Therefore the $200\,\mu$A meter head must first be converted into an ammeter of range 1.00\,mA.
+
+The circuit for the conversion into an ammeter of range 1\,mA is shown inside the dashed frame in Fig.~7.09(a). By Ohm's law,
+\[
+(I_g-I'_g)\cdot R_1=I'_g\cdot R'_g,
+\]
+so the shunt resistance $R_1$ for the conversion of the meter $I'_g$ is
+\[
+R_1=\frac{I'_g\cdot R'_g}{I_g-I'_g}=\frac{200\times10^{-6}\times975}{800\times10^{-6}}=243.8\,(\Omega).
+\]
+Let the resistance of $R'_g$ and $R_1$ connected in parallel be $R_T$; then $R_T$ is
+\[
+R_T=\frac{I'_g\cdot R'_g}{I_g}=\frac{200\times10^{-6}\times975}{1000\times10^{-6}}=195\,(\Omega).
+\]
+
+\begin{figbox}{7.09(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.4,0.2) -- (0.4,1.30);
+\draw (0.4,2.00) -- (0.4,3.2);
+\draw (0.15,2.00) -- (0.65,2.00);
+\draw (0.25,1.80) -- (0.55,1.80);
+\draw (0.25,1.50) -- (0.55,1.50);
+\draw (0.15,1.30) -- (0.65,1.30);
+\node[left] at (0.10,1.65) {$E$};
+\draw (0.4,3.2) -- (1.15,3.2);
+% dashed frame with meter and R1
+\draw[dashed] (1.15,2.55) rectangle (3.05,3.85);
+\draw (1.15,3.2) -- (1.72,3.2);
+\draw (1.98,3.2) circle (0.26);
+\draw[->] (1.80,3.38) -- (2.05,3.22);
+\draw (2.24,3.2) -- (2.45,3.2);
+\draw (2.45,3.04) rectangle (3.05,3.36);
+\node[above] at (2.75,3.40) {$R_1$};
+\node[below] at (1.72,2.86) {\small $I'_g$};
+\draw (3.05,3.2) -- (4.30,3.2);
+% series resistor R
+\draw (4.30,3.04) rectangle (5.10,3.36);
+\node[above] at (4.70,3.40) {$R$};
+\draw (5.10,3.2) -- (5.7,3.2) -- (5.7,2.30);
+\draw (5.7,2.30) -- (5.7,0.2) -- (3.60,0.2);
+% unknown resistance Rx
+\draw (3.60,0.04) rectangle (2.60,0.36);
+\node[below] at (3.10,-0.02) {$R_x$};
+\draw (2.60,0.2) -- (0.4,0.2);
+\end{tikzpicture}
+\end{figbox}
+
+So the series resistance is
+\[
+R=1500-R_T=1500-195=1305\,(\Omega).
+\]
+If the voltage of the DC supply falls to 1.2\,V and the test rods of the ohmmeter are short-circuited, the indication of the ammeter also falls by $20\%$; if at this time the resistance of the resistance box $R_1$ is increased to $R'_1$, the current indication $I'_g$ of the ammeter can still be brought to full scale. The value of $R'_1$ is calculated below, and the mid-scale resistance of the ohmmeter after zero adjustment is also calculated.
+
+When the ammeter $I'_g$ is at full scale, the voltage is
+\[
+U_{ab}=I'_g\cdot R'_g=200\times10^{-6}\times975=0.195\,(\mathrm{V}),
+\]
+and at this time the current through the resistance $R$ is
+\[
+I'=\frac{E-U_{ab}}{R}=\frac{1.2-0.195}{1305}=0.770\,(\mathrm{mA}).
+\]
+The value of the parallel resistance $R'_1$ can then be calculated as
+\[
+R'_1=\frac{U_{ab}}{I'-I'_g}=\frac{0.195}{(0.770-0.200)\times10^{-3}}=342\,(\Omega).
+\]
+The parallel resistance of $R'_1$ and $R'_g$ is
+\[
+\frac{U_{ab}}{I'}=\frac{0.195}{0.770\times10^{-3}}=253.2\,(\Omega).
+\]
+Hence, when the supply voltage has fallen to 1.2\,V and zero adjustment has been made by short-circuiting (full-scale indication of the ammeter), the mid-scale resistance of the ohmmeter is $1305+253.2=1558.2\,\Omega$. Compared with the mid-scale resistance $1500\,\Omega$ for the original 1.5\,V supply, the percentage difference is $3.9\%$, which is less than $5\%$.
+
+\textbf{3. Calibration of the ohmmeter}
+
+The circuit of Fig.~7.09(b) is used to calibrate the self-made ohmmeter. On the scale plate of the self-made ohmmeter, the relation between the panel current values and the corresponding resistance values can be marked according to the supply voltage 1.5\,V and the mid-scale resistance $1500\,\Omega$ (calculated by Ohm's law); in this way it is assembled into an ohmmeter. A resistance box is used to vary the resistance to be measured, and the relation between the indication of the ohmmeter and the standard value (the reading of the resistance box) is found in order to calibrate the self-made ohmmeter; 10 to 12 data points are required, and these must include the two points of zero resistance and of the mid-scale resistance. A calibration curve is drawn on rectangular coordinate paper, that is, a curve with the indication of the ohmmeter as the independent variable and the correction value $\Delta R$ as the dependent variable.
+
+\begin{figbox}{7.09(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (0.6,0.4) -- (0.6,2.8) -- (1.30,2.8);
+\draw (1.90,2.8) circle (0.30);
+\node at (1.90,2.80) {$\Omega$};
+\draw (2.20,2.8) -- (3.6,2.8) -- (3.6,2.05);
+\draw (3.6,2.05) -- (3.6,1.65);
+\draw (3.6,1.65) -- (3.25,1.90);
+\draw (3.6,1.25) -- (3.6,0.4);
+\node[right] at (3.65,1.80) {$K$};
+\draw (3.6,0.4) -- (2.55,0.4);
+\draw (2.55,0.24) rectangle (1.35,0.56);
+\node[below] at (1.95,0.16) {\small resistance box};
+\draw (1.35,0.4) -- (0.6,0.4);
+\fill (0.6,0.4) circle (0.05);
+\fill (3.6,0.4) circle (0.05);
+\node[below left] at (0.55,0.35) {$a$};
+\node[below right] at (3.65,0.35) {$b$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.10 \quad Accurate measurement of the internal resistance of a DC microammeter by two bridge-balance methods}
+
+\textbf{[Apparatus and materials available]}
+
+Three resistance boxes $R_1$, $R_3$, $R_4$ of certain error (none of which can be used as an accurate resistance), one resistance box $R_2$ of accurate value, a 1.5\,V stabilised supply, two single-pole switches, one DC ammeter of internal resistance about $2000\,\Omega$ and range $100\,\mu$A, and one slide-wire rheostat.
+
+\textbf{[Requirements]}
+
+(1) Write down the experimental method and the calculation formula.
+
+(2) Draw the experimental circuit diagram.
+
+(3) Measure the experimental result (the internal resistance $R_g$ of the meter).
+
+\textbf{Solution 7.10}
+
+\textbf{Method 1}
+
+\textbf{1.} The method of Solution 7.07 (this method is often called the Thomson bridge method) is used to measure the internal resistance $R_g$ of the microammeter; the circuit is shown in Fig.~7.10(a), that is, one arm of the bridge is connected to the microammeter and the other three arms to $R_1$, $R_3$ and $R_4$, a switch is connected across the diagonal, and the bridge is adjusted to balance. Since the accurate resistance values of $R_1$, $R_3$ and $R_4$ are not known, $R_g$ cannot be calculated.
+
+\textbf{2.} The substitution method is then used to measure $R_g$ accurately. Since the resistance of the resistance box $R_2$ is accurate, it is used to replace the microammeter, the microammeter serving as the null detector of the bridge, as shown in Fig.~7.10(b). $R_1$, $R_3$ and $R_4$ are all kept unchanged, and $R_2$ is adjusted so that the microammeter indicates zero; the value of $R_2$ at this time is then the internal resistance $R_g$ of the microammeter.
+
+\begin{figbox}{7.10(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (T) at (2.6,3.6);
+\coordinate (B) at (2.6,0.6);
+\coordinate (L) at (0.6,2.1);
+\coordinate (Rt) at (4.6,2.1);
+\draw (L) -- (T) -- (Rt) -- (B) -- (L);
+% microammeter on T-L
+\fill[white] (1.30,2.63) circle (0.26);
+\draw (1.30,2.63) circle (0.26);
+\node at (1.30,2.63) {\small $\mu$A};
+% R3 on T-Rt
+\draw[fill=white,rotate around={-56:(3.60,2.85)}] (3.25,2.70) rectangle (3.95,3.00);
+\node[right] at (3.98,3.05) {$R_3$};
+% R1 on L-B
+\draw[fill=white,rotate around={-56:(1.60,1.35)}] (1.25,1.20) rectangle (1.95,1.50);
+\node[left] at (1.20,1.15) {$R_1$};
+% R4 on B-Rt
+\draw[fill=white,rotate around={56:(3.60,1.35)}] (3.25,1.20) rectangle (3.95,1.50);
+\node[right] at (3.98,1.15) {$R_4$};
+% diagonal with S2
+\draw (T) -- (2.6,2.55);
+\draw (2.6,2.55) -- (2.95,2.30);
+\draw (2.6,1.95) -- (2.6,0.6);
+\node[right] at (2.98,2.24) {$S_2$};
+% source branch
+\draw (L) -- (0.6,-0.9) -- (1.15,-0.9);
+\draw (1.15,-0.9) rectangle (2.55,-0.55);
+\draw[->] (2.55,-0.20) -- (2.10,-0.50);
+\node[below] at (1.85,-0.95) {$R_0$};
+\draw (2.55,-0.72) -- (3.30,-0.72);
+\draw (3.30,-1.02) -- (3.30,-0.42);
+\draw (3.50,-0.88) -- (3.50,-0.56);
+\draw (3.50,-0.72) -- (4.10,-0.72);
+\draw (4.10,-0.72) -- (4.42,-0.50);
+\draw (4.42,-0.72) -- (4.6,-0.72) -- (4.6,2.1);
+\node[below] at (3.40,-1.05) {$\varepsilon$};
+\node[above] at (4.28,-0.40) {$S_1$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.10(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt,scale=0.92,every node/.style={scale=0.92}]
+\coordinate (T) at (2.6,3.6);
+\coordinate (B) at (2.6,0.6);
+\coordinate (L) at (0.6,2.1);
+\coordinate (Rt) at (4.6,2.1);
+\draw (L) -- (T) -- (Rt) -- (B) -- (L);
+% R2 in the arm that held the microammeter
+\draw[fill=white,rotate around={56:(1.60,2.85)}] (1.25,2.70) rectangle (1.95,3.00);
+\node[left] at (1.20,3.05) {$R_2$};
+% R3 on T-Rt
+\draw[fill=white,rotate around={-56:(3.60,2.85)}] (3.25,2.70) rectangle (3.95,3.00);
+\node[right] at (3.98,3.05) {$R_3$};
+% R1 on L-B
+\draw[fill=white,rotate around={-56:(1.60,1.35)}] (1.25,1.20) rectangle (1.95,1.50);
+\node[left] at (1.20,1.15) {$R_1$};
+% R4 on B-Rt
+\draw[fill=white,rotate around={56:(3.60,1.35)}] (3.25,1.20) rectangle (3.95,1.50);
+\node[right] at (3.98,1.15) {$R_4$};
+% microammeter with S2 in the diagonal
+\draw (T) -- (2.6,3.10);
+\fill[white] (2.6,2.84) circle (0.26);
+\draw (2.6,2.84) circle (0.26);
+\node at (2.6,2.84) {\small $\mu$A};
+\draw (2.6,2.58) -- (2.6,2.30);
+\draw (2.6,2.30) -- (2.95,2.05);
+\draw (2.6,1.70) -- (2.6,0.6);
+\node[right] at (2.98,1.99) {$S_2$};
+% source branch
+\draw (L) -- (0.6,-0.9) -- (1.15,-0.9);
+\draw (1.15,-0.9) rectangle (2.55,-0.55);
+\draw[->] (2.55,-0.20) -- (2.10,-0.50);
+\node[below] at (1.85,-0.95) {$R_0$};
+\draw (2.55,-0.72) -- (3.30,-0.72);
+\draw (3.30,-1.02) -- (3.30,-0.42);
+\draw (3.50,-0.88) -- (3.50,-0.56);
+\draw (3.50,-0.72) -- (4.10,-0.72);
+\draw (4.10,-0.72) -- (4.42,-0.50);
+\draw (4.42,-0.72) -- (4.6,-0.72) -- (4.6,2.1);
+\node[below] at (3.40,-1.05) {$\varepsilon$};
+\node[above] at (4.28,-0.40) {$S_1$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{Method 2}
+
+The Thomson bridge method is used to measure $R_g$, as shown in Fig.~7.10(a). After the bridge has been balanced, $R_2$ is used in turn to replace $R_1$, $R_3$ and $R_4$, and the bridge is balanced again so as to obtain their accurate values $R'_1$, $R'_3$ and $R'_4$; then, using the formula
+\[
+\frac{R_g}{R_1}=\frac{R'_3}{R'_4},
+\]
+one obtains
+\[
+R_g=\frac{R'_3}{R'_4}\cdot R'_1.
+\]
+The experimental data are omitted.

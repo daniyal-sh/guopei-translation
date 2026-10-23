@@ -1,0 +1,692 @@
+\emph{Another solution of parts (c) and (d):}
+
+The longitudinal standing wave in the crystal wafer has a displacement node at $x=b/2$. This standing wave may be regarded as the superposition of two waves travelling in opposite directions; hence its displacement and velocity must have the following form:
+\begin{align}
+\xi(x,t) &= 2\xi_m\sin k\left(x-\frac{b}{2}\right)\cos\omega t\notag\\
+&= \xi_m\left[\sin k\left(x-\frac{b}{2}-ut\right)+\sin k\left(x-\frac{b}{2}+ut\right)\right] \tag{B6}
+\end{align}
+\begin{align}
+v(x,t) &= -ku\xi_m\left[\cos k\left(x-\frac{b}{2}-ut\right)-\cos k\left(x-\frac{b}{2}+ut\right)\right]\notag\\
+&= -2\omega\xi_m\sin k\left(x-\frac{b}{2}\right)\sin\omega t \tag{B7}
+\end{align}
+where $\omega=ku$; the first and the second term in the square brackets represent respectively the wave travelling in the $+x$ direction and the wave travelling in the $-x$ direction. Note that if $\xi_m=\pm\xi_0$, equation (B6) is the same as equation (B3).
+
+For a wave travelling in the $-x$ direction, the velocity $v$ in equations (A1a) and (A1b) must be replaced by $-v$; hence we have
+\begin{align}
+S &= -\frac{v}{u}\quad\text{and}\quad p=\rho uv &&\text{(wave travelling in the $+x$ direction)} \tag{B8}\\
+S &= \frac{v}{u}\quad\text{and}\quad p=-\rho uv &&\text{(wave travelling in the $-x$ direction)} \tag{B9}
+\end{align}
+
+The strain and the pressure of part (b) are then
+\begin{align}
+S(x,t) &= -k\xi_m\left[-\cos k\left(x-\frac{b}{2}-ut\right)-\cos k\left(x-\frac{b}{2}+ut\right)\right]\notag\\
+&= 2k\xi_m\cos k\left(x-\frac{b}{2}\right)\cos\omega t \tag{B10}
+\end{align}
+\begin{align}
+p(x,t) &= -\rho u\omega\xi_m\left[\cos k\left(x-\frac{b}{2}-ut\right)+\cos k\left(x-\frac{b}{2}+ut\right)\right]\notag\\
+&= -2\rho u\omega\xi_m\cos k\left(x-\frac{b}{2}\right)\cos\omega t \tag{B11}
+\end{align}
+
+Note that $v$, $S$ and $p$ can also be obtained, as in part (b), by differentiating $\xi$.
+
+Since the two end faces of the wafer ($x=0$ and $x=b$) are free, the stress or pressure at the two end faces must vanish at every instant. By equation (B11) this necessarily requires $\cos(kb/2)=0$, that is,
+\begin{equation}
+kb=\frac{\omega b}{u}=\frac{2\pi f b}{\lambda f}=n\pi,\qquad n=1,3,5,\dots \tag{B12}
+\end{equation}
+Expressed in terms of the wavelength $\lambda$, equation (B12) becomes
+\begin{equation}
+\lambda=\frac{2b}{n},\qquad n=1,3,5,\dots \tag{B13}
+\end{equation}
+The frequencies are then
+\begin{equation}
+f=\frac{u}{\lambda}=\frac{nu}{2b}=\frac{n}{2b}\sqrt{\frac{Y}{\rho}},\qquad n=1,3,5,\dots \tag{B14}
+\end{equation}
+This result is the same as that given by equations (B4) and (B5).
+
+(e) From equations (5a) and (5b) of the problem, the piezoelectric effect leads to the following equations:
+\begin{equation}
+T=Y(S-d_pE) \tag{B15}
+\end{equation}
+\begin{equation}
+\sigma=Yd_pS+\varepsilon_T\left(1-Y\frac{d_p^2}{\varepsilon_T}\right)E \tag{B16}
+\end{equation}
+For any longitudinal standing wave in the wafer, $x=b/2$ is a displacement node; therefore the displacement $\xi$ and the strain $S$ must have the forms of equations (B6) and (B10):
+\begin{equation}
+\xi(x,t)=\xi_m\sin k\left(x-\frac{b}{2}\right)\cos(\omega t+\varphi) \tag{B17}
+\end{equation}
+\begin{equation}
+S(x,t)=k\xi_m\cos k\left(x-\frac{b}{2}\right)\cos(\omega t+\varphi) \tag{B18}
+\end{equation}
+Here a phase constant $\varphi$ has been added to the time-dependent factor.
+
+It has been assumed that the electric field between the electrodes is uniform and depends only on time:
+\begin{equation}
+E(x,t)=\frac{V(t)}{h}=\frac{V_m\cos\omega t}{h} \tag{B19}
+\end{equation}
+Substituting equations (B18) and (B19) into equation (B15) gives
+\begin{equation}
+T=Y\left[k\xi_m\cos k\left(x-\frac{b}{2}\right)\cos(\omega t+\varphi)-\frac{d_pV_m}{h}\cos\omega t\right] \tag{B20}
+\end{equation}
+Since the two end faces of the wafer ($x=0$ and $x=b$) are free, the stress $T$ at the two end faces must vanish at every instant; this necessarily requires $\varphi=0$ and
+\begin{equation}
+k\xi_m\cos\frac{kb}{2}=d_p\frac{V_m}{h} \tag{B21}
+\end{equation}
+Since $\varphi=0$, it follows from equations (B16), (B18) and (B19) that the surface charge density has the same time dependence and may be written as
+\begin{equation}
+\sigma(x,t)=\sigma(x)\cos\omega t \tag{B22}
+\end{equation}
+The factor $\sigma(x)$ depending on $x$ may be written as
+\begin{align}
+\sigma(x) &= Yd_pk\xi_m\cos k\left(x-\frac{b}{2}\right)+\varepsilon_T\left(1-Y\frac{d_p^2}{\varepsilon_T}\right)\frac{V_m}{h}\notag\\
+&= \left[Y\frac{d_p^2}{\cos\dfrac{kb}{2}}\cos k\left(x-\frac{b}{2}\right)+\varepsilon_T\left(1-Y\frac{d_p^2}{\varepsilon_T}\right)\right]\frac{V_m}{h} \tag{B23}
+\end{align}
+(f) At time $t$ the total surface charge $Q(t)$ on the lower electrode is obtained by integrating $\sigma(x,t)$ of equation (B22) over the surface of the electrode. The result is
+\begin{align*}
+\frac{Q(t)}{V(t)} &= \frac{1}{V(t)}\int_0^b\sigma(x,t)w\,\dd x=\frac{1}{V_m}\int_0^b\sigma(x)w\,\dd x\\
+&= \frac{w}{h}\int_0^b\left[Y\frac{d_p^2}{\cos\dfrac{kb}{2}}\cos k\left(x-\frac{b}{2}\right)+\varepsilon_T\left(1-Y\frac{d_p^2}{\varepsilon_T}\right)\right]\dd x\\
+&= \left(\varepsilon_T\frac{bw}{h}\right)\left[Y\frac{d_p^2}{\varepsilon_T}\left(\frac{2}{kb}\tan\frac{kb}{2}\right)+\left(1-Y\frac{d_p^2}{\varepsilon_T}\right)\right]\\
+&= C_0\left[\alpha^2\left(\frac{2}{kb}\tan\frac{kb}{2}\right)+(1-\alpha^2)\right]
+\end{align*}
+where
+\begin{equation*}
+C_0=\varepsilon_T\frac{bw}{h}
+\end{equation*}
+\begin{equation}
+\alpha^2=Y\frac{d_p^2}{\varepsilon_T}=\frac{(2.25\times10^{12})^2}{1.27\times10^{-11}\times4.06\times10^{-11}}=9.82\times10^{-3} \tag{B25}
+\end{equation}
+(the constant $\alpha$ is called the electromechanical coupling coefficient).
+
+\begin{note}
+The result $C_0=\varepsilon_Tbw/h$ may be seen from equation (5) of the problem by considering the static limit $k=0$: when $x\ll1$, $\tan x\approx x$, and hence
+\begin{equation}
+\lim_{k\to0}\frac{Q(t)}{V(t)}\approx C_0\left[\alpha^2+(1-\alpha^2)\right]=C_0 \tag{B26}
+\end{equation}
+\end{note}
+
+Obviously, the constant $C_0$ is just the capacitance of the parallel-plate capacitor formed by the two electrodes (of area $bw$) with the quartz wafer (of thickness $h$ and permittivity $\varepsilon_T$) as dielectric, and so it equals $\varepsilon_Tbw/h$.
+
+\subsection*{Problem 3}
+
+\textbf{Part A: Neutrino mass and neutron decay}
+
+A free neutron of mass $m_n$, at rest in the laboratory frame, decays into three non-interacting particles: a proton, an electron and an antineutrino. The rest mass of the proton is $m_p$, and the rest mass $m_\nu$ of the antineutrino is assumed to be non-zero but much smaller than the rest mass $m_e$ of the electron. The speed of light in vacuum is denoted by $c$. The measured values are as follows:
+\begin{align*}
+m_n &= \SI{939.56563}{MeV/c^2}\\
+m_p &= \SI{938.27231}{MeV/c^2}\\
+m_e &= \SI{0.5109907}{MeV/c^2}
+\end{align*}
+In what follows all energies and velocities are referred to the laboratory frame. Let $E$ be the total energy possessed by the electron produced in the decay.
+
+(a) Find the maximum possible value $E_{\max}$ of $E$, and the speed $v_m$ of the antineutrino when $E=E_{\max}$. Both answers must be expressed in terms of the rest masses of the particles and the speed of light. Given that $m_\nu<\SI{7.3}{eV/c^2}$, calculate $E_{\max}$ and $v_m/c$ to 3 significant figures.
+
+\textbf{Part B: Polishing}
+
+A transparent glass hemisphere has radius $R$, mass $m$ and refractive index $n$. The medium outside the hemisphere has refractive index 1. A monochromatic parallel laser beam is incident along the normal on the central part of the flat surface of the hemisphere, as shown in Fig.~3.1. In the figure the acceleration due to gravity $g$ points vertically downwards. The circular cross-section of the laser beam has radius $\delta$, which is much smaller than $R$. Both the glass hemisphere and the laser beam are symmetric about the $z$ axis.
+
+\begin{figbox}{3.1}
+\begin{tikzpicture}[scale=0.92]
+  \def\R{2.1}
+  \fill[blue!6] (-\R,0) arc (180:0:\R) -- cycle;
+  \draw[thickline] (-\R,0) -- (\R,0);
+  \draw[thickline] (-\R,0) arc (180:0:\R);
+  % laser beam entering through the flat face
+  \draw[force] (-0.42,-1.55) -- (-0.42,-0.03);
+  \draw[force] (0.42,-1.55) -- (0.42,-0.03);
+  \draw[dashedline] (-0.42,-1.55) -- (-0.42,-2.0);
+  \draw[dashedline] (0.42,-1.55) -- (0.42,-2.0);
+  \draw[dim] (-0.42,-1.85) -- (0.42,-1.85) node[midway,below] {$2\delta$};
+  % z axis
+  \draw[axis] (0,\R) -- (0,\R+0.65) node[right] {$z$};
+  % radius
+  \draw[dashedline] (0,0) -- (55:\R);
+  \node at (30:1.55) {$R$};
+  \node at (0.55,1.0) {$n$};
+  % gravity
+  \draw[force] (-2.75,-0.35) -- (-2.75,-1.15) node[right] {$g$};
+  \node[align=center,anchor=east,font=\small] at (-1.55,2.45) {glass\\ hemisphere};
+  \draw[thin] (-1.55,2.28) -- (-1.0,1.95);
+  \node[align=left,anchor=west,font=\small] at (2.55,0.55) {laser\\ beam};
+\end{tikzpicture}
+\end{figbox}
+
+The glass hemisphere does not absorb any of the laser light. The surface of the glass has been treated with an optical coating, so that the reflection of the incident and emergent light at the flat surface and at the spherical surface may be neglected, and the optical path of the laser light in the coating may also be neglected.
+
+(b) Neglecting terms of order $(\delta/R)^3$ and higher, find the laser power $P$ required to balance the weight of the glass hemisphere.
+
+Hint: when the angle $\theta$ is much smaller than 1,
+\begin{equation*}
+\cos\theta\approx1-\theta^2/2.
+\end{equation*}
+
+\subsection*{Solution of Problem 3}
+
+\textbf{Part A: Neutrino mass and neutron decay}
+
+In the laboratory frame (that is, the rest frame of the neutron), let the electron produced in the neutron decay have energy $E_e\,(=E)$ and momentum $\vec{p}_e$, the proton have energy $E_p$ and momentum $\vec{p}_p$, and the antineutrino have energy $E_\nu$ and momentum $\vec{p}_\nu$. Denoting the magnitude of the momentum $\vec{p}_e$ by $p_e$, we have
+\begin{equation}
+\left.
+\begin{aligned}
+E_e^2 &= m_e^2c^4+p_e^2c^2\\
+E_p^2 &= m_p^2c^4+p_p^2c^2\\
+E_\nu^2 &= m_\nu^2c^4+p_\nu^2c^2
+\end{aligned}
+\right\}\tag{A1}
+\end{equation}
+From the conservation of energy and momentum,
+\begin{equation}
+E_p+E_\nu=E_n-E_e \tag{A2}
+\end{equation}
+\begin{equation}
+\vec{p}_p+\vec{p}_\nu=-\vec{p}_e \tag{A3}
+\end{equation}
+where $E_n$ is the rest energy of the neutron. Squaring both sides of equations (A2) and (A3) gives
+\begin{equation}
+E_p^2+E_\nu^2+2E_pE_\nu=E_n^2+E_e^2-2E_nE_e \tag{A4}
+\end{equation}
+\begin{equation}
+p_p^2+p_\nu^2+2\vec{p}_p\cdot\vec{p}_\nu=p_e^2 \tag{A5}
+\end{equation}
+Multiplying both sides of the above equation by $c^2$,
+\begin{equation}
+p_p^2c^2+p_\nu^2c^2+2\vec{p}_p\cdot\vec{p}_\nu c^2=p_e^2c^2 \tag{A5a}
+\end{equation}
+Subtracting equation (A5a) from equation (A4) and using equation (A1), we obtain
+\begin{equation}
+m_p^2c^4+m_\nu^2c^4+2\left(E_pE_\nu-\vec{p}_p\cdot\vec{p}_\nu c^2\right)=E_n^2+m_e^2c^4-2E_nE_e \tag{A6}
+\end{equation}
+that is,
+\begin{equation}
+2E_nE_e=E_n^2+m_e^2c^4-m_p^2c^4-m_\nu^2c^4-2\left(E_pE_\nu-\vec{p}_p\cdot\vec{p}_\nu c^2\right) \tag{A7}
+\end{equation}
+If $\theta$ denotes the angle between $\vec{p}_p$ and $\vec{p}_\nu$, then $\vec{p}_p\cdot\vec{p}_\nu=p_pp_\nu\cos\theta\le p_pp_\nu$, and from the above equation we obtain
+\begin{equation}
+2E_nE_e\le E_n^2+m_e^2c^4-m_p^2c^4-m_\nu^2c^4-2\left(E_pE_\nu-p_pp_\nu c^2\right) \tag{A8}
+\end{equation}
+It is seen from this equation that the electron energy reaches its maximum when $\theta=0$, that is, when the antineutrino and the proton move in the same direction.
+
+The quantities $E_p$, $p_p$, $E_\nu$ and $p_\nu$ may be related respectively to $m_p$ and $m_\nu$ by means of the energy-momentum triangle (Fig.~3.2), which gives
+\begin{equation}
+\left.
+\begin{aligned}
+E_p &= \frac{m_pc^2}{\cos\varphi_p}\\[2pt]
+E_\nu &= \frac{m_\nu c^2}{\cos\varphi_\nu}
+\end{aligned}
+\right\}\tag{A9}
+\end{equation}
+\begin{equation}
+\left.
+\begin{aligned}
+p_pc &= m_pc^2\tan\varphi_p\\[2pt]
+p_\nu c &= m_\nu c^2\tan\varphi_\nu
+\end{aligned}
+\right\}\tag{A10}
+\end{equation}
+
+\begin{figbox}{3.2}
+\begin{tikzpicture}[scale=1.0]
+  \draw[thickline] (0,0) -- (3.2,0) -- (3.2,2.1) -- cycle;
+  \draw (0.55,0) arc (0:33:0.55);
+  \node at (0.85,0.13) {$\varphi_\nu$};
+  \node[below] at (1.6,0) {$m_\nu c^2$};
+  \node[right] at (3.2,1.05) {$p_\nu c$};
+  \node[above left] at (2.1,1.15) {$E_\nu$};
+\end{tikzpicture}
+\end{figbox}
+
+Equation (A8) then becomes
+\begin{equation}
+2E_nE_e\le E_n^2+m_e^2c^4-m_p^2c^4-m_\nu^2c^4-2m_pm_\nu c^4\left[\frac{1-\sin\varphi_p\sin\varphi_\nu}{\cos\varphi_p\cos\varphi_\nu}\right] \tag{A11}
+\end{equation}
+The factor in the brackets in the last term of the above equation may be written as
+\begin{align}
+\frac{1-\sin\varphi_p\sin\varphi_\nu}{\cos\varphi_p\cos\varphi_\nu}
+&= \frac{1-\sin\varphi_p\sin\varphi_\nu-\cos\varphi_p\cos\varphi_\nu}{\cos\varphi_p\cos\varphi_\nu}+1\notag\\
+&= \frac{1-\cos(\varphi_p-\varphi_\nu)}{\cos\varphi_p\cos\varphi_\nu}+1\ge1 \tag{A12}
+\end{align}
+Obviously the minimum of this factor occurs when $\varphi_p=\varphi_\nu$, that is, when the antineutrino and the proton move with the same velocity. Hence from equation (A11) the maximum value of $E_e$ is
+\begin{align}
+E_{\max} &= \frac{1}{2E_n}\left[E_n^2+m_e^2c^4-m_p^2c^4-m_\nu^2c^4-2m_pm_\nu c^4\right]\notag\\
+&= \frac{c^2}{2m_n}\left[m_n^2+m_e^2-(m_p+m_\nu)^2\right] \tag{A13}
+\end{align}
+Substituting the corresponding numerical values and using $m_\nu\ll m_p$, so that $m_\nu$ is neglected, we obtain
+\begin{equation}
+E_{\max}\approx\SI{1.292569}{MeV}\approx\SI{1.29}{MeV} \tag{A14}
+\end{equation}
+When the antineutrino and the proton move with the same velocity, the speed of the antineutrino is
+\begin{equation*}
+v_\nu=\frac{p_\nu}{m_\nu}=\frac{p_\nu}{E_\nu/c^2}=\frac{c^2p_\nu}{E_\nu}.
+\end{equation*}
+Similarly, the speed of the proton is
+\begin{equation*}
+v_p=\frac{c^2p_p}{E_p}.
+\end{equation*}
+From these two equations,
+\begin{equation}
+v_\nu=v_p=c^2\frac{p_\nu+p_p}{E_\nu+E_p}=c\,\frac{p_ec}{E_\nu+E_p}=c\,\frac{\sqrt{E_e^2-m_e^2c^4}}{E_n-E_e} \tag{A15}
+\end{equation}
+Here $E_e$ must be taken as $E_{\max}$. Substituting $E_{\max}$ of equation (A13) into the above equation gives the corresponding value $v_m$ of $v_\nu$:
+\begin{equation*}
+v_m=c\,\frac{\sqrt{E_{\max}^2-m_e^2c^4}}{E_n-E_{\max}}
+=c\,\frac{\dfrac{1}{2m_n}\sqrt{\left[m_n^2+m_e^2-(m_p+m_\nu)^2\right]^2-4m_n^2m_e^2}}{m_n-\dfrac{1}{2m_n}\left[m_n^2+m_e^2-(m_p+m_\nu)^2\right]}
+\end{equation*}
+\begin{equation}
+=c\,\frac{\sqrt{\left[m_n^2+m_e^2-(m_p+m_\nu)^2\right]^2-4m_n^2m_e^2}}{2m_n^2-\left[m_n^2+m_e^2-(m_p+m_\nu)^2\right]}\approx0.00127c \tag{A16}
+\end{equation}
+
+\textbf{Part B: Polishing}
+
+(b) Referring to Fig.~3.3, the light incident on the spherical surface obeys Snell's law:
+\begin{equation}
+n\sin\theta_i=\sin\theta_t \tag{B1}
+\end{equation}
+Neglecting terms of order $(\delta/R)^3$ and higher in the sine functions, the above equation becomes
+\begin{equation}
+n\theta_i=\theta_t \tag{B2}
+\end{equation}
+For the triangle $FAC$ in Fig.~3.3,
+\begin{equation}
+\beta=\theta_t-\theta_i\approx n\theta_i-\theta_i=(n-1)\theta_i \tag{B3}
+\end{equation}
+
+\begin{figbox}{3.3}
+\begin{tikzpicture}[scale=1.0,font=\scriptsize]
+  \def\R{2.2}
+  % hemisphere
+  \fill[blue!6] (-\R,0) arc (180:0:\R) -- cycle;
+  \draw[thickline] (-\R,0) -- (\R,0);
+  \draw[thickline] (-\R,0) arc (180:0:\R);
+  % centre and axis
+  \fill (0,0) circle (1.2pt) node[below right] {$C$};
+  \draw[axis] (0,\R) -- (0,\R+0.75) node[right] {$z$};
+  % point A on the sphere
+  \coordinate (A) at (130:2.2);
+  \fill (A) circle (1.3pt);
+  \node at ($(A)+(168:0.38)$) {$A$};
+  % incident ray and its extension
+  \draw[force] (-1.414,0) -- (A);
+  \draw[dashedline] (A) -- (-1.414,3.0);
+  % outward normal at A
+  \draw[dashedline] (0,0) -- (130:3.0);
+  % refracted ray
+  \draw[force] (A) -- ++(55.4:1.7);
+  % angle marks
+  \draw ($(A)+(130:0.55)$) arc (130:90:0.55);
+  \node at ($(A)+(112:0.95)$) {$\theta_i$};
+  \draw ($(A)+(130:0.90)$) arc (130:55.4:0.90);
+  \node at ($(A)+(88:1.38)$) {$\theta_t$};
+  \draw ($(A)+(90:0.45)$) arc (90:55.4:0.45);
+  \node at ($(A)+(70:1.00)$) {$\beta$};
+  % half width delta
+  \draw[dashedline] (-1.414,0) -- (-1.414,-0.75);
+  \draw[dashedline] (0,0) -- (0,-0.75);
+  \draw[dim] (0,-0.62) -- (-1.414,-0.62) node[midway,below] {$\delta$};
+  \node at (1.55,1.45) {$n$};
+\end{tikzpicture}
+\end{figbox}
+
+Let the frequency of the incident light be $f_0$. If the number of photons incident per unit time on unit area of the flat surface is $n_p$, then the total number of photons incident per unit time on the flat surface is $n_p\pi\delta^2$. The total power of the photons incident on the flat surface is $P=(n_p\pi\delta^2)(hf_0)$, where $h$ is Planck's constant; hence
+\begin{equation}
+n_p=\frac{P}{\pi\delta^2hf_0} \tag{B4}
+\end{equation}
+The number of photons incident per unit time on an annulus of inner radius $r$ and outer radius $r+\dd r$ of the flat surface is $n_p(2\pi r\,\dd r)$, where $r=R\sin\theta_i\approx R\theta_i$; hence the number of photons incident per unit time on the annulus is
+\begin{equation}
+n_p(2\pi r\,\dd r)\approx n_p(2\pi R^2)\theta_i\,\dd\theta_i \tag{B5}
+\end{equation}
+When these photons are refracted at the spherical surface, the $z$ component of the momentum of the light carried away per unit time is
+\begin{align}
+\dd F_z &= n_p(2\pi r\,\dd r)\frac{hf_0}{c}\cos\beta\approx n_p\frac{hf_0}{c}(2\pi R^2)\left(1-\frac{\beta^2}{2}\right)\theta_i\,\dd\theta_i\notag\\
+&\approx n_p\frac{hf_0}{c}(2\pi R^2)\left[\theta_i-\frac{(n-1)^2}{2}\theta_i^3\right]\dd\theta_i \tag{B6}
+\end{align}
+Therefore the total momentum carried away by the photons per unit time is
+\begin{equation}
+F_z=2\pi R^2n_p\frac{hf_0}{c}\int_0^{\theta_m}\left[\theta_i-\frac{(n-1)^2}{2}\theta_i^3\right]\dd\theta_i
+=\pi R^2n_p\frac{hf_0}{c}\theta_m^2\left[1-\frac{(n-1)^2}{4}\theta_m^2\right] \tag{B7}
+\end{equation}
+where $\theta_m=\arcsin\dfrac{\delta}{R}\approx\dfrac{\delta}{R}$. Then, using equation (B4), the above equation becomes
+\begin{equation}
+F_z=\frac{\pi R^2P}{\pi\delta^2hf_0}\frac{hf_0}{c}\frac{\delta^2}{R^2}\left[1-\frac{(n-1)^2\delta^2}{4R^2}\right]
+=\frac{P}{c}\left[1-\frac{(n-1)^2\delta^2}{4R^2}\right] \tag{B8}
+\end{equation}
+The optical levitation force is equal to the sum of the $z$ components of the forces exerted on the glass hemisphere by the incident light and by the refracted light, and may be written as
+\begin{equation}
+\frac{P}{c}+(-F_z)=\frac{P}{c}-\frac{P}{c}\left[1-\frac{(n-1)^2\delta^2}{4R^2}\right]
+=\frac{(n-1)^2\delta^2}{4R^2}\frac{P}{c} \tag{B9}
+\end{equation}
+This force must equal the weight of the glass hemisphere, from which the laser power required to suspend the hemisphere is obtained:
+\begin{equation}
+P=\frac{4mgcR^2}{(n-1)^2\delta^2} \tag{B10}
+\end{equation}
+
+\subsection*{Experimental Problems and Solutions}
+
+\subsection*{Problem 4}
+
+\noindent\textbf{Experiment on the electro-optical properties of liquid crystals}
+
+\noindent[Experimental apparatus]
+
+(1) Available instruments
+
+They are listed in Table 4.1.
+
+\begin{center}
+{\small Table 4.1}\\[2pt]
+\footnotesize
+\begin{tabular}{@{}c p{4.5cm} c c p{3.9cm} c@{}}
+\toprule
+Code & Apparatus & Qty & Code & Apparatus & Qty\\
+\midrule
+A & Photodetector (PD) & 1 & I & Battery & 2\\
+B & Polarizer with rotating mount & 2 & J & Battery holder & 1\\
+C & $90\degree$ TN-LC liquid-crystal cell with rotating holder & 1 & K & Optical bench & 1\\
+D & Function generator & 1 & L & Translucent paper & 2\\
+E & Laser diode (LD) & 1 & M & Ruler & 1\\
+F & Multimeter & 2 & N & White adhesive tape$^*$ (for marking the apparatus) & 1\\
+G & Parallel liquid-crystal cell & 1 & O & Scissors & 1\\
+H & Variable resistor & 1 & P & Graph paper & 10\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent{\footnotesize $^*$Do not make marks on the apparatus; if necessary, stick a piece of white adhesive tape on it and make the marks on the tape.}
+
+\begin{figbox}{4.1}
+\begin{tikzpicture}[scale=0.85]
+  % optical bench
+  \draw[thickline] (-5.6,-0.9) -- (5.6,-0.9);
+  \draw[thickline] (-5.6,-0.9) -- (-5.6,-1.1);
+  \draw[thickline] (5.6,-0.9) -- (5.6,-1.1);
+  % laser diode
+  \draw[thickline] (-4.9,-0.55) rectangle (-4.3,0.25);
+  \node[font=\scriptsize] at (-4.6,0.55) {LD};
+  \draw[force] (-4.3,0.0) -- (-3.5,0.0);
+  % polarizer 1
+  \draw[thickline] (-3.2,-0.6) rectangle (-3.0,0.6);
+  \node[font=\scriptsize,above] at (-3.1,0.65) {$P_1$};
+  % LC cell
+  \draw[thickline] (-1.4,-0.6) rectangle (-1.0,0.6);
+  \node[font=\scriptsize,above] at (-1.2,0.65) {LC};
+  \draw[force] (-3.0,0) -- (-1.4,0);
+  % polarizer 2
+  \draw[thickline] (0.6,-0.6) rectangle (0.8,0.6);
+  \node[font=\scriptsize,above] at (0.7,0.65) {$P_2$};
+  \draw[force] (-1.0,0) -- (0.6,0);
+  % photodetector
+  \draw[thickline] (2.0,-0.55) rectangle (2.9,0.35);
+  \node[font=\scriptsize] at (2.45,0.62) {PD};
+  \draw[force] (0.8,0) -- (2.0,0);
+  % supports
+  \foreach \x in {-4.6,-3.1,-1.2,0.7,2.45} \draw[thickline] (\x,-0.9) -- (\x,-0.55);
+  % function generator
+  \draw[thickline] (-4.9,-2.5) rectangle (-2.6,-1.5);
+  \node[font=\scriptsize,align=center] at (-3.75,-2.0) {function\\ generator};
+  % multimeter
+  \draw[thickline] (1.7,-2.5) rectangle (3.45,-1.4);
+  \node[font=\scriptsize,align=center] at (2.5,-1.95) {multimeter};
+  \draw[thickline] (2.6,-1.4) -- (2.6,-0.9);
+  % LC cell leads to the generator
+  \draw[thickline] (-3.75,-1.5) -- (-3.75,-1.2) -- (-1.2,-1.2) -- (-1.2,-0.6);
+\end{tikzpicture}
+\end{figbox}
+
+(2) Instructions for the multimeter (Fig. 2)
+\begin{itemize}[leftmargin=1.5em,itemsep=1pt]
+\item The ``DC/AC'' switch selects direct or alternating current.
+\item Use the ``V$\Omega$'' and ``COM'' terminals to measure voltage or resistance.
+\item Use the ``mA'' and ``COM'' terminals to measure small currents; the digital display then gives the current in mA.
+\item Use the function knob to select the appropriate function and measuring range. ``V'' denotes voltage measurement, ``A'' current measurement, and ``$\Omega$'' resistance measurement.
+\end{itemize}
+
+(3) Instructions for the function generator (Fig. 3)
+\begin{itemize}[leftmargin=1.5em,itemsep=1pt]
+\item The digital display shows the frequency.
+\item Use the coarse and the fine adjustment knobs to select the appropriate frequency.
+\item Use the waveform selection buttons, the leftmost one for a square wave.
+\item Use the output amplitude knob to change the output voltage.
+\end{itemize}
+
+\begin{figbox}{4.2}
+\begin{tikzpicture}[scale=0.78,font=\scriptsize]
+  \draw[thickline,rounded corners=3pt] (-1.85,-2.7) rectangle (1.85,2.7);
+  \draw[thickline] (-1.45,1.35) rectangle (1.45,2.25);
+  \node at (0,1.8) {\textbf{0.00}};
+  % DC/AC switch
+  \draw[thickline] (-1.05,0.35) rectangle (-0.75,0.65);
+  % function knob
+  \draw[thickline] (0,-0.25) circle (0.5);
+  \draw[thickline] (0,-0.25) -- (0.3,0.05);
+  % resistance selection button
+  \draw[thickline] (0.7,0.35) rectangle (1.0,0.65);
+  % terminals
+  \foreach \x/\lab in {-1.3/mA,-0.45/COM,0.45/{V$\Omega$},1.3/10A}{
+    \draw[thickline] (\x,-1.95) circle (0.12);
+    \node[below,font=\tiny] at (\x,-2.08) {\lab};}
+  % callouts
+  \node[anchor=east,align=right] (a) at (-2.05,1.9) {voltage\\ selection};
+  \draw[thin] (a.east) -- (-1.45,1.9);
+  \node[anchor=west,align=left] (b) at (2.05,1.9) {current\\ selection};
+  \draw[thin] (b.west) -- (1.45,1.9);
+  \node[anchor=east,align=right] (c) at (-2.05,0.85) {DC/AC\\ switch};
+  \draw[thin] (c.east) -- (-0.95,0.65);
+  \node[anchor=east,align=right] (d) at (-2.05,-0.1) {function\\ knob};
+  \draw[thin] (d.east) -- (-0.5,-0.15);
+  \node[anchor=west,align=left] (e) at (2.05,0.6) {resistance\\ selection};
+  \draw[thin] (e.west) -- (1.0,0.55);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.3}
+\begin{tikzpicture}[scale=0.8,font=\scriptsize]
+  \draw[thickline,rounded corners=2pt] (-4.4,-1.8) rectangle (4.4,1.5);
+  % display
+  \draw[thickline] (-4.0,0.55) rectangle (-2.1,1.2);
+  \node[align=center] at (-3.05,0.875) {display};
+  % power button
+  \draw[thickline] (-1.75,0.6) rectangle (-0.95,1.15);
+  \node[align=center,font=\tiny] at (-1.35,0.875) {power};
+  % frequency range buttons
+  \draw[thickline] (-0.65,0.6) rectangle (0.75,1.15);
+  \node[align=center] at (0.05,0.875) {range};
+  % waveform buttons
+  \draw[thickline] (1.05,0.6) rectangle (2.35,1.15);
+  \node[align=center,font=\tiny] at (1.7,0.875) {waveform};
+  % knobs
+  \foreach \x/\lab in {-3.4/coarse,-2.2/fine,-0.4/amplitude}{
+     \draw[thickline] (\x,-0.3) circle (0.32);
+     \draw[thickline] (\x,-0.3) -- ++(50:0.32);
+     \node[align=center] at (\x,-1.1) {\lab};}
+  % output terminals
+  \foreach \x in {2.6,3.4} \draw[thickline] (\x,-0.3) circle (0.12);
+  \node[align=center] at (3.0,-1.1) {output};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{[Experimental Problems]}
+
+\textbf{Part A: Optical characteristics of the laser diode}
+
+\noindent\textbf{I. Introduction}
+
+(1) Laser diode
+
+The light source used in this experiment is a laser diode, whose laser light has a wavelength of $\SI{650}{nm}$. When the diode current exceeds a certain threshold value, the laser diode emits monochromatic, partially polarised coherent light, which is the so-called laser light. When the current through the laser diode is below the threshold value, the luminous intensity is very small; above the threshold value the luminous intensity increases rapidly with increasing current, and the luminous intensity varies linearly with the current. If the current continues to increase, the rate of increase of the luminous intensity slows down instead, because the temperature of the laser diode itself rises. Therefore the optimum operating range of a laser diode is the linear region. Usually the threshold current $I_{\mathrm{th}}$ is defined as the value at which the extrapolated straight line of this linear region meets the current axis.
+
+\begin{note}
+Under no circumstances should you look directly into the laser beam; doing so will damage your eyes!
+\end{note}
+
+(2) Photodetector
+
+The photodetector used in this experiment is made of a photodiode in series with a current amplifier. When a bias voltage is applied to the photodiode, the diode produces a photocurrent when illuminated. At constant temperature and for monochromatic incident light, the photocurrent is proportional to the incident light intensity. The current amplifier converts the photocurrent into an output voltage in a fixed proportion. The conversion ratio of this photodetector has two settings: a high-gain setting and a low-gain setting. In this experiment the low-gain setting is used throughout. If the incident light intensity is too high, because of the limitations of the current amplifier itself, the output voltage no longer increases in proportion to the photocurrent but gradually approaches a saturation value of about $\SI{8}{V}$. Hence the normal working range of the whole photodetector is the region in which the light intensity is genuinely proportional to the output voltage; if the light intensity is too high and the output voltage saturates, the reading of the photodetector will no longer represent the incident light intensity correctly.
+
+\noindent\textbf{II. Experimental procedure}
+
+\noindent\textbf{Measurement of the electro-optical characteristics of the laser diode}
+
+For the experiment to succeed, the alignment of the light beam through the various parts of the apparatus is crucial. In addition, the light source and the detector must be operated under suitable conditions. Part A is concerned with these questions and with the degree of polarisation.
+
+(1) As shown in Fig.~4.4, place the laser diode and the photodetector on the same horizontal line in the optical bench, and connect the variable resistor, the battery, the ammeter, the voltmeter, the laser diode and the photodetector as shown in Fig.~4.5. Adjust the value of the variable resistor so that the current through the laser diode is about $\SI{25}{mA}$; the diode then emits a suitable laser beam. Set the photodetector to low-gain amplification and adjust suitably the heights of the laser diode and of the photodetector and their orientation relative to each other, so that the laser beam enters exactly the small hole in the box of the photodetector and the output voltage of the photodetector reaches its maximum value, thus ensuring that the two are aligned with each other.
+
+\begin{note}
+Do not let the black and red terminals of the battery touch each other, lest a short circuit be caused!
+\end{note}
+
+\begin{figbox}{4.4}
+\begin{tikzpicture}[scale=0.9,font=\scriptsize]
+  \draw[thickline] (-3.2,-1.35) rectangle (3.2,-0.85);
+  % supports
+  \draw[thickline] (-1.9,-0.85) -- (-1.9,-0.55);
+  \draw[thickline] (-1.4,-0.85) -- (-1.4,-0.55);
+  \draw[thickline] (1.4,-0.85) -- (1.4,-0.55);
+  \draw[thickline] (1.9,-0.85) -- (1.9,-0.55);
+  % boxes
+  \draw[thickline] (-2.0,-0.55) rectangle (-1.3,0.45);
+  \node at (-1.65,0.0) {LD};
+  \draw[thickline] (1.3,-0.55) rectangle (2.0,0.45);
+  \node at (1.65,0.0) {PD};
+  % beam
+  \draw[thickline,dashed] (-1.3,0.0) -- (1.3,0.0);
+  \draw[force] (0.1,0) -- (0.75,0);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.5}
+\begin{tikzpicture}[scale=0.78,font=\scriptsize]
+  % battery
+  \draw[thickline] (-4.0,1.2) -- (-4.0,0.1);
+  \draw[thickline] (-4.25,0.1) -- (-3.75,0.1);
+  \draw[thickline] (-4.12,-0.15) -- (-3.88,-0.15);
+  \draw[thickline] (-4.0,-0.15) -- (-4.0,-1.2);
+  \node[left] at (-4.3,-0.02) {\SI{3}{V}};
+  % top branch
+  \draw[thickline] (-4.0,1.2) -- (-3.0,1.2);
+  % variable resistor
+  \draw[thickline] (-3.0,1.05) rectangle (-1.8,1.35);
+  \draw[force] (-2.6,1.75) -- (-2.1,1.4);
+  \node[above] at (-2.4,1.72) {$100\ \Omega$};
+  \draw[thickline] (-1.8,1.2) -- (-1.18,1.2);
+  % ammeter
+  \draw[thickline] (-0.9,1.2) circle (0.28);
+  \node at (-0.9,1.2) {A};
+  \draw[thickline] (-0.62,1.2) -- (2.4,1.2);
+  % LD branch
+  \draw[thickline] (1.2,1.2) -- (1.2,0.65);
+  \draw[thickline,fill=black] (1.0,0.65) -- (1.4,0.65) -- (1.2,0.25) -- cycle;
+  \draw[thickline] (1.0,0.25) -- (1.4,0.25);
+  \node[left] at (0.95,0.55) {LD};
+  \draw[thickline] (1.2,0.25) -- (1.2,-1.2);
+  % PD branch
+  \draw[thickline] (2.4,1.2) -- (2.4,0.65);
+  \draw[thickline,fill=black] (2.2,0.65) -- (2.6,0.65) -- (2.4,0.25) -- cycle;
+  \draw[thickline] (2.2,0.25) -- (2.6,0.25);
+  \draw[force] (2.85,0.95) -- (2.62,0.72);
+  \draw[force] (2.95,0.78) -- (2.72,0.55);
+  \node[right] at (2.62,0.42) {PD};
+  \draw[thickline] (2.4,0.25) -- (2.4,-1.2);
+  % voltmeter across PD
+  \draw[thickline] (2.4,0.65) -- (3.6,0.65) -- (3.6,0.13);
+  \draw[thickline] (3.6,-0.43) -- (3.6,-1.2) -- (-4.0,-1.2);
+  \draw[thickline] (3.6,-0.15) circle (0.28);
+  \node at (3.6,-0.15) {V};
+\end{tikzpicture}
+\end{figbox}
+
+(2) Use the output voltage of the photodetector to represent the intensity $J$ of the laser light, and adjust the variable resistor suitably to change the current $I$ through the laser diode from zero up to the maximum current, measuring at the same time the relation between $J$ and $I$. Take care to choose the intervals of the current increments appropriately.
+
+\begin{center}
+\fbox{\begin{minipage}{0.88\linewidth}
+\small
+\textbf{Problem A-(1)}\\[2pt]
+Measure, tabulate and plot the $J$--$I$ curve.
+\end{minipage}}
+\end{center}
+
+\begin{center}
+\fbox{\begin{minipage}{0.88\linewidth}
+\small
+\textbf{Problem A-(2)}\\[2pt]
+Estimate the maximum current $I_m$ within the linear region of the $J$--$I$ curve, together with its uncertainty. Indicate the linear range with an arrow ($\downarrow$), determine the threshold current $I_{\mathrm{th}}$, and carry out a detailed error analysis.
+\end{minipage}}
+\end{center}
+
+(3) Choose the current of the laser diode to be $I_{\mathrm{th}}+2(I_m-I_{\mathrm{th}})/3$ as the working point, so as to ensure that both the laser diode and the photodetector work normally.
+
+(4) In preparation for the experiments of Part B: place a polarizer near the laser diode on the optical bench as shown in Fig.~4.6, taking care that the laser beam strikes the central part of the polarizer. Adjust the polarizer so that the incident laser beam is perpendicular to the plane of the polarizer. (Hint: you may insert a sheet of translucent paper as a screen and check whether the spots produced by the incident and the reflected light coincide, so as to ensure that the incident light is perpendicular to the polarizer.)
+
+\begin{figbox}{4.6}
+\begin{tikzpicture}[scale=0.9,font=\scriptsize]
+  \draw[thickline] (-3.4,-1.35) rectangle (3.4,-0.85);
+  % supports
+  \draw[thickline] (-2.2,-0.85) -- (-2.2,-0.55);
+  \draw[thickline] (-1.6,-0.85) -- (-1.6,-0.55);
+  \draw[thickline] (-0.15,-0.85) -- (-0.15,-0.55);
+  \draw[thickline] (0.35,-0.85) -- (0.35,-0.55);
+  \draw[thickline] (1.7,-0.85) -- (1.7,-0.55);
+  \draw[thickline] (2.3,-0.85) -- (2.3,-0.55);
+  % LD
+  \draw[thickline] (-2.3,-0.55) rectangle (-1.5,0.45);
+  \node at (-1.9,0.0) {LD};
+  % polarizer
+  \draw[thickline] (-0.25,-0.6) rectangle (0.45,0.6);
+  \node at (0.1,0.0) {P};
+  % PD
+  \draw[thickline] (1.6,-0.55) rectangle (2.4,0.45);
+  \node at (2.0,0.0) {PD};
+  % beam
+  \draw[force] (-1.5,0.15) -- (-0.25,0.15);
+  \draw[force] (0.45,0.15) -- (1.6,0.15);
+\end{tikzpicture}
+\end{figbox}
+
+(5) Keeping the current of the laser diode fixed, place a second polarizer on the optical bench, taking care that the optical alignment is suitable; that is, place the light source, the detector and the two polarizers on one straight line, and make sure that the plane of each polarizer is perpendicular to the beam.
+
+\textbf{Part B: Optical properties of nematic liquid crystals and the electro-optical switching characteristics of a $90\degree$ TN-LC cell}
+
+\noindent\textbf{I. Introduction}
+
+(1) Liquid crystals
+
+A liquid crystal (abbreviated LC) is a substance intermediate between a solid crystal and an amorphous liquid. A nematic liquid crystal consists of long rod-shaped organic molecules; the average orientation of these molecules can easily be arranged in a regular order, and the direction of the long axis of the rod-shaped liquid-crystal molecules can also be controlled by applying an electric field. In most liquid-crystal devices the orientation of the liquid-crystal molecules is required to be uniform and to point in a preset direction. The structure of the liquid-crystal cell (LC cell) used in this experiment is shown in Fig.~4.7. Rubbing the PI alignment film shown in Fig.~4.7 in a single direction with lens paper produces regularly arranged grooves on the surface of the PI film; these make the adjacent long liquid-crystal molecules align along the direction of the grooves, and then, through the interaction between molecules, the other liquid-crystal molecules also become regularly arranged, so that a uniformly oriented nematic liquid crystal is obtained. The local molecular orientation is called the director of the liquid crystal at that point.
+
+\begin{figbox}{4.7}
+\begin{tikzpicture}[scale=0.85,font=\scriptsize]
+  \def\hh{1.5}
+  % glass (left)
+  \draw[thickline,fill=blue!8] (-2.9,-\hh) rectangle (-2.2,\hh);
+  % ITO (left)
+  \draw[thickline,fill=gray!35] (-2.2,-\hh) rectangle (-2.05,\hh);
+  % PI (left)
+  \draw[thickline,fill=gray!15] (-2.05,-\hh) rectangle (-1.85,\hh);
+  % LC layer
+  \draw[thickline,pattern=north east lines,pattern color=black!45] (-1.85,-\hh) rectangle (-0.15,\hh);
+  % PI (right)
+  \draw[thickline,fill=gray!15] (-0.15,-\hh) rectangle (0.05,\hh);
+  % ITO (right)
+  \draw[thickline,fill=gray!35] (0.05,-\hh) rectangle (0.2,\hh);
+  % glass (right)
+  \draw[thickline,fill=blue!8] (0.2,-\hh) rectangle (0.9,\hh);
+  % labels left
+  \node[anchor=east] (gl) at (-3.0,0.75) {glass layer};
+  \draw[thin] (gl.east) -- (-2.9,0.75);
+  \node[anchor=east] (il) at (-3.0,-0.75) {ITO electrode};
+  \draw[thin] (il.east) -- (-2.12,-0.75);
+  % labels right
+  \node[anchor=west] (pr) at (1.45,1.95) {PI alignment film};
+  \draw[thin] (1.45,1.87) -- (0.12,1.55);
+  \node[anchor=west] (gr) at (2.15,0.0) {glass layer};
+  \draw[thin] (gr.west) -- (0.9,0.0);
+  \node[anchor=west] (ir) at (2.15,-0.75) {ITO electrode};
+  \draw[thin] (ir.west) -- (0.2,-0.75);
+  \node[anchor=north] at (-1.0,-1.62) {LC layer};
+  \draw[thin] (-1.0,-1.54) -- (-1.0,-\hh);
+\end{tikzpicture}
+\end{figbox}
+
+A liquid-crystal cell exhibits double refraction, that is, it has two refractive indices. When light propagates along the director, all polarisation components propagate with the same speed $v_o=c/n_o$, where $n_o$ is called the ``ordinary refractive index''; this direction of propagation (the director) is called the optic axis of the liquid-crystal cell. When light propagates perpendicular to the optic axis, there are two speeds of propagation: when the electric field of the polarised light is perpendicular to the optic axis, the speed of light is still $v_o=c/n_o$; but when the electric field of the polarised light is parallel to the optic axis, the speed of light is $v_e=c/n_e$, where $n_e$ is called the ``extraordinary refractive index''. The birefringence (that is, the optical anisotropy) is defined as the difference between the extraordinary and the ordinary refractive indices, $\Delta n=n_e-n_o$.
+
+(2) The $90\degree$ twisted nematic liquid-crystal cell ($90\degree$ TN-LC)
+
+In the $90\degree$ twisted nematic liquid-crystal cell shown in Fig.~4.8, the LC director of the rear PI alignment film is twisted by $90\degree$ relative to the LC director of the front PI alignment film. Hence the liquid-crystal molecules also gradually twist through $90\degree$ in the liquid-crystal layer. Let the director of the front PI alignment film be parallel to the transmission axis of the polarizer. The incident unpolarised light becomes linearly polarised after passing through the polarizer. When this linearly polarised light passes through the $90\degree$ TN-LC, its direction of polarisation twists together with the twisting of the long axes of the liquid-crystal molecules, so that the light transmitted through the TN-LC remains linearly polarised, but its direction of polarisation has been rotated by $90\degree$. Since the electric field of the incident polarised light always remains parallel to the long axis of the liquid-crystal molecules, the light behaves as an extraordinary ray, with refractive index $n_e$. (Similarly, if the direction of polarisation of the incident polarised light always remains perpendicular to the long axis of the liquid-crystal molecules, it is also subject to the $90\degree$ rotation, but it behaves as an ordinary ray, with refractive index $n_o$.) If the direction of polarisation of the analyser (the second polarizer) is set parallel to that of the polarizer (Fig.~4.9), the light cannot pass through the analyser. This setting is called the ``normally black'' mode (NB). But if a voltage $V$ is applied across the TN cell and $V$ exceeds the critical value $V_c$, the long axes of the liquid-crystal molecules become aligned parallel to the applied electric field under its action; this gradually destroys the guiding and twisting action on the direction of polarisation of the polarised light, and the light gradually passes through the analyser. Let $V_{10}$ and $V_{90}$ denote the applied voltages at which the transmitted light intensity reaches 10\% and 90\% of the maximum transmitted light intensity respectively; then the ``electro-optical switching slope'' $\gamma$ may be defined as
+\begin{equation*}
+\gamma=\frac{V_{90}-V_{10}}{V_{10}}.
+\end{equation*}

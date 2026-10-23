@@ -1,0 +1,373 @@
+\section{Thermodynamics}
+
+\begin{problem}{2.01}
+A vacuum pump has a rotation rate of $\omega$ revolutions per minute and can withdraw $c$ litres of gas per minute. The volume of a vessel is $V$. After what time can the pressure inside the vessel be reduced from $p_0$ to $10^{-2}p_0$?
+\end{problem}
+
+\begin{problem}{2.02}
+A system consists of diatomic molecules and is at temperature $T$. The interaction potential energy between the atoms is
+\[
+E_p = E_{p(0)}\left[\left(\frac{r_0}{r}\right)^{12}-2\left(\frac{r_0}{r}\right)^{6}\right].
+\]
+Find the mean-square deviation of the distance $r$ between the two atoms of a molecule.
+\end{problem}
+
+\begin{problem}{2.03}
+Estimate the time required for an air molecule to cover a distance of $1$ km under standard conditions. (Given: the mean molar mass of air is about $29$ g, and the effective diameter of a molecule is $3\times10^{-10}$ m.)
+\end{problem}
+
+\begin{problem}{2.04}
+As shown in the figure, a vessel with a small hole contains a certain substance in which the gaseous and liquid phases coexist; the vapour molecules can escape through the small hole. Suppose that, when the two phases coexist in equilibrium, the temperature is $T$, the latent heat of vaporisation is $l$, the molar mass of the substance is $M$, and the vapour may be regarded as an ideal gas. Find the relation describing how the relative intensity of the molecular beam issuing from the hole varies with temperature.
+\end{problem}
+
+\begin{figbox}{2.04}
+\begin{tikzpicture}[scale=0.85]
+  % vessel
+  \draw[thickline] (0,0) rectangle (6.2,3.3);
+  % liquid
+  \fill[black!10] (0,0) rectangle (6.2,1.05);
+  \draw[thickline] (0,1.05) -- (6.2,1.05);
+  % molecules in the vapour
+  \foreach \x/\y in {0.55/2.75,1.25/2.15,1.95/2.85,2.65/2.30,3.30/2.90,
+                     3.95/2.25,4.60/2.80,5.25/2.20,5.70/2.95,0.85/1.65,
+                     1.60/1.45,2.30/1.70,3.00/1.40,3.70/1.75,4.35/1.45,
+                     5.00/1.70,5.70/1.40}
+    \fill (\x,\y) circle (0.85pt);
+  % molecules in the liquid
+  \foreach \x/\y in {0.30/0.25,0.85/0.55,1.40/0.20,1.95/0.60,2.50/0.25,
+                     3.05/0.65,3.60/0.20,4.15/0.55,4.70/0.25,5.25/0.60,
+                     5.85/0.30,0.55/0.80,1.70/0.85,2.85/0.82,4.00/0.85,
+                     5.15/0.80}
+    \fill[black!55] (\x,\y) circle (1.15pt);
+  % small tube
+  \draw[thickline] (6.2,1.95) -- (7.05,1.95);
+  \draw[thickline] (6.2,2.30) -- (7.05,2.30);
+  % escaping molecules
+  \draw[force] (7.10,2.12) -- (7.70,2.12);
+  \draw[force] (7.05,2.42) -- (7.55,2.62);
+  \draw[force] (7.05,1.86) -- (7.55,1.66);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.05}
+It is known that one mole of a van der Waals gas undergoes a reversible cyclic process. From state $1$ to state $2$ the process is isothermal at temperature $T_1$, the volume changing from $V_1$ to $V_2$; from state $2$ to state $3$ the process is adiabatic, the volume changing from $V_2$ to $V_3$; from state $3$ to state $4$ the process is isothermal at temperature $T_2$; and from state $4$ back to state $1$ the process is adiabatic. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the heat absorbed by the system during the process $1$--$2$;
+\item the work done by the system during the process $2$--$3$;
+\item prove that the efficiency of the cycle is $\eta = 1-T_2/T_1$. (Here $T_1$, $T_2$, $V_1$, $V_2$ and $C_{V,m}$ are all constants.)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.06}
+One mole of a van der Waals gas is initially in the state $(V_1, T_1)$. It undergoes a polytropic process in which its temperature increases to $T_2 = mT_1$, the polytropic index of the process being $n$; $C_V$ is constant. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the heat absorbed by the system from the surroundings during the process;
+\item the work done by the system on the surroundings;
+\item the increase in entropy of the system.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.07}
+Owing to convection in the atmosphere, air rises and descends. Since the atmospheric pressure varies with height, the volume of the gas changes as it rises or descends. Because the thermal conductivity of air is very small, the process of ascent or descent may be regarded as adiabatic. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the rate of change of atmospheric temperature with height, $\dd T/\dd z$;
+\item its value in the ordinary temperature range. (The molar mass of air is $M = 28.96$ g.)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.08}
+A hollow shell of volume $V$ is filled with thermal radiation whose energy per unit volume is $u = \sigma T^4$, where $\sigma$ is the Stefan--Boltzmann constant and $\sigma > 0$; the radiation pressure is $p = \frac{1}{3}u$. Prove that the efficiency of a reversible Carnot cycle, in which thermal radiation is the working substance and which is in contact with two reservoirs at temperatures $T_1$ and $T_2$ ($< T_1$), is
+\[
+\eta = 1-\frac{T_2}{T_1}.
+\]
+\end{problem}
+
+\begin{problem}{2.09}
+As shown in the figure, a flat plate of area $A$, perpendicular to the $x$ axis, moves in the direction opposite to the $x$ axis with speed $V$. The surrounding rarefied gas is at temperature $T$, its molecular number density is $n$, and the mass of a molecule is $m$. Using the Maxwell distribution, find the resistance experienced by the plate in its motion.
+\end{problem}
+
+\begin{figbox}{2.09}
+\begin{tikzpicture}[scale=0.85]
+  \draw[axis] (-2.2,0) -- (3.6,0) node[right] {$x$};
+  \draw[thickline] (0,-0.95) -- (0,0.95);
+  \draw[force] (0.02,1.15) -- (-1.15,1.15);
+  \node[above] at (-0.55,1.2) {$V$};
+  \node[below] at (0.02,-1.05) {$A$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.10}
+The surface tension coefficient of water at one atmosphere and $4\degree$C is $\sigma = 7.24\times10^{-2}\unitv{N/m}$, and its isothermal compressibility is
+\[
+\kappa = -\frac{1}{V}\left(\frac{\dd V}{\dd p}\right)_T = 4.75\times10^{-5}\unitv{atm}^{-1}.
+\]
+Find the density of a water drop of radius $r = 1.0\times10^{-6}$ cm at one atmosphere and $4\degree$C.
+\end{problem}
+
+\begin{problem}{2.11}
+A cylindrical vessel of height $L$ and cross-sectional area $A$ is filled with an ideal gas whose molecules have mass $m$. The temperature of the gas is $T$, in the room-temperature range. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the molar heat capacity at constant volume $C_{V,m}$ of the gas;
+\item $C_{V,m}$ for $T\to0$ and for $T\to\infty$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.12}
+A certain amount of a liquid and its vapour are enclosed in a cylinder. The vapour may be regarded as an ideal gas, and the heat capacities of the liquid and of the vapour are both constant. Derive the Clausius equation for the saturated vapour pressure:
+\[
+p = A\ee^{-L(0)/kT}\cdot T^{(C_{gp}-C_{lp})/R},
+\]
+where $C_{gp}$ and $C_{lp}$ are the constant-pressure heat capacities of the vapour and of the liquid respectively, and $L(0)$ is the latent heat of vaporisation at $T = 0$ K.
+\end{problem}
+
+\begin{problem}{2.13}
+Two metals $A$ and $B$ of very large heat capacity are at temperatures $T_1$ and $T_2$ respectively, with $T_1 > T_2$. At a certain instant $t$ they are brought into contact through a thin layer of a poor thermal conductor. The heat transmitted through the layer per unit time is $P_0\Delta T$, where $\Delta T$ is the temperature difference between the two metals. The whole system exchanges no heat with the surroundings. The heat capacities $C_A$ and $C_B$ of the metals do not vary with temperature. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the change in the entropy of metal $A$ after a very short time $\Delta t$;
+\item the change in the total entropy of the two systems after a very short time $\Delta t$;
+\item the change in the entropy of the whole system after a sufficiently long time, when the two systems have reached thermal equilibrium.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.14}
+A drunkard starts walking from the origin shown in the figure. He walks one step to the right with probability $p_+$, one step to the left with probability $p_-$, one step upward with probability $q_+$, and one step downward with probability $q_-$. Every step has length $l$. Find the probability that after $N$ steps he is at the point $P$ (whose $x$ and $y$ coordinates are integer multiples of $l$).
+\end{problem}
+
+\begin{figbox}{2.14}
+\begin{tikzpicture}[scale=0.95]
+  \draw[axis] (-2.6,0) -- (3.8,0) node[right] {$x$};
+  \draw[axis] (0,-2.0) -- (0,2.6) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \fill (2.1,1.15) circle (1.5pt);
+  \node[right] at (2.15,1.15) {$P$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.15}
+Two balls of the same size and at the same temperature are both painted black, one of them being made of copper and the other of aluminium. They are suspended inside a cavity surrounded by melting ice. It is observed that the temperature of the aluminium ball falls from $13\degree$C to $1\degree$C in $10$ minutes, whereas the copper ball takes $14.2$ minutes to undergo the same temperature change. Given that the density of copper is $8.9\times10^{3}\unitv{kg/m^3}$ and that of aluminium is $2.7\times10^{3}\unitv{kg/m^3}$, calculate the ratio of the specific heat capacities of aluminium and copper.
+\end{problem}
+
+\begin{problem}{2.16}
+Water at the freezing point $(T_i, p_i)$ fills a vessel of invariable volume. The water is then cooled to $T_f$, whereupon the pressure increases to $p_f$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the relation between the fraction $y$ of the water (in all its states) that is in the solid state and the specific volumes of water in its several phases;
+\item given $t_i = 0\degree$C, $p_i = 1.01\times10^{5}$ Pa, $t_f = -5\degree$C, $p_f = 5.98\times10^{7}$ Pa; the coefficient of expansion at constant pressure of water over the temperature range involved is $\alpha = -67\times10^{-6}\unitv{K}^{-1}$, and its isothermal compressibility is $k = 12.04\times10^{-11}\unitv{Pa}^{-1}$; the specific volumes of water and of ice in the final state are $v_l = 1.0908\times10^{-3}\unitv{m^3/kg}$ and $v_s = 1.1928\times10^{-3}\unitv{m^3/kg}$ respectively. What is $y$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.17}
+A macroscopic ball of mass $m'$ and radius $r$ moves in vacuum with speed $v_0$. Ahead of it there are $N$ moles of a rarefied ideal gas at temperature $T$ with molecular number density $n$. At $t = 0$ the ball enters the gas. The gas consists of monatomic molecules of mass $m$, and the collisions of these atoms with the ball are elastic. The mean speed of the molecules of an ideal gas is known to be $\bar v = \sqrt{8RT/\pi M}$, and it is much greater than the initial speed of the ball; here $M$ is the molar mass of the gas, $M = N_A m$. Assume that the number of collisions between atoms and the ball per unit time is $\lambda n\bar v$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the change in the energy of the ball in a collision with one atom;
+\item the rate of decrease of the mean energy of the ball and its final mean energy;
+\item the change in the entropy of the system (the ball plus the ideal gas);
+\item $\lambda = ?$ (additional question)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.18}
+One mole of a monatomic ideal gas undergoes the cyclic process shown in the figure. It is known that $p_2 = 2p_1$, $V_2 = 2V_1$ and $V_1 = 2V_3$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the efficiency of the cycle;
+\item the highest temperature in the cycle;
+\item whether any of the three processes is a polytropic process.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{2.18}
+\begin{tikzpicture}[scale=0.95]
+  \draw[axis] (0,0) -- (5.9,0) node[right] {$V$};
+  \draw[axis] (0,0) -- (0,4.2) node[above] {$p$};
+  \coordinate (C) at (1.3,1.5);
+  \coordinate (A) at (2.6,3.0);
+  \coordinate (B) at (5.2,1.5);
+  \draw[dashedline] (0,3.0) -- (A);
+  \draw[dashedline] (0,1.5) -- (C);
+  \draw[thickline] (C) -- (A) -- (B) -- cycle;
+  \fill (A) circle (1.4pt);
+  \fill (B) circle (1.4pt);
+  \fill (C) circle (1.4pt);
+  \node[above left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+  \node[left] at (0,3.0) {$p_2$};
+  \node[left] at (0,1.5) {$p_1$};
+  \node[below] at (1.3,-0.08) {$V_3$};
+  \node[below] at (2.6,-0.08) {$V_1$};
+  \node[below] at (5.2,-0.08) {$V_2$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.19}
+As shown in the figure, a spherical vessel of volume $V$ contains water vapour at an initial pressure $p_0$, and the temperature inside the sphere is maintained at $T$. A thin tube whose lower end has unit cross-sectional area is now inserted into liquid nitrogen. Assume that every molecule entering the tube condenses inside it. Find the time required for the pressure of the water vapour (which may be treated as an ideal gas) inside the sphere to fall to $p$, and the energy removed per unit time in the vicinity of that instant.
+\end{problem}
+
+\begin{figbox}{2.19}
+\begin{tikzpicture}[scale=0.78]
+  % spherical vessel
+  \draw[thickline] (2.6,5.1) circle (1.55);
+  \node at (2.6,5.1) {$p_0$};
+  % tube
+  \draw[thickline] (2.45,3.56) -- (2.45,1.05);
+  \draw[thickline] (2.75,3.56) -- (2.75,1.05);
+  % bath
+  \draw[thickline] (0,0) -- (0,2.75);
+  \draw[thickline] (0,0) -- (5.2,0);
+  \draw[thickline] (5.2,0) -- (5.2,2.75);
+  \fill[black!10] (0,0) rectangle (5.2,2.0);
+  \draw[thickline] (0,2.0) -- (5.2,2.0);
+  % liquid nitrogen surface dashes
+  \foreach \x in {0.25,0.75,...,4.95}
+    \draw[thickline] (\x,2.08) -- (\x+0.22,2.08);
+  \foreach \x/\y in {0.4/0.45,1.0/0.9,1.6/0.35,2.1/1.2,3.2/0.5,3.8/1.1,
+                     4.4/0.4,4.8/1.3,0.9/1.6,3.5/1.65,4.6/1.75}
+    \fill[black!45] (\x,\y) circle (0.8pt);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.20}
+It is known that a spherical soap film of radius $R$ carries a charge $Q$, and that the surface tension coefficient of the soap solution is $\sigma$. Find the pressure difference between the inside and the outside of the film.
+\end{problem}
+
+\begin{problem}{2.21}
+As shown in the figure, in case (a) the liquid in a capillary tube stands at a height $h$. In case (b) there is an inverted U-shaped capillary tube of height $h_1 < h$. Discuss the curvature of the liquid surface at the mouth of the U-tube when the distance from the mouth to the liquid surface is $h_2$.
+\end{problem}
+
+\begin{figbox}{2.21}
+\begin{tikzpicture}[scale=0.72]
+  % ---------- panel (a) ----------
+  \draw[thickline] (0,0) -- (0,3.0);
+  \draw[thickline] (0,0) -- (3.6,0);
+  \draw[thickline] (3.6,0) -- (3.6,3.0);
+  \fill[black!10] (0,0) rectangle (3.6,1.3);
+  \draw[thickline] (0,1.3) -- (3.6,1.3);
+  \foreach \x in {0.2,0.6,...,3.4}
+    \draw[thickline] (\x,0.18) -- (\x+0.18,0.18);
+  \foreach \x in {0.35,0.9,...,3.3}
+    \draw[thickline] (\x,0.62) -- (\x+0.18,0.62);
+  \foreach \x in {0.5,1.05,...,3.2}
+    \draw[thickline] (\x,1.02) -- (\x+0.18,1.02);
+  % capillary tube
+  \draw[thickline] (1.62,0.45) -- (1.62,3.75);
+  \draw[thickline] (1.98,0.45) -- (1.98,3.75);
+  \fill[black!10] (1.62,0.45) rectangle (1.98,2.95);
+  \draw[thickline] (1.62,2.95) .. controls (1.72,2.80) and (1.88,2.80) .. (1.98,2.95);
+  % dimension h
+  \draw[dashedline] (1.98,2.95) -- (2.55,2.95);
+  \draw[dashedline] (1.98,1.30) -- (2.55,1.30);
+  \draw[dim] (2.45,1.30) -- (2.45,2.95) node[midway,right] {$h$};
+  \node at (1.8,-0.55) {(a)};
+  % ---------- panel (b) ----------
+  \begin{scope}[xshift=5.4cm]
+  \draw[thickline] (0,0) -- (0,3.0);
+  \draw[thickline] (0,0) -- (3.4,0);
+  \draw[thickline] (3.4,0) -- (3.4,3.0);
+  \fill[black!10] (0,0) rectangle (3.4,1.3);
+  \draw[thickline] (0,1.3) -- (3.4,1.3);
+  \foreach \x in {0.2,0.6,...,3.2}
+    \draw[thickline] (\x,0.18) -- (\x+0.18,0.18);
+  \foreach \x in {0.35,0.9,...,3.1}
+    \draw[thickline] (\x,0.62) -- (\x+0.18,0.62);
+  \foreach \x in {0.5,1.05,...,3.0}
+    \draw[thickline] (\x,1.02) -- (\x+0.18,1.02);
+  % inverted U-shaped capillary, filled with liquid
+  \fill[black!10] (0.60,0.35) -- (0.60,4.65) -- (4.05,4.65) --
+                  (4.05,2.55) -- (3.70,2.55) -- (3.70,4.30) --
+                  (0.95,4.30) -- (0.95,0.35) -- cycle;
+  \draw[thickline] (0.60,0.35) -- (0.60,4.65) -- (4.05,4.65) -- (4.05,2.55);
+  \draw[thickline] (0.95,0.35) -- (0.95,4.30) -- (3.70,4.30) -- (3.70,2.55);
+  \draw[thickline] (3.70,2.50) .. controls (3.78,2.62) and (3.97,2.62) .. (4.05,2.50);
+  % dimension h_1
+  \draw[dashedline] (0,1.30) -- (-0.80,1.30);
+  \draw[dashedline] (0.60,4.65) -- (-0.80,4.65);
+  \draw[dim] (-0.55,1.30) -- (-0.55,4.65) node[midway,left] {$h_1$};
+  % dimension h_2
+  \draw[dashedline] (3.4,1.30) -- (4.60,1.30);
+  \draw[dashedline] (4.05,2.55) -- (4.60,2.55);
+  \draw[dim] (4.40,1.30) -- (4.40,2.55) node[midway,right] {$h_2$};
+  \node at (1.70,-0.55) {(b)};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.22}
+The surface tension coefficient of a certain solution is $\sigma = a-bT$. In an isothermal process at temperature $T$, a small ball of radius $R$ is divided into $n$ small balls. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the work done on it by the surroundings;
+\item the heat absorbed from the surroundings;
+\item the increase in entropy of the system.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.23}
+The temperature of the air is $T_0$, its molar mass is $M_0$, and the acceleration due to gravity is $g$. Find how the boiling point of water varies with height.
+\end{problem}
+
+\begin{problem}{2.24}
+Suppose that a crystal lattice contains $N$ atoms at lattice sites. When an atom leaves a lattice site and occupies an interstitial position, an interstitial atom and a vacancy are formed. Such a defect in a crystal is called a Frenkel defect.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Suppose that the number of lattice sites and the number of interstitial positions are both $N$. Prove that when $n$ vacancies and $n$ interstitial atoms are formed in the lattice, the increase in entropy of the system is
+\[
+\Delta s = 2k\ln\frac{N!}{n!\,(N-n)!}.
+\]
+\item Suppose that the energy difference between an atom at a lattice site and at an interstitial position is $u$, and that the temperature is $T$. Prove that the number of vacancies is
+\[
+n = N\ee^{-u/2kT}.
+\]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2.25}
+There is a one-dimensional chain consisting of $N$ links ($N\gg1$), each of length $a$, as shown in the figure; the distance between its two ends is $x$. Each link can rotate freely. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the entropy of the whole chain;
+\item the tension $f(x)$ that must be maintained when the chain is at temperature $T$ and its ends are held a distance $x$ apart.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{2.25}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thickline] (0,-0.6) -- (0,3.4);
+  \draw[thickline] (5.25,-0.6) -- (5.25,3.4);
+  % chain: links of equal length a
+  \coordinate (P1)  at (0,2.95);
+  \coordinate (P2)  at (0.62,2.95);
+  \coordinate (P3)  at (1.24,2.95);
+  \coordinate (P4)  at (1.86,2.95);
+  \coordinate (P5)  at (1.385,2.552);
+  \coordinate (P6)  at (2.005,2.552);
+  \coordinate (P7)  at (2.625,2.552);
+  \coordinate (P8)  at (3.245,2.552);
+  \coordinate (P9)  at (3.865,2.552);
+  \coordinate (P10) at (3.390,2.154);
+  \coordinate (P11) at (4.010,2.154);
+  \coordinate (P12) at (4.630,2.154);
+  \coordinate (P13) at (5.250,2.154);
+  \draw[thickline] (P1) -- (P2) -- (P3) -- (P4) -- (P5) -- (P6) -- (P7) --
+                   (P8) -- (P9) -- (P10) -- (P11) -- (P12) -- (P13);
+  % joints
+  \foreach \p in {P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13}
+    \draw[fill=white,line width=0.5pt] (\p) circle (2pt);
+  % distance x
+  \draw[dim] (0,-0.30) -- (5.25,-0.30) node[midway,below] {$x$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{2.26}
+A coin is tossed $400$ times. What is the probability of obtaining $210$ heads?
+\end{problem}
+
+\begin{problem}{2.27}
+A uniform rod of mass $m$, length $l$ and constant $C_p$ has its two ends in contact with two heat reservoirs at temperatures $T_1$ and $T_2$ ($< T_1$) until a steady state is reached; the two reservoirs are then removed and the rod is allowed to reach equilibrium. Find the increase in entropy of the rod between these two states.
+\end{problem}
+
+\begin{problem}{2.28}
+$N$ atoms are regularly arranged to form an ideal crystal. If an atom leaves a lattice site in the interior of the crystal and moves to the surface of the crystal, forming a new layer, a vacancy appears inside the crystal. Such a defect of the lattice is called a Schottky defect. Let $N$ denote the number of atoms on the lattice, $n$ the number of vacancies in the crystal, and $u$ the energy required for one atom to move from the interior to the surface. Prove that, at temperature $T$, with $1\ll n\ll N$ and neglecting the change in volume of the crystal, the following relations hold:
+\[
+\frac{n}{N+n} = \ee^{-u/kT}
+\qquad\text{or}\qquad
+n \approx N\ee^{-u/kT},
+\]
+where $k$ is the Boltzmann constant.
+\end{problem}

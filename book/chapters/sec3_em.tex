@@ -1,0 +1,1122 @@
+\section{Electromagnetism}
+
+\begin{problem}{3.01}
+Suppose that the force between electric charges were inversely proportional to the cube of the distance between them, all other properties being unchanged. Answer the following questions and give your reasons:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Does Gauss's law still hold?
+\item Can the concept of electric potential still be introduced?
+\item Is there an electric field inside a uniformly positively charged spherical surface? What is its direction?
+\item In electrostatic equilibrium, is the charge on a conductor still distributed over its surface?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.02}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Two dipoles $A$ and $B$ have dipole moments $p_1$ and $p_2$ respectively, and the distance between their centres is $r$. The angle between $p_1$ and the vector drawn from $A$ to $B$ is $\theta$, and the angle between $p_2$ and $r$ is $\varphi$ (so that the angle between $p_1$ and $p_2$ is $\varphi-\theta$), as shown in Fig.~1. Find the $r$-component $F_r$ and the $\theta$-component $F_\theta$ of the force exerted by $p_1$ on $p_2$.
+\item Four charges of equal magnitude and alternating sign are arranged as shown in Fig.~2 to form an electric quadrupole. Find the potential $\Phi$ and the field strength $E$ produced by this charge system at the point $P(r,\theta)$ (find $E_r$ and $E_\theta$ separately). (Assume $l\ll r$.)
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.02(a)}
+\begin{tikzpicture}[scale=0.95]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.4,3.1);
+  \draw[dashedline] (A) -- (5.45,3.85);
+  \draw[force] (A) -- ++(58:1.75) node[above right] {$p_1$};
+  \draw[force] (B) -- ++(-8:1.75) node[below right] {$p_2$};
+  \draw[thinline] (0.95,0) arc (0:35.2:0.95);
+  \node at (1.18,0.30) {$\theta$};
+  \draw[thinline] ($(B)+(1.05,0)$) arc (-8:35.2:1.05);
+  \node at ($(B)+(1.22,0.36)$) {$\varphi$};
+  \fill (A) circle (1.4pt) node[below left] {$A$};
+  \fill (B) circle (1.4pt) node[above left] {$B$};
+  \node at (2.35,1.95) {$r$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{3.02(b)}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thinline] (0,-2.55) -- (0,2.55);
+  \fill (0,1.75) circle (1.4pt) node[left] {$+q$};
+  \fill (0,0.28) circle (1.4pt) node[left] {$-q$};
+  \fill (0,-0.28) circle (1.4pt) node[left] {$-q$};
+  \fill (0,-1.75) circle (1.4pt) node[left] {$+q$};
+  \draw[dim] (-0.55,1.75) -- (-0.55,0.28) node[midway,left] {$l$};
+  \draw[dim] (-0.55,-0.28) -- (-0.55,-1.75) node[midway,left] {$l$};
+  \coordinate (P) at (4.3,3.4);
+  \draw[dashedline] (0,0) -- (P);
+  \fill (P) circle (1.4pt) node[right] {$P(r,\theta)$};
+  \draw[thinline] (0,1.0) arc (90:38.3:1.0);
+  \node at (0.37,1.16) {$\theta$};
+  \node at (2.5,2.1) {$r$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.03}
+A point charge $+q$ and a point charge $-q'$ ($q'<q$) are located at the points $A$ and $B$ on the $x$-axis respectively, the distance between $A$ and $B$ being $l$. A certain line of force issuing from $+q$ makes an angle $\alpha$ with the line $AB$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the angle $\beta$ between the final tangent of this line of force and the $x$-axis.
+\item Find the position of the point $C$ at which this line of force, or its final tangent, intersects the $x$-axis.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.04}
+A uniformly charged ring of charge $+q$ and radius $a$ and a uniformly charged ring of charge $-q$ and radius $b$ are placed concentrically in the same plane, as shown. $P$ is a distant point; its distance from the centre $O$ of the rings is $r$, and $OP$ makes an angle $\theta$ with the axis of the rings (taken as the $z$-axis), with $a<b\ll r$. Find the potential $\Phi$ at $P$, and the $r$-component $E_r$ and the $\theta$-component $E_\theta$ of the electric field strength at $P$, accurate to order $a^2/r^2$.
+\end{problem}
+
+\begin{figbox}{3.04}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) ellipse (2.35 and 0.72);
+  \draw[thickline] (0,0) ellipse (1.25 and 0.38);
+  \draw[thickline] (0,0) -- (0,3.0);
+  \node[above] at (0,3.05) {$z$};
+  \coordinate (P) at (1.85,2.65);
+  \draw[thickline] (0,0) -- (P);
+  \fill (P) circle (1.4pt) node[right] {$P$};
+  \draw[thinline] (0,1.15) arc (90:35:1.15);
+  \node at (0.42,1.30) {$\theta$};
+  \node at (1.10,1.55) {$r$};
+  \fill (0,0) circle (1.2pt) node[below left] {$O$};
+  \node at (-0.85,0.18) {$+q$};
+  \node at (1.9,0.62) {$-q$};
+  \draw[dim] (0,0) -- (0.82,0.25) node[midway,below] {$a$};
+  \draw[dim] (0,0) -- (-1.55,0.48) node[midway,below] {$b$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.05}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the ratio of the potential at a point on the surface of a uniformly charged solid sphere to the potential at its centre.
+\item Find the ratio of the potential at a corner of a uniformly charged cube to the potential at its centre.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.06}
+A spherical shell of radius $a$ carries a uniform charge $q$. Outside the shell there is a volume charge distribution whose density depends only on the distance $r$ from the centre of the shell. It is known that the magnitude of the electric field is the same at every point outside the shell. Find the volume charge density $\rho$ as a function of $r$.
+\end{problem}
+
+\begin{problem}{3.07}
+The space between two large planes separated by a distance $l$ is filled with a plasma. Both the positive and the negative ions carry charge $e$, and both have number density $n$. The masses of the individual ions are $m_+$ and $m_-$ respectively. Owing to a disturbance, the layers of positive and negative ions are displaced slightly in the direction perpendicular to the planes, and thereafter the two ion layers oscillate back and forth along this direction. Find the frequency of oscillation.
+\end{problem}
+
+\begin{problem}{3.08}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item If the force between charges were not inversely proportional to the square of the distance but proportional to $r^{-(2+\delta)}$, everything else being the same as in Coulomb's law, find the potential at points inside and outside a uniformly charged spherical surface. Let the radius of the spherical surface be $R$ and its surface charge density be $\sigma$.
+\item Building on Cavendish's work, Maxwell used the following experiment to test the value of $\delta$: two thin conducting spherical shells of radii $a$ and $b$ ($a>b$) were placed concentrically and connected by a thin wire; the outer shell was charged to potential $U$, after which the power supply was disconnected and then the thin wire joining the two shells was removed; the outer shell was then earthed. The potential of the inner shell was measured to be no greater than $u$. Estimate the value of $\delta$ from this. Given $\delta\ll1$, only first-order small quantities need be retained in the estimate, and earthing may be regarded as equivalent to connecting to infinity.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.09}
+The figure shows a schematic diagram of Kelvin's water-drop generator. Water drops formed at the left and right nozzles of a T-shaped pipe pass respectively through the aluminium cylinders $A_1$ and $A_2$ and then drip into the aluminium cups $B_1$ and $B_2$. After the drops have fallen for some time, a potential difference of several kilovolts appears between the two initially uncharged aluminium cups. Analyse its principle. In the figure, the aluminium cylinder $A_1$ is connected by a wire to the aluminium cup $B_2$, and the aluminium cylinder $A_2$ is connected by a wire to $B_1$.
+\end{problem}
+
+\begin{figbox}{3.09}
+\begin{tikzpicture}[scale=0.92]
+  % reservoir
+  \draw[thickline] (-1.85,5.35) rectangle (1.85,6.45);
+  \foreach \y in {5.62,5.85,6.08} \draw[thinline] (-1.7,\y) -- (1.7,\y);
+  \node[above] at (0,6.48) {reservoir};
+  % valve
+  \draw[thickline,fill=white] (-0.30,5.05) rectangle (0.30,5.35);
+  \draw[thickline] (0.30,5.20) -- (0.62,5.20);
+  \draw[thickline] (0.62,5.20) circle (0.13);
+  \node[right] at (0.80,5.20) {valve};
+  % T-pipe
+  \draw[thickline,fill=white] (-0.30,4.70) rectangle (0.30,5.05);
+  \draw[thickline,fill=white] (-1.45,4.32) rectangle (1.45,4.70);
+  \draw[thickline,fill=white] (-1.45,3.45) rectangle (-1.05,4.32);
+  \draw[thickline,fill=white] (1.05,3.45) rectangle (1.45,4.32);
+  \draw[thickline,fill=white] (-1.38,3.30) -- (-1.12,3.30) -- (-1.05,3.45) -- (-1.45,3.45) -- cycle;
+  \draw[thickline,fill=white] (1.12,3.30) -- (1.38,3.30) -- (1.45,3.45) -- (1.05,3.45) -- cycle;
+  \node[right] at (1.55,3.95) {T-pipe};
+  % drops
+  \foreach \y in {3.12,2.92} {
+    \fill (-1.25,\y) circle (0.055);
+    \fill (1.25,\y) circle (0.055);
+  }
+  % cylinders A1, A2
+  \draw[thickline] (-1.47,2.42) -- (-1.47,2.92);
+  \draw[thickline] (-1.03,2.42) -- (-1.03,2.92);
+  \draw[thickline] (1.03,2.42) -- (1.03,2.92);
+  \draw[thickline] (1.47,2.42) -- (1.47,2.92);
+  \node[left] at (-1.55,2.65) {$A_1$};
+  \node[right] at (1.55,2.65) {$A_2$};
+  \node[right] at (1.72,2.45) {aluminium cylinder};
+  % wires
+  \draw[thickline] (-1.25,2.42) -- (1.25,1.95);
+  \draw[thickline] (1.25,2.42) -- (-1.25,1.95);
+  \node[above] at (0,2.16) {iron wire};
+  % cups
+  \draw[thickline] (-1.85,0.95) -- (-1.85,1.95) -- (-1.55,1.95);
+  \draw[thickline] (-0.95,1.95) -- (-0.65,1.95) -- (-0.65,0.95);
+  \draw[thickline] (-1.85,0.95) -- (-0.65,0.95);
+  \draw[thickline] (0.65,0.95) -- (0.65,1.95) -- (0.95,1.95);
+  \draw[thickline] (1.55,1.95) -- (1.85,1.95) -- (1.85,0.95);
+  \draw[thickline] (0.65,0.95) -- (1.85,0.95);
+  \draw[thickline] (-1.72,1.55) -- (-0.78,1.55);
+  \draw[thickline] (0.78,1.55) -- (1.72,1.55);
+  \node[below] at (-1.25,0.92) {$B_1$};
+  \node[below] at (1.25,0.92) {$B_2$};
+  \node[right] at (1.95,1.55) {aluminium cup};
+  % insulating board
+  \draw[thickline,hatch] (-2.35,0.55) rectangle (2.35,0.95);
+  \node[below] at (0,0.52) {insulating board};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.10}
+There are two common types of microphone: the condenser type and the electret type. Each of them consists of a fixed plate and a movable plate, as shown in the figure. The area of both the fixed and the movable plates is $S$, and the separation between them is $d$. For the condenser microphone both plates are metal conductors. For the electret microphone the movable plate is a metal conductor and the fixed plate is a dielectric with one surface metallised, the thickness of the dielectric being $d_1$ and its relative permittivity $\varepsilon_r$; the non-metallised surface carries a constant charge acquired during manufacture, with surface charge density $\sigma$, and its metallised surface (which carries no external charge) serves as the electrode. Under the action of sound pressure the movable plate of either microphone vibrates harmonically about its equilibrium position with displacement $x_0\sin\omega t$. Design the best circuit for each of the two microphones so as to convert this vibration into an output voltage signal. State the requirements on the parameters of the components used, and write the relation between the output voltage signal and the displacement.
+\end{problem}
+
+\begin{figbox}{3.10}
+\begin{tikzpicture}[scale=0.95]
+  % condenser type
+  \node at (0.55,2.05) {condenser type};
+  \draw[thickline] (0.15,0.15) -- (0.15,1.55);
+  \draw[thickline] (0.75,0.15) -- (0.75,1.55);
+  \draw[thickline] (-0.75,0.85) -- (0.15,0.85);
+  \draw[thickline] (0.75,0.85) -- (1.65,0.85);
+  \node[below] at (0.15,-0.02) {fixed plate};
+  \node[below] at (0.90,-0.02) {movable plate};
+  \draw[dim] (0.15,1.80) -- (0.75,1.80) node[midway,above] {$d$};
+  % electret type
+  \begin{scope}[xshift=4.6cm]
+  \node at (0.90,2.05) {electret type};
+  \draw[thickline,fill=black!12] (0.10,0.15) rectangle (0.42,1.55);
+  \draw[thickline] (0.42,0.15) -- (0.42,1.55);
+  \draw[thickline] (1.05,0.15) -- (1.05,1.55);
+  \draw[thickline] (-0.75,0.85) -- (0.10,0.85);
+  \draw[thickline] (1.05,0.85) -- (1.95,0.85);
+  \node[below] at (0.26,-0.02) {fixed plate};
+  \node[below] at (1.15,-0.02) {movable plate};
+  \draw[dim] (0.42,1.80) -- (1.05,1.80) node[midway,above] {$d$};
+  \draw[dim] (-0.05,1.30) -- (0.10,1.30);
+  \node[above] at (0.06,1.30) {$d_1$};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.11}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Two semi-infinite conducting plates are placed at right angles to each other. A point charge $q$ is moved from infinity to a point at a distance $d$ from each of the two conducting plates, as shown in the figure. Find the work $W_{\text{in}}$ done by the external force during this process.
+\item With the point charge $q$ in this position, suppose the two plates change from conductors into insulators; the point charge $q$ is then moved from this position back to infinity. Find the work $W_{\text{out}}$ done by the external force during this process.
+\item What is the electrostatic energy of the system of charges on the insulating plates at this time?
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.11}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-0.2,0) -- (3.6,0);
+  \draw[thickline] (0,0.2) -- (0,-3.3);
+  \draw[dashedline] (3.6,0) -- (4.4,0);
+  \draw[dashedline] (0,-3.3) -- (0,-3.9);
+  \fill (1.55,-1.55) circle (1.6pt) node[right] {$q$};
+  \draw[dim] (0,-2.05) -- (1.55,-2.05) node[midway,below] {$d$};
+  \draw[dashedline] (1.55,-1.55) -- (1.55,-2.05);
+  \draw[dim] (2.05,0) -- (2.05,-1.55) node[midway,right] {$d$};
+  \draw[dashedline] (1.55,-1.55) -- (2.05,-1.55);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.12}
+A point charge $Q$ is placed inside an electrically neutral conducting thin spherical shell of radius $a$, at a distance $r$ from the centre. Find the electrostatic force acting on the point charge.
+\end{problem}
+
+\begin{problem}{3.13}
+$N$ uncharged conducting circular plates are mounted coaxially, parallel and equally spaced, and are numbered in order, as shown in the figure. The spacing between neighbouring plates is much smaller than the diameter of the plates. The negative terminal of a power supply of electromotive force $U$ is connected to plate 1 and earthed, and the positive terminal is connected in turn to plate $N$, plate $N-1$, \dots, plate $k$, \dots, plate 3, plate 2. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the ratio of the absolute values of the charges carried by plate $k$ and plate 1, $|q_k|:|q_1|$;
+\item the potential $U_k$ of plate $k$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.13}
+\begin{tikzpicture}[scale=0.92]
+  \foreach \x/\lab in {0/N,0.55/N-1,1.75/k,2.15/k-1,3.35/2,3.75/1} {
+    \draw[thickline] (\x,0) -- (\x,2.55);
+    \node[above] at (\x,2.58) {$\lab$};
+  }
+  \node at (1.15,1.55) {$\cdots$};
+  \node at (2.75,1.55) {$\cdots$};
+  % connections of plates N and N-1 to the positive terminal
+  \draw[thickline] (0,0) -- (0,-0.45) .. controls (0,-1.35) and (0.9,-1.35) .. (1.55,-1.35);
+  \draw[thickline] (0.55,0) -- (0.55,-0.25) .. controls (0.55,-1.05) and (1.0,-1.15) .. (1.55,-1.15);
+  \draw[thickline] (1.55,-1.35) -- (1.55,-1.15) -- (2.05,-1.15);
+  % battery
+  \draw[thickline] (2.05,-1.32) -- (2.05,-0.98);
+  \draw[thickline] (2.25,-1.25) -- (2.25,-1.05);
+  \node[above] at (2.15,-0.95) {$U$};
+  \draw[thickline] (2.25,-1.15) -- (2.55,-1.15) -- (2.55,-0.75) -- (3.75,-0.75) -- (3.75,0);
+  % earth
+  \draw[thickline] (3.75,-0.75) -- (4.25,-0.75);
+  \draw[thickline] (4.0,-0.75) -- (4.0,-0.95);
+  \draw[thickline] (3.88,-0.95) -- (4.12,-0.95);
+  \draw[thickline] (3.93,-1.06) -- (4.07,-1.06);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.14}
+A balloon of radius $a$ is charged to potential $V$. The balloon leaks charge through the atmosphere, and at the same time a deflation valve is opened and adjusted so that its radius gradually decreases.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the radius $r$ of the balloon as a function of the time $t$ if its potential is to remain constant. Let the resistivity of the atmosphere be $\rho$ and its relative permittivity be 1.
+\item What is the Joule heat dissipated in the atmosphere during the whole leakage process? Is it equal to the initial electrostatic energy of the balloon? Why?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.15}
+A capacitor is formed of two thin conducting spherical shells of radii $a$ and $b$ ($a<b$). There is a small hole in the outer shell, through which an insulated wire is led out to connect the inner shell with a third conductor of radius $c$; the distance $r$ of this conductor from the capacitor is very large. The outer shell of the capacitor is earthed, and the two connected conductors are given a charge $Q$. Find an approximate expression for the electrostatic force acting on the third conductor.
+\end{problem}
+
+\begin{figbox}{3.15}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) circle (1.15);
+  \draw[thickline] (0,0) circle (0.55);
+  \draw[thickline] (0.55,0) -- (3.75,0);
+  \draw[thickline] (3.75,0) circle (0.30);
+  \node at (3.75,0.02) {$c$};
+  \node at (0.05,0.72) {$+Q$};
+  \draw[dim] (0,0) -- (0.39,0.39) node[midway,above left] {$a$};
+  \draw[dim] (0,0) -- (-0.81,-0.81) node[midway,below left] {$b$};
+  \draw[thickline] (0,-1.15) -- (0,-1.45);
+  \draw[thickline] (-0.30,-1.45) -- (0.30,-1.45);
+  \draw[thickline] (-0.20,-1.58) -- (0.20,-1.58);
+  \draw[thickline] (-0.10,-1.71) -- (0.10,-1.71);
+  \draw[dim] (0,-2.10) -- (3.75,-2.10) node[midway,below] {$r$};
+  \draw[dashedline] (0,-1.15) -- (0,-2.10);
+  \draw[dashedline] (3.75,-0.30) -- (3.75,-2.10);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.16}
+Above a very large horizontal earthed conducting plate there is a uniform electric field $E_0$ directed vertically. A conducting hemisphere of mass density $\rho$ and radius $R$ is now placed flat on the conducting plate with its spherical surface facing upwards, as shown in the figure. Find the least value of $E_0$ required to lift the hemisphere off the plate.
+\end{problem}
+
+\begin{figbox}{3.16}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-0.6,0) -- (6.4,0);
+  \draw[thickline] (3.0,0) arc (0:180:1.6);
+  \draw[thickline] (3.0,0) -- (4.15,1.05);
+  \node[above right] at (3.65,0.55) {$R$};
+  \draw[force] (1.0,2.15) -- (1.0,2.95);
+  \node[left] at (0.95,2.55) {$E_0$};
+  \draw[force] (1.0,1.10) -- (1.0,1.90);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.17}
+A long cylindrical straight wire of radius $r$ is placed horizontally with its axis at a distance $d$ from the earth (which may be regarded as a conductor), as shown in the figure. Find the capacitance per unit length $C^{*}$ between the wire and the earth, expressed as a function of $d/r$, in the following two cases:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item $r\ll d$;
+\item $r<d$, but of the same order of magnitude as $d$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.17}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) circle (1.05);
+  \draw[thickline] (0,0) -- (0.74,0.74);
+  \node[above right] at (0.42,0.40) {$r$};
+  \draw[thickline] (-1.6,0) -- (2.6,0);
+  \draw[dim] (1.55,0) -- (1.55,-2.35) node[midway,right] {$d$};
+  \draw[thickline] (-0.5,-2.35) -- (3.4,-2.35);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.18}
+A conducting spheroid of revolution has the surface equation
+\begin{equation*}
+\frac{x^2}{a^2}+\frac{y^2}{a^2}+\frac{z^2}{b^2}=1.
+\end{equation*}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the capacitance of this conductor.
+\item Find the approximate expressions for the capacitance when $b\gg a$ and when $b\ll a$.
+\end{enumerate}
+The following integral formulae may be used:
+\begin{equation*}
+\int\frac{\dd x}{\sqrt{1+x^2}}=\ln\left(x+\sqrt{1+x^2}\right),\qquad
+\int\frac{\dd x}{1+x^2}=\arctan x,
+\end{equation*}
+\begin{equation*}
+\int\frac{\dd x}{\sqrt{1-x^2}}=\arcsin x,\qquad
+\int\frac{\dd x}{1-x^2}=\frac{1}{2}\ln\frac{1+x}{1-x}.
+\end{equation*}
+\end{problem}
+
+\begin{problem}{3.19}
+On the axis of a grounded metal cylindrical surface of radius $R$ there is a thin long wire of radius $r_0$ maintained at a high positive voltage $V_0$; this arrangement constitutes a cylindrical counter. As soon as ionising radiation appears, it triggers an ``avalanche'' near the surface of the wire, where the field is very strong. Suppose that at the surface of the wire $N$ electrons are ionised from atoms, leaving $N$ ions, which then begin to move away from the wire under the action of the electric field. Assume that the ion mobility (the ratio of the ion velocity to the electric field) is a constant $w$, and that the moving ions form a uniform thin cylindrical layer around the wire.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the radial position $r$ of the ions as a function of the time $t$, measured from the moment at which the ions are formed at the surface of the wire. In this part the avalanche and the change of the field caused by the ions are to be ignored.
+\item If the potential $V_0$ is kept constant, a charge $Q$ must flow to the wire as the ions drift radially. Given that the total charge of the ions is $Q_t$, calculate the charge $Q$ as a function of the time $t$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.19}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) circle (1.9);
+  \draw[thickline] (0,0) circle (0.20);
+  \node[above right] at (1.25,1.35) {$R$};
+  \node[above right] at (0.12,0.16) {$r_0$};
+  \node[below right] at (0.12,-0.07) {$V_0$};
+  \draw[thickline] (0,-1.9) -- (0,-2.15);
+  \draw[thickline] (-0.25,-2.15) -- (0.25,-2.15);
+  \draw[thickline] (-0.16,-2.28) -- (0.16,-2.28);
+  \draw[thickline] (-0.08,-2.41) -- (0.08,-2.41);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.20}
+A dielectric spherical shell has inner and outer radii $a$ and $b$, the relative permittivity of the dielectric being $\varepsilon_r$. A point charge $q$ is located at the centre of the shell. Find the work done by the external force in moving this point charge from the centre to infinity. (One may imagine a small hole made in the shell, and assume that this does not affect the polarisation of the dielectric.)
+\end{problem}
+
+\begin{problem}{3.21}
+Dilute dielectric particles are distributed uniformly between the plates of a parallel-plate capacitor. Each particle may be regarded as a small sphere of radius $a$ ($a$ much smaller than the dimensions of the capacitor), the relative permittivity of the dielectric being $\varepsilon_r$, and the number density of the particles being $n$. The space between the plates may then be regarded as filled with an equivalent uniform dielectric. Find the relative permittivity $\varepsilon_r'$ of this equivalent dielectric.
+\end{problem}
+
+\begin{problem}{3.22}
+A semi-infinite liquid dielectric of relative permittivity $\varepsilon_r$ contains a point charge $q$ at a depth $h$ below its surface. Find the distribution of the polarisation charge on the surface of the liquid and the total amount of polarisation charge on the surface, and find the electrostatic force acting on the point charge.
+\end{problem}
+
+\begin{problem}{3.23}
+An electrostatic precipitator consists of a vertical metal rod of radius $a$ and a coaxial thin-walled cylinder of radius $b$; the height of the device is much greater than both $a$ and $b$. A voltage $U$ is applied between the rod and the cylinder.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the electric field strength $E(r)$ at a distance $r$ ($a<r<b$) from the axis inside the cylinder.
+\item A dust particle may be regarded as a small dielectric sphere of radius $c$ ($c\ll a,b$) with relative permittivity $\varepsilon_r$. Suppose that the particle is inside the cylinder at a distance $r$ ($a<r<b$) from the axis. Estimate the magnitude and the direction of the electric force acting on the particle.
+\item Let the mass of the particle be $m$. Find the time required for the particle to travel from rest, in the direction of the electric force, from one electrode to the other (gravity and air resistance are neglected).
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.24}
+There is a uniform electric field $E_0$ in an infinite liquid dielectric of relative permittivity $\varepsilon_r$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item A spherical cavity of radius $R$ is hollowed out in the dielectric. Find the electric field inside the cavity.
+\item A conducting sphere of the same radius is placed in the spherical cavity and given a charge $Q$. Find the electric force acting on the conducting sphere.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.25}
+Two point charges $q$ and $q'$ are placed at the centres of two small spherical cavities, both of radius $a$, in an infinite isotropic dielectric, the distance between the charges being $r$ ($r\gg a$). Find the electrostatic force acting on the charge $q'$. Let the relative permittivity of the dielectric be $\varepsilon_r$.
+\end{problem}
+
+\begin{problem}{3.26}
+A point electric dipole of dipole moment $p$ is located at the centre of a dielectric sphere of radius $a$ and relative permittivity $\varepsilon_r$. Find the potential at points inside and outside the sphere. (Hint: the field outside the sphere is that of a dipole.)
+\end{problem}
+
+\begin{problem}{3.27}
+Four metal pins are inserted vertically in a row in the horizontal surface of a very large piece of resistive material, the spacing between neighbouring pins being $d$, and the pins make good contact with the surface. A power supply is connected between the two outer pins, and a voltmeter between the two middle pins. Let the current flowing through the power supply be $I$ and the reading of the voltmeter be $U$. Find the resistivity $\rho$ of the material.
+\end{problem}
+
+\begin{figbox}{3.27}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-2.4,0) .. controls (-2.8,-0.9) and (-1.7,-1.15) .. (-1.1,-1.55)
+    .. controls (-0.4,-2.0) and (0.6,-1.5) .. (1.3,-1.8)
+    .. controls (2.0,-2.1) and (2.6,-1.2) .. (2.5,-0.5) .. controls (2.45,-0.1) and (2.2,0) .. (2.0,0) -- (-2.4,0);
+  \foreach \x in {-1.5,-0.5,0.5,1.5} {
+    \draw[thickline] (\x,0) -- (\x,0.75);
+    \fill (\x,0) circle (1.2pt);
+  }
+  \draw[thickline] (-1.5,0.75) -- (-1.85,1.15);
+  \draw[force] (-2.35,1.55) -- (-1.90,1.20);
+  \node[left] at (-2.4,1.60) {$I$};
+  \draw[thickline] (1.5,0.75) -- (1.85,1.15);
+  \draw[force] (1.90,1.20) -- (2.35,1.55);
+  \node[right] at (2.4,1.60) {$I$};
+  \draw[thickline] (-0.5,0.75) -- (-0.5,1.35);
+  \draw[thickline] (0.5,0.75) -- (0.5,1.35);
+  \draw[thickline] (-0.5,1.35) arc (180:0:0.5);
+  \draw[thickline] (-0.5,1.35) -- (-0.8,1.75);
+  \draw[thickline] (0.5,1.35) -- (0.8,1.75);
+  \draw[thickline] (-0.95,1.60) circle (0.22);
+  \node at (-0.95,1.60) {$U$};
+  \draw[dim] (-1.5,-0.35) -- (-0.5,-0.35);
+  \node[below] at (-1.0,-0.38) {$d$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.28}
+Consider the infinite resistor network shown in the figure. Starting from a square of side $L$, joining the midpoints of its sides gives another square, and the process is repeated without end. The resistance of each side is proportional to its length. Find the equivalent resistance between two opposite vertices of the outermost square, expressing the result in terms of the resistance $R$ of one side of that square.
+\end{problem}
+
+\begin{figbox}{3.28}
+\begin{tikzpicture}[scale=0.95]
+  \def\s{3.2}
+  \draw[thickline] (0,\s) -- (\s,0) -- (0,-\s) -- (-\s,0) -- cycle;
+  \draw[thickline] (-\s/2,\s/2) -- (\s/2,\s/2) -- (\s/2,-\s/2) -- (-\s/2,-\s/2) -- cycle;
+  \draw[thickline] (0,\s/2) -- (\s/2,0) -- (0,-\s/2) -- (-\s/2,0) -- cycle;
+  \draw[thickline] (-\s/4,\s/4) rectangle (\s/4,-\s/4);
+  \draw[thickline] (0,\s/4) -- (\s/4,0) -- (0,-\s/4) -- (-\s/4,0) -- cycle;
+  \draw[thickline] (-\s/8,\s/8) rectangle (\s/8,-\s/8);
+  \draw[thickline] (0,\s/8) -- (\s/8,0) -- (0,-\s/8) -- (-\s/8,0) -- cycle;
+  \node[right] at (\s/2,\s/2) {$L$};
+\end{tikzpicture}
+\end{figbox}
+
+% Problems 3.29--3.33. The scanned source page for this range is defective
+% (book p. 24 duplicates p. 23); the statements are reconstructed from the
+% surviving solution and hint pages.
+\begin{problem}{3.29}
+Nine identical resistors, each of resistance $1\unitv{\Omega}$, are connected to form the edges of a triangular prism, as shown in the figure. A current enters the network at the vertex $A$ and leaves it at the vertex $E$. Find the equivalent resistance $R_{AE}$ between $A$ and $E$.
+\end{problem}
+
+\begin{figbox}{3.29}
+\begin{tikzpicture}[scale=0.9,>=latex]
+  \coordinate (A) at (-2.6,0.7);
+  \coordinate (C) at (-0.8,1.9);
+  \coordinate (D) at (-1.0,-1.3);
+  \coordinate (B) at (1.2,0.7);
+  \coordinate (F) at (2.9,1.9);
+  \coordinate (E) at (2.3,-1.3);
+  % left triangle
+  \draw[thickline] (A)--(C) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (C)--(D) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (D)--(A) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  % right triangle
+  \draw[thickline] (B)--(F) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (F)--(E) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (E)--(B) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  % connectors
+  \draw[thickline] (A)--(B) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (C)--(F) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  \draw[thickline] (D)--(E) node[midway,sloped,draw,fill=white,minimum width=0.36cm,minimum height=0.14cm,inner sep=0pt] {};
+  % vertex labels
+  \node[left] at (A) {$A$};
+  \node[above] at (C) {$C$};
+  \node[below] at (D) {$D$};
+  \node[right] at (B) {$B$};
+  \node[above] at (F) {$F$};
+  \node[below] at (E) {$E$};
+  % current arrows
+  \draw[force] (-3.7,1.25)--(A) node[midway,above left] {$I$};
+  \draw[force] (E)--(3.2,-1.9) node[midway,below right] {$I$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.30}
+The four arms of the Wheatstone bridge shown in the figure have resistances $R_1$, $R_1$, $R_2$ and $R_2(1-\delta)$, where $\delta\ll1$. The galvanometer $G$ is ideal, so that its resistance may be neglected. Find the ratio $I_G/I$ of the current through the galvanometer to the total current, accurate to the first order in $\delta$.
+\end{problem}
+
+\begin{figbox}{3.30}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  \coordinate (L) at (0,0);
+  \coordinate (R) at (5,0);
+  \coordinate (A) at (2.5,1.7);
+  \coordinate (B) at (2.5,-1.7);
+  \draw[thickline] (L)--(A) node[midway,sloped,draw,fill=white,minimum width=0.58cm,minimum height=0.18cm,inner sep=0pt] {};
+  \draw[thickline] (A)--(R) node[midway,sloped,draw,fill=white,minimum width=0.58cm,minimum height=0.18cm,inner sep=0pt] {};
+  \draw[thickline] (L)--(B) node[midway,sloped,draw,fill=white,minimum width=0.58cm,minimum height=0.18cm,inner sep=0pt] {};
+  \draw[thickline] (B)--(R) node[midway,sloped,draw,fill=white,minimum width=0.58cm,minimum height=0.18cm,inner sep=0pt] {};
+  \node[above left] at (1.02,0.97) {$R_1$};
+  \node[above right] at (3.98,0.97) {$R_1$};
+  \node[below left] at (1.02,-0.97) {$R_2$};
+  \node[below right] at (4.02,-0.97) {$R_2(1-\delta)$};
+  % galvanometer branch
+  \draw[thickline] (A)--(2.5,0.32);
+  \draw[thickline] (2.5,-0.32)--(B);
+  \draw[thickline] (2.5,0) circle (0.26);
+  \node at (2.5,0) {$G$};
+  \draw[force] (2.74,0.14)--(2.74,0.00);
+  \node[right] at (2.82,0.28) {$I_G$};
+  % source
+  \draw[thickline] (L)--(0,-2.8)--(5,-2.8)--(R);
+  \draw[thickline] (2.38,-2.92)--(2.38,-2.68);
+  \draw[thickline] (2.62,-2.86)--(2.62,-2.74);
+  \node[below] at (2.5,-2.95) {$U$};
+  \draw[force] (0.28,-2.1)--(0.28,-1.3);
+  \node[left] at (0.20,-1.7) {$I$};
+  \fill (L) circle (1.4pt); \fill (R) circle (1.4pt);
+  \node[left] at (L) {$L$};
+  \node[right] at (R) {$R$};
+  \node[above] at (A) {$A$};
+  \node[below] at (B) {$B$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.31}
+The figure shows a ladder network of $n=10$ cells. In the $i$-th cell a battery of electromotive force $V_i=(10+i)\unitv{V}$ and a resistor $2R$ are connected in series between the node $A_i$ and the common return line $B$. Adjacent nodes $A_i$ and $A_{i+1}$ are connected by a resistor $R$, and the far end $A_n$ is connected to the return line through a resistor $2R$. The output terminal $A$ is the node $A_1$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the equivalent electromotive force and the internal resistance of the network between $A$ and $B$.
+\item Which of the points $A_1,A_2,\ldots,A_{10}$ has the highest potential? Calculate this potential.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.31}
+\begin{tikzpicture}[scale=0.78,>=latex]
+  \def\ytop{2.4}
+  \def\ybot{0}
+  % bottom rail
+  \draw[thickline] (-0.9,\ybot)--(10.0,\ybot);
+  % termination 2R at the far left
+  \draw[thickline] (-0.9,\ytop)--(0.9,\ytop);
+  \draw[thickline] (-0.9,\ytop)--(-0.9,1.55);
+  \draw[thickline] (-1.08,1.55) rectangle (-0.72,1.15);
+  \node[left] at (-1.15,1.35) {$2R$};
+  \draw[thickline] (-0.9,1.15)--(-0.9,\ybot);
+  % top nodes
+  \coordinate (An) at (0.9,\ytop);
+  \coordinate (An1) at (3.1,\ytop);
+  \coordinate (A2) at (6.3,\ytop);
+  \coordinate (A1) at (8.7,\ytop);
+  \coordinate (A) at (10.0,\ytop);
+  \draw[thickline] (An)--(An1) node[midway,sloped,draw,fill=white,minimum width=0.44cm,minimum height=0.16cm,inner sep=0pt] {};
+  \node[below] at (2.0,2.18) {$R$};
+  \draw[thickline] (An1)--(3.9,\ytop);
+  \draw[dashedline] (3.9,\ytop)--(4.9,\ytop);
+  \draw[thickline] (4.9,\ytop)--(A2) node[midway,sloped,draw,fill=white,minimum width=0.44cm,minimum height=0.16cm,inner sep=0pt] {};
+  \node[below] at (5.6,2.18) {$R$};
+  \draw[thickline] (A2)--(A1) node[midway,sloped,draw,fill=white,minimum width=0.44cm,minimum height=0.16cm,inner sep=0pt] {};
+  \node[below] at (7.5,2.18) {$R$};
+  \draw[thickline] (A1)--(A);
+  \node at (8.7,2.82) {$A_1$};
+  \node at (6.3,2.82) {$A_2$};
+  \node at (3.1,2.82) {$A_{n-1}$};
+  \node at (0.9,2.82) {$A_n$};
+  \node at (4.4,2.68) {$\cdots$};
+  % shunt branches
+  \foreach \x/\lab in {0.9/{$V_n$},3.1/{$V_{n-1}$},6.3/{$V_2$},8.7/{$V_1$}} {
+    \draw[thickline] (\x,\ytop)--(\x,1.55);
+    \draw[thickline] (\x-0.18,1.55) rectangle (\x+0.18,1.15);
+    \node[right] at (\x+0.22,1.35) {$2R$};
+    \draw[thickline] (\x,1.15)--(\x,0.72);
+    \draw[thickline] (\x-0.20,0.72)--(\x+0.20,0.72);
+    \draw[thickline] (\x-0.12,0.58)--(\x+0.12,0.58);
+    \node[right] at (\x+0.25,0.65) {\lab};
+    \draw[thickline] (\x,0.58)--(\x,\ybot);
+  }
+  \fill (A) circle (1.4pt);
+  \fill (10.0,\ybot) circle (1.4pt);
+  \node[above] at (A) {$A$};
+  \node[right] at (10.0,\ybot) {$B$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.32}
+A thin conducting ring of radius $b$ and resistance $R$ rotates about its axis with initial linear speed $v_0$. It is then brought to rest; the self-inductance of the ring is neglected.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item How can the sign of the charge carriers in the ring be determined from the direction of the current in it?
+\item During the deceleration a total charge $q$ passes through a cross-section of the ring. Find the charge-to-mass ratio $e/m$ of the carriers.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.32}
+\begin{tikzpicture}[scale=1.0,>=latex]
+  \draw[thickline] (0,0) circle (1.8);
+  \draw[axis] (0,0)--(1.8,0) node[midway,above] {$b$};
+  \fill (0,0) circle (1.4pt);
+  \node[below left] at (0,0) {$O$};
+  % angular velocity
+  \draw[force] (0.55,0.55) arc (45:100:0.78);
+  \node at (0.38,1.02) {$\omega$};
+  % velocity arrow tangent at the lower left
+  \draw[force] (-1.50,-0.99)--(-1.02,-1.48) node[midway,below left] {$v$};
+  % current arrow along the ring
+  \draw[force] (1.86,0.32) arc (10:-38:1.86);
+  \node[right] at (1.95,-0.42) {$I$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.33}
+A long straight wire of radius $b$ and conductivity $g$ carries a steady current whose density far from any disturbance is $j_0$. A spherical non-conducting bubble of radius $a$ ($a\ll b$) is formed in the wire, its centre lying on the axis.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the electric field $E_{\text{in}}$ inside the bubble.
+\item Find the electric field at a point $P$ in the wire at a distance $r$ from the centre of the bubble ($r>a$), the radius $OP$ making an angle $\theta$ with the direction of the current.
+\item Find the current $I$ through the cross-section of the wire passing through the centre of the bubble, retaining the first non-vanishing correction due to the bubble.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.33}
+\begin{tikzpicture}[scale=0.95,>=latex]
+  % wire
+  \draw[thickline] (-3.4,-1.5) rectangle (3.4,1.5);
+  % bubble
+  \draw[thickline] (0,0) circle (0.52);
+  % surface charge signs
+  \node at (-0.40,0.04) {$+$};
+  \node at (-0.40,-0.22) {$+$};
+  \node at (0.40,0.04) {$-$};
+  \node at (0.40,-0.22) {$-$};
+  % current density arrows
+  \draw[force] (-3.0,0.95)--(-2.2,0.95) node[midway,above] {$j_0$};
+  \draw[force] (-3.0,-0.95)--(-2.2,-0.95);
+  \draw[force] (2.2,1.05)--(3.0,1.05);
+  % axis
+  \draw[axis] (0,0)--(3.25,0) node[right] {$x$};
+  % point P
+  \coordinate (P) at (1.55,0.95);
+  \draw[dashedline] (0,0)--(P);
+  \fill (P) circle (1.4pt);
+  \node[above right] at (P) {$P$};
+  \node[above left] at (0.82,0.52) {$r$};
+  \draw[thickline] (0.85,0) arc (0:31.5:0.85);
+  \node at (1.02,0.27) {$\theta$};
+  % radius a
+  \draw[force] (0,0)--(-0.30,0.42) node[above left] {$a$};
+  % wire radius b
+  \draw[dim] (3.05,0)--(3.05,1.5);
+  \node[right] at (3.10,0.75) {$b$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.34}
+The atmosphere surrounding the earth is ionised by cosmic rays and becomes a non-uniform conducting medium whose conductivity may be written as
+\begin{equation*}
+\sigma=\sigma_0+a(r-R)^2,
+\end{equation*}
+where $r$ is the distance from the centre of the earth, $\sigma_0=3\times10^{-14}\,(\Omega\cdot\mathrm{m})^{-1}$ and $a=0.5\times10^{-20}\,(\Omega\cdot\mathrm{m}^3)^{-1}$. In fine weather the electric field strength at the earth's surface is $E_0=100\unitv{V/m}$, directed vertically downwards. The current in the atmosphere may be regarded as steady. Given that the earth's radius is $R=6.4\times10^{6}\unitv{m}$, calculate:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the electric field $E(r)$ of the steady current in the atmosphere and the value of the total current $I$;
+\item the charge density distribution $\rho(r)$ in the atmosphere and the value of the surface charge density $\Sigma$ at the earth's surface, the relative permittivity of the atmosphere being 1;
+\item the potential at the earth's surface and its numerical value;
+\item if the charge of the earth were not replenished, estimate how long it would take for the earth's charge to be neutralised by the current. In fact the total charge of the earth remains roughly constant. What natural phenomenon can keep the earth's charge from being neutralised by the current, so that it stays roughly constant?
+\end{enumerate}
+The following integral formulae may be useful: putting $X=a+bx+cx^2$ and $q=4ac-b^2$, one has
+\begin{equation*}
+\int\frac{\dd x}{X}=\frac{2}{\sqrt{q}}\arctan\frac{2cx+b}{\sqrt{q}},\qquad
+\int\frac{\dd x}{xX}=\frac{1}{2a}\ln\frac{x^2}{X}-\frac{b}{2a}\int\frac{\dd x}{X}.
+\end{equation*}
+\end{problem}
+
+\begin{problem}{3.35}
+A d.c. supply transmits power to a distant load through two identical parallel thin wires (whose resistance is neglected) at a voltage of $33\unitv{kV}$. The capacitance per unit length between the two wires is $10\,\mu\mu\mathrm{F/m}$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the power transmitted when there is no net electromagnetic force acting between the two wires;
+\item the electric energy and the magnetic energy stored per unit length of the transmission line in this case.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.36}
+A solenoid of length $L$ and radius $R$ has $n$ turns per unit length and carries a current $I$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the magnetic flux density $B$ at the centre of the axis of an end face of the solenoid.
+\item Suppose that the solenoid is semi-infinite. Find an approximate expression for the radial component $B_\rho$ of the magnetic flux density at a point on the end face at a distance $\rho_0$ from the axis ($\rho_0\ll R$).
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.37}
+The distance between the plates of a parallel-plate capacitor is $d$. The capacitor is initially uncharged. There is a uniform magnetic field of flux density $B$ in space, its direction being parallel to the plates of the capacitor. When an electrically neutral liquid flows with velocity $v$ between the two plates, what is the reading of a voltmeter connected between the plates of the capacitor? Let the relative permittivity of the liquid be $\varepsilon_r$.
+\end{problem}
+
+\begin{problem}{3.38}
+A long dielectric cylinder of radius $R$ and polarisability $\chi$ rotates about its axis with constant angular velocity $\omega$. There is a uniform magnetic field of flux density $B$ in space, directed along the axis. Find the distribution of the polarisation charge on the dielectric cylinder. (Edge effects are neglected.)
+\end{problem}
+
+\begin{problem}{3.39}
+Two thin-walled metal mesh cylinders of radii $a$ and $b$ and length $L$ ($a<b\ll L$) are placed coaxially, and the space between them is filled with a uniform medium of resistivity $\rho$. A voltage $U$ is applied between the inner and the outer cylinder. Edge effects are neglected.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the current $I$ flowing through the inner and outer cylinders.
+\item If a uniform magnetic field of flux density $B$ is applied along the axis of the cylinders, find the current $I'$ then flowing through the inner and outer cylinders. Let the relative permeability of the medium be 1, the charge-to-mass ratio of the current carriers be $e/m$, and their number density be $n$. (The magnetic field produced by the current itself is neglected.)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.40}
+A circular coil of radius $b$ carries a current $I$. A small paramagnetic dielectric sphere of relative permeability $\mu_r$ and radius $a$ ($a\ll b$) is placed at its centre.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the magnetisation $M$ of the small sphere (the sphere may be regarded as uniformly magnetised).
+\item The presence of the small sphere increases the self-inductance of the coil. Find this increase $\Delta L$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.41}
+A cylindrical thin shell of length $l$ and radius $a$ ($l\gg a$) carries a uniform surface charge of density $\sigma$. The shell rotates about its axis with angular velocity $\omega=kt$, where $k$ is a constant. Edge effects are neglected. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the magnetic field $B$ at points inside the cylindrical shell;
+\item the electric field $E$ at points inside the cylindrical shell;
+\item the total electric energy $W_E$ and the total magnetic energy $W_m$ inside the cylindrical shell;
+\item the Poynting vector inside the cylindrical shell, and its relation to the energy of the electromagnetic field inside the shell.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.41}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-3.0,0) ellipse (0.35 and 1.1);
+  \draw[thickline] (-3.0,1.1) -- (2.6,1.1);
+  \draw[thickline] (-3.0,-1.1) -- (2.6,-1.1);
+  \draw[thickline] (2.6,0) ellipse (0.35 and 1.1);
+  \draw[dashedline] (-3.0,-1.25) -- (-3.0,1.25);
+  \draw[dim] (-3.0,-1.55) -- (2.6,-1.55) node[midway,below] {$l$};
+  \draw[dim] (2.95,0) -- (2.95,1.1) node[midway,right] {$a$};
+  \draw[thickline] (2.6,0) -- (4.1,0);
+  \node[right] at (4.15,0) {$z$};
+  \draw[force] (3.55,0.75) arc (65:-40:0.55);
+  \node at (3.95,0.85) {$\omega$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.42}
+The axis of a long rod of radius $R$ coincides with the $z$-axis, and the relative permeability of the rod is $\mu_r$. There is a uniform external magnetic field of flux density $B_0$ in the positive $x$ direction in space. Find the magnetic flux density $B_1$ inside the rod and $B_2$ outside the rod at an arbitrary point (the latter expressed in terms of its $r$ and $\theta$ components).
+\end{problem}
+
+\begin{figbox}{3.42}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) circle (1.35);
+  \draw[thickline] (0,0) -- (2.9,0);
+  \draw[force] (2.9,0) -- (3.3,0);
+  \node[right] at (3.32,0) {$x$};
+  \draw[force] (-2.9,0.85) -- (-2.05,0.85);
+  \draw[force] (-2.9,0) -- (-2.05,0);
+  \draw[force] (-2.9,-0.85) -- (-2.05,-0.85);
+  \node at (-2.35,0.30) {$B_0$};
+  \coordinate (P) at (2.1,1.6);
+  \draw[thickline] (0,0) -- (P);
+  \fill (P) circle (1.4pt) node[right] {$P(r,\theta)$};
+  \draw[thinline] (1.15,0) arc (0:37.3:1.15);
+  \node at (1.30,0.30) {$\theta$};
+  \node at (1.0,1.05) {$r$};
+  \node[above right] at (0.75,1.05) {$R$};
+  \draw[dim] (0,0) -- (0.95,0.95);
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.43}
+Motion of electrons in a magnetron. Two coaxial metal cylinders of radii $a$ and $b$ ($a<b$) are placed in a uniform magnetic field whose direction is parallel to the axis. A radial electric field directed towards the inner cylinder exists between the two cylinders, the voltage between them being $U$. Electrons emitted without initial velocity from the surface of the inner cylinder are accelerated by the electric field and fly towards the outer cylinder, while the magnetic field deflects the direction of their motion and may even make the electrons return to the inner cylinder. Find the magnetic flux density $B$ that just prevents the electrons from reaching the outer cylinder.
+\end{problem}
+
+\begin{problem}{3.44}
+A charged particle of charge $+q$ and mass $m$ moves in a circle of radius $R$ in the horizontal symmetry plane of a cyclotron. In this plane the magnetic field is along the vertical direction (taken as the $z$ direction), with flux density $B=B_z$. At the location of the particle, however, the flux density begins to decrease gradually in the radial direction (the direction of increasing $r$).
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the cyclotron frequency of the particle.
+\item Show that, when the particle suffers a small disturbance in the vertical direction, it performs simple harmonic motion in the vertical direction.
+\item Show that the angular frequency $\omega$ of this oscillation is proportional to the cyclotron frequency $\omega_c$ of the particle, that is,
+\begin{equation*}
+\omega=\alpha\omega_c,
+\end{equation*}
+and find the coefficient $\alpha$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.45}
+A particle of mass $m$ and charge $+q$ moves in a spiral in an axisymmetric non-uniform magnetic field, circling about the axis of the field (taken as the $z$-axis). It passes gradually from a region of flux density $B_1$ into a region of stronger magnetic field; the radius of gyration slowly decreases, and the particle is finally reflected (a magnetic mirror). Suppose that in the region $B_1$ the particle has speed $v_0$ and its velocity makes an angle $\varphi_0$ with the $z$-axis, and that the flux density at the strongest point of the field is $B_2$. Find the least value $\varphi_{0c}$ of the angle $\varphi_0$ for which the particle can be reflected. (Reasonable approximations may be made.)
+\end{problem}
+
+\begin{figbox}{3.45}
+\begin{tikzpicture}[scale=0.95]
+  \draw[dashedline] (-2.6,0) -- (7.4,0);
+  \draw[force] (7.15,0) -- (7.5,0);
+  \node[right] at (7.5,0) {$z$};
+  \foreach \y in {-1.55,-0.8,0.8,1.55} {
+    \draw[thickline] (-2.6,\y) .. controls (1.5,\y) and (3.0,\y*0.72) .. (7.0,\y*0.42);
+    \draw[force] (-0.2,\y) -- (0.45,\y);
+  }
+  \node at (-1.9,1.95) {$B_1$};
+  \node at (6.2,0.95) {$B_2$};
+  % helical trajectory
+  \draw[thickline] plot[domain=-2.2:2.0,samples=80,smooth]
+    ({\x},{0.52*sin(210*\x)*exp(-0.18*(\x+2.2))});
+  \coordinate (S) at (-2.2,0);
+  \draw[force] (S) -- ++(52:1.35) node[above right] {$v_0$};
+  \draw[thickline] (S) -- ++(1.2,0);
+  \draw[thinline] (-1.05,0) arc (0:52:1.15);
+  \node at (-0.85,0.30) {$\varphi_0$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.46}
+A rectangular coil of mass $m$ and width $b$, of sufficient length, moves in the plane of the paper along its length (the $x$ direction) with initial speed $v_0$ into a uniform magnetic field of flux density $B$ perpendicular to the paper and directed inwards; the edge of the field is parallel to one side of the coil, as shown. Take the moment at which the right side of the coil just enters the field as the origin of time, and let its coordinate at that moment be $x=0$. Gravity is neglected. Find the subsequent motion of the coil (that is, $x$ as a function of $t$) in the following two cases:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the resistance of the coil is $R$ and its self-inductance is negligible;
+\item the self-inductance of the coil is $L$ and its resistance is negligible.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.46}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-4.3,0.55) rectangle (0,-0.55);
+  \node[above] at (-2.2,0.55) {$m$};
+  \node[left] at (-4.35,0) {$b$};
+  \draw[force] (0.05,0) -- (1.4,0) node[midway,above] {$v_0$};
+  \draw[dashedline] (0,2.1) -- (0,-2.1);
+  \node[below left] at (0,0) {$O$};
+  \draw[force] (0.0,-1.85) -- (3.6,-1.85);
+  \node[right] at (3.6,-1.85) {$x$};
+  \foreach \x in {0.45,1.25,2.05,2.85,3.35} {
+    \foreach \y in {-1.35,-0.55,0.25,1.05,1.75} {
+      \node at (\x,\y) {$\times$};
+    }
+  }
+  \node at (2.0,2.15) {$B$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.47}
+A circular ring made of gold wire stands upright on a horizontal table, resting on a point of its rim. There is a uniform magnetic field in space, directed vertically. The ring is disturbed and starts to fall from a position making an angle of $0.1$ rad with the vertical. It is known that the magnetic flux density is $B=10^4\unitv{Gs}$, the radius of the ring is $r=1\unitv{cm}$, the radius of the cross-section of the gold wire is $r_1=1\unitv{mm}$, the conductivity of gold is $\sigma=4.25\times10^7\,(\Omega\cdot\mathrm{m})^{-1}$, and its density is $\rho=19.3\unitv{g/cm^3}$. Assume that the point of support does not slip while the ring falls.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Is the gravitational potential energy released during the fall of the ring mainly used to increase the kinetic energy of the ring, or is it converted into Joule heat? Explain your reasoning (an order-of-magnitude estimate is sufficient).
+\item Neglecting secondary factors, calculate the time taken for the ring to fall over.
+\end{enumerate}
+
+Integral formula:
+\begin{equation*}
+\int\dfrac{\dd x}{\sin x}=\ln\tan\dfrac{x}{2}.
+\end{equation*}
+\end{problem}
+
+\begin{problem}{3.48}
+A small cylindrical permanent magnet is placed vertically. At a point $1\unitv{m}$ directly above the centre of the magnet, the magnetic flux density is $B_0$. A small superconducting circular coil is brought from far away to a position directly above the magnet, coaxial with it, as shown. The radius of the coil is $a$, its mass is $m$, and its self-inductance is $L$; the coil can move only up and down.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the equilibrium height $z_0$ of the coil above the centre of the magnet. It is given that $a\ll z_0$.
+\item Find the period of the small vertical oscillations of the coil after a small disturbance (express the answer in terms of $z_0$).
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.48}
+\begin{tikzpicture}[scale=0.95]
+  \draw[dashedline] (0,-2.35) -- (0,3.25);
+  \draw[force] (0,3.05) -- (0,3.65);
+  \node[right] at (0,3.60) {$z$};
+  \draw[thickline] (-0.45,-1.95) rectangle (0.45,-0.10);
+  \node at (0,-0.52) {$N$};
+  \node at (0,-1.53) {$S$};
+  \node[below] at (0,-1.98) {magnet};
+  \fill (0,-1.02) circle (1.2pt) node[left] {$O$};
+  \draw[thickline] (0,2.0) ellipse (1.25 and 0.34);
+  \node[left] at (-1.32,2.0) {coil};
+  \draw[dim] (1.75,-1.02) -- (1.75,2.0) node[midway,right] {$z_0$};
+  \draw[dashedline] (0.45,-1.02) -- (1.75,-1.02);
+  \draw[dashedline] (1.25,2.0) -- (1.75,2.0);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.49}
+There is an experiment demonstrating the magnetic effect of eddy currents. A cylindrical magnet is released from rest at the mouth of a long vertical metal tube, as shown. After a short acceleration, the magnet falls slowly at a certain constant speed. If the magnet is replaced by an iron block of the same shape, the block accelerates downwards just as in free fall. (The fall of the magnet or of the iron block in the tube can be observed through holes drilled horizontally in the wall of the tube, as shown.) Give a quantitative explanation of this phenomenon.
+
+It is known that the diameter and the height of the magnet are both $1.5\unitv{cm}$, its density is $7.8\unitv{g/cm^3}$, and the magnetic flux density at the centre of its end face is $0.3\unitv{T}$. The internal diameter of the metal (copper) tube is $1.7\unitv{cm}$, its external diameter is $2.7\unitv{cm}$, and its resistivity is $1.67\times10^{-8}\,\Omega\cdot\mathrm{m}$. Estimate from these data the steady speed of the magnet.
+
+Integral formula:
+\begin{equation*}
+\int\sin^n x\,\dd x=-\dfrac{\sin^{n-1}x\cos x}{n}+\dfrac{n-1}{n}\int\sin^{n-2}x\,\dd x.
+\end{equation*}
+\end{problem}
+
+\begin{figbox}{3.49}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-1.10,-3.0) -- (-1.10,2.60);
+  \draw[thickline] (1.10,-3.0) -- (1.10,2.60);
+  \draw[thickline] (0,2.60) ellipse (1.10 and 0.28);
+  \draw[thickline] (-0.42,0.70) rectangle (0.42,1.80);
+  \node at (0,1.48) {$N$};
+  \node at (0,0.96) {$S$};
+  \draw[force] (0.72,1.65) -- (0.72,0.75);
+  \node[right] at (0.75,1.20) {$v$};
+  \foreach \y in {-1.70,-0.90,-0.10} {
+    \draw[thickline,fill=white] (0,\y) ellipse (0.17 and 0.07);
+  }
+  \node[right] at (1.45,2.25) {metal tube};
+  \draw[->,thinline] (1.42,2.20) -- (1.12,2.20);
+  \node[right] at (1.45,1.30) {magnet};
+  \draw[->,thinline] (1.42,1.25) -- (0.45,1.25);
+  \node[right] at (1.45,-0.90) {observation holes};
+  \draw[->,thinline] (1.42,-0.90) -- (0.20,-0.90);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.50}
+An inductive electrical appliance consumes a power $P=100\unitv{W}$ from a supply of voltage $U=220\unitv{V}$ and frequency $f=50\unitv{Hz}$, its power factor being $\cos\varphi=0.6$. What capacitance must be connected in parallel with it in order to raise the power factor to $1$?
+\end{problem}
+
+\begin{problem}{3.51}
+The edges of a regular tetrahedron form an RLC circuit, as shown. Two opposite edges are resistors $R$, two other opposite edges are capacitors $C$, and the remaining two opposite edges are inductors $L$. An alternating voltage of amplitude $V_0$ is applied across the two ends of one resistor. If the frequency of the alternating voltage is $\omega=1/\sqrt{LC}$ and the resistance is $R=\sqrt{L/C}$, find the total current flowing through the circuit.
+\end{problem}
+
+\begin{figbox}{3.51}
+\begin{tikzpicture}[scale=0.95]
+  \coordinate (A) at (0,2.35);
+  \coordinate (B) at (-2.25,-1.30);
+  \coordinate (C) at (2.25,-1.30);
+  \coordinate (D) at (0,-0.10);
+  \draw[thickline] (A) -- (B) -- (C) -- cycle;
+  \draw[thickline] (A) -- (D) -- (B);
+  \draw[thickline] (C) -- (D);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node at (-1.35,0.55) {$C$};
+  \node at (1.35,0.55) {$L$};
+  \node[right] at (0.08,1.15) {$R$};
+  \node[below] at (0,-1.45) {$R$};
+  \node[left] at (-1.10,-0.82) {$L$};
+  \node[right] at (1.10,-0.82) {$C$};
+  % source connected across the resistor BC
+  \draw[thickline] (B) -- (-2.25,-2.95) -- (-0.35,-2.95);
+  \draw[thickline] (C) -- (2.25,-2.95) -- (0.35,-2.95);
+  \draw[thickline,fill=white] (0,-2.95) circle (0.35);
+  \node at (0,-2.95) {$\sim$};
+  \node[below] at (0,-3.40) {$V_0\cos\omega t$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.52}
+A semi-infinite network is made of capacitors $C$ and inductors $L$, as shown. The network starts at the terminals $A$ and $B$ on the left and extends infinitely to the right.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the complex impedance between the terminals $A$ and $B$.
+\item An alternating voltage $v_0\cos\omega t$ is applied between $A$ and $B$, causing a current to flow in. Calculate the average power input to the network.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.52}
+\begin{tikzpicture}[scale=0.95]
+  % rails and terminals
+  \draw[thickline] (-4.40,1.40) -- (-3.90,1.40);
+  \draw[thickline] (-4.40,-1.40) -- (1.65,-1.40);
+  \draw[thickline,fill=white] (-4.40,1.40) circle (0.055);
+  \draw[thickline,fill=white] (-4.40,-1.40) circle (0.055);
+  \node[left] at (-4.47,1.40) {$A$};
+  \node[left] at (-4.47,-1.40) {$B$};
+  % first capacitor
+  \draw[thickline] (-3.90,1.40) -- (-3.70,1.40);
+  \draw[thickline] (-3.70,1.14) -- (-3.70,1.66);
+  \draw[thickline] (-3.46,1.14) -- (-3.46,1.66);
+  \draw[thickline] (-3.46,1.40) -- (-2.80,1.40);
+  \node[above] at (-3.58,1.68) {$C$};
+  % second capacitor
+  \draw[thickline] (-2.80,1.40) -- (-2.30,1.40);
+  \draw[thickline] (-2.30,1.14) -- (-2.30,1.66);
+  \draw[thickline] (-2.06,1.14) -- (-2.06,1.66);
+  \draw[thickline] (-2.06,1.40) -- (-1.30,1.40);
+  \node[above] at (-2.18,1.68) {$C$};
+  % third capacitor
+  \draw[thickline] (-1.30,1.40) -- (-0.80,1.40);
+  \draw[thickline] (-0.80,1.14) -- (-0.80,1.66);
+  \draw[thickline] (-0.56,1.14) -- (-0.56,1.66);
+  \draw[thickline] (-0.56,1.40) -- (0.20,1.40);
+  \node[above] at (-0.68,1.68) {$C$};
+  % fourth capacitor leading to the infinite continuation
+  \draw[thickline] (0.20,1.40) -- (0.70,1.40);
+  \draw[thickline] (0.70,1.14) -- (0.70,1.66);
+  \draw[thickline] (0.94,1.14) -- (0.94,1.66);
+  \draw[thickline] (0.94,1.40) -- (1.65,1.40);
+  \node[above] at (0.82,1.68) {$C$};
+  \node at (2.00,1.40) {$\cdots$};
+  \node at (2.00,-1.40) {$\cdots$};
+  % shunt inductors
+  \foreach \x in {-2.80,-1.30,0.20} {
+    \draw[thickline] (\x,1.40) -- (\x,1.06);
+    \foreach \y in {0.92,0.64,0.36,0.08,-0.20} {
+      \draw[thickline] (\x,\y+0.14) arc (90:-90:0.14);
+    }
+    \draw[thickline] (\x,-0.34) -- (\x,-1.40);
+    \node[right] at (\x+0.18,0.38) {$L$};
+  }
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.53}
+A parallel-plate capacitor is formed of two circular metal plates of radius $a$ separated by a distance $d$. The capacitor is supplied by long resistance-free wires along the axis of the two plates, and the voltage between the plates varies with time as
+\begin{equation*}
+V(t)=V_0\sin\omega t.
+\end{equation*}
+Assume that
+\begin{equation*}
+d\ll a\ll c/\omega,
+\end{equation*}
+so that edge effects can be neglected and retardation effects can also be neglected (that is, the quasi-steady condition is satisfied).
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the electric field and the magnetic field inside the capacitor as functions of time.
+\item Find the electromagnetic field energy flux density and the energy flux entering the capacitor through its edge.
+\item Is this energy flux equal to the time rate of increase of the electromagnetic field energy inside the capacitor? Explain.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{3.54}
+A circuit is formed of two resistors ($R_1$ and $R_2$), a capacitor $C$, and an alternating voltage source $V$, connected as shown.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item When $V(t)=V_0\cos\omega t$, find the amplitude and the phase of the voltage drop $V_1(t)$ across $R_1$.
+\item When $V(t)$ is a pulse of very large amplitude $U_0$ and very short duration $\Delta t$, that is,
+\begin{equation*}
+V(t)=
+\begin{cases}
+U_0, & 0<t<\Delta t,\\
+0, & t<0,\quad t>\Delta t,
+\end{cases}
+\end{equation*}
+and $U_0\Delta t=A$ is a constant, find how the voltage drop across $R_1$ varies with time.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{3.54}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-2.80,1.20) -- (2.60,1.20) -- (2.60,-1.20) -- (-2.80,-1.20) -- cycle;
+  % source
+  \draw[thickline] (-2.80,1.20) -- (-2.80,0.32);
+  \draw[thickline] (-2.80,-0.32) -- (-2.80,-1.20);
+  \draw[thickline,fill=white] (-2.80,0) circle (0.32);
+  \node at (-2.80,0) {$\sim$};
+  \node[left] at (-3.18,0) {$V(t)$};
+  % R1
+  \draw[thickline,fill=white] (-1.45,1.03) rectangle (-0.65,1.37);
+  \node[above] at (-1.05,1.40) {$R_1$};
+  % capacitor branch
+  \draw[thickline] (1.00,1.20) -- (1.00,0.16);
+  \draw[thickline] (0.62,0.16) -- (1.38,0.16);
+  \draw[thickline] (0.62,-0.16) -- (1.38,-0.16);
+  \draw[thickline] (1.00,-0.16) -- (1.00,-1.20);
+  \node[right] at (1.20,0) {$C$};
+  % R2
+  \draw[thickline,fill=white] (2.42,0.38) rectangle (2.78,-0.38);
+  \node[right] at (2.85,0) {$R_2$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.55}
+As shown in the circuit, capacitor $C_1$ initially carries a charge $Q_0$, and capacitor $C_2$ is initially uncharged. When the switch $K$ is closed, $C_1$ discharges through the inductor $L$ and the resistor $R$. The resistance $R$ is adjusted to a value $R_0$ such that the discharge process is as fast as possible without oscillation.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find $R_0$.
+\item In such a discharge process, after what time from the closing of $K$ is the current through the resistor $R_0$ a maximum? Find this maximum current $I_m$.
+\end{enumerate}
+
+Integral formula:
+\begin{equation*}
+\int x\ee^x\,\dd x=x\ee^x-\ee^x.
+\end{equation*}
+\end{problem}
+
+\begin{figbox}{3.55}
+\begin{tikzpicture}[scale=0.95]
+  % bottom rail
+  \draw[thickline] (-2.70,-1.40) -- (2.70,-1.40);
+  % left branch with C1
+  \draw[thickline] (-2.70,1.40) -- (-2.70,0.22);
+  \draw[thickline] (-3.02,0.22) -- (-2.38,0.22);
+  \draw[thickline] (-3.02,-0.22) -- (-2.38,-0.22);
+  \draw[thickline] (-2.70,-0.22) -- (-2.70,-1.40);
+  \node[left] at (-3.10,0) {$C_1$};
+  \node[right] at (-2.30,0.38) {$+Q_0$};
+  \node[right] at (-2.30,-0.38) {$-Q_0$};
+  % switch
+  \draw[thickline] (-2.70,1.40) -- (-2.10,1.40);
+  \draw[thickline,fill=white] (-2.10,1.40) circle (0.05);
+  \draw[thickline,fill=white] (-1.70,1.40) circle (0.05);
+  \draw[thickline] (-2.10,1.43) -- (-1.76,1.72);
+  \node[above] at (-1.90,1.55) {$K$};
+  \draw[thickline] (-1.70,1.40) -- (-1.25,1.40);
+  % R
+  \draw[thickline,fill=white] (-1.25,1.23) rectangle (-0.45,1.57);
+  \node[above] at (-0.85,1.60) {$R$};
+  \draw[thickline] (-0.45,1.40) -- (0.25,1.40);
+  % L
+  \foreach \x in {0.40,0.70,1.00,1.30} {
+    \draw[thickline] (\x-0.15,1.40) arc (180:0:0.15);
+  }
+  \draw[thickline] (1.45,1.40) -- (2.70,1.40);
+  \node[above] at (0.85,1.58) {$L$};
+  % right branch with C2
+  \draw[thickline] (2.70,1.40) -- (2.70,0.22);
+  \draw[thickline] (2.38,0.22) -- (3.02,0.22);
+  \draw[thickline] (2.38,-0.22) -- (3.02,-0.22);
+  \draw[thickline] (2.70,-0.22) -- (2.70,-1.40);
+  \node[right] at (3.10,0) {$C_2$};
+  % earth
+  \draw[thickline] (0,-1.40) -- (0,-1.78);
+  \draw[thickline] (-0.30,-1.78) -- (0.30,-1.78);
+  \draw[thickline] (-0.18,-1.90) -- (0.18,-1.90);
+  \draw[thickline] (-0.08,-2.02) -- (0.08,-2.02);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{3.56}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Figure 1 shows an $LC$ filter circuit. An alternating signal of frequency $\omega$ is applied to the input. The ratio of its output voltage $U_{\mathrm{out}}$ to the input voltage $U_{\mathrm{in}}$ is called the propagation factor and is denoted by $\alpha$:
+\begin{equation*}
+\alpha=U_{\mathrm{out}}/U_{\mathrm{in}}.
+\end{equation*}
+\end{enumerate}
+\end{problem}

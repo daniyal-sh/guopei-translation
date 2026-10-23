@@ -1,0 +1,1296 @@
+\subsection*{Experiment 6.19\quad Measurement of the surface tension coefficient of water by the pull-off method}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A liquid surface tension coefficient measuring instrument (produced by Fudan Tianxin Company), weights, water, a glass dish, a pull ring, a thermometer, cleaning paper.
+
+\noindent\textit{[Requirements]}\quad Use the liquid surface tension measuring instrument to measure the surface tension coefficient of a liquid at room temperature by the pull-off method.
+
+\noindent\textit{[Explanation]}
+
+(1) The pull-off method used in this experiment is based on the wetting phenomenon between a liquid and a solid. A metal ring of outer diameter $D_1$ and inner diameter $D_2$ is slowly pulled up out of water; the water film spreads over the whole circumference of the ring and is lifted with it. Taking into account that the lifted water film is a double film in contact with the ring, the pull-off force equals the surface tension coefficient multiplied by the perimeter of the surface of the departing liquid, that is,
+\begin{equation*}
+F=\alpha\cdot\pi(D_1+D_2),
+\end{equation*}
+where $F$ is the surface tension and $\alpha$ the surface tension coefficient.
+
+(2) The ring and the water must be kept clean during the experiment.
+
+(3) The surface tension of water depends on temperature; the acceleration due to gravity in the Shanghai region is $g=\SI{9.794}{m/s^2}$.
+
+\medskip
+\noindent\textbf{Solution 6.19.}\quad The experimental apparatus is shown in the figure. A surface tension measuring instrument with a silicon piezoresistive force-sensitive sensor is used to measure the surface tension at the contact between the liquid and the metal. A thin metal ring serves as the contact body, and the sensor is connected to a digital voltmeter. If the sensitivity of the sensor is known, the surface tension can be calculated from the reading of the digital voltmeter.
+
+Water is poured into a clean culture dish, and then the metal ring, whose surface has been cleaned, is immersed in the liquid, care being taken to keep the ring perpendicular to the liquid surface. The liquid surface is made to descend slowly by means of the lifting platform. An annular liquid film then forms between the metal ring and the liquid surface; just before detachment the middle part of the film becomes thinner and thinner, and finally the film is broken.
+
+Since the lifting platform descends sufficiently slowly during the whole process, the motion may be regarded as uniform. The metal ring is in equilibrium; at the moment of detachment from the liquid surface, the weight $mg$ of the metal ring, the pulling force $F$ and the surface tension $f$ of the liquid satisfy the following relation ($m$ is the mass of the ring and $g$ the acceleration due to gravity):
+
+\begin{figbox}{6.19}
+\begin{tikzpicture}[scale=0.85]
+% base
+\draw[thickline] (-1.55,0)--(1.55,0);
+\draw[thickline] (-1.55,0)--(-1.55,-0.16)--(1.55,-0.16)--(1.55,0);
+\draw[pattern=north east lines,pattern color=black!55] (-1.55,-0.16) rectangle (1.55,0);
+% upright post
+\draw[thickline,fill=black!8] (1.15,0)--(1.35,0)--(1.35,6.55)--(1.15,6.55)--cycle;
+% top arm and sensor
+\draw[thickline] (0.28,6.55)--(1.15,6.55);
+\draw[thickline,fill=black!12] (0.10,6.28)--(0.52,6.28)--(0.52,6.58)--(0.10,6.58)--cycle;
+\node[above left,font=\scriptsize,align=right] at (0.10,6.60) {force\\sensor};
+% wire and ring
+\draw[thickline] (0.31,6.28)--(0.31,4.32);
+\draw[thickline,fill=black!60] (-0.26,4.24)--(0.88,4.24)--(0.88,4.32)--(-0.26,4.32)--cycle;
+% dish with liquid
+\draw[thickline] (-0.90,4.28)--(-0.90,3.78)--(1.00,3.78)--(1.00,4.28);
+\draw[thickline] (-0.90,4.28)--(-0.82,4.28);
+\draw[thickline] (1.00,4.28)--(0.92,4.28);
+\fill[black!6] (-0.87,3.81) rectangle (0.97,4.10);
+\draw[thickline] (-0.87,4.10)--(0.97,4.10);
+\node[font=\scriptsize] at (0.30,3.95) {liquid};
+% lifting platform and screw
+\draw[thickline,fill=black!10] (-0.80,3.48)--(0.90,3.48)--(0.90,3.78)--(-0.80,3.78)--cycle;
+\draw[thickline,fill=black!8] (0.00,0)--(0.20,0)--(0.20,2.05)--(0.00,2.05)--cycle;
+\draw[thickline,fill=black!25] (-0.06,2.05)--(0.26,2.05)--(0.26,2.28)--(-0.06,2.28)--cycle;
+\draw[thickline] (0.10,2.28)--(0.10,3.48);
+\node[left,font=\scriptsize,align=right] at (-0.16,1.55) {lifting\\screw};
+% meter
+\draw[thickline,fill=black!4] (2.55,3.20) rectangle (4.85,4.55);
+\node[font=\scriptsize] at (3.70,4.82) {surface tension meter};
+\draw[thickline,fill=black!10] (2.75,3.55) rectangle (3.65,3.95);
+\node[font=\scriptsize] at (3.20,3.75) {mV};
+\draw[thickline] (3.95,3.75) circle (0.10);
+\node[below,font=\scriptsize] at (3.95,3.58) {output};
+% cable
+\draw[thickline] (0.52,6.43)--(2.22,6.43)--(2.22,4.30)--(2.55,4.30);
+% callout numbers
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (1.52,5.30) {1};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (0.55,6.02) {2};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (-0.15,3.63) {3};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (-1.25,0.22) {4};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (-0.48,4.58) {5};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (-1.18,4.10) {6};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (5.10,4.10) {7};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize 1.\ Upright post; 2.\ Force-sensitive sensor; 3.\ Lifting platform; 4.\ Base; 5.\ Metal ring; 6.\ Large culture dish; 7.\ Digital voltmeter.}
+\end{figbox}
+
+\begin{equation}\tag{1}
+F=mg+f\cos\theta .
+\end{equation}
+Just before the metal ring leaves the liquid surface, $\theta\approx0$ (here $\theta$ is the angle between the direction of the surface tension and the vertical), that is, $\cos\theta\approx1$ and $F=F_1$. Hence, to a good approximation,
+\begin{equation*}
+f=F_1-mg=\alpha\pi(D_1+D_2),
+\end{equation*}
+where $D_1$ is the outer diameter and $D_2$ the inner diameter of the metal ring. After the metal ring has been pulled clear of the water surface, $F=F_2$ and $f=0$, so that $F_2=mg$.
+
+Since the pulling force acts on the elastic beam in contact with the silicon piezoresistive force-sensitive sensor, the reading of the digital voltmeter just before the liquid film breaks is $U_1=kF_1$, and the reading immediately after the film breaks (when $f$ vanishes) is $U_2=kF_2$. Their difference is
+\begin{equation*}
+\Delta U=U_1-U_2=kf,
+\end{equation*}
+or
+\begin{equation}\tag{2}
+\alpha=\frac{\Delta U}{k\pi(D_1+D_2)}.
+\end{equation}
+Here $k$ is the sensitivity of the dynamometer, in \si{mV/N}.
+
+The experimental results are shown in Tables 1 and 2. The calibration data of the force-sensitive sensor are given in Table 1; the acceleration due to gravity in the Shanghai region is $g=\SI{9.794}{m/s^2}$.
+
+\begin{center}
+\begin{minipage}[t]{0.40\linewidth}\centering
+\textbf{Table 6.19-1}\quad Sensor calibration data\\[3pt]
+\begin{tabular}{cc}
+\toprule
+$m/\mathrm{g}$ & $U/\mathrm{mV}$\\
+\midrule
+0.500 & 14.7\\
+1.000 & 29.5\\
+1.500 & 44.3\\
+2.000 & 59.0\\
+2.500 & 74.7\\
+3.000 & 88.4\\
+3.500 & 100.3\\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\linewidth}\centering
+\textbf{Table 6.19-2}\quad Data for pure water at \SI{5.0}{\celsius}\\[3pt]
+\begin{tabular}{cc}
+\toprule
+$\Delta U/\mathrm{mV}$ & $\alpha/(10^{-3}\ \mathrm{N\cdot m^{-1}})$\\
+\midrule
+48.6 & 75.5\\
+48.6 & 75.5\\
+48.1 & 74.8\\
+48.1 & 74.8\\
+48.7 & 75.7\\
+47.9 & 74.5\\
+48.2 & 74.9\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\noindent A straight-line fit gives the sensitivity of the dynamometer $k=\SI{3007}{mV/N}$, with correlation coefficient $r=0.999\,998$. The measured diameters are $\bar D_1=\SI{3.316}{cm}$ and $\bar D_2=\SI{3.491}{cm}$, and the temperature is $\theta=\SI{5.0}{\celsius}$.
+
+From Table 2 the surface tension coefficient of pure water at \SI{5.0}{\celsius} is $\bar\alpha\approx75.10\times10^{-3}\ \mathrm{N/m}$. According to the handbook of fundamental physical constants, the surface tension coefficient of water at \SI{5.0}{\celsius} is $74.9\times10^{-3}\ \mathrm{N/m}$, and the percentage difference between the two values is $0.27\%$.
+
+\subsection*{Experiment 6.20\quad Measurement of the viscosity coefficient of a liquid by the falling-ball method}
+
+When a small ball falls in a liquid, forces act on it, and the viscous force is one of them. If the motion of the ball satisfies the following conditions: (1) the velocity of the ball falling in the liquid is very small; (2) the volume of the ball is very small, then the viscous force is
+\begin{equation*}
+f=6\pi\eta v\cdot r,
+\end{equation*}
+where $\eta$ is the viscosity coefficient of the liquid, $v$ the falling velocity of the ball and $r$ the radius of the ball. It should be noted that the temperature has a great influence on the viscosity coefficient of a liquid.
+
+\noindent\textit{[Available apparatus and materials]}
+
+A metre rule, a micrometer, a stopwatch, a measuring cylinder containing castor oil, a thermometer, a rubber band, a small steel ball.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Analyse the forces acting on the ball as it falls, and derive the formula for measuring the viscosity coefficient of the liquid. (Hint: during the fall of the ball, when the resultant force on it is zero, the ball begins to move uniformly.)
+\item Choose suitable measuring instruments and measure the physical quantities in the formula. The density of the ball is known to be $\rho=\SI{7.90}{g/cm^3}$; the density of the liquid to be measured is $\rho_0=\SI{0.961}{g/cm^3}$.
+\item Calculate the viscosity coefficient of the liquid.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.20.}\quad When a small sphere of radius $r$ falls in an infinitely extensive viscous liquid without producing vortices, three vertical forces act on it: its weight $mg$, the buoyant force exerted by the liquid $\frac{4}{3}\pi r^{3}\rho_0 g$, and the viscous resistance $6\pi\eta rv$. At the beginning of the fall the velocity is small and the viscous force is small, so the ball accelerates until, at a certain velocity, the three forces balance and the ball falls uniformly:
+\begin{equation*}
+mg=\frac{4}{3}\pi r^{3}\rho_0 g+6\pi\eta rv .
+\end{equation*}
+Therefore
+\begin{equation}\tag{1}
+\eta=\frac{m-\frac{4}{3}\pi r^{3}\rho_0}{6\pi rv}\cdot g ,
+\end{equation}
+where $\eta$ is the viscosity coefficient of the liquid to be measured, $m$ the mass of the ball, $r$ its radius, $\rho_0$ the density of the liquid to be measured, $v$ the falling velocity of the ball and $g$ the acceleration due to gravity.
+
+The diameter of the ball is measured with the micrometer, the diameter of the measuring cylinder and the distance fallen by the ball with the metre rule, and the temperature with the thermometer.
+
+The oil temperature is $\theta=\SI{15.90}{\celsius}$; the density of the oil is $\rho_0=\SI{0.961}{g/cm^3}$; the diameter of the measuring cylinder is $D=\SI{6.72}{cm}$; the half-course distance is $s_1=\SI{10.70}{cm}$ and the full-course distance $s_2=\SI{20.12}{cm}$. The other measured data are given in Table 1.
+
+\begin{center}
+\textbf{Table 6.20-1}\\[3pt]
+\begin{tabular}{ccc}
+\toprule
+Diameter of the ball $2r/\mathrm{mm}$ & Half-course time $t_1/\mathrm{s}$ & Full-course time $t_2/\mathrm{s}$\\
+\midrule
+0.993 & 39.76 & 74.14\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The mean velocity over the half course is $v_1=\SI{0.269}{cm/s}$, and the mean velocity over the full course is $v_2=\SI{0.271}{cm/s}$. The difference between the two mean velocities is very small (less than $1.6\%$).
+Since the experiment is not carried out under infinitely extensive conditions, the measured velocity data must be corrected. The inner diameter of the measuring cylinder is $D=\SI{6.72}{cm}$, its height $h=\SI{53.40}{cm}$, and $d=\SI{0.993}{mm}$. The velocity correction formula is
+\begin{equation*}
+v=v_0\left(1+\frac{2.4d}{D}\right)\left(1+\frac{3.3d}{2h}\right),
+\end{equation*}
+where $v_0$ is the measured velocity. Substituting into formula (1) gives $\eta=\SI{1.331}{Pa\cdot s}$. Taking into account that at $\theta=\SI{15.90}{\celsius}$ the accepted value of the viscosity coefficient of castor oil is $\eta_{\text{accepted}}=\SI{1.370}{Pa\cdot s}$, the percentage difference between the two is $2.8\%$.
+
+\subsection*{Experiment 6.21\quad Measurement of the coefficient of thermal expansion of a solid}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A linear expansion apparatus, a steam generator, a metal test rod, a micrometer, a metre rule, an optical lever, a thermometer, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the formula for measuring the coefficient of thermal expansion of a metal.
+\item Write down the experimental method.
+\item Measure the coefficient of linear expansion of a brass material between room temperature and \SI{100}{\celsius}.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.21.}\quad \textbf{1.} When the temperature of a solid substance changes by \SI{1}{\celsius}, the ratio of the change in its length to its length at \SI{0}{\celsius} is called the coefficient of linear expansion of that substance. If a metal rod has length $L_0$ at \SI{0}{\celsius} and length $L_1$ at temperature $t_1$ \si{\celsius}, then
+\begin{equation}\tag{1}
+L_1=L_0(1+\alpha t_1).
+\end{equation}
+In reality the coefficient of linear expansion $\alpha$ of a metal is not a constant; it may be regarded as approximately constant only within a certain temperature range. If the lengths of the metal rod at two different temperatures $t_1$ and $t_2$ ($t_2>t_1$) are $L_1$ and $L_2$, then from (1)
+\begin{equation}\tag{2}
+\begin{cases}
+L_1=L_0(1+\alpha t_1),\\[2pt]
+L_2=L_0(1+\alpha t_2).
+\end{cases}
+\end{equation}
+Hence
+\begin{equation*}
+\frac{L_2}{L_1}=\frac{1+\alpha t_2}{1+\alpha t_1}\approx(1+\alpha t_2)(1-\alpha t_1)\approx1+\alpha(t_2-t_1)-\alpha^{2}t_1t_2 .
+\end{equation*}
+In this expression the second term $\alpha^{2}t_1t_2$ may be neglected in comparison with the first two terms, so
+\begin{equation}\tag{3}
+\alpha=\frac{L_2-L_1}{L_1(t_2-t_1)}=\frac{\Delta L}{L_1(t_2-t_1)}.
+\end{equation}
+In formula (3), $\Delta L=L_2-L_1$ is the change in length of the metal rod when it is heated.
+
+\textbf{2.} The instrument for measuring the coefficient of linear expansion of a metal is shown in the figure.
+
+\begin{figbox}{6.21}
+\begin{tikzpicture}[scale=0.86]
+% ---------- panel (1): the apparatus ----------
+\begin{scope}
+% base
+\draw[thickline] (-1.55,0)--(1.35,0);
+\draw[thickline] (-1.55,0)--(-1.55,-0.16)--(1.35,-0.16)--(1.35,0);
+\draw[pattern=north east lines,pattern color=black!55] (-1.55,-0.16) rectangle (1.35,0);
+\node[left,font=\scriptsize] at (-1.45,0.22) {$A$};
+% steam jacket
+\draw[thickline] (-0.50,0)--(-0.50,5.30);
+\draw[thickline] (0.35,0)--(0.35,5.30);
+\draw[thickline] (-0.50,5.30)--(-0.14,5.42);
+\draw[thickline] (0.35,5.30)--(0.02,5.42);
+% metal rod
+\draw[thickline,fill=black!25] (-0.12,0.10)--(0.02,0.10)--(0.02,5.52)--(-0.12,5.52)--cycle;
+% steam inlet
+\draw[thickline] (-1.40,4.55)--(-0.50,4.55);
+\draw[thickline] (-1.40,4.55)--(-1.40,4.90);
+\node[left,font=\scriptsize,align=right] at (-1.42,4.75) {steam\\inlet};
+% thermometer
+\draw[thickline,fill=white] (-1.25,2.45)--(-0.38,2.45)--(-0.38,2.60)--(-1.25,2.60)--cycle;
+\draw[thickline,fill=black!35] (-0.38,2.47)--(-0.10,2.47)--(-0.10,2.58)--(-0.38,2.58)--cycle;
+\node[left,font=\scriptsize] at (-1.28,2.52) {$T$};
+% support N
+\draw[thickline,fill=black!20] (0.35,0.45)--(0.72,0.45)--(0.72,0.62)--(0.35,0.62)--cycle;
+\node[right,font=\scriptsize] at (0.74,0.54) {$N$};
+% bracket at top and optical lever
+\draw[thickline] (0.02,5.52)--(0.42,5.52);
+\draw[thickline,fill=black!15] (0.42,5.44)--(0.60,5.44)--(0.60,5.70)--(0.42,5.70)--cycle;
+\draw[thickline,fill=black!10] (-0.30,5.56)--(0.48,5.56)--(0.48,5.64)--(-0.30,5.64)--cycle;
+% mirror on the lever
+\draw[thickline,fill=black!4] (-0.14,5.64)--(0.08,5.64)--(0.28,6.50)--(0.06,6.50)--cycle;
+\node[above,font=\scriptsize] at (0.14,6.52) {$M$};
+\node[left,font=\scriptsize] at (-0.34,5.58) {$B$};
+\node[right,font=\scriptsize] at (0.62,5.52) {$C$};
+% rays to the scale and telescope
+\draw[dashedline] (0.16,6.05)--(4.30,6.05);
+\draw[dashedline] (0.16,6.05)--(4.30,6.75);
+% telescope
+\draw[thickline] (2.35,5.92)--(3.30,5.92)--(3.30,6.28)--(2.35,6.28)--cycle;
+\node[below,font=\scriptsize] at (2.82,5.88) {telescope};
+% scale
+\draw[thickline] (4.30,5.55)--(4.30,7.15);
+\foreach \y in {5.65,5.75,...,7.10}{\draw[thickline] (4.30,\y)--(4.42,\y);}
+\node[right,font=\scriptsize] at (4.44,7.10) {scale};
+\node[below,font=\scriptsize] at (0,-0.55) {(1)};
+\end{scope}
+% ---------- panel (2): the optical lever ----------
+\begin{scope}[xshift=7.0cm,yshift=1.30cm,scale=0.95]
+% support plane
+\draw[thickline] (-0.60,0)--(4.70,0);
+\draw[pattern=north east lines,pattern color=black!55] (-0.60,-0.14) rectangle (1.50,0);
+% fixed pivot C
+\draw[thickline,fill=black!20] (-0.12,0)--(0.12,0)--(0.12,0.45)--(-0.12,0.45)--cycle;
+\node[left,font=\scriptsize] at (-0.14,0.12) {$C$};
+% initial position of the lever (dashed) and final position (solid)
+\draw[dashedline] (0,0.45)--(1.30,0.45);
+\draw[thickline] (0,0.45)--(1.30,0.63);
+\draw[dashedline] (0,0.45)--(0,2.45);
+\draw[thickline,fill=black!4] (0,0.45)--(0.06,0.45)--(0.336,2.437)--(0.276,2.437)--cycle;
+\node[right,font=\scriptsize] at (0.36,2.48) {$M$};
+% rear foot on the rod
+\draw[thickline,fill=black!25] (1.22,0)--(1.38,0)--(1.38,0.63)--(1.22,0.63)--cycle;
+\draw[thickline,fill=black!30] (1.20,0.63)--(1.40,0.63)--(1.40,0.73)--(1.20,0.73)--cycle;
+\draw[dashedline] (1.14,0.45)--(1.46,0.45);
+\node[right,font=\scriptsize] at (1.46,0.80) {$C'$};
+% dimensions b and Delta L
+\draw[dim] (0,-0.45)--(1.30,-0.45);
+\node[below,font=\scriptsize] at (0.65,-0.45) {$b$};
+\draw[dim] (1.62,0.45)--(1.62,0.68);
+\node[right,font=\scriptsize] at (1.64,0.56) {$\Delta L$};
+% reflected rays
+\draw[dashedline] (0.02,1.45)--(4.20,1.45);
+\draw[thickline] (0.05,1.45)--(4.20,2.62);
+\draw (0.05,1.45) arc (0:15.8:0.90);
+\node[font=\scriptsize] at (1.05,1.62) {$2\theta$};
+% scale
+\draw[thickline] (4.20,0.70)--(4.20,2.85);
+\foreach \y in {0.80,0.92,...,2.80}{\draw[thickline] (4.20,\y)--(4.31,\y);}
+\node[left,font=\scriptsize] at (4.18,1.45) {$Y_0$};
+\node[left,font=\scriptsize] at (4.18,2.62) {$Y$};
+% dimension D
+\draw[dim] (0.02,3.05)--(4.20,3.05);
+\node[above,font=\scriptsize] at (2.10,3.05) {$D$};
+\node[below,font=\scriptsize] at (2.10,-0.90) {(2)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+In the figure, (1) is the vertical linear expansion instrument used with the optical lever, and (2) is the reflecting mirror of the optical lever. The reflecting mirror of the optical lever consists of a plane mirror and a base with three feet. At one end of the base there are two feet $H_1$ and $H_2$, and the plane mirror $M$ is mounted above them; under the other end of the base there is one foot $H_3$. The three feet form an isosceles triangle. A scale $S$ and a telescope are placed at a distance $D$ from the mirror surface. In the experiment, first adjust the three feet $H_1$, $H_2$, $H_3$ of the optical lever so that they are level, and turn the plane mirror $M$ and the scale $S$ so that they are vertical, with the telescope aimed horizontally at the plane mirror. Then adjust the eyepiece and the objective of the telescope so that the cross-wire is sharp and the image of the target scale $S$ is sharp; in this way the image of the scale $S$ formed by the objective lies in the same plane as the cross-wire, and the parallax is eliminated. Adjust the optical lever and the mirror--scale assembly so that the image of the scale graduation falling on the cross-wire is at the same height as the principal axis of the telescope.
+
+If the length of the metal rod is $L$, then when the temperature of the metal rod rises from $t_1$ to $t_2$, its length increases by $\Delta L$. If the perpendicular distance between the rear foot $H_3$ of the optical lever base and the line joining the front feet $H_1$, $H_2$ is $b$, the mirror tilts through an angle $\Delta L/b$. The displacement of the image of the scale graduation on the cross-wire, observed through the eyepiece of the telescope, is then $d$; hence the beam originally perpendicular to the mirror is deflected through an angle $d/D$, and this angle is twice the tilt angle of the mirror. That is,
+\begin{equation*}
+\frac{d}{D}=2\,\frac{\Delta L}{b},
+\end{equation*}
+and substituting $\Delta L=bd/2D$ into (3) gives the coefficient of linear expansion of the metal:
+\begin{equation}\tag{4}
+\alpha=\frac{bd}{2DL_1(t_2-t_1)}.
+\end{equation}
+
+In the experiment, the length $L$ of the metal test rod and the perpendicular distance $D$ between the scale and the mirror are measured with a metre rule, and the temperature is measured with a mercury thermometer. The bulb of the thermometer should be inserted into the middle part of the metal test rod; one end of the metal rod is fixed and the other end can expand.
+
+\textbf{3. Experimental data and calculation}
+
+The elongation $\Delta L$ of the metal rod on heating is measured with the optical lever. The material tested is brass, in the form of a rod. The mercury thermometer has a range of $0$--$100$\,\si{\celsius} and a division value of \SI{1}{\celsius}.
+
+The length of the rod is $L=\SI{49.80}{cm}$. The initial temperature of the rod is $t_1=\SI{26.2}{\celsius}$. When steam is passed through and thermal equilibrium is reached, the mean final temperature of the rod is $\bar t_2=\SI{98.6}{\celsius}$; when the final temperature is measured, $t_2$ fluctuates slightly, so $t_2$ is taken as the mean of these values.
+
+\begin{center}
+\textbf{Table 6.21}\\[3pt]
+\begin{tabular}{ccc}
+\toprule
+Number & \multicolumn{2}{c}{Position of the cross-wire/cm}\\
+\cmidrule(lr){2-3}
+ & $x_1$ & $x_2$\\
+\midrule
+1 & $+0.05$ & $+1.88$\\
+2 & $+0.05$ & $+1.89$\\
+3 & $+0.05$ & $+1.88$\\
+4 & $+0.05$ & $+1.90$\\
+5 & $+0.05$ & $+1.90$\\
+\midrule
+Mean & $+0.05$ & $+1.89$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent$\Delta t=98.6-26.2=\SI{72.4}{\celsius}$; $d=1.89-0.05=\SI{1.84}{cm}$; $D=\SI{103.3}{cm}$; $b=\SI{7.40}{cm}$.
+\begin{equation*}
+\alpha=\frac{bd}{2DL(t_2-t_1)}
+=\frac{7.40\times1.84}{2\times103.3\times49.80\times72.4}
+=1.83\times10^{-5}\ (\si{\celsius})^{-1},
+\end{equation*}
+that is, between \SI{26.2}{\celsius} and \SI{98.6}{\celsius} the mean coefficient of thermal expansion of brass is \SI{1.83e-5}{(\celsius)^{-1}}.
+
+\subsection*{Experiment 6.22\quad Measurement of the volume expansion coefficient of a liquid}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A pycnometer, a beaker containing water at room temperature, an iron stand, an asbestos gauze, one gas burner (or stove), an analytical balance, a glass mercury thermometer ($0$--$100$\,\si{\celsius}), a stirrer, fine thread, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the formula for measuring the coefficient of volume expansion of a liquid with a pycnometer.
+\item Write down the steps of the experiment.
+\item Measure and record the experimental data, and write down the experimental results.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.22.}\quad \textbf{1.} The pycnometer is filled with the liquid to be measured, and is suspended by a metal wire and immersed in a beaker containing the same liquid; when the liquid is poured in, care must be taken that no air bubbles enter the liquid. The temperature of the liquid in the beaker at room temperature is recorded, and the pycnometer is then carefully taken out and wiped dry on the outside; the total mass $M_1$ of the pycnometer together with the liquid is then weighed with the analytical balance. After that the pycnometer is put back into the beaker.
+
+\textbf{2.} The temperature of the liquid in the beaker is raised to a certain temperature, the gas burner is turned off, and the liquid to be measured in the beaker is stirred continuously. After about $10$--$15$ minutes the temperature $\theta_2$ of the liquid in the beaker is recorded. The pycnometer is then taken out, the liquid on its outside is wiped off, and the total mass $M_2$ of the pycnometer and the liquid is weighed with the analytical balance. Substituting the measured results into the formula then gives the coefficient of volume expansion of the liquid.
+
+\textbf{3. Principle of the experiment}
+
+If the mass of the glass pycnometer is $M$, and at temperatures $\theta_1$ and $\theta_2$ ($\theta_2>\theta_1$) the volumes of the pycnometer are $V_1$ and $V_2$ respectively, while the total masses of the pycnometer are $M_1$ and $M_2$ respectively, then
+\begin{equation}\tag{1}
+M_1-M=\rho_1V_1=\frac{\rho_0}{1+\beta\theta_1}\cdot V_0(1+3\alpha\theta_1),
+\end{equation}
+\begin{equation}\tag{2}
+M_2-M=\rho_2V_2=\frac{\rho_0}{1+\beta\theta_2}\cdot V_0(1+3\alpha\theta_2).
+\end{equation}
+In these two equations, $\rho_0$, $\rho_1$ and $\rho_2$ are the densities of the liquid at \SI{0}{\celsius}, $\theta_1$ \si{\celsius} and $\theta_2$ \si{\celsius} respectively, and $\alpha$ is the coefficient of linear expansion of glass; the coefficient of volume expansion of glass is then $3\alpha$ (the coefficient of volume expansion of a solid material is about three times its coefficient of linear expansion).
+
+Hence
+\begin{equation*}
+\frac{M_1-M}{M_2-M}=\frac{1+\beta\theta_2}{1+\beta\theta_1}\cdot\frac{1+3\alpha\theta_1}{1+3\alpha\theta_2}
+\approx\frac{1+\beta(\theta_2-\theta_1)}{1+3\alpha(\theta_2-\theta_1)}
+\approx1+(\beta-3\alpha)(\theta_2-\theta_1),
+\end{equation*}
+and therefore
+\begin{equation}\tag{3}
+\beta-3\alpha=\frac{M_1-M_2}{(M_2-M)(\theta_2-\theta_1)}.
+\end{equation}
+In (3), $\beta'=\beta-3\alpha$ is the apparent coefficient of volume expansion of the liquid in the glass vessel.
+
+\textbf{4. Experimental data and calculation}
+
+The mass of the empty pycnometer is $M=\SI{7.6797}{g}$, and the coefficient of linear expansion of glass is $\alpha=3.9\times10^{-6}\ (\si{\celsius})^{-1}$.
+
+At temperature $\theta_1=\SI{21.70}{\celsius}$ the total mass of the pycnometer and water is $M_1=\SI{17.8298}{g}$;
+
+at temperature $\theta_2=\SI{40.79}{\celsius}$ the total mass of the pycnometer and water is $M_2=\SI{17.7716}{g}$.
+
+\begin{figbox}{6.22}
+\begin{tikzpicture}[scale=0.86]
+% tripod and gauze
+\draw[thickline] (-1.35,0.55)--(1.35,0.55);
+\draw[thickline] (-1.35,0.55)--(-1.55,0.00);
+\draw[thickline] (1.35,0.55)--(1.55,0.00);
+\draw[thickline] (0,0.55)--(0,0.00);
+\draw[pattern=north east lines,pattern color=black!40] (-1.25,0.55) rectangle (1.25,0.63);
+% burner
+\draw[thickline,fill=black!15] (-0.30,0.00)--(0.30,0.00)--(0.22,-0.55)--(-0.22,-0.55)--cycle;
+\draw[thickline] (-0.40,-0.55)--(0.40,-0.55);
+\draw[thickline] (0,-0.55)--(0,-0.80);
+\draw[thickline,fill=black!5] (-0.14,-0.80)--(0.14,-0.80)--(0.14,-1.05)--(-0.14,-1.05)--cycle;
+% flame
+\draw[thickline] (0,0.00) .. controls (-0.20,0.18) and (-0.10,0.35) .. (0,0.48)
+  .. controls (0.10,0.35) and (0.20,0.18) .. (0,0.00);
+\draw[thickline] (0,0.10) .. controls (-0.10,0.20) and (-0.05,0.30) .. (0,0.38)
+  .. controls (0.05,0.30) and (0.10,0.20) .. (0,0.10);
+% beaker
+\draw[thickline] (-1.05,0.63)--(-1.05,4.10);
+\draw[thickline] (1.05,0.63)--(1.05,4.10);
+\draw[thickline] (-1.05,0.63)--(1.05,0.63);
+\draw[thickline] (-1.05,4.10)--(-0.97,4.10);
+\draw[thickline] (1.05,4.10)--(0.97,4.10);
+% water
+\fill[black!5] (-1.00,0.66) rectangle (1.00,3.55);
+\draw[thickline] (-1.00,3.55)--(1.00,3.55);
+% pycnometer
+\draw[thickline] (0,3.45)--(0,4.95);
+\draw[thickline,fill=black!3] (-0.16,3.45)--(0.16,3.45)--(0.16,3.20)--(0.34,2.75)
+  .. controls (0.36,2.30) and (0.20,2.10) .. (0,2.10)
+  .. controls (-0.20,2.10) and (-0.36,2.30) .. (-0.34,2.75)--(-0.16,3.20)--cycle;
+\draw[thickline] (-0.05,3.42)--(-0.05,3.05);
+\draw[thickline] (0.05,3.42)--(0.05,3.05);
+% hook above
+\draw[thickline] (0,4.95)--(0,5.35);
+\draw[thickline] (0,5.35) circle (0.10);
+\draw[thickline] (-0.35,5.55)--(0.35,5.55);
+% thermometer
+\draw[thickline,fill=white] (-0.78,5.90)--(-0.42,5.90)--(-0.42,6.04)--(-0.78,6.04)--cycle;
+\draw[thickline] (-0.78,5.97)--(-0.52,5.97)--(-0.42,2.60);
+\draw[thickline,fill=black!25] (-0.46,2.60) circle (0.11);
+\node[left,font=\scriptsize] at (-0.80,5.97) {thermometer};
+% stirrer
+\draw[thickline] (0.75,5.95)--(0.62,2.40);
+\draw[thickline] (0.55,2.30)--(0.70,2.40)--(0.78,2.25);
+\node[right,font=\scriptsize] at (0.77,5.95) {stirrer};
+% label pycnometer
+\draw[thickline] (0.36,2.70)--(0.95,2.90);
+\node[right,font=\scriptsize] at (0.97,2.90) {pycnometer};
+\end{tikzpicture}
+\end{figbox}
+
+Hence the mean coefficient of volume expansion of water between \SI{21.70}{\celsius} and \SI{40.79}{\celsius} is
+\begin{equation*}
+\beta=3\alpha+\frac{M_1-M_2}{(M_2-M)(\theta_2-\theta_1)}
+=3\times3.9\times10^{-6}+\frac{17.8298-17.7716}{(17.7716-7.6797)\times(40.79-21.70)}
+\end{equation*}
+\begin{equation*}
+=0.314\times10^{-3}\ (\si{\celsius})^{-1}.
+\end{equation*}
+
+\begin{commentary}
+The coefficient of thermal expansion of a liquid depends not only on the material but also on the temperature interval; different intervals give different values. In the experiment it must therefore be stated within which temperature interval the result is the mean coefficient of thermal expansion.
+\end{commentary}
+
+
+\subsection*{Experiment 6.23\quad Measurement of the specific heat of fusion of ice by the method of mixtures}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A calorimeter, a mercury thermometer, a physical balance, pure ice, water, an iron stand with clamps, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the formula for measuring the heat of fusion of ice by the method of mixtures.
+\item Choose the best experimental parameters so as to reduce the systematic error of the experiment as far as possible.
+\item Measure the specific heat of fusion of ice.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.23.}\quad \textbf{1.} A piece of ice of mass $m$ at \SI{0}{\celsius} is put into water of mass $M$ and temperature $\theta_1$ \si{\celsius} contained in the inner cylinder of a calorimeter. Suppose that after the ice has completely melted the water temperature has fallen to $\theta_2$ \si{\celsius}. The total heat absorbed by this piece of ice in melting into water and then warming to $\theta_2$ \si{\celsius} is $m\lambda+mc\theta_2$, where $c$ is the specific heat capacity of water and $\lambda$ the specific heat of fusion of ice. If the inner cylinder of the calorimeter and the stirrer are made of the same material, their total mass is $M_1$ and their specific heat capacity is $c_1$, then in the experiment the heat given out by the calorimeter, the stirrer and the water is $(Mc+M_1c_1)(\theta_1-\theta_2)$. Assuming that no heat is exchanged between the calorimeter and the surrounding space during the mixing process, we have
+\begin{equation*}
+(Mc+M_1c_1)(\theta_1-\theta_2)=m\lambda+mc\theta_2 ,
+\end{equation*}
+hence
+\begin{equation}\tag{1}
+\lambda=\frac{Mc+M_1c_1}{m}(\theta_1-\theta_2)-c\theta_2 .
+\end{equation}
+
+\textbf{2. Points of procedure.} Ice is made in a refrigerator. After the ice box has been taken out of the refrigerator it should be left in the room for some time; the ice is then taken out and the water on its surface is wiped off with a dry gauze. The masses of the inner cylinder and of the stirrer of the calorimeter are weighed with the balance. The mass of the ice is obtained at the end of the experiment, after all the ice has melted, by subtracting the masses of the other parts from the total mass of the inner cylinder of the calorimeter. As regards the choice of the mass of the pure ice and of the initial temperature and mass of the water, the initial temperature of the water should be higher than room temperature. After the ice has been put into the water and has completely melted, the final temperature of the water should be lower than room temperature, and the difference between the initial temperature and room temperature should be roughly equal to the difference between room temperature and the final temperature; in this way the influence of the heat exchange between the system and the surroundings on the experiment can be effectively reduced. It should also be noted that the final temperature of the water must not be lower than the dew point at that time, otherwise the water vapour in the surroundings will condense on the outer wall of the inner cylinder of the calorimeter and release heat to the system. The dew point of the environment must also be measured in the experiment.
+
+\textbf{3. Experimental results}
+
+The room temperature is \SI{23.8}{\celsius} and the dew point \SI{19.5}{\celsius}.
+
+The total mass of the inner cylinder of the calorimeter and of the stirrer (both made of copper) is
+\begin{equation*}
+M_1=\SI{144.160}{g}.
+\end{equation*}
+The mass of the water is
+\begin{equation*}
+M=\text{mass of vessel with water}-\text{mass of empty vessel}
+=345.400-144.160=\SI{201.240}{g}.
+\end{equation*}
+The measured variation of the temperature of the water in the calorimeter with time is shown in the table.
+
+\begin{center}
+\textbf{Table 6.23}\quad Temperature of the water in the calorimeter: before the ice is added\\[3pt]
+\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+$t/\mathrm{min}$ & 0 & 0.50 & 1.00 & 1.50 & 2.00 & 2.50 & 3.00 & 3.50 & 4.00 & 4.50\\
+\midrule
+$\theta/\si{\celsius}$ & 31.75 & 31.70 & 31.66 & 31.62 & 31.60 & 31.57 & 31.52 & 31.50 & 31.48 & 31.46\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textit{After the ice is added}\\[3pt]
+\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+$t/\mathrm{min}$ & 5.00 & 5.50 & 6.00 & 6.50 & 7.00 & 7.50 & 8.00 & 8.50 & 9.00 & 9.50\\
+\midrule
+$\theta/\si{\celsius}$ & 25.70 & 22.20 & 20.80 & 20.00 & 19.80 & 19.80 & 19.80 & 19.85 & 19.85 & 19.88\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Plotting the temperature of the calorimeter against time on \SI{20}{cm}$\times$\SI{25}{cm} graph paper gives $\theta_1=\SI{31.39}{\celsius}$ and $\theta_2=\SI{19.77}{\celsius}$, as shown in the figure.
+
+\begin{figbox}{6.23}
+\begin{tikzpicture}[scale=0.78]
+% axes
+\draw[axis] (0,0)--(8.30,0) node[right,font=\scriptsize] {$t/\mathrm{min}$};
+\draw[axis] (0,0)--(0,8.90) node[above,font=\scriptsize] {$\theta/\si{\celsius}$};
+% ticks
+\foreach \x/\lab in {0/0,1.5/2,3.0/4,4.5/6,6.0/8,7.5/10}
+  \draw[thickline] (\x,0)--(\x,-0.10) node[below,font=\scriptsize] {\lab};
+\foreach \y/\lab in {0/16,1/18,2/20,3/22,4/24,5/26,6/28,7/30,8/32}
+  \draw[thickline] (0,\y)--(-0.10,\y) node[left,font=\scriptsize] {\lab};
+% data before the ice is added
+\draw[thickline] (0,7.875)--(0.375,7.85)--(0.75,7.83)--(1.125,7.81)--(1.5,7.80)
+  --(1.875,7.785)--(2.25,7.76)--(2.625,7.75)--(3.0,7.74)--(3.375,7.73);
+\foreach \x/\y in {0/7.875,0.375/7.85,0.75/7.83,1.125/7.81,1.5/7.80,1.875/7.785,2.25/7.76,2.625/7.75,3.0/7.74,3.375/7.73}
+  \fill (\x,\y) circle (0.05);
+% data after the ice is added
+\draw[thickline] (3.375,7.73)--(3.75,7.71)--(3.75,4.85);
+\draw[thickline] (3.75,4.85)--(4.125,3.10)--(4.5,2.40)--(4.875,2.00)--(5.25,1.90)
+  --(5.625,1.90)--(6.0,1.90)--(6.375,1.925)--(6.75,1.925)--(7.125,1.94);
+\foreach \x/\y in {3.75/4.85,4.125/3.10,4.5/2.40,4.875/2.00,5.25/1.90,5.625/1.90,6.0/1.90,6.375/1.925,6.75/1.925,7.125/1.94}
+  \fill (\x,\y) circle (0.05);
+% extrapolated lines
+\draw[dashedline] (3.8625,7.695)--(3.8625,1.885);
+\draw[dashedline] (3.8625,1.885)--(7.125,1.885);
+\node[above,font=\scriptsize] at (0.10,7.95) {$A$};
+\node[above right,font=\scriptsize] at (3.8625,7.695) {$B\,(5.15,\,31.39)$};
+\node[below right,font=\scriptsize] at (3.8625,1.885) {$C\,(5.15,\,19.77)$};
+\node[right,font=\scriptsize] at (7.13,1.94) {$D$};
+\node[right,font=\scriptsize] at (4.52,2.40) {$E$};
+\node[above left,font=\scriptsize] at (3.74,4.85) {$F$};
+\end{tikzpicture}
+\end{figbox}
+
+The mass of the ice is $m=370.800-345.400=\SI{25.400}{g}$. Given that at \SI{20}{\celsius} the specific heat capacity of copper is $c_1=\SI{385}{J/(kg\cdot K)}$ and that of water is $c=\SI{4.180e3}{J/(kg\cdot K)}$, the specific heat of fusion of ice is
+\begin{equation*}
+\begin{aligned}
+\lambda&=\frac{Mc+M_1c_1}{m}(\theta_1-\theta_2)-c\theta_2\\
+&=\left[\frac{(201.240\times4.180+144.160\times0.385)\times(31.39-19.77)}{25.400}-4.180\times19.77\right]\times10^{3}\\
+&=327.9\times10^{3}\ (\mathrm{J/kg}).
+\end{aligned}
+\end{equation*}
+
+The standard value of the specific heat of fusion of ice is $\lambda=332.9\times10^{3}\ \mathrm{J/kg}$. It is seen that the error of the result of this experiment compared with the standard value is rather small. Since the ice used in this experiment contained small cavities, a small amount of water was unavoidably carried in with it, so it is normal that the experimental result is on the low side.
+
+\begin{commentary}
+The method of correcting the temperature for the systematic error introduced by the heat exchange between the experimental system and the surroundings by means of a graph is frequently used in thermal experiments.
+\end{commentary}
+
+\subsection*{Experiment 6.24\quad Determination of the empirical law of heat transfer in free and forced convection of air}
+
+Under conditions of forced or free convection, the heat transfer satisfies the following functional relation:
+\begin{equation}\tag{1}
+\frac{\Delta Q}{\Delta t}=E(\theta-\theta_0)^{m},
+\end{equation}
+where $\Delta Q/\Delta t$ is the heat lost by the body per unit time, $\theta$ is the surface temperature of the heated body, $\theta_0$ is the temperature of the surrounding fluid (usually room temperature), and $E$ is a constant independent of $(\theta-\theta_0)$. When $m=1$, relation (1) is called Newton's law of cooling.
+
+\noindent\textit{[Available apparatus and materials]}
+
+A mercury thermometer, a small tubular electric furnace (a \SI{25}{W} wire-wound resistor may be used instead), a variable-ratio transformer, a stopwatch, an iron stand with clamps, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the formula used for the experimental measurement.
+\item Describe the experimental method briefly.
+\item Measure and calculate the data, and find the empirical formulas for Newtonian natural cooling and for forced convection.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.24.}\quad \textbf{1.} It is known from calorimetry that for a given body the heat lost per unit time is proportional to the fall in temperature per unit time, that is,
+\begin{equation}\tag{2}
+\frac{\Delta Q}{\Delta t}=Mc\,\frac{\Delta\theta}{\Delta t},
+\end{equation}
+where $M$ is the mass of the body and $c$ its specific heat capacity. Substituting (2) into (1) gives
+\begin{equation*}
+\frac{\Delta\theta}{\Delta t}=\frac{E}{Mc}(\theta-\theta_0)^{m}.
+\end{equation*}
+Putting $k=E/Mc$, the above expression can be written as
+\begin{equation}\tag{3}
+\frac{\Delta\theta}{\Delta t}=k(\theta-\theta_0)^{m}.
+\end{equation}
+Taking the natural logarithm of both sides of (3) gives
+\begin{equation*}
+\ln\left(\frac{\Delta\theta}{\Delta t}\right)=m\ln(\theta-\theta_0)+\ln k .
+\end{equation*}
+By measuring the relation between $\theta$ and $t$ and the value of $\theta_0$, a straight line can be fitted by means of this expression; the slope gives $m$ and the intercept gives $\ln k$.
+
+\textbf{2. Free convection experiment}
+
+The experiment is performed with a mercury thermometer of range $0$--$100$\,\si{\celsius} and division value \SI{1}{\celsius}. The variable-ratio transformer is connected to the tubular electric furnace and the supply is switched on; a suitable voltage is applied to the ends of the furnace so that the input electric power of the furnace is $\le\SI{25}{W}$. First the room temperature is measured with the mercury thermometer: $\theta_0=\SI{10.0}{\celsius}$. The thermometer is then heated uniformly in the tubular electric furnace up to \SI{85.0}{\celsius}, and finally taken out of the furnace and allowed to cool freely in the air. A reading is taken every \SI{10}{s}; the readings $\theta$ of the thermometer (in \si{\celsius}) are given in Table 1.
+
+\begin{center}
+\textbf{Table 6.24-1}\\[3pt]
+\begin{tabular}{lccccccccc}
+\toprule
+$t/\mathrm{s}$ & 0 & 10.0 & 20.0 & 30.0 & 40.0 & 50.0 & 60.0 & 70.0 & 80.0\\
+\midrule
+$\theta/\si{\celsius}$ & 85.0 & 79.1 & 73.8 & 69.0 & 64.6 & 60.6 & 57.0 & 53.7 & 50.7\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Substituting the data of Table 1 into formula (3) and performing a curve fit with a calculator gives
+\begin{equation*}
+m=1.25,\qquad \text{correlation coefficient } r=0.9998,\qquad k=0.0027 .
+\end{equation*}
+Under the condition of free cooling, the cooling formula obtained experimentally is
+\begin{equation*}
+\frac{\Delta\theta}{\Delta t}=0.0027(\theta-\theta_0)^{1.25}.
+\end{equation*}
+
+\textbf{3. Forced convection experiment}
+
+A small fan is switched on. The room temperature is $\theta_0=\SI{14.8}{\celsius}$. The mercury thermometer is heated uniformly in the tubular electric furnace up to \SI{100.0}{\celsius}, then taken out of the furnace and cooled under the forced convection of the small fan; the readings of the thermometer are recorded every \SI{10}{s}. The experimental data are given in Table 2.
+
+\begin{center}
+\textbf{Table 6.24-2}\\[3pt]
+\begin{tabular}{lccccccccc}
+\toprule
+$t/\mathrm{s}$ & 0 & 10.0 & 20.0 & 30.0 & 40.0 & 50.0 & 60.0 & 70.0 & 80.0\\
+\midrule
+$\theta/\si{\celsius}$ & 100.0 & 79.0 & 63.9 & 52.0 & 43.5 & 36.9 & 31.8 & 28.0 & 24.9\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Substituting the data of Table 2 into formula (3) and fitting in the same way gives
+\begin{equation*}
+m=1.05,\qquad r=0.9998,\qquad k=0.023 .
+\end{equation*}
+Under the condition of forced convection, the cooling formula obtained experimentally is
+\begin{equation*}
+\frac{\Delta\theta}{\Delta t}=0.023(\theta-\theta_0)^{1.05}.
+\end{equation*}
+
+\subsection*{Experiment 6.25\quad Measurement of the specific heat capacity of a metal by the cooling method}
+
+\noindent\textit{[Available apparatus and materials]}
+
+Samples of copper, iron and aluminium (small cylindrical metal samples \SI{5}{mm} in diameter and \SI{30}{mm} long, each with a deep hole drilled in its base), a copper--constantan thermocouple, a heating furnace with a lifting support, a metal shield against draughts, an ice--water mixture and a vacuum flask, a physical balance, a digital voltmeter, a stopwatch, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the experimental formula for measuring the specific heat capacity of a metal by the cooling method.
+\item Given that the specific heat capacity of copper at \SI{100}{\celsius} is $c_1=\SI{0.3929e3}{J/(kg\cdot\celsius)}$, measure the specific heat capacities of iron and aluminium at \SI{100}{\celsius}.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.25.}\quad \textbf{1.} If the metal sample is a small cylinder whose diameter and length are very small and whose thermal conductivity is very good, the temperature may be regarded as approximately the same everywhere in the sample. Then the following relation holds:
+\begin{equation}\tag{1}
+\frac{\Delta Q}{\Delta t}=c_1M_1\,\frac{\Delta\theta_1}{\Delta t},
+\end{equation}
+where $c_1$ is the specific heat capacity of the metal sample at temperature $\theta_1$, $\Delta\theta_1/\Delta t$ is the rate of fall of the temperature of the metal sample at $\theta_1$, and $\Delta Q/\Delta t$ is the heat lost per unit time. From the law of cooling,
+\begin{equation}\tag{2}
+\frac{\Delta Q}{\Delta t}=\alpha_1S_1(\theta_1-\theta_0)^{m},
+\end{equation}
+where $\alpha_1$ is the heat transfer coefficient, $S_1$ the area of the outer surface of the sample, $m$ a constant, $\theta_1$ the temperature of the metal sample and $\theta_0$ the temperature of the surrounding medium. From (1) and (2),
+\begin{equation}\tag{3}
+c_1M_1\,\frac{\Delta\theta_1}{\Delta t}=\alpha_1S_1(\theta_1-\theta_0)^{m}.
+\end{equation}
+Similarly, for another metal sample of mass $M_2$ and specific heat capacity $c_2$ the same expression may be written:
+\begin{equation}\tag{4}
+c_2M_2\,\frac{\Delta\theta_2}{\Delta t}=\alpha_2S_2(\theta_2-\theta_0)^{m}.
+\end{equation}
+If the two samples have the same shape and dimensions, that is $S_1=S_2$, and the same surface condition (coating, colour, etc.), and the properties of the surrounding medium are unchanged, then $\alpha_1=\alpha_2$. If the temperature $\theta_0$ of the surrounding medium is constant and the two samples are at the same temperature $\theta_1=\theta_2$, then from (3) and (4)
+\begin{equation}\tag{5}
+c_2=c_1\,\frac{M_1\left(\dfrac{\Delta\theta}{\Delta t}\right)_1}{M_2\left(\dfrac{\Delta\theta}{\Delta t}\right)_2}.
+\end{equation}
+If the specific heat capacity $c_1$ and the mass $M_1$ of the standard sample are known, and the mass $M_2$ of the sample to be measured and the ratio of the cooling rates of the two samples at temperature $\theta$ have been measured, the specific heat capacity $c_2$ of the metal to be measured can be found.
+
+\textbf{2.} The experimental arrangement is shown in the figure. The masses of the three different samples of copper, iron and aluminium are measured separately with the physical balance. Since the samples are coated with a layer of metal film, they must be distinguished according to $M_{\mathrm{Cu}}>M_{\mathrm{Fe}}>M_{\mathrm{Al}}$. The measuring junction of the thermocouple is fixed at the centre of the metal draught shield, and the hole in the sample is slipped over the measuring junction of the thermocouple. The heating furnace $A$ is lowered by means of the lifting support so that it covers the sample to be heated. When the sample has been heated to the required temperature, the furnace is raised and the metal lid of the draught shield is put in place. The sample then cools freely, and the time $\Delta t$ required for the sample to cool from \SI{102}{\celsius} to \SI{98}{\celsius} is measured. The experimental data are given in Table 1.
+
+The masses of the samples are $M_1=\SI{4.830}{g}$, $M_2=\SI{4.280}{g}$ and $M_3=\SI{1.500}{g}$. Since the samples have the same shape and dimensions, it follows from the magnitudes of the masses that $M_1$ is the copper sample, $M_2$ the iron sample and $M_3$ the aluminium sample. The times required for the samples to cool from \SI{102}{\celsius} to \SI{98}{\celsius} are given in Table 1.
+
+\begin{figbox}{6.25}
+\begin{tikzpicture}[scale=0.80]
+% draught shield
+\draw[thickline] (0.90,0.60)--(0.90,4.90);
+\draw[thickline] (3.70,0.60)--(3.70,4.90);
+\draw[thickline] (0.90,0.60)--(3.70,0.60);
+\draw[thickline] (0.90,4.90)--(1.00,4.90);
+\draw[thickline] (3.70,4.90)--(3.60,4.90);
+% lid
+\draw[thickline,fill=black!8] (0.80,4.90)--(3.80,4.90)--(3.80,5.08)--(0.80,5.08)--cycle;
+% heater on its stem
+\draw[thickline,fill=black!10] (1.90,3.55)--(2.70,3.55)--(2.70,4.55)--(1.90,4.55)--cycle;
+\draw[thickline] (2.30,4.55)--(2.30,5.55);
+\draw[thickline] (1.80,5.55)--(2.80,5.55);
+\node[right,font=\scriptsize] at (2.74,4.05) {$1$};
+% sample
+\draw[thickline,fill=black!30] (2.05,2.75)--(2.55,2.75)--(2.55,3.50)--(2.05,3.50)--cycle;
+\node[right,font=\scriptsize] at (2.60,3.15) {$2$};
+% support
+\draw[thickline,fill=black!12] (1.80,2.35)--(2.80,2.35)--(2.80,2.70)--(1.80,2.70)--cycle;
+\draw[thickline] (2.30,2.35)--(2.30,0.60);
+\node[left,font=\scriptsize] at (1.76,2.50) {$4$};
+% thermocouple
+\draw[thickline] (2.30,2.75)--(2.30,2.10)--(1.55,1.35)--(0.55,1.35);
+\node[left,font=\scriptsize] at (2.20,2.30) {$3$};
+% digital voltmeter
+\draw[thickline,fill=black!4] (-1.35,0.85) rectangle (0.45,1.75);
+\draw[thickline,fill=black!10] (-1.15,1.10) rectangle (-0.15,1.50);
+\node[font=\scriptsize] at (-0.65,1.30) {mV};
+\node[below,font=\scriptsize] at (-0.45,0.60) {digital voltmeter};
+% ice-water flask
+\draw[thickline] (4.25,0.90)--(4.25,2.55);
+\draw[thickline] (5.15,0.90)--(5.15,2.55);
+\draw[thickline] (4.25,0.90)--(5.15,0.90);
+\draw[thickline] (4.25,2.55)--(4.33,2.55);
+\draw[thickline] (5.15,2.55)--(5.07,2.55);
+\fill[black!5] (4.30,0.95) rectangle (5.10,2.10);
+\draw[thickline] (4.30,2.10)--(5.10,2.10);
+\foreach \x/\y in {4.55/1.55,4.85/1.75,4.70/1.25,4.95/1.35,4.45/1.10}
+  \draw[thickline] (\x,\y)--(\x+0.18,\y+0.10);
+\node[right,font=\scriptsize] at (5.18,1.55) {$6$};
+% thermocouple lead to the cold junction
+\draw[thickline] (5.00,2.55)--(5.00,2.95)--(3.85,2.95);
+% shield label
+\node[right,font=\scriptsize] at (3.74,3.30) {$5$};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize 1.\ Heating furnace; 2.\ Sample to be heated; 3.\ Thermocouple; 4.\ Support; 5.\ Draught shield; 6.\ Ice--water mixture.}
+\end{figbox}
+
+\begin{center}
+\textbf{Table 6.25-1}\\[3pt]
+\begin{tabular}{lcccccc}
+\toprule
+Sample & \multicolumn{5}{c}{Number} & $\overline{\Delta t}$\\
+\cmidrule(lr){2-6}
+ & 1 & 2 & 3 & 4 & 5 & \\
+\midrule
+Copper $\Delta t_1/\mathrm{s}$ & 8.11 & 8.36 & 8.50 & 8.33 & 8.60 & 8.38\\
+Iron $\Delta t_2/\mathrm{s}$ & 8.86 & 8.99 & 8.94 & 8.58 & 9.09 & 8.89\\
+Aluminium $\Delta t_3/\mathrm{s}$ & 6.26 & 6.22 & 6.35 & 6.29 & 6.44 & 6.31\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Taking the specific heat capacity of copper as the standard: $c_1=\SI{0.3929e3}{J/(kg\cdot\celsius)}$ (\SI{100}{\celsius}).
+
+The specific heat capacity of iron at \SI{100}{\celsius} is
+\begin{equation*}
+c_2=c_1\,\frac{M_1\cdot\Delta t_2}{M_2\cdot\Delta t_1}
+=0.3929\times10^{3}\times\frac{4.830\times8.89}{4.280\times8.38}
+=\SI{0.470e3}{J/(kg\cdot\celsius)}.
+\end{equation*}
+The specific heat capacity of aluminium at \SI{100}{\celsius} is
+\begin{equation*}
+c_3=c_1\,\frac{M_1\cdot\Delta t_3}{M_3\cdot\Delta t_1}
+=0.3929\times10^{3}\times\frac{4.830\times6.31}{1.500\times8.38}
+=\SI{0.953e3}{J/(kg\cdot\celsius)}.
+\end{equation*}
+
+\subsection*{Experiment 6.26\quad Measurement of the specific heat capacity of a 10\% salt solution at room temperature}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A physical balance, a calorimeter, a thermometer, a vacuum flask, two small glass beakers, a sufficient amount of water, ice, salt and gauze.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the steps of the experiment.
+\item Measure and obtain the specific heat capacity of the salt solution.
+\end{enumerate}
+
+\noindent\textit{Notes:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item The inner cylinder and the stirrer of the calorimeter are both made of copper, with specific heat capacity $c_{\mathrm{Cu}}=\SI{0.3929e3}{J/(kg\cdot\celsius)}$.
+\item The specific heat capacity of water at \SI{20}{\celsius} is \SI{4180}{J/(kg\cdot\celsius)}. The specific heat capacity of a material depends on temperature; when the temperature change does not exceed \SI{20}{\celsius}, the specific heat capacity may be regarded as approximately constant.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.26.}\quad Take the inner cup of the calorimeter and the insulating support out, weigh the mass of the inner cup and of the stirrer with the physical balance, and use the balance
+to prepare a 10\% salt solution in a beaker. The prepared 10\% salt solution is put into the inner cup of the calorimeter, and the cup is placed, on its insulating support, on the ice in the vacuum flask. The stirrer and the thermometer are then placed in the inner cup of the calorimeter, and the lid of the vacuum flask is put on. The temperature of the calorimeter and of the pure water must be about \SI{20}{\celsius} above the freezing point, so the calorimeter system cools naturally inside the vacuum flask. The contents are stirred uniformly, continuously and slowly so that they cool uniformly, and the cooling curve $\theta_2$--$t$ of the calorimeter containing the salt solution is measured. Here $\theta_2$ is the temperature of the salt solution and of the calorimeter system, and $t$ is the time, measured with a stopwatch. Pure water of the same initial temperature and the same volume is then put into the inner cup of the calorimeter, and, with the same continuous, uniform and slow stirring, another cooling curve $\theta_1$--$t$ is obtained.
+
+From the formula of the law of cooling, the heat lost by the calorimeter during the first cooling is
+\begin{equation}\tag{1}
+\frac{\Delta Q_2}{\Delta t}=-aS(\theta_2-\theta_0)^{m},
+\end{equation}
+where $\theta_2$ is the surface temperature of the calorimeter, $S$ its surface area, $a$ a coefficient related to the surface condition of the calorimeter, and $m$ a coefficient related to the condition of the surrounding medium. From the definition of specific heat capacity,
+\begin{equation}\tag{2}
+\frac{\Delta Q_2}{\Delta t}=(m_2c_2+q)\,\frac{\Delta\theta_2}{\Delta t},
+\end{equation}
+where $q$ is the water equivalent of the inner cup of the calorimeter, the stirrer and the thermometer. Combining (1) and (2) gives
+\begin{equation}\tag{3}
+(m_2c_2+q)\,\frac{\Delta\theta_2}{\Delta t}=-aS(\theta_2-\theta_0)^{m}.
+\end{equation}
+Similarly, after the same volume of pure water has been put into the calorimeter, the following expression is obtained in the same way:
+\begin{equation}\tag{4}
+(m_1c_1+q)\,\frac{\Delta\theta_1}{\Delta t}=-aS(\theta_1-\theta_0)^{m}.
+\end{equation}
+From (3) and (4),
+\begin{equation*}
+(m_1c_1+q)\left.\frac{\Delta\theta_1}{\Delta t}\right|_{\theta=\theta_3}
+=(m_2c_2+q)\left.\frac{\Delta\theta_2}{\Delta t}\right|_{\theta=\theta_3}.
+\end{equation*}
+Here $\theta=\theta_3$ indicates that the specific heat capacity of the liquid to be measured is required at the temperature $\theta_3$ \si{\celsius}. The masses $m_1$ and $m_2$ can be weighed on the balance, $c_1$ is known, the values of $\left.\Delta\theta_1/\Delta t\right|_{\theta=\theta_3}$ and $\left.\Delta\theta_2/\Delta t\right|_{\theta=\theta_3}$ can be found from the cooling curves, and $q$ can also be found experimentally. In this way the specific heat capacity of the liquid to be measured can be determined. Rearranging and combining the above expression gives
+\begin{equation}\tag{5}
+c_2=\frac{c_1m_1\left(\dfrac{\Delta\theta_1}{\Delta t}\right)_{\theta=\theta_3}}
+{m_2\left(\dfrac{\Delta\theta_2}{\Delta t}\right)_{\theta=\theta_3}}
+-\frac{q}{m_2}\left(1-\frac{\Delta\theta_1}{\Delta t}\Big/\frac{\Delta\theta_2}{\Delta t}\right).
+\end{equation}
+Using (5), the specific heat capacity of the liquid to be measured at temperature $\theta_3$ can be obtained.
+
+\subsection*{Experiment 6.27\quad Determination of the specific heat of vaporisation of a liquid by the method of mixtures}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A steam boiler, a gas burner (or an electric furnace), a calorimeter (with a stirrer), a physical balance, a digital thermometer, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the calculation formula for measuring the specific heat of vaporisation of water.
+\item Write down the experimental method.
+\item Measure and calculate the specific heat of vaporisation of water at \SI{100}{\celsius}.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.27.}\quad \textbf{1.} The usual method of determining the specific heat of vaporisation of water is to pass steam at nearly \SI{100}{\celsius} from a steam boiler through a rubber tube into a calorimeter. If the initial temperature of the calorimeter and of the water in it is $\theta_1$ \si{\celsius}, and steam of mass $M$ enters the water in the calorimeter and condenses there, then, when the water and the inner cup of the calorimeter have reached a common temperature $\theta_2$ \si{\celsius}, the specific heat of vaporisation of water is given by
+\begin{equation}\tag{1}
+ML+Mc_{\mathrm{w}}(\theta_3-\theta_2)=(mc_{\mathrm{w}}+m_1c_{\mathrm{c}})(\theta_2-\theta_1),
+\end{equation}
+where $c_{\mathrm{w}}$ is the specific heat capacity of water; $m$ is the mass of the water originally in the calorimeter; $c_{\mathrm{c}}$ is the specific heat capacity of copper; $m_1$ is the mass of the copper inner cup of the calorimeter and of the stirrer; $\theta_3$ is the temperature of the steam; and $L$ is the specific heat of vaporisation of water. According to (1), it is only necessary to measure $m_1$, $m$, $\theta_2$, $\theta_1$, etc., and $M$, in order to obtain the specific heat of vaporisation $L$ of water.
+
+\textbf{2.} The apparatus for measuring the specific heat of vaporisation of water is shown in the figure.
+
+\begin{figbox}{6.27}
+\begin{tikzpicture}[scale=0.80]
+% ---------- flask and heater ----------
+\draw[thickline] (0.50,6.28) .. controls (0.50,5.60) and (1.20,5.35) .. (1.75,5.35)
+  .. controls (2.30,5.35) and (2.95,5.60) .. (2.95,6.28)
+  .. controls (2.95,6.95) and (2.30,7.20) .. (1.75,7.20)
+  .. controls (1.20,7.20) and (0.50,6.95) .. (0.50,6.28);
+\draw[thickline] (1.50,7.18)--(1.50,7.65);
+\draw[thickline] (2.00,7.18)--(2.00,7.65);
+\draw[thickline,fill=black!12] (1.44,7.65)--(2.06,7.65)--(2.06,7.90)--(1.44,7.90)--cycle;
+% vent
+\draw[thickline] (2.06,7.77)--(2.55,7.77);
+\draw[thickline] (2.55,7.77)--(2.55,7.98);
+% glass tube
+\draw[thickline] (1.75,7.88)--(1.75,8.35)--(3.25,8.35)--(3.25,4.20);
+% rubber tube
+\draw[thickline] (3.25,4.20)--(3.25,3.55);
+% heater
+\draw[thickline,fill=black!10] (0.20,4.90)--(2.60,4.90)--(2.60,5.12)--(0.20,5.12)--cycle;
+\draw[thickline] (0.55,4.90)--(0.55,4.72);
+\draw[thickline] (2.25,4.90)--(2.25,4.72);
+\node[left,font=\scriptsize] at (0.16,5.01) {heater};
+% ---------- calorimeter ----------
+\draw[thickline] (1.30,0.60)--(1.30,3.35);
+\draw[thickline] (3.45,0.60)--(3.45,3.35);
+\draw[thickline] (1.30,0.60)--(3.45,0.60);
+\draw[thickline,fill=black!6] (1.45,0.75)--(1.45,3.35)--(3.30,3.35)--(3.30,0.75)--cycle;
+\fill[black!8] (1.50,0.80) rectangle (3.25,2.45);
+\draw[thickline] (1.50,2.45)--(3.25,2.45);
+% lid
+\draw[thickline,fill=black!12] (1.18,3.35)--(3.57,3.35)--(3.57,3.55)--(1.18,3.55)--cycle;
+% stirrer
+\draw[thickline] (2.85,4.30)--(2.85,1.00);
+\draw[thickline] (2.65,1.00)--(3.05,1.00);
+\node[left,font=\scriptsize] at (2.55,4.05) {stirrer};
+% thermometer probe
+\draw[thickline] (2.10,4.30)--(2.10,1.45);
+\draw[thickline,fill=black!40] (2.10,1.45) circle (0.08);
+% support block
+\draw[thickline,fill=black!12] (1.00,0.28)--(3.75,0.28)--(3.75,0.60)--(1.00,0.60)--cycle;
+\node[below,font=\scriptsize] at (2.38,0.25) {support block};
+% ---------- meter ----------
+\draw[thickline,fill=black!4] (-4.60,2.20) rectangle (-1.80,3.90);
+\draw[thickline,fill=black!10] (-4.30,2.95) rectangle (-3.35,3.35);
+\node[font=\scriptsize] at (-3.82,3.15) {mV};
+\draw[thickline] (-2.30,3.15) circle (0.15);
+\node[below,font=\scriptsize] at (-2.30,2.98) {adjust};
+\node[below,font=\scriptsize] at (-3.20,2.12) {digital voltmeter};
+\node[above,font=\scriptsize] at (-4.20,3.98) {sensor};
+% leads from probe to meter
+\draw[thickline] (2.10,4.30)--(2.10,4.48)--(-1.80,4.48)--(-1.80,3.90);
+% labels
+\node[left,font=\scriptsize] at (0.48,6.10) {flask};
+\node[left,font=\scriptsize] at (1.38,7.72) {stopper};
+\node[right,font=\scriptsize] at (2.58,7.90) {vent};
+\node[right,font=\scriptsize] at (3.28,7.20) {glass tube};
+\node[right,font=\scriptsize] at (3.28,3.85) {rubber tube};
+\node[right,font=\scriptsize] at (3.60,2.10) {calorimeter};
+\node[right,font=\scriptsize] at (1.58,2.20) {water};
+\end{tikzpicture}
+\end{figbox}
+
+The concrete measuring method and steps are as follows.
+
+(1) The flask is placed on a gas burner (or an electric furnace) and a certain amount of water is put into it. The mass $m_1$ of the copper inner cup of the calorimeter together with the copper stirrer is weighed with the physical balance. A certain amount of water is then poured into the inner cup of the calorimeter; the mass $m$ of the water is obtained by weighing the total mass of the inner cup of the calorimeter containing water together with the stirrer and subtracting $m_1$.
+
+(2) Before the measurement, the inner cup of the calorimeter and the water in it are placed on ice and pre-cooled to a temperature somewhat below room temperature. This temperature must, however, be higher than the dew point of the air at that time, because otherwise a thin layer of water might condense on the outer wall of the inner cup of the calorimeter and affect the measurement. The pre-cooled calorimeter is placed under the steam boiler, and the delivery tube of the steam boiler is inserted \SI{1}{cm} deep into the water.
+
+(3) The steam boiler is heated and the vent on its lid is opened, so that steam at a temperature below \SI{100}{\celsius} escapes from the neck. When the water in the steam boiler is boiling, the water in the calorimeter is stirred gently and continuously, and the reading $\theta_1$ of the thermometer is taken. The vent hole in the lid of the steam boiler is then closed, so that the steam passes into the inner cup of the calorimeter; stirring must be continued throughout the passage of the steam. The duration of the steam passage should be chosen so that the difference between the final temperature $\theta_2$ of the water in the calorimeter and room temperature is as close as possible to the difference between room temperature and the initial temperature $\theta_1$; in this way the heat exchange between the inner cup of the calorimeter and the surroundings during the experiment is
+cancelled out.
+
+(4) The vent hole in the lid of the steam boiler is opened to stop the admission of steam into the calorimeter, and the water in the calorimeter is stirred continuously. The final temperature $\theta_2$ is read when the temperatures of the water and of the inner cup have just become uniform and equal. By weighing the inner cup of the calorimeter and the water in it, the mass $M$ of the water that has entered the calorimeter can be calculated.
+
+(5) Substitute the values into formula (1) and calculate the specific heat of vaporisation of water at \SI{100}{\celsius}.
+
+\textbf{3. Experimental data and calculation}
+
+The mass of the calorimeter and stirrer (made of copper) is
+\begin{equation*}
+m_1=\SI{143.965}{g}.
+\end{equation*}
+The mass of the calorimeter, stirrer and water is
+\begin{equation*}
+m_1+m=\SI{406.060}{g},
+\end{equation*}
+so the mass of the water is $m=\SI{262.095}{g}$.
+
+The total mass of the calorimeter, stirrer, original water and steam is $m_1+m+M=\SI{415.480}{g}$, so the mass of the steam is $M=\SI{9.420}{g}$. The specific heat capacity of copper is $c_{\mathrm{c}}=\SI{0.387}{J/(g\cdot\celsius)}$, the specific heat capacity of water is $c_{\mathrm{w}}=\SI{4.188}{J/(g\cdot\celsius)}$ (its value at about \SI{13}{\celsius}), the initial temperature is $\theta_1=\SI{2.91}{\celsius}$ and the final temperature $\theta_2=\SI{23.88}{\celsius}$. Substituting these data into (1) gives
+\begin{equation*}
+\begin{aligned}
+L&=\frac{mc_{\mathrm{w}}+m_1c_{\mathrm{c}}}{M}(\theta_2-\theta_1)-c_{\mathrm{w}}(\theta_3-\theta_2)\\
+&=\frac{4.188\times262.095+0.387\times143.965}{9.420}\times(23.88-2.91)-4.188\times(100.0-23.88)\\
+&=\SI{2248}{J/g}=\SI{2.248e6}{J/kg}.
+\end{aligned}
+\end{equation*}
+The standard value of the specific heat of vaporisation of water at \SI{100}{\celsius} is $L_{\text{st}}=\SI{2.257e6}{J/kg}$; the experimental result lies within the limits of error.
+
+\subsection*{Experiment 6.28\quad Measurement of the specific heat of vaporisation of liquid nitrogen}
+
+\noindent\textit{[Available apparatus and materials]}
+
+A physical balance, a calorimeter, a stopwatch, a mercury thermometer ($0$--$50$\,\si{\celsius}, division value \SI{0.1}{\celsius}), a copper sample (in the form of a small rod), a small Dewar flask (with an outer casing of polystyrene foam for thermal insulation), liquid nitrogen and a vacuum flask, etc. The small Dewar flask may be a vacuum-cup inner vessel.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the formula of the experiment.
+\item Write down the experimental method.
+\item Measure and calculate the specific heat of vaporisation of liquid nitrogen.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.28.}\quad \textbf{1.} A small hole is made in the lid of a small vacuum flask containing a certain mass of liquid nitrogen. The liquid nitrogen gradually vaporises by absorbing heat from the surrounding atmosphere and escapes through the small hole. The mass of liquid nitrogen vaporised per unit time can be weighed with the physical balance. If a copper sample of known mass is put through the hole into the liquid nitrogen, then, since the temperature of the liquid nitrogen is very low, the copper sample gives out heat and the vaporisation process is accelerated, until the temperature of the copper sample becomes equal to that of the liquid nitrogen and the heat exchange between them stops. The mass of the Dewar flask containing liquid nitrogen is weighed with the physical balance, and its variation with time is shown in Fig.~1. In the figure, $t$ is the time and $M$ is the total mass of the copper sample, the liquid nitrogen and the Dewar flask. Join $bc$ and extend the straight lines $ab$ and $cd$. Through the midpoint $e$ of the line $bc$ draw a line parallel to the $M$ axis; it meets the extensions of the lines $ab$ and $dc$ at $f$ and $g$. The difference between the values of $f$ and $g$ on the $M$ axis is then the mass $m_N$ of liquid nitrogen vaporised by the heat released at the instant when the copper sample at room temperature is put into the liquid nitrogen.
+
+\begin{figbox}{6.28(a)}
+\begin{tikzpicture}[scale=0.86]
+% axes
+\draw[axis] (0,0)--(7.90,0) node[right,font=\scriptsize] {$t$};
+\draw[axis] (0,0)--(0,7.60) node[above,font=\scriptsize] {$M$};
+\node[below left,font=\scriptsize] at (0,0) {$O$};
+% segments ab, bc, cd
+\draw[thickline] (0.60,7.00)--(3.20,6.60);
+\draw[thickline] (3.20,6.60)--(4.00,3.40);
+\draw[thickline] (4.00,3.40)--(7.20,3.00);
+% dashed extensions
+\draw[dashedline] (3.20,6.60)--(3.62,6.54);
+\draw[dashedline] (4.00,3.40)--(3.58,3.45);
+\draw[dashedline] (3.60,2.55)--(3.60,7.25);
+% points and labels
+\fill (0.60,7.00) circle (0.06);
+\node[left,font=\scriptsize] at (0.58,7.06) {$a$};
+\fill (3.20,6.60) circle (0.06);
+\node[above left,font=\scriptsize] at (3.18,6.64) {$b$};
+\fill (4.00,3.40) circle (0.06);
+\node[below right,font=\scriptsize] at (4.02,3.34) {$c$};
+\fill (7.20,3.00) circle (0.06);
+\node[right,font=\scriptsize] at (7.22,3.00) {$d$};
+\fill (3.60,5.00) circle (0.06);
+\node[left,font=\scriptsize] at (3.56,5.02) {$e$};
+\fill (3.60,6.54) circle (0.06);
+\node[right,font=\scriptsize] at (3.64,6.58) {$f$};
+\fill (3.60,3.45) circle (0.06);
+\node[right,font=\scriptsize] at (3.64,3.40) {$g$};
+% m_N dimension
+\draw[dashedline] (3.60,6.54)--(4.30,6.54);
+\draw[dashedline] (3.60,3.45)--(4.30,3.45);
+\draw[dim] (4.30,6.54)--(4.30,3.45);
+\node[right,font=\scriptsize] at (4.34,5.00) {$m_N$};
+\end{tikzpicture}
+\end{figbox}
+Let the specific heat of vaporisation of liquid nitrogen be $L$; the heat absorbed by the vaporisation of a mass $m_N$ of liquid nitrogen is $Q=m_NL$. This heat can be measured by putting a copper sample at the temperature of liquid nitrogen into a calorimeter. Let the room temperature be $\theta_1$ and the initial temperature of the water and of the calorimeter be $\theta_2$. The copper sample, at the boiling point of liquid nitrogen, is put into the water, and when it has reached equilibrium with the inner cup of the calorimeter, the stirrer and the water, the temperature is $\theta_3$. The copper sample at the boiling point of liquid nitrogen absorbs heat $Q_1$, and the copper sample absorbs heat $Q_2$ in rising from $\theta_3$ to room temperature. From the law of conservation of energy,
+\begin{equation*}
+Q=Q_1+Q_2 .
+\end{equation*}
+From the principle of heat exchange in the method of mixtures,
+\begin{equation*}
+Q_1=(m_{\mathrm{w}}c_{\mathrm{w}}+m_{\mathrm{c}}c_{\mathrm{c}}+h_t)(\theta_2-\theta_3),
+\end{equation*}
+where $m_{\mathrm{w}}$ and $c_{\mathrm{w}}$ are the mass and specific heat capacity of the water; $m_{\mathrm{c}}$ and $c_{\mathrm{c}}$ are the mass of the calorimeter together with the stirrer and their specific heat capacity; and $h_t$ is the heat capacity of the immersed part of the thermometer. Moreover,
+\begin{equation*}
+Q_2=m_bc_b(\theta_1-\theta_3),
+\end{equation*}
+where $m_b$ is the mass of the copper sample and $c_b$ the specific heat capacity of the sample material. Hence
+\begin{equation*}
+m_N\cdot L=(m_{\mathrm{w}}c_{\mathrm{w}}+m_{\mathrm{c}}c_{\mathrm{c}}+h_t)(\theta_2-\theta_3)+m_bc_b(\theta_1-\theta_3),
+\end{equation*}
+so the specific heat of vaporisation of liquid nitrogen at its boiling point is
+\begin{equation}\tag{1}
+L=\frac{1}{m_N}\left[(m_{\mathrm{w}}c_{\mathrm{w}}+m_{\mathrm{c}}c_{\mathrm{c}}+h_t)(\theta_2-\theta_3)+m_bc_b(\theta_1-\theta_3)\right].
+\end{equation}
+
+\textbf{2. Experimental method}
+
+(1) \textit{Measurement of the mass $m_N$ vaporised when the copper sample at room temperature is put into liquid nitrogen.}
+
+The curve of the total mass $M$ of the liquid nitrogen, the vessel and the copper sample against time $t$ is measured with the physical balance. While the straight segment $ab$ is being measured the copper sample is on the pan at room temperature. At the time $t_b$ the copper sample is quickly put into the flask of liquid nitrogen, whereupon the liquid nitrogen rapidly vaporises and escapes. It is only necessary to record the time $t_b$ at which the copper is put into the liquid nitrogen and the time $t_c$ at which thermal equilibrium with the liquid nitrogen is reached, and then to measure the straight segment $cd$. Finally the $M$--$t$ graph is drawn, a line $fg$ is drawn through the midpoint of the straight segment $bc$, and it meets the extensions of the straight lines $ab$ and $cd$ at the points $f$ and $g$. The value of the mass $m_N$ is read from the line $fg$.
+
+(2) \textit{Measurement of the heat released by the copper sample in cooling from room temperature to the temperature of liquid nitrogen with the calorimeter.}
+
+The mass of the metal inner cup of the calorimeter together with the stirrer is weighed with the physical balance, and then the mass of the water together with the inner cup of the calorimeter, etc., is weighed, so as to obtain the mass of the water in the cup. The ambient temperature $\theta_1$ and the temperature $\theta_2$ of the water and of the inner cup are measured with the thermometer. The copper sample is then taken out of the liquid nitrogen and quickly put into the calorimeter; when thermal equilibrium has been reached the temperature is $\theta_3$. Substituting the measured results into formula (1) gives the specific heat of vaporisation of liquid nitrogen.
+
+\textbf{3. Experimental data and calculation}
+
+The mass of the copper sample is $m_b=\SI{12.530}{g}$, the mass of the inner cup of the calorimeter (aluminium) is $m_a=\SI{27.870}{g}$, and the mass of the brass stirrer is $m_c=\SI{6.510}{g}$. The specific heat capacity of brass is $c_c=\SI{0.384}{J/(g\cdot\celsius)}$ and that of aluminium $c_a=\SI{0.900}{J/(g\cdot\celsius)}$.
+
+The data for the relation between $M$ and $t$ are given in the table below.
+
+\begin{center}
+\textbf{Table 6.28}\\[3pt]
+\begin{tabular}{lccccccccc}
+\toprule
+$t/\mathrm{s}$ & 0 & 49 & 109 & 166 & 224 & 327 & 391 & 518 & 580\\
+\midrule
+$M/\mathrm{g}$ & 227.00 & 226.50 & 226.00 & 225.50 & 225.00 & 220.00 & 219.50 & 218.50 & 218.00\\
+\bottomrule
+\end{tabular}
+\end{center}
+In the table above, the copper sample is put in at \SI{224}{s} and reaches the boiling temperature of liquid nitrogen at \SI{327}{s}.
+
+The room temperature is $\theta_1=\SI{16.05}{\celsius}$; the initial temperature of the water is $\theta_2=\SI{15.10}{\celsius}$; when the copper sample, at the boiling temperature of liquid nitrogen, has been put into the calorimeter and thermal equilibrium has been reached, the temperature is $\theta_3=\SI{12.35}{\celsius}$. The heat capacity of the immersed part of the thermometer is $h_t=\SI{1.7}{J/\celsius}$ (it must be measured beforehand). The relation between $M$ and $t$ is plotted on graph paper (Fig.~2), from which
+\begin{equation*}
+m_N=224.60-220.40=\SI{4.20}{g}.
+\end{equation*}
+The specific heat capacity of water is known to be $c_{\mathrm{w}}=\SI{4.188}{J/(g\cdot\celsius)}$.
+
+Substituting the above measured data into formula (1) gives
+\begin{equation*}
+\begin{aligned}
+L&=\frac{1}{m_N}\left[(m_{\mathrm{w}}c_{\mathrm{w}}+m_a c_a+m_{\mathrm{c}}c_{\mathrm{c}}+h_t)(\theta_2-\theta_3)+m_bc_b(\theta_1-\theta_3)\right]\\
+&=\frac{1}{4.20}\Big[(63.64\times4.188+27.87\times0.900+6.51\times0.384+1.7)\\
+&\qquad\qquad\times(15.10-12.35)+12.53\times0.384\times(16.05-12.35)\Big]
+=\SI{197.9e3}{J/kg}.
+\end{aligned}
+\end{equation*}
+
+The standard value of the specific heat of vaporisation of liquid nitrogen at one atmosphere is $199.6\times10^{3}\ \mathrm{J/kg}$; the percentage difference between the two is $0.9\%$.
+
+\begin{figbox}{6.28(b)}
+\begin{tikzpicture}[scale=0.86]
+% axes
+\draw[axis] (0,0)--(7.70,0) node[right,font=\scriptsize] {$t/\mathrm{s}$};
+\draw[axis] (0,0)--(0,7.60) node[above,font=\scriptsize] {$M/\mathrm{g}$};
+% ticks
+\foreach \x/\lab in {0/0,1.2/100,2.4/200,3.6/300,4.8/400,6.0/500,7.2/600}
+  \draw[thickline] (\x,0)--(\x,-0.10) node[below,font=\scriptsize] {\lab};
+\foreach \y/\lab in {0/218,1.6/220,3.2/222,4.8/224,6.4/226}
+  \draw[thickline] (0,\y)--(-0.10,\y) node[left,font=\scriptsize] {\lab};
+% segments
+\draw[thickline] (0.00,7.20)--(2.688,5.76);
+\draw[thickline] (2.688,5.76)--(3.924,1.92);
+\draw[thickline] (3.924,1.92)--(6.96,0.30);
+% dashed extensions and the line fg
+\draw[dashedline] (2.688,5.76)--(3.288,5.28);
+\draw[dashedline] (3.924,1.92)--(3.288,1.92);
+\draw[dashedline] (3.288,1.55)--(3.288,5.55);
+% points
+\fill (0.00,7.20) circle (0.06);
+\node[left,font=\scriptsize] at (-0.03,7.26) {$a$};
+\fill (2.688,5.76) circle (0.06);
+\node[above left,font=\scriptsize] at (2.66,5.80) {$b$};
+\fill (3.924,1.92) circle (0.06);
+\node[below right,font=\scriptsize] at (3.94,1.86) {$c$};
+\fill (6.96,0.30) circle (0.06);
+\node[right,font=\scriptsize] at (6.98,0.30) {$d$};
+\fill (3.288,3.70) circle (0.06);
+\node[left,font=\scriptsize] at (3.24,3.74) {$e$};
+\fill (3.288,5.28) circle (0.06);
+\node[right,font=\scriptsize] at (3.32,5.36) {$f\,(274,\,224.60)$};
+\fill (3.288,1.92) circle (0.06);
+\node[left,font=\scriptsize] at (3.25,1.80) {$g\,(274,\,220.40)$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+A flask of liquid nitrogen with a small hole vaporises naturally in the atmosphere and loses mass; in the experiment this part of the vaporisation unavoidably consumes liquid nitrogen. When the amount of liquid nitrogen vaporised by the heat given out by the copper sample is measured by the heat-transfer method, the ``amount of liquid nitrogen vaporised by natural absorption of heat'' must be eliminated. In this experiment the systematic error is eliminated by a graphical method, which is worth imitating in other thermal experiments.
+\end{commentary}
+
+\subsection*{Experiment 6.29\quad Thermal radiation and measurement of the Stefan--Boltzmann constant}
+
+(Experimental problem of the First Asian Physics Olympiad.) Measure the Stefan--Boltzmann constant with the apparatus provided.
+
+\noindent\textit{[Available apparatus and materials]}
+
+A stabilised DC power supply, a heater mounted on a ceramic base plate, a digital voltmeter, a digital ammeter, a digital millivoltmeter (for measuring the potential difference of an iron--constantan thermocouple), a table of the potential difference of an iron--constantan thermocouple as a function of temperature, several connecting wires, a candle and matches (for blackening the outer surface of an aluminium cylindrical sleeve).
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Describe the principle of the experiment and the relevant formulas.
+\item Describe briefly the experimental method and steps.
+\item Measure the value of the Stefan--Boltzmann constant $\sigma$.
+\item Analyse the errors and their sources.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.29.}\quad \textbf{1.} According to the Stefan--Boltzmann principle, for a body of surface area $S$ which has reached a steady thermal equilibrium with its surroundings, if its thermodynamic temperature is $T$, the effective power radiated is
+\begin{equation}\tag{1}
+P=e\sigma S(T^{4}-T_0^{4}),
+\end{equation}
+where $\sigma$ is the Stefan--Boltzmann constant, $T_0$ the temperature of the surroundings and $e$ a coefficient. For an ideal black body $e=1$; for an ideal reflector $e=0$.
+
+According to the theory of electromagnetic radiation of solids, a polished aluminium cylinder may be regarded as an ideal reflector: it absorbs no heat and radiates no heat, that is, $e=0$. The same cylinder, after being uniformly coated with a thin layer of lampblack, may be regarded as an ideal black body, which absorbs all the heat incident
+on it, and at the same time it is an ideal radiator, that is, $e=1$. Hence, under ideal conditions, a polished cylinder, when heated, may be regarded as losing heat only through non-radiative processes, such as heat conduction or air convection. A blackened hot cylinder, on the other hand, loses heat at the same time through the process of thermal radiation, and this process obeys the Stefan--Boltzmann principle.
+
+There are three different methods of measuring the Stefan--Boltzmann constant.
+
+(1) \textit{Method of measurement at the same temperature.}
+
+Suppose that the cylinder is heated to the same temperature both when it is blackened and when it is not blackened. The electric energy consumed in maintaining thermal equilibrium must then be equal to the energy lost through radiation, that is,
+\begin{equation*}
+P_r=P_t(T)-P_h(T),
+\end{equation*}
+where $P_r$ is the energy lost by the blackened cylinder through thermal radiation, $P_t(T)$ is the total energy loss of the blackened cylinder at temperature $T$, and $P_h(T)$ is the energy loss of the smooth cylinder at temperature $T$ caused by non-radiative processes. Assuming that the value of $P_h(T)$ is the same in the two processes, we have
+\begin{equation*}
+\sigma=\frac{P_t(T)-P_h(T)}{S(T^{4}-T_0^{4})},
+\end{equation*}
+where $T_0$ is room temperature. Suppose that $P_h(T)$ is approximately proportional to $(T-T_0)$, that is,
+\begin{equation*}
+P_h=k(T-T_0),
+\end{equation*}
+where $k$ is a constant independent of $T$. On the basis of this relation the following two methods of measuring $\sigma$ may be set up (these two methods are less accurate than the first).
+
+(2) \textit{Method of measurement at constant power.}
+
+In this method the power $P$ supplied to heat the ideal black body and the ideal reflector is kept constant, and their temperatures at equilibrium are denoted by $T_b$ and $T_p$ respectively. Then
+\begin{equation*}
+P=k(T_p-T_0),
+\end{equation*}
+\begin{equation*}
+P=k(T_b-T_0)+P_r(T_b).
+\end{equation*}
+Eliminating $k$ gives
+\begin{equation*}
+P_r(T_b)=\frac{(T_p-T_b)P}{T_p-T_0}.
+\end{equation*}
+Substituting this expression into (1) gives
+\begin{equation*}
+\sigma=\frac{(T_p-T_b)P}{S(T_b^{4}-T_0^{4})(T_p-T_0)}.
+\end{equation*}
+
+(3) \textit{Method of measurement at two different temperatures.}
+
+In this method only the blackened cylinder is used, and the measurements are made at two equilibrium temperatures $T_1$ and $T_2$. If the powers required to heat it to $T_1$ and $T_2$ are denoted by $P_1$ and $P_2$ respectively, then
+\begin{equation*}
+P_1=k(T_1-T_0)+\sigma S(T_1^{4}-T_0^{4}),
+\end{equation*}
+\begin{equation*}
+P_2=k(T_2-T_0)+\sigma S(T_2^{4}-T_0^{4}).
+\end{equation*}
+Eliminating $k$ gives
+\begin{equation*}
+\sigma=\frac{(T_2-T_0)P_1-(T_1-T_0)P_2}
+{S\left[(T_1^{4}-T_0^{4})(T_2-T_0)-(T_2^{4}-T_0^{4})(T_1-T_0)\right]}.
+\end{equation*}
+
+\textbf{2. Experimental method}
+
+The experimental arrangement is shown in the figure. The heater is mounted on a ceramic base and connected to the supply and to the meters. During the measurement the heater is completely enclosed in a hollow cylinder (the cylinder is also mounted on the ceramic base). An iron--constantan thermocouple is connected to the cylinder and at the same time to the digital millivoltmeter, and the temperature is obtained from the table. The length of the cylinder is measured with a vernier calliper as \SI{60.00}{mm}; its outer diameter is \SI{12.50}{mm}, and the surface area of the cylinder is $S=\SI{24.80}{cm^2}$. The wall thickness of the cylinder is \SI{1.0}{mm} and the thickness of its base is \SI{3.0}{mm}. The digital millivoltmeter is replaced by a digital multimeter. When the voltage $U$ and the current $I$ of the heater are read, the cylinder and the surroundings are required to have reached thermal equilibrium; reaching thermal equilibrium generally takes \SI{25}{min} to \SI{30}{min}.
+
+\begin{figbox}{6.29}
+\begin{tikzpicture}[scale=0.78]
+% supply and meters
+\draw[thickline,fill=black!4] (-6.00,1.60) rectangle (-4.00,3.40);
+\node[font=\scriptsize] at (-5.00,3.15) {supply};
+\draw[thickline] (-5.45,2.45) circle (0.22);
+\node[font=\scriptsize] at (-5.45,2.45) {$V$};
+\draw[thickline] (-4.55,2.45) circle (0.22);
+\node[font=\scriptsize] at (-4.55,2.45) {$A$};
+% leads to the heater
+\draw[thickline] (-4.00,2.95)--(-3.20,2.95)--(-3.20,1.10)--(0.50,1.10);
+\draw[thickline] (-4.00,2.10)--(-2.90,2.10)--(-2.90,0.95)--(0.50,0.95);
+% ceramic base
+\draw[thickline,fill=black!8] (0.50,0.80)--(3.50,0.80)--(3.50,1.25)--(0.50,1.25)--cycle;
+\draw[pattern=north east lines,pattern color=black!40] (0.50,0.80) rectangle (3.50,0.95);
+\node[below,font=\scriptsize] at (1.10,0.72) {ceramic base};
+% outer cylinder (sleeve)
+\draw[thickline,fill=black!15] (1.15,1.25)--(1.27,1.25)--(1.27,4.75)--(1.15,4.75)--cycle;
+\draw[thickline,fill=black!15] (2.73,1.25)--(2.85,1.25)--(2.85,4.75)--(2.73,4.75)--cycle;
+\draw[thickline] (1.15,4.75)--(2.85,4.75);
+\draw[thickline] (1.15,1.25)--(2.85,1.25);
+\node[above,font=\scriptsize] at (2.00,4.77) {aluminium sleeve};
+% heater
+\draw[thickline,fill=black!25] (1.85,1.25)--(2.15,1.25)--(2.15,4.35)--(1.85,4.35)--cycle;
+\foreach \y in {1.45,1.65,...,4.25}{\draw[thickline] (1.85,\y)--(2.15,\y);}
+\node[right,font=\scriptsize] at (2.92,4.60) {heater};
+% thermocouple and millivoltmeter
+\draw[thickline] (2.85,3.15)--(3.25,3.15)--(3.25,3.65)--(3.75,3.65);
+\draw[thickline] (2.85,2.95)--(3.10,2.95)--(3.10,3.35)--(3.75,3.35);
+\draw[thickline,fill=black!4] (3.75,3.20) rectangle (4.55,3.80);
+\node[font=\scriptsize] at (4.15,3.50) {mV};
+\draw[thickline] (4.05,3.20)--(4.05,2.20);
+\draw[thickline] (4.30,3.20)--(4.30,2.20);
+% ice-water flask
+\draw[thickline] (3.55,0.75)--(3.55,2.20);
+\draw[thickline] (4.55,0.75)--(4.55,2.20);
+\draw[thickline] (3.55,0.75)--(4.55,0.75);
+\fill[black!6] (3.60,0.80) rectangle (4.50,1.90);
+\draw[thickline] (3.60,1.90)--(4.50,1.90);
+\foreach \x/\y in {3.75/1.45,4.10/1.65,4.30/1.20,3.85/1.05}
+  \draw[thickline] (\x,\y)--(\x+0.16,\y+0.10);
+\node[below,font=\scriptsize] at (4.25,0.55) {ice--water mixture};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{3.} The experiment is carried out at a room temperature of \SI{298.3}{K}. The experimental data are given in Table 1 and the experimental results in Table 2. The table of the potential difference of the iron--constantan thermocouple as a function of temperature is omitted.
+
+\begin{center}
+\textbf{Table 6.29-1}\\[3pt]
+\begin{tabular}{ccccc}
+\toprule
+Data number & Nature of the cylinder surface & $U/\mathrm{V}$ & $I/\mathrm{A}$ & $T/\mathrm{K}$\\
+\midrule
+A & Polished & 9.80 & 1.50 & 485.5\\
+B & Blackened & 9.80 & 1.50 & 433.5\\
+C & Blackened & 11.90 & 1.82 & 485.5\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Table 6.29-2}\quad Values of $\sigma_{\exp}$ obtained by the three different methods\\[3pt]
+\begin{tabular}{cccc}
+\toprule
+Method used & Data used & $\sigma_{\exp}/\mathrm{W\cdot m^{-2}\cdot K^{-4}}$ & $\sigma_{\exp}/\sigma$\\
+\midrule
+$T$ unchanged & A $+$ C & $5.945\times10^{-8}$ & 1.05\\
+$P$ unchanged & A $+$ B & $6.087\times10^{-8}$ & 1.07\\
+Different temperatures & B $+$ C & $5.386\times10^{-8}$ & 0.95\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent In Table 2, $\sigma_{\exp}$ is the measured experimental value, and $\sigma=5.669\times10^{-8}\ \mathrm{W\cdot m^{-2}\cdot K^{-4}}$ is the accepted value.
+
+
+
+The main factors affecting the accuracy of the experimental results are as follows.
+
+(1) The cylinder with a smooth surface is not an ideal reflector, and when blackened it is not an ideal black body either. The absorption coefficient of the former is greater than 0, and that of the latter is less than 1; both make the value of $\sigma$ smaller.
+
+(2) The heat lost through the ceramic base cannot be calculated; neglecting this loss will cause the measured value of $\sigma$ to deviate from the true value.
+
+(3) Neglecting the resistance of the connecting wires makes the measured value of $\sigma$ smaller.
+
+(4) The assumption that the smooth cylinder and the blackened cylinder have the same non-radiative energy loss is only an approximation. For example, when the difference in heat conduction between the lampblack and the aluminium is neglected, the value of $\sigma$ is made smaller. The energy lost through the ceramic base cannot be controlled, and this also makes the non-radiative energy loss uncorrected, thus affecting the experimental results.

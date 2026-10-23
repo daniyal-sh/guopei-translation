@@ -1,0 +1,507 @@
+\subsection*{Experiment 7.18 \quad Investigation of an electromagnetic black box with DC meters}
+
+Inside a black box with three terminals, 1, 2 and 3, three electronic components of different kinds are connected. Each of them may be a battery, a resistor greater than $100\,\Omega$, a capacitor greater than $1\,\mu\mathrm{F}$, or a diode, as shown in the figure.
+
+\textbf{[Apparatus and materials available]}
+
+The DC voltage range $0$--$6$\,V (internal resistance $120\,\mathrm{k}\Omega$) and the DC current range $0$--$30$\,mA (internal resistance $10\,\Omega$) of a multimeter, one DC stabilised power supply, one black box, one resistance box, one stopwatch, and a number of connecting wires.
+
+\textbf{[Requirements]}
+
+(1) If there is a battery in the box, determine its electromotive force and draw the measuring circuit.
+
+(2) If there is a resistor in the box, determine its resistance and draw the measuring circuit.
+
+(3) If there is a capacitor in the box, determine its capacitance and draw the measuring circuit.
+
+(4) If there is a diode in the box, mark its polarity and measure its forward threshold voltage; the forward resistance of the diode is comparatively small and may be neglected.
+
+(5) Draw the distribution of the relevant electronic components inside the box and indicate their polarities.
+
+\begin{figbox}{7.18(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (1.4,0.2) rectangle (5.4,4.0);
+\node at (3.4,3.30) {\small black box};
+\foreach \y/\lab in {3.20/1, 2.10/2, 1.00/3} {
+  \draw (1.4,\y) -- (0.55,\y);
+  \fill (0.55,\y) circle (0.06);
+  \node[left] at (0.42,\y) {\small \lab};
+}
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{Solution 7.18}\quad \textbf{1.} The voltmeter was used to measure each pair of terminals in order to check whether a battery exists; the result of the check was that none exists.
+
+\textbf{2.} The internal structure is determined and drawn; the circuit to be checked is shown in Fig.~7.18(b).
+
+(1) A unidirectional continuous conduction appears between terminals 1 and 3, which shows that inside there is a diode in series with a resistor.
+
+(2) A pulsed unidirectional conduction appears between terminals 1 and 2, which shows that the diode is at terminal 1.
+
+(3) A pulsed bidirectional conduction appears between terminals 2 and 3, which shows that the capacitor is at terminal 2. (Note: before the test the capacitor must first be short-circuited with a wire so that it is completely discharged, and only then may the test be made.)
+
+\begin{figbox}{7.18(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (1.4,0.2) rectangle (6.6,4.6);
+% terminal 1 -- diode -- node A -- resistor -- terminal 3
+\draw (0.55,3.60) -- (1.40,3.60);
+\draw (1.40,3.60) -- (2.55,3.60);
+\draw[fill=white] (2.55,3.35) -- (2.55,3.85) -- (3.05,3.60) -- cycle;
+\draw (3.05,3.35) -- (3.05,3.85);
+\node[above] at (2.80,3.95) {\small $D$};
+\draw (3.05,3.60) -- (3.55,3.60);
+\fill (3.55,3.60) circle (0.05);
+\draw (3.55,3.60) -- (4.05,3.60);
+\draw (4.05,3.44) rectangle (5.25,3.76);
+\node[above] at (4.65,3.80) {\small $200\,\Omega$};
+\draw (5.25,3.60) -- (6.10,3.60);
+\draw (6.10,3.60) -- (6.10,1.10) -- (1.40,1.10);
+% terminal 2 -- capacitor -- node A
+\draw (0.55,2.30) -- (2.10,2.30);
+\draw (2.10,2.52) -- (2.10,2.08);
+\draw (2.32,2.52) -- (2.32,2.08);
+\node[above] at (2.21,2.58) {\small $235\,\mu\mathrm{F}$};
+\draw (2.32,2.30) -- (3.55,2.30) -- (3.55,3.60);
+\foreach \y/\lab in {3.60/1, 2.30/2, 1.10/3} {
+  \fill (0.55,\y) circle (0.06);
+  \node[left] at (0.42,\y) {\small \lab};
+}
+\end{tikzpicture}
+\end{figbox}
+
+From the above tests and judgements it is known that the three different components are a diode, a capacitor and a resistor, and their connection diagram is shown in Fig.~7.18(b).
+
+\textbf{3.} The resistance and the diode threshold voltage are measured by the volt--ampere method. The experimental circuit is shown in Fig.~7.18(c). The volt--ampere characteristic curve ($I$--$U$ curve) of the series combination of the diode and the resistor to be measured is measured; by extrapolating the current $I$ to $I=0$, the threshold voltage of the diode, $U_0$, is obtained (Fig.~7.18(d)). At the same time the slope of the straight portion of the curve gives the resistance of the resistor in the box, $R=\Delta U/\Delta I=200\,\Omega$.
+
+\begin{figbox}{7.18(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% dashed box
+\draw[dashed] (0.3,2.0) rectangle (5.6,4.6);
+\node at (4.72,4.32) {\small black box};
+% terminal 1
+\fill (0.3,3.8) circle (0.05); \node[left] at (0.16,3.90) {\small 1};
+% diode
+\draw (0.3,3.8) -- (0.65,3.8);
+\draw[fill=white] (0.65,3.64) -- (0.65,3.96) -- (1.00,3.8) -- cycle;
+\draw (1.00,3.64) -- (1.00,3.96);
+\draw (1.00,3.8) -- (1.50,3.8);
+\node[above] at (0.82,4.02) {\small $D$};
+% node A
+\fill (1.50,3.8) circle (0.05);
+% resistor
+\draw (1.50,3.8) -- (2.10,3.8);
+\draw (2.10,3.62) rectangle (3.10,3.98);
+\node[above] at (2.60,4.02) {\small $200\,\Omega$};
+\draw (3.10,3.8) -- (4.90,3.8);
+\draw (4.90,3.8) -- (4.90,3.2) -- (5.6,3.2);
+\fill (5.6,3.2) circle (0.05); \node[right] at (5.74,3.30) {\small 3};
+% capacitor
+\draw (1.50,3.8) -- (1.50,3.15);
+\draw (1.22,3.15) -- (1.78,3.15);
+\draw (1.22,2.95) -- (1.78,2.95);
+\draw (1.50,2.95) -- (1.50,2.0);
+\node[right] at (1.84,3.05) {\small $235\,\mu\mathrm{F}$};
+\fill (1.50,2.0) circle (0.05); \node[left] at (1.34,2.06) {\small 2};
+% external circuit: left lead
+\draw (0.3,3.8) -- (0.0,3.8) -- (0.0,0.4);
+% voltmeter branch across 1 and 3
+\draw (0.0,1.2) -- (2.45,1.2);
+\draw (2.93,1.2) circle (0.24); \node at (2.93,1.20) {$V$};
+\draw (3.17,1.2) -- (5.9,1.2);
+\draw (5.9,1.2) -- (5.9,3.2) -- (5.6,3.2);
+% bottom branch: source, switch, ammeter
+\draw (0.0,0.4) -- (1.45,0.4);
+\draw (1.45,0.10) -- (1.45,0.70);
+\draw (1.62,0.22) -- (1.62,0.58);
+\draw (1.62,0.4) -- (2.45,0.4);
+\draw (2.45,0.4) -- (2.75,0.62);
+\draw (2.85,0.4) -- (3.46,0.4);
+\draw (3.94,0.4) circle (0.24); \node at (3.94,0.40) {$A$};
+\draw (4.18,0.4) -- (5.9,0.4);
+\node[below] at (1.53,-0.02) {$\varepsilon$};
+\node[above] at (2.60,0.66) {$K$};
+\node[below] at (3.94,0.08) {\small $0$--$30\,\mathrm{mA}$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.18(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (4.1,0) node[below] {$U$};
+\draw[->] (0,0) -- (0,4.1) node[left] {$I$};
+% characteristic curve
+\draw[line width=0.8pt] plot[smooth,tension=0.75] coordinates {
+(0,0.02) (0.4,0.04) (0.8,0.10) (1.1,0.20) (1.4,0.38) (1.6,0.62) (1.8,0.96)
+(2.2,1.60) (2.6,2.24) (3.0,2.88) (3.4,3.52)};
+% extrapolation of the straight portion
+\draw[dashed] (1.2,0) -- (1.72,0.83);
+\node[below] at (1.2,-0.06) {\small $U_0$};
+% increments
+\draw[dashed] (2.6,2.24) -- (3.0,2.24) -- (3.0,2.88);
+\node[below] at (2.80,2.20) {\small $\Delta U$};
+\node[right] at (3.04,2.56) {\small $\Delta I$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{4. Measurement of the capacitance by the discharge method}
+
+The wiring is shown in Fig.~7.18(e)(1) or (2). By measuring the discharge time constant and knowing the resistance $R'$, the value of the unknown capacitance $C$ is obtained.
+
+In Fig.~7.18(e)(1), $R'=120.2\,\mathrm{k}\Omega$; in Fig.~7.18(e)(2), $R'=99.2\,\mathrm{k}\Omega$. These are the total resistances of the discharge loop: in (1) the $120\,\mathrm{k}\Omega$ voltmeter in series with the $200\,\Omega$ resistor, and in (2) the $99\,\mathrm{k}\Omega$ resistance box in series with the $200\,\Omega$ resistor.
+
+\begin{figbox}{7.18(e)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% ---------- (1) ----------
+\begin{scope}[scale=0.85]
+\draw[dashed] (0.3,2.0) rectangle (5.3,4.6);
+\node at (4.40,4.32) {\small black box};
+\fill (0.3,3.8) circle (0.05); \node[left] at (0.14,3.92) {\small 1};
+% diode
+\draw (0.3,3.8) -- (0.62,3.8);
+\draw[fill=white] (0.62,3.64) -- (0.62,3.96) -- (0.97,3.8) -- cycle;
+\draw (0.97,3.64) -- (0.97,3.96);
+\draw (0.97,3.8) -- (1.45,3.8);
+\node[above] at (0.79,4.02) {\small $D$};
+\fill (1.45,3.8) circle (0.05);
+% resistor
+\draw (1.45,3.8) -- (2.05,3.8);
+\draw (2.05,3.62) rectangle (3.05,3.98);
+\node[above] at (2.55,4.02) {\small $200\,\Omega$};
+\draw (3.05,3.8) -- (4.60,3.8);
+\draw (4.60,3.8) -- (4.60,3.3) -- (5.3,3.3);
+\fill (5.3,3.3) circle (0.05); \node[right] at (5.42,3.42) {\small 3};
+% capacitor
+\draw (1.45,3.8) -- (1.45,3.15);
+\draw (1.17,3.15) -- (1.73,3.15);
+\draw (1.17,2.95) -- (1.73,2.95);
+\draw (1.45,2.95) -- (1.45,2.0);
+\node[right] at (1.79,3.05) {\small $235\,\mu\mathrm{F}$};
+\fill (1.45,2.0) circle (0.05); \node[left] at (1.29,2.06) {\small 2};
+% external: source and switch between 1 and 3
+\draw (0.3,3.8) -- (0.0,3.8) -- (0.0,0.95);
+\draw (0.0,0.95) -- (1.45,0.95);
+\draw (1.45,0.65) -- (1.45,1.25);
+\draw (1.62,0.77) -- (1.62,1.13);
+\draw (1.62,0.95) -- (2.45,0.95);
+\draw (2.45,0.95) -- (2.75,1.17);
+\draw (2.85,0.95) -- (5.6,0.95);
+\node[below] at (1.53,0.52) {$\varepsilon$};
+\node[above] at (2.60,1.21) {$K$};
+\draw (5.6,0.95) -- (5.6,3.3) -- (5.3,3.3);
+% voltmeter between 2 and 3
+\draw (1.45,2.0) -- (1.45,1.55) -- (2.75,1.55);
+\draw (3.23,1.55) circle (0.24); \node at (3.23,1.55) {$V$};
+\draw (3.47,1.55) -- (5.6,1.55);
+\node[above] at (4.35,1.78) {\small $6\,\mathrm{V}/120\,\mathrm{k}\Omega$};
+\node[below] at (2.9,-0.12) {\small (1)};
+\end{scope}
+% ---------- (2) ----------
+\begin{scope}[xshift=7.3cm,scale=0.85]
+\draw[dashed] (0.3,2.0) rectangle (5.3,4.6);
+\node at (4.40,4.32) {\small black box};
+\fill (0.3,3.8) circle (0.05); \node[left] at (0.14,3.92) {\small 1};
+\draw (0.3,3.8) -- (0.62,3.8);
+\draw[fill=white] (0.62,3.64) -- (0.62,3.96) -- (0.97,3.8) -- cycle;
+\draw (0.97,3.64) -- (0.97,3.96);
+\draw (0.97,3.8) -- (1.45,3.8);
+\node[above] at (0.79,4.02) {\small $D$};
+\fill (1.45,3.8) circle (0.05);
+\draw (1.45,3.8) -- (2.05,3.8);
+\draw (2.05,3.62) rectangle (3.05,3.98);
+\node[above] at (2.55,4.02) {\small $200\,\Omega$};
+\draw (3.05,3.8) -- (4.60,3.8);
+\draw (4.60,3.8) -- (4.60,3.3) -- (5.3,3.3);
+\fill (5.3,3.3) circle (0.05); \node[right] at (5.42,3.42) {\small 3};
+\draw (1.45,3.8) -- (1.45,3.15);
+\draw (1.17,3.15) -- (1.73,3.15);
+\draw (1.17,2.95) -- (1.73,2.95);
+\draw (1.45,2.95) -- (1.45,2.0);
+\node[right] at (1.79,3.05) {\small $235\,\mu\mathrm{F}$};
+\fill (1.45,2.0) circle (0.05); \node[left] at (1.29,2.06) {\small 2};
+\draw (0.3,3.8) -- (0.0,3.8) -- (0.0,0.95);
+\draw (0.0,0.95) -- (1.45,0.95);
+\draw (1.45,0.65) -- (1.45,1.25);
+\draw (1.62,0.77) -- (1.62,1.13);
+\draw (1.62,0.95) -- (2.45,0.95);
+\draw (2.45,0.95) -- (2.75,1.17);
+\draw (2.85,0.95) -- (5.6,0.95);
+\node[below] at (1.53,0.52) {$\varepsilon$};
+\node[above] at (2.60,1.21) {$K$};
+\draw (5.6,0.95) -- (5.6,3.3) -- (5.3,3.3);
+% resistance box and ammeter between 2 and 3
+\draw (1.45,2.0) -- (1.45,1.55) -- (2.00,1.55);
+\draw (2.00,1.39) rectangle (3.00,1.71);
+\node[above] at (2.50,1.80) {\small $99\,\mathrm{k}\Omega$};
+\draw (3.00,1.55) -- (3.32,1.55);
+\draw (3.80,1.55) circle (0.24); \node at (3.80,1.55) {$A$};
+\draw (4.04,1.55) -- (5.6,1.55);
+\node[below] at (3.80,1.24) {\small $0$--$30\,\mathrm{mA}$};
+\node[below] at (2.9,-0.12) {\small (2)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+The capacitor $C=235\,\mu\mathrm{F}$ in Fig.~7.18(b) is a non-polar capacitor; it is formed by connecting two $470\,\mu\mathrm{F}$ electrolytic capacitors in series with opposite polarities.
+
+\begin{commentary}
+The use of a voltmeter (or an ammeter), a source, a resistance box and similar instruments to detect the components of a black box and their parameters is often required in scientific research. To judge the components and their parameters correctly one must have a correct understanding of the properties of the basic components and of electric circuits, and be familiar with the properties of basic electrical circuits; the black-box exploration experiment is therefore a comprehensive electrical experiment.
+\end{commentary}
+
+\subsection*{Experiment 7.19 \quad Investigation of an electromagnetic black box with an oscilloscope, experiment I}
+
+The upper panel of a black box carries 8 terminals, to which four components are connected: an audio-frequency transformer, an inductor, a diode and a capacitor. Determine experimentally which terminals each of these four components is connected to, and measure the relevant parameters.
+
+\textbf{[Apparatus and materials available]}
+
+A black box (containing an audio-frequency transformer, an inductor, a diode and a capacitor; the input and output terminals of every component are all brought out to the panel of the black box, and the connections between the components do not form a closed loop), a dual-trace oscilloscope, a signal generator, a resistance box, a number of connecting wires, and one sheet of graph paper.
+
+\textbf{[Requirements]}
+
+(1) Determine to which terminals the input and output ends of the transformer are connected, and measure the ratio of the number of turns of the secondary winding to that of the primary winding (assume that the winding with fewer turns is the primary).
+
+(2) Determine to which numbered terminals the anode and the cathode of the diode are connected.
+
+(3) Determine which two terminals the capacitor is connected to, and measure its capacitance.
+
+(4) Determine which two terminals the inductor is connected to, whether it is an air-core inductor or an inductor with a magnetic medium, and measure its inductance and loss resistance.
+
+(5) Draw the overall wiring diagram of the components inside the black box.
+
+(6) If the parameter characterising the value of some component varies appreciably with another physical quantity, measure the relation between them and plot the curve of the variation on graph paper.
+
+\textbf{Solution 7.19}\quad The terminals of the black box are arranged in two rows: the upper row is numbered 1, 2, 3, 4 from left to right, and the lower row 5, 6, 7, 8 from left to right, eight terminals in all.
+
+\textbf{1. Determination of the components between the terminals}
+
+The experimental circuit is shown in Fig.~7.19(a). In the figure, $i$ and $j$ inside the dashed frame denote terminals on the panel of the black box. A sine-wave signal generator is used as the voltage input, and the resistance box is given a suitable value according to the circumstances. Channel CH1 of the dual-trace oscilloscope measures the voltage across the resistance box, and CH2 monitors the output voltage of the signal generator; when the output frequency of the signal generator is adjusted, the output voltage is kept constant. In Fig.~7.19(a) the terminal $j$ on the panel of the black box corresponds to the red output terminal of the signal generator.
+
+Each time, $i$ and $j$ are connected to different terminals, and the voltage across the resistance box, that is the waveform displayed on the CH1 channel of the oscilloscope, is observed. The results are collected in Table~7.19-1 (the pairs of terminals $i$, $j$ for which the voltage across the resistance box is zero are not listed; this means that the terminals $i$ and $j$ are open-circuited).
+
+\begin{figbox}{7.19(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% common ground rail
+\draw (0.9,0) -- (8.3,0);
+% signal generator
+\draw (2.2,4.6) circle (0.32);
+\draw (1.97,4.6) sin (2.09,4.73) cos (2.21,4.6) sin (2.33,4.47) cos (2.45,4.6);
+% leads
+\draw (1.88,4.6) -- (1.2,4.6) -- (1.2,0);
+\draw (2.52,4.6) -- (7.9,4.6) -- (7.9,2.6) -- (7.0,2.6);
+\node[above] at (1.42,4.64) {\small black};
+\node[above] at (2.92,4.64) {\small red};
+% dashed panel
+\draw[dashed] (5.45,1.8) rectangle (7.25,3.2);
+\node[below] at (6.35,1.76) {\small black box};
+% terminals i and j
+\fill (5.75,2.6) circle (0.05); \node[below left] at (5.73,2.56) {\small $i$};
+\fill (7.0,2.6) circle (0.05); \node[below right] at (7.02,2.56) {\small $j$};
+% resistance box
+\draw (3.9,2.6) -- (5.75,2.6);
+\draw (3.9,2.44) rectangle (5.05,2.76);
+\node[above] at (4.47,2.80) {\small $R$};
+\draw (3.0,2.6) -- (3.9,2.6);
+\draw (3.0,2.6) -- (3.0,1.15);
+% CH1 probe
+\draw (2.6,0.55) rectangle (3.4,1.15);
+\node at (3.0,0.85) {\small CH1};
+\draw (3.0,0.55) -- (3.0,0);
+% CH2 probe
+\draw (7.5,0.55) rectangle (8.3,1.15);
+\node at (7.9,0.85) {\small CH2};
+\draw (7.9,1.15) -- (7.9,2.6);
+% earth symbol
+\draw (0.9,0) -- (0.9,-0.10);
+\draw (0.74,-0.10) -- (1.06,-0.10);
+\draw (0.81,-0.19) -- (0.99,-0.19);
+\draw (0.87,-0.28) -- (0.93,-0.28);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.19-1}\\[2pt]
+\begin{tabular}{ccccc}
+\toprule
+$j$ & $i$ & Change of $U_R$ as $f$ increases & Component between $i$, $j$ & Remarks\\
+\midrule
+2 & 3 & unchanged & diode & see Fig.~7.19(b)\\
+4 & 8 & decreases & inductor & \\
+7 & 8 & increases & capacitor & \\
+1 & 5 & decreases & inductor & \\
+2 & 6 & decreases & inductor & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Using the oscilloscope waveform shown in Fig.~7.19(b): when terminal 2 is connected to the red terminal of the signal generator, the lower half of the sine wave is clipped flat. Hence between 2 and 3 there is a diode, with terminal 2 connected to the anode and terminal 3 to the cathode.
+
+\begin{figbox}{7.19(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw (-0.35,0) -- (4.30,0);
+\draw[line width=0.8pt] plot[domain=0:12.57,samples=300] ({\x*0.30},{1.15*max(sin(\x r),0)});
+\end{tikzpicture}
+\end{figbox}
+
+When the signal generator is connected to terminals 1, 5 and the oscilloscope to 2, 6, it is found that the voltage across 2, 6 varies markedly with the voltage across 1, 5; conversely, when a signal is fed in at 2, 6, a signal is likewise observed at 1, 5. Hence 1, 5 and 2, 6 form a transformer.
+
+At this point the positions of the components inside the black box can be drawn as in Fig.~7.19(c).
+
+\begin{figbox}{7.19(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% panel terminals
+\foreach \x/\lab in {0.6/1, 2.2/2, 3.6/3, 5.2/4} {
+  \fill (\x,4.6) circle (0.06);
+  \node[above] at (\x,4.66) {\small \lab};
+}
+\foreach \x/\lab in {0.6/5, 2.2/6, 3.6/7, 5.2/8} {
+  \fill (\x,0.4) circle (0.06);
+  \node[below] at (\x,0.34) {\small \lab};
+}
+% transformer: primary between 1 and 5, secondary between 2 and 6
+\draw (0.6,4.6) -- (0.6,3.7) -- (0.9,3.7);
+\draw (0.9,1.3) -- (0.6,1.3) -- (0.6,0.4);
+\draw (2.2,4.6) -- (2.2,4.0) -- (1.5,4.0) -- (1.5,3.7);
+\draw (1.5,1.3) -- (2.2,1.3) -- (2.2,0.4);
+\foreach \y in {3.70,3.40,3.10,2.80,2.50,2.20,1.90,1.60} {
+  \draw (0.9,\y) arc[start angle=90,end angle=270,radius=0.15];
+}
+\foreach \y in {1.30,1.45,...,3.55} {
+  \draw (1.5,\y) arc[start angle=-90,end angle=90,radius=0.075];
+}
+\draw (1.14,1.45) -- (1.14,3.55);
+\draw (1.26,1.45) -- (1.26,3.55);
+% diode between 2 and 3
+\draw (2.2,4.6) -- (2.6,4.6);
+\draw[fill=white] (2.6,4.46) -- (2.6,4.74) -- (3.0,4.6) -- cycle;
+\draw (3.0,4.46) -- (3.0,4.74);
+\draw (3.0,4.6) -- (3.6,4.6);
+% inductor between 4 and 8
+\draw (5.2,4.6) -- (5.2,3.68);
+\foreach \y in {2.12,2.36,2.60,2.84,3.08,3.32,3.56} {
+  \draw (5.2,\y) arc[start angle=-90,end angle=90,radius=0.12];
+}
+\draw (5.2,2.0) -- (5.2,0.4);
+% capacitor between 7 and 8
+\draw (3.6,0.4) -- (4.1,0.4) -- (4.1,0.65);
+\draw (4.1,0.65) -- (4.1,1.15);
+\draw (4.3,0.65) -- (4.3,1.15);
+\draw (4.3,0.9) -- (5.2,0.9) -- (5.2,0.4);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2. Measurement of the transformer parameters}
+
+The two ends of the signal generator are connected to 1, 5, the input CH1 to 1, 5 and the input CH2 to 2, 6; the data obtained are shown in Table~7.19-2.
+
+\begin{center}
+{\small Table 7.19-2}\\[2pt]
+\begin{tabular}{lccc}
+\toprule
+Input & Peak-to-peak value/cm & Voltage range/(V\,cm$^{-1}$) & Voltage $U$/V\\
+\midrule
+CH1 & 6.00 & 1 & 6.00\\
+CH2 & 6.00 & 2 & 12.00\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In Table~7.19-2, $U$ is the peak-to-peak value. The measurement results show that 1, 5 are the primary of the transformer and 2, 6 are the secondary. The fine-adjustment knobs of the voltage ranges of CH1 and CH2 were both turned to maximum.
+\[
+\text{turns ratio}\quad n=\dfrac{U_{\mathrm{CH2}}}{U_{\mathrm{CH1}}}=\dfrac{12.00}{6.00}=2.00 .
+\]
+
+\textbf{3. Measurement of the capacitance parameters}
+
+Assume that the loss resistance of the capacitor is negligible. Use the circuit of Fig.~7.19(a), with $i$, $j$ connected to 7, 8; CH1 is set to the 1\,V/cm range and CH2 to the 2\,V/cm range.
+
+Take a certain value of the resistance box, and adjust the output frequency and the output voltage of the signal generator so that both the CH1 and the CH2 waveforms reach full scale on the screen; then
+\[
+\dfrac{U_{\mathrm{CH1}}}{U_{\mathrm{CH2}}}=\cos 60.0\degree=0.500,
+\]
+that is,
+\[
+\dfrac{R}{1/(\omega C)}=\tan 30.0\degree,
+\]
+and hence $C=\frac{1}{2\sqrt{3}\,\pi f R}$. The measured data are shown in Table~7.19-3. The vector sum of $U_R$ and $U_C$ is shown in Fig.~7.19(d).
+
+\begin{figbox}{7.19(d)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\coordinate (O) at (1.0,4.3);
+\coordinate (B) at (3.2,4.3);
+\coordinate (C) at (1.0,0.49);
+\coordinate (D) at (3.2,0.49);
+\draw[->,line width=0.7pt] (O) -- (B);
+\draw[->,line width=0.7pt] (O) -- (C);
+\draw[->,line width=0.7pt] (O) -- (D);
+\draw[dashed] (B) -- (D);
+\draw[dashed] (C) -- (D);
+\node[above] at (1.55,4.32) {\small $U_R$};
+\node[above] at (3.10,4.32) {\small $U_{\mathrm{CH1}}$};
+\node[left] at (0.94,2.40) {\small $U_C$};
+\node[below right] at (3.24,0.47) {\small $U_{\mathrm{CH2}}$};
+\draw (1.62,4.3) arc[start angle=0,end angle=-60,radius=0.62];
+\node at (1.86,3.94) {\small $60\degree$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.19-3}\\[2pt]
+\begin{tabular}{ccc}
+\toprule
+$R/\Omega$ & $f/\mathrm{kHz}$ & $C/\mu\mathrm{F}$\\
+\midrule
+500.0 & 0.855 & 0.215\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Hence $C=0.215\,\mu\mathrm{F}$.
+
+\textbf{4. Measurement of the inductance parameters}
+
+The experimental circuit is shown in Fig.~7.19(a), with $i$, $j$ connected to terminals 4, 7. The inductance is measured by RLC series resonance: $L=\frac{1}{4\pi^2 f_0^2 C}$, where $f_0$ is the resonant frequency. Let $U_R$ and $U_0$ denote the voltage across the resistance $R$ and the output voltage of the signal generator; then at resonance the loss resistance of the inductor is $R_L=\left(\frac{U_0}{U_R}-1\right)R$. The experimental data are shown in Table~7.19-4.
+
+\begin{center}
+{\small Table 7.19-4}\\[2pt]
+\begin{tabular}{ccccccc}
+\toprule
+$R/\Omega$ & $U_R/\mathrm{V}$ & $U_0/\mathrm{V}$ & $I/\mathrm{mA}$ & $f_0/\mathrm{kHz}$ & $L/\mathrm{mH}$ & $R_L/\Omega$\\
+\midrule
+100.0 & 12.0 & 16.0 & 42.4 & 1.995 & 29.6 & 33.3\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Changing the output voltage of the signal generator gives Table~7.19-5:
+\[
+I_{\text{eff}}=\frac{1}{2\sqrt{2}}I_{\text{p--p}}=\frac{1}{2\sqrt{2}}\cdot\frac{U_R}{R}.
+\]
+
+\begin{center}
+{\small Table 7.19-5}\\[2pt]
+\begin{tabular}{ccccc}
+\toprule
+$R/\Omega$ & $U_R/\mathrm{V}$ (peak-to-peak) & $I_{\text{eff}}/\mathrm{mA}$ & $f_0/\mathrm{kHz}$ & $L/\mathrm{mH}$\\
+\midrule
+100.0 & 4.00 & 14.1 & 2.038 & 28.3\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+From Tables 7.19-4 and 7.19-5 it can be seen that the inductance $L$ varies with the current $I$; therefore this inductor is not an air-core inductor, and there is ferromagnetic material inside the inductor. The data for the variation of the inductance $L$ with the current $I$ are as follows:
+
+\begin{center}
+{\small Table 7.19-6}\\[2pt]
+\begin{tabular}{lcccccc}
+\toprule
+$U_R/\mathrm{V}$ & 12.0 & 10.0 & 8.00 & 6.00 & 4.00 & 2.00\\
+$I_{\text{eff}}/\mathrm{mA}$ & 42.4 & 35.3 & 28.3 & 21.2 & 14.1 & 7.07\\
+$f_0/\mathrm{kHz}$ & 1.995 & 1.980 & 1.982 & 2.000 & 2.038 & 2.110\\
+$L/\mathrm{mH}$ & 29.6 & 30.1 & 30.0 & 29.5 & 28.3 & 26.5\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The graph of Table~7.19-6 is omitted.
+
+\begin{commentary}
+This experimental problem has several important features. (1) Analysing the nature and the quality of components by observing with an oscilloscope the waveforms of the components or of parts of a circuit is very useful in scientific experiments, and this problem is closely related to practice. (2) The experiment is comprehensive: although there are many methods of measuring capacitance and inductance, within a limited time one must choose the method that is accurate, simple and quick, and this also reflects the depth of the student's knowledge and the strength of his practical ability.
+\end{commentary}

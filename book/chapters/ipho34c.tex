@@ -1,0 +1,889 @@
+\begin{figbox}{34.8}
+\begin{tikzpicture}[x=0.78cm,y=0.78cm,line join=round]
+  % depth direction
+  \def\wx{0.50}\def\wy{0.30}
+  % ---- left polarizer ----
+  \fill[gray!12] (-5.05,1.03) -- (-4.15,1.57) -- (-4.15,-1.03) -- (-5.05,-1.57) -- cycle;
+  \fill[pattern=north east lines,pattern color=black!55]
+     (-5.05,1.03) -- (-4.15,1.57) -- (-4.15,-1.03) -- (-5.05,-1.57) -- cycle;
+  \draw[thickline] (-5.05,1.03) -- (-4.15,1.57) -- (-4.15,-1.03) -- (-5.05,-1.57) -- cycle;
+  % ---- left PI-coated plate ----
+  \fill[gray!55] (-4.12,-1.06) rectangle (-4.02,1.06);
+  \draw[thickline] (-4.12,-1.06) -- (-4.12,1.06);
+  \draw[thickline] (-4.02,-1.06) -- (-4.02,1.06);
+  % ---- LC molecules (twist from vertical to into-the-page) ----
+  \foreach \x/\a in {-3.6/0,-2.75/11,-1.9/23,-1.05/34,-0.2/45,0.65/56,1.5/68,2.35/79,3.2/90}{
+    \pgfmathsetmacro{\dx}{0.34*sin(\a)}
+    \pgfmathsetmacro{\dy}{0.58*cos(\a)+0.18*sin(\a)}
+    \draw[thickline] (\x-\dx,-\dy) -- (\x+\dx,\dy);
+  }
+  % ---- right PI-coated plate ----
+  \fill[gray!55] (3.82,-1.06) rectangle (3.92,1.06);
+  \draw[thickline] (3.82,-1.06) -- (3.82,1.06);
+  \draw[thickline] (3.92,-1.06) -- (3.92,1.06);
+  % ---- right analyser ----
+  \fill[gray!12] (4.15,1.57) -- (5.05,1.03) -- (5.05,-1.57) -- (4.15,-1.03) -- cycle;
+  \fill[pattern=north east lines,pattern color=black!55]
+     (4.15,1.57) -- (5.05,1.03) -- (5.05,-1.57) -- (4.15,-1.03) -- cycle;
+  \draw[thickline] (4.15,1.57) -- (5.05,1.03) -- (5.05,-1.57) -- (4.15,-1.03) -- cycle;
+  % ---- labels ----
+  \node[above,font=\small] at (-2.0,1.85) {LC molecules};
+  \node[below,font=\small] at (-5.35,-1.70) {polarizer};
+  \node[below,font=\small] at (-3.45,-1.62) {PI film};
+  \node[below,font=\small] at (3.30,-1.62) {PI film};
+  \node[below,font=\small] at (4.95,-1.70) {analyser};
+  % ---- propagation direction ----
+  \draw[force] (-6.1,-2.75) -- (4.3,-2.75);
+  \node[above,font=\small] at (-0.9,-2.55) {direction of light propagation};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.8 shows schematically the twisted alignment of the liquid-crystal molecules in a
+$90\degree$ TN-LC cell: the light passes successively through the polarizer, the two PI
+alignment films and the analyser in the direction indicated.
+
+\begin{figbox}{34.9}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm,line join=round]
+  % box (cell) in perspective
+  \draw[thickline] (0,0) rectangle (3.6,2.2);
+  \draw[thickline] (0,2.2) -- (0.9,2.75) -- (4.5,2.75) -- (3.6,2.2);
+  \draw[thickline] (3.6,0) -- (4.5,0.55) -- (4.5,2.75);
+  \draw[dashedline] (0,0) -- (0.9,0.55) -- (4.5,0.55);
+  \draw[dashedline] (0.9,0.55) -- (0.9,2.75);
+  % electric field inside
+  \foreach \y in {0.55,1.10,1.65}{
+    \draw[force] (0.65,\y) -- (2.95,\y);
+  }
+  \node[above,font=\small] at (1.8,1.62) {$E$};
+  % z axis
+  \draw[axis] (4.95,1.0) -- (4.95,2.6) node[right,font=\small] {$z$};
+  % polarizer
+  \draw[thickline] (-0.12,0.0) -- (-0.12,2.2);
+  \draw[thickline] (-0.32,0.0) -- (-0.32,2.2);
+  \node[below,font=\small] at (-0.22,-0.15) {polarizer};
+  % analyser
+  \draw[thickline] (3.85,0.42) -- (3.85,2.62);
+  \draw[thickline] (4.05,0.42) -- (4.05,2.62);
+  \node[below,font=\small] at (3.95,-0.05) {analyser};
+  % top label
+  \node[above,font=\small] at (2.25,2.9) {$90\degree$ TN-LC};
+  % NB mode arrow
+  \draw[force] (-1.55,1.1) -- (-0.45,1.1);
+  \node[left,font=\small] at (-1.6,1.1) {NB mode};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.9: the NB-mode setting of the $90\degree$ TN cell.
+
+\paragraph{II. Experimental procedure}
+
+Set the ``$90\degree$ TN-LC'' cell to the ``normally black'' mode and place it between two
+polarizers whose polarization directions are parallel to each other. Using a function
+generator, apply a $100\unitv{Hz}$ square-wave voltage to the ITO electrodes on the two sides
+of the liquid-crystal cell. Increase the voltage $V_{\mathrm{rms}}$ gradually from $0$ to
+$7.2\unitv{V}$.
+
+\begin{itemize}
+\item Near the critical points, take several additional sets of data if necessary.
+\end{itemize}
+
+\begin{center}
+\fbox{\parbox{0.86\linewidth}{\textbf{Problem B-(1)}\quad
+Measure the NB $90\degree$ TN-LC cell, tabulate the data and plot the electro-optic
+characteristic curve ($I$ versus $V_{\mathrm{rms}}$); determine the switching slope $\gamma$,
+$\left(\gamma=\dfrac{V_{90}-V_{10}}{V_{10}}\right)$.}}
+\end{center}
+
+\begin{center}
+\fbox{\parbox{0.86\linewidth}{\textbf{Problem B-(2)}\quad
+Determine the critical voltage $V_c$ of the NB $90\degree$ TN-LC cell. Show clearly on your
+graph the method by which you determine the value of $V_c$. Hint: when the applied voltage
+exceeds the critical voltage, the transmittance of the light rises steeply.}}
+\end{center}
+
+\subsection*{Part C\quad Optical properties of nematic liquid crystals}
+
+\paragraph{Electro-optic switching characteristics of a parallel-aligned liquid-crystal cell}
+
+\paragraph{I. Introduction}
+
+\noindent\textit{Uniformly parallel-aligned liquid-crystal cell (Fig.~34.10)}
+
+A uniformly parallel-aligned liquid-crystal cell is a cell in which the dominant directions of
+the front PI alignment film and of the rear PI alignment film are parallel to each other
+(Fig.~34.10). If the linear polarization direction of the light incident through the polarizer
+is parallel to the dominant LC direction, then in the liquid crystal the light propagates as
+an extraordinary wave, and the light undergoes only a single (pure) phase change.
+
+If the incident polarization direction makes an angle of $45\degree$ with the dominant LC
+direction (see Fig.~34.11), then, because the ordinary and the extraordinary waves have
+different velocities in the LC, a ``phase retardation'' occurs between these two waves. In
+this case, with $\theta=45\degree$ and with the polarization directions of the two polarizers
+parallel to each other, the transmittance of the light transmitted through the analyser (that
+is, the ratio of the transmitted light intensity to the intensity of the light incident on the
+cell) is
+\[
+T_{\parallel}=\cos^{2}\frac{\delta}{2}.
+\]
+
+\begin{figbox}{34.10}
+\begin{tikzpicture}[x=0.95cm,y=0.95cm,line join=round]
+  % left plate
+  \fill[gray!18] (0,0) -- (0.45,0.28) -- (0.45,3.08) -- (0,2.8) -- cycle;
+  \draw[thickline] (0,0) -- (0.45,0.28) -- (0.45,3.08) -- (0,2.8) -- cycle;
+  % right plate
+  \fill[gray!18] (7.0,0.28) -- (7.45,0.0) -- (7.45,2.8) -- (7.0,3.08) -- cycle;
+  \draw[thickline] (7.0,0.28) -- (7.45,0.0) -- (7.45,2.8) -- (7.0,3.08) -- cycle;
+  % LC molecules: undulating chain
+  \draw[thickline,decorate,decoration={coil,aspect=0.55,segment length=6.5mm,amplitude=3.2mm}]
+      (0.6,1.55) -- (6.85,1.55);
+  % label
+  \draw[thin] (4.3,1.85) -- (4.3,2.45);
+  \node[above,font=\small] at (4.3,2.45) {LC molecules};
+  % captions
+  \node[below,font=\small,align=center] at (0.2,-0.15) {PI plate\\[-2pt](ITO $+$ PI)};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.10: a uniformly parallel-aligned liquid-crystal cell, whose two PI plates
+(ITO $+$ PI) are parallel to each other.
+
+The ``phase retardation'' $\delta$ in the above expression can be written as
+\[
+\delta=2\pi d\,\Delta n(V,\lambda)/\lambda ,
+\]
+where $d$ is the thickness of the liquid-crystal layer, $\lambda$ is the wavelength of the
+light in air, $V$ is the root-mean-square value of the alternating voltage, and
+$\Delta n\equiv n_e-n_o$ is the birefringence of the liquid crystal; $\Delta n$ is a function
+of $\lambda$ and $V$. Both $\Delta n$ and $\delta$ attain their maximum values when $V$ is
+equal to zero; moreover, $\Delta n$ decreases as $V$ increases.
+
+In the general case the transmittance can be expressed as follows:
+\begin{align*}
+T_{\parallel}&=1-\sin^{2}2\theta\,\sin^{2}\frac{\delta}{2},\\[2pt]
+T_{\perp}&=\sin^{2}2\theta\,\sin^{2}\frac{\delta}{2},
+\end{align*}
+where $\parallel$ and $\perp$ denote respectively the two cases in which the polarization
+direction of the analyser is parallel and perpendicular to the polarization direction of the
+polarizer.
+
+\paragraph{II. Experimental procedure}
+
+\begin{enumerate}
+\item[(1)] Replace the $90\degree$ TN liquid-crystal cell by the uniformly parallel-aligned
+liquid-crystal cell.
+\item[(2)] With $V=0$, set $\theta=45\degree$ (Fig.~34.11). In the experiment, with the
+transmission axes of the polarizer and of the analyser perpendicular to each other, rotate the
+liquid-crystal specimen until the transmittance reaches its maximum value ($T_{\perp}$); this
+determines $\theta=45\degree$. Record $T_{\perp}$. Then set the transmission axes of the
+polarizer and of the analyser parallel to each other and measure $T_{\parallel}$ (again with
+the applied voltage $V=0$), so as to obtain the phase retardation $\delta$ and the
+birefringence $\Delta n$.
+\end{enumerate}
+
+\begin{figbox}{34.11}
+\begin{tikzpicture}[x=0.92cm,y=0.92cm,line join=round]
+  % beam
+  \draw[dashedline] (-0.8,0) -- (7.9,0);
+  \draw[force] (7.9,0) -- (8.4,0);
+  % polarizer
+  \draw[thickline] (0.55,0) circle (0.60);
+  \draw[<->,line width=0.5pt] (0.05,0) -- (1.05,0);
+  \node[below,font=\small] at (0.55,-0.72) {polarizer};
+  % cell
+  \begin{scope}[shift={(4.15,0)},rotate=45]
+    \fill[gray!15] (-1.45,-0.30) rectangle (1.45,0.30);
+    \draw[thickline] (-1.45,-0.30) rectangle (1.45,0.30);
+    \draw[line width=1.3pt] (-1.45,0.30) -- (1.45,0.30);
+    \draw[line width=1.3pt] (-1.45,-0.30) -- (1.45,-0.30);
+    \draw[<->,dashedline] (-1.10,0) -- (1.10,0);
+    \node at (1.32,0) {\small $L$};
+  \end{scope}
+  % angle theta
+  \draw[thickline] (4.15,0) ++(0.95,0) arc (0:45:0.95);
+  \node[font=\small] at (5.02,0.34) {$\theta$};
+  % labels of the cell
+  \node[font=\small,align=center] at (2.35,1.85) {uniformly\\[-2pt]parallel-aligned\\[-2pt]LC cell};
+  \draw[thin] (2.95,1.45) -- (4.20,0.35);
+  \node[font=\small] at (5.95,1.75) {$\delta(V,\lambda)$};
+  \draw[thin] (5.55,1.60) -- (4.95,0.95);
+  % electrodes
+  \node[font=\small] at (1.55,-1.55) {$V_{\mathrm{rms}}$};
+  \draw[thin] (1.95,-1.35) -- (2.88,-0.92);
+  % analyser
+  \draw[thickline] (7.25,0) circle (0.60);
+  \draw[<->,line width=0.5pt] (6.75,0) -- (7.75,0);
+  \draw[<->,line width=0.5pt] (7.25,-0.5) -- (7.25,0.5);
+  \node[above,font=\small] at (7.25,0.65) {for $T_{\parallel}$};
+  \node[below,font=\small] at (7.25,-0.65) {for $T_{\perp}$};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.11: schematic diagram of the experimental setup (the arrow $L$ indicates the dominant
+direction).
+
+\begin{center}
+\fbox{\parbox{0.88\linewidth}{\textbf{Problem C-(1)}\quad
+Given that the wavelength of the laser is $\lambda=650\unitv{nm}$, that the thickness of the
+liquid-crystal layer is $d=7.7\unitv{\mu m}$ and that $\Delta n\approx0.25$, use the
+experimental data for $T_{\perp}$ and $T_{\parallel}$ obtained above to calculate the precise
+values of $\delta$ and $\Delta n$ of this cell at $V=0$.}}
+\end{center}
+
+\begin{enumerate}
+\item[(3)] As in experiment (1) above, with $\theta=45\degree$ fixed, use a function generator
+to apply a $100\unitv{Hz}$ square wave to the ITO electrodes at the two sides of the uniformly
+parallel-aligned liquid-crystal specimen. With the transmission directions of the polarizer and
+of the analyser set parallel to each other, measure the electro-optic switching curve of
+$T_{\parallel}$, that is, $T_{\parallel}$ versus the applied voltage $V_{\mathrm{rms}}$, for
+$V_{\mathrm{rms}}$ between $0$ and $7\unitv{V}$.
+\end{enumerate}
+
+(Hint: the result of measuring the switching curve of the transmittance $T_{\perp}$ may help to
+improve the accuracy of the measurement of $T_{\parallel}$; the measured result for
+$T_{\perp}$ is not needed in answering the following questions.)
+
+\begin{itemize}
+\item Remember to take several additional sets of data near the critical points when necessary
+(especially between $0.5$ and $4.0\unitv{V}$).
+\end{itemize}
+
+\begin{center}
+\fbox{\parbox{0.88\linewidth}{\textbf{Problem C-(2)}\quad
+In the $\theta=45\degree$ configuration, measure the parallel-aligned liquid-crystal cell,
+tabulate the data and plot the electro-optic switching curve of $T_{\parallel}$.}}
+\end{center}
+
+\begin{center}
+\fbox{\parbox{0.88\linewidth}{\textbf{Problem C-(3)}\quad
+From the data of the electro-optic switching, find the value of the applied voltage
+$V_{\pi}$ at which $\delta=\pi$. Hint: $V_{\pi}$ is the applied voltage for which the phase
+retardation is $\delta=\pi$ ($180\degree$). Remember that $\Delta n$ is a function of the
+applied voltage and that $\Delta n$ decreases as $V$ increases. In fixing the accurate value
+of $V_{\pi}$ you may consider using extrapolation.}}
+\end{center}
+
+\subsection*{Solution to Problem 4}
+
+\paragraph{Part A\quad Measurement of the electro-optic characteristics of the laser diode}
+
+\paragraph{Problem A-(1)}
+
+(a) Data: a table of data with the variables and units indicated.
+
+\begin{center}
+{\small Table 4.2\quad $J$--$I$ data}\\[3pt]
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$I/\mathrm{mA}$ & 9.2 & 15.2 & 19.5 & 21.6 & 22.2 & 22.7 & 23.0 & 23.4 & 23.8\\
+\hline
+$J/\mathrm{V}$ & 0.00 & 0.01 & 0.02 & 0.03 & 0.05 & 0.06 & 0.09 & 0.12 & 0.30\\
+\hline\hline
+$I/\mathrm{mA}$ & 24.2 & 24.6 & 25.0 & 25.4 & 25.8 & 26.2 & 26.6 & 27.0 & 27.4\\
+\hline
+$J/\mathrm{V}$ & 0.66 & 1.02 & 1.41 & 1.88 & 2.23 & 2.64 & 3.04 & 3.36 & 3.78\\
+\hline\hline
+$I/\mathrm{mA}$ & 27.8 & 28.2 & 28.6 & 29.0 & 29.4 & 29.8 & 30.2 & 30.5 & 31.0\\
+\hline
+$J/\mathrm{V}$ & 4.12 & 4.48 & 4.79 & 5.13 & 5.44 & 5.72 & 6.05 & 6.25 & 6.55\\
+\hline\hline
+$I/\mathrm{mA}$ & 31.4 & 31.8 & 32.2 & 32.6 & 33.0 & 33.4 & 33.8 & 34.2 & 34.6\\
+\hline
+$J/\mathrm{V}$ & 6.75 & 6.99 & 7.22 & 7.40 & 7.60 & 7.78 & 7.93 & 8.07 & 8.14\\
+\hline\hline
+$I/\mathrm{mA}$ & 35.0 & 35.5 & 36.0 & 36.5 & 37.0 & 37.6 & 38.0 & 38.6 & \\
+\hline
+$J/\mathrm{V}$ & 8.18 & 8.20 & 8.22 & 8.24 & 8.24 & 8.25 & 8.26 & 8.27 & \\
+\hline
+\end{tabular}}
+\end{center}
+
+Current error: $\pm0.1\unitv{mA}$; voltage error: $\pm0.01\unitv{V}$.
+
+(b) Plotting: choose the abscissa and ordinate scales and units that match the range and the
+precision of the experimental data.
+
+(c) Drawing the curve: use the appropriate data and a suitable shape of line.
+
+\begin{itemize}
+\item As shown in Fig.~34.12: onset $\rightarrow$ $0$ $\rightarrow$ threshold $\rightarrow$
+linear $\rightarrow$ saturation.
+\end{itemize}
+
+\paragraph{Problem A-(2)}
+
+(a) Mark the linear region of Fig.~34.12; see Fig.~34.13.
+
+(b) Carry out the error analysis by the method of least squares or visually with a ruler.
+
+(c) $I_m\pm\Delta I_m$: obtain suitable data for $I_m$ and the error ($\pm\Delta I_m$) from the
+linear region of the $J$--$I$ curve.
+
+(d) A suitable value of $I_{\mathrm{th}}$ and its error:
+\[
+I_{\mathrm{th}}=[(21\sim26)\pm(0.01\ \text{or}\ 0.2)]\unitv{mA}.
+\]
+
+\begin{figbox}{34.12}
+\begin{tikzpicture}[x=0.165cm,y=0.52cm]
+  % graph paper
+  \draw[gray!45,very thin] (0,0) grid[xstep=1,ystep=0.5] (40,9);
+  % axes
+  \draw[axis] (0,0) -- (41.5,0);
+  \draw[axis] (0,0) -- (0,9.4);
+  % ticks
+  \foreach \x in {0,5,...,40}{\draw ( \x,0) -- (\x,-0.12); \node[below,font=\scriptsize] at (\x,-0.15) {\x};}
+  \foreach \y in {0,1,...,9}{\draw (0,\y) -- (-0.8,\y); \node[left,font=\scriptsize] at (-0.9,\y) {\y};}
+  \node[below,font=\small] at (20,-0.75) {current $I/\mathrm{mA}$};
+  \node[rotate=90,font=\small] at (-4.2,4.5) {light intensity $J/\mathrm{V}$};
+  % data
+  \draw[thickline] plot[smooth] coordinates {
+    (9.2,0.00) (15.2,0.01) (19.5,0.02) (21.6,0.03) (22.2,0.05) (22.7,0.06)
+    (23.0,0.09) (23.4,0.12) (23.8,0.30) (24.2,0.66) (24.6,1.02) (25.0,1.41)
+    (25.4,1.88) (25.8,2.23) (26.2,2.64) (26.6,3.04) (27.0,3.36) (27.4,3.78)
+    (27.8,4.12) (28.2,4.48) (28.6,4.79) (29.0,5.13) (29.4,5.44) (29.8,5.72)
+    (30.2,6.05) (30.5,6.25) (31.0,6.55) (31.4,6.75) (31.8,6.99) (32.2,7.22)
+    (32.6,7.40) (33.0,7.60) (33.4,7.78) (33.8,7.93) (34.2,8.07) (34.6,8.14)
+    (35.0,8.18) (35.5,8.20) (36.0,8.22) (36.5,8.24) (37.0,8.24) (37.6,8.25)
+    (38.0,8.26) (38.6,8.27)};
+  \foreach \p in {(9.2,0.00),(21.6,0.03),(24.6,1.02),(27.0,3.36),(29.4,5.44),(31.8,6.99),(34.2,8.07),(38.6,8.27)}
+    \fill \p circle (1.1pt);
+  % annotation
+  \draw[thin] (26.2,5.35) -- (28.35,4.72);
+  \node[font=\small] at (25.0,5.5) {$I_m\pm\Delta I_m$};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.12: the $J$--$I$ relation.
+
+\begin{center}
+{\small Table 4.3}\\[3pt]
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.40\linewidth}|p{0.40\linewidth}}
+\hline
+Least-squares fit & Visual estimation with a ruler\\
+\hline
+error in the graph $0.0x\unitv{mA}$ & error in the graph $0.0x\unitv{mA}$\\
+\hline
+least-squares method & enlarged scale graph\\
+\hline
+error analysis & draw 3 curves for the error analysis\\
+\hline
+\end{tabular}}
+\end{center}
+
+\begin{figbox}{34.13}
+\begin{tikzpicture}[x=1.02cm,y=0.34cm]
+  % graph paper
+  \draw[gray!45,very thin] (0,22) grid[xstep=0.25,ystep=0.5] (6,32);
+  % axes
+  \draw[axis] (0,22) -- (6.4,22);
+  \draw[axis] (0,22) -- (0,32.6);
+  % ticks
+  \foreach \x in {0,0.5,...,6}{\draw (\x,22) -- (\x,21.75); \node[below,font=\scriptsize] at (\x,21.7) {\x};}
+  \foreach \y in {22,23,...,32}{\draw (0,\y) -- (-0.10,\y); \node[left,font=\scriptsize] at (-0.12,\y) {\y};}
+  \node[below,font=\small] at (3.0,20.9) {light intensity $J/\mathrm{V}$};
+  \node[rotate=90,font=\small] at (-0.85,27) {current $I/\mathrm{mA}$};
+  % fitted straight line
+  \draw[thickline] (0,23.47) -- (6.2,30.35);
+  % error bars and data
+  \foreach \x/\y in {0.66/24.2,1.02/24.6,1.41/25.0,1.88/25.4,2.23/25.8,2.64/26.2,3.04/26.6,
+                     3.36/27.0,3.78/27.4,4.12/27.8,4.48/28.2,4.79/28.6,5.13/29.0,5.44/29.4,
+                     5.72/29.8,6.05/30.2}{
+    \fill (\x,\y) circle (1.0pt);
+    \draw[very thin] (\x,\y-0.12) -- (\x,\y+0.12);
+    \draw[very thin] (\x-0.06,\y) -- (\x+0.06,\y);
+  }
+  % annotations
+  \draw[thin] (2.2,31.1) -- (2.62,29.55);
+  \node[left,font=\small] at (2.18,31.2) {$y$ error line};
+  \draw[thin] (3.55,30.55) -- (3.78,27.4);
+  \node[right,font=\small] at (3.6,30.7) {$x$ error line};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.13: the straight line and the extrapolation.
+
+\paragraph{A1-1}
+
+\begin{itemize}
+\item Least-squares method
+\end{itemize}
+
+\[
+I=mJ+b\quad\longrightarrow\quad b=I_{\mathrm{th}},
+\]
+for $y=mx+b$.
+
+\begin{center}
+{\small Table 4.4}\\[3pt]
+{\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$n$ & $y$: $I/\mathrm{mA}$ & $x$: $J$ & $xy$ & $x^{2}$ & $y(x)=mx+b$ & $[y-y(x)]^{2}$\\
+\hline
+1 & 23.8 & 0.30 & 7.14 & 0.0900 & 23.7937 & 3.969E-05\\
+\hline
+2 & 24.2 & 0.66 & 15.972 & 0.4356 & 24.17134 & 0.000821\\
+\hline
+3 & 24.6 & 1.02 & 25.092 & 1.0404 & 24.54898 & 0.00260\\
+\hline
+4 & 25.0 & 1.41 & 35.25 & 1.9891 & 24.95809 & 0.00176\\
+\hline
+5 & 25.4 & 1.88 & 47.752 & 3.5344 & 25.45112 & 0.00261\\
+\hline
+6 & 25.8 & 2.23 & 57.534 & 4.9729 & 25.81827 & 0.000334\\
+\hline
+7 & 26.2 & 2.64 & 69.168 & 6.9696 & 26.24836 & 0.00234\\
+\hline
+8 & 26.6 & 3.04 & 80.864 & 9.2416 & 26.66796 & 0.00462\\
+\hline
+9 & 27.0 & 3.36 & 90.72 & 11.2896 & 27.00364 & 1.325E-05\\
+\hline
+10 & 27.4 & 3.78 & 103.572 & 14.2884 & 27.44422 & 0.00196\\
+\hline
+11 & 27.8 & 4.12 & 114.536 & 16.9744 & 27.80088 & 7.733E-07\\
+\hline
+12 & 28.2 & 4.48 & 126.336 & 20.0704 & 28.17852 & 0.000461\\
+\hline
+13 & 28.6 & 4.79 & 136.994 & 22.9441 & 28.50371 & 0.00927\\
+\hline
+ & $\sum y=$ & $\sum x=$ & $\sum xy=$ & $\sum x^{2}=$ & & $\sum[y-y(x)]^{2}$\\
+ & 340.6 & 33.71 & 910.93 & 113.840 & & $=0.0268$\\
+\hline
+\end{tabular}}
+\end{center}
+
+\begin{align*}
+\Delta&=N\sum x^{2}-\Big(\sum x\Big)^{2}=13(113.840)-(33.71)^{2}=343.6\\[2pt]
+m&=\frac{1}{\Delta}\Big(N\sum xy-\sum x\sum y\Big)
+ =\frac{13(910.93)-(33.71)(340.6)}{343.556}=1.049\\[2pt]
+b&=\frac{1}{\Delta}\Big(\sum x^{2}\sum y-\sum x\sum xy\Big)
+ =\frac{(113.840)(340.6)-(33.71)(910.93)}{343.556}=23.48\\[2pt]
+\sigma_{y}&=\frac{1}{N-2}\sqrt{\sum\,[y-y(x)]^{2}}=\frac{1}{13-2}\sqrt{0.0268}=0.015\\[2pt]
+\sigma&=\sqrt{(\sigma_{y})^{2}+\Big(\frac{\dd y}{\dd x}\sigma_{x}\Big)^{2}}
+ =\sqrt{(0.015)^{2}+(1.049\times0.005)^{2}}=0.016\\[2pt]
+\sigma_{m}&=\sqrt{\frac{N\sigma^{2}}{\Delta}}=\sqrt{\frac{13\times0.016^{2}}{343.556}}=0.0031\\[2pt]
+\sigma_{b}&=\sqrt{\frac{\sum x^{2}}{\Delta}}\;\sigma=0.016\times\sqrt{\frac{113.840}{343.556}}=0.0092
+\end{align*}
+
+\[
+I_{\mathrm{th}}=(23.48\pm0.01)\unitv{mA}.
+\]
+
+\paragraph{A1-2}
+
+\begin{itemize}
+\item Visual estimation:
+\end{itemize}
+
+\[
+I=mJ+b\quad\longrightarrow\quad b=I_{\mathrm{th}},
+\]
+for $y=mx+b$. Straight line 1: $y=1.00x+23.66$; straight line 2: $y=1.05x+23.48$;
+straight line 3: $y=1.13x+23.31$.
+\[
+I_{\mathrm{th}}(\text{mean})=23.48\unitv{mA},\qquad
+\Delta I_{\mathrm{th}}=0.18\unitv{mA},
+\]
+\[
+I_{\mathrm{th}}=(23.5\pm0.2)\unitv{mA}.
+\]
+
+\paragraph{Part B\quad Optical properties of the nematic liquid-crystal cell}
+
+\noindent\textbf{Electro-optic switching characteristics of the $90\degree$ TN-LC cell}
+
+\paragraph{Problem B-(1)}
+
+(a) A table of data with the variables and units indicated.
+
+\begin{center}
+{\small Table 4.5}\\[3pt]
+{\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$}\\
+\hline
+0.00 & 0.00 & 1.78 & 0.21 & 3.41 & 1.39\\
+\hline
+0.10 & 0.00 & 1.81 & 0.26 & 3.50 & 1.40\\
+\hline
+0.20 & 0.00 & 1.85 & 0.33 & 3.60 & 1.39\\
+\hline
+0.30 & 0.00 & 1.90 & 0.44 & 3.70 & 1.40\\
+\hline
+0.40 & 0.00 & 1.96 & 0.57 & 3.80 & 1.40\\
+\hline
+0.50 & 0.00 & 2.03 & 0.70 & 4.03 & 1.40\\
+\hline
+0.60 & 0.00 & 2.08 & 0.80 & 4.22 & 1.40\\
+\hline
+0.70 & 0.00 & 2.15 & 0.92 & 4.40 & 1.39\\
+\hline
+0.80 & 0.00 & 2.21 & 1.02 & 4.61 & 1.39\\
+\hline
+0.90 & 0.00 & 2.28 & 1.10 & 4.78 & 1.40\\
+\hline
+1.00 & 0.00 & 2.33 & 1.14 & 5.03 & 1.39\\
+\hline
+1.10 & 0.02 & 2.39 & 1.19 & 5.20 & 1.39\\
+\hline
+1.20 & 0.04 & 2.44 & 1.22 & 5.39 & 1.38\\
+\hline
+1.24 & 0.04 & 2.50 & 1.26 & 5.61 & 1.39\\
+\hline
+1.30 & 0.04 & 2.55 & 1.27 & 5.81 & 1.38\\
+\hline
+1.34 & 0.03 & 2.60 & 1.29 & 6.02 & 1.38\\
+\hline
+1.38 & 0.02 & 2.67 & 1.32 & 6.21 & 1.38\\
+\hline
+1.45 & 0.01 & 2.72 & 1.33 & 6.40 & 1.38\\
+\hline
+1.48 & 0.01 & 2.85 & 1.36 & 6.63 & 1.38\\
+\hline
+1.55 & 0.02 & 2.97 & 1.37 & 6.80 & 1.38\\
+\hline
+1.59 & 0.03 & 3.11 & 1.38 & 7.02 & 1.38\\
+\hline
+1.64 & 0.05 & 3.20 & 1.39 & 7.20 & 1.38\\
+\hline
+1.71 & 0.11 & 3.32 & 1.39 & & \\
+\hline
+\end{tabular}}
+\end{center}
+
+(b) Choose suitable scales and units for the abscissa and the ordinate according to the range
+and the precision of the experiment.
+
+(c) Measure and plot the $J$--$V_{\mathrm{rms}}$ curve of the light intensity against the
+applied voltage (see Fig.~34.14).
+
+\begin{itemize}
+\item In the normally black mode the transmitted light intensity is less than
+$0.05\unitv{V}$.
+\item Before the applied voltage reaches the critical value there is a small light bounce.
+\item Once the applied voltage exceeds the critical value, the transmitted light intensity
+increases steeply.
+\item Once the applied voltage exceeds $3\unitv{V}$, a plateau region appears in the
+transmitted light intensity.
+\end{itemize}
+
+(d) The value of $\gamma$ and its error.
+
+\begin{itemize}
+\item Find the maximum value of the light intensity for applied voltages between $3.0$ and
+$7.2\unitv{V}$.
+\item Determine the value corresponding to $90\%$ of the maximum light intensity and obtain,
+by interpolation, the applied voltage $V_{90}$.
+\item Determine the value corresponding to $10\%$ of the maximum light intensity and obtain,
+by interpolation, the applied voltage $V_{10}$.
+\item The correct value of $\gamma\pm\Delta\gamma$ is $(0.42\sim0.44)\pm0.02$.
+\end{itemize}
+
+\begin{figbox}{34.14}
+\begin{tikzpicture}[x=0.86cm,y=2.3cm]
+  % axes
+  \draw[axis] (0,0) -- (7.6,0);
+  \draw[axis] (0,0) -- (0,1.58);
+  % ticks
+  \foreach \x in {0,1,...,7}{\draw (\x,0) -- (\x,-0.02); \node[below,font=\scriptsize] at (\x,-0.02) {\x};}
+  \foreach \y in {0,0.5,1.0,1.5}{\draw (0,\y) -- (-0.10,\y); \node[left,font=\scriptsize] at (-0.12,\y) {\y};}
+  \node[below,font=\small] at (3.9,-0.28) {applied voltage$/\mathrm{V}$};
+  \node[rotate=90,font=\small] at (-0.95,0.79) {light intensity$/\mathrm{V}$};
+  % data
+  \foreach \x/\y in {0/0,0.1/0,0.2/0,0.3/0,0.4/0,0.5/0,0.6/0,0.7/0,0.8/0,0.9/0,1.0/0,
+      1.1/0.02,1.2/0.04,1.24/0.04,1.3/0.04,1.34/0.03,1.38/0.02,1.45/0.01,1.48/0.01,
+      1.55/0.02,1.59/0.03,1.64/0.05,1.71/0.11,1.78/0.21,1.81/0.26,1.85/0.33,1.9/0.44,
+      1.96/0.57,2.03/0.70,2.08/0.80,2.15/0.92,2.21/1.02,2.28/1.10,2.33/1.14,2.39/1.19,
+      2.44/1.22,2.5/1.26,2.55/1.27,2.6/1.29,2.67/1.32,2.72/1.33,2.85/1.36,2.97/1.37,
+      3.11/1.38,3.2/1.39,3.32/1.39,3.41/1.39,3.5/1.40,3.6/1.39,3.7/1.40,3.8/1.40,
+      4.03/1.40,4.22/1.40,4.4/1.39,4.61/1.39,4.78/1.40,5.03/1.39,5.2/1.39,5.39/1.38,
+      5.61/1.39,5.81/1.38,6.02/1.38,6.21/1.38,6.4/1.38,6.63/1.38,6.8/1.38,7.02/1.38,7.2/1.38}
+    {\fill (\x,\y) rectangle ++(0.075,0.018);}
+  % annotations
+  \draw[force] (1.20,0.36) -- (1.20,0.03);
+  \node[left,font=\scriptsize] at (1.18,0.40) {$T=0$};
+  \draw[force] (1.45,0.36) -- (1.45,0.03);
+  \node[right,font=\scriptsize] at (1.47,0.33) {$V_c$};
+  \draw[force] (1.76,0.05) -- (1.72,0.13);
+  \node[right,font=\scriptsize] at (1.78,0.04) {$V_{10}$};
+  \draw[force] (1.95,1.22) -- (2.20,1.30);
+  \node[left,font=\scriptsize] at (1.93,1.24) {$V_{90}$};
+  \draw[force] (1.15,0.42) -- (1.60,0.10);
+  \node[left,font=\scriptsize] at (1.13,0.43) {light bounce};
+  \draw[force] (3.55,1.05) -- (3.55,1.36);
+  \node[below,font=\scriptsize] at (3.55,1.05) {plateau};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.14: the $J$--$V_{\mathrm{rms}}$ curve of the $90\degree$ TN-LC cell.
+
+\begin{figbox}{34.15}
+\begin{tikzpicture}[x=9.4cm,y=27cm]
+  % axes
+  \draw[axis] (1.19,0) -- (1.73,0);
+  \draw[axis] (1.19,0) -- (1.19,0.175);
+  % ticks
+  \foreach \x in {1.2,1.3,1.4,1.5,1.6,1.7}{\draw (\x,0) -- (\x,-0.0015); \node[below,font=\scriptsize] at (\x,-0.001) {\x};}
+  \foreach \y in {0.00,0.02,...,0.16}{\draw (1.19,\y) -- (1.1925,\y); \node[left,font=\scriptsize] at (1.186,\y) {\y};}
+  \node[below,font=\small] at (1.46,-0.016) {applied voltage$/\mathrm{V}$};
+  \node[rotate=90,font=\small] at (1.16,0.085) {light intensity$/\mathrm{V}$};
+  % data
+  \foreach \x/\y in {1.20/0.078,1.23/0.072,1.26/0.066,1.29/0.060,1.32/0.055,1.35/0.049,
+      1.38/0.043,1.41/0.032,1.43/0.024,1.45/0.019,1.47/0.021,1.49/0.030,1.51/0.041,
+      1.54/0.052,1.57/0.062,1.59/0.072,1.61/0.085,1.63/0.100,1.65/0.118,1.67/0.138,1.69/0.158}
+    {\fill (\x,\y) rectangle ++(0.008,0.0035);}
+  % Vc
+  \draw[force] (1.45,0.055) -- (1.45,0.023);
+  \node[right,font=\scriptsize] at (1.46,0.055) {$V_c$};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.15: the region around $V_c$ on an enlarged scale.
+
+\paragraph{Problem B-(2)}
+
+(a) The value of $V_c$ and its error, $V_c\pm\Delta V_c$.
+
+\begin{itemize}
+\item Enlarge the scale of the graph and take more measurement points in the neighbourhood of
+$V_c$ (see Fig.~34.15).
+\item Determine the value of $V_c$ at which the transmitted light intensity increases
+steeply.
+\item The correct data for $V_c\pm\Delta V_c$ are $[(1.20\sim1.50)\pm0.01]\unitv{V}$.
+\end{itemize}
+
+The data of this graph do not correspond one-to-one to the data of Table 4.5; this graph
+merely shows how $V_c$ is obtained.
+
+\paragraph{Part C\quad Optical properties of the nematic liquid-crystal cell}
+
+\noindent\textbf{Electro-optic switching characteristics of the uniformly parallel-aligned
+liquid-crystal cell}
+
+\paragraph{Problem C-(1)}
+
+(a) The values of $\delta$ and $\Delta n$ and their errors.
+
+\begin{itemize}
+\item Obtain the value of $T_{\parallel}$ and take the average.
+\item Determine the order $m$.
+\item The correct values of $\delta$ are $15.7\sim18.2$.
+\item The correct values of $\Delta n$ are $0.20\sim0.24$.
+\end{itemize}
+
+\begin{align*}
+T_{\parallel}&=\frac{0.31+0.31+0.31}{3}\unitv{V}=(0.31\pm0.01)\unitv{V},\\[2pt]
+T_{\perp}&=\frac{1.04+1.03+1.04}{3}\unitv{V}=(1.04\pm0.01)\unitv{V},
+\end{align*}
+\[
+\tan\frac{\delta}{2}=\pm\sqrt{\frac{T_{\perp}}{T_{\parallel}}}=1.83,
+\quad\text{hence}\quad
+\delta=4.14+2m\pi\ \ (\text{or}\ -2.14+2m\pi).
+\]
+\[
+\delta=\frac{2\pi d\,\Delta n}{\lambda}=\frac{2\pi\times7.7\times0.25}{0.65}=18.6 .
+\]
+Taking $m=2$ (or $3$) gives $\delta=16.7$ ($5.32\pi$).
+\[
+\text{From }\ \delta=\frac{2\pi d\,\Delta n}{\lambda}\ \text{ we obtain }\
+\Delta n=\frac{\delta\lambda}{2\pi d}=0.22 .
+\]
+Permitted values: $\Delta n=(0.20\sim0.24)$.
+
+\begin{itemize}
+\item If $\tan\dfrac{\delta}{2}=1.83$, then $\delta$ may be $4.68\pi$ or $6.68\pi$, which is
+inconsistent with the data graph of Problem C-(2).
+\end{itemize}
+
+\paragraph{Problem C-(2)}
+
+(a) A table of data with the variables and units indicated.
+
+\begin{center}
+{\small Table 4.6}\\[3pt]
+{\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$}\\
+\hline
+0.00 & 0.30 & 1.08 & 0.25 & 1.50 & 0.13\\
+\hline
+0.10 & 0.30 & 1.11 & 0.40 & 1.53 & 0.06\\
+\hline
+0.20 & 0.29 & 1.14 & 0.67 & 1.59 & 0.03\\
+\hline
+0.30 & 0.29 & 1.17 & 0.93 & 1.62 & 0.05\\
+\hline
+0.40 & 0.29 & 1.20 & 1.25 & 1.65 & 0.15\\
+\hline
+0.50 & 0.28 & 1.26 & 1.31 & 1.68 & 0.24\\
+\hline
+0.60 & 0.26 & 1.29 & 1.36 & 1.71 & 0.34\\
+\hline
+0.70 & 0.23 & 1.32 & 1.32 & 1.74 & 0.49\\
+\hline
+0.80 & 0.19 & 1.35 & 1.09 & 1.77 & 0.63\\
+\hline
+0.90 & 0.09 & 1.38 & 0.85 & 1.80 & 0.78\\
+\hline
+0.99 & 0.00 & 1.41 & 0.62 & 1.83 & 0.92\\
+\hline
+1.02 & 0.06 & 1.44 & 0.46 & 1.86 & 1.05\\
+\hline
+1.05 & 0.16 & 1.47 & 0.29 & 1.89 & 1.19\\
+\hline
+\end{tabular}}
+\end{center}
+
+\begin{center}
+{\small Table 4.6 (continued)}\\[3pt]
+{\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$} & \shortstack{applied\\[-2pt]voltage$/\mathrm{V}$} & \shortstack{light\\[-2pt]intensity$/\mathrm{V}$}\\
+\hline
+1.92 & 1.27 & 2.79 & 0.26 & 4.20 & 0.11\\
+\hline
+1.95 & 1.34 & 2.82 & 0.23 & 4.30 & 0.14\\
+\hline
+1.98 & 1.40 & 2.85 & 0.21 & 4.40 & 0.16\\
+\hline
+2.01 & 1.47 & 2.88 & 0.18 & 4.50 & 0.19\\
+\hline
+2.04 & 1.48 & 2.91 & 0.16 & 4.60 & 0.22\\
+\hline
+2.07 & 1.48 & 2.94 & 0.14 & 4.70 & 0.25\\
+\hline
+2.10 & 1.48 & 2.97 & 0.12 & 4.80 & 0.28\\
+\hline
+2.13 & 1.45 & 3.00 & 0.09 & 4.90 & 0.31\\
+\hline
+2.16 & 1.42 & 3.06 & 0.08 & 5.01 & 0.34\\
+\hline
+2.19 & 1.38 & 3.09 & 0.06 & 5.11 & 0.37\\
+\hline
+2.22 & 1.33 & 3.12 & 0.05 & 5.21 & 0.39\\
+\hline
+2.25 & 1.27 & 3.18 & 0.04 & 5.29 & 0.42\\
+\hline
+2.28 & 1.20 & 3.21 & 0.03 & 5.39 & 0.44\\
+\hline
+2.31 & 1.14 & 3.24 & 0.02 & 5.51 & 0.48\\
+\hline
+2.34 & 1.07 & 3.27 & 0.02 & 5.57 & 0.49\\
+\hline
+2.37 & 1.00 & 3.30 & 0.01 & 5.70 & 0.52\\
+\hline
+2.40 & 0.94 & 3.33 & 0.00 & 5.80 & 0.55\\
+\hline
+2.43 & 0.87 & 3.36 & 0.00 & 5.90 & 0.57\\
+\hline
+2.46 & 0.79 & 3.39 & 0.00 & 6.01 & 0.60\\
+\hline
+2.49 & 0.72 & 3.42 & 0.00 & 6.10 & 0.62\\
+\hline
+2.52 & 0.66 & 3.45 & 0.00 & 6.19 & 0.64\\
+\hline
+2.55 & 0.61 & 3.48 & 0.00 & 6.30 & 0.66\\
+\hline
+2.58 & 0.56 & 3.51 & 0.00 & 6.40 & 0.69\\
+\hline
+2.61 & 0.51 & 3.60 & 0.01 & 6.60 & 0.73\\
+\hline
+2.64 & 0.46 & 3.70 & 0.02 & 6.70 & 0.74\\
+\hline
+2.67 & 0.42 & 3.80 & 0.03 & 6.80 & 0.76\\
+\hline
+2.70 & 0.37 & 3.90 & 0.04 & 7.00 & 0.80\\
+\hline
+2.73 & 0.33 & 4.00 & 0.07 & 7.20 & 0.83\\
+\hline
+2.76 & 0.30 & 4.10 & 0.09 & & \\
+\hline
+\end{tabular}}
+\end{center}
+
+(b) Choose suitable scales and units for the abscissa and the ordinate according to the range
+and the precision of the experiment.
+
+(c) Measure $T_{\parallel}$ as the applied voltage varies and plot the
+$T_{\parallel}$--$V_{\mathrm{rms}}$ curve (see Fig.~34.16).
+
+\begin{itemize}
+\item There are 3 minima and 2 sharp maxima of the light.
+\item The difference between the two maxima is less than $15\%$.
+\item The values at the minima are less than $0.1\unitv{V}$.
+\end{itemize}
+
+\begin{figbox}{34.16}
+\begin{tikzpicture}[x=0.76cm,y=2.35cm]
+  \draw[axis] (0,0) -- (7.5,0);
+  \draw[axis] (0,0) -- (0,1.58);
+  \foreach \x in {0,1,...,7}{\draw (\x,0) -- (\x,-0.02); \node[below,font=\scriptsize] at (\x,-0.02) {\x};}
+  \foreach \y in {0.0,0.5,1.0,1.5}{\draw (0,\y) -- (-0.10,\y); \node[left,font=\scriptsize] at (-0.12,\y) {\y};}
+  \node[below,font=\small] at (3.9,-0.28) {applied voltage$/\mathrm{V}$};
+  \node[rotate=90,font=\small] at (-0.95,0.79) {light intensity$/\mathrm{V}$};
+  \draw[dashedline] plot coordinates {
+    (0.00,0.30) (0.20,0.29) (0.40,0.29) (0.60,0.26) (0.80,0.19) (0.90,0.09)
+    (0.99,0.00) (1.02,0.06) (1.05,0.16) (1.08,0.25) (1.11,0.40) (1.14,0.67)
+    (1.17,0.93) (1.20,1.25) (1.26,1.31) (1.29,1.36) (1.32,1.32) (1.35,1.09)
+    (1.38,0.85) (1.41,0.62) (1.44,0.46) (1.47,0.29) (1.50,0.13) (1.53,0.06)
+    (1.59,0.03) (1.65,0.15) (1.71,0.34) (1.77,0.63) (1.83,0.92) (1.89,1.19)
+    (1.95,1.34) (2.01,1.47) (2.07,1.48) (2.13,1.45) (2.19,1.38) (2.25,1.27)
+    (2.31,1.14) (2.37,1.00) (2.46,0.79) (2.55,0.61) (2.64,0.46) (2.73,0.33)
+    (2.82,0.23) (2.91,0.16) (3.00,0.09) (3.09,0.06) (3.18,0.04) (3.27,0.02)
+    (3.36,0.00) (3.45,0.00) (3.60,0.01) (3.70,0.02) (3.90,0.04) (4.10,0.09)
+    (4.30,0.14) (4.50,0.19) (4.70,0.25) (4.90,0.31) (5.11,0.37) (5.29,0.42)
+    (5.51,0.48) (5.70,0.52) (5.90,0.57) (6.10,0.62) (6.30,0.66) (6.60,0.73)
+    (6.80,0.76) (7.00,0.80) (7.20,0.83)};
+  \draw[force] (3.44,0.28) -- (3.44,0.02);
+  \node[left,font=\scriptsize] at (3.42,0.30) {$V_{\pi}$};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.16: the $T_{\parallel}$--$V_{\mathrm{rms}}$ curve.
+
+\paragraph{Problem C-(3)}
+
+The value of $V_{\pi}$ and its error.
+
+\begin{itemize}
+\item Enlarge the scale of the graph and take more data in the neighbourhood of $V_{\pi}$
+(see Fig.~34.17).
+\item Mark the correct value of $V_{\pi}$.
+\item Obtain the value of $V_{\pi}$ by interpolation or by rounding off.
+\item The correct value of $V_{\pi}$ is $[(3.2\sim3.5)\pm0.01]\unitv{V}$.
+\end{itemize}
+
+\begin{figbox}{34.17}
+\begin{tikzpicture}[x=4.4cm,y=27cm]
+  \draw[axis] (2.98,0) -- (4.03,0);
+  \draw[axis] (2.98,0) -- (2.98,0.128);
+  \foreach \x in {3.0,3.2,3.4,3.6,3.8,4.0}{\draw (\x,0) -- (\x,-0.0012); \node[below,font=\scriptsize] at (\x,-0.0008) {\x};}
+  \foreach \y in {0.00,0.02,0.04,0.06,0.08,0.10,0.12}{\draw (2.98,\y) -- (2.985,\y); \node[left,font=\scriptsize] at (2.975,\y) {\y};}
+  \node[below,font=\small] at (3.5,-0.0155) {applied voltage$/\mathrm{V}$};
+  \node[rotate=90,font=\small] at (2.94,0.064) {light intensity$/\mathrm{V}$};
+  \draw[dashedline] plot coordinates {
+    (3.00,0.090) (3.06,0.080) (3.09,0.060) (3.12,0.050) (3.18,0.040) (3.21,0.030)
+    (3.24,0.020) (3.27,0.020) (3.30,0.010) (3.33,0.003) (3.36,0.002) (3.39,0.001)
+    (3.42,0.001) (3.45,0.001) (3.48,0.002) (3.51,0.003) (3.60,0.010) (3.70,0.020)
+    (3.80,0.030) (3.90,0.040) (4.00,0.070)};
+  \foreach \x/\y in {3.00/0.090,3.09/0.060,3.18/0.040,3.27/0.020,3.36/0.002,
+      3.45/0.001,3.60/0.010,3.70/0.020,3.80/0.030,3.90/0.040}{
+    \fill (\x,\y) rectangle ++(0.012,0.0018);}
+  \draw[force] (3.45,0.030) -- (3.45,0.004);
+  \node[right,font=\scriptsize] at (3.46,0.030) {$V_{\pi}$};
+\end{tikzpicture}
+\end{figbox}
+
+Fig.~34.17: the region around $V_{\pi}$ on an enlarged scale.

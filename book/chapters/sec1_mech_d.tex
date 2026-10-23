@@ -1,0 +1,453 @@
+\begin{problem}{1.48}
+A circle of radius $R$ rolls without slipping along the straight line $y=2R$. The trajectory of a point $P$ on the circle is a cycloid. A fixed smooth steel wire has the same shape as this curve, and a small ring is threaded on it, as shown. Find the time required for the ring to slide from the highest point of the wire to the lowest point.
+\end{problem}
+
+\begin{figbox}{1.48}
+\begin{tikzpicture}[scale=0.92]
+  \def\R{1.35}
+  \draw[axis] (-5.4,0) -- (5.4,0) node[right] {$x$};
+  \draw[axis] (0,-0.45) -- (0,3.5) node[above] {$y$};
+  \draw[thickline] (-5.1,2.7) -- (5.1,2.7);
+  \node[above right] at (0.04,2.7) {$2R$};
+  \draw[thickline,domain=-180:180,samples=181,smooth,variable=\t]
+    plot ({\R*(rad(\t)-sin(\t))},{\R*(1-cos(\t))});
+  \draw[thickline] (0,\R) circle (\R);
+  \fill (0,0) circle (1.4pt) node[below] {$O$};
+  \fill ({1.35*(rad(-125)-sin(-125))},{1.35*(1-cos(-125))}) circle (2.3pt);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.49}
+When wind blows from a distant place, if the wind speed has a gradient in the vertical direction perpendicular to the ground, people occasionally hear the sound emitted by a distant source, and even with astonishing clarity. Suppose the distribution of the wind speed in the vertical ($y$) direction can be written as $v=v_0+ky^2$, where $k$ is a very small positive constant. A distant sound source ($x=0$) emits a beam of sound; the angle between the emission direction and the vertical is $\theta_0$, and the speed of sound at the ground ($y=0$) is $V_S$. Assuming that throughout the region traversed by the sound wave $\dfrac{ky^2}{V_S}\ll 1$, find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the trajectory of the beam in space;
+\item the distance from the source to the points on the ground at which the sound can be heard clearly.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.50}
+A string of linear density $\eta$ and tension $T$ lies along the $x$-axis, with a fixed end at $x=a$. A harmonic transverse wave propagates along the string in the $x$ direction; the vibration excited at $x=-a$ is $y=A\cos(\omega t+\varphi_0)$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the equation of the incident wave and the equation of the wave reflected from the fixed end;
+\item the expression for the resulting standing wave, and the positions of the nodes and antinodes;
+\item the total energy between two adjacent nodes (take the potential energy to be zero when every point of the string is at its equilibrium position).
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.51}
+Three blocks $A$, $B$, $C$ are connected by two light springs, each of stiffness $k$, and rest on a smooth horizontal surface, as shown. The masses of $A$ and $C$ are both $m$, and the mass of $B$ is $M$. Let $x_1$, $x_2$, $x_3$ denote the displacements of blocks $A$, $B$, $C$ from their equilibrium positions shown in the figure. Block $A$ is given an impulse in a very short time, so that it acquires an initial speed $v_0$ directed toward $B$. Find the displacements $x_1$, $x_2$, $x_3$ of the three blocks as functions of the time $t$ thereafter.
+\end{problem}
+
+\begin{figbox}{1.51}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) -- (8.9,0);
+  \foreach \x in {0,0.36,...,8.8} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \draw[thickline,fill=white] (0.7,0) rectangle (1.6,0.8);
+  \node at (1.15,0.4) {$m$};
+  \node[above] at (1.15,0.82) {$A$};
+  \draw[thickline,decorate,decoration={zigzag,segment length=2.4mm,amplitude=1.0mm}]
+    (1.6,0.4) -- (3.25,0.4);
+  \node[above] at (2.42,0.62) {$k$};
+  \draw[thickline,fill=white] (3.25,0) rectangle (4.35,0.8);
+  \node at (3.80,0.4) {$M$};
+  \node[above] at (3.80,0.82) {$B$};
+  \draw[thickline,decorate,decoration={zigzag,segment length=2.4mm,amplitude=1.0mm}]
+    (4.35,0.4) -- (6.0,0.4);
+  \node[above] at (5.17,0.62) {$k$};
+  \draw[thickline,fill=white] (6.0,0) rectangle (6.9,0.8);
+  \node at (6.45,0.4) {$m$};
+  \node[above] at (6.45,0.82) {$C$};
+  \draw[force] (1.15,1.25) -- (2.05,1.25) node[midway,above] {$v_0$};
+  \draw[dim] (0.55,-0.62) -- (1.5,-0.62) node[midway,below] {$x_1$};
+  \draw[dim] (3.15,-0.62) -- (4.25,-0.62) node[midway,below] {$x_2$};
+  \draw[dim] (5.9,-0.62) -- (6.8,-0.62) node[midway,below] {$x_3$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.52}
+A uniform rod of length $l$ and mass $m$ is suspended at its two ends by two light springs of stiffness $k_1$ and $k_2$ respectively. In equilibrium the rod is horizontal, as shown. Assuming that the springs can move only in the vertical direction, the rod can perform small oscillations about its equilibrium position.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item For $k_1=k_2$, find the eigenfrequencies of the normal modes and describe the corresponding normal-mode motions.
+\item For $k_1\ne k_2$, find the eigenfrequencies of the normal modes.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.52}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,4.3) -- (7.0,4.3);
+  \foreach \x in {0,0.32,...,6.9} \draw[thickline] (\x,4.3) -- (\x+0.18,4.55);
+  \draw[thickline,decorate,decoration={zigzag,segment length=2.2mm,amplitude=1.0mm}]
+    (1.0,4.3) -- (1.0,2.55);
+  \draw[thickline,decorate,decoration={zigzag,segment length=2.2mm,amplitude=1.0mm}]
+    (6.0,4.3) -- (6.0,2.55);
+  \node[right] at (1.12,3.45) {$k_1$};
+  \node[right] at (6.12,3.45) {$k_2$};
+  \draw[thickline] (0.55,2.4) -- (6.45,2.4);
+  \draw[thickline] (0.55,2.22) -- (0.55,2.58);
+  \draw[thickline] (6.45,2.22) -- (6.45,2.58);
+  \draw[dim] (1.0,1.75) -- (6.0,1.75) node[midway,below] {$l$};
+  \draw[dashedline] (1.0,2.4) -- (1.0,1.9);
+  \draw[dashedline] (6.0,2.4) -- (6.0,1.9);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.53}
+On the ground there is a small hemispherical nozzle. Many small holes are distributed over the hemispherical surface of the nozzle. When water is sprayed, water issues from these holes in different directions with the same speed $v_0$. Compared with the area sprinkled by the water, the nozzle may be regarded as a point.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item The water sprayed from the nozzle traces out a solid figure in the air; describe this figure quantitatively.
+\item To make the amount of water received per unit area uniform within the region on the ground reached by the spray, how should the number density of the small holes on the hemispherical surface be distributed?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.54}
+A planet of mass $M$ is composed of an incompressible fluid of density $\rho$. The planet rotates slowly with constant angular velocity $\omega$; owing to the rotation, its equator bulges slightly relative to its poles. The mean radius of the planet is $R$. To first order:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item find the pressure at a small depth $h$ below the surface at polar angle $\theta$;
+\item let the radii at the poles and at the equator be $R_p$ and $R_e$ respectively; find the value of $R_e-R_p$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.54}
+\begin{tikzpicture}[scale=1.05]
+  \draw[thickline] (0,0) circle (1.75);
+  \draw[axis] (-2.55,0) -- (2.55,0) node[right] {$x$};
+  \draw[axis] (0,-2.55) -- (0,2.55) node[above] {$y$};
+  \draw[->] (-0.55,2.28) arc[start angle=180,end angle=360,x radius=0.55,y radius=0.17];
+  \node[right] at (0.62,2.34) {$\omega$};
+  \coordinate (P) at ({1.75*cos(40)},{1.75*sin(40)});
+  \draw[thickline] (0,0) -- (P);
+  \draw[line width=1.6pt] ($(P)!0.12!(0,0)$) -- ($(P)!0.27!(0,0)$);
+  \node[right] at (1.48,1.40) {$h$};
+  \draw (0.65,0) arc (0:40:0.65);
+  \node at (0.92,0.22) {$\theta$};
+  \fill (P) circle (1.3pt);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.55}
+Estimate the ratio of the height of the tide at the Earth's equator raised by the Sun to that raised by the Moon.
+\end{problem}
+
+\begin{problem}{1.56}
+A satellite of mass $m$ moves in a circular orbit of radius $r$ around a planet of mass $M$, with orbital angular velocity $\omega$, while the planet rotates about its spin axis through its centre of mass with angular velocity $\Omega$; the two angular velocities have the same direction. The moment of inertia of the planet about its spin axis is $I$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item In general $\omega$ and $\Omega$ are not equal. Owing to tidal friction, both the spin angular velocity of the planet and the orbital angular velocity of the satellite change. Find the relation between the changes of these two angular velocities.
+\item Tidal friction reduces the mechanical energy of the planet--satellite system. Under what condition can the system eventually reach a stable state, that is, a state in which the mechanical energy does not change?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.57}
+A semi-cylindrical aircraft hangar of length $l$ and radius $R$ is exposed to the wind, the direction of the wind being perpendicular to its axis; the streamlines are as shown. The wind speed far away on the ground is $v_0$. The wind speed at any point around the hangar can be determined from the ``velocity potential''
+\[
+\phi=-v_0\left(r+\dfrac{R^2}{r}\right)\cos\theta,
+\]
+where $r$ is the distance from a point $B$ near the roof to the axis $O$ of the semi-cylinder, and $\theta$ is the angle between $OB$ and the $x$-axis. The relation between the velocity and the velocity potential is analogous to that between a conservative force and its potential energy. If the door $A$ of the hangar is open, find the force exerted by the wind on the hangar. Take $l=\SI{70}{m}$, $R=\SI{10}{m}$, $v_0=\SI{20}{m/s}$, $\rho=\SI{1.20}{kg/m^3}$, and neglect the pressure difference due to height. (Give two significant figures.)
+\end{problem}
+
+\begin{figbox}{1.57}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-4.1,0) -- (4.1,0);
+  \foreach \x in {-4.0,-3.65,...,4.0} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \draw[thickline] (2,0) arc (0:180:2);
+  \draw[smooth,thickline] (-3.55,0.55) .. controls (-2.3,2.55) and (2.3,2.55) .. (3.55,0.55);
+  \draw[smooth,thickline] (-3.75,0.35) .. controls (-2.4,2.1) and (2.4,2.1) .. (3.75,0.35);
+  \draw[smooth,thickline] (-3.9,0.18) .. controls (-2.5,1.7) and (2.5,1.7) .. (3.9,0.18);
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-2,0);
+  \coordinate (B) at ({2*cos(55)},{2*sin(55)});
+  \draw[thickline] (O) -- (A);
+  \draw[thickline] (O) -- (B);
+  \node[above left] at (-1.15,0.06) {$R$};
+  \node[right] at (0.95,1.02) {$r$};
+  \node at (1.55,1.85) {$B$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (O) {$O$};
+  \draw (0.6,0) arc (0:55:0.6);
+  \node at (0.85,0.32) {$\theta$};
+  \draw[axis] (0,0) -- (4.0,0) node[right] {$x$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.58}
+Two uniform rods, each of length $l$ and mass $m$, are joined at their upper ends by a light smooth hinge and stand upright on a smooth horizontal floor with the angle between them $\alpha=60^\circ$, as shown. They are released from rest. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the acceleration of the hinge immediately after release;
+\item the velocity and acceleration of the hinge when the angle between the rods becomes $\alpha'=90^\circ$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.58}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-3.2,0) -- (3.2,0);
+  \foreach \x in {-3.1,-2.75,...,3.1} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \coordinate (T) at (0,3.95);
+  \draw[thickline] (T) -- (-2.28,0);
+  \draw[thickline] (T) -- (2.28,0);
+  \draw (0,3.25) arc (-30:30:0.7);
+  \node at (0,3.42) {$\alpha$};
+  \fill (T) circle (1.6pt);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.59}
+A uniform rod of length $l$ and mass $m$ lies horizontally at the corner of a table, with a length $\frac{1}{3}l$ on the table and the remaining $\frac{2}{3}l$ projecting beyond the table edge, as shown. The rod is released from rest. Find the angle $\theta$ through which the rod has turned downward when it begins to slide relative to the table corner. The coefficient of friction between the rod and the table corner is $\mu$.
+\end{problem}
+
+\begin{figbox}{1.59}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) -- (3.4,0);
+  \foreach \x in {0,0.32,...,3.2} \draw[thickline] (\x,0) -- (\x-0.18,-0.2);
+  \draw[thickline] (3.4,0) -- (3.4,-2.9);
+  \foreach \y in {0,-0.35,...,-2.75} \draw[thickline] (3.4,\y) -- (3.22,\y-0.18);
+  \draw[thickline,fill=white] (1.2,0.03) rectangle (7.8,0.15);
+  \draw[dashedline] (1.71,1.41) -- (6.77,-2.83);
+  \draw[dashedline] (2.03,0.68) -- (7.09,-1.95);
+  \draw (4.05,0) arc (0:-40:0.65);
+  \node at (4.33,-0.32) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.60}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item A thin-walled cylindrical shell of radius $R$ and mass $m$ (its mass being concentrated on the cylindrical surface) is filled with water of mass $\mu$. It rolls without slipping down the inclined face of a fixed wedge of inclination angle $\theta$, as shown. Assuming that there is no friction between the water and the cylinder wall, find the acceleration of the centre of mass of the water-filled cylinder.
+\item Suppose the wedge is not fixed but is placed on a smooth horizontal surface and has mass $M$.
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the acceleration of the wedge while the water-filled cylinder rolls down.
+\item If the cylinder starts from rest at a height $h$ above the table top and rolls down, find the velocity of the wedge when it reaches the table top.
+\end{enumerate}
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.60}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-0.3,0) -- (7.2,0);
+  \foreach \x in {-0.25,0.1,...,7.1} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \draw[thickline] (0,0) -- (6.4,0) -- (6.4,2.9) -- cycle;
+  \draw[dashedline] (-0.15,2.9) -- (6.4,2.9);
+  \draw (0.9,0) arc (0:24.4:0.9);
+  \node at (1.18,0.26) {$\theta$};
+  \draw[dim] (-0.35,0) -- (-0.35,2.9) node[midway,left] {$h$};
+  \coordinate (C) at (4.56,2.78);
+  \draw[thickline] (C) circle (0.65);
+  \draw[thickline] (C) -- ++(0.46,0.46);
+  \node[right] at (4.98,3.22) {$R$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.61}
+A uniform rod $AB$ of mass $m$ and length $2a$ has its end $A$ connected by a light smooth hinge to a horizontal light rod $OA$ of length $b$. The rod $AB$ can rotate freely about the hinge in a vertical plane. The two rods now rotate together about a vertical axis through $O$ with constant angular velocity $\omega$. Let $\theta$ be the angle between the rod $AB$ and the vertical, as shown.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the relation that the possible values of $\theta$ must satisfy when the rod $AB$ is in equilibrium relative to the rod $OA$ during the rotation.
+\item State how many possible equilibrium positions $\theta$ has between $0$ and $2\pi$, and discuss the stability of the equilibria.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.61}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thickline] (0,-1.1) -- (0,5.5);
+  \draw[->] (-0.45,5.15) arc[start angle=180,end angle=360,x radius=0.45,y radius=0.15];
+  \node[right] at (0.52,5.22) {$\omega$};
+  \draw[thickline] (0,0.05) -- (3.4,0.05);
+  \draw[thickline] (0,-0.05) -- (3.4,-0.05);
+  \draw[thickline] (3.4,0.05) circle (0.09);
+  \node[left] at (-0.05,-0.05) {$O$};
+  \node[above left] at (3.38,0.12) {$A$};
+  \draw[dashedline] (3.4,0) -- (3.4,4.5);
+  \draw[thickline] (3.46,0.05) -- ++(2.24,3.88);
+  \draw[thickline] (3.34,-0.05) -- ++(2.24,3.88);
+  \node[above right] at (5.55,3.9) {$B$};
+  \draw (3.4,0.95) arc (90:60:0.95);
+  \node at (3.72,0.98) {$\theta$};
+  \node[below right] at (4.25,2.15) {$2a$};
+  \draw[dim] (0,-0.45) -- (3.4,-0.45) node[midway,below] {$b$};
+  \draw[dashedline] (0,-0.45) -- (0,0);
+  \draw[dashedline] (3.4,-0.45) -- (3.4,0);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.62}
+A solid uniform sphere of radius $R$ initially has its centre of mass at rest but rotates about a horizontal axis through the centre with angular velocity $\omega_0$. It falls vertically to the ground from a position in which its lowest point is at a height $h$ above the ground. The coefficient of restitution between the sphere and the ground is $e$, and the coefficient of friction between them is $\mu$. Neglect air resistance and the deformation produced during the collision.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the velocity of the centre of mass and the spin angular velocity of the sphere after the collision.
+\item Find the horizontal distance between the first and the second landing points.
+\item Draw the curve of the tangent of the angle $\theta$ between the velocity of the centre of mass after the collision and the ground against the initial angular velocity $\omega_0$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.62}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thickline] (-0.4,0) -- (8.2,0);
+  \foreach \x in {-0.35,0,...,8.1} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \draw[dashedline] (1.5,3.95) -- (1.5,0);
+  \draw[dim] (0.55,0) -- (0.55,3.95) node[midway,left] {$h$};
+  \draw[thickline] (1.5,4.6) circle (0.65);
+  \draw[->] (1.75,5.12) arc[start angle=50,end angle=-40,radius=0.48];
+  \node[right] at (2.25,5.05) {$\omega_0$};
+  \draw[thickline] (1.5,0.65) circle (0.65);
+  \draw[dashedline] (1.5,0.65) -- (7.5,0.65);
+  \draw[force] (1.5,0.65) -- ++(55:1.55);
+  \draw (2.05,0.65) arc (0:55:0.55);
+  \node at (2.28,0.92) {$\theta$};
+  \draw[dashedline,smooth,domain=1.5:7.4,samples=60]
+    plot (\x,{0.65+1.85*(1-((\x-4.45)/2.95)^2)});
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.63}
+A simple toy gyroscope consists of a uniform disc of mass $m$ and radius $R$ mounted perpendicularly and symmetrically at the midpoint of a light thin rod of length $l$ and radius $r\ (\ll R)$. Initially one end of the rod rests on the ground, the rod makes an angle $\theta$ with the vertical, and the gyroscope spins about the rod axis with a very large angular velocity $\omega$, as shown. The friction between the rod and the horizontal ground is small, with coefficient $\mu$. Neglect the nutation of the gyroscope, and assume that the fractional decrease of $\omega$ during one precession period is very small.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Describe the motion of the gyroscope and find the precession angular velocity.
+\item After what time does the rod axis become vertical?
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.63}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thickline] (-0.5,0) -- (7.4,0);
+  \foreach \x in {-0.45,0,...,7.3} \draw[thickline] (\x,0) -- (\x-0.2,-0.2);
+  \draw[thickline,rotate around={-25:(3.2,4.1)}] (3.2,4.1) ellipse (1.7 and 0.55);
+  \draw[thickline] (1.86,0.05) -- (3.82,5.95);
+  \draw[thickline] (1.94,-0.05) -- (3.90,5.85);
+  \draw[dashedline] (1.9,0) -- (1.9,5.4);
+  \draw (1.9,1.1) arc (90:72:1.1);
+  \node at (2.22,1.12) {$\theta$};
+  \draw[->] (3.35,6.12) arc[start angle=160,end angle=340,x radius=0.35,y radius=0.13];
+  \node[right] at (3.80,6.15) {$\omega$};
+  \draw[thickline] (3.2,4.1) -- ++(1.28,-0.80);
+  \node[left] at (3.85,3.45) {$R$};
+  \node at (4.55,4.42) {$m$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.64}
+A rocket ship flies past the Earth with speed $v=0.8c$. Observers on the ship and on the Earth agree that this event occurs at 12:00.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item According to the clock on the ship, the ship passes a space station at 12:30. The space station is fixed relative to the Earth, and its clock is synchronised with the clocks on the Earth. When the ship passes the space station, what does the station's clock read?
+\item At ship time 12:30, that is, when it passes the space station, the ship sends a radio report signal back to the Earth. At what Earth time is this signal received?
+\item If, at the instant the Earth receives the signal, it immediately sends a reply signal, at what ship time is this reply signal received?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.65}
+A thick glass plate moves to the right with speed $v$. At point $A$ there is a flash lamp, and the light emitted by it passes through the thick glass and reaches point $B$, as shown. The distance between $A$ and $B$ is $L$, the thickness of the glass in its rest frame is $D_0$, and the refractive index of the glass is $n$. Find the time required for the light to travel from $A$ to $B$.
+\end{problem}
+
+\begin{figbox}{1.65}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline,fill=black!5] (2.2,0.6) rectangle (3.3,4.4);
+  \node at (2.75,2.5) {$n$};
+  \draw[dashedline] (0.4,2.5) -- (5.6,2.5);
+  \fill (0.4,2.5) circle (1.6pt) node[left] {$A$};
+  \fill (5.6,2.5) circle (1.6pt) node[right] {$B$};
+  \draw[dashedline] (0.4,2.5) -- (0.4,0.1);
+  \draw[dashedline] (5.6,2.5) -- (5.6,0.1);
+  \draw[dim] (0.4,0.2) -- (5.6,0.2) node[midway,below] {$L$};
+  \draw[dashedline] (2.2,4.4) -- (2.2,4.75);
+  \draw[dashedline] (3.3,4.4) -- (3.3,4.75);
+  \draw[dim] (2.2,4.65) -- (3.3,4.65) node[midway,above] {$D_0$};
+  \draw[force] (3.5,1.0) -- (4.4,1.0) node[right] {$v$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.66}
+In an inertial frame $S$, two spacecraft $A$ and $B$ are observed to fly parallel to each other in opposite directions along straight lines, the distance between their tracks being $d$, as shown. The speed of each spacecraft is $c/2$. When the two spacecraft reach their closest approach (shown by the dashed line in the figure), spacecraft $A$ throws out a small packet with speed $\frac{3}{4}c$ (as observed in $S$).
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item At what angle must the packet be thrown if it is to be received by spacecraft $B$? Assume that spacecraft $A$ carries a coordinate system $S'$ whose axes are parallel to those of $S$, and that $S'$ moves relative to $S$ in a direction parallel to the $y$-axis.
+\item As seen by the observer on spacecraft $A$, what is the speed of the packet?
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.66}
+\begin{tikzpicture}[scale=0.95]
+  \draw[dashedline] (1.3,0.7) -- (1.3,5.5);
+  \draw[dashedline] (5.3,0.7) -- (5.3,5.5);
+  \draw[dashedline] (1.3,2.85) -- (5.3,2.85);
+  \draw[dim] (1.3,5.75) -- (5.3,5.75) node[midway,above] {$d$};
+  \fill (1.3,4.55) circle (2pt) node[right] {$A$};
+  \draw[force] (1.3,5.25) -- (1.3,4.72);
+  \node[right] at (1.42,5.08) {$c/2$};
+  \fill (5.3,1.45) circle (2pt) node[left] {$B$};
+  \draw[force] (5.3,0.75) -- (5.3,1.28);
+  \node[left] at (5.18,1.02) {$c/2$};
+  \draw[axis] (0.15,0.25) -- (1.0,0.25) node[right] {$x$};
+  \draw[axis] (0.15,0.25) -- (0.15,1.1) node[above] {$y$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.67}
+Two straight rulers $AB$ and $A'B'$ of equal proper length are at rest in frames $S$ and $S'$ respectively. Frame $S'$ moves relative to $S$ with speed $v$ in the $x$ direction, as shown. The clocks at rest at $A$ and $B$ are synchronised, and the clocks at rest at $A'$ and $B'$ are also synchronised. When $A$ meets $A'$, both clocks are set to zero; when $B$ meets $B'$, both clocks are also set to zero. Suppose that when $A$ meets $A'$, $A$ emits a light signal, and it is known that when $B'$ receives this signal, the clock at $B'$ reads 1 time unit.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item When $B$ receives this signal, what does the clock at $B$ read, in time units?
+\item When $B'$ receives this signal, it immediately sends a reply light signal. Find:
+\begin{enumerate}[label=(\roman*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the reading of the clock at $A'$, in time units, when $A'$ receives the reply signal;
+\item the reading of the clock at $A$, in time units, when $A$ receives the reply signal.
+\end{enumerate}
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.67}
+\begin{tikzpicture}[scale=0.92]
+  \draw[thickline,fill=black!5] (1.6,2.65) rectangle (7.0,2.95);
+  \node[below left] at (1.6,2.65) {$A'$};
+  \node[below right] at (7.0,2.65) {$B'$};
+  \node[left] at (1.30,2.80) {$S'$};
+  \draw[axis] (1.1,3.45) -- (7.35,3.45) node[right] {$x'$};
+  \draw[force] (3.1,3.85) -- (4.0,3.85) node[midway,above] {$v$};
+  \draw[thickline,fill=black!5] (0.8,0.8) rectangle (6.2,1.1);
+  \node[below left] at (0.8,0.8) {$A$};
+  \node[below right] at (6.2,0.8) {$B$};
+  \node[left] at (0.48,0.95) {$S$};
+  \draw[axis] (0.4,0.25) -- (6.6,0.25) node[right] {$x$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.68}
+At the end of a novel by Fred Hoyle, the hero flies with a high Lorentz factor in a direction perpendicular to the plane of the Galaxy. He says that he seems to be inside a ``goldfish bowl'' with a blue rim and a red bottom, flying toward the mouth of the bowl. Feynman bet 25 dollar bills that the light from the Galaxy would not look like that. It is known that his speed relative to the galactic frame is $v=0.99c$, and that the angle between his flight direction and the line joining him to the edge of the Galaxy is observed to be $\phi=45^\circ$, as shown.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the angle $\phi'$ between the direction of the light from the edge of the Galaxy and the flight direction, as seen by the traveller.
+\item Find the ratio $\nu'/\nu$ of the frequency $\nu'$ of the light from the edge of the Galaxy received by the traveller to the frequency $\nu$ actually emitted.
+\item Calculate $\phi'$ and $\nu'/\nu$ for various angles $\phi$, and so decide who won the bet.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.68}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thickline,fill=black!12]
+    (0.75,0.5) .. controls (1.15,2.0) and (1.15,3.8) .. (0.75,5.3)
+    .. controls (0.35,3.8) and (0.35,2.0) .. cycle;
+  \node[rotate=90] at (-0.05,2.9) {Galactic frame};
+  \coordinate (O) at (5.0,1.2);
+  \fill (O) circle (1.8pt);
+  \draw[force] (O) -- (3.5,1.2) node[midway,above] {$v$};
+  \draw[dashedline] (O) -- (0.95,5.15);
+  \draw (4.45,1.2) arc[start angle=180,end angle=136,radius=0.55];
+  \node at (4.18,1.53) {$\phi$};
+  \node[right] at (5.05,1.2) {observer};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.69}
+When a light source approaches the Earth with speed $v_1$, person $A$, at rest in the frame $S$ fixed to the Earth, sees the source emit green light of wavelength $\lambda_1=500\unitv{nm}$, while person $B$, in the frame $S'$ moving relative to the Earth with speed $v_2$ in the same direction as $v_1$, sees the source emit red light of wavelength $\lambda_2=600\unitv{nm}$. When the source recedes from the Earth with the same speed $v_1$, $A$ sees red light of wavelength $\lambda_2$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the values of the speeds $v_1$ and $v_2$;
+\item the wavelength of the light seen by $B$ when the source recedes from the Earth with speed $v_1$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.70}
+A particle decays into two $\gamma$-ray photons of energies $E_1$ and $E_2$ respectively, the angle between their directions being $\theta$. Find the rest mass of the particle.
+\end{problem}
+
+\begin{problem}{1.71}
+A $\pi$ meson with momentum $200\unitv{GeV}/c$ decays into a $\mu$ meson and a neutrino $\nu$, that is, $\pi\to\mu+\nu$. In the rest frame of the $\pi$ meson, the lifetime of the $\pi$ meson is $\tau_{\pi 0}=2.60\times10^{-8}\unitv{s}$, its rest energy is $E_{0\pi}=139.6\unitv{MeV}$, the rest energy of the $\mu$ meson is $E_{0\mu}=105.7\unitv{MeV}$, and the rest mass of the neutrino is zero.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the average distance travelled by the $\pi$ meson before it decays.
+\item Find the maximum value of the angle between the direction of motion of the $\mu$ meson in the laboratory frame and the direction of motion of the $\pi$ meson.
+\item Find the maximum and minimum momenta that the neutrino can have.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.72}
+A photon rocket is to fly to the centre of the Galaxy, which is at a distance $R=3.4\times10^4$ light years from the Earth. During the first half of the journey the rocket moves with acceleration $a'=10\unitv{m/s^2}$ (relative to the rest frame of the rocket) in uniformly accelerated motion, and during the second half it decelerates uniformly with the same acceleration. When the rocket reaches its destination its rest mass is $M_0'=1.0\times10^5\unitv{kg}$. What is the minimum power required of the rocket engine at the start of the launch?
+\end{problem}

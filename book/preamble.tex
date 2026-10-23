@@ -1,0 +1,142 @@
+% ---------------------------------------------------------------
+%  Page geometry and typography
+% ---------------------------------------------------------------
+\usepackage[paperwidth=7.5in,paperheight=9.75in,
+            inner=0.95in,outer=0.78in,top=0.82in,bottom=0.88in,
+            headsep=16pt,footskip=28pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,decorations.pathmorphing,
+                decorations.markings,intersections,positioning,shapes.geometric,bending}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{siunitx}
+\sisetup{detect-all,per-mode=symbol}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Training and Selection for the International Physics Olympiad},
+  pdfauthor={Zheng Yongling (Editor-in-Chief)},
+  pdfsubject={Physics Olympiad problems, solutions and experiments},
+  pdfkeywords={physics, olympiad, mechanics, thermodynamics, electromagnetism, optics, atomic physics}
+}
+
+\definecolor{bookblue}{RGB}{20,45,85}
+
+% ---------------------------------------------------------------
+%  Running heads
+% ---------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\scshape\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\scshape\nouppercase{\leftmark}}
+\fancyfoot[LE,RO]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[LE,RO]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
+
+% ---------------------------------------------------------------
+%  Chapter and part styles
+% ---------------------------------------------------------------
+\titleformat{\chapter}[display]
+  {\normalfont\raggedright}
+  {\color{bookblue}\scshape\large\chaptertitlename\ \thechapter}
+  {10pt}
+  {\color{bookblue}\Huge\bfseries}
+\titlespacing*{\chapter}{0pt}{18pt}{36pt}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{bookblue}}{\thesection}{0.7em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+
+\renewcommand{\partname}{}
+\titleformat{\part}[display]
+  {\centering\normalfont}
+  {}
+  {0pt}
+  {\Huge\scshape\color{bookblue}}
+\titlespacing*{\part}{0pt}{60pt}{50pt}
+
+% ---------------------------------------------------------------
+%  Environments for problems, hints and solutions
+% ---------------------------------------------------------------
+\newenvironment{problem}[1]
+  {\par\addvspace{9pt}\noindent\textbf{Problem~#1.}\hspace{0.55em}\ignorespaces}
+  {\par\addvspace{3pt}}
+
+\newenvironment{hint}[1]
+  {\par\addvspace{8pt}\noindent\textbf{Hint~#1.}\hspace{0.55em}\ignorespaces}
+  {\par\addvspace{3pt}}
+
+\newenvironment{solution}[1]
+  {\par\addvspace{10pt}\noindent\textbf{Solution~#1.}\hspace{0.55em}\ignorespaces}
+  {\par\addvspace{5pt}}
+
+\newenvironment{note}
+  {\par\addvspace{6pt}\begin{small}\noindent\textit{Note.}\hspace{0.5em}\ignorespaces}
+  {\end{small}\par\addvspace{4pt}}
+
+\newenvironment{commentary}
+  {\par\addvspace{5pt}\begin{small}\noindent\textit{Comment.}\hspace{0.5em}\ignorespaces}
+  {\end{small}\par\addvspace{4pt}}
+
+% Figure box: usage \begin{figbox}{1.28} ... tikzpicture ... \end{figbox}
+\newenvironment{figbox}[1]
+  {\par\addvspace{6pt}\def\figboxcaption{#1}\begin{center}%
+   \begin{minipage}{0.96\linewidth}\centering}
+  {\par\smallskip{\small Fig.~\figboxcaption}\end{minipage}\end{center}\addvspace{5pt}}
+
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+
+% ---------------------------------------------------------------
+%  Mathematics shorthands
+% ---------------------------------------------------------------
+\newcommand{\dd}{\mathrm{d}}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\degree}{^{\circ}}
+\newcommand{\avg}[1]{\overline{#1}}
+\newcommand{\unitv}[1]{\,\mathrm{#1}}
+\newcommand{\dg}{\degree}
+\newcommand{\vs}{\vspace{2pt}}
+\setlength{\parindent}{1.2em}
+\setcounter{tocdepth}{2}
+\setlength{\parskip}{0pt}
+\emergencystretch=1.2em
+\clubpenalty=1000
+\widowpenalty=1000
+
+% Standard TikZ styles used throughout the book
+\tikzset{
+  >={Stealth[length=1.8mm,width=1.3mm]},
+  axis/.style={->,line width=0.5pt},
+  thinline/.style={line width=0.5pt},
+  thickline/.style={line width=0.9pt},
+  dashedline/.style={dashed,line width=0.5pt},
+  force/.style={->,line width=0.7pt},
+  dim/.style={<->,line width=0.4pt},
+  hatch/.style={pattern=north east lines,pattern color=black!55},
+  ball/.style={circle,draw,line width=0.5pt,inner sep=0pt,minimum size=5pt},
+  mass/.style={rectangle,draw,line width=0.5pt,inner sep=1.5pt},
+  spring/.style={decorate,decoration={zigzag,segment length=2.2mm,amplitude=1.1mm}}
+}
+
+\usepackage{makeidx}
+\makeindex

@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.idx
+*.ilg
+*.ind
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Temporary previews and test builds
+*.png
+test*.tex
+test*.pdf
+prev*.pdf
+
+book/main.pdf
+build*.txt
+

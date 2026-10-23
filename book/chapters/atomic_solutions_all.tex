@@ -1,0 +1,1357 @@
+\begin{solution}{5.01}
+According to Einstein's photoelectric equation, the maximum kinetic energy $E_{k\max}$ of the
+photoelectrons is
+\begin{equation*}
+E_{k\max} = h\nu - \phi_0,
+\end{equation*}
+where $h\nu$ is the energy of the incident photon and $\phi_0$ is the work function of the
+metal. Let the stopping voltage be $V_s$; then $eV_s = E_{k\max}$. Substituting this into the
+above, the work function of the metal is found to be
+\begin{equation*}
+\phi_0 = h\nu - eV_s = (1240/200) - 2.6 = 3.6\unitv{eV}.
+\end{equation*}
+
+When ultraviolet light of wavelength $\lambda = 300\unitv{nm}$ is used instead, the stopping
+voltage $V_s$ is
+\begin{equation*}
+V_s = (hc/\lambda - \phi_0)/e = 1240/300 - 3.6 = 0.53\unitv{V}.
+\end{equation*}
+
+If visible light is used to irradiate the surface of this metal, then, since the wavelength of
+visible light is greater than $400\unitv{nm}$ and its energy is less than $3.1\unitv{eV}$,
+while the minimum work necessary for an electron to escape from the metal is
+$\phi_0 = 3.6\unitv{eV}$, no photoelectric effect can occur.
+\end{solution}
+
+\begin{solution}{5.02}
+\textbf{Method 1.}
+
+For part (h), if the production of a large number of protons is regarded as the result of
+$\gamma$ photons striking the hydrogen nuclei in paraffin (this phenomenon is usually called
+the Compton effect of the proton), then, analogously to the Compton effect, we may regard the
+process as an elastic collision between a $\gamma$ photon of energy $h\nu$ and a free proton
+initially at rest. Since a photon is involved and the recoil velocity of the proton may
+approach the speed of light, relativistic expressions must be used.
+
+From the conservation of energy and mass,
+\begin{equation*}
+\frac{hc}{\lambda} + M_pc^2 = \frac{hc}{\lambda'} + \sqrt{(pc)^2 + (M_pc^2)^2}.
+\end{equation*}
+
+From the conservation of momentum,
+\begin{equation*}
+p^2 = \left(\frac{h}{\lambda}\right)^2 + \left(\frac{h}{\lambda'}\right)^2
+      - 2\,\frac{h^2}{\lambda\lambda'}\cos\theta,
+\end{equation*}
+where $\lambda$ and $\lambda'$ are respectively the wavelengths of the $\gamma$ photon before
+and after the collision; $M_pc^2$ is the rest energy of the proton,
+$M_pc^2 = 0.511\times 1836 = 938\unitv{MeV}$; $p$ is the recoil momentum of the proton; and
+$\theta$ is the scattering angle of the photon. Combining the above two equations and
+eliminating $p$, we obtain
+\begin{equation*}
+\Delta\lambda = \lambda' - \lambda = \frac{hc}{M_pc^2}(1 - \cos\theta).
+\end{equation*}
+
+When $\theta = \pi$, the recoil energy of the proton is maximum, namely
+\begin{equation*}
+E_k = \left(\frac{hc}{\lambda}\right) - \left(\frac{hc}{\lambda'}\right)
+    = \left(\frac{hc}{\lambda}\right)
+      - \frac{hc}{\lambda + \dfrac{2hc}{M_pc^2}}
+    = 5.7\unitv{MeV}.
+\end{equation*}
+
+From the above equation the energy $h\nu$ of the incident photon can be solved:
+\begin{align*}
+h\nu = \frac{hc}{\lambda}
+     &= \frac{1}{2}\left(E_k + \sqrt{E_k^2 + 2E_kM_pc^2}\right)\\
+     &= \frac{1}{2}\times\left(5.7 + \sqrt{5.7^2 + 2\times 5.7\times 938}\right)
+      = 55\unitv{MeV}.
+\end{align*}
+
+That is, to produce, after scattering, a proton with the maximum recoil energy of
+$5.7\unitv{MeV}$, the incident $\gamma$ photon must have an energy of $55\unitv{MeV}$. This
+result is inconsistent with the result of (a); therefore this particle is not a $\gamma$
+photon, unless the conservation of energy and the conservation of momentum are abandoned.
+
+\textbf{Method 2.}
+
+Analogously to Method 1, we obtain
+\begin{equation*}
+\Delta\lambda = \lambda' - \lambda = \frac{hc}{M_pc^2}(1 - \cos\theta).
+\end{equation*}
+When $\theta = \pi$, the recoil energy of the proton is maximum, namely
+\begin{equation*}
+E_k = \left(\frac{hc}{\lambda}\right) - \left(\frac{hc}{\lambda'}\right)
+    = \left(\frac{hc}{\lambda}\right)
+      - \frac{hc}{\lambda + \dfrac{2hc}{M_pc^2}}
+    = h\nu - \frac{h\nu}{1 + \dfrac{2h\nu}{M_pc^2}}.
+\end{equation*}
+From part (a) we know that $h\nu = 15\unitv{MeV}$. Substituting this into the above equation
+gives
+\begin{equation*}
+E_k = 15 - 15/(1 + 2\times 15/938) = 0.46\unitv{MeV}.
+\end{equation*}
+This result is inconsistent with the result of (b); therefore this particle is not a $\gamma$
+photon, unless the conservation of energy and the conservation of momentum are abandoned.
+
+\begin{commentary}
+The problem is based on some experiments connected with the discovery of the neutron. In 1920,
+after much reflection, Rutherford put forward his famous neutron hypothesis:\footnote{E.~Rutherford,
+\emph{Proc. Roy. Soc.} A97 (1920) p.~374.} he considered it possible that there exists a new
+kind of neutral atom, perhaps a double particle formed by an electron and a hydrogen nucleus
+bound together more tightly. He imagined that this atom would have many novel properties,
+properties that are necessary for explaining the composition of the nuclei of heavy elements.
+
+In order to test Rutherford's hypothesis, scientists carried out a large amount of
+experimental work. In 1930 the German W. Bothe and his student H. Becker were the first to
+publish the results of experiments in which particles produced by radioactive polonium
+bombarded beryllium: when $\alpha$ particles strike beryllium, the beryllium emits what was
+then regarded as a more penetrating kind of $\gamma$ radiation. In 1932 the Joliot-Curies
+repeated these experiments with a very strong polonium $\alpha$ source and measured the
+penetrating power of this unknown radiation through lead. They found that the intensity of
+the radiation emitted by beryllium decreased by only one half in passing through $4.7\unitv{cm}$
+of lead. If this radiation were $\gamma$ rays, its energy would be about $15\unitv{MeV}$. This
+value is much higher than the energy of the $\gamma$ rays emitted by natural radioactive
+substances. They also found that this unknown radiation, on falling on hydrogen-containing
+paraffin, produces many protons of very high speed. Unfortunately, they did not carefully
+check whether, according to the conservation of momentum and the conservation of energy,
+$\gamma$ particles of energy $15\unitv{MeV}$ striking hydrogen nuclei could produce such a
+high-speed proton stream. Like Bothe, they regarded this radiation emitted by beryllium as
+$\gamma$ rays, and considered the production of the proton stream to be the result of
+$\gamma$ particles striking hydrogen nuclei, a kind of special phenomenon similar to the
+Compton effect. In this way both Bothe and the Joliot-Curies missed the opportunity of
+discovering the neutron.
+
+Rutherford's early student and capable assistant J. Chadwick had been engaged in experiments
+searching for the neutron ever since 1921. In 1932, when he read the report of the
+Joliot-Curies on the astonishing properties of the beryllium radiation, he told Rutherford of
+the views of the Joliot-Curies. Rutherford did not believe that this was the Compton effect,
+and thought it very likely that the neutron, sought for many years, had appeared here.
+
+Chadwick quickly rechecked the experimental results of Bothe and of the Joliot-Curies. By
+measuring the range of these protons in air, he found the energy of the protons to be
+$5.7\unitv{MeV}$. He also extended the experiment, using the beryllium radiation to irradiate
+many other substances, including the gases hydrogen, helium, nitrogen and argon, and
+determined the energy of the recoil atoms produced thereby, from which he calculated the
+energy of the incident $\gamma$ rays. Chadwick found that this result depended on the gas
+used. For example, for recoil nitrogen atoms of energy $1.4\unitv{MeV}$, the energy of the
+incident $\gamma$ rays should be $90\unitv{MeV}$, while to produce recoil protons of energy
+$5.7\unitv{MeV}$ the energy of the $\gamma$ rays should be $55\unitv{MeV}$. If the beryllium
+radiation consisted of neutral particles of mass approximately equal to the proton mass, then
+when these particles (called neutrons by Chadwick, following Rutherford) make a head-on
+collision with the atoms of a gas, the maximum recoil energy will appear. As for the recoil
+protons, since the proton and the neutron have equal masses, in a head-on collision the
+proton will acquire the whole kinetic energy of the neutron; hence the energy of the neutrons
+emitted from beryllium equals the maximum recoil energy of the protons, $5.7\unitv{MeV}$.
+Neutrons of this energy, incident on nitrogen gas, can produce recoil nitrogen atoms of
+energy $1.4\unitv{MeV}$.
+
+In the same year Chadwick published a paper entitled ``The Existence of the Neutron'',\footnote{J.~Chadwick,
+\emph{Proc. Roy. Soc.} (London) A136 (1932) p.~692.} in which he described his experimental
+results and theoretical analysis in detail. He pointed out in the paper that only by
+abandoning the conservation of energy and momentum could the hypothesis that the beryllium
+radiation consists of $\gamma$ rays be supported. The neutron hypothesis, on the other hand,
+gives a direct and simple explanation of the experimental facts. It is self-consistent and
+offers new insight into the structure of atomic nuclei. Using the nuclear reaction
+${}^{4}\mathrm{He} + {}^{11}\mathrm{B} \rightarrow {}^{14}\mathrm{N} + \mathrm{n}$, Chadwick
+concluded that the mass of the neutron lies roughly between 1.005 and 1.008.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.03}
+(1) From the Compton shift formula
+\begin{equation*}
+\Delta\lambda = \lambda_c(1 - \cos\theta),
+\end{equation*}
+where $\lambda_c = h/(m_ec) = 0.0243\unitv{\mathring{A}}$ is the Compton wavelength of the
+electron (for the derivation of the formula see Solution 5.02), we obtain:
+
+(a) If after scattering the electron moves along the direction of incidence of the photon,
+then $\theta = \pi$, and
+\begin{equation*}
+\Delta\lambda = 2\lambda_c = 0.00486\unitv{nm}.
+\end{equation*}
+
+(b) If the photon still moves along the original direction of incidence, then $\theta = 0$ and
+$\Delta\lambda = 0$.
+
+\begin{figbox}{5.03}
+\begin{tikzpicture}[scale=1.0]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (5,0);
+  \coordinate (B) at (5,2.1);
+  \draw[force] (O) -- (A) node[midway,below] {$h/\lambda$};
+  \draw[force] (O) -- (B) node[midway,above left] {$h/\lambda'$};
+  \draw[force] (B) -- (A) node[midway,right] {$p$};
+  \draw (1.0,0) arc (0:22.8:1.0);
+  \node at (1.28,0.28) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+(2)(a) From the conservation of energy and mass,
+\begin{equation*}
+\frac{hc}{\lambda} + \sqrt{p_e^2c^2 + E_0^2} = \frac{hc}{\lambda'} + E_0.
+\end{equation*}
+
+From the conservation of momentum,
+\begin{equation*}
+p_e^2 = \left(\frac{h}{\lambda}\right)^2 + \left(\frac{h}{\lambda'}\right)^2
+      - 2\,\frac{h^2}{\lambda\lambda'}\cos\theta,
+\end{equation*}
+where $\lambda$ and $\lambda'$ are respectively the wavelengths of the photon before and after
+the collision; $E_0$ is the rest energy of the electron; $p_e$ is the initial momentum of the
+electron; and $\theta$ is the scattering angle of the photon. Combining the above equations
+and eliminating $p_e$, we obtain
+\begin{align*}
+\Delta\lambda = \lambda - \lambda' &= \lambda_c(1 - \cos\theta)\\
+&= \lambda_c(1 - \cos 60\degree) = 0.0012\unitv{nm}.
+\end{align*}
+
+(b) It is known that the energy of the incident photon equals the rest energy of the electron;
+hence the wavelength of the incident photon is $\lambda = \lambda_c$. From (a) we have
+$\Delta\lambda = \lambda_c/2$. Substituting $\lambda$ and $\Delta\lambda$ into the following
+expression, we obtain the energy $h\nu'$ of the scattered photon:
+\begin{equation*}
+h\nu' = \frac{hc}{\lambda'} = \frac{hc}{\lambda - \Delta\lambda} = 2E_0 = 1.02\unitv{MeV}.
+\end{equation*}
+From the conservation of energy, the kinetic energy $E_k$ of the electron before the collision
+is found to be
+\begin{equation*}
+E_k = \left(\frac{hc}{\lambda'}\right) - \left(\frac{hc}{\lambda}\right)
+    = E_0 = 0.511\unitv{MeV}.
+\end{equation*}
+
+\begin{commentary}
+Part (1) of this problem discusses the Compton effect: a high-frequency $\gamma$ photon makes
+an elastic collision with a free electron that is approximately at rest; the photon transfers
+part of its energy to the electron, this becoming the recoil kinetic energy of the electron,
+while the wavelength of the scattered photon becomes longer. Part (2) discusses the reverse
+process of the Compton effect: the collision of a high-energy relativistic electron with a
+low-frequency photon, after which the energy (frequency) of the scattered photon becomes
+larger and its wavelength shorter; it is therefore called the inverse Compton effect. The
+inverse Compton effect is an important non-thermal radiation mechanism for the production of
+$\gamma$ rays.
+
+The Compton effect was discovered by A.~H. Compton in 1923, who also gave its theoretical
+explanation. Following the photoelectric effect, it provided further confirmation of the
+particle nature of radiation; hence it is of extremely profound significance both
+theoretically and experimentally. For his series of experiments on the Compton effect and his
+theoretical explanation of it, Compton shared the 1927 Nobel Prize in Physics with Wilson of
+Britain.\footnote{The Chinese physicist Wu Youxun made outstanding contributions to Compton
+scattering experiments; see Guan Weiyan, ``A brief account of Professor Wu Youxun'',
+\emph{Physics}, 11 (1982) 457.} During the ten years from 1930 to 1940 Compton devoted himself
+to the study of cosmic rays and discovered the inverse Compton effect. The Compton effect and
+the inverse Compton effect are of great importance in astrophysics, because the interaction
+of $\gamma$ photons and electrons in cosmic rays is an important aspect of the Compton effect,
+while the inverse Compton effect of relativistic electrons is an important topic of
+contemporary astrophysics. For example, in April 1991, following the Hubble telescope, NASA
+launched the second giant space observatory, the Compton Gamma Ray Observatory, which can
+image cosmic $\gamma$-ray sources and their background and measure their spectra and their
+time variation. The Compton imaging telescope with which it is equipped uses the Compton
+effect to detect $\gamma$ rays of energy $1$--$30\unitv{MeV}$ in the universe. As another
+example, the large number of high-temperature electrons present in the ionised gas of clusters
+of galaxies produce inverse Compton scattering of the photons of the cosmic microwave
+background, giving rise to the so-called Sunyaev--Zel'dovich (SZ) effect. The SZ effect is a
+very effective means of studying clusters of galaxies; in particular, the SZ effect depends
+only on the intrinsic properties of the cluster and not on its position, which will be
+favourable for discovering clusters of high redshift. It is therefore of extremely great
+significance for studying the evolution of clusters of galaxies. Astronomical telescopes
+built on the basis of the SZ effect will help cosmologists to find clusters of galaxies that
+are too distant or too faint to be discovered by other methods. These observations in turn
+help cosmologists to discover how clusters evolve, and may make it possible to locate the
+dark matter in the universe. The SZ cluster survey telescope now under construction will use
+the SZ effect and provide an entirely new and effective way of determining cosmological
+parameters.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.04}
+(1) As shown in Fig.~5.04(a), before the collision the energy of the electron is $E$, its
+momentum is $p_x = p$, $p_y = 0$; the energy of the photon is $h\nu$, its momentum is
+$p_x = -h\nu/c$, $p_y = 0$. As shown in Fig.~5.04(b), after the collision the momentum of the
+electron is $p'$, directed at an angle to the $x$-direction; the energy of the photon is
+$h\nu'$, its momentum is $h\nu'/c$, making an angle $\theta$ with the $x$-direction.
+
+\begin{figbox}{5.04(a)}
+\begin{tikzpicture}[scale=0.95]
+  \node at (-2.9,0.55) {electron};
+  \node at (-2.9,-0.55) {$(E,p,0)$};
+  \node at (2.9,0.55) {photon};
+  \node at (2.9,-0.55) {$(h\nu,-h\nu/c,0)$};
+  \draw[force] (-1.75,0) -- (-0.2,0);
+  \draw[force] (1.75,0) -- (0.2,0);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{5.04(b)}
+\begin{tikzpicture}[scale=1.0]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (5.6,0);
+  \coordinate (B) at (4.3,2.1);
+  \draw[force] (O) -- (A) node[midway,below] {$p-h\nu/c$};
+  \draw[force] (O) -- (B) node[midway,above left] {$h\nu'/c$};
+  \draw[force] (B) -- (A) node[midway,above right] {$p'$};
+  \draw (1.1,0) arc (0:26:1.1);
+  \node at (1.38,0.30) {$\theta$};
+  \node[above left] at (B) {scattered photon};
+  \node[below] at (4.55,0.45) {scattered electron};
+\end{tikzpicture}
+\end{figbox}
+
+From the conservation of energy,
+\begin{equation}
+E + h\nu = \sqrt{p'^2c^2 + E_0^2} + h\nu', \tag{1}
+\end{equation}
+where $E_0$ is the rest energy of the electron. From the conservation of momentum,
+\begin{equation}
+p'^2c^2 = (h\nu')^2 + (pc - h\nu)^2 - 2(h\nu')(pc - h\nu)\cos\theta. \tag{2}
+\end{equation}
+
+Substituting (2) into (1), we obtain
+\begin{equation*}
+h\nu' = \frac{(E + pc)h\nu}{E + h\nu + h\nu\cos\theta - pc\cos\theta}.
+\end{equation*}
+
+Since
+\begin{equation*}
+E = \sqrt{p^2c^2 + E_0^2} = 20\unitv{GeV} \gg E_0,
+\end{equation*}
+we have $E \simeq pc$, and hence
+\begin{equation*}
+h\nu' \simeq \frac{2h\nu E}{h\nu(1 + \cos\theta) + E - pc\cos\theta}.
+\end{equation*}
+
+(2) When $\theta = 0$, the energy of the scattered photon is maximum, its value being
+\begin{equation*}
+(h\nu')_{\max} = \frac{2h\nu E}{2h\nu + E - pc}.
+\end{equation*}
+
+In the extreme relativistic case,
+\begin{equation*}
+E = \sqrt{p^2c^2 + E_0^2} \simeq pc + \frac{E_0^2}{2pc},
+\end{equation*}
+\begin{equation*}
+E - pc \simeq \frac{E_0^2}{2E} \simeq \frac{(0.5\times 10^6)^2}{2\times 2\times 10^{10}}
+\approx 6\unitv{eV}.
+\end{equation*}
+
+For a typical visible photon,
+\begin{equation*}
+h\nu = \frac{hc}{\lambda} \approx \frac{12\,400}{5\,000} \approx 2.5\unitv{eV}.
+\end{equation*}
+Thus the maximum photon energy obtainable by this technique is
+\begin{equation*}
+(h\nu')_{\max} = \frac{2\times 2.5\times 20}{2\times 2.5 + 6} = 9\unitv{GeV}.
+\end{equation*}
+\end{solution}
+
+\begin{solution}{5.05}
+Suppose that the electron moves along the $y$-direction with momentum $p_y$. From the
+relativistic momentum--energy relation,
+\begin{equation*}
+cp_y = \sqrt{E^2 - E_0^2},
+\end{equation*}
+where $c$ is the speed of light, $E$ is the energy of the electron, $E = 1\unitv{MeV}$, and
+$E_0$ is the rest energy of the electron, $E_0 = 0.511\unitv{MeV}$.
+
+When a fast-moving electron travels through a cloud chamber, the ions produced along its path
+form condensation centres, causing the water vapour to condense into small droplets. The
+linear size of a droplet is about $10^{-5}\unitv{m}$; therefore in this case
+$\Delta x = 10^{-5}\unitv{m}$. From the uncertainty relation we may assume that the
+uncertainty in the momentum of the electron in the $x$-direction is about
+\begin{equation*}
+\Delta p_x = \hbar/\Delta x,
+\end{equation*}
+where $\hbar = h/2\pi = 1973\unitv{eV.\mathring{A}}$.
+
+Consequently the motion of the electron will deviate from the $y$-direction by an angle
+$\theta$, and the uncertainty $\Delta\theta$ of this angle is about
+\begin{align*}
+\Delta\theta = \frac{\Delta p_x}{p_y}
+&= \frac{\hbar c}{\Delta x\sqrt{E^2 - E_0^2}}\\
+&= \frac{1973}{10^{-5}\times 10^{10}\times\sqrt{10^{12} - (0.511\times 10^6)^2}}\\
+&= 2.3\times 10^{-8},
+\end{align*}
+\begin{equation*}
+\theta = 2.3\times 10^{-8}\unitv{rad}.
+\end{equation*}
+It is thus seen that the track of the electron will not differ noticeably from a straight
+line.
+
+\begin{figbox}{5.05}
+\begin{tikzpicture}[scale=1.0]
+  \draw[axis] (0,0) -- (0,4.0) node[right] {$p_y$};
+  \draw[axis] (0,0) -- (2.6,0) node[below] {$\Delta p_x$};
+  \draw[force] (0,0) -- (2.3,3.5) node[right] {$p$};
+  \draw[dashedline] (2.3,0) -- (2.3,3.5);
+  \draw[dashedline] (0,3.5) -- (2.3,3.5);
+  \draw (0,1.2) arc (90:56.7:1.2);
+  \node at (0.38,1.48) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+(1) The estimate of $\Delta p_x$ in the solution can evidently be applied to the momentum
+components in every direction; here, in order to estimate the maximum deviation of the
+electron track from a straight line, only the transverse momentum uncertainty is considered.
+
+(2) The particles existing in nature have wave properties. When a particle moves with a
+definite momentum $p$, its wavelength is $\lambda = h/p$. This relation between wavelength and
+momentum holds for all real particles. Under certain conditions, however, we may still regard
+a particle as a classical particle; the uncertainty relation helps us to estimate the range of
+validity of the classical description of particles. For example, under the conditions of this
+problem the energy of the electron is very high and the region to which it is confined is
+relatively large, so that $\Delta p/p \ll 1$; hence the electron may be regarded as a classical
+particle moving along a straight track. At this time the de Broglie wavelength of the electron
+is very short, $\lambda = h/p = 1.4\times 10^{-12}\unitv{m} \ll 10^{-5}\unitv{m}$, which is
+similar to the condition that makes geometrical optics valid in optics. If an electron with a
+kinetic energy of a few electron-volts were confined in a space of atomic size, then in this
+case $\Delta p \sim p$ for the electron, and the electron would have no definite track. The
+classical description of the particle would no longer be applicable.
+
+(3) The $p$ and $E$ in the above formulae are both relativistic, which also shows that there
+is a close relation between quantum theory and relativity. Only when the kinetic energy $E_k$
+of the particle is much smaller than its rest energy $E_0$ may the non-relativistic
+momentum--energy relation $pc = \sqrt{2E_0E_k}$ be used.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.06}
+Let the distance of the electron from the nucleus be $r$, and take the order of magnitude of
+the position uncertainty to be $\Delta x = r$. From the uncertainty relation
+$\Delta x\,\Delta p \ge \hbar$ we have $(\Delta p)^2 = p^2 \ge \hbar^2/r^2$; hence
+
+(1)
+\begin{equation*}
+E = \frac{\hbar^2}{2mr^2} - \frac{Ze^2}{4\pi\varepsilon_0r}.
+\end{equation*}
+When $E$ takes its minimum value the hydrogen-like ion is in its ground state. Let its radius
+be $r_0$ and its energy be $E_1$; from $\left(\dfrac{\dd E}{\dd r}\right)_{r=r_0} = 0$ we obtain
+$r_0$ and $E_1$ as
+\begin{equation*}
+r_0 = \frac{4\pi\varepsilon_0\hbar^2}{Ze^2m},
+\end{equation*}
+\begin{equation*}
+E_1 = -\frac{mZ^2e^4}{2(4\pi\varepsilon_0\hbar)^2}.
+\end{equation*}
+
+(2)
+\begin{equation*}
+E = \sqrt{p^2c^2 + m^2c^4} - \frac{Ze^2p}{4\pi\varepsilon_0\hbar}.
+\end{equation*}
+Let the momentum of the electron when the hydrogen-like ion is in its ground state be $p_0$,
+and its energy be $E_1'$. From $(\dd E/\dd p)_{p=p_0} = 0$ we obtain $p_0$ and $E_1'$ as
+\begin{equation*}
+p_0 = \frac{mcZe^2}{\sqrt{(4\pi\varepsilon_0\hbar c)^2 - (Ze^2)^2}},
+\end{equation*}
+\begin{equation*}
+E_1' = mc^2\sqrt{1 - \left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^2}.
+\end{equation*}
+
+(3) When $\dfrac{Ze^2}{4\pi\varepsilon_0\hbar c} \ll 1$, that is, $Z \ll \alpha^{-1} = 137$,
+expanding the right-hand side of the above expression in series and neglecting the
+higher-order infinitesimals, the above expression can be written as
+\begin{equation*}
+E_1' = mc^2\left[1 - \frac{1}{2}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^2\right]
+     = E_1 + mc^2.
+\end{equation*}
+
+$E_1$ and $E_1'$ differ by a constant $mc^2$; this is caused by the different choices of the
+zero of energy in the two cases. Therefore $E_1$ is the classical limit of $E_1'$. When $Z$ is
+small the non-relativistic approximation may be used.
+
+\begin{commentary}
+(1) The $r_0$ and $E_1$ obtained in part (1) agree exactly with the results of Bohr's theory.
+This is because $\Delta x = r$ was wisely chosen rather than $2r$ or $r/2$; such a choice is
+precisely reasonable. Of course, any reasonable choice of $\Delta x$ will give the correct
+order of magnitude of the atomic size and of the atomic energy.
+
+(2) In part (3), if one more term is retained in the series expansion of $E_1'$, one obtains
+\begin{equation*}
+E_1' = mc^2\left[1 - \frac{1}{2}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^2
+      - \frac{1}{8}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^4\right].
+\end{equation*}
+To make the zero of energy agree with the non-relativistic case, we subtract $mc^2$ from the
+above expression and thus obtain
+\begin{equation*}
+E_1' = -mc^2\left[\frac{1}{2}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^2
+      + \frac{1}{8}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^4\right]
+     = E_1 - \frac{mc^2}{8}\left(\frac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^4.
+\end{equation*}
+The term $-\dfrac{mc^2}{8}\left(\dfrac{Ze^2}{4\pi\varepsilon_0\hbar c}\right)^4
+= -|E_1|\dfrac{Z^2\alpha^2}{4} = \Delta E_r$ is the relativistic correction to the kinetic
+energy of the ground state of the hydrogen-like ion. The result for this term derived
+rigorously in quantum mechanics is
+\begin{equation*}
+\Delta E_r = -|E_1|\,\frac{5Z^2\alpha^2}{4}.
+\end{equation*}
+For the hydrogen atom, $Z = 1$ and $\Delta E_r = -6.66\times 10^{-5}|E_1| \ll |E_1|$; it is
+therefore called the fine-structure correction of the energy level. But for hydrogen-like
+ions with $Z = 50$, this correction already exceeds 16\%.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.07}
+(1) The circumference $S_n$ of the $n$-th orbit of the hydrogen atom and the de Broglie
+wavelength $\lambda_n$ of the electron moving in that orbit are respectively
+\begin{equation*}
+S_n = 2\pi r_n, \qquad \lambda_n = \frac{h}{mv_n},
+\end{equation*}
+where $r_n$ and $v_n$ are respectively the radius of the $n$-th orbit and the orbital speed of
+the electron, and $m$ is the mass of the electron. From the quantisation condition for the
+angular momentum of the electron, $mv_nr_n = n\hbar$, we obtain
+\begin{equation*}
+\frac{h}{\lambda_n}\cdot 2\pi r_n = n\hbar.
+\end{equation*}
+Finally,
+\begin{equation*}
+\frac{S_n}{\lambda_n} = n.
+\end{equation*}
+
+(2) Substituting $n = 1$ into the above expression gives
+\begin{equation*}
+\lambda_1 = S_1/1 = 2\pi a_0,
+\end{equation*}
+where $a_0 = 0.0529\unitv{nm}$ is the Bohr radius. Substituting this value into the above
+expression gives
+\begin{equation*}
+\lambda_1 = 0.332\unitv{nm}.
+\end{equation*}
+
+\begin{commentary}
+The solution of part (1) shows that in the hydrogen atom only those orbits whose
+circumference is an integral multiple of the de Broglie wavelength of the electron are
+allowed. One may imagine that, just as a standing wave is formed on a string fixed at both
+ends, the de Broglie wave of the electron is here a standing wave on a circle. Bohr's
+quantisation condition for angular momentum is precisely the necessary condition for the
+formation of such a standing wave. In 1924 de Broglie gave a physical explanation of Bohr's
+quantisation condition for angular momentum; he pointed out that Bohr's quantisation
+condition for angular momentum is equivalent to the standing-wave condition.
+
+In fact, according to the uncertainty principle the orbit of an electron cannot be determined
+precisely; moreover, the orbital angular momentum of the lowest energy state of the hydrogen
+atom is zero, and not the value $\hbar$ predicted by Bohr. Later, Bohr's model of the hydrogen
+atom was replaced by the quantum-mechanical theory of the hydrogen atom. Nevertheless, in
+quantum mechanics the orbital angular momentum is still quantised.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.08}
+The wave numbers of the spectral lines of the hydrogen atom and of the helium ion are
+respectively given by the following formulae:
+\begin{equation}
+\tilde{\nu}_{\mathrm{H}} = R_{\mathrm{H}}\left(\frac{1}{m^2} - \frac{1}{n^2}\right), \tag{1}
+\end{equation}
+\begin{equation}
+\tilde{\nu}_{\mathrm{He}} = R_{\mathrm{He}}Z^2\left(\frac{1}{m^2} - \frac{1}{n^2}\right)
+= R_{\mathrm{He}}\left[\frac{1}{(m/2)^2} - \frac{1}{(n/2)^2}\right], \tag{2}
+\end{equation}
+where $m = 1, 2, 3, \ldots$; $n = m+1, m+2, m+3, \ldots$; and for the helium ion $Z = 2$.
+Since the mass of the helium nucleus is greater than that of the hydrogen nucleus, the
+Rydberg constant $R_{\mathrm{H}} \simeq R_{\mathrm{He}}$, but $R_{\mathrm{He}}$ is slightly
+greater than $R_{\mathrm{H}}$.
+
+Comparing (1) and (2), it is seen that when the quantum numbers $m$ and $n$ of the helium ion
+and the quantum numbers of the hydrogen atom satisfy the conditions $(m/2)_{\mathrm{He}} =
+(m)_{\mathrm{H}}$ and $(n/2)_{\mathrm{He}} = (n)_{\mathrm{H}}$, we have
+$\tilde{\nu}_{\mathrm{H}} \simeq \tilde{\nu}_{\mathrm{He}}$, but
+$\tilde{\nu}_{\mathrm{H}}$ is slightly smaller than $\tilde{\nu}_{\mathrm{He}}$. Therefore
+some almost coincident doublets will appear in the spectrogram: the line of slightly smaller
+wave number in each doublet is the spectral line emitted by the hydrogen atom; apart from
+these, all the remaining lines belong to the spectrum of the helium ion. Since the intensity
+and the spacing of the spectral lines both decrease in the direction of increasing wave
+number, the magnitude of the wave number can be judged from their trend of variation.
+
+\begin{commentary}
+In 1897 the astronomer W.~H. Pickering discovered in the spectrum of the star $\xi$ in the
+constellation Puppis a series of spectral lines very similar to the Balmer series of the
+hydrogen atom; it is called the Pickering series. The figure below shows the first five lines
+$H_\alpha$, $H_\beta$, $H_\gamma$, $H_\delta$ and $H_\varepsilon$ of the Pickering series and
+of the Balmer series of the hydrogen atom. From the figure it can be seen that every other
+line of the Pickering series almost coincides with a line of the Balmer series, but the
+wavelengths of the two still differ slightly. There are other lines of the Pickering series
+lying between adjacent lines of the Balmer series. Rydberg pointed out that the Pickering
+series can be represented by
+\begin{equation*}
+\tilde{\nu}_P = R\left(\frac{1}{2^2} - \frac{1}{k^2}\right),
+\qquad k = 2.5,\ 3,\ 3.5,\ 4,\ 4.5,\ \ldots
+\end{equation*}
+where $\tilde{\nu}_P$ is the wave number of the spectral line. The Pickering series cannot be
+observed in hydrogen on the earth. At first people thought that it was emitted by a special
+kind of hydrogen in the celestial bodies; later it was found that the Pickering series
+appears when some helium is mixed with hydrogen, and only then was it made clear that the
+Pickering series is emitted by the helium ion $\mathrm{He}^+$. In the solution of this
+problem it is only necessary to set $m = 4$, $n = 5, 6, 7, \ldots$ in equation (2) to obtain
+the expression for the Pickering series.
+
+\begin{figbox}{5.08}
+\begin{tikzpicture}[scale=0.92]
+  \draw[thickline] (0,0) -- (10.5,0);
+  \foreach \x/\lab in {1.0/25\,000, 5.2/20\,000, 9.0/15\,000}{
+    \draw[thickline] (\x,0) -- (\x,-0.10);
+    \node[below,font=\small] at (\x,-0.12) {$\lab$};
+  }
+  \node[below,font=\small] at (10.3,-0.12) {$\mathrm{cm}^{-1}$};
+  % Balmer lines
+  \foreach \x/\lab/\h in {2.05/{$H_\varepsilon$}/1.55, 2.95/{$H_\delta$}/1.35,
+                          4.05/{$H_\gamma$}/1.45, 5.55/{$H_\beta$}/1.55,
+                          8.15/{$H_\alpha$}/1.75}{
+    \draw[line width=1.0pt] (\x,0) -- (\x,\h);
+    \node[above,font=\small] at (\x,\h) {\lab};
+  }
+  % Pickering lines (weaker, interleaved)
+  \foreach \x/\h in {1.55/0.60, 2.50/0.55, 3.50/0.65, 4.80/0.55,
+                    6.60/0.50, 7.35/0.55}{
+    \draw[line width=0.5pt] (\x,0) -- (\x,\h);
+  }
+\end{tikzpicture}
+\end{figbox}
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.09}
+(1) Since the masses of the $\mu^-$ meson and the $\pi^+$ meson are of the same order of
+magnitude, both mesons move about their common centre of mass under the Coulomb force exerted
+by the other. Introducing the reduced mass
+\begin{equation*}
+\mu = \frac{m_\mu m_\pi}{m_\mu + m_\pi},
+\end{equation*}
+the lowest energy $E_1$ of the atom is
+\begin{equation*}
+E_1 = -\frac{1}{2}\mu(\alpha c)^2,
+\end{equation*}
+where $\alpha$ is the fine-structure constant and $c$ is the speed of light. Substituting
+$m_\mu$ and $m_\pi$ into the above expression gives
+\begin{equation*}
+E_1 = -\frac{1}{2}(\alpha c)^2m_e\times\frac{106\times 140}{0.511\times(106 + 140)}
+    = -13.6\times 118\unitv{eV} = -1.60\unitv{keV}.
+\end{equation*}
+
+(2) In the ground state the distance $r_1$ between the two mesons is
+\begin{equation*}
+r_1 = \frac{a_0m_e}{\mu} = \frac{0.529\unitv{\mathring{A}}}{118}
+    = 4.48\times 10^{-4}\unitv{nm}.
+\end{equation*}
+
+(3) In the ground state the relative speed of the two mesons is $v_1 = \alpha c$. Neglecting
+the overall motion of the atom, we have
+\begin{equation*}
+m_\pi v_\pi = m_\mu v_\mu,
+\end{equation*}
+\begin{equation*}
+v_1 = v_\pi + v_\mu.
+\end{equation*}
+From these the speed of the $\mu^-$ meson is found to be
+\begin{equation*}
+v_\mu = \frac{\alpha cm_\pi}{m_\mu + m_\pi}
+     = \frac{3\times 10^8\times 140}{137\times(106 + 140)}
+     = 1.25\times 10^6\unitv{m/s}.
+\end{equation*}
+
+\begin{commentary}
+An ordinary atom is composed of electrons, protons and neutrons. A so-called exotic atom is
+an atom-like system formed, through electromagnetic interaction, when particles such as
+$\mu^\pm$ mesons, $\tau^\pm$ mesons, $\pi^\pm$ mesons, $K^\pm$ mesons, positrons,
+antiprotons, $\Sigma^\pm$ hyperons and $\Omega^-$ hyperons replace respectively the electrons
+or the nucleus of an ordinary atom, or replace both. For example, a $\mu^-$ meson replacing an
+electron of an atom forms a muonic atom, and a positron replacing the nucleus forms
+positronium. The average lifetime of an exotic atom is not long, but there is enough time for
+the exotic atom to be formed and detected before the replacing particle itself decays. The
+best known of these is the antihydrogen atom, composed of an antiproton and a positron.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.10}
+According to Gauss's law in electrostatics it can be shown that the potential $V(r)$ of a
+uniformly charged sphere of radius $R$ and total charge $Ze$ is
+\begin{equation*}
+V(r)=
+\begin{cases}
+\dfrac{Ze}{4\pi\epsilon_0 r}, & r\ge R,\\[3mm]
+\dfrac{Ze}{4\pi\epsilon_0 R}\left(\dfrac{3}{2}-\dfrac{r^2}{2R^2}\right), & r\le R.
+\end{cases}
+\end{equation*}
+
+Since the mass of the lead nucleus is
+$M_{\mathrm{Pb}}\simeq\dfrac{208\times 1836\,m_e}{207\,m_e}=1.8\times10^3 m_\mu$, the motion of
+the lead nucleus may be neglected. When $r>R$, the expression for the Bohr orbit radius of the
+$\mu^-$ meson is
+\begin{equation}
+r_n=\frac{m_e a_0}{m_\mu}\frac{n^2}{Z}=\frac{0.529}{207\times 82}n^2=3.12\,n^2\ (\mathrm{fm}),
+\tag{1}
+\end{equation}
+and the expression for the energy levels is
+\begin{equation}
+E_n=-\frac{1}{2}m_\mu(\alpha c)^2\frac{Z^2}{n^2}
+=-\frac{13.6\times 207\times 82^2}{n^2}=-18.93\,\frac{1}{n^2}\ (\mathrm{MeV}).
+\tag{2}
+\end{equation}
+
+When $r<R$, the $\mu^-$ meson moves in a circle inside the nucleus; from the centripetal force
+formula
+\begin{equation}
+m_\mu\frac{v^2}{r}=-e\frac{\dd V(r)}{\dd r}=\frac{Ze^2}{4\pi\epsilon_0 R^3}r
+\tag{3}
+\end{equation}
+the kinetic energy of the $\mu^-$ meson is found to be
+\begin{equation*}
+\frac{1}{2}m_\mu v^2=\frac{Ze^2r^2}{4\pi\epsilon_0\,2R^3}.
+\end{equation*}
+The potential energy of the $\mu^-$ meson inside the nucleus is
+\begin{equation*}
+-eV(r)=-\frac{Ze^2}{4\pi\epsilon_0 R}\left(\frac{3}{2}-\frac{r^2}{2R^2}\right).
+\end{equation*}
+Hence the total energy of the lead $\mu^-$ meson atom is
+\begin{align}
+E&=\frac{1}{2}m_\mu v^2-eV(r)\notag\\
+&=\frac{Ze^2}{4\pi\epsilon_0 R}\left(\frac{r^2}{R^2}-\frac{3}{2}\right). \tag{4}
+\end{align}
+
+From the angular momentum quantization condition $m_\mu v r=n\hbar$, $n=1,2,3,\dots$, combined
+with (3), the expression for the Bohr orbit radius of the $\mu^-$ meson inside the nucleus is
+solved to be
+\begin{equation}
+r_n=\left(\frac{4\pi\epsilon_0 R^3\hbar^2}{Ze^2m_\mu}n^2\right)^{1/4}
+=\left(\frac{137\times 7.7^3\times 197.3}{82\times 207\times 0.511}n^2\right)^{1/4}
+=6.14\sqrt{n}\ (\mathrm{fm}). \tag{5}
+\end{equation}
+
+Substituting into (4) gives the expression for the energy levels:
+\begin{align}
+E_n&=\frac{Ze^2}{4\pi\epsilon_0 R}\left(n\hbar\sqrt{\frac{4\pi\epsilon_0}{Ze^2m_\mu R}}-\frac{3}{2}\right)\notag\\[1mm]
+&=\frac{82\times 197.3}{137\times 7.7}\left(\frac{6.14^2}{7.7^2}n-\frac{3}{2}\right)\notag\\[1mm]
+&=(9.75n-23.00)\ (\mathrm{MeV}). \tag{6}
+\end{align}
+
+(1) From (5) and (1) the first two Bohr orbit radii of the $\mu^-$ meson are found to be
+\begin{equation*}
+r_1=6.14\ \mathrm{fm}\quad(\text{inside the nucleus})
+\end{equation*}
+and
+\begin{equation*}
+r_2=12.48\ \mathrm{fm}\quad(\text{outside the nucleus}).
+\end{equation*}
+
+(2) From (6) and (2) the energies of the first two levels of the lead $\mu^-$ meson atom are
+found to be
+\begin{equation*}
+E_1=-13.25\ \mathrm{MeV}
+\end{equation*}
+and
+\begin{equation*}
+E_2=-\frac{18.93}{4}=-4.73\ (\mathrm{MeV}).
+\end{equation*}
+
+(3) The wavelength of the first line of the Lyman series of the lead $\mu^-$ meson atom is
+\begin{equation*}
+\lambda=\frac{hc}{E_2-E_1}=\frac{1240\times10^{-6}}{13.25-4.73}=1.46\times10^{-4}\ (\mathrm{nm}).
+\end{equation*}
+
+(4) If the lead nucleus is regarded as a point charge, then from (2) the energies of the first
+two levels of the lead $\mu^-$ meson atom are found to be
+\begin{equation*}
+E_1'=-18.93\ \mathrm{MeV}
+\end{equation*}
+and
+\begin{equation*}
+E_2'=-\frac{18.93}{4}=-4.73\ (\mathrm{MeV}).
+\end{equation*}
+Hence, in the point-nucleus model, the wavelength of the first line of the Lyman series of the
+lead $\mu^-$ meson atom is
+\begin{equation*}
+\lambda'=\frac{hc}{E_2'-E_1'}=\frac{12400\times10^{-6}}{18.93-4.73}=8.73\times10^{-5}\ (\mathrm{nm}).
+\end{equation*}
+
+\begin{commentary}
+(1) In using Bohr theory to calculate the energy levels of an atom (or ion), we usually regard
+the nucleus as a point charge. In reality every nucleus has a finite size, so only at the
+surface of the nucleus or outside it is the potential of the nucleus that of a point charge.
+This problem uses Bohr's circular-orbit model to estimate the influence of the finite size of
+the nucleus on the energy levels and spectra of exotic atoms. From the results of parts (3)
+and (4) it can be seen that, since in the ground state the $\mu^-$ meson has entered the
+nucleus so that the effective nuclear charge it experiences is $Z^*e<Ze$, the ground-state
+level is raised, and hence $\lambda>\lambda'$. The correction to the ground-state energy of the
+atom is
+about $30\%$; the correction to the wavelength of the first line of the Lyman series is about
+$67\%$. In fact, although $R>r_1$, the $\mu^-$ meson does not stay inside the nucleus all the
+time, so the correction obtained by the method of this problem is on the large side.
+
+(2) When the nuclear radius $R<r_1$, according to the method of this problem the above
+correction is zero. According to quantum mechanics, even if $R<r_1$, the electron still has a
+certain probability of entering the nucleus, and the correction of the finite nuclear size to
+the ground-state energy is not zero. Quantum mechanics uses perturbation
+theory to obtain the correction of this effect to the ground-state energy of a one-electron
+atom (or ion) as
+\begin{equation*}
+\delta E=\frac{4}{5}\left(\frac{ZR}{a_0}\right)^2\frac{Z^2e^2}{4\pi\epsilon_0\cdot 2a_0}
+=\frac{4}{5}\left(\frac{ZR}{a_0}\right)^2\left|E_1'\right|,
+\end{equation*}
+where $E_1'$ is the ground-state energy in the point-nucleus model, the nuclear radius is
+$R=1.3\times A^{1/3}\ \mathrm{fm}$, and the Bohr radius is $a_0=0.0529\ \mathrm{nm}$.
+
+For the neon ion $\mathrm{Ne}^{9+}$ ($Z=10$, $A=20$), $\delta E=3.6\times10^{-7}|E_1'|$; for the
+lead ion $\mathrm{Pb}^{82+}$ ($Z=82$, $A=208$), $\delta E=1.1\times10^{-4}|E_1'|$. It can be
+seen that for light elements this effect may be neglected altogether, while for heavy elements,
+although the effect is very small, it is nevertheless detectable. For the neon $\mu^-$ meson
+atom, since the mass of the $\mu^-$ meson is 207 times the mass of the electron,
+$\delta E=0.015|E_1'|$, which is $(207)^2$ times larger than that for the neon ion. For the
+above three atoms (ions) the nuclear radius $R$ is smaller than $r_1$.
+
+(3) From the data in comment 2 it can be seen that, since the mass of the $\mu^-$ meson is 207
+times the mass of the electron, the $\mu^-$ meson will come very close to the nucleus. In this
+way we may regard the $\mu^-$ meson as a detector with which to probe the nucleus. The
+so-called finite-size effect produced by the size of the nucleus is all the more clearly
+displayed in the level structure of such exotic atoms. Hence, if we measure the energy levels
+of $\mu^-$ meson atoms, we can infer the charge distribution in the nucleus and the size of the
+nucleus. For example, for the $\mu^-$ meson hydrogen atom, provided the level energies are
+known to a certain accuracy, the size of the proton can be deduced accurately. In the past the
+method of measuring the size of the proton was electron scattering, in which the size was
+obtained by analysing the scattering angle.
+
+As an important constituent of matter, the proton's size is of great importance in physics. Only
+independent measurements of the proton's size can genuinely make use of the hydrogen spectrum
+for a further test of quantum electrodynamics; they can also serve in the future to test
+calculations of lattice quantum chromodynamics.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.11}
+(1) The first term on the right-hand side of the formula corresponds to the ground state of the
+sodium atom, and the second term to an excited state of the sodium atom; the larger $m$ is, the
+higher the excited state. The core of the sodium atom may be regarded as an effective nucleus.
+When the sodium atom is in a highly excited state $m$, the valence electron is far from the
+nucleus and the other 10 inner electrons, and what it experiences is the Coulomb interaction of
+a nucleus completely screened by the inner electrons, so the effective nuclear charge may be
+taken as 1. Only in this way does the second term on the right-hand side of the formula have
+exactly the same form as the hydrogen spectral term; therefore the formula holds only when $m$
+is large.
+
+(2) The ionization energy $E_\infty$ of sodium is
+\begin{equation*}
+E_\infty=0.378Rhc=0.378\times 13.6=5.14\ (\mathrm{eV}).
+\end{equation*}
+
+\begin{commentary}
+Now let us use the ionization energy $E_\infty$ of sodium to calculate the effective nuclear
+charge $Z^*$ felt by the valence electron when the sodium atom is in the ground state. Similarly
+to the hydrogen atom, for the sodium atom
+\begin{equation*}
+E_\infty=\frac{Z^{*2}Rhc}{n^2},
+\end{equation*}
+where $n=3$ is the principal quantum number of the valence electron when the sodium atom is in
+the ground state. From this we obtain
+\begin{equation*}
+Z^*=\sqrt{\frac{n^2}{Rhc}E_\infty}=\sqrt{\frac{3^2}{13.6}\times 5.14}=1.84.
+\end{equation*}
+
+The degree to which the Coulomb potential of the nucleus is screened (that is, the effective
+nuclear charge exerted by the core on the valence electron) depends on the state in which the
+valence electron finds itself. In different states the probability of the valence electron
+appearing at various places in space is different. As $n$ increases, the distance of the valence
+electron from the nucleus also increases, while the probability of the valence electron entering
+the core becomes smaller, so the degree of screening of the Coulomb potential of the nucleus by
+the inner electrons becomes more and more
+pronounced, and the effective nuclear charge felt by the valence electron becomes smaller and
+smaller. From the above calculation it can be seen that the valence electron of the sodium atom
+in the ground state (in the $3s$ state) has a comparatively large probability of appearing near
+the nucleus, and therefore feels a comparatively large effective nuclear charge
+($Z^*=1.84$).
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.12}
+(1) The ground-state energy of the helium ion ($\mathrm{He}^+$) and the first Bohr orbit radius
+of the electron are
+\begin{equation*}
+E_1(e)=-\frac{1}{2}m(\alpha c)^2Z^2=-13.6\times 4=-54.4\ (\mathrm{eV}),
+\end{equation*}
+\begin{equation*}
+a_1(e)=\frac{4\pi\epsilon_0\hbar^2}{me^2Z}=\frac{0.0529}{2}=0.026\ (\mathrm{nm}).
+\end{equation*}
+
+(2) Similarly to the helium ion, the ground-state energy of the $\mu^-$ meson helium ion and the
+first Bohr orbit radius of the $\mu^-$ meson are
+\begin{equation*}
+E_1(\mu)=-\frac{1}{2}m_\mu(\alpha c)^2Z^2=-13.6\times 4\times 200=-1.1\times10^4\ (\mathrm{eV}),
+\end{equation*}
+\begin{equation*}
+a_1(\mu)=\frac{4\pi\epsilon_0\hbar^2}{m_\mu e^2Z}=\frac{0.0529}{200\times 2}=1.3\times10^{-4}\ (\mathrm{nm}).
+\end{equation*}
+
+(3) In the ground state of the $\mu^-$ meson helium atom both the $\mu^-$ meson and the electron
+are in the state $n=1$. Since the probability of the $\mu^-$ meson appearing near the helium
+nucleus is far greater than that of the electron, it may be said approximately that the electron
+is acted on by a nucleus completely screened by the $\mu^-$ meson, i.e. $Z^*\simeq 1$, whereas the
+$\mu^-$ meson is acted on by a completely unscreened nucleus, i.e. $Z^*\simeq 2$. Hence
+
+(a) for $Z^*\simeq 1$, the first Bohr orbit radius of the electron is
+\begin{equation*}
+a_1=\frac{4\pi\epsilon_0\hbar^2}{me^2Z^*}=a_0=0.053\ (\mathrm{nm});
+\end{equation*}
+
+(b) the ground-state energy of the $\mu^-$ meson helium atom is
+\begin{equation*}
+E=E_1(\mu)+E_1(e)=-1.1\times10^4-13.6=-1.1\times10^4\ (\mathrm{eV});
+\end{equation*}
+
+(c) the chemical properties of this atom are most similar to those of hydrogen. Since the
+$\mu^-$ meson is very close to the nucleus, is tightly bound to the helium nucleus and is not
+easily excited, it acts like an effective nucleus of effective nuclear charge $Z^*\simeq 1$.
+Outside this effective nucleus there is one electron, and the chemical properties of an atom are
+determined by the number of electrons in its outer shell; therefore the $\mu^-$ meson helium
+atom resembles hydrogen rather than helium.
+
+\begin{commentary}
+The $\mu^-$ meson atom is a kind of exotic atom. Compared with other exotic atoms, the lifetime
+of the $\mu^-$ meson atom is comparatively long. It was discovered in the late 1940s by the
+famous Chinese high-energy physicist Zhang Wenyu, academician of the Chinese Academy of
+Sciences, and has therefore been called the ``Zhang atom'' and ``Zhang radiation''. The
+$\mu^-$ meson atom broke through the Rutherford--Bohr atomic model and opened a new field of
+research on exotic atoms.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.13}
+Let the mass of the particle be $m$ and the mass of the hydrogen atom be $M$, and let the
+relative speeds of the particle and the hydrogen atom before and after the collision be
+$v_{\text{rel}}$ and $v'_{\text{rel}}$ respectively. Since the momentum of the system is
+conserved, the velocity of the centre of mass remains unchanged throughout; then energy
+conservation gives
+\begin{equation*}
+\frac{1}{2}\mu v_{\text{rel}}^2=\frac{1}{2}\mu v_{\text{rel}}'^2+\Delta E,
+\end{equation*}
+where $\mu$ is the reduced mass, $\mu=\dfrac{mM}{m+M}$, and $\Delta E$ is the excitation energy
+acquired by the hydrogen atom. When $v'_{\text{rel}}=0$, the excitation energy acquired by the
+hydrogen atom after the collision is maximum, and from the above equation
+\begin{equation}
+\Delta E=(\Delta E)_{\max}=\frac{1}{2}\mu v_{\text{rel}}^2. \tag{1}
+\end{equation}
+
+(1) The first excitation energy of the hydrogen atom is about $10\ \mathrm{eV}$, while at room
+temperature the average kinetic energy of the thermal motion of a hydrogen atom is about
+$1/25\ \mathrm{eV}$; hence before the collision the hydrogen atom at room temperature is in the
+ground state. The H$\alpha$ line is emitted when the hydrogen atom makes a transition from the
+$n=3$ state to the $n=2$ state. According to the above analysis, in order that the hydrogen atom
+emit the H$\alpha$ line, the hydrogen atom must be excited from the ground state ($n=1$) to the
+$n=3$ state. Therefore the excitation energy acquired by the hydrogen atom after the collision
+must satisfy $(\Delta E)_{\max}\ge E_3-E_1$. From (1) it is known that this condition is
+\begin{equation}
+\frac{1}{2}\mu v_{\text{rel}}^2\ge E_3-E_1. \tag{2}
+\end{equation}
+
+Let the speed of the electron before the collision be $v$. Compared with $v$, the hydrogen atom
+at room temperature before the collision may be regarded as at rest, so
+$v_{\text{rel}}=v$; and since $m\ll M$, $\mu\simeq m$. Therefore the kinetic energy of the
+electron before the collision must satisfy
+\begin{equation*}
+\frac{1}{2}mv^2\ge E_3-E_1=-\frac{13.6}{9}+13.6=12.09\ (\mathrm{eV}),
+\end{equation*}
+that is, the minimum kinetic energy of the electron should be $12.09\ \mathrm{eV}$.
+
+(2) Since the mass $m$ of the proton and the mass $M$ of the hydrogen atom may be regarded as
+equal, $\mu=\dfrac{m}{2}$. From (2) we obtain
+\begin{equation*}
+\frac{1}{2}\mu v_{\text{rel}}^2=\frac{1}{4}mv^2\ge E_3-E_1.
+\end{equation*}
+Therefore the minimum kinetic energy $E_k$ of the proton should be
+\begin{equation*}
+E_k=\frac{1}{2}mv^2=2(E_3-E_1)=24.18\ (\mathrm{eV}).
+\end{equation*}
+
+(3) As stated in the problem, $\mu=\dfrac{m}{2}$ and $v_{\text{rel}}=2v$. Substituting into (2)
+gives
+\begin{equation*}
+\frac{1}{2}\mu v_{\text{rel}}^2=mv^2\ge E_3-E_1.
+\end{equation*}
+Therefore the minimum kinetic energy $E_k$ of the proton should be
+\begin{equation*}
+E_k=\frac{1}{2}mv^2=\frac{1}{2}(E_3-E_1)=6.05\ (\mathrm{eV}).
+\end{equation*}
+
+\begin{commentary}
+An important physical concept involved in this problem is the following: in the above inelastic
+collision process, how much of the kinetic energy of the particle system can be converted
+through the collision into the excitation energy of the atom? According to K\"onig's theorem, the
+kinetic energy of a system of particles is equal to the sum of the kinetic energy of the centre
+of mass and the kinetic energy of the system relative to the centre of mass. Since this system
+is not acted on by external forces, the momentum of the system is conserved, and throughout the
+process neither the velocity of the centre of mass nor the kinetic energy of the centre of mass
+changes. Therefore only the kinetic energy of the system relative to the centre of mass can
+possibly be converted through the collision into the excitation energy of the atom.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.14}
+(1) If there were no interaction between the electrons, the ground-state energy of the helium
+atom would be
+\begin{equation*}
+E_1=-2R_{\mathrm{He}}hc\frac{Z^2}{n^2}=-2\times 13.6\times\frac{2^2}{1}=-108.8\ (\mathrm{eV}).
+\end{equation*}
+
+(2) Neglecting the interaction between the electrons and the motion of the helium nucleus, the
+orbit radius of the electron in the ground state is
+\begin{equation*}
+r_1=a_0\frac{n^2}{Z}=\frac{a_0}{2},
+\end{equation*}
+where $a_0$ is the Bohr radius. Suppose that the two electrons, owing to their electrostatic
+repulsion, tend to move apart, so that their separation is $2r_1$. Then the Coulomb interaction
+between the electrons is
+\begin{equation*}
+E_c=\frac{e^2}{4\pi\epsilon_0\cdot 2r_1}=\frac{14.4}{0.53}=27.2\ (\mathrm{eV}).
+\end{equation*}
+Taking the Coulomb interaction between the electrons into account, the ground-state energy of
+the helium atom is
+\begin{equation*}
+E_1'=E_1+E_c=-108.8+27.2=-81.6\ (\mathrm{eV}).
+\end{equation*}
+
+(3) Since the $4f$ electron is far from the nucleus while the $1s$ electron is close to it, the
+$4f$ electron is in the Coulomb field of a completely screened nucleus, with effective nuclear
+charge $Z^*\simeq 1$, whereas the $1s$ electron is in the Coulomb field of an unscreened
+nucleus, with effective nuclear charge $Z^*\simeq 2$. Using the hydrogen energy-level formula,
+the energy of the helium atom is
+\begin{equation*}
+E_{1s4f}=-13.6\times\frac{2^2}{1^2}-13.6\times\frac{1^2}{4^2}=-55.25\ (\mathrm{eV}).
+\end{equation*}
+
+\begin{commentary}
+Experimentally the ground-state energy of the helium atom is about $79\ \mathrm{eV}$. Comparing
+this with the answers to parts (1) and (2), it is seen that in discussing the energy-level
+structure of a multi-electron atom one must take into account, besides the Coulomb interaction
+between the electrons and the nucleus, the Coulomb interaction between the electrons themselves.
+It is evident that the energy levels of helium are not the same as those of hydrogen, but when
+one electron of the helium atom is excited into a state far from the nucleus (a state with large
+$n$ and $l$, for example the $4f$ state), its energy level coincides with the corresponding
+level of hydrogen (for example the $4f$ level), differing only by a constant ($-54.4\
+\mathrm{eV}$).
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.15}
+Since the half-life $T_{1/2}({}^{238}\mathrm{U})$ of the parent nucleus is much longer than that
+of all the daughter nuclei, and among the daughter nuclei the one with the longest half-life is
+${}^{234}\mathrm{U}$, with $T_{1/2}({}^{234}\mathrm{U})=2.45\times10^5$ years, after about
+$5\times T_{1/2}({}^{234}\mathrm{U})\approx1.2\times10^6$ years the whole decay series reaches
+secular equilibrium, that is, the activities of the parent and of all the daughters are equal:
+$\lambda_1N_1=\lambda_2N_2=\cdots$. After this, the amount of the final stable nuclide
+continuously increases, while the sum of the numbers of daughter nuclei remains essentially
+unchanged.
+
+Suppose that the present time is $t_1$ and the initial time is $t_0$. Then at time $t_1$ the sum
+of the residual parent nuclei $N_P(t_1)$, the stable nuclei $N_D(t_1)$ and the total number
+$\sum_iN_i(t_1)$ of nuclei of all generations of daughters equals the number $N_P(t_0)$ of
+parent nuclei at the initial time, i.e.
+\begin{equation*}
+N_D(t_1)+N_P(t_1)+\sum_iN_i(t_1)=N_P(t_0).
+\end{equation*}
+Since $N_P(t_1)=N_P(t_0)\ee^{-\lambda(t_1-t_0)}$, that is, in the above equation
+$N_P(t_0)=N_P(t_1)\ee^{\lambda(t_1-t_0)}$. In addition, considering that the geological age is
+very long and the time required to reach secular equilibrium is much shorter than it, after
+secular equilibrium the sum of the daughter nuclei remains unchanged, so approximately
+$N_D(t_1)\gg\sum_iN_i(t_1)$. We therefore obtain
+\begin{equation*}
+N_D(t_1)=N_P(t_1)\left[\ee^{\lambda(t_1-t_0)}-1\right].
+\end{equation*}
+That is,
+\begin{equation*}
+\Delta t=t_1-t_0=\frac{1}{\lambda}\ln\left[1+\frac{N_D(t_1)}{N_P(t_1)}\right].
+\end{equation*}
+Substituting the known quantities, the age of the Earth is estimated to be
+\begin{equation*}
+\Delta t=\frac{4.468\times10^9\ \text{yr}}{0.693}\ln\left[1+\frac{1}{2.785}\right]
+=1.98\times10^9\ (\text{yr}).
+\end{equation*}
+
+\begin{commentary}
+Through this problem one may gain a good understanding of the laws of radioactive decay, of the
+characteristics of the secular equilibrium of radioactive series, and of their practical
+applications.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.16}
+(1) The disintegrations per minute of 1 gram of carbon come from the ${}^{14}\mathrm{C}$ contained
+in it. Let the activity be $A'$; then
+\begin{align*}
+A'&=\lambda N({}^{14}\mathrm{C})=\lambda\cdot\eta\cdot\frac{1}{12}N_A\\
+&=\frac{0.693}{5730\times 365\times 24\times 60}\times 1.2\times10^{-12}\times\frac{1}{12}
+\times 6.02\times10^{23}=14\ \text{decays}/(\text{gram}\cdot\text{min}),
+\end{align*}
+where $N_A$ is Avogadro's constant.
+
+(2) $A(t)=A(0)\ee^{-\lambda t}$. Now $A(0)=A'=14$ decays/(gram$\cdot$min), so the age of the
+ancient biological sample is
+\begin{equation*}
+t=\frac{1}{\lambda}\ln\frac{A(0)}{A(t)}=\frac{5730\ \text{yr}}{0.693}\ln 1.831\approx 5000\ (\text{yr}).
+\end{equation*}
+
+(3) $\delta=1\%$ requires a count $N=10000$. Let $m$ be the required number of grams of the
+sample; the count of the ancient biological sample in 1 hour is now required to be 10000, hence
+\begin{equation*}
+14\times 60\times m\cdot\frac{1}{1.831}=10000.
+\end{equation*}
+From this we obtain
+\begin{equation*}
+m=\frac{10000}{459}=22\ (\text{grams}).
+\end{equation*}
+
+Let the error in the age determined under this error be $\Delta t$; then from the formula
+$t=\dfrac{1}{\lambda}\ln\dfrac{A(0)}{A(t)}$ we obtain
+\begin{equation*}
+\Delta t=\frac{1}{\lambda}\frac{\Delta A(t)}{A(t)}
+=\frac{5730\ \text{yr}}{0.693}\times\frac{1}{100}=83\ (\text{yr}).
+\end{equation*}
+
+\begin{commentary}
+This is a problem on archaeology with ${}^{14}\mathrm{C}$, and it is of practical significance.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.17}
+(1) The $\beta^-$ decay formula is
+\begin{equation*}
+{}_{Z}^{A}\mathrm{X}\to{}_{Z+1}^{A}\mathrm{Y}+\mathrm{e}^-+\bar{\nu}_e.
+\end{equation*}
+The decay energy is the energy that can be released in the decay process (that is, the maximum
+kinetic energy of the emitted electron). Denoting the nuclear mass by $m$, the decay energy is
+\begin{equation*}
+E_d(\beta^-)=\left[m_X-(m_Y+m_e)\right]c^2.
+\end{equation*}
+Considering that what is actually known are atomic masses, then, in the case where the
+difference between the electron binding energies of the parent (X) and daughter (Y) atoms is
+neglected, we have
+\begin{equation*}
+E_d(\beta^-)=\left[M(\mathrm{X})-M(\mathrm{Y})\right]c^2,
+\end{equation*}
+where $M$ denotes the atomic mass.
+
+(2) In this problem
+\begin{equation*}
+E_d(\beta^-)=\left[M({}^{17}\mathrm{N})-M({}^{17}\mathrm{O}^*)\right]c^2=3.72\ (\mathrm{MeV}),
+\end{equation*}
+that is,
+\begin{equation*}
+M({}^{17}\mathrm{O}^*)c^2=M({}^{17}\mathrm{N})c^2-3.72\ (\mathrm{MeV}).
+\end{equation*}
+
+If ${}^{17}\mathrm{O}^*$ can emit a neutron and reach the excited state ${}^{16}\mathrm{O}^*$,
+then energetically the following inequality must be satisfied:
+\begin{equation*}
+M({}^{17}\mathrm{O}^*)c^2-\left[M({}^{16}\mathrm{O})c^2+E^*({}^{16}\mathrm{O})\right]-m_nc^2>0,
+\end{equation*}
+where $E^*({}^{16}\mathrm{O})$ is the excitation energy of ${}^{16}\mathrm{O}$. Substituting the
+expression for $M({}^{17}\mathrm{O}^*)c^2$ into the above gives
+\begin{align*}
+&\left[M({}^{17}\mathrm{N})-M({}^{16}\mathrm{O})-m_n\right]c^2-3.72\ \mathrm{MeV}-E^*({}^{16}\mathrm{O})\\
+&\quad=(17.008449-15.994915-1.008665)uc^2-3.72\ \mathrm{MeV}-E^*({}^{16}\mathrm{O})\\
+&\quad=0.82\ \mathrm{MeV}-E^*({}^{16}\mathrm{O})>0.
+\end{align*}
+Since all the excitation energies $E^*({}^{16}\mathrm{O})$ are greater than $0.82\ \mathrm{MeV}$,
+in this problem ${}^{17}\mathrm{O}^*$ can emit a neutron in only one way, namely by decaying to
+the ground state of ${}^{16}\mathrm{O}$.
+
+Let the energy of the emitted neutron, with the recoil of ${}^{16}\mathrm{O}$ taken into account,
+be $E_n$; then
+\begin{equation*}
+E_n+E_n\cdot\frac{m_n}{M({}^{16}\mathrm{O})}=0.82\ (\mathrm{MeV}).
+\end{equation*}
+Hence
+\begin{equation*}
+E_n\approx 0.82\times\frac{16}{17}\ \mathrm{MeV}=0.77\ (\mathrm{MeV}).
+\end{equation*}
+
+\begin{commentary}
+The decay energy is an important physical quantity in nuclear decay. This problem is concerned
+with how to use energy relations to decide whether a particular nuclear reaction can occur.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.18}
+(1) The semi-empirical formula for the binding energy of a nucleus with $Z$ protons and $N$
+neutrons ($A=Z+N$) is (the famous Weizs\"acker formula)
+\begin{equation*}
+B(Z,A)=a_V A-a_sA^{2/3}-a_c\frac{Z^2}{A^{1/3}}-a_a\frac{(N-Z)^2}{A}+B_P,
+\end{equation*}
+where $a_V$, $a_s$, $a_c$, $a_a$ are adjustable parameters (constants), $a_V A$ is the volume
+energy, $a_sA^{2/3}$ the surface energy, $a_c\dfrac{Z^2}{A^{1/3}}$ the Coulomb energy,
+$a_a\dfrac{(N-Z)^2}{A}$ the symmetry energy, and $B_P$ the pairing energy. The empirical formula
+for $B_P$ is $B_P=\delta a_PA^{-1/2}$, where $a_P$ is a constant,
+\begin{equation*}
+\delta=
+\begin{cases}
+1 & \text{even--even nucleus},\\
+0 & \text{odd--even nucleus},\\
+-1 & \text{odd--odd nucleus}.
+\end{cases}
+\end{equation*}
+The last two terms in the formula arise from quantum effects and have no classical counterpart.
+
+(2) In order to use the semi-empirical formula to calculate the nuclear radius constant, the
+Coulomb energy term in it should be replaced by the more accurate formula for the Coulomb energy
+that contains the nuclear radius $R$:
+\begin{equation*}
+B_c=\frac{3}{5}\frac{Z(Z-1)e^2}{4\pi\epsilon_0R},
+\end{equation*}
+in which $R=\gamma_0A^{1/3}$, where $\gamma_0$ is the nuclear radius constant; the corresponding
+value of $\gamma_0$ can be determined from the mass difference of mirror nuclei.
+
+Knowing the binding energy of a nucleus, one obtains the corresponding semi-empirical formula for
+the atomic mass:
+\begin{equation*}
+M(Z,A)=ZM({}^{1}\mathrm{H})+Nm_n-\frac{B(Z,A)}{c^2}.
+\end{equation*}
+Then for the mirror nuclei ${}^{11}_{5}\mathrm{B}$ and ${}^{11}_{6}\mathrm{C}$ we have
+\begin{equation*}
+M({}^{11}_{5}\mathrm{B})=5M({}^{1}\mathrm{H})+6m_n-B({}^{11}_{5}\mathrm{B})/c^2,
+\end{equation*}
+\begin{equation*}
+M({}^{11}_{6}\mathrm{C})=6M({}^{1}\mathrm{H})+5m_n-B({}^{11}_{6}\mathrm{C})/c^2.
+\end{equation*}
+That is,
+\begin{equation*}
+M({}^{11}_{6}\mathrm{C})-M({}^{11}_{5}\mathrm{B})=M({}^{1}\mathrm{H})-m_n
++B({}^{11}_{5}\mathrm{B})/c^2-B({}^{11}_{6}\mathrm{C})/c^2.
+\end{equation*}
+Since the two mirror nuclei have the same $A$ and the same $(N-Z)^2$, we have
+\begin{align*}
+\left[M({}^{11}_{6}\mathrm{C})-M({}^{11}_{5}\mathrm{B})\right]c^2
+&=\left[M({}^{1}\mathrm{H})-m_n\right]c^2
+-\frac{3}{5}(5\times 4)\frac{e^2}{4\pi\epsilon_0\gamma_0A^{1/3}}\\
+&\quad+\frac{3}{5}(6\times 5)\frac{e^2}{4\pi\epsilon_0\gamma_0A^{1/3}}.
+\end{align*}
+That is,
+\begin{equation*}
+\frac{6e^2}{4\pi\epsilon_0\gamma_0A^{1/3}}
+=\left[M({}^{11}_{6}\mathrm{C})-M({}^{11}_{5}\mathrm{B})-M({}^{1}\mathrm{H})+m_n\right]c^2
+=2.76\ (\mathrm{MeV}),
+\end{equation*}
+\begin{equation*}
+\gamma_0=\frac{6\times 1.44\ \mathrm{MeV}\cdot\mathrm{fm}}{2.76\ \mathrm{MeV}\times 11^{1/3}}
+=1.41\ (\mathrm{fm}).
+\end{equation*}
+
+\begin{commentary}
+The liquid-drop model description of the nucleus is very important in nuclear physics. Through
+this problem the reader is required to become familiar with the expression of the semi-empirical
+binding-energy formula and with its simple applications.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{5.19}
+In this problem one may introduce the representation of the physical quantities in the
+centre-of-mass frame; combining the centre-of-mass frame with the laboratory frame makes the
+discussion convenient and clear. As shown in the figure, the incident particle $M_1$ is
+$M({}^{4}_{2}\mathrm{He})$ and the target nucleus $M_2$ is $M({}^{1}_{1}\mathrm{H})$. The speed of
+the incident particle is $v_1$, and the target nucleus is assumed to be at rest. The speed of the
+outgoing particle in the $L$ frame is $v_1'$, and in the centre-of-mass frame it is $V_1$; the
+recoil speed of the target nucleus in the $L$ frame is $v_2'$, and in the centre-of-mass frame
+it is $V_2$.
+
+\begin{figbox}{5.19}
+\begin{tikzpicture}[scale=1.1]
+  % collision point and CM construction
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (2.55,0);
+  \coordinate (B) at (4.5,-1.62);
+  \coordinate (O) at (2.05,2.65);
+  \draw[dashedline] (-1.6,0) -- (4.9,0);
+  % incident particle
+  \draw[force] (-1.55,0) -- (-0.35,0) node[midway,above] {$v_1$};
+  \fill (A) circle (1.5pt);
+  \node[below left,inner sep=2pt] at (A) {$A$};
+  \node[above=13pt,inner sep=1pt] at (A) {$M_2$};
+  \node[above] at (-1.75,0) {$M_1$};
+  % outgoing particle
+  \draw[force] (A) -- (O) node[midway,above left,inner sep=1pt] {$v_1'$};
+  \fill (O) circle (1.5pt);
+  \node[above right,inner sep=1pt] at (O) {$O$};
+  % CM velocity and V1
+  \draw[axis] (A) -- (C) node[midway,above=1pt] {$v_C$};
+  \draw[force] (C) -- (O) node[midway,right,inner sep=1pt] {$V_1$};
+  \fill (C) circle (1.5pt);
+  \node[above right,inner sep=1pt] at (C) {$C$};
+  % recoil
+  \draw[force] (A) -- (B) node[midway,below right,inner sep=1pt] {$v_2'$};
+  \draw[force] (C) -- (B) node[midway,below,inner sep=1pt] {$V_2$};
+  \fill (B) circle (1.5pt);
+  \node[right] at (B) {$B$};
+  % angle at A
+  \draw (1.0,0) arc (0:-19.8:1.0);
+  \node at (1.18,-0.40) {$\varphi_L$};
+\end{tikzpicture}
+\end{figbox}
+
+(1) Before the collision the speed of the centre of mass is
+$v_C=v_1\dfrac{M_1}{M_1+M_2}$, in the same direction as $v_1$. The speed of the target nucleus is
+also $v_C$, but its direction is opposite to that of $v_1$.
+
+Since in the elastic scattering process the magnitudes of the centre-of-mass velocities of the two
+colliding particles remain unchanged, the speed of the recoiling target nucleus is $V_2=v_C$;
+hence from the figure it is seen that triangle $ABC$ is isosceles. Since the velocity of the
+recoiling target nucleus in the laboratory frame is $v_2'=v_C+V_2$, the magnitude of $v_2'$ is
+\begin{equation*}
+v_2'=2v_C\cos\varphi_L.
+\end{equation*}
+Accordingly the kinetic energy of the recoiling hydrogen nucleus is
+\begin{align*}
+E_{\text{recoil}}&=\frac{1}{2}M_2v_2'^2=\frac{1}{2}M_2(2v_C\cos\varphi_L)^2\\
+&=\frac{1}{2}M({}^{1}\mathrm{H})\left[\frac{2M({}^{4}_{2}\mathrm{He})v_1}
+{M({}^{1}\mathrm{H})+M({}^{4}_{2}\mathrm{He})}\right]^2\cos^2 30\degree\\
+&=\frac{4M({}^{1}\mathrm{H})M({}^{4}_{2}\mathrm{He})}
+{\left[M({}^{1}\mathrm{H})+M({}^{4}_{2}\mathrm{He})\right]^2}E({}^{4}_{2}\mathrm{He})\cos^2 30\degree\\
+&\approx\frac{4\times 1\times 4}{(1+4)^2}\cdot 2\ \mathrm{MeV}\cdot\left(\frac{\sqrt{3}}{2}\right)^2
+=0.96\ (\mathrm{MeV}).
+\end{align*}
+
+(2) The first step is to find the expression for the differential cross section of the recoil
+particle in the centre-of-mass frame, $\sigma_C(\varphi_C)$. Using
+$\sigma_C(\varphi_C)\dd\Omega(\varphi_C)=-\sigma_C(\theta_C)\dd\Omega(\theta_C)$ (the minus sign
+arises because when $\dd\Omega(\varphi_C)$ increases, the corresponding $\dd\Omega(\theta_C)$
+decreases), we obtain
+\begin{equation*}
+\sigma_C(\varphi_C)=-\frac{\sin\theta_C\dd\theta_C}{\sin\varphi_C\dd\varphi_C}\sigma_C(\theta_C).
+\end{equation*}
+Since $\theta_C=\pi-\varphi_C$, we have $\dd\theta_C=-\dd\varphi_C$ and $\sin\theta_C=\sin\varphi_C$,
+and hence
+\begin{equation*}
+\sigma_C(\varphi_C)=\left(\frac{a}{4}\right)^2\frac{1}{\sin^4\left(\dfrac{\pi-\varphi_C}{2}\right)}
+=\left(\frac{a}{4}\right)^2\frac{1}{\cos^4\left(\dfrac{\varphi_C}{2}\right)}.
+\end{equation*}
+
+The second step is to find the expression for the differential cross section of the recoil
+particle in the laboratory frame, $\sigma_L(\varphi_L)$. Using
+$\sigma_L(\varphi_L)\dd\Omega(\varphi_L)=\sigma_C(\varphi_C)\dd\Omega(\varphi_C)$, we obtain
+\begin{equation*}
+\sigma_L(\varphi_L)=\frac{\sin\varphi_C\dd\varphi_C}{\sin\varphi_L\dd\varphi_L}\sigma_C(\varphi_C).
+\end{equation*}
+Since $\varphi_C=2\varphi_L$, we have
+$\sin\varphi_C\dd\varphi_C=4\sin\varphi_L\cos\varphi_L\dd\varphi_L$, and hence
+\begin{align*}
+\sigma_L(\varphi_L)&=4\cos\varphi_L\,\sigma_C(\varphi_C)
+=4\cos\varphi_L\left(\frac{a}{4}\right)^2\frac{1}{\cos^4\varphi_L}
+=\left(\frac{a}{4}\right)^2\frac{4}{\cos^3\varphi_L}.
+\end{align*}
+
+Now
+\begin{equation*}
+a=\frac{Z_1Z_2e^2}{4\pi\epsilon_0E_C}
+=\frac{2\times 1\times 1.44\ \mathrm{eV}\cdot\mathrm{nm}}
+{2\times10^6\ \mathrm{eV}\cdot\dfrac{1}{1+4}}=7.2\times10^{-15}\ (\mathrm{m})
+\end{equation*}
+(the above has made use of the centre-of-mass energy of the incident particle
+$E_C=\dfrac{M_2}{M_1+M_2}E_L$).
+
+Therefore
+\begin{align*}
+\sigma_L(\varphi_L)&=\left(\frac{7.2\times10^{-15}}{4}\right)^2\cdot
+\frac{4}{\left(\dfrac{\sqrt{3}}{2}\right)^3}\ (\mathrm{m}^2/\mathrm{sr})\\
+&=0.20\ \mathrm{b/sr}\qquad (1\ \mathrm{b}\ (\text{barn})=10^{-28}\ \mathrm{m}^2).
+\end{align*}
+
+\begin{commentary}
+This problem involves a comprehensive calculation of the kinematics and dynamics of two-particle
+elastic scattering, and also involves the transformation of the differential cross section
+between the centre-of-mass frame and the laboratory frame.
+\end{commentary}
+\end{solution}
+

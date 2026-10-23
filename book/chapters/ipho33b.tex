@@ -1,0 +1,920 @@
+\begin{align*}
+t_1 &= \sqrt{\frac{2d}{a_1}},\\
+v_{t_1} &= a_1\sqrt{\frac{2d}{a_1}} = \sqrt{2da_1}\\
+&= \sqrt{2d\cdot 0.833g\sin\theta} = \sqrt{1.666dg\sin\theta}. \tag{28}
+\end{align*}
+
+After the car has rolled through a distance $d$, the front and rear wheels have the same angular velocity, namely
+\begin{equation}
+\omega_{t_1} = \frac{v_{t_1}}{R} = \frac{1}{R}\sqrt{1.666dg\sin\theta}. \tag{29}
+\end{equation}
+
+The car then slides. Let $t_2$ be the time the car takes to slide from the distance $d$ to the distance $s$; then
+\begin{align*}
+v_{t_2} &= v_{t_1} + a_2t_2 = \sqrt{1.666dg\sin\theta} + a_2t_2,\\
+s - d &= v_{t_1}t_2 + \frac{1}{2}a_2t_2^2,\\
+t_2 &= \frac{-v_{t_1} + \sqrt{v_{t_1}^2 + 2a_2(s-d)}}{a_2},\\
+v_{t_2} &= \sqrt{1.666dg\sin\theta} - v_{t_1} + \sqrt{v_{t_1}^2 + 2a_2(s-d)}. \tag{30}
+\end{align*}
+
+Substituting the results obtained above for $v_{t_1}$ and $a_2$ into this expression gives the final result.
+
+As for the angular velocity: while the wheel slides, the torque acting on it is
+\begin{align*}
+\tau &= \mu_k NR,\\
+\alpha &= \frac{\tau}{I} = \frac{\mu_k NR}{I}. \tag{31}
+\end{align*}
+\begin{align*}
+\omega_{t_2} &= \omega_{t_1} + \alpha t_2\\
+&= \frac{1}{R}\sqrt{1.666dg\sin\theta}
++ \frac{\mu_k NR}{I}\cdot\frac{-v_{t_1} + \sqrt{v_{t_1}^2 + 2a_2(s-d)}}{a_2}.
+\end{align*}
+
+Substituting the normal force $N$ of each cylindrical wheel separately into the above expression, one obtains the angular velocity of that wheel.
+
+\subsection*{Experimental Problems and Solutions}
+
+\subsection*{Problem 4. Determination of $e/k_B$ by electrolysis}
+
+\paragraph{Background theory}
+
+The electrolysis of water is described by the following reactions:
+\begin{align*}
+\mathrm{H_2O} &\longrightarrow 2\mathrm{H^+} + \mathrm{O^{2-}},\\
+2\mathrm{H^+} + 2\mathrm{e^-} &\longrightarrow \mathrm{H_2};\qquad
+\mathrm{O^{2-}} \longrightarrow \tfrac{1}{2}\mathrm{O_2} + 2\mathrm{e^-}.
+\end{align*}
+
+When a current passes between a pair of electrodes immersed in water, the above reactions take place. Assume that both gases produced in the reaction are ideal gases.
+
+One of the gases produced by the reaction is collected in a test tube bearing an arbitrary scale. If the total charge transferred and the volume of the gas in the test tube are known, $e/k_B$ can be determined, where $e$ is the charge of the electron and $k_B$ is the Boltzmann constant.
+
+For this purpose the experiment is divided into two parts.
+
+\textbf{Part A}: a dynamical method is used to calibrate the arbitrary scale on the test tube. The result is then used in Part B.
+
+\textbf{Part B}: the physical quantity $e/k_B$ is determined by the electrolysis of water.
+
+The two parts, A and B, may be performed in either order.
+
+The following physical quantities are assumed known:
+
+acceleration due to gravity $g = (9.78 \pm 0.01)\unitv{m/s^2}$; the ratio of the inner to the outer radius of the test tube is $\alpha = 0.82 \pm 0.01$.
+
+The temperature $T$ and the pressure $p$ of the laboratory are supplied by the examination site.
+
+\paragraph{Apparatus}
+
+\begin{enumerate}[label=(\arabic*)]
+\item A test tube with an arbitrary scale.
+\item Three insulated copper wires of different diameters: a thick brown wire, a thin brown wire and a blue wire.
+\item An adjustable power supply ($0$--$60\unitv{V}$, maximum output current $1\unitv{A}$).
+\item One plastic container and one bottle of water.
+\item A copper block with a plastic screw clamp, used to hold the electrode in position so that the insulation of the wire is not damaged.
+\item A digital stopwatch.
+\item A multimeter (observe the correct procedure for its use).
+\item A wooden test-tube clamp, to keep the test tube vertical.
+\item A multipurpose dropper.
+\item A vertical support.
+\item One bottle of white correction fluid for making marks.
+\item A knife.
+\item A pair of scissors.
+\item A roll of transparent adhesive tape.
+\item One steel ball.
+\item One piece of stainless steel sheet, to serve as an electrode.
+\item Graph paper.
+\end{enumerate}
+
+\paragraph{Note}
+
+All the scales on the graph paper and on the instruments (for example the test tube) are marked in the same unit, but the unit is not the millimetre.
+
+\paragraph{Experimental tasks}
+
+\textbf{Part A. Calibration of the arbitrary scale on the test tube}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Determine a dynamical method by which an arbitrary length scale can be converted into a conventional scale.
+\item Write down the relation between your measured quantities and the readings of the arbitrary scale of the test tube, and draw a sketch of the experimental arrangement.
+\item Collect and analyse the experimental data, calculate and calibrate the scale of the unknown length.
+\end{enumerate}
+
+\textbf{Part B. Determination of the physical quantity $e/k_B$}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Set up an electrolysis experiment with the test tube suitably mounted, so as to collect one of the gases produced during the reaction.
+\item Derive the relation between the time $t$ to be measured in the experiment, the current $I$, and the height difference $\Delta h$ of the water level in the test tube.
+\end{enumerate}
+
+\begin{enumerate}[label=(\arabic*),start=3]
+\item Collect and analyse the experimental data. As a simplification, you may assume that the pressure of the gas inside the test tube remains constant throughout the experiment.
+\item Determine the value of $e/k_B$.
+\end{enumerate}
+
+\paragraph{Questions}
+
+\textbf{Part A. Calibration of the arbitrary scale on the test tube}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Explain the method you have chosen, and draw a sketch of the experimental arrangement for this method. (1.0 point)
+\item Write down the relation between the quantities measured in your chosen method, and state all the approximations used in obtaining this expression. (1.0 point)
+\item Collect and tabulate the data in the following order: physical quantity, value, unit. (1.0 point)
+\item Use a graph of the relation between two independently measured quantities to demonstrate the quality of the calibration, and state the range over which this calibration is usable. (0.5 point)
+\item Determine, in millimetres, the smallest division of the arbitrary scale, and estimate the error caused by the measurement. (1.5 point)
+\end{enumerate}
+
+\textbf{Part B. Determination of the physical quantity $e/k_B$}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Draw a sketch of the experimental arrangement. (1.0 point)
+\item Derive the following expression. (1.5 point)
+\begin{equation*}
+I\Delta t = \frac{e}{k_B}\,\frac{2p(\pi r^2)}{T}\,\Delta h.
+\end{equation*}
+\item Collect and tabulate the data in the following format: (1.0 point)
+
+physical quantity (value, unit).
+
+\item Determine the value of $e/k_B$ and estimate its error. (1.5 point)
+\end{enumerate}
+
+\subsection*{Solution to Problem 4}
+
+\paragraph{Part A. Calibration of the arbitrary scale on the test tube}
+
+\begin{enumerate}[label=(\arabic*)]
+\item In the experiment a simple pendulum system is chosen to calibrate the arbitrary scale; the sketch is shown in Fig.~33.1. (The graduations of the test tube used in the experiment do not have a division value of 1~mm; such a scale is defined as an arbitrary scale.)
+
+\begin{figbox}{33.1}
+\begin{tikzpicture}[scale=0.9]
+  % test tube with arbitrary scale
+  \draw[thickline] (-1.9,-0.5) -- (-1.9,2.6);
+  \draw[thickline] (-1.4,-0.5) -- (-1.4,2.6);
+  \draw[thickline] (-1.9,-0.5) arc (180:360:0.25 and 0.22);
+  \foreach \y in {2.35,2.15,1.95,1.75} {
+    \draw[thickline] (-1.9,\y) -- (-1.68,\y);
+  }
+  % vertical support
+  \draw[thickline] (4.2,-2.3) -- (4.2,2.75);
+  \draw[thickline] (3.3,-2.3) -- (5.1,-2.3);
+  % horizontal arm
+  \draw[thickline] (1.15,2.75) -- (4.2,2.75);
+  \fill (1.15,2.75) circle (0.05);
+  % vertical reference line
+  \draw[dashedline] (1.15,2.75) -- (1.15,-1.9);
+  % string
+  \draw[thickline] (1.15,2.75) -- (0,-1.05);
+  % steel ball
+  \shade[ball color=gray!70] (0,-1.2) circle (0.16);
+  % weight
+  \draw[force] (0,-1.4) -- (0,-2.05) node[below] {$m\vec{g}$};
+  % angle theta
+  \draw (1.15,2.05) arc (253.6:270:0.7);
+  \node at (0.95,2.25) {$\theta$};
+  % labels
+  \node[anchor=east,align=right] (sc) at (-2.05,2.95) {arbitrary\\scale marks};
+  \draw[->] (sc.south) -- (-1.88,2.4);
+  \node[anchor=east] (st) at (-0.55,-1.85) {steel ball};
+  \draw[->] (st.east) -- (-0.14,-1.32);
+  \node[anchor=east] (sd) at (-0.1,0.9) {string};
+  \draw[->] (sd.east) -- (0.55,0.9);
+  \node[anchor=west] at (4.35,1.6) {vertical support};
+\end{tikzpicture}
+\end{figbox}
+
+\item From Newton's second law,
+\begin{equation*}
+F = m\,\frac{\dd^2(l\theta)}{\dd t^2} = ml\,\frac{\dd^2\theta}{\dd t^2},
+\end{equation*}
+where $F$ is the force, $m$ the mass of the ball, $\theta$ the angle of the pendulum from the vertical direction, $l$ the length of the pendulum, and $t$ the time.
+\begin{align*}
+F &= -mg\sin\theta,\\
+m\,\frac{\dd^2\theta}{\dd t^2} + \frac{mg\sin\theta}{l} &= 0,\\
+\frac{\dd^2\theta}{\dd t^2} + \frac{g\sin\theta}{l} &= 0.
+\end{align*}
+Making the approximation $\sin\theta \approx \theta$,
+\begin{equation*}
+\frac{\dd^2\theta}{\dd t^2} + \frac{g}{l}\theta = 0.
+\end{equation*}
+\begin{equation}
+\frac{\dd^2\theta}{\dd t^2} + \omega^2\theta = 0 \qquad (\omega^2 = g/l). \tag{1}
+\end{equation}
+
+Equation (1) is the equation of simple harmonic motion; its angular frequency $\omega$ is
+\begin{equation*}
+\omega = \frac{2\pi}{T_{\mathrm{osc}}} = \sqrt{\frac{g}{l}},\qquad
+T^2 = 4\pi^2\frac{l}{g}.
+\end{equation*}
+
+Expression for the measured quantity: period $T = 2\pi\sqrt{\dfrac{l}{g}}$.
+
+Approximations: an ideal simple pendulum satisfies the conditions that the mass of the string is much smaller than the mass of the steel ball, the radius of the steel ball is much smaller than the length of the string, and the stretching of the string and the air resistance are neglected.
+
+\item A sample of the data obtained from the simple-pendulum experiment. The number of periods is $\ge 20$, the difference between successive periods is $\ge 0.01\unitv{s}$, and the number of data sets is $\ge 4$.
+
+\begin{center}
+\small\textbf{Table 33.1}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{cccp{3.4cm}}
+\toprule
+No. & Time for 50 periods (s) & Period $T$ (s) & Scale marked on the string (arbitrary scale) \\
+\midrule
+1 & 91.47 & 1.829 & 200 \\
+2 & 89.09 & 1.782 & 150 \\
+3 & 86.45 & 1.729 & 100 \\
+4 & 83.80 & 1.676 & 50 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\item ~
+
+\begin{center}
+\small\textbf{Table 33.2}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{ccp{3.4cm}c}
+\toprule
+No. & Period $T$ (s) & Scale marked on the string (arbitrary scale) & Square of period $T^2$ (s$^2$) \\
+\midrule
+1 & 1.829 & 200 & 3.347 \\
+2 & 1.782 & 150 & 3.176 \\
+3 & 1.729 & 100 & 2.989 \\
+4 & 1.676 & 50 & 2.809 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Graph of $T^2$ against the arbitrary scale on the string. (Omitted.)
+
+\item Determination of the smallest division of the arbitrary scale (unit: mm).
+\begin{align*}
+T_{\mathrm{osc}_1}^2 &= \frac{4\pi^2}{g}l_1, \qquad
+T_{\mathrm{osc}_2}^2 = \frac{4\pi^2}{g}l_2,\\
+T_{\mathrm{osc}_1}^2 - T_{\mathrm{osc}_2}^2 &= \frac{4\pi^2}{g}(l_1 - l_2) = \frac{4\pi^2}{g}\Delta l,
+\end{align*}
+\begin{equation*}
+\Delta l = \frac{g}{4\pi^2}\left(T_{\mathrm{osc}_1}^2 - T_{\mathrm{osc}_2}^2\right),
+\end{equation*}
+or other equivalent expressions, graphical methods, and so on.
+
+\begin{center}
+\small\textbf{Table 33.3}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{cp{3.6cm}p{2.1cm}p{2.3cm}p{2.6cm}}
+\toprule
+No. & Difference of the squares of the periods (s$^2$) & Calculated $\Delta l$ (m) & $\Delta l$ (arbitrary scale) & Smallest unit of the arbitrary scale (mm) \\
+\midrule
+1 & $T_1^2-T_2^2=0.171$ & 0.0426 & 50 & 0.85 \\
+2 & $T_1^2-T_3^2=0.357$ & 0.0886 & 100 & 0.89 \\
+3 & $T_1^2-T_4^2=0.537$ & 0.1330 & 150 & 0.89 \\
+4 & $T_2^2-T_3^2=0.185$ & 0.0460 & 50 & 0.92 \\
+5 & $T_2^2-T_4^2=0.365$ & 0.0907 & 100 & 0.91 \\
+6 & $T_3^2-T_4^2=0.180$ & 0.0448 & 50 & 0.90 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Mean value of the smallest unit of the arbitrary scale: $\bar l = 0.89\unitv{mm}$.
+
+Estimation of the error caused by the measurement.
+
+\begin{center}
+\small\textbf{Table 33.4}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{cccc}
+\toprule
+No. & Smallest unit of the arbitrary scale (mm) & $(l-\bar l)$ (mm) & $(l-\bar l)^2$ (mm$^2$) \\
+\midrule
+1 & 0.85 & $-0.04$ & 0.0016 \\
+2 & 0.89 & 0 & 0 \\
+3 & 0.89 & 0 & 0 \\
+4 & 0.92 & 0.03 & 0.0009 \\
+5 & 0.91 & 0.02 & 0.0004 \\
+6 & 0.90 & 0.01 & 0.0001 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Hence the standard deviation is
+\begin{equation*}
+\Delta l = \sqrt{\frac{\sum_{i=1}^{N}(l_i-\bar l)^2}{N-1}}
+= \sqrt{\frac{0.003}{5}}\,(\mathrm{mm}) = 0.02\,(\mathrm{mm}).
+\end{equation*}
+
+Other reasonable methods may also be used.
+
+\end{enumerate}
+
+\paragraph{Part B. Determination of the physical quantity $e/k_B$ by electrolysis of water}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Experimental arrangement
+
+The experimental arrangement is shown in Fig.~33.2.
+
+\begin{figbox}{33.2}
+\begin{tikzpicture}[scale=1.0]
+  % beaker
+  \draw[thickline] (1.0,0) -- (1.0,2.4);
+  \draw[thickline] (1.0,0) -- (5.2,0) -- (5.2,2.4);
+  % water
+  \fill[blue!10] (1.06,0.06) rectangle (5.14,1.95);
+  \draw[thickline] (1.06,1.95) -- (5.14,1.95);
+  % inverted test tube
+  \draw[thickline] (1.75,1.05) -- (1.75,3.5) arc (180:0:0.3) -- (2.35,1.05);
+  \foreach \y in {2.8,3.0,3.2} { \draw[thickline] (1.75,\y) -- (1.92,\y); }
+  % electrode inside the test tube
+  \draw[thickline] (2.05,3.9) -- (2.05,2.1);
+  \draw[thickline] (2.05,2.1) -- (2.12,1.6);
+  % lead from the tube to the supply
+  \draw[thickline] (2.05,3.9) -- (2.05,4.15) -- (3.3,4.15);
+  % battery
+  \draw[thickline] (3.4,4.0) -- (3.4,4.3);
+  \draw[thickline] (3.6,3.92) -- (3.6,4.38);
+  \draw[thickline] (3.3,4.15) -- (3.4,4.15);
+  \draw[thickline] (3.6,4.15) -- (4.16,4.15);
+  % ammeter
+  \draw (4.4,4.15) circle (0.24);
+  \node at (4.4,4.15) {A};
+  \draw[thickline] (4.64,4.15) -- (4.85,4.15) -- (4.85,2.0);
+  % electrode in the beaker
+  \draw[very thick] (4.85,2.0) -- (4.85,1.15);
+  % weight at the mouth of the tube
+  \fill (1.85,0.85) rectangle (2.25,1.10);
+  % labels
+  \node[anchor=south] at (3.5,4.45) {power supply};
+  \node[anchor=north] at (4.4,3.72) {ammeter};
+  \node[anchor=east,align=right] (tube) at (1.67,3.25) {test tube};
+  \draw[->] (tube.east) -- (1.73,3.25);
+  \node[anchor=east,align=right] (scale) at (1.67,2.9) {arbitrary scale};
+  \draw[->] (scale.east) -- (1.73,2.95);
+  \node[anchor=east,align=right] (wc) at (0.92,1.35) {water and electrode\\in the test tube};
+  \draw[->] (wc.east) -- (1.85,1.45);
+  \node at (3.6,1.5) {water};
+  \node[anchor=north] at (2.05,0.75) {weight};
+  \node[anchor=west,align=left] (el) at (5.35,0.85) {electrode};
+  \draw[->] (el.north west) -- (4.88,1.2);
+  \node[anchor=west,align=left] (ct) at (5.35,2.0) {container\\filled with water};
+  \draw[->] (ct.west) -- (5.22,1.85);
+\end{tikzpicture}
+\end{figbox}
+
+\item Derivation of the relation between the time $t$, the current $I$ and the water-level difference $\Delta h$.
+\begin{equation*}
+I = \frac{\Delta Q}{\Delta t}.
+\end{equation*}
+
+In the reaction $2\mathrm{H^+} + 2\mathrm{e^-} \longrightarrow \mathrm{H_2}$, the charge transferred in producing a definite number of molecules ($\Delta N$) is
+\begin{align*}
+\Delta Q &= 2e\Delta N,\\
+I &= \frac{\Delta N\cdot 2e}{\Delta t},\\
+p\Delta V &= \Delta N k_B T = \frac{I\Delta t}{2e}k_B T,\\
+p\,\Delta h(\pi r^2) &= \frac{I\Delta t}{2}\,\frac{k_B T}{e},\\
+I\Delta t &= \frac{e}{k_B}\,\frac{2p(\pi r^2)}{T}\,\Delta h.
+\end{align*}
+
+\item Experimental data
+
+\begin{center}
+\small\textbf{Table 33.5}
+\end{center}
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+No. & $\Delta h$ (arbitrary scale) & $I$ (mA) & $\Delta t$ (s) \\
+\midrule
+1 & 12 & 4.00 & 1\,560 \\
+2 & 16 & 4.00 & 2\,281 \\
+3 & 20 & 4.00 & 2\,940 \\
+4 & 24 & 4.00 & 3\,600 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item The circumference of the test tube is 46 arbitrary scale divisions.
+\item In view of the error range permitted by the uncertainty in reading the water surface, choose $\Delta h \ge 4$ scale divisions; in view of the disturbance of the current, choose $I \le 4\unitv{mA}$.
+\item Number of data sets $\ge 4$.
+\end{itemize}
+
+External conditions under which the experimental data were obtained:
+\begin{align*}
+T &= 300\unitv{K},\\
+p &= 1.00\times10^{5}\unitv{Pa}.
+\end{align*}
+
+\item Measurement of the value of $e/k_B$
+
+\begin{center}
+\small\textbf{Table 33.6}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{cccccc}
+\toprule
+No. & $\Delta h$ (arbitrary scale) & $\Delta h$ (mm) & $I$ (mA) & $\Delta t$ (s) & $I\Delta t$ (C) \\
+\midrule
+1 & 12 & 10.68 & 4.00 & 1\,560 & 6.24 \\
+2 & 16 & 14.24 & 4.00 & 2\,281 & 9.12 \\
+3 & 20 & 17.80 & 4.00 & 2\,940 & 11.8 \\
+4 & 24 & 21.36 & 4.00 & 3\,600 & 14.4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The graph of the data $I\Delta t$ against $\Delta h$ listed above is omitted.
+
+The slope obtained from the graph is $764\unitv{C\cdot m^{-1}}$.
+\begin{align*}
+\frac{e}{k_B} &= \frac{764\times300\times\pi}{2\times10^{5}\times(23\times0.89\times10^{-3}\times0.82)^2}\ (\mathrm{C\cdot K/J})\\
+&= 1.28\times10^{4}\ (\mathrm{C\cdot K/J}) \qquad (1.0\ \text{point})
+\end{align*}
+
+Alternative solution (equal marks)
+
+\begin{center}
+\small\textbf{Table 33.7}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{ccccp{2.6cm}}
+\toprule
+No. & $\Delta h$ (mm) & $I\Delta t/10^{3}$ C & Slope & $(e/k_B)/10^{4}$ (C$\cdot$K$\cdot$J$^{-1}$) \\
+\midrule
+1 & 10.68 & 6.24 & 584 & 0.977 \\
+2 & 14.24 & 9.12 & 640 & 1.07 \\
+3 & 17.80 & 11.8 & 663 & 1.11 \\
+4 & 21.36 & 14.4 & 674 & 1.13 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The mean value of $e/k_B$ is $1.07\times10^{4}\unitv{C\cdot K/J}$.
+
+The standard deviation obtained by calculation is about $0.03\times10^{4}\unitv{C\cdot K/J}$.
+
+\end{enumerate}
+
+\subsection*{Problem 5. Optical black box}
+
+\paragraph{Description}
+
+In this problem the student must determine the unknown optical elements inside a box. The box is sealed and has only two narrow slits, which are covered with red plastic sheet. The optical elements in the box are to be identified from the optical phenomena observed in the experiment; the small thickness effect of the plastic covering may be neglected.
+
+The line through the centres of the two slits defines the axis of the box. Apart from the red plastic covering, the box contains 3 of the following optical elements (they may be of the same kind or of different kinds):
+\begin{enumerate}[label=(\arabic*)]
+\item mirrors, which may be plane or spherical;
+\item lenses, which may be convex or concave;
+\item transparent plates with two parallel surfaces (so-called plane-parallel plates);
+\item prisms;
+\item diffraction gratings.
+\end{enumerate}
+The material of all the transparent elements has a refractive index $n = 1.47$ at the wavelength used.
+
+\paragraph{Apparatus}
+
+\begin{enumerate}[label=(\arabic*)]
+\item A laser pointer of wavelength $670\unitv{nm}$. Take care not to look directly into the laser beam.
+\item An optical bench.
+\item A platform, movable along the optical bench, on which the black box is mounted.
+\item A screen, which can be mounted at one end of the optical bench; it can be removed when other measurements are made.
+\item Graph paper, which can be stuck to the screen with adhesive tape.
+\item A vertical support with front and back clamps.
+\end{enumerate}
+
+\paragraph{Note} All the scales marked on the graph paper and on the experimental instruments are graduated in the same unit, but the unit is not the millimetre.
+
+\paragraph{Questions}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Determine what each of the 3 elements is, and give the characteristics of each of them.
+\end{enumerate}
+
+\begin{center}
+\small\textbf{Table 33.8}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{p{3.3cm}p{8.6cm}}
+\toprule
+Element type & Element characteristics \\
+\midrule
+Reflecting mirror & radius of curvature; angle between the mirror axis and the axis of the box \\
+Lens$^{*}$ & focal length; convex or concave; and their positions in the box \\
+Plane-parallel plate & thickness; angle between the plate and the axis of the box \\
+Prism & apex angle; angle between one refracting face and the axis of the box \\
+Diffraction grating$^{*}$ & spacing and direction of the ruled lines, and its position in the box \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$^{*}$ Assume that the principal plane of the lens and the plane of the grating are perpendicular to the axis of the box.
+
+The final answers for the characteristic parameters of each element (such as the focal length and the radius of curvature) should be expressed in millimetres, micrometres, or divisions of the graph paper. You need not determine the accuracy of the results.
+
+\begin{enumerate}[label=(\arabic*),start=2]
+\item Write down the names of the optical elements in the box.
+
+\noindent No.~1 \dotfill\ (0.5 point)
+
+\noindent No.~2 \dotfill\ (0.5 point)
+
+\noindent No.~3 \dotfill\ (0.5 point)
+
+\item Below is a cross-sectional diagram of the box. On the diagram, sketch the positions of the 3 elements inside the box, and label each element with the number used in answer 1. (0.5 point for each correct position)
+
+\item Redraw the diagram of answer 2 and mark on it detailed information, such as the angles of the elements, the distances of the elements from the slits, and the orientation or direction of the elements. (1.0 point)
+
+\item Synthesise the observed data (0.5 point); with the help of the diagram, derive an appropriate formula and determine the characteristics of optical element No.~1 (1.0 point); calculate the required characteristics and enter the answers in the table below (0.5 point).
+\end{enumerate}
+
+\begin{center}
+\small\textbf{Table 33.9}
+\end{center}
+\begin{center}
+\begin{tabular}{|p{0.42\linewidth}|p{0.42\linewidth}|}
+\hline
+\centering Name of element No.~1 & \centering\arraybackslash Characteristics \tabularnewline
+\hline
+\rule{0pt}{1.6cm} & \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\arabic*),start=6]
+\item Synthesise the observed data (0.5 point); with the help of the diagram, derive an appropriate formula and determine the characteristics of optical element No.~2 (1.0 point); calculate the required characteristics and enter the answers in the table below (0.5 point).
+\end{enumerate}
+
+\begin{center}
+\small\textbf{Table 33.10}
+\end{center}
+\begin{center}
+\begin{tabular}{|p{0.42\linewidth}|p{0.42\linewidth}|}
+\hline
+\centering Name of element No.~2 & \centering\arraybackslash Characteristics \tabularnewline
+\hline
+\rule{0pt}{1.6cm} & \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\arabic*),start=7]
+\item Synthesise the observed data (0.5 point); with the help of the diagram, derive an appropriate formula and determine the characteristics of optical element No.~3 (1.0 point); calculate the required characteristics and enter the answers in the table below (0.5 point).
+\end{enumerate}
+
+\begin{center}
+\small\textbf{Table 33.11}
+\end{center}
+\begin{center}
+\begin{tabular}{|p{0.42\linewidth}|p{0.42\linewidth}|}
+\hline
+\centering Name of element No.~3 & \centering\arraybackslash Characteristics \tabularnewline
+\hline
+\rule{0pt}{1.6cm} & \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Solution to Problem 5}
+
+\begin{enumerate}[label=(\arabic*)]
+\item The optical elements are, respectively,
+\begin{itemize}
+\item No.~1: diffraction grating;
+\item No.~2: diffraction grating;
+\item No.~3: plane-parallel transparent plate.
+\end{itemize}
+
+\item Cross-section of the box (Fig.~33.3).
+
+The laser beam enters the box as shown in Figs.~33.4 and 33.5. The positions of the light spots on the screen are the points indicated (marked with crosses).
+
+\begin{figbox}{33.3}
+\begin{tikzpicture}[scale=0.9]
+  % box
+  \draw[thickline] (0,0) rectangle (4.2,3.6);
+  % plane-parallel plate (diagonal)
+  \fill[gray!35] (0.5,0.5) -- (0.95,0.28) -- (3.75,3.3) -- (3.3,3.52) -- cycle;
+  \draw[thickline] (0.5,0.5) -- (3.3,3.52);
+  \draw[thickline] (0.95,0.28) -- (3.75,3.3);
+  % axis of the box
+  \draw[dashedline] (4.2,1.8) -- (2.55,1.8);
+  % slit directions
+  \draw[<->] (-0.18,2.5) -- (-0.18,3.3);
+  \draw[<->] (4.38,2.5) -- (4.38,3.3);
+  \node[align=center,anchor=south] at (-0.18,3.75) {direction\\of the slit};
+  \node[align=center,anchor=south] at (4.38,3.75) {direction\\of the slit};
+  \node[anchor=south west,align=left] at (4.38,1.5) {axis of\\the box};
+  % numbers
+  \node at (0.35,-0.50) {No.~1};
+  \node at (2.1,-0.50) {No.~3};
+  \node at (3.85,-0.50) {No.~2};
+  \node at (0.35,-0.82) {\scriptsize (0.5)};
+  \node at (2.1,-0.82) {\scriptsize (0.5)};
+  \node at (3.85,-0.82) {\scriptsize (0.5)};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{33.4}
+\begin{tikzpicture}[scale=0.85]
+  % screen
+  \draw[thickline] (2.6,1.0) rectangle (5.9,4.4);
+  % box
+  \fill[white] (2.2,0.45) rectangle (3.4,1.65);
+  \fill[white] (2.2,1.65) -- (2.6,2.0) -- (3.8,2.0) -- (3.4,1.65) -- cycle;
+  \fill[white] (3.4,0.45) -- (3.8,0.8) -- (3.8,2.0) -- (3.4,1.65) -- cycle;
+  \draw[thickline] (2.2,0.45) rectangle (3.4,1.65);
+  \draw[thickline] (2.2,1.65) -- (2.6,2.0) -- (3.8,2.0) -- (3.4,1.65);
+  \draw[thickline] (3.4,0.45) -- (3.8,0.8) -- (3.8,2.0);
+  % slit
+  \draw[very thick] (2.8,0.9) -- (2.8,1.4);
+  % spots on the screen
+  \foreach \y in {2.5,2.75,3.0,3.25} { \fill (4.55,\y) circle (0.06); }
+  \draw (4.8,2.35) circle (0.13);
+  \fill (4.8,2.35) circle (0.045);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{33.5}
+\begin{tikzpicture}[scale=0.85]
+  % screen
+  \draw[thickline] (2.6,1.0) rectangle (5.9,4.4);
+  % box
+  \fill[white] (2.2,0.45) rectangle (3.4,1.65);
+  \fill[white] (2.2,1.65) -- (2.6,2.0) -- (3.8,2.0) -- (3.4,1.65) -- cycle;
+  \fill[white] (3.4,0.45) -- (3.8,0.8) -- (3.8,2.0) -- (3.4,1.65) -- cycle;
+  \draw[thickline] (2.2,0.45) rectangle (3.4,1.65);
+  \draw[thickline] (2.2,1.65) -- (2.6,2.0) -- (3.8,2.0) -- (3.4,1.65);
+  \draw[thickline] (3.4,0.45) -- (3.8,0.8) -- (3.8,2.0);
+  % slit
+  \draw[very thick] (2.8,0.9) -- (2.8,1.4);
+  % spots on the screen
+  \draw (4.7,2.65) circle (0.13);
+  \fill (4.7,2.65) circle (0.045);
+  \fill (4.35,2.65) circle (0.06);
+  \fill (5.05,2.65) circle (0.06);
+  \fill (4.7,3.0) circle (0.06);
+  \fill (4.7,2.3) circle (0.06);
+\end{tikzpicture}
+\end{figbox}
+
+\item Supplementary explanations:
+
+The distance between grating No.~1 and the left wall of the box is almost zero (Fig.~33.6).
+
+The ruled lines of grating No.~1 make a right angle with the slit of the box.
+
+The distance between grating No.~2 and the right wall of the box is almost zero.
+
+The ruled lines of grating No.~2 are parallel to the slit of the box.
+
+Schematic diagram of the box to be analysed (Fig.~33.7).
+\end{enumerate}
+
+\begin{figbox}{33.6}
+\begin{tikzpicture}[scale=0.9]
+  % box
+  \draw[thickline] (0,0) rectangle (4.2,3.6);
+  % plate
+  \fill[gray!35] (0.5,0.5) -- (0.95,0.28) -- (3.75,3.3) -- (3.3,3.52) -- cycle;
+  \draw[thickline] (0.5,0.5) -- (3.3,3.52);
+  \draw[thickline] (0.95,0.28) -- (3.75,3.3);
+  % axis
+  \draw[dashedline] (-0.5,1.8) -- (4.7,1.8);
+  % diffracted beams at the left wall
+  \foreach \k in {0,1,2} {
+    \draw[thickline] (-0.35-0.28*\k,1.45) -- (-0.8-0.28*\k,2.25);
+  }
+  % diffracted beams at the right wall
+  \foreach \k in {0,1,2,3} {
+    \draw[thickline] (4.4+0.2*\k,1.35) -- (4.4+0.2*\k,2.35);
+  }
+  % numbers
+  \node[align=center] at (0.55,-0.45) {No.~1};
+  \node[align=center] at (2.1,-0.45) {No.~3};
+  \node[align=center] at (3.65,-0.45) {No.~2};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{33.7}
+\begin{tikzpicture}[scale=0.9]
+  % box in perspective
+  \draw[thickline] (0,0) rectangle (3.2,2.7);
+  \draw[thickline] (0,2.7) -- (0.9,3.35) -- (4.1,3.35) -- (3.2,2.7);
+  \draw[thickline] (3.2,0) -- (4.1,0.65) -- (4.1,3.35);
+  % ruled lines of the grating on the front face
+  \foreach \y in {0.55,0.85,1.15,1.45,1.75,2.05} {
+    \draw[thickline] (0.25,\y) -- (1.85,\y);
+  }
+  % ruled lines on the side face
+  \foreach \x in {3.45,3.6,3.75} {
+    \draw[dashedline] (\x,0.5) -- (\x,2.65);
+  }
+\end{tikzpicture}
+\end{figbox}
+
+\begin{enumerate}[label=(\arabic*),start=4]
+\item Diffraction grating (Fig.~33.8)
+
+The optical path difference is
+\begin{equation*}
+\Delta = d\sin\theta,
+\end{equation*}
+where $d$ is the grating constant, $\theta$ the angle of diffraction and $m$ the order of diffraction.
+
+The condition for diffraction is
+\begin{equation*}
+\Delta = m\lambda.
+\end{equation*}
+Hence, for first-order diffraction ($m=1$),
+\begin{equation*}
+\sin\theta = \lambda/d.
+\end{equation*}
+
+\begin{figbox}{33.8}
+\begin{tikzpicture}[scale=1.0]
+  % grating plane
+  \draw[dashedline] (1.0,-0.7) -- (1.0,2.6);
+  \draw[thickline] (1.0,2.6) -- (1.0,2.25);
+  \draw[thickline] (1.0,0.8) -- (1.0,0.45);
+  \draw[thickline] (1.0,-0.35) -- (1.0,-0.7);
+  % incident rays
+  \draw[force] (0.05,2.0) -- (0.95,2.0);
+  \draw[force] (0.05,0.4) -- (0.95,0.4);
+  % points
+  \fill (1.0,2.0) circle (0.04);
+  \fill (1.0,0.4) circle (0.04);
+  % diffracted rays
+  \draw[force] (1.0,2.0) -- (3.085,1.028);
+  \draw[dashedline] (1.0,0.4) -- (3.085,-0.572);
+  \draw[force] (2.62,-0.355) -- (3.085,-0.572);
+  % spacing d
+  \draw[dim] (0.72,2.0) -- (0.72,0.4) node[midway,left] {$d$};
+  % perpendicular for the path difference
+  \draw[dashedline] (1.0,0.4) -- (1.613,1.714);
+  \draw (1.613,1.714) -- (1.53,1.63) -- (1.43,1.70);
+  \node at (1.36,1.02) {$\Delta$};
+  % angle theta
+  \draw[dashedline] (1.0,0.4) -- (2.55,0.4);
+  \draw (1.7,0.4) arc (0:-25:0.7);
+  \node at (1.86,0.20) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+\paragraph{Observed data}
+
+\begin{center}
+\small\textbf{Table 33.12}
+\end{center}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$\tan\theta$ & $\theta$ ($^\circ$) & $\sin\theta$ \\
+\midrule
+0.34 & 18.8 & 0.322 \\
+0.32 & 17.7 & 0.305 \\
+0.32 & 17.7 & 0.305 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small\textbf{Table 33.13}
+\end{center}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Name of element No.~1 & Specific specification \\
+\midrule
+\rule{0pt}{0.9cm}Diffraction grating &
+\rule{0pt}{0.9cm}\begin{tabular}{@{}l@{}}grating constant $=2.16\unitv{\mu m}$\\ grating lines at right angles to the slit\end{tabular} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\item Diffraction grating
+
+\paragraph{Observed data}
+
+\begin{center}
+\small\textbf{Table 33.14}
+\end{center}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$\tan\theta$ & $\theta$ ($^\circ$) & $\sin\theta$ \\
+\midrule
+1.04 & 46.1 & 0.721 \\
+0.96 & 43.8 & 0.693 \\
+1.08 & 47.2 & 0.734 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small\textbf{Table 33.15}
+\end{center}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Name of element No.~2 & Specific specification \\
+\midrule
+\rule{0pt}{0.9cm}Diffraction grating &
+\rule{0pt}{0.9cm}\begin{tabular}{@{}l@{}}grating constant $=0.936\unitv{\mu m}$\\ grating lines parallel to the slit\end{tabular} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\item Plane-parallel smooth transparent glass plate (Fig.~33.9)
+
+\begin{figbox}{33.9}
+\begin{tikzpicture}[scale=1.0]
+  % glass plate
+  \fill[gray!15] (0.169,1.469) -- (2.431,3.731) -- (3.704,2.458) -- (1.442,0.196) -- cycle;
+  \draw[thickline] (0.169,1.469) -- (2.431,3.731) -- (3.704,2.458) -- (1.442,0.196) -- cycle;
+  % incident ray
+  \draw[force] (0.0,2.6) -- (1.26,2.6);
+  % extended incident direction
+  \draw[dashedline] (1.36,2.6) -- (3.95,2.6);
+  % normal
+  \draw[dashedline] (1.30,2.6) -- (2.75,1.15);
+  % ray inside the plate
+  \draw[force] (1.33,2.59) -- (3.25,2.03);
+  % emergent ray
+  \draw[force] (3.29,2.025) -- (4.15,2.025);
+  % lateral displacement
+  \draw[dashedline] (3.27,2.025) -- (3.27,2.6);
+  % angle phi at A
+  \draw (1.30,2.6) arc (0:-45:0.50);
+  \node[anchor=south] at (1.80,2.64) {$\varphi$};
+  % angle phi prime
+  \draw (1.30,2.6) arc (-16.3:-45:1.00);
+  \node at (2.05,2.02) {$\varphi'$};
+  % labels
+  \node[anchor=south east] at (1.22,2.68) {$A$};
+  \node[anchor=south] at (3.24,2.72) {$D$};
+  \node[anchor=north west] at (2.62,1.30) {$B$};
+  \node[anchor=north] at (3.30,1.96) {$C$};
+  \node at (1.55,1.45) {$n$};
+  \node[anchor=west] at (3.36,2.30) {$t$};
+  % angle 90 - phi at the bottom corner
+  \draw[dashedline] (1.442,0.196) -- (2.70,0.196);
+  \draw (1.442,0.196) arc (0:45:0.50);
+  \node[anchor=north west] at (2.02,0.02) {$90^\circ-\varphi$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{itemize}
+\item Snell's law: $\sin\varphi = n\sin\varphi'$, \quad $\varphi' = \angle BAC$.
+\item Optical path inside the transparent glass plate: $AC = AB/\cos\varphi'$.
+\item $AB = h =$ thickness of the transparent glass plate.
+\item Displacement of the beam:
+\begin{equation*}
+CD = t = AC\sin\angle CAD, \qquad \angle CAD = \varphi - \varphi'.
+\end{equation*}
+\end{itemize}
+\end{enumerate}
+
+Hence
+\begin{equation*}
+t = h\sin\varphi\left[1 - \frac{\cos\varphi}{(n^2 - \sin^2\varphi)^{1/2}}\right].
+\end{equation*}
+
+\paragraph{Observed data}
+
+\begin{center}
+\small\textbf{Table 33.16}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{cp{7.4cm}}
+\toprule
+$\varphi$ & $t$ \\
+\midrule
+\rule{0pt}{0.7cm}$0$ & \rule{0pt}{0.7cm}$0$; the beam makes an angle of $49^\circ$ with the central axis \\
+\rule{0pt}{0.7cm}$49^\circ$ & \rule{0pt}{0.7cm}7.3 arbitrary scale \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small\textbf{Table 33.17}
+\end{center}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Name of element No.~3 & Specific specification \\
+\midrule
+\rule{0pt}{0.9cm}Parallel transparent glass plate &
+\rule{0pt}{0.9cm}\begin{tabular}{@{}l@{}}thickness $=17.9\unitv{mm}$\\ angle with the central axis of the box $=49^\circ$\end{tabular} \\
+\bottomrule
+\end{tabular}
+\end{center}

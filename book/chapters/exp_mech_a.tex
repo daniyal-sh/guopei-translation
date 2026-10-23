@@ -1,0 +1,1041 @@
+\subsection*{Experiment 6.01\quad Measuring the density of paraffin wax by Archimedes' principle}
+
+\noindent\textit{[Available apparatus]}
+
+A physical balance, a thermometer, a glass beaker, fine thread, a copper block, a paraffin block, water, etc.
+
+\noindent\textit{[Requirements]}\quad Write briefly the principle of the experiment, the experimental procedure, the recorded data and their processing. (The density of water is known to be \SI{1.000}{g/cm^3}.)
+
+\medskip
+\noindent\textbf{Solution 6.01.}\quad For paraffin wax, whose density is less than that of water, a part would float above the surface if it were immersed in water. In order to measure the volume of such a body, a heavy copper block may be suspended below the body to be measured, as shown in the figure. The principle of the measurement and the procedure are as follows. First immerse the copper block in water, so that the paraffin block is entirely above the water surface, and place the whole beaker, copper block, paraffin, etc.\ on the ``special support'' of the physical balance (note that they must not be placed on the pan of the balance); connect the thread carrying the paraffin and the copper block to the hook at the end of the balance arm. When the balance is in equilibrium, read the mass $M_1$ of the weights, as shown in Fig.~6.01(a). Then let the copper block and the paraffin block be immersed in water together; when the balance is in equilibrium, read the corresponding mass $M_2$ of the weights. The buoyant force acting on the paraffin block, the body to be measured, is
+\begin{equation*}
+F=(M_1-M_2)g,
+\end{equation*}
+where $g$ is the acceleration due to gravity. If the volume of the paraffin block is $V$ and the density of water is $\rho_0$, then by Archimedes' principle
+\begin{equation*}
+(M_1-M_2)g=\rho_0 Vg.
+\end{equation*}
+If the mass $M$ of the paraffin block in air has been determined beforehand, then the density $\rho$ of the paraffin is
+\begin{equation*}
+\rho=\frac{M}{M_1-M_2}\,\rho_0.
+\end{equation*}
+
+\begin{figbox}{6.01}
+\begin{tikzpicture}[scale=0.85]
+% ---------- panel (a) ----------
+\draw[thickline] (-0.45,3.62)--(0.45,3.62);
+\draw[thickline] (0,3.62)--(0,3.50);
+\draw[thickline] (0,3.50) circle (0.07);
+% beaker
+\draw[thickline] (-1.10,2.80)--(-1.10,0.30)--(1.10,0.30)--(1.10,2.80);
+\draw[thickline] (-1.10,2.80)--(-1.02,2.80);
+\draw[thickline] (1.10,2.80)--(1.02,2.80);
+% water
+\fill[black!6] (-1.05,0.33) rectangle (1.05,1.45);
+\draw[thickline] (-1.05,1.45)--(1.05,1.45);
+% thread and bodies
+\draw[thickline] (0,3.43)--(0,2.15);
+\draw[thickline] (0,1.85)--(0,0.75);
+\draw[thickline,fill=white] (0,2.00) circle (0.15);
+\draw[thickline,fill=black] (0,0.57) circle (0.18);
+\node at (0,-0.35) {(a)};
+% ---------- panel (b) ----------
+\begin{scope}[xshift=3.6cm]
+\draw[thickline] (-0.45,3.62)--(0.45,3.62);
+\draw[thickline] (0,3.62)--(0,3.50);
+\draw[thickline] (0,3.50) circle (0.07);
+\draw[thickline] (-1.10,2.80)--(-1.10,0.30)--(1.10,0.30)--(1.10,2.80);
+\draw[thickline] (-1.10,2.80)--(-1.02,2.80);
+\draw[thickline] (1.10,2.80)--(1.02,2.80);
+\fill[black!6] (-1.05,0.33) rectangle (1.05,2.40);
+\draw[thickline] (-1.05,2.40)--(1.05,2.40);
+\draw[thickline] (0,3.43)--(0,2.05);
+\draw[thickline] (0,1.75)--(0,0.75);
+\draw[thickline,fill=white] (0,1.90) circle (0.15);
+\draw[thickline,fill=black] (0,0.57) circle (0.18);
+\node at (0,-0.35) {(b)};
+\end{scope}
+% labels
+\node[right,font=\scriptsize] at (1.15,2.00) {paraffin};
+\node[right,font=\scriptsize] at (1.15,0.57) {copper};
+\draw[thickline] (1.12,1.97)--(0.18,1.97);
+\draw[thickline] (1.12,0.57)--(0.20,0.57);
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 6.02\quad Measuring the density of solder wire with a pycnometer}
+
+\noindent\textit{[Available apparatus]}
+
+A physical balance, a pycnometer, a small coil of solder wire, scissors, water, a beaker, a cloth, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Observe the structure of the pycnometer and describe briefly the function of the capillary in it;
+\item Explain the principle of measuring the density of a solid with a pycnometer, and write down the calculation formula; the meaning of every symbol in the formula must be explained;
+\item Measure the density $\rho$ of a certain solder wire. The density of the water used in the experiment is $\rho_0=\SI{1.000}{g/cm^3}$;
+\item Measure the scale interval (or division value) of the balance when it is unloaded, and write down the calculation formula and the result.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.02.}\quad \textbf{1.} Observe and analyse the structural features of the pycnometer; its structure is shown in the figure. The stopper of the pycnometer is a ground-glass stopper with a capillary in its middle. In use, liquid is poured into the pycnometer up to the mouth and the stopper is pressed in firmly; the excess liquid then flows out through the capillary. In this way the volume of the liquid contained in the vessel is kept fixed.
+
+\textbf{2.} Let the mass of the solder wire to be measured be $m_x$, its density $\rho_x$ and its volume $V_x$. Then the relation $m_x=\rho_x V_x$ holds, where $m_x$ can be weighed on the balance. Let the mass of the pycnometer be $M$, its mass when filled with pure water be $m_0$, and its volume be $V_0$. The volume of the water is just the volume of the pycnometer (during the experiment one must constantly pay attention to the height of the water column in the capillary). There is also the relation $m_0=V_0\rho_0+M$, in which $\rho_0=\SI{1.000e3}{kg/m^3}$; the value of $m_0$ can be weighed on the balance.
+
+Immerse as much of the solder wire of mass $m_x$ as possible in the pycnometer; part of the pure water overflows. Keeping the water column at its original height in the capillary, the total mass is
+\begin{equation*}
+m_1=\rho_x V_x+\rho_0(V_0-V_x)+M.
+\end{equation*}
+$m_1$ can be weighed on the balance. From the three equations for $m_x$, $m_0$ and $m_1$, after simplification,
+\begin{equation*}
+\rho_x=\rho_0\,\frac{m_x}{m_x+m_0-m_1}.
+\end{equation*}
+
+\textbf{3. Data measurement and calculation}
+\begin{equation*}
+m_x=\SI{93.50e-3}{kg},\qquad m_0=\SI{38.55e-3}{kg},\qquad m_1=\SI{118.80e-3}{kg},
+\end{equation*}
+then
+\begin{equation*}
+\rho_x=\frac{1.000\times10^3\times 93.50}{93.50+38.55-118.80}=\SI{7.060e3}{kg/m^3}.
+\end{equation*}
+
+\textbf{4.} The scale interval of a balance is its division value; it represents the mass difference corresponding to two adjacent graduations indicated by the pointer. The scale interval is $\Delta m/\Delta L$, where $\Delta L$ is the displacement increment of the observed variable and $\Delta m$ is the increment of the mass being measured, while $\Delta L/\Delta m$ is called the sensitivity of the balance.
+
+If the balance is in equilibrium when unloaded, and an added mass $\Delta m=\SI{0.020}{g}$ makes the pointer swing so that the difference between the deviations on the two sides is $\Delta L=5.0-3.0=2.0$ divisions, then the scale interval of the balance when unloaded is
+\begin{equation*}
+\frac{\Delta m}{\Delta L}=\frac{0.020\ \mathrm{g}}{2.0\ \text{divisions}}=\SI{0.010}{g}/\text{division}.
+\end{equation*}
+
+\begin{figbox}{6.02}
+\begin{tikzpicture}[scale=0.95]
+% flask body
+\draw[thickline] (-0.42,1.55)
+  .. controls (-0.52,1.05) and (-1.25,1.00) .. (-1.28,0.15)
+  .. controls (-1.31,-0.90) and (-0.70,-1.30) .. (0,-1.30)
+  .. controls (0.70,-1.30) and (1.31,-0.90) .. (1.28,0.15)
+  .. controls (1.25,1.00) and (0.52,1.05) .. (0.42,1.55);
+\draw[thickline] (-0.42,1.55)--(-0.42,2.10);
+\draw[thickline] (0.42,1.55)--(0.42,2.10);
+% stopper
+\draw[thickline] (-0.38,2.10)--(-0.30,2.78)--(0.30,2.78)--(0.38,2.10);
+% capillary
+\draw[thickline] (-0.07,2.78)--(-0.07,1.75);
+\draw[thickline] (0.07,2.78)--(0.07,1.75);
+\draw[thickline] (-0.07,1.75)--(0.07,1.75);
+% labels
+\node[right,font=\scriptsize] at (0.13,2.50) {capillary};
+\draw[thickline] (0.10,2.52)--(0.05,2.52);
+\node[right,font=\scriptsize] at (0.45,2.18) {ground-glass stopper};
+\draw[thickline] (0.43,2.20)--(0.36,2.25);
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 6.03\quad Measuring the volume ratio of a body in a mixture to a single impurity contained in it}
+
+Two cylinders of equal volume, each provided with a suspension thread, are available; one is made of wax, and the other is made of wax but contains a heavy-metal impurity. The density of this heavy-metal impurity is known to be $\rho_{\text{metal}}=\SI{7.67}{g/cm^3}$. Find the volume ratio $n$ of the heavy-metal impurity to the wax contained in the mixture cylinder.
+
+\noindent\textit{[Available apparatus]}
+
+A wax cylinder, a wax cylinder containing a heavy-metal impurity, a physical balance and weights, a beaker filled with water (the density of water is \SI{1.000}{g/cm^3}).
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle and the measurement formula.
+\item Measure and record the data, and write down the experimental result.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.03.}\quad Let the volume of the paraffin part in the mixture cylinder be $V_1$ and the density of paraffin be $\rho_1$; let the volume of the heavy-metal part be $V_2$ and the density of the heavy metal be $\rho_2=\rho_{\text{metal}}=\SI{7.67}{g/cm^3}$. Then the following two equations hold:
+\begin{equation}\tag{1}
+\begin{cases}
+V_1\rho_1+V_2\rho_2=M_2,\\[2pt]
+V\rho_1=V_1\rho_1+V_2\rho_1=M_1.
+\end{cases}
+\end{equation}
+In equations (1), $V$ is the volume of the cylinder to be measured, $M_2$ is the mass of the mixture cylinder to be measured, and $M_1$ is the mass of the pure paraffin cylinder. Solving these equations gives
+\begin{equation}\tag{2}
+n=\frac{V_2}{V_1}=\frac{(M_2-M_1)\rho_1}{M_1\rho_2-M_2\rho_1}.
+\end{equation}
+In equation (2), $M_1$ and $M_2$ can both be determined with the physical balance. The density of the paraffin can be measured by the method for measuring the density of paraffin described in Solution 6.01; in the experiment the mixture cylinder may be used as the heavy body.
+
+\subsection*{Experiment 6.04\quad Measuring the density of salt water by two methods}
+
+Using the apparatus and materials provided, measure the density of salt water by two methods.
+
+\noindent\textit{[Available apparatus and materials]}
+
+A physical balance and weights, two \SI{500}{mL} beakers, a plastic cylinder with a hole in its bottom, a number of steel balls, nylon thread, pure water, a pycnometer, a thermometer, a cloth, the salt water to be measured, and a table of the density of water at different temperatures.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the two methods and formulas for measuring the density of salt water, and explain the meaning of each quantity in the formulas.
+\item The measurement results are required to have four significant figures.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.04.}\quad The two different methods are: (1) measurement of the density of a liquid by the method of hydrostatic weighing, using Archimedes' principle; (2) measurement of the density of a liquid by the pycnometer method.
+
+\textbf{1. Measurement of the density of an unknown liquid by hydrostatic weighing}
+
+The principle and the method of the experiment are as follows.
+
+Put a certain amount of small steel balls into a small plastic cylinder, suspend the plastic cylinder with nylon thread, and hang it on the hook above the pan of the balance. Weigh the mass of the ``cylinder'' body as $M$. Then place a beaker containing pure water on the special support of the physical balance. Let the ``cylinder'' body be completely immersed in the pure water, and weigh its apparent mass with the physical balance as $M_1$. Let the volume of the ``cylinder'' body be $V$ and the density of pure water be $\rho_0$; then
+\begin{equation}\tag{1}
+M-M_1=V\rho_0.
+\end{equation}
+Similarly, replace the pure water in the beaker with salt water. When the ``cylinder'' body is completely immersed in the salt water, its apparent mass weighed with the physical balance is $M_2$. Let the density of the salt water to be measured be $\rho_x$; then
+\begin{equation}\tag{2}
+M-M_2=V\rho_x.
+\end{equation}
+Dividing equation (2) by equation (1) term by term gives
+\begin{equation}\tag{3}
+\rho_x=\frac{M-M_2}{M-M_1}\,\rho_0.
+\end{equation}
+If the four quantities $M$, $M_2$, $M_1$ and $\rho_0$ are known, the value of $\rho_x$ can be found. In order to ensure that the experimental result has four significant figures, the following must be done. (1) The values of $M-M_2$, $M-M_1$ and $\rho_0$ must all have more than four significant figures. Therefore the number of steel balls in the small plastic cylinder should be rather large, i.e.\ the volume $V$ should be rather large, so as to ensure that both $M-M_1$ and $M-M_2$ have four significant figures. At the same time the water temperature must be measured, and the value of $\rho_0$ obtained from the table must have four significant figures. (2) When changing the water or when measuring the salt water, the heavy body (the plastic cylinder and the steel balls) and the beaker must be wiped dry with a cloth, and the concentration of the salt water to be measured must not be changed during the experiment.
+
+\textbf{2. Measurement of the density of salt water by the pycnometer method}
+
+Let the mass of the pycnometer be $M$, and its mass when filled with pure water, weighed with the physical balance, be $m_1$. The density of pure water is $\rho_0$, obtained from a table after measuring the water temperature with the thermometer. Empty the water from the pycnometer, fill it with the salt water to be measured, and weigh its mass with the physical balance as $m_2$. Then
+\begin{equation}\tag{1}
+m_2-M=V\cdot\rho_x,
+\end{equation}
+\begin{equation}\tag{2}
+m_1-M=V\cdot\rho_0.
+\end{equation}
+In the above equations, $V$ is the volume of the pycnometer. Solving (1) and (2) gives
+\begin{equation}\tag{3}
+\rho_x=\frac{m_2-M}{m_1-M}\cdot\rho_0.
+\end{equation}
+In the experiment of measuring the density of salt water by the pycnometer method, in order that the result for $\rho_x$ have four significant figures, the following must be done. 1) The quantities $m_2-M$, $m_1-M$ and $\rho_0$ must all reach four significant figures; hence it is necessary to use a pycnometer of appropriate size. 2) When the pure water in the pycnometer is replaced by salt water for the measurement, it is also important that the pure water be poured out completely before the salt water is introduced.
+
+\subsection*{Experiment 6.05\quad Measurement of the density of air}
+
+Air under ambient conditions is sealed with a rubber stopper in a glass vessel (a small ampoule bottle). The air in the vessel can be withdrawn with a medical syringe; as the number of suction strokes increases, the pressure in the bottle gradually decreases. Neglecting leakage past the rubber stopper during and after the suction strokes, devise a measurement scheme to determine the density of the air sealed in the vessel under ambient conditions, and require the systematic error (uncertainty) of the measurement to be kept below $3\%$.
+
+\noindent\textit{[Available apparatus]}
+
+A glass vessel sealed with a rubber stopper (its volume is $V_0=\SI{312}{cm^3}$), a medical syringe (\SI{30}{cm^3}), a physical balance and weights, adhesive tape for sealing, and a sheet of graph paper measuring $20\ \mathrm{cm}\times25\ \mathrm{cm}$.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the principle of the measurement and the measurement formula on which it is based.
+\item Record the measured data and obtain the measurement result.
+\item Explain why the systematic error (uncertainty) is less than $3\%$.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.05.}\quad \textbf{1. Principle and formulas of the measurement}
+
+Let the volume of the vessel be $V_0$, the pressure of the air in the vessel be $p_0$, the room temperature be $T_0$ ($T_0$ being the thermodynamic temperature), and the mass of the air in the vessel be $M_0$. Then
+\begin{equation}\tag{1}
+p_0V_0=\frac{M_0}{\mu}RT_0,
+\end{equation}
+where $R$ is the universal constant of ideal gases.
+
+Insert the syringe and make the first suction stroke; the volume and pressure become $V_0+V_c$ and $p_1$, where $V_c$ is the suction volume of the syringe, $V_c=\SI{30.0}{cm^3}$. Then, on reaching equilibrium,
+\begin{equation*}
+\frac{p_1}{p_0}=\frac{V_0}{V_0+V_c}.
+\end{equation*}
+Similarly, after $n$ suction strokes the gas pressure is $p_n$:
+\begin{equation}\tag{2}
+\frac{p_n}{p_0}=\left(\frac{V_0}{V_0+V_c}\right)^{n}.
+\end{equation}
+Let the mass of the air remaining in the bottle after $n$ suction strokes be $M_n$. Then
+\begin{equation*}
+p_nV_0=\frac{M_n}{\mu}RT_0,
+\end{equation*}
+that is,
+\begin{equation}\tag{3}
+\frac{p_n}{p_0}=\frac{M_n}{M_0}=\frac{M_0-\Delta M_n}{M_0},
+\end{equation}
+where $\Delta M_n$ is the mass of the air removed by $n$ suction strokes.
+
+From (2) and (3) we obtain
+\begin{equation}\tag{4}
+\Delta M_n=M_0\left[1-\left(\frac{V_0}{V_0+V_c}\right)^{n}\right].
+\end{equation}
+Equation (4) shows that $\Delta M_n$ varies linearly with $\left[1-\left(\dfrac{V_0}{V_0+V_c}\right)^{n}\right]$, the slope being $M_0$. Measure respectively the values $\Delta M_5$, $\Delta M_{10}$, $\Delta M_{15}$ and $\Delta M_{20}$ corresponding to 5, 10, 15 and 20 suction strokes, and find $M_0$ by linear regression or graphically. Then
+\begin{equation}\tag{5}
+\rho_0=\frac{M_0}{V_0}.
+\end{equation}
+
+\textbf{2. Measurement data and results}
+
+The measured data are given in the table below.
+\begin{equation*}
+V_0=\SI{312}{cm^3},\qquad V_c=\SI{30.0}{cm^3}.
+\end{equation*}
+
+\begin{center}
+\textbf{Table 6.05}\\[3pt]
+\begin{tabular}{ccc}
+\toprule
+$n$ & $1-\left(\dfrac{V_0}{V_0+V_c}\right)^{n}$ & $\Delta M_n/\mathrm{g}$\\
+\midrule
+5  & 0.368\,3 & $115\times10^{-3}$\\
+10 & 0.462   & $152\times10^{-3}$\\
+15 & 0.606   & $195\times10^{-3}$\\
+20 & 0.711   & $243\times10^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Fitting a straight line to $\Delta M_n$ against $1-\left(\dfrac{V_0}{V_0+V_c}\right)^{n}$ gives:
+
+slope $M_0=\SI{363e-3}{g}$; correlation coefficient $r=0.997$.
+
+The density of the ambient air is
+\begin{equation*}
+\rho=\frac{363\times10^{-3}}{312}\ \mathrm{g/cm^3}=\SI{1.16e-3}{g/cm^3}.
+\end{equation*}
+
+\begin{commentary}
+Because the slope $M_0$ is obtained by fitting a straight line, the influence of the systematic error due to the small amount of gas remaining in the bottle after the 20 suction strokes is eliminated, and the measurement result is made more accurate.
+\end{commentary}
+
+\subsection*{Experiment 6.06\quad Measurement of the volume of a rectangular thin plate}
+
+Measure the volume of a rectangular thin plate, making the accuracy of the measurement result as high as possible.
+
+\noindent\textit{[Available apparatus and measuring instruments]}
+
+A metre rule, a micrometer, a vernier calliper, the thin plate to be measured.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Choose the measuring instruments correctly to measure the length, width and height of the body, so that the experimental result has four significant figures; the length, width and height need be measured only once each.
+\item Calculate the volume $V$ of the thin plate and estimate the uncertainty $U(V)$ of the experimental measurement result.
+\item Express the measurement result in terms of the uncertainty.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.06.}\quad The length $x$ of the thin plate is measured with a metre rule whose division value is \SI{1}{mm}, giving $x=\SI{14.01}{cm}$; the width $y$ is measured with a vernier calliper whose division value is \SI{0.02}{mm}, giving $y=\SI{4.998}{cm}$; the thickness $z$ is measured with a micrometer whose division value is \SI{0.01}{mm}, giving $z=\SI{0.2491}{cm}$.
+
+The volume of the thin plate is
+\begin{equation*}
+V=x\cdot y\cdot z=14.01\times4.998\times0.2491=\SI{17.44}{cm^3}.
+\end{equation*}
+Let the uncertainty in the measurement of the length $x$ be $U(x)$, that in the measurement of the width $y$ be $U(y)$, and that in the measurement of the height $z$ be $U(z)$. Then the uncertainty $U(V)$ of the volume $V$ of the thin plate is
+\begin{equation*}
+U(V)=\sqrt{\left(\frac{\partial V}{\partial x}\right)^{2}U^{2}(x)
++\left(\frac{\partial V}{\partial y}\right)^{2}U^{2}(y)
++\left(\frac{\partial V}{\partial z}\right)^{2}U^{2}(z)}.
+\end{equation*}
+Taking $U(x)=\SI{0.05}{cm}$, $U(y)=\SI{0.001}{cm}$ and $U(z)=\SI{0.0005}{cm}$, we have
+\begin{equation*}
+U(V)=\sqrt{(yz)^{2}U^{2}(x)+(xz)^{2}U^{2}(y)+(xy)^{2}U^{2}(z)}
+\approx\SI{0.07}{cm^3}.
+\end{equation*}
+Hence the measurement result is
+\begin{equation*}
+V=(17.44\pm0.07)\ \mathrm{cm^3},
+\end{equation*}
+the relative uncertainty being about $0.4\%$.
+
+\subsection*{Experiment 6.07\quad Measurement of the internal diameter of a glass capillary}
+
+\noindent\textit{[Available apparatus]}
+
+A reading microscope, a glass capillary, etc.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Adjust the reading microscope correctly, and explain how the parallax is eliminated.
+\item Explain how the screw-pitch error is eliminated.
+\item Measure the internal diameter of the glass capillary.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.07.}\quad The principal errors in measuring a length or a displacement with a reading microscope are the parallax error and the screw-pitch error.
+
+The parallax is eliminated by making the image of the object and the scale of the reading microscope (engraved on the reticle) lie in the same plane. In actual operation, first adjust the eyepiece so that the reticle is sharp, that is, so that the reticle lies in the focal plane of the eyepiece. Then adjust the object distance so that the image of the object to be measured is also formed on the reticle; the reticle is then also sharp. In this way the parallax, which arises because the scale and the image are not in the same plane, is eliminated.
+
+The screw-pitch error is eliminated as follows. When the micrometer screw of the reading microscope moves, both position measurements (left and right) should be made with the cross-wire moving in one direction, and the readings should be taken when the wire is tangent to the circle (as shown in the figure); in this way the screw-pitch error is avoided.
+
+\begin{center}
+\textbf{Table 6.07}\quad Capillary diameter measurement data\\[3pt]
+\begin{tabular}{cccc}
+\toprule
+Capillary end face & $\phi_1/\mathrm{mm}$ & $\phi_2/\mathrm{mm}$ & Diameter $d/\mathrm{mm}$\\
+\midrule
+A end & 6.280 & 5.496 & 0.784\\
+      & 6.196 & 5.390 & 0.806\\
+      & 6.496 & 5.711 & 0.785\\
+      & 6.457 & 5.652 & 0.805\\
+      & 6.182 & 5.354 & 0.808\\
+\cmidrule(lr){1-4}
+B end & 3.098 & 2.303 & 0.795\\
+      & 4.168 & 3.354 & 0.814\\
+      & 4.440 & 3.644 & 0.796\\
+      & 4.486 & 3.701 & 0.785\\
+      & 3.344 & 2.560 & 0.784\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The diameter is $\bar d=\SI{7.96e-2}{cm}$.
+
+\begin{figbox}{6.07}
+\begin{tikzpicture}[scale=1.0]
+\draw[thickline,pattern=north east lines,pattern color=black!55] (0,0) circle (0.80);
+\draw[thickline,fill=white] (0,0) circle (0.54);
+\draw[dashedline] (-1.15,0)--(1.15,0);
+\draw[dashedline] (0,-1.15)--(0,1.15);
+\draw[dashedline] (-0.80,-1.0)--(-0.80,1.25);
+\draw[dashedline] (0.80,-1.0)--(0.80,1.25);
+\node[above] at (-0.80,1.25) {$\phi_1$};
+\node[above] at (0.80,1.25) {$\phi_2$};
+\node[below] at (0,-1.15) {$d$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 6.08\quad Measurement of the thickness of a thin plate with an optical lever}
+
+\noindent\textit{[Available apparatus and materials]}
+
+An optical lever, a support, a plumb line, the thin plate to be measured.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Adjust the optical lever correctly, so that the scale is parallel to the reflecting mirror and the principal axis of the telescope is perpendicular to the scale.
+\item Focus the telescope correctly.
+\item Measure the thickness $h$ of the thin plate.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.08.}\quad The optical lever consists of a reflecting mirror $M$ whose base has three support points, a base plate, a scale, a telescope $T$, a plumb line and an iron stand, as shown in the figure.
+
+\begin{figbox}{6.08}
+\begin{tikzpicture}[scale=0.9]
+% ---------- left: the optical lever ----------
+\begin{scope}
+\draw[thickline] (-1.20,0)--(1.40,0);
+\draw[thickline] (-1.20,0)--(-1.20,-0.12)--(1.40,-0.12)--(1.40,0);
+\draw[pattern=north east lines,pattern color=black!55] (-1.20,-0.12) rectangle (1.40,0);
+\draw[thickline,fill=black!15] (0.95,0)--(1.35,0)--(1.35,0.12)--(0.95,0.12)--cycle;
+\node[below,font=\scriptsize] at (1.15,-0.18) {$h$};
+\draw[thickline] (-0.90,0)--(-0.90,0.55);
+\draw[thickline] (0.10,0)--(0.10,0.55);
+\draw[thickline] (1.15,0.12)--(1.15,0.55);
+\node[left,font=\scriptsize] at (-0.94,0.28) {$H_1$};
+\node[left,font=\scriptsize] at (0.06,0.28) {$H_2$};
+\node[right,font=\scriptsize] at (1.19,0.30) {$H_3$};
+\draw[thickline] (-0.97,0.55)--(1.22,0.55)--(1.22,0.72)--(-0.97,0.72)--cycle;
+\draw[thickline,fill=black!10] (-0.88,0.72)--(0.92,0.72)--(0.72,2.02)--(-1.08,2.02)--cycle;
+\node[font=\scriptsize] at (-0.18,1.55) {$M$};
+\end{scope}
+% ---------- right: optical path ----------
+\begin{scope}[xshift=4.5cm,scale=0.82]
+\draw[thickline] (-0.20,0)--(2.60,0);
+\draw[thickline] (-0.20,0)--(-0.20,-0.10)--(2.60,-0.10)--(2.60,0);
+\draw[thickline,fill=black!15] (1.05,0)--(1.45,0)--(1.45,0.14)--(1.05,0.14)--cycle;
+\node[below,font=\scriptsize] at (1.25,-0.12) {$h$};
+\node[below,font=\scriptsize] at (0.15,-0.02) {$H_1$};
+\node[below,font=\scriptsize] at (0.60,-0.02) {$H_2$};
+\node[below,font=\scriptsize] at (1.45,-0.02) {$H_3$};
+\draw[thickline,fill=black!10] (0.48,0.35)--(0.64,0.35)--(0.64,2.30)--(0.48,2.30)--cycle;
+\node[left,font=\scriptsize] at (0.48,1.95) {$M$};
+\draw[thickline] (1.75,1.40)--(2.35,1.40)--(2.35,1.62)--(1.75,1.62)--cycle;
+\node[below,font=\scriptsize] at (2.05,1.37) {$T$};
+\node[below,font=\scriptsize] at (2.28,1.25) {$N_1$};
+\draw[thickline] (2.52,1.15)--(2.52,3.10);
+\foreach \y in {1.25,1.35,...,3.05} \draw (2.52,\y)--(2.59,\y);
+\node[right,font=\scriptsize] at (2.59,3.02) {$S$};
+\draw[thickline] (0.64,2.28)--(2.52,2.92) node[above left,font=\scriptsize] {$m'$};
+\draw[thickline] (0.64,2.28)--(2.52,1.48) node[right,font=\scriptsize] {$m$};
+\draw[dashedline] (0.64,2.28)--(2.52,2.20);
+\draw (1.06,2.36) arc (6:24:0.55);
+\node[font=\scriptsize] at (1.30,2.50) {$2\theta$};
+\draw[dashedline] (0.56,0.45)--(0.56,2.28);
+\draw (0.56,0.75) arc (90:104:0.30);
+\node[font=\scriptsize] at (0.42,0.82) {$\theta$};
+\draw[dashedline] (0.64,0.30)--(0.64,-0.05);
+\draw[dashedline] (1.45,0.14)--(1.45,-0.05);
+\draw[dim] (0.64,-0.05)--(1.45,-0.05);
+\node[below,font=\scriptsize] at (1.04,-0.05) {$z$};
+\draw[dim] (0.66,3.25)--(2.52,3.25);
+\node[above,font=\scriptsize] at (1.55,3.25) {$D$};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+The adjustment is made with the aid of the plumb line, aligning the parts by eye so that the scale is vertical and the telescope horizontal. Then adjust the eyepiece of the telescope so that the cross-wire is sharp, and then adjust the object distance so that the image of the scale formed through the reflecting mirror is seen sharply through the eyepiece of the telescope. At this time both the cross-wire and the image of the scale lie in the focal plane of the eyepiece. If the telescope is perpendicular to the scale, the angle of the reflecting mirror may be adjusted so that the value of the scale graduation corresponding to the principal axis of the telescope is the same as the value seen through the reflecting mirror; this shows that the mirror surface is parallel to the scale and also vertical. Then, keeping the feet $H_1$ and $H_2$ fixed, lift the foot $H_3$ and insert the thin plate to be measured under it. The support point of foot $H_3$ is raised by a height $h$. Then
+\begin{equation}\tag{1}
+\frac{h}{z}=\tan\theta,
+\end{equation}
+where $z$ is the distance from the support point of foot $H_3$ to the line joining $H_1$ and $H_2$, and $\theta$ is the angle through which the base of the reflecting mirror turns after the support point of foot $H_3$ is raised by $h$.
+
+Moreover,
+\begin{equation}\tag{2}
+\tan(2\theta)=\frac{\Delta m}{D},
+\end{equation}
+where $D$ is the distance between the scale and the reflecting mirror, and $\Delta m$ is the distance between the position $m'$ of the scale seen in the telescope after the mirror has turned through $\theta$ and the original reading $m$ of the telescope. Since $\theta$ is rather small,
+\begin{equation*}
+\arctan\theta=\theta\left(1-\frac{1}{3}\theta^{2}+\frac{1}{5}\theta^{4}-\cdots\right)\approx\theta\left(1-\frac{1}{3}\theta^{2}\right),
+\end{equation*}
+and therefore
+\begin{equation}\tag{3}
+h=\frac{z\cdot\Delta m}{2D}\left[1-\frac{1}{3}\left(\frac{\Delta m}{D}\right)^{2}\right].
+\end{equation}
+In equation (3), $\Delta m$ is the difference between the readings of the image of the scale seen in the telescope, produced by the change in position of $H_3$.
+
+\begin{center}
+\textbf{Table 6.08}\\[3pt]
+\begin{tabular}{ccccc}
+\toprule
+Number & Original reading $m/\mathrm{mm}$ & Later reading $m'/\mathrm{mm}$ & $D/\mathrm{cm}$ & $z/\mathrm{cm}$\\
+\midrule
+1 & 70.2 & 71.9 & 173.5 & 5.03\\
+2 & 70.3 & 72.0 & 173.0 & 5.03\\
+3 & 70.4 & 71.8 & 173.3 & 5.02\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+\begin{equation*}
+\Delta\bar m=71.9-70.3=1.6\ (\mathrm{mm}),
+\end{equation*}
+\begin{equation*}
+h=\frac{\bar z\cdot\Delta\bar m}{2\bar D}=\frac{5.03\times1.6}{2\times173.3}=\SI{0.023}{mm}.
+\end{equation*}
+
+\subsection*{Experiment 6.09\quad Measurement of Young's modulus with a Hall position sensor}
+
+Measure the displacement of the centre of a thin plate when it is under tension and the dimensions of the plate, and hence calculate the Young's modulus of the plate material.
+
+\noindent\textit{[Available apparatus]}
+
+An FD-HY-1 type Young's modulus measuring instrument using the Hall position sensor (the FD in the model designation indicates that it is produced by Fudan Tianxin Scientific Instrument Company), weights of \SI{10.00}{g}, a vernier calliper, a micrometer, and one brass sample and one cast-iron sample.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Use the reading microscope to measure the displacement of the centre of the brass sample under a tensile force, measure the dimensions of the sample, and calculate the Young's modulus of brass.
+\item Calibrate the Hall position sensor and determine its sensitivity.
+\item Measure the Young's modulus of cast iron with the Hall position sensor.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.09.}\quad The experimental arrangement for measuring Young's modulus with a Hall position sensor is shown in Fig.~6.09(a).
+
+\begin{figbox}{6.09(a)}
+\begin{tikzpicture}[scale=0.78]
+% base
+\draw[thickline] (-1.6,0)--(7.0,0);
+\draw[thickline] (-1.6,0)--(-1.6,-0.18)--(7.0,-0.18)--(7.0,0);
+\draw[pattern=north east lines,pattern color=black!55] (-1.6,-0.18) rectangle (7.0,0);
+% supports and knife edges
+\draw[thickline,fill=black!12] (0.45,0)--(1.05,0)--(0.95,2.55)--(0.55,2.55)--cycle;
+\draw[thickline,fill=black!12] (6.05,0)--(6.65,0)--(6.55,2.55)--(6.15,2.55)--cycle;
+\draw[thickline,fill=black!40] (0.55,2.55)--(0.95,2.55)--(0.75,2.78)--cycle;
+\draw[thickline,fill=black!40] (6.15,2.55)--(6.55,2.55)--(6.35,2.78)--cycle;
+% beam
+\draw[thickline,fill=black!8] (0.05,2.78)--(6.90,2.78)--(6.90,3.08)--(0.05,3.08)--cycle;
+% hanger and weights
+\draw[thickline] (3.40,2.78)--(3.40,1.55);
+\draw[thickline,fill=black!20] (3.10,1.55)--(3.70,1.55)--(3.70,1.25)--(3.10,1.25)--cycle;
+\draw[thickline] (3.05,1.25)--(3.75,1.25);
+\foreach \y in {1.05,0.88,0.71}{\draw[thickline,fill=black!35] (3.12,\y)--(3.68,\y)--(3.62,\y-0.12)--(3.18,\y-0.12)--cycle;}
+% copper lever with Hall sensor
+\draw[thickline,fill=black!25] (3.92,3.08)--(4.02,3.08)--(4.02,4.32)--(3.92,4.32)--cycle;
+\draw[thickline,fill=black] (3.86,4.32)--(4.08,4.32)--(4.08,4.46)--(3.86,4.46)--cycle;
+% magnet box
+\draw[thickline,fill=black!4] (3.15,4.46)--(4.85,4.46)--(4.85,5.35)--(3.15,5.35)--cycle;
+\draw[thickline,fill=black!25] (3.35,4.75)--(3.75,4.75)--(3.75,5.10)--(3.35,5.10)--cycle;
+\draw[thickline,fill=black!25] (4.25,4.75)--(4.65,4.75)--(4.65,5.10)--(4.25,5.10)--cycle;
+\node[font=\scriptsize] at (3.55,4.93) {$N$};
+\node[font=\scriptsize] at (4.45,4.93) {$N$};
+% adjusting frame
+\draw[thickline] (5.55,0)--(5.55,4.95)--(4.85,4.95);
+\draw[thickline,fill=black!30] (5.35,4.70)--(5.75,4.70)--(5.75,5.20)--(5.35,5.20)--cycle;
+% reading microscope
+\draw[thickline] (-1.15,0)--(-1.15,2.15);
+\draw[thickline,fill=black!12] (-1.45,2.15)--(-0.85,2.15)--(-0.85,2.35)--(-1.45,2.35)--cycle;
+\draw[thickline,fill=black!8] (-1.30,2.35)--(-1.00,2.35)--(-1.00,3.65)--(-1.30,3.65)--cycle;
+\draw[thickline,fill=black!25] (-1.38,3.65)--(-0.92,3.65)--(-0.92,3.85)--(-1.38,3.85)--cycle;
+\draw[thickline] (-1.15,2.35)--(-1.15,2.78);
+% callout numbers
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (-1.62,3.10) {1};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (2.10,3.30) {2};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (0.28,2.45) {3};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (3.94,1.10) {4};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (4.98,5.30) {5};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (4.70,4.62) {6};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (5.82,4.45) {7};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (4.22,4.05) {8};
+\node[circle,draw,line width=0.4pt,inner sep=1pt,font=\scriptsize,fill=white] at (3.62,1.68) {9};
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize
+\begin{minipage}{0.94\linewidth}
+\begin{enumerate}[label=\arabic*.,leftmargin=1.4em,itemsep=0pt,topsep=0pt]
+\item Reading microscope. \item Crossbeam. \item Knife edge. \item Weights. \item Magnet box.
+\item Magnets (two N poles placed facing each other). \item Three-dimensional adjusting frame.
+\item Brass lever (a type 95A integrated Hall sensor is attached to its top and extends into the magnet box).
+\item Copper hanger (with graduation lines on it). \item Leads of the integrated Hall sensor.
+\end{enumerate}
+\end{minipage}}
+\end{figbox}
+
+When the crossbeam is bent, the Young's modulus $E$ is expressed by
+\begin{equation}\tag{4}
+E=\frac{d^{3}mg}{4a^{3}b\,\Delta z},
+\end{equation}
+where $d$ is the distance between the two knife edges, $a$ is the thickness of the beam, $b$ is the width of the beam, $m$ is the mass of the added weights, $\Delta z$ is the distance through which the centre of the beam descends under the action of the external force, and $g$ is the acceleration due to gravity.
+
+The structure of the Hall position sensor is shown in Fig.~6.09(b). It uses two identical magnets, placed with their N poles facing each other; the two magnets are strictly parallel, and the Hall element is placed parallel to the magnets on the central axis of the gap between them.
+
+From the Hall effect, the Hall potential difference $U_H$ is
+\begin{equation}\tag{5}
+U_H=KIB,
+\end{equation}
+where $K$ is the sensitivity of the Hall element, $I$ is the current through the Hall element, and $B$ is the magnetic flux density. If the current $I$ is constant and the magnetic field produced by the magnets is a uniform gradient field in the region at the centre of the gap, that is, $\dd B/\dd z$ is constant, then
+\begin{equation}\tag{6}
+\Delta U_H=KI\,\frac{\dd B}{\dd z}\cdot\Delta z,
+\end{equation}
+where $\Delta z$ is the displacement; in a uniform gradient field $\Delta U_H$ is proportional to $\Delta z$.
+
+The experimental method is: (1) adjust the magnet box to be horizontal; (2) adjust the upright post below the magnet box and move the magnets relative to the Hall element so that the digital voltmeter indicates the output voltage of the Hall element $U_H=0$ V; (3) adjust the eyepiece and the object distance of the reading microscope so that the graduation line on the groove of the copper knife edge is imaged sharply on the reticle; (4) after each addition of a \SI{10.00}{g} weight, read the position of the graduation line and the corresponding reading of the digital voltmeter; (5) measure the distance $d$ between the two knife edges of the beam with a metre rule, the width $b$ of the beam with a vernier calliper, and the thickness $a$ of the beam with a micrometer; (6) calculate the experimental result. The experimental results are shown in Tables 1 and 2.
+
+\begin{center}
+\textbf{Table 6.09-1}\quad Displacement after loading and sensor output\\[3pt]
+\begin{tabular}{ccccccccc}
+\toprule
+Serial number $i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+\midrule
+$M_i/\mathrm{g}$ & 20.00 & 30.00 & 40.00 & 50.00 & 60.00 & 70.00 & 80.00 & 90.00\\
+$U_i/\mathrm{mV}$ & 0 & 25 & 52 & 78 & 103 & 131 & 157 & 183\\
+$z_i/\mathrm{mm}$ & 2.297 & 2.396 & 2.523 & 2.653 & 2.778 & 2.895 & 3.004 & 3.129\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Table 6.09-2}\quad Measured dimensions of the brass sample\\[3pt]
+\small
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{cccccccccccc}
+\toprule
+\multicolumn{11}{c}{} & Mean\\
+\midrule
+$a'/\mathrm{mm}$ & 0.997 & 1.010 & 1.007 & 1.011 & 1.011 & 1.011 & 1.008 & 1.003 & 1.000 & 0.995 & \\
+$a/\mathrm{mm}$  & 0.993 & 1.006 & 1.003 & 1.007 & 1.007 & 1.007 & 1.004 & 0.999 & 0.996 & 0.991 & 1.001\\
+$b/\mathrm{cm}$  & 2.302 & 2.298 & 2.296 & 2.300 & 2.296 & 2.298 & 2.300 & 2.300 & 2.298 & 2.300 & 2.299\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The zero point of the micrometer is $a_0=\SI{0.004}{mm}$, so $a=a'-a_0$; $d=\SI{23.10}{cm}$. Moreover,
+\begin{equation*}
+\Delta z_1=z_8-z_4=\SI{0.476}{mm},\quad
+\Delta z_2=z_7-z_3=\SI{0.481}{mm},
+\end{equation*}
+\begin{equation*}
+\Delta z_3=z_6-z_2=\SI{0.499}{mm},\quad
+\Delta z_4=z_5-z_1=\SI{0.481}{mm},
+\end{equation*}
+hence $\Delta\bar z=\SI{0.484}{mm}$. Taking the acceleration due to gravity in Shanghai as $g=\SI{9.794}{m/s^2}$,
+\begin{equation*}
+E=\frac{d^{3}\bar M g}{4a^{3}b\,\Delta\bar z}
+=\frac{(23.10\times10^{-2})^{3}\times40.00\times10^{-3}\times9.794}
+{4\times(1.001\times10^{-3})^{3}\times2.299\times10^{-2}\times0.484\times10^{-3}}
+=\SI{10.8e10}{N/m^2}.
+\end{equation*}
+The accepted value of Young's modulus of this brass material is $10.55\times10^{10}\ \mathrm{N/m^2}$, and the percentage difference between the two is $2.4\%$.
+
+For the sensitivity $\Delta U/\Delta z$ of the Hall position sensor: fitting a straight line $U$ versus $z$ by the method of least squares gives the slope $\Delta U/\Delta z=\SI{218}{mV/mm}$ and the correlation coefficient $r=0.9996$. The sensitivity of this position sensor is therefore \SI{218}{mV/mm}.
+
+If the brass sample is replaced by a cast-iron sample, then, with the Hall position sensor moving in a straight line in its original direction, it is only necessary to add a \SI{90.00}{g} weight to read the corresponding voltage change $\Delta U$, and the displacement $\Delta z$ can be found from the sensitivity of the sensor. Measuring the dimensions of the cast-iron sample in the same way as for the brass sample, the Young's modulus of cast iron can also be calculated.
+
+\subsection*{Experiment 6.10\quad Measurement of the volume of a solid with a Jolly balance}
+
+\noindent\textit{[Available apparatus and materials]}
+
+An FD-GLB-2 new-type Jolly balance apparatus, a beaker, a thermometer, water and the organic-glass block to be measured, and a table of the density of water as a function of temperature.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the experimental procedure for measuring the stiffness coefficient of a spring with the new-type Jolly balance.
+\item Measure the stiffness coefficient of the spring.
+\item Measure the volume of the organic-glass block.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Solution 6.10.}\quad The new-type Jolly balance and the counter-timer are shown in the figure.
+
+In Fig.~6.10, part (a) shows the Jolly balance, part (b) the small magnet and the Hall-switch sensor, and part (c) the counter-timer. In this experiment only the Jolly balance is needed; the timer is not used, and the stiffness coefficient of the spring can be measured.
+
+The experimental procedure for measuring the stiffness coefficient $k$ of the spring with the Jolly balance is as follows.
+
+(1) Adjust the levelling screws of the base plate so that the upright column of the Jolly balance is vertical.
+
+(2) Hang the hook at the top of the main scale, then mount the spring and the balancing cylinders (two cylinders), so that the small pointer is clamped between the two balancing cylinders; the lower end of the balancing cylinders is hooked to the weight pan through the hook. The spring is now stretched by a certain distance.
+
+(3) Adjust the height of the small vernier so that the base-line graduation on the left side of the vernier is approximately aligned with the pointer. Tighten the locking screw that fixes the vernier, and adjust the fine-adjustment screw so that the pointer coincides with the graduation on the frame of the mirror. Only when the graduation on the mirror frame, the pointer and the image all coincide can the observer read the position of the pointer on the main scale and the vernier scale.
+
+(4) First place a \SI{1}{g} weight in the weight pan and, following step (3), read the position of the pointer. Then add another \SI{1}{g} weight and read the new position of the pointer, and so on until all \SI{10}{g} of weights have been placed on the pan; read the corresponding pointer positions.
+
+(5) From the mass $M_i$ of the weights placed in or removed from the pan each time and the corresponding pointer position $Y_i$, find the stiffness coefficient of the spring by the method of successive differences or graphically.
+
+The experimental results are given in the table below.
+
+The acceleration due to gravity in the Shanghai region is $g=\SI{9.794}{m/s^2}$.
+
+\begin{center}
+\textbf{Table 6.10}\quad Data for the relation between $M$ and $y$\\[3pt]
+\begin{tabular}{cccc}
+\toprule
+$M/\mathrm{g}$ & $y/\mathrm{mm}$ (weights added) & $y'/\mathrm{mm}$ (weights removed) & $\bar y/\mathrm{mm}$\\
+\midrule
+1.000  & 211.98 & 212.36 & 212.17\\
+2.000  & 214.22 & 214.62 & 214.42\\
+3.000  & 216.42 & 216.84 & 216.63\\
+4.000  & 218.46 & 218.96 & 218.71\\
+5.000  & 220.52 & 221.12 & 220.77\\
+6.000  & 222.92 & 223.14 & 223.03\\
+7.000  & 224.98 & 225.24 & 225.11\\
+8.000  & 227.16 & 227.56 & 227.36\\
+9.000  & 229.36 & 229.58 & 229.46\\
+10.000 & 231.64 & 231.64 & 231.64\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figbox}{6.10}
+\begin{tikzpicture}[scale=0.72]
+% ---------- panel (c): counter-timer ----------
+\begin{scope}[xshift=0cm,yshift=6.6cm]
+\draw[thickline,fill=black!4,rounded corners=2pt] (0,0) rectangle (4.0,1.55);
+\node[left,font=\scriptsize,align=center] at (0.02,0.75) {FD-CT-II\\counter-timer};
+\draw[thickline,fill=black!10] (1.25,0.95) rectangle (2.35,1.35);
+\draw[thickline,fill=black!10] (2.55,0.95) rectangle (3.75,1.35);
+\node[font=\scriptsize] at (1.80,1.15) {16};
+\node[font=\scriptsize] at (3.15,1.15) {17};
+\draw[thickline] (1.55,0.55) rectangle (1.80,0.80);
+\draw[thickline] (2.05,0.55) rectangle (2.30,0.80);
+\node[below,font=\scriptsize] at (1.67,0.50) {18};
+\node[below,font=\scriptsize] at (2.17,0.50) {19};
+\draw[thickline] (0.55,0.68) circle (0.09);
+\node[left,font=\scriptsize] at (0.42,0.68) {3};
+\node[below,font=\scriptsize] at (2.0,-0.08) {(c)};
+\end{scope}
+% ---------- panel (b): magnet and Hall switch ----------
+\begin{scope}[xshift=0.5cm,yshift=3.4cm]
+\draw[thickline,fill=black!8] (0.55,0.35) rectangle (1.55,1.05);
+\node[below,font=\scriptsize] at (1.05,0.28) {2};
+\fill (2.05,0.70) circle (0.13);
+\node[above,font=\scriptsize] at (2.05,0.85) {1};
+\draw[thickline] (0.55,0.95) .. controls (0.05,1.25) and (0.15,1.55) .. (0.45,1.55);
+\node[below,font=\scriptsize] at (1.05,-0.10) {(b)};
+\end{scope}
+% ---------- panel (a): Jolly balance ----------
+\begin{scope}[xshift=5.1cm,yshift=0cm]
+\draw[thickline] (-0.95,0.25)--(0.95,0.25);
+\draw[thickline,fill=black!12] (-0.80,0.05)--(-0.55,0.05)--(-0.55,0.25)--(-0.80,0.25)--cycle;
+\draw[thickline,fill=black!12] (0.55,0.05)--(0.80,0.05)--(0.80,0.25)--(0.55,0.25)--cycle;
+\node[left,font=\scriptsize] at (-0.85,0.12) {15};
+% column
+\draw[thickline,fill=black!5] (0.62,0.25)--(0.92,0.25)--(0.92,8.30)--(0.62,8.30)--cycle;
+% main scale
+\draw[thickline] (0.30,0.60)--(0.30,8.10);
+\foreach \y in {0.8,1.0,...,8.0}{\draw[thickline] (0.30,\y)--(0.38,\y);}
+% top hook and spring
+\draw[thickline] (0.10,8.55) circle (0.10);
+\draw[thickline] (0.10,8.45)--(0.10,8.30);
+\draw[thickline,decorate,decoration={zigzag,segment length=1.8mm,amplitude=1.0mm}] (0.10,8.30)--(0.10,7.55);
+\draw[thickline] (0.10,7.55)--(0.10,7.35);
+% balancing cylinders and pointer
+\draw[thickline,fill=black!12] (-0.05,7.05)--(0.25,7.05)--(0.25,7.35)--(-0.05,7.35)--cycle;
+\draw[thickline,fill=black!12] (-0.05,6.45)--(0.25,6.45)--(0.25,6.75)--(-0.05,6.75)--cycle;
+\draw[thickline] (0.10,6.75)--(0.10,7.05);
+\draw[thickline] (-0.30,6.90)--(0.05,6.90);
+% vernier, magnifier, mirror
+\draw[thickline,fill=black!10] (-0.35,6.62)--(0.28,6.62)--(0.28,6.82)--(-0.35,6.82)--cycle;
+\draw[thickline] (-0.55,6.72) circle (0.20);
+\draw[thickline] (-0.55,6.52)--(-0.55,6.32);
+\draw[thickline,fill=black!6] (-0.55,5.75)--(-0.35,5.75)--(-0.35,6.25)--(-0.55,6.25)--cycle;
+% lower hook and pan
+\draw[thickline] (0.10,6.45)--(0.10,5.30);
+\draw[thickline] (0.10,5.30)--(0.10,4.10);
+\draw[thickline] (-0.45,4.10)--(0.65,4.10);
+\draw[thickline] (-0.35,3.95)--(0.55,3.95);
+\node[left,font=\scriptsize] at (-0.50,4.00) {14};
+% callout numbers
+\node[font=\scriptsize] at (-0.30,8.55) {4};
+\node[font=\scriptsize] at (-0.30,7.95) {5};
+\node[font=\scriptsize] at (-0.20,8.20) {6};
+\node[font=\scriptsize] at (0.52,7.90) {7};
+\node[font=\scriptsize] at (-0.60,7.05) {8};
+\node[font=\scriptsize] at (0.35,6.90) {9};
+\node[font=\scriptsize] at (0.35,6.15) {10};
+\node[font=\scriptsize] at (0.35,5.85) {11};
+\node[font=\scriptsize] at (0.35,5.45) {12};
+\node[font=\scriptsize] at (1.02,5.10) {13};
+\node[below,font=\scriptsize] at (0.10,-0.15) {(a)};
+\end{scope}
+\end{tikzpicture}
+
+\smallskip
+{\footnotesize 1.\ Small magnet; 2.\ Hall switch; 3.\ Trigger indicator; 4--15.\ Jolly balance; 16--19.\ Counter-timer.}
+\end{figbox}
+
+Processing the data by the method of successive differences, the average extension of the spring for each additional \SI{5.000}{g} of weights in the pan is $\Delta\bar y=\SI{10.780}{mm}$. By Hooke's law,
+\begin{equation}\tag{1}
+\Delta M\cdot g=k\cdot\Delta y.
+\end{equation}
+Substituting $\Delta M=\SI{5.000}{g}$, $\Delta\bar y$ and $g$ into (1) gives the stiffness coefficient of the spring $k=\SI{4.543}{N/m}$. Once the stiffness coefficient of the spring has been measured, suspend one body to be measured from the spring, measure the extension $\Delta y$, and the weight of the body, or its mass, can be calculated. Then, using Archimedes' principle and the method of weighing by buoyancy, the volume of the organic-glass block to be measured is obtained; the principle and the experimental method may be found in the relevant part of Solution 6.01.
+
+\begin{commentary}
+For experiments on the measurement of length and volume, we note the following.
+
+(1) The length of an ordinary body is usually measured with a metre rule; for the length of a shorter body, a vernier calliper is also often used in order to read more accurately. For lengths of about \SI{1}{mm} or less, however, a micrometer, a reading microscope, an optical lever, etc.\ are commonly used. For vernier callipers, micrometers, reading microscopes, optical levers and the like, one must master their working principles and methods of operation and know their ranges and division values, so that the instruments are chosen and read correctly.
+
+(2) For regular bodies such as metal wires and metal plates, although their diameter, or their length, width and height, are essentially uniform, these quantities form part of a measurement of a property of the material (for example, the measurement of Young's modulus), and their measurement accuracy greatly affects the experimental result. Therefore the diameter of a steel wire, the thickness of a thin plate, etc.\ must be measured several times at different positions and the average taken.
+
+The following problem is similar to Experiment 6.08 in its method of measuring a small displacement. Can you solve it?
+\end{commentary}
+
+\subsection*{Experiment 6.11\quad Measurement of Young's modulus of a fine steel wire with an optical lever}
+
+\noindent\textit{[Available apparatus]}
+
+A Young's modulus measuring instrument (telescope, straight scale, optical lever, weights, etc.), a micrometer, a tape measure, a set square, a fine steel wire.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Draw up a table for the quantities to be measured.
+\item Adjust the state of the measuring instrument.
+\item Choose the measuring instruments correctly, and enter the measured data in the table.
+\item Calculate the mean value of Young's modulus and the relative error ($\Delta N$ being treated by the method of successive differences).
+\end{enumerate}
+
+\begin{hint}{6.11}
+\textbf{1.} Let the original length of the metal wire be $L$; under the action of a force its extension is $\Delta L$, and its relative extension $\Delta L/L$ is called the strain. According to Hooke's law, within the elastic limit the strain is proportional to the stress (the force acting on unit cross-sectional area of the wire).
+
+Let the cross-sectional area of the wire be $S$. Under the action of a force $F$ the strain produced is $\Delta L/L$; then $F/S\propto\Delta L/L$, which may be written as an equation $F/S=E\,\Delta L/L$, where $E$ is Young's modulus. Hence
+\begin{equation*}
+E=\frac{FL}{S\cdot\Delta L}.
+\end{equation*}
+Also
+\begin{equation*}
+S=\pi\left(\frac{d}{2}\right)^{2},
+\end{equation*}
+where $d$ is the diameter of the wire.
+
+\textbf{2.} The quantities of the optical lever are marked as shown in the figure, and their relation is given by
+\begin{equation*}
+\Delta L=\frac{h\,\Delta N}{2D},
+\end{equation*}
+where $\Delta N$ is the difference between the scale readings before and after the weights are suspended, obtained by the method of successive differences; $h$ is the perpendicular distance from the rear foot of the optical lever to the line joining the two front feet; $D$ is the distance from the mirror to the scale.
+
+\begin{figbox}{6.11}
+\begin{tikzpicture}[scale=0.88]
+% ---------- panel (a) ----------
+\begin{scope}
+\draw[thickline,pattern=north east lines,pattern color=black!55] (-0.65,4.30) rectangle (0.65,4.45);
+\node[above,font=\scriptsize] at (0,4.45) {steel frame};
+\draw[thickline] (0,4.30)--(0,2.65);
+\draw[thickline,fill=black!15] (-0.20,2.65)--(0.20,2.65)--(0.20,2.38)--(-0.20,2.38)--cycle;
+\node[left,font=\scriptsize] at (-0.22,2.50) {$C$};
+\draw[thickline,fill=black!6] (-0.30,2.38)--(0.30,2.38)--(0.30,2.08)--(-0.30,2.08)--cycle;
+\node[right,font=\scriptsize] at (0.32,2.23) {$P$};
+\draw[thickline] (0,2.08)--(0,1.80);
+\draw[thickline,fill=black!25] (-0.22,1.80)--(0.22,1.80)--(0.22,1.48)--(-0.22,1.48)--cycle;
+\node[below,font=\scriptsize] at (0,1.40) {(a)};
+\end{scope}
+% ---------- panel (b) ----------
+\begin{scope}[xshift=2.6cm]
+\draw[thickline] (-0.35,0)--(1.55,0);
+\draw[thickline,fill=black!30] (-0.02,0)--(0.10,0)--(0.10,0.14)--(-0.02,0.14)--cycle;
+\draw[thickline,fill=black!30] (1.02,0)--(1.14,0)--(1.14,0.14)--(1.02,0.14)--cycle;
+\node[below,font=\scriptsize] at (0.04,-0.05) {$C$};
+\node[below,font=\scriptsize] at (1.08,-0.05) {$C'$};
+\draw[thickline] (0.62,0)--(0.62,1.45);
+\draw[thickline] (0.62,0)--(0.72,0);
+\node[below,font=\scriptsize] at (0.62,-0.05) {$b$};
+\draw[thickline,dashedline] (0.62,1.45)--(0.86,1.45);
+\draw[thickline] (0.62,1.35)--(0.80,1.35);
+\node[right,font=\scriptsize] at (0.86,1.42) {mirror};
+% scale
+\draw[thickline] (3.10,0.25)--(3.10,1.85);
+\foreach \y in {0.35,0.45,...,1.80}{\draw[thickline] (3.10,\y)--(3.17,\y);}
+\node[right,font=\scriptsize] at (3.17,1.80) {$Y$};
+% telescope
+\draw[thickline] (2.35,1.10)--(2.80,1.10)--(2.80,1.32)--(2.35,1.32)--cycle;
+\node[below,font=\scriptsize] at (2.58,1.07) {telescope};
+% rays
+\draw[thickline] (0.72,1.30)--(3.10,1.72);
+\draw[thickline] (0.72,1.30)--(3.10,1.02);
+\draw[dashedline] (0.72,1.30)--(3.10,1.35);
+\draw (1.00,1.34) arc (4:13:0.30);
+\node[font=\scriptsize] at (1.10,1.47) {$2\theta$};
+\draw (0.62,0.55) arc (90:83:0.60);
+\node[font=\scriptsize] at (0.78,0.62) {$\theta$};
+\draw[dashedline] (0.62,-0.30)--(0.62,-0.10);
+\draw[dashedline] (3.10,-0.30)--(3.10,-0.10);
+\draw[dim] (0.62,-0.30)--(3.10,-0.30);
+\node[below,font=\scriptsize] at (1.86,-0.30) {$D$};
+\draw[dim] (0.04,0.30)--(0.62,0.30);
+\node[above,font=\scriptsize] at (0.33,0.30) {$k$};
+\node[below,font=\scriptsize] at (1.55,-0.55) {(b)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\noindent\textbf{3.} The formula for the measurement of Young's modulus is
+\begin{equation*}
+E=\frac{8FLD}{\pi d^{2}h\,\Delta N},
+\end{equation*}
+where $F$ is the force applied to the steel wire after the successive-difference treatment.
+
+\noindent\textbf{4.} When measuring $\Delta N$, the method of adding weights and the method of removing weights must both be used.
+\end{hint}
+
+\subsection*{Experiment 6.12\quad Measurement of the speed of sound in air}
+
+\noindent\textit{[Available apparatus]}
+
+An oscilloscope, a low-frequency signal generator, an ultrasonic sound-velocity measuring instrument, a three-way connector (electrical divider), and several coaxial cables.
+
+\noindent\textit{[Requirements]}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Write down the relevant formulas.
+\item Write down brief experimental steps.
+\item Measure several times and take the average.
+\end{enumerate}
+
+\noindent\textit{Explanation:}\quad An alternating voltage is applied to a piezoelectric transducer, which produces mechanical vibrations and radiates sound waves of the same frequency. After the sound wave has travelled a certain distance in air, it is received by the receiver and converted into an output signal of the same frequency. Compared with the input signal, the output signal has a corresponding phase delay $\Delta\varphi$. This phase difference depends on the speed of the sound wave, its frequency and the distance of propagation. By measuring the relevant quantities, the speed of the sound wave can be obtained.
+
+While receiving the sound wave, the receiver also reflects part of it back. When the distance between the two transducers is a certain particular value, the signal received by the receiver reaches a maximum (minimum) value. When the distance changes by half a sound wavelength, the receiver again receives a signal of another maximum (minimum) value. As the distance between the receiver and the transmitter changes, the amplitude of the signal received by the receiver varies periodically.
+
+\medskip
+\noindent\textbf{Solution 6.12.}\quad The experimental arrangement is shown in the figure. Two transducers of the same natural frequency are mounted facing each other on the jaws of a vernier calliper. By moving the vernier and the fine-adjustment device, the distance between the two transducers can be adjusted precisely.
+
+\begin{figbox}{6.12}
+\begin{tikzpicture}[scale=0.85]
+% rail (vernier calliper beam)
+\draw[thickline] (-0.2,3.05)--(6.4,3.05);
+\draw[thickline] (-0.2,3.05)--(-0.2,3.35)--(6.4,3.35)--(6.4,3.05);
+\foreach \x in {0.0,0.2,...,6.2}{\draw[thickline] (\x,3.12)--(\x,3.28);}
+% fixed jaw and transducer
+\draw[thickline,fill=black!10] (0.15,2.95)--(0.35,2.95)--(0.35,2.05)--(0.15,2.05)--cycle;
+\draw[thickline,fill=black!20] (0.35,2.35)--(0.95,2.35)--(0.95,2.65)--(0.35,2.65)--cycle;
+% movable jaw and transducer
+\draw[thickline,fill=black!10] (4.35,2.95)--(4.55,2.95)--(4.55,2.05)--(4.35,2.05)--cycle;
+\draw[thickline,fill=black!20] (3.75,2.35)--(4.35,2.35)--(4.35,2.65)--(3.75,2.65)--cycle;
+\node[above,font=\scriptsize] at (0.65,2.66) {transmitter};
+\node[above,font=\scriptsize] at (4.05,2.66) {receiver};
+% cables
+\draw[thickline] (0.25,2.05)--(0.25,1.55)--(1.60,1.55);
+\draw[thickline] (4.45,2.05)--(4.45,1.20)--(3.55,1.20);
+% signal generator
+\draw[thickline,fill=black!4] (0.55,0.95) rectangle (2.30,1.60);
+\node[font=\scriptsize] at (1.42,1.28) {signal generator};
+% oscilloscope
+\draw[thickline,fill=black!4] (2.90,0.60) rectangle (4.10,1.50);
+\draw[thickline,fill=black!10] (3.10,0.95) rectangle (3.90,1.35);
+\node[font=\scriptsize] at (3.50,0.78) {oscilloscope};
+\end{tikzpicture}
+\end{figbox}
+
+(1) \textit{Resonance interference method.} If the frequency $f$ is kept constant and the distance between the receiving surfaces at two successive maxima of the received signal is measured, this distance being $\lambda/2$, where $\lambda$ is the wavelength of the sound wave, then the speed of sound can be calculated from $v=f\lambda$.
+
+(2) \textit{Phase comparison method.} At the same instant the phase of the wave at the transmitter differs from that at the receiver. Observing the Lissajous figures, the phase $\varphi$ and the propagation time $t$ corresponding to the angular frequency are related by
+\begin{equation*}
+\varphi=\omega t,
+\end{equation*}
+or
+\begin{equation*}
+\varphi=\frac{2\pi l}{\lambda},
+\end{equation*}
+where $l$ is the distance between the receiver and the transmitter. When $l\approx n(\lambda/2)$ ($n=1,2,3,\dots$), one obtains $\varphi=n\pi$. When the phase difference changes by $\pi$, the corresponding change in the distance $l$ is half a wavelength. Once $f$ and $\lambda$ are known, the speed of sound can be found from $v=f\lambda$.
+
+\noindent\textit{Experimental steps:}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Adjust the resonant frequency of the measuring system.
+\item Measure the half-wavelength $\lambda/2$ by the resonance method and by the phase method; a fairly large number of data should be taken.
+\item Process the data by the method of successive differences to obtain the speed of sound at the time, and record the air temperature at that time.
+\end{enumerate}
+The experimental data are shown in Tables 1 and 2.
+
+\begin{center}
+\textbf{Table 6.12-1}\quad Data measured by the resonance interference method\\[3pt]
+\begin{tabular}{cccc}
+\toprule
+Serial number & $f/\mathrm{Hz}$ & $s_n/\mathrm{cm}$ & $\Delta s=s_{n+5}-s_n/\mathrm{cm}$\\
+\midrule
+1  & 35\,676 & 5.688  & 2.400\\
+2  & 35\,669 & 6.172  & 2.406\\
+3  & 35\,670 & 6.654  & 2.391\\
+4  & 35\,662 & 7.136  & 2.401\\
+5  & 35\,672 & 7.615  & 2.393\\
+6  & 35\,668 & 8.088  & \\
+7  & 35\,671 & 8.578  & \\
+8  & 35\,671 & 9.045  & \\
+9  & 35\,663 & 9.537  & \\
+10 & 35\,672 & 10.008 & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Mean value $\bar f=\SI{35669.4}{Hz}$; $\Delta\bar s=\SI{2.3977}{cm}$;
+\begin{equation*}
+\frac{\bar\lambda}{2}=\frac{\Delta\bar s}{5};\qquad \text{wavelength } \bar\lambda=\SI{0.9591}{cm};
+\end{equation*}
+\begin{equation*}
+v_1=\bar f\cdot\bar\lambda=35\,669.4\times0.9591=\SI{342.1}{m/s}.
+\end{equation*}
+
+\begin{center}
+\textbf{Table 6.12-2}\quad Data measured by the phase method\\[3pt]
+\begin{tabular}{cccccc}
+\toprule
+Serial number & $s_n/\mathrm{cm}$ & $\Delta s=s_{n+5}-s_n/\mathrm{cm}$ & Serial number & $s_n/\mathrm{cm}$ & $\Delta s=s_{n+5}-s_n/\mathrm{cm}$\\
+\midrule
+1 & 9.500  & 2.411 & 6  & 11.911 & \\
+2 & 9.984  & 2.404 & 7  & 12.388 & \\
+3 & 10.464 & 2.405 & 8  & 12.869 & \\
+4 & 10.950 & 2.387 & 9  & 13.337 & \\
+5 & 11.425 & 2.401 & 10 & 13.826 & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent $f=\SI{35669}{Hz}$; $\dfrac{\bar\lambda}{2}=\dfrac{\Delta\bar s}{5}$; the mean wavelength $\bar\lambda=\SI{0.9608}{cm}$;
+
+the speed of sound $v=\bar f\cdot\bar\lambda=35\,669\times0.9608=\SI{342.7}{m/s}$.
+
+The temperature is $\theta=\SI{14.8}{\celsius}$; the sky is clear and the influence of water vapour is neglected. The accepted value of the speed of sound is
+\begin{equation*}
+v=331.45\sqrt{1+\frac{\theta}{\theta_0}}
+=331.45\times\sqrt{1+\frac{14.8}{273.15}}=\SI{340.31}{m/s}.
+\end{equation*}
+The uncertainty of the speeds of sound measured by the two methods relative to the accepted value is less than $1\%$.
+
+\begin{figbox}{6.09(b)}
+\begin{tikzpicture}[scale=0.95]
+% upper magnet
+\draw[thickline,fill=black!8] (-0.85,1.15)--(0.85,1.15)--(0.85,1.80)--(-0.85,1.80)--cycle;
+\draw[thickline,fill=black!25] (-0.28,0.85)--(0.28,0.85)--(0.28,1.15)--(-0.28,1.15)--cycle;
+\node[font=\scriptsize] at (0,1.00) {$N$};
+% lower magnet
+\draw[thickline,fill=black!8] (-0.85,-1.00)--(0.85,-1.00)--(0.85,-0.45)--(-0.85,-0.45)--cycle;
+\draw[thickline,fill=black!25] (-0.28,-0.45)--(0.28,-0.45)--(0.28,-0.15)--(-0.28,-0.15)--cycle;
+\node[font=\scriptsize] at (0,-0.72) {$N$};
+% Hall element
+\draw[thickline,fill=black!60] (-0.40,0.00)--(0.40,0.00)--(0.40,0.09)--(-0.40,0.09)--cycle;
+% leads and output
+\draw[thickline] (0.40,0.045)--(1.25,0.045)--(1.25,0.55);
+\draw[thickline] (0.40,0.045)--(1.10,0.045)--(1.10,-0.30);
+\node[right,font=\scriptsize] at (1.25,0.62) {$+$};
+\node[right,font=\scriptsize] at (1.10,-0.37) {$-$};
+\node[right,font=\scriptsize] at (1.42,0.10) {output};
+% z axis
+\draw[axis] (-1.15,0)--(-1.15,1.15) node[above,font=\scriptsize] {$z$};
+% centre line
+\draw[dashedline] (-0.40,0.045)--(0.62,0.045);
+\node[right,font=\scriptsize] at (0.62,0.045) {$A$};
+\end{tikzpicture}
+\end{figbox}

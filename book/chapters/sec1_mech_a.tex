@@ -1,0 +1,90 @@
+\section{Mechanics}
+
+\begin{problem}{1.01}
+A small ball is thrown from the ground over a high wall of height $h$ situated at a horizontal distance $d$. Find the minimum initial speed $v_{0\min}$ required and the corresponding angle of projection $\theta$.
+\end{problem}
+
+\begin{problem}{1.02}
+A small ball is thrown from the ground over two parallel walls, each of height $h$ and separated by a distance $d$. Find the minimum initial speed required, the corresponding angle of projection, and the distance from the point of projection to the nearer wall.
+\end{problem}
+
+\begin{problem}{1.03}
+A gun fires a shell outward from beneath a shelter. The shelter makes an angle $\alpha$ with the horizontal, and the gun position $O$ is at a distance $l$ from the edge $P$ of the shelter, as shown in the figure. The muzzle speed of the shell is $v_0$. Find the greatest range of the shell.
+\end{problem}
+
+\begin{figbox}{1.03}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-0.4,0) -- (8.2,0);
+  \coordinate (P) at (0,0);
+  \coordinate (O) at (2.8,0);
+  \draw[thickline] (P) -- (7.6,4.0);
+  \draw[thickline] (P) -- (0.9,0) arc (0:27.8:0.9);
+  \node at (1.12,0.22) {$\alpha$};
+  \fill (P) circle (1.3pt) node[below left] {$P$};
+  \fill (O) circle (1.3pt) node[below] {$O$};
+  % cannon
+  \draw[thickline,fill=white] (2.72,0) rectangle (3.05,0.28);
+  \draw[thickline] (2.88,0.26) -- (3.35,0.47);
+  % trajectory
+  \draw[dashedline] plot[smooth,domain=0:6.2,samples=60]
+    ({2.8+\x},{0.15+1.05*\x-0.075*\x*\x});
+  \draw[dim] (0,-0.55) -- (2.8,-0.55) node[midway,below] {$l$};
+  \draw[dashedline] (P) -- (2.8,0);
+  \node[above right] at (6.9,3.55) {shelter};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.04}
+A lamp hangs at a distance $h_1$ below the ceiling, and the lamp is at a height $h_2$ above the floor. The bulb suddenly bursts into many fragments, all of which fly off in every direction with the same initial speed $v_0$. The collisions of the fragments with the ceiling are elastic; the fragments do not rebound from the floor and do not strike the walls. Find the radius of the region in which the fragments land.
+\end{problem}
+
+\begin{problem}{1.05}
+A person stands at a distance $d$ from a high wall and plays a shooting game. Each bullet leaves the gun with the same initial speed $v_0$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item To hit the same horizontal line at height $h$ on the wall, find the locus of the aiming points on the wall.
+\item If the points of impact on the wall are to lie above this horizontal line, find the range of the aiming points.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.06}
+An aircraft flies horizontally at a height $h$ above the ground with speed $v_0$ and drops a bomb on a ground target.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item At what horizontal distance $L$ from the target must the bomb be released in order that it hit the target?
+\item A gun is situated at a distance $d$ from the target. At the instant the bomb is released the gun fires a shell. Find the minimum initial speed $v_{\min}$ of the shell and the corresponding angle of elevation, so that the shell can hit the bomb in the air (see the figure).
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.06}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,0) -- (9.4,0);
+  % aircraft
+  \coordinate (A) at (1.2,3.4);
+  \draw[thickline] (0.75,3.4) -- (1.65,3.4);
+  \draw[thickline] (1.05,3.4) -- (1.35,3.75) -- (1.55,3.4);
+  \draw[force] (1.65,3.4) -- (2.55,3.4) node[midway,above] {$v_0$};
+  \draw[dashedline] (A) -- (9.1,0);
+  % target
+  \draw[thickline,fill=black!15] (9.0,0) rectangle (9.4,0.55);
+  \node[above] at (9.2,0.55) {target};
+  % gun
+  \coordinate (G) at (7.4,0);
+  \fill (G) circle (2.6pt);
+  \node[above left] at (7.3,0.15) {gun};
+  \draw[dim] (7.4,-0.55) -- (9.0,-0.55) node[midway,below] {$d$};
+  \draw[dim] (1.2,-0.55) -- (9.0,-0.55) node[midway,below] {$L$};
+  \draw[dim] (0.5,3.4) -- (0.5,0) node[midway,left] {$h$};
+  \draw[thickline] (7.4,0) -- (8.35,1.55);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.07}
+A circle of radius $R$ moves uniformly in the plane of the paper with speed $v_1$ to the right, while a straight line $MN$ moves uniformly upward with speed $v_2$. When the angle between the line $OP$, joining the intersection point $P$ of the line and the circle to the centre $O$, and the line $MN$ is $\theta$, find the velocity and acceleration of the point $P$ describing the displacement of the intersection point.
+\end{problem}
+
+\begin{problem}{1.08}
+A thin rod $AB$ rests obliquely on a fixed semi-cylindrical surface of radius $R$. The end $A$, which touches the ground, moves along the horizontal plane with constant speed $v$, as shown. When the angle between the rod and the ground is $\theta$, find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the velocity $v_P$ of the point $P$ of the rod that is in contact with the cylindrical surface;
+\item the velocity $v_{P'}$ with which the point of intersection $P'$ of the rod and the cylindrical surface moves.
+\end{enumerate}
+\end{problem}

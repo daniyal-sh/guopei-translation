@@ -1,0 +1,477 @@
+\chapter{Physical Data and Formulas}
+
+The 1986 recommended values of the basic physical constants are listed in Table~B.1.
+
+\begin{table}[htbp]
+\centering
+\caption*{Table B.1\quad Basic Physical Constants}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l l l r@{}}
+\toprule
+Quantity & Symbol & Value & Unit & \shortstack[r]{Relative\\uncertainty (ppm)}\\
+\midrule
+Speed of light in vacuum & $c$ & 299\,792\,458 & $\mathrm{m\,s^{-1}}$ & (exact)\\
+Triple-point temperature & $T_0$ & 273.16 & $\mathrm{K}$ & (exact)\\
+Vacuum permeability & $\mu_0$ & \shortstack[l]{$4\pi\times10^{-7}$\\ $=12.566\,370\,614\ldots\times10^{-7}$} & $\mathrm{N\,A^{-2}}$ & (exact)\\
+Vacuum permittivity, $1/\mu_0c^2$ & $\varepsilon_0$ & $8.854\,187\,817\ldots$ & $10^{-12}\,\mathrm{F\,m^{-1}}$ & (exact)\\
+Newtonian gravitational constant & $G$ & 6.672\,59(85) & $10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}$ & 128\\
+Planck constant & $h$ & 6.626\,075\,5(40) & $10^{-34}\,\mathrm{J\,s}$ & 0.60\\
+$h/2\pi$ & $\hbar$ & 1.054\,572\,66(63) & $10^{-34}\,\mathrm{J\,s}$ & 0.60\\
+Elementary charge & $e$ & 1.602\,177\,33(49) & $10^{-19}\,\mathrm{C}$ & 0.30\\
+Magnetic flux quantum, $h/2e$ & $\Phi_0$ & 2.067\,834\,61(61) & $10^{-15}\,\mathrm{Wb}$ & 0.30\\
+Electron mass & $m_e$ & 9.109\,389\,7(54) & $10^{-31}\,\mathrm{kg}$ & 0.59\\
+Proton mass & $m_p$ & 1.672\,623\,1(10) & $10^{-27}\,\mathrm{kg}$ & 0.59\\
+Proton--electron mass ratio & $m_p/m_e$ & 1\,836.152\,701(37) & --- & 0.020\\
+Neutron mass & $m_n$ & 1.674\,928\,6(10) & $10^{-27}\,\mathrm{kg}$ & 0.59\\
+Compton wavelength, $h/m_ec$ & $\lambda_C$ & 2.426\,310\,58(22) & $10^{-12}\,\mathrm{m}$ & 0.089\\
+Fine-structure constant, $\mu_0ce^2/2h$ & $\alpha$ & 7.297\,353\,08(33) & $10^{-3}$ & 0.045\\
+Inverse fine-structure constant & $\alpha^{-1}$ & 137.035\,989\,5(61) & --- & 0.045\\
+Rydberg constant, $m_ec\alpha^2/2h$ & $R_\infty$ & 10\,973\,731.534(13) & $\mathrm{m^{-1}}$ & 0.0012\\
+Avogadro constant & $N_A$, $L$ & 6.022\,136\,7(36) & $10^{23}\,\mathrm{mol^{-1}}$ & 0.59\\
+Faraday constant, $N_Ae$ & $F$ & 96\,485.309(29) & $\mathrm{C\,mol^{-1}}$ & 0.30\\
+Molar gas constant & $R$ & 8.314\,510(70) & $\mathrm{J\,mol^{-1}\,K^{-1}}$ & 8.4\\
+Boltzmann constant, $R/N_A$ & $k$ & 1.380\,658(12) & $10^{-23}\,\mathrm{J\,K^{-1}}$ & 8.5\\
+\shortstack[l]{Stefan--Boltzmann constant,\\ $(\pi^2/60)k^4/\hbar^3c^2$} & $\sigma$ & 5.670\,51(19) & $10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}$ & 34\\
+\midrule
+\multicolumn{5}{c}{Non-SI units accepted for use with the SI}\\
+\midrule
+Electron volt, $(e/C)\,\mathrm{J}=|e|\,\mathrm{J}$ & $\mathrm{eV}$ & 1.602\,177\,33(49) & $10^{-19}\,\mathrm{J}$ & 0.30\\
+\shortstack[l]{Atomic mass unit (unified),\\ $1\,\mathrm{u}=m_u=\frac{1}{12}m(^{12}\mathrm{C})$} & $\mathrm{u}$ & 1.660\,540\,2(10) & $10^{-27}\,\mathrm{kg}$ & 0.59\\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+{\footnotesize From E.~Richard Cohen and B.~N. Taylor, \textit{Reviews of Modern Physics}, Vol.~59, No.~4, October 1987, p.~1139.}
+\end{table}
+
+\section*{Solar-System Data}
+
+The astronomical data of the solar system are listed in Table~B.2.
+
+\begin{table}[htbp]
+\centering
+\caption*{Table B.2\quad Solar-System Data}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l r r r r c@{}}
+\toprule
+Body & \shortstack[l]{Orbiting\\body} & \shortstack[r]{Mean orbital\\radius (m)} & \shortstack[r]{Body radius\\(m)} & \shortstack[r]{Period\\(s)} & \shortstack[r]{Mass\\(kg)} & \shortstack[c]{Number of\\satellites}\\
+\midrule
+Sun      & Milky Way & $5.6\times10^{20}$  & $6.96\times10^{8}$  & $8\times10^{15}$    & $1.99\times10^{30}$ & \\
+Mercury  & Sun       & $5.79\times10^{10}$ & $2.42\times10^{6}$  & $7.60\times10^{6}$  & $3.35\times10^{23}$ & \\
+Venus    & Sun       & $1.08\times10^{11}$ & $6.10\times10^{6}$  & $1.94\times10^{7}$  & $4.89\times10^{24}$ & \\
+Earth    & Sun       & $1.50\times10^{11}$ & $6.37\times10^{6}$  & $3.16\times10^{7}$  & $5.98\times10^{24}$ & 1\\
+Mars     & Sun       & $2.28\times10^{11}$ & $3.38\times10^{6}$  & $5.94\times10^{7}$  & $6.45\times10^{23}$ & 2\\
+Jupiter  & Sun       & $7.78\times10^{11}$ & $7.13\times10^{7}$  & $3.74\times10^{8}$  & $1.90\times10^{27}$ & 16\\
+Saturn   & Sun       & $1.43\times10^{12}$ & $6.04\times10^{7}$  & $9.35\times10^{8}$  & $5.69\times10^{26}$ & 17\\
+Uranus   & Sun       & $2.87\times10^{12}$ & $2.38\times10^{7}$  & $2.64\times10^{9}$  & $8.73\times10^{25}$ & 5\\
+Neptune  & Sun       & $4.50\times10^{12}$ & $2.22\times10^{7}$  & $5.22\times10^{9}$  & $1.03\times10^{26}$ & 2\\
+Pluto    & Sun       & $5.91\times10^{12}$ & $3\times10^{6}$     & $7.82\times10^{9}$  & $5.4\times10^{24}$  & 1\\
+Moon     & Earth     & $3.84\times10^{8}$  & $1.74\times10^{6}$  & $2.36\times10^{6}$  & $7.35\times10^{22}$ & \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section*{Common Physical Data}
+
+\begin{multicols}{2}
+\footnotesize
+\raggedcolumns
+\setlength{\parindent}{0pt}
+
+\textit{Pi}
+\[
+\pi=3.141\,592\,653\,5\approx 3.14
+\]
+
+\textit{Base of natural logarithms}
+\[
+\ee=2.718\,281\,83\approx 2.72
+\]
+
+\textit{Conversion factor for logarithms}
+\[
+\log_{\ee}10=2.302\,585\,09\approx 2.3026
+\]
+\[
+(\ln N\approx 2.3026\lg N)
+\]
+
+\textit{Radius of the Earth (radius of a sphere of the same volume as the Earth)}
+\[
+R=6.371\times10^{6}\ \mathrm{m}\approx 6400\ \mathrm{km}
+\]
+
+\textit{Mass of the Earth}
+\[
+M=5.977\times10^{24}\ \mathrm{kg}
+\]
+
+\textit{Acceleration of gravity at the Earth's surface}
+\[
+g=9.806\,65\ \mathrm{m/s^2}
+\]
+
+\textit{Standard atmospheric pressure}
+\[
+\begin{aligned}
+p_0&=76\ \mathrm{cmHg}=1.013\,25\times10^{5}\ \mathrm{Pa}\\
+&=1.033\,6\ \mathrm{kgf/cm^2}\\
+&=1\,013.25\ \mathrm{mbar}
+\end{aligned}
+\]
+
+\textit{Speed of sound in air}
+
+at $0\degree$C and standard atmospheric pressure: $331.4\ \mathrm{m/s}$;
+
+usual value at room temperature: $340\ \mathrm{m/s}$.
+
+\textit{Densities of gases (under standard conditions)}
+
+air $1.293\ \mathrm{kg/m^3}\approx 0.001\,29\ \mathrm{g/cm^3}$;
+
+hydrogen $0.089\,9\ \mathrm{kg/m^3}$;
+
+helium $0.178\,6\ \mathrm{kg/m^3}$.
+
+\textit{Density of mercury (at $0\degree$C)}
+\[
+13.595\,0\times10^{3}\ \mathrm{kg/m^3}\approx 13.6\ \mathrm{g/cm^3}
+\]
+
+\columnbreak
+
+\textit{Density of water (pure water at $4\degree$C)}
+\[
+1.0\times10^{3}\ \mathrm{kg/m^3}=1\ \mathrm{g/cm^3}
+\]
+
+\textit{Density of titanium}
+\[
+4.510\times10^{3}\ \mathrm{kg/m^3}
+\]
+
+\textit{Density of copper}
+\[
+8.93\times10^{3}\ \mathrm{kg/m^3}
+\]
+
+\textit{Density of iron}
+\[
+7.860\times10^{3}\ \mathrm{kg/m^3}
+\]
+
+\textit{Specific heat of air at constant pressure}
+\[
+\begin{aligned}
+1007\ \mathrm{J/(kg\cdot K)}&\approx 1\ \mathrm{J/(g\cdot\degree C)}\\
+&\approx 0.24\ \mathrm{cal/(g\cdot\degree C)}
+\end{aligned}
+\]
+
+\textit{Surface-tension coefficient of water}
+\[
+0.073\ \mathrm{N/m}
+\]
+
+\textit{Specific heat of water}
+\[
+1\ \mathrm{cal/(g\cdot\degree C)}=4.18\times10^{3}\ \mathrm{J/(kg\cdot K)}
+\]
+
+\textit{Boiling point of water (at 1 atm)}
+\[
+100\degree\mathrm{C}=373.15\ \mathrm{K}
+\]
+
+\textit{Heat of vaporisation of water (at 1 atm)}
+\[
+539\ \mathrm{cal/g}=2.26\times10^{6}\ \mathrm{J/kg}
+\]
+
+\textit{Freezing point (ice point) of water (at 1 atm)}
+\[
+0\degree\mathrm{C}=273.15\ \mathrm{K}
+\]
+
+\textit{Heat of fusion of ice (at 1 atm)}
+\[
+80\ \mathrm{cal/g}=3.35\times10^{5}\ \mathrm{J/kg}
+\]
+
+\textit{Triple point of water}
+\[
+273.16\ \mathrm{K}\pm0.01\ \mathrm{K}
+\]
+
+\textit{Absolute zero}
+\[
+0\ \mathrm{K}=-273.15\ \degree\mathrm{C}\approx-273\ \degree\mathrm{C}
+\]
+
+\textit{Volume expansion coefficient of gases}
+\[
+\frac{1}{273}\ \mathrm{deg^{-1}}=0.003\,66\ \mathrm{deg^{-1}}
+\]
+
+\textit{Pressure coefficient of gases}
+\[
+\frac{1}{273}\ \mathrm{deg^{-1}}\approx 0.003\,66\ \mathrm{deg^{-1}}
+\]
+
+\textit{Tensile strength of steel}
+\[
+500\sim 2000\ \mathrm{MPa}
+\]
+
+\textit{Mechanical equivalent of heat}
+\[
+J=4.186\,8\ \mathrm{J/cal}\approx 427\ \mathrm{kgf/kcal}
+\]
+
+\textit{Thermal equivalent of work}
+\[
+0.238\,85\ \mathrm{cal/J}\approx 0.24\ \mathrm{cal/J}
+\]
+
+\textit{Horsepower}
+
+1 international horsepower $=75\ \mathrm{kgf\,m/s}=735\ \mathrm{W}$.
+
+\textit{Faraday constant}
+\[
+F=9.648\,456\times10^{4}\ \mathrm{C/mol}\approx 9.65\times10^{4}\ \mathrm{C/mol}
+\]
+
+\textit{Refractive index of water}
+\[
+1.33
+\]
+
+\textit{Refractive index of air}
+\[
+1.000\,293
+\]
+
+\textit{Refractive index of glass}
+\[
+1.5\sim1.8
+\]
+
+\textit{Refractive index of diamond}
+\[
+2.42
+\]
+
+\end{multicols}
+
+\section*{Trigonometric Formulas}
+
+\begin{multicols}{2}
+\footnotesize
+\raggedcolumns
+\setlength{\parindent}{0pt}
+
+\textit{Addition formulas}
+\begin{align*}
+\sin(\alpha\pm\beta) &= \sin\alpha\cos\beta\pm\cos\alpha\sin\beta\\
+\cos(\alpha\pm\beta) &= \cos\alpha\cos\beta\mp\sin\alpha\sin\beta\\
+\tan(\alpha\pm\beta) &= \frac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}\\
+\cot(\alpha\pm\beta) &= \frac{\cot\alpha\cot\beta\mp1}{\cot\beta\pm\cot\alpha}
+\end{align*}
+
+\textit{Formulas converting sums and differences into products and vice versa}
+\begin{align*}
+\sin\alpha+\sin\beta &= 2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\
+\sin\alpha-\sin\beta &= 2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}\\
+\cos\alpha+\cos\beta &= 2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\
+\cos\alpha-\cos\beta &= -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}\\
+\tan\alpha\pm\tan\beta &= \frac{\sin(\alpha\pm\beta)}{\cos\alpha\cos\beta}\\
+\cot\alpha\pm\cot\beta &= \pm\frac{\sin(\alpha\pm\beta)}{\sin\alpha\sin\beta}\\
+\sin\alpha\sin\beta &= -\frac12\bigl[\cos(\alpha+\beta)-\cos(\alpha-\beta)\bigr]\\
+\cos\alpha\cos\beta &= \frac12\bigl[\cos(\alpha+\beta)+\cos(\alpha-\beta)\bigr]
+\end{align*}
+
+\columnbreak
+
+\begin{align*}
+\sin\alpha\cos\beta &= \frac12\bigl[\sin(\alpha+\beta)+\sin(\alpha-\beta)\bigr]
+\end{align*}
+
+\textit{Double-angle formulas}
+\begin{align*}
+\sin2\alpha &= 2\sin\alpha\cos\alpha=\frac{2\tan\alpha}{1+\tan^2\alpha}\\
+\cos2\alpha &= \cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1\\
+&= 1-2\sin^2\alpha=\frac{1-\tan^2\alpha}{1+\tan^2\alpha}\\
+\tan2\alpha &= \frac{2\tan\alpha}{1-\tan^2\alpha}\\
+\cot2\alpha &= \frac{\cot^2\alpha-1}{2\cot\alpha}
+\end{align*}
+
+\textit{Half-angle formulas}
+\begin{align*}
+\sin\frac{\alpha}{2} &= \pm\sqrt{\frac{1-\cos\alpha}{2}}\\
+\cos\frac{\alpha}{2} &= \pm\sqrt{\frac{1+\cos\alpha}{2}}\\
+\tan\frac{\alpha}{2} &= \pm\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}}=\frac{1-\cos\alpha}{\sin\alpha}\\
+&= \frac{\sin\alpha}{1+\cos\alpha}\\
+\cot\frac{\alpha}{2} &= \pm\sqrt{\frac{1+\cos\alpha}{1-\cos\alpha}}=\frac{1+\cos\alpha}{\sin\alpha}\\
+&= \frac{\sin\alpha}{1-\cos\alpha}
+\end{align*}
+
+\end{multicols}
+
+\section*{Calculus Formulas}
+
+\subsection*{Differential Formulas}
+
+The derivative of $y=f(x)$ is defined as the limit of the slope $\Delta y/\Delta x$ of the $y$--$x$ curve:
+\[
+\frac{\dd y}{\dd x}=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}
+=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.
+\]
+
+\textit{General relations for differentials}
+
+\begin{align*}
+\frac{\dd}{\dd x}\bigl[f(x)\pm g(x)\bigr] &= \frac{\dd f}{\dd x}\pm\frac{\dd g}{\dd x}\\
+\frac{\dd}{\dd x}\bigl[f(x)g(x)\bigr] &= f\,\frac{\dd g}{\dd x}+g\,\frac{\dd f}{\dd x}\\
+\frac{\dd(f/g)}{\dd x} &= \frac{g\,\dd f/\dd x-f\,\dd g/\dd x}{g^2}
+\end{align*}
+
+\textit{Chain rule.} If $y=f(x)$ and $x=g(z)$, then
+\[
+\frac{\dd f(x)}{\dd z}=\frac{\dd f(x)}{\dd x}\,\frac{\dd x}{\dd z}.
+\]
+
+\textit{Derivatives of some special functions ($a$ and $n$ are constants)}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{@{}lll@{}}
+$\dfrac{\dd}{\dd x}\sin x=\cos x$ & $\dfrac{\dd}{\dd x}x^n=nx^{n-1}$ & $\dfrac{\dd}{\dd x}\arcsin x=\dfrac{1}{\sqrt{1-x^2}}$\\[4pt]
+$\dfrac{\dd}{\dd x}\cos x=-\sin x$ & $\dfrac{\dd}{\dd x}a^x=a^x\ln a$ & $\dfrac{\dd}{\dd x}\cos^{-1}x=\dfrac{-1}{\sqrt{1-x^2}}$\\[4pt]
+$\dfrac{\dd}{\dd x}\tan x=\sec^2x$ & $\dfrac{\dd}{\dd x}\ee^x=\ee^x$ & $\dfrac{\dd}{\dd x}\tan^{-1}x=\dfrac{1}{1+x^2}$\\[4pt]
+$\dfrac{\dd}{\dd x}\cot x=-\csc^2x$ & $\dfrac{\dd}{\dd x}\ln x=\dfrac{1}{x}$ & $\dfrac{\dd}{\dd x}\cot^{-1}x=-\dfrac{1}{1+x^2}$
+\end{tabular}
+\end{center}
+
+\subsection*{Integral Formulas}
+
+The integral of a function $f(x)$ over the interval from $a$ to $b$ is written as
+\[
+I=\int_a^b f(x)\,\dd x.
+\]
+It equals the area of the region bounded by the lines $x=a$, $x=b$, the curve $f(x)$ and the $x$-axis. The basic rule of calculation is: if the upper limit is a variable $w$, then
+\[
+I(w)=\int_a^w f(x)\,\dd x,
+\]
+\[
+\frac{\dd}{\dd w}I(w)=\frac{\dd}{\dd w}\int_a^w f(x)\,\dd x=f(w).
+\]
+Therefore we regard integration as the inverse operation of differentiation. The indefinite integral $I(x)$ of $f(x)$ is a function whose derivative is $f(x)$; for example, the indefinite integral of $ax^2+bx+c$ is
+\[
+\frac13ax^3+\frac12bx^2+cx+d.
+\]
+
+Some common formulas for indefinite integrals are as follows ($f$, $g$, $u$ and $v$ are functions; $a$, $b$ and $c$ are constants).
+\begin{align*}
+\int \dd x &= x+c\\
+\int\frac{\dd f(x)}{\dd x}\,\dd x &= f(x)+c\\
+\int a f(x)\,\dd x &= a\int f(x)\,\dd x\\
+\int\bigl[a f(x)+b g(x)\bigr]\dd x &= a\int f(x)\,\dd x+b\int g(x)\,\dd x\\
+\int u\,\dd v &= uv-\int v\,\dd u
+\end{align*}
+
+Below is a table of common definite and indefinite integrals.
+
+\textit{Indefinite integrals} \quad (an arbitrary constant should be added after each integral; $a$, $b$ and $n$ denote constants)
+
+\begin{alignat*}{2}
+\int x^n\,\dd x &= \frac{x^{n+1}}{n+1} &&\\
+\int (a+bx)^n\,\dd x &= \frac{(a+bx)^{n+1}}{b(n+1)} &&\quad (n\neq-1)\\
+\int\frac{\dd x}{x} &= \ln x &&\\
+\int\frac{\dd x}{a+bx} &= \frac1b\ln(a+bx) &&\\
+\int\frac{\dd x}{a+bx^2} &= \frac{1}{\sqrt{ab}}\tan^{-1}\left(\sqrt{\frac ba}\,x\right) &&\quad (ab>0)\\
+\int\frac{\dd x}{a+bx^2} &= \frac{1}{2\sqrt{|ab|}}\ln\left(\frac{a-x\sqrt{|ab|}}{a+x\sqrt{|ab|}}\right) &&\quad (ab<0)\\
+\int\frac{x\,\dd x}{(a+bx^2)^n} &= -\frac{1}{2b(n-1)(a+bx^2)^{n-1}} &&\quad (n\neq1)\\
+\int\frac{x\,\dd x}{a+bx^2} &= \frac{1}{2b}\ln(a+bx^2) &&
+\end{alignat*}
+
+Let $u=\sqrt{a+cx^2}$ and $I=\displaystyle\int\frac{\dd x}{u}$; then
+\begin{align*}
+I &= \frac{1}{\sqrt c}\ln(x\sqrt c+u) \qquad (c>0)\\
+&= \frac{1}{\sqrt{-c}}\arcsin\left(x\sqrt{-\frac ca}\right) \qquad (c<0\ \text{and}\ a>0)
+\end{align*}
+and hence
+\[
+\int u\,\dd x=\frac12(xu+aI).
+\]
+
+\begin{align*}
+\int\frac{\dd x}{u} &= I\\
+\int x u\,\dd x &= \frac{u^3}{3c}\\
+\int\frac{x\,\dd x}{u} &= \frac{u}{c}\\
+\int \ee^{ax}\,\dd x &= \frac{\ee^{ax}}{a}\\
+\int x \ee^{ax}\,\dd x &= \frac{\ee^{ax}}{a^2}(ax-1)\\
+\int x^2 \ee^{ax}\,\dd x &= \frac{\ee^{ax}}{a^3}(a^2x^2-2ax+2)\\
+\int\frac{\dd x}{a+b\ee^{mx}} &= \frac{x}{a}-\frac{\ln(a+b\ee^{mx})}{am}\\
+\int\ln ax\,\dd x &= (x\ln ax)-x\\
+\int\sin ax\,\dd x &= -\frac{\cos ax}{a}\\
+\int\cos ax\,\dd x &= \frac{\sin ax}{a}\\
+\int\tan ax\,\dd x &= -\frac{\ln(\cos ax)}{a}\\
+\int\sin^2 ax\,\dd x &= \frac{x}{2}-\frac{\sin 2ax}{4a}\\
+\int\cos^2 ax\,\dd x &= \frac{x}{2}+\frac{\sin 2ax}{4a}\\
+\int\tan^2 ax\,\dd x &= \frac{\tan ax}{a}-x\\
+\int\arcsin\left(\frac xa\right)\dd x &= x\arcsin\left(\frac xa\right)+\sqrt{a^2-x^2}\\
+\int\arccos\left(\frac xa\right)\dd x &= x\arccos\left(\frac xa\right)-\sqrt{a^2-x^2}\\
+\int\arctan\left(\frac xa\right)\dd x &= x\arctan\left(\frac xa\right)-\left(\frac a2\right)\ln(a^2+x^2)
+\end{align*}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\centering
+\textit{Definite integrals}\quad $(a>0)$\\[6pt]
+\begin{minipage}[t]{0.47\textwidth}
+\begin{align*}
+\int_0^\infty \ee^{-ax}\,\dd x &= \frac1a\\
+\int_0^\infty x^n \ee^{-ax}\,\dd x &= \frac{n!}{a^{n+1}}\\
+\int_0^\infty\frac{\dd x}{1+\ee^{ax}} &= \frac{\ln 2}{a}\\
+\int_0^\infty \ee^{-a^2x^2}\,\dd x &= \frac{\sqrt{\pi}}{2a}\\
+\int_0^\infty x \ee^{-a^2x^2}\,\dd x &= \frac{1}{2a^2}\\
+\int_0^\infty x^2 \ee^{-a^2x^2}\,\dd x &= \frac14\sqrt{\frac{\pi}{a^3}}
+\end{align*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+\begin{align*}
+\int_0^\infty x^3 \ee^{-a^2x^2}\,\dd x &= \frac{1}{2a^4}\\
+\int_0^\infty x^4 \ee^{-a^2x^2}\,\dd x &= \frac38\sqrt{\frac{\pi}{a^5}}\\
+\int_0^\infty\frac{\sin ax}{x}\,\dd x &= \frac{\pi}{2}
+\end{align*}
+\end{minipage}
+\end{minipage}
+\end{center}
+
+\section*{Approximation Formulas}
+
+{\small
+In the approximation formulas, the angles of trigonometric functions are measured in radians.
+\begin{alignat*}{2}
+(1+x)^n &= 1+nx+\frac{n(n-1)}{2!}x^2+\frac{n(n-1)(n-2)}{3!}x^3+\cdots &&\quad (|x|<1)\\
+\sin x &= x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots &&\quad (x^2<\infty)\\
+\cos x &= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots &&\quad (x^2<\infty)\\
+\tan x &= x+\frac{x^3}{3}+\frac{2x^5}{15}+\frac{17x^7}{315}+\cdots &&\quad \left(x^2<\frac{\pi^2}{4}\right)\\
+\cot x &= \frac1x-\frac{x}{3}-\frac{x^3}{45}-\frac{2x^5}{945}-\cdots &&\quad (x^2<\pi^2)\\
+\arcsin x &= x+\frac16x^3+\frac{3}{40}x^5+\cdots &&\quad (x^2<1)\\
+\arccos x &= \frac{\pi}{2}-\arcsin x &&\quad (x^2<1)\\
+\arctan x &= x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\cdots=\frac{\pi}{2}-\arccot x &&\quad (x^2<1)\\
+&= \frac{\pi}{2}-\frac1x+\frac{1}{3x^3}-\frac{1}{5x^5}+\cdots &&\quad (x^2>1)\\
+\ee^x &= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots &&\quad (x^2<\infty)\\
+\ln(1+x) &= x-\frac12x^2+\frac13x^3-\frac14x^4+\cdots &&\quad (x^2<1)\\
+\ln\left(\frac{1+x}{1-x}\right) &= 2\left(x+\frac13x^3+\frac15x^5+\frac17x^7+\cdots\right) &&\quad (x^2<1)\\
+\ln\left(\frac{x+1}{x-1}\right) &= 2\left[\frac1x+\frac13\left(\frac1x\right)^3+\frac15\left(\frac1x\right)^5+\cdots\right] &&\quad (x^2>1)
+\end{alignat*}
+\par}

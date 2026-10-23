@@ -1,0 +1,921 @@
+\section*{The 33rd International Physics Olympiad}
+
+\begin{center}
+\small Translated and compiled by Zheng Yongling, Jiang Zuimin and Lu Shenlong, Fudan University
+\end{center}
+
+\subsection*{Theoretical Problems}
+
+\subsection*{Problem 1. Ground-penetrating radar}
+
+Ground-penetrating radar (GPR) detects and locates objects near the Earth's surface by transmitting electromagnetic waves into the ground and receiving the waves reflected back from underground objects. The antenna and the detector are placed directly on the ground, at the same location.
+
+The electric field of a linearly polarised plane electromagnetic wave of angular frequency $\omega$ propagating in the $z$ direction is given by
+\begin{equation}
+E=E_0\ee^{-\alpha z}\cos(\omega t-\beta z), \tag{1}
+\end{equation}
+where $E_0$ is a constant, $\alpha$ is the attenuation constant and $\beta$ is the wave number, given respectively by
+\begin{equation}
+\begin{aligned}
+\alpha&=\omega\left\{\frac{\mu\varepsilon}{2}\left[\left(1+\frac{\sigma^2}{\varepsilon^2\omega^2}\right)^{1/2}-1\right]\right\}^{1/2},\\
+\beta&=\omega\left\{\frac{\mu\varepsilon}{2}\left[\left(1+\frac{\sigma^2}{\varepsilon^2\omega^2}\right)^{1/2}+1\right]\right\}^{1/2},
+\end{aligned}\tag{2}
+\end{equation}
+where $\mu$, $\varepsilon$ and $\sigma$ are the magnetic permeability, the permittivity and the conductivity respectively.
+
+When the amplitude of the radar signal on reaching an object falls to $1/\ee$ (about $37\%$) of its initial value, the object can no longer be detected. Electromagnetic waves with frequencies commonly between $10\unitv{MHz}$ and $1000\unitv{MHz}$ are used, so as to adjust the detection range and the resolution.
+
+The performance of GPR depends on its resolution. The resolution is determined by the minimum separation between two adjacent reflecting bodies to be detected, this minimum separation corresponding to a minimum phase difference of $180\degree$ between the two reflected waves at the detector.
+
+\paragraph{Problems}
+
+(Known: $\mu=4\pi\times10^{-7}\unitv{H/m}$, $\varepsilon_0=8.85\times10^{-12}\unitv{F/m}$.)
+
+(1) Assuming that the ground is a non-magnetic substance ($\mu=\mu_0$) and satisfies the condition $\left(\dfrac{\sigma}{\omega\varepsilon}\right)^2\ll1$, use equations (1) and (2) to derive the expression for the propagation speed $v$ (in terms of $\mu$ and $\varepsilon$). (1.0 point)
+
+(2) Determine the maximum depth of an object that can be detected underground, given that the conductivity of the ground is $1.0\unitv{mS/m}$, its permittivity is $9\varepsilon_0$, and the condition $\left(\dfrac{\sigma}{\omega\varepsilon}\right)^2\ll1$ is satisfied. (2.0 points)
+
+($1\unitv{S}=\Omega^{-1}$, $\mu=\mu_0$.)
+
+(3) Consider two conducting rods buried horizontally and parallel to each other underground, both at a depth of $4\unitv{m}$. The conductivity of the ground is known to be $1.0\unitv{mS/m}$ and its permittivity $9\varepsilon_0$. Suppose that GPR measurements are made just above the position of one of the conducting rods, and that the detector is a point. Determine the lowest frequency required for the transverse resolution to reach $50\unitv{cm}$. (3.5 points)
+
+(4) In order to determine the depth $d$ of a conducting rod buried in a stratum with the same conditions as in question (2), measurements are made along the direction perpendicular to the conducting rod. The results can be represented by Fig.~33.1 as the relation between the propagation time $t$ of the electromagnetic wave and the detection position $x$. Taking $t_{\min}=100\unitv{ns}$, derive the function $t(x)$ and determine $d$. (3.5 points)
+
+\begin{figbox}{33.1}
+\begin{tikzpicture}[scale=0.9]
+  % ground line and x axis
+  \draw[axis] (-3.9,0) -- (4.2,0) node[right] {$x$};
+  % antenna
+  \draw[thickline,fill=white] (-0.28,0) rectangle (0.28,0.34);
+  \node[above] at (0,0.38) {\small antenna (detector) position};
+  % t axis
+  \draw[axis] (0,0) -- (0,-2.45) node[below] {$t$};
+  % curve t(x)
+  \draw[thickline,domain=-3.3:3.3,samples=90]
+    plot (\x,{-0.35-1.3*(\x*\x)/(\x*\x+4)});
+\end{tikzpicture}
+\\[2pt]{\small Propagation time $t$ versus detection position $x$; $t_{\min}=100\unitv{ns}$.}
+\end{figbox}
+
+\subsection*{Solutions}
+
+\subsection*{Solution 1}
+
+\paragraph{(1) Propagation speed of the radar wave in the medium}
+
+From the phase $\omega t-\beta z$ being constant,
+\[
+\omega t-\beta z=\text{constant}\quad\Rightarrow\quad \beta z=-\text{constant}+\omega t,
+\]
+hence
+\[
+v=\frac{\dd z}{\dd t}=\frac{\omega}{\beta}.
+\]
+Therefore
+\[
+v=\frac{\omega}{\beta}
+=\frac{\omega}{\omega\left\{\dfrac{\mu\varepsilon}{2}\left[\left(1+\dfrac{\sigma^2}{\varepsilon^2\omega^2}\right)^{1/2}+1\right]\right\}^{1/2}}
+=\frac{1}{\left\{\dfrac{\mu\varepsilon}{2}\left[\left(1+\dfrac{\sigma^2}{\varepsilon^2\omega^2}\right)^{1/2}+1\right]\right\}^{1/2}}.
+\]
+Since $\sigma^2/\varepsilon^2\omega^2\ll1$,
+\[
+v=\frac{1}{\left\{\dfrac{\mu\varepsilon}{2}(1+1)\right\}^{1/2}}
+=\frac{1}{\sqrt{\mu\varepsilon}}.
+\]
+
+\paragraph{(2) Maximum detectable depth of an object underground}
+
+The maximum detectable depth (the skin depth) $\delta$ is inversely proportional to the attenuation constant:
+\begin{align*}
+\delta&=\frac{1}{\alpha}
+=\frac{1}{\omega\left\{\dfrac{\mu\varepsilon}{2}\left[\left(1+\dfrac{\sigma^2}{\varepsilon^2\omega^2}\right)^{1/2}-1\right]\right\}^{1/2}}\\
+&=\frac{1}{\omega\left\{\dfrac{\mu\varepsilon}{2}\left[\left(1+\frac{1}{2}\dfrac{\sigma^2}{\varepsilon^2\omega^2}\right)-1\right]\right\}^{1/2}}
+=\frac{1}{\omega\left\{\dfrac{\mu\varepsilon}{2}\cdot\dfrac{1}{2}\dfrac{\sigma^2}{\varepsilon^2\omega^2}\right\}^{1/2}}\\
+&=\left(\frac{2}{\sigma}\right)\left(\frac{\varepsilon}{\mu}\right)^{1/2}.
+\end{align*}
+Numerically,
+\[
+\delta=\frac{5.31\sqrt{\varepsilon_r}}{\sigma}\unitv{m},
+\]
+where $\sigma$ is measured in $\unitv{mS/m}$.
+
+For a medium with conductivity $1.0\unitv{mS/m}$ and relative permittivity $9$, the skin depth is
+\[
+\delta=\frac{5.31\sqrt{9}}{1.0}=15.93\ (\unitv{m}).
+\]
+
+\paragraph{(3) Transverse resolution}
+
+As shown in Fig.~33.2, for the two reflected waves to have a phase difference of $180\degree$, the difference between their path lengths must be $\lambda/2$, so the extra one-way path to the second rod is $\lambda/4$. Hence
+\[
+r^2+d^2=\left(d+\frac{\lambda}{4}\right)^2,
+\]
+and therefore
+\[
+r=\left(\frac{\lambda d}{2}+\frac{\lambda^2}{16}\right)^{1/2}.
+\]
+With $r=0.5\unitv{m}$ and $d=4\unitv{m}$,
+\[
+\frac{1}{2}=\left(\frac{4\lambda}{2}+\frac{\lambda^2}{16}\right)^{1/2},
+\qquad
+\lambda^2+32\lambda-4=0.
+\]
+Thus the wavelength is
+\[
+\lambda=0.125\unitv{m}.
+\]
+
+\begin{figbox}{33.2}
+\begin{tikzpicture}[scale=0.95]
+  % ground
+  \draw[thickline] (-3.6,0) -- (3.6,0);
+  % antenna
+  \draw[thickline,fill=white] (-0.2,0) rectangle (0.2,0.34);
+  \node[above] at (0,0.38) {\small antenna};
+  % rods
+  \fill (-1.6,-2.2) circle (2.4pt);
+  \fill (1.6,-2.2) circle (2.4pt);
+  \node[above left] at (-1.65,-2.15) {\small rod};
+  \node[above right] at (1.65,-2.15) {\small rod};
+  % depth d
+  \draw[dashedline] (0,0) -- (0,-2.2);
+  \draw[dashedline] (-2.5,0) -- (-2.5,-2.2);
+  \draw[dim] (-2.5,0) -- (-2.5,-2.2) node[midway,left] {$d$};
+  \draw[dashedline] (-2.5,-2.2) -- (-1.6,-2.2);
+  % separation r
+  \draw[dim] (-1.6,-2.95) -- (1.6,-2.95) node[midway,below] {$r$};
+  \draw[dashedline] (-1.6,-2.2) -- (-1.6,-2.95);
+  \draw[dashedline] (1.6,-2.2) -- (1.6,-2.95);
+  % slant path
+  \draw[dashedline] (0,0) -- (1.6,-2.2);
+  \node[right] at (0.95,-1.28) {$d+\dfrac{\lambda}{4}$};
+\end{tikzpicture}
+\end{figbox}
+
+The propagation speed of the signal in the medium is
+\begin{align*}
+v&=\frac{1}{\sqrt{\mu\varepsilon}}
+=\frac{1}{\sqrt{\mu_0\mu_r\varepsilon_0\varepsilon_r}}
+=\frac{1}{\sqrt{\mu_0\varepsilon_0}}\cdot\frac{1}{\sqrt{\mu_r\varepsilon_r}}\\
+&=\frac{c}{\sqrt{\mu_r\varepsilon_r}}
+=\frac{0.3}{\sqrt{\varepsilon_r}}\unitv{m/ns}
+=0.1\unitv{m/ns}=10^{8}\unitv{m/s},
+\end{align*}
+where
+\[
+c=\frac{1}{\sqrt{\mu_0\varepsilon_0}},\qquad \mu_r=1.
+\]
+
+The lowest frequency required to resolve the two separate rods is
+\[
+f_{\min}=\frac{v}{\lambda}.
+\]
+Thus
+\[
+f_{\min}=\frac{0.3/\sqrt{9}}{0.125}\times10^{9}\ (\unitv{Hz})=800\ (\unitv{MHz}).
+\]
+
+\paragraph{(4) Dependence of the propagation time on position}
+
+When the antenna and the detector are at a certain position on the ground, the path of the electromagnetic wave is as shown in Fig.~33.3.
+
+\begin{figbox}{33.3}
+\begin{tikzpicture}[scale=0.85]
+  % ground
+  \draw[thickline] (-4.4,0) -- (4.4,0);
+  \node[above] at (1.35,0.1) {$\varepsilon_1,\sigma_1$};
+  % antenna positions
+  \foreach \x in {-2,0,2}{
+    \draw[thickline,fill=white] (\x-0.25,0) rectangle (\x+0.25,0.34);
+  }
+  \node[above] at (0,0.38) {\small antenna position};
+  \draw[axis] (2.55,0.88) -- (4.2,0.88);
+  \node[above] at (3.38,0.92) {\small scan direction};
+  % buried rod
+  \fill (0,-2.2) circle (3pt);
+  \node[right] at (0.15,-2.2) {\small rod $(\varepsilon_2,\sigma_2)$};
+  % rays
+  \draw[thickline] (-2,0) -- (0,-2.2);
+  \draw[thickline] (0,0) -- (0,-2.2);
+  \draw[thickline] (2,0) -- (0,-2.2);
+  \node at (-1.35,-1.2) {$1$};
+  \node at (0.2,-1.2) {$2$};
+  \node at (1.35,-1.2) {$3$};
+  % x dimension
+  \draw[dashedline] (-2,0) -- (-2,0.62);
+  \draw[dashedline] (0,0) -- (0,0.62);
+  \draw[dim] (-2,0.55) -- (0,0.55) node[midway,above] {$x$};
+  % depth d
+  \draw[dim] (-3.5,0) -- (-3.5,-2.2) node[midway,left] {$d$};
+  \draw[dashedline] (-4.4,0) -- (-3.5,0);
+  \draw[dashedline] (-3.5,-2.2) -- (0,-2.2);
+\end{tikzpicture}
+\\[2pt]{\small Rays 1, 2 and 3 from three antenna positions to the buried rod.}
+\end{figbox}
+
+The propagation time $t$ as a function of $x$ satisfies
+\[
+\left(\frac{tv}{2}\right)^2=d^2+x^2,
+\]
+so
+\[
+t(x)=\sqrt{\frac{4d^2+4x^2}{v^2}},
+\qquad
+t(x)=\frac{2\sqrt{\varepsilon_r}}{0.3}\sqrt{d^2+x^2}.
+\]
+For $x=0$,
+\[
+100=2\times\frac{3}{0.3}d,
+\]
+and hence
+\[
+d=5\unitv{m}.
+\]
+
+\subsection*{Problem 2. Sensing electric signals}
+
+Some marine animals can detect other animals at a certain distance from them, because respiration or other processes, including muscle contraction, produce electric currents. Some carnivorous animals (predators) use such electric signals to locate their prey (even if the prey is buried in the seabed sand).
+
+The electricity-generating mechanism of the prey and the detection mechanism of the predator can be represented by the model of Fig.~33.4. The current in the prey's body flows between two spheres carrying positive and negative potentials respectively. Assume that the distance between the two spheres is $l_s$, that the radius of each sphere is $r_s$, that $r_s$ is much smaller than $l_s$, and that the resistivity of seawater is $\rho$.
+
+\begin{figbox}{33.4}
+\begin{tikzpicture}[scale=0.95]
+  % predator
+  \draw[thickline] (0,1.5) ellipse (2.2 and 0.55);
+  \node[above] at (1.7,1.95) {\small predator};
+  % detector spheres and resistor
+  \draw[thickline,fill=white] (-0.55,1.5) circle (0.07);
+  \draw[thickline,fill=white] (0.55,1.5) circle (0.07);
+  \draw[thickline] (-0.55,1.5) -- (-0.55,1.8) -- (-0.3,1.8);
+  \draw[thickline] (0.55,1.5) -- (0.55,1.8) -- (0.3,1.8);
+  \draw[thickline,fill=white] (-0.3,1.7) rectangle (0.3,1.9);
+  \node[above] at (0,1.9) {$R_d$};
+  \draw[dim] (-0.55,1.32) -- (0.55,1.32) node[midway,below] {$l_d$};
+  % prey
+  \draw[thickline] (0,-0.4) ellipse (2.0 and 0.5);
+  \node[above] at (1.5,0.0) {\small prey};
+  \fill (-0.45,-0.4) circle (2.5pt);
+  \fill (0.45,-0.4) circle (2.5pt);
+  \node[above] at (-0.45,-0.34) {$-$};
+  \node[above] at (0.45,-0.34) {$+$};
+  \draw[dim] (-0.45,-0.82) -- (0.45,-0.82) node[midway,below] {$l_s$};
+  % separation y
+  \draw[dashedline] (2.45,1.5) -- (2.45,-0.4);
+  \draw[dim] (2.45,1.5) -- (2.45,-0.4) node[midway,right] {$y$};
+\end{tikzpicture}
+\\[2pt]{\small Model of the predator detecting the electric signal from the prey.}
+\end{figbox}
+
+Assume that the resistivity of the prey's body is the same as that of the surrounding seawater, so that the boundary of the prey's body in the figure may be ignored.
+
+In order to describe the detection of the electric signal generated by the prey, the detector may similarly be simplified as two spheres on the predator's body, in contact with the surrounding seawater, parallel to the pair of electrodes of the prey, the two spheres being separated by $l_d$, each sphere having radius $r_d$, with $r_d$ much smaller than $l_d$. In the case under consideration, the centre of the detector is at a distance $y$ directly above the signal source, and the line joining the two spheres is parallel to the electric field, as shown in Fig.~33.4. The distances $l_s$ and $l_d$ between the two spheres of the source and of the detector are both much smaller than $y$. Assume that the electric field strength is constant along the line joining the two detector spheres; then the detector, the prey, the surrounding seawater and the predator form a closed circuit, as shown in Fig.~33.5. In the figure, $V$ is the potential difference between the two detector spheres produced by the electric field induced by the prey (because of the biological effects of the predator, $V$ here is equivalent to an electromotive force --- translator's note), and $R_m$ is the resistance produced when the two spheres of radius $r_d$ are surrounded by the seawater (the internal resistance). In addition, $V_d$ and $R_d$ are respectively the potential difference and the resistance between the two detecting spheres in the predator's body.
+
+\begin{figbox}{33.5}
+\begin{tikzpicture}[scale=0.95]
+  % circuit loop
+  \draw[thickline] (0,0) -- (0,0.85);
+  \draw[thickline] (0,1.0) -- (0,2.4) -- (1.5,2.4);
+  \draw[thickline] (2.7,2.4) -- (4.2,2.4) -- (4.2,1.3);
+  \draw[thickline] (4.2,0.7) -- (4.2,0) -- (0,0);
+  % battery
+  \draw[thickline] (-0.3,1.0) -- (0.3,1.0);
+  \draw[thickline] (-0.15,0.85) -- (0.15,0.85);
+  \node[left] at (-0.1,1.1) {$+$};
+  \node[left] at (-0.1,0.72) {$-$};
+  \node[left] at (-0.6,0.95) {$V$};
+  % R_m
+  \draw[thickline,fill=white] (1.5,2.25) rectangle (2.7,2.55);
+  \node[above] at (2.1,2.55) {$R_m$};
+  % R_d
+  \draw[thickline,fill=white] (3.95,0.7) rectangle (4.45,1.3);
+  \node[left] at (3.85,0.95) {$R_d$};
+  % V_d
+  \draw[dashedline] (4.45,1.3) -- (5.0,1.3);
+  \draw[dashedline] (4.45,0.7) -- (5.0,0.7);
+  \draw[dim] (5.0,0.7) -- (5.0,1.3) node[midway,right] {$V_d$};
+\end{tikzpicture}
+\\[2pt]{\small Equivalent closed circuit including the predator, the prey and the surrounding seawater.}
+\end{figbox}
+
+\paragraph{Problems}
+
+(1) Determine the current density vector $\vec{j}$ at a distance $r$ from a point current source $I_s$ placed in an infinite conducting medium (the current through unit area). (1.5 points)
+
+(2) Using the law $\vec{E}=\rho\vec{j}$, determine the field strength $\vec{E}_P$ at the midpoint $P$ of the line joining the two detector spheres, assuming that the current between the two spheres in the prey's body is $I_s$. (2.0 points)
+
+(3) Determine the potential difference $V_s$ between the two source spheres in the prey's body (1.5 points), the resistance $R_s$ between the two source spheres (0.5 points) and the electric power $P_s$ generated by the source (0.5 points).
+
+(4) Determine the resistance $R_m$ between the two detecting spheres in Fig.~33.5 (0.5 points) and the potential difference $V_d$ between the two detecting spheres (1.0 point). Calculate the electric power of the detector (0.5 points). (The original text reads ``the electric power transmitted from the source to the detector'' --- translator's note.)
+
+(5) Determine the optimum value of $R_d$ for which the detected electric power is maximum (1.5 points), and determine this maximum power (0.5 points).
+
+\subsection*{Solution 2}
+
+\paragraph{(1) Current density of a point source}
+
+When a point current source $I_s$ is located in an infinite isotropic medium, the current density vector at a distance $r$ from the point source is
+\[
+\vec{j}=\frac{I_s}{4\pi r^2}\hat{r}.
+\]
+
+\paragraph{(2) Field strength at the midpoint of the detector}
+
+The problem assumes that the resistivity of the prey's body is the same as that of the surrounding seawater; this means that the boundary of the prey disappears, and the two spheres are as if located in an infinite isotropic medium of resistivity $\rho$. When the current produced by one small sphere is $I_s$, the current density at a distance $r$ from the centre of the sphere is again
+\[
+\vec{j}=\frac{I_s}{4\pi r^2}\hat{r}.
+\]
+Since the resistivity of seawater is $\rho$, the electric field at $r$ is
+\[
+\vec{E}(r)=\rho\vec{j}=\frac{\rho I_s}{4\pi r^3}\vec{r}.
+\]
+
+In our model there are two small spheres, one at a positive voltage relative to the other, so that the current $I_s$ flows from the positively charged sphere to the negatively charged sphere, see Fig.~33.6. If the two spheres are separated by $l_s$, the field strength at $P(0,y)$ is
+\begin{align*}
+\vec{E}_P&=\vec{E}_++\vec{E}_-\\
+&=\frac{\rho I_s}{4\pi}\left\{\frac{1}{\left[(l_s/2)^2+y^2\right]^{3/2}}\left(-\frac{l_s}{2}\hat{i}+y\hat{j}\right)
++\frac{1}{\left[(l_s/2)^2+y^2\right]^{3/2}}\left(-\frac{l_s}{2}\hat{i}-y\hat{j}\right)\right\}\\
+&=\frac{\rho I_s}{4\pi}\left\{\frac{l_s(-\hat{i})}{\left[(l_s/2)^2+y^2\right]^{3/2}}\right\}.
+\end{align*}
+For $l_s\ll y$,
+\[
+\vec{E}_P\approx\frac{\rho I_s l_s}{4\pi y^3}(-\hat{i}).
+\]
+
+\begin{figbox}{33.6}
+\begin{tikzpicture}[scale=0.95]
+  % prey body
+  \draw[thickline] (0,0) ellipse (2.8 and 0.7);
+  \node[above] at (2.0,0.6) {\small prey};
+  % source spheres
+  \fill (-0.8,0) circle (2.6pt);
+  \fill (0.8,0) circle (2.6pt);
+  \node[above] at (-0.8,0.1) {$-$};
+  \node[above] at (0.8,0.1) {$+$};
+  % point P
+  \fill (0,2.2) circle (2.2pt);
+  \node[right] at (0.08,2.25) {$P$};
+  % lines to P
+  \draw[dashedline] (-0.8,0) -- (0,2.2);
+  \draw[dashedline] (0.8,0) -- (0,2.2);
+  % y
+  \draw[dim] (0.16,0) -- (0.16,2.2) node[midway,right] {$y$};
+  % x axis
+  \draw[dashedline] (-3.4,0) -- (3.2,0);
+  \draw[axis] (3.2,0) -- (3.55,0) node[right] {$x$};
+  \node[below] at (-0.8,-0.12) {\small $-\dfrac{l_s}{2}$};
+  \node[below] at (0,-0.12) {\small $0$};
+  \node[below] at (0.8,-0.12) {\small $\dfrac{l_s}{2}$};
+\end{tikzpicture}
+\end{figbox}
+
+\paragraph{(3) Potential difference, resistance and power of the source}
+
+The field strength on the $x$ axis along the line joining the two spheres is
+\[
+\vec{E}(x)=\frac{\rho I_s}{4\pi}\left[\frac{1}{(x-l_s/2)^2}+\frac{1}{(x+l_s/2)^2}\right](-\hat{i}).
+\]
+The potential difference producing the given current $I_s$ is
+\begin{align*}
+V_s&=\Delta V=V_+-V_-=\int_{l_s/2-r_s}^{-l_s/2+r_s}\vec{E}(x)\cdot\dd\vec{x}\\
+&=\frac{\rho I_s}{4\pi}\left\{\left[\frac{1}{r_s}-\frac{1}{l_s-r_s}\right]-\left[\frac{1}{l_s-r_s}-\frac{1}{r_s}\right]\right\}\\
+&=\frac{\rho I_s}{4\pi}\left(\frac{2}{r_s}-\frac{2}{l_s-r_s}\right)
+=\frac{2\rho I_s}{4\pi}\cdot\frac{l_s-2r_s}{(l_s-r_s)r_s}\\
+&=\frac{\rho I_s}{2\pi r_s}\cdot\frac{l_s-2r_s}{l_s-r_s}.
+\end{align*}
+For $l_s\gg r_s$,
+\[
+V_s=\Delta V\approx\frac{\rho I_s}{2\pi r_s}.
+\]
+The resistance between the two source spheres is
+\[
+R_s=\frac{V_s}{I_s}=\frac{\rho}{2\pi r_s}.
+\]
+The power generated by the source is
+\[
+P=I_sV_s=\frac{\rho I_s^2}{2\pi r_s}.
+\]
+
+\paragraph{(4) Resistance, potential difference and power of the detector}
+
+As shown in Fig.~33.7, $V$ is the electromotive force produced between the two detector spheres by the electric field induced by the prey, $R_m$ is the internal resistance produced by the surrounding seawater, $V_d$ is the potential difference between the two detector spheres, $R_d$ is the resistance between the two detector spheres in the predator's body, and $i_d$ is the current flowing through the closed circuit.
+
+\begin{figbox}{33.7}
+\begin{tikzpicture}[scale=0.95]
+  % circuit loop
+  \draw[thickline] (0,0) -- (0,0.85);
+  \draw[thickline] (0,1.0) -- (0,2.4) -- (1.5,2.4);
+  \draw[thickline] (2.7,2.4) -- (4.2,2.4) -- (4.2,1.3);
+  \draw[thickline] (4.2,0.7) -- (4.2,0) -- (0,0);
+  % battery
+  \draw[thickline] (-0.3,1.0) -- (0.3,1.0);
+  \draw[thickline] (-0.15,0.85) -- (0.15,0.85);
+  \node[left] at (-0.1,1.1) {$+$};
+  \node[left] at (-0.1,0.72) {$-$};
+  \node[left] at (-0.6,0.95) {$V$};
+  % R_m
+  \draw[thickline,fill=white] (1.5,2.25) rectangle (2.7,2.55);
+  \node[above] at (2.1,2.55) {$R_m$};
+  % R_d
+  \draw[thickline,fill=white] (3.95,0.7) rectangle (4.45,1.3);
+  \node[left] at (3.85,0.95) {$R_d$};
+  % current
+  \draw[force] (2.45,0.12) -- (1.65,0.12) node[midway,above] {$i_d$};
+  % V_d
+  \draw[dashedline] (4.45,1.3) -- (5.0,1.3);
+  \draw[dashedline] (4.45,0.7) -- (5.0,0.7);
+  \draw[dim] (5.0,0.7) -- (5.0,1.3) node[midway,right] {$V_d$};
+\end{tikzpicture}
+\end{figbox}
+
+By analogy with the resistance between the two source spheres, the resistance of the medium of resistivity $\rho$ between the two detector spheres (each of radius $r_d$) is
+\[
+R_m=\frac{\rho}{2\pi r_d}.
+\]
+Since $l_d$ is much smaller than $y$ (see Fig.~33.4), the electric field between the two detector spheres may be regarded as constant, and is
+\[
+E=\frac{\rho I_s l_s}{4\pi y^3}.
+\]
+Hence the electromotive force existing between the two detector spheres in the medium is
+\[
+V=El_d=\frac{\rho I_s l_s l_d}{4\pi y^3}.
+\]
+The potential difference between the two detector spheres is then
+\[
+V_d=V\frac{R_d}{R_d+R_m}
+=\frac{\rho I_s l_s l_d}{4\pi y^3}\cdot\frac{R_d}{R_d+\dfrac{\rho}{2\pi r_d}}.
+\]
+The power of the detector is
+\[
+P_d=i_dV_d=\frac{V}{R_d+R_m}V_d
+=\left(\frac{\rho I_s l_s l_d}{4\pi y^3}\right)^2
+\frac{R_d}{\left(R_d+\dfrac{\rho}{2\pi r_d}\right)^2}.
+\]
+
+\paragraph{(5) Optimum resistance and maximum power}
+
+When
+\[
+\frac{R_d}{\left(R_d+\dfrac{\rho}{2\pi r_d}\right)^2}
+=\frac{R_d}{(R_d+R_m)^2}
+\]
+reaches its maximum, the power $P_d$ reaches its maximum. Hence
+\[
+\frac{\dd}{\dd R_d}\left[\frac{R_d}{(R_d+R_m)^2}\right]
+=\frac{1\cdot(R_d+R_m)^2-R_d\cdot2(R_d+R_m)}{(R_d+R_m)^4}=0,
+\]
+so
+\[
+(R_d+R_m)-2R_d=0,
+\]
+and therefore
+\[
+R_{d,\text{opt}}=R_m=\frac{\rho}{2\pi r_d}.
+\]
+The maximum power is
+\[
+P_{d,\max}=\left(\frac{\rho I_s l_s l_d}{4\pi y^3}\right)^2\frac{\pi r_d}{2\rho}
+=\frac{\rho(I_s l_s l_d)^2r_d}{32\pi y^6}.
+\]
+
+\subsection*{Problem 3. Motion of a heavy vehicle on an inclined road}
+
+Fig.~33.8 is a simplified model of a heavy vehicle (a road roller). The vehicle has a cylinder at the front and another at the rear as wheels, and moves on a road inclined at an angle $\theta$. Each cylindrical wheel has total mass $m_2=m_3=M$ and consists of a cylindrical shell of outer radius $R_0$ and inner radius $R_i=0.8R_0$ together with 8 spokes; the total mass of the 8 spokes is $0.2M$, and the mass of the lower frame supporting the vehicle body may be neglected. The model of the cylindrical wheel is shown in Fig.~33.9. The heavy vehicle now moves along the road under the action of gravity and friction.
+
+\begin{figbox}{33.8}
+\begin{tikzpicture}[scale=0.9]
+  % road
+  \draw[thickline] (-3.33,1.81) -- (2.92,-0.46);
+  % wheels
+  \draw[thickline,fill=white] (-2.046,1.823) circle (0.45);
+  \draw[thickline,fill=white] (2.069,0.318) circle (0.45);
+  % body
+  \draw[thickline,fill=gray!10] (-1.875,2.293) -- (2.240,0.788) -- (2.394,1.211) -- (-1.721,2.716) -- cycle;
+  % labels
+  \node at (-2.046,1.823) {$m_2$};
+  \node at (2.069,0.318) {$m_3$};
+  \node at (0.260,1.752) {$m_1$};
+  \node[above left] at (-3.95,2.9) {\small rear wheel};
+  \draw[->] (-3.4,2.75) -- (-2.38,2.08);
+  \node[right] at (3.15,0.95) {\small front wheel};
+  \draw[->] (3.05,0.85) -- (2.48,0.50);
+  % L
+  \draw[dashedline] (-1.721,2.716) -- (-1.659,2.885);
+  \draw[dashedline] (2.394,1.211) -- (2.456,1.380);
+  \draw[dim] (-1.659,2.885) -- (2.456,1.380) node[midway,above] {$L$};
+  % t
+  \draw[dashedline] (2.240,0.788) -- (2.409,0.726);
+  \draw[dashedline] (2.394,1.211) -- (2.563,1.149);
+  \draw[dim] (2.409,0.726) -- (2.563,1.149) node[midway,right] {$t$};
+  % h
+  \draw[dashedline] (-2.469,1.977) -- (-2.298,2.447);
+  \draw[dim] (-2.469,1.977) -- (-2.298,2.447) node[midway,left] {$h$};
+  % 2l
+  \draw[dashedline] (-2.200,1.400) -- (-2.422,0.789);
+  \draw[dashedline] (1.935,-0.105) -- (1.712,-0.716);
+  \draw[dim] (-2.422,0.789) -- (1.712,-0.716) node[midway,below] {$2l$};
+  % angle theta
+  \draw[dashedline] (2.921,-0.463) -- (1.25,-0.463);
+  \draw (1.621,-0.463) arc (180:160:1.3);
+  \node at (1.75,-0.88) {$\theta$};
+\end{tikzpicture}
+\\[2pt]{\small Simplified model of the heavy vehicle moving on an inclined road.}
+\end{figbox}
+
+\begin{figbox}{33.9}
+\begin{tikzpicture}[scale=1.05]
+  \draw[thickline] (0,0) circle (1.2);
+  \draw[thickline] (0,0) circle (0.96);
+  \foreach \a in {0,45,...,315}{
+    \draw[thickline] (0,0) -- (\a:0.96);
+  }
+  \fill (0,0) circle (1.3pt);
+  \draw[->] (0,0) -- (-35:1.2) node[midway,below right] {$R_0$};
+  \draw[->] (0,0) -- (125:0.96) node[midway,above left] {$R_i$};
+\end{tikzpicture}
+\\[2pt]{\small Simplified model of the cylindrical wheel.}
+\end{figbox}
+
+The static and kinetic friction coefficients between the cylindrical wheels and the ground are $\mu_s$ and $\mu_k$ respectively; the mass of the vehicle body is $m_1=5M$, its length is $L$, its thickness is $t$, and the distance between the front and rear wheels is $2l$. The distance from the centre of a cylindrical wheel to the bottom of the vehicle body is $h$. The friction between the cylindrical wheels and their axles may be neglected.
+
+\paragraph{Problems}
+
+(1) Calculate the moment of inertia of each cylindrical wheel. (1.5)
+
+(2) Draw the forces acting on the vehicle body, the front wheel and the rear wheel. Write down the equations of motion for each part. (2.5 points)
+
+(3) Suppose that the vehicle starts from rest and moves freely under the action of gravity and friction. Describe all possible forms of motion of the system, and derive the corresponding acceleration of the vehicle in terms of the physical quantities given in the problem. (4.0 points)
+
+(4) Suppose that the heavy vehicle starts from rest and, after travelling a distance $d$ metres in pure rolling, enters another part of the road where all the friction coefficients drop to smaller constants $\mu_s'$ and $\mu_k'$, so that the two cylindrical wheels begin to slip. Calculate the linear velocity and the angular velocity of each cylindrical wheel after the vehicle has travelled a total distance $s$. Assume that $d$ and $s$ are both much larger than the linear dimensions of the vehicle. (2.0 points)
+
+\subsection*{Solution 3}
+
+To simplify the model, use the simplified drawing of Fig.~33.10 and set $h_1=h+0.5t$, $R_0=R$.
+
+\paragraph{(1) Moment of inertia of a cylindrical wheel}
+
+It is known that
+\[
+R_i=0.8R_0,
+\]
+the mass of the cylindrical part is
+\[
+m_{\text{cyl}}=0.8M,
+\]
+and the mass of each spoke is
+\[
+m_{\text{spoke}}=0.025M.
+\]
+The moment of inertia is
+\[
+I=\int r^2\,\dd m
+=\int_{\text{cyl}}r^2\,\dd m+\int_{\text{spoke}\,1}r^2\,\dd m+\cdots+\int_{\text{spoke}\,8}r^2\,\dd m.
+\]
+For the cylindrical part, with an areal density $\sigma$,
+\begin{align*}
+\int_{\text{cyl}}r^2\,\dd m
+&=2\pi\sigma\int_{R_i}^{R_0}r^3\,\dd r
+=0.5\pi\sigma\left(R_0^4-R_i^4\right)\\
+&=0.5m_{\text{cyl}}\left(R_0^2+R_i^2\right)=0.656MR^2.
+\end{align*}
+For each spoke, with a linear density $\lambda$,
+\begin{align*}
+\int_{\text{spoke}}r^2\,\dd m
+&=\lambda\int_0^{R_i}r^2\,\dd r
+=\frac{1}{3}\lambda R_i^3
+=\frac{1}{3}m_{\text{spoke}}R_i^2\\
+&=\frac{1}{3}(0.025M)(0.64R^2)=0.00533MR^2.
+\end{align*}
+Hence the moment of inertia of each cylindrical wheel is
+\[
+I=0.656MR^2+8\times0.00533MR^2=0.7MR^2.
+\]
+
+\begin{figbox}{33.10}
+\begin{tikzpicture}[scale=0.9]
+\begin{scope}[rotate=-20]
+  % road
+  \draw[thickline] (-1.2,0) -- (5.4,0);
+  % wheels
+  \draw[thickline,fill=white] (0,0.42) circle (0.42);
+  \draw[thickline,fill=white] (4.2,0.42) circle (0.42);
+  % body centre line
+  \draw[thickline] (-0.35,1.17) -- (4.55,1.17);
+  \draw[dashedline] (0,0.42) -- (0,1.17);
+  \draw[dashedline] (4.2,0.42) -- (4.2,1.17);
+  % L
+  \draw[dim] (-0.35,1.32) -- (4.55,1.32) node[midway,above] {$L$};
+  % h1
+  \draw[dim] (4.78,0.42) -- (4.78,1.17) node[midway,right] {$h_1$};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\paragraph{(2) Force diagrams and equations of motion}
+
+For simplicity of analysis the system is divided into three parts: the vehicle body (part 1), which may be regarded as a uniform thin plate; the rear cylindrical wheels (the two rear cylindrical wheels taken together as part 2); and the front cylindrical wheels (the two front cylindrical wheels taken together as part 3).
+
+\emph{Part 1: vehicle body.}
+
+As shown in Fig.~33.11, the equations of motion for this part are as follows. Along the incline,
+\begin{equation}
+m_1g\sin\theta-f_{12k}-f_{13k}=m_1a. \tag{1}
+\end{equation}
+Perpendicular to the incline,
+\begin{equation}
+m_1g\cos\theta=N_{12}+N_{13}. \tag{2}
+\end{equation}
+The total moment about $O$ is zero:
+\begin{equation}
+N_{12}l-N_{13}l+f_{12k}h_1+f_{13k}h_1=0. \tag{3}
+\end{equation}
+
+\begin{figbox}{33.11}
+\begin{tikzpicture}[scale=0.9]
+\begin{scope}[rotate=-20]
+  % body
+  \draw[thickline,fill=gray!10] (-2,0.08) rectangle (2,-0.08);
+  \fill (0,0) circle (1.5pt);
+  \node[above left] at (0,0.1) {$O$};
+  % application points
+  \fill (-2,-0.45) circle (1.2pt);
+  \fill (2,-0.45) circle (1.2pt);
+  % forces at the rear end
+  \draw[force] (-2,-0.45) -- (-2,0.55) node[above] {$N_{12}$};
+  \draw[force] (-2,-0.45) -- (-3.0,-0.45) node[left] {$f_{12k}$};
+  % forces at the front end
+  \draw[force] (2,-0.45) -- (2,0.55) node[above] {$N_{13}$};
+  \draw[force] (2,-0.45) -- (1.1,-0.45);
+  \node[below] at (1.55,-0.62) {$f_{13k}$};
+  % weight
+  \draw[force] (0,0) -- (0.417,-1.147);
+  \node[right] at (0.45,-1.20) {$m_1g$};
+  % h1
+  \draw[dashedline] (2,-0.45) -- (2.6,-0.45);
+  \draw[dashedline] (2,0) -- (2.6,0);
+  \draw[dim] (2.5,0) -- (2.5,-0.45) node[midway,right] {$h_1$};
+\end{scope}
+\end{tikzpicture}
+\\[2pt]{\small Forces acting on the vehicle body.}
+\end{figbox}
+
+\emph{Part 2: rear cylindrical wheels.}
+
+As shown in Fig.~33.12, the equations of motion of the rear wheel are
+\begin{equation}
+f_{21h}-f_2+Mg\sin\theta=Ma, \tag{4}
+\end{equation}
+\begin{equation}
+N_2-N_{21}-Mg\cos\theta=0. \tag{5}
+\end{equation}
+For pure rolling,
+\[
+f_2R=I\alpha_2=I\frac{a_2}{R},
+\]
+or
+\begin{equation}
+f_2=\frac{I}{R^2}a. \tag{6}
+\end{equation}
+For rolling with slipping,
+\begin{equation}
+f_2=\mu_kN_2. \tag{7}
+\end{equation}
+
+\begin{figbox}{33.12}
+\begin{tikzpicture}[scale=0.95]
+\begin{scope}[rotate=-20]
+  \draw[thickline,fill=white] (0,0) circle (0.6);
+  \fill (0,0) circle (1.2pt);
+  \draw[force] (0,0.6) -- (0,1.9);
+  \node[above] at (0,1.95) {$N_2$};
+  \draw[force] (-0.6,0) -- (-1.9,0);
+  \node[left] at (-1.95,0) {$f_2$};
+  \draw[force] (0,-0.6) -- (0,-1.55);
+  \node[below] at (0,-1.65) {$N_{21}$};
+  \draw[force] (0.6,0) -- (1.9,0);
+  \node[right] at (1.95,0) {$f_{21h}$};
+  \draw[force] (0,0) -- (0.417,-1.147);
+  \node[right] at (0.55,-1.32) {$Mg$};
+\end{scope}
+\end{tikzpicture}
+\\[2pt]{\small Forces acting on the rear cylindrical wheel.}
+\end{figbox}
+
+\emph{Part 3: front cylindrical wheels.}
+
+As shown in Fig.~33.13, the equations of motion of the front wheel are
+\begin{equation}
+f_{31h}-f_3+Mg\sin\theta=Ma, \tag{8}
+\end{equation}
+\begin{equation}
+N_3-N_{31}-Mg\cos\theta=0. \tag{9}
+\end{equation}
+For pure rolling,
+\[
+f_3R=I\alpha_3=I\frac{a_3}{R},
+\]
+or
+\begin{equation}
+f_3=\frac{I}{R^2}a. \tag{10}
+\end{equation}
+For rolling with slipping,
+\begin{equation}
+f_3=\mu_kN_3. \tag{11}
+\end{equation}
+
+\begin{figbox}{33.13}
+\begin{tikzpicture}[scale=0.95]
+\begin{scope}[rotate=-20]
+  \draw[thickline,fill=white] (0,0) circle (0.6);
+  \fill (0,0) circle (1.2pt);
+  \draw[force] (0,0.6) -- (0,1.9);
+  \node[above] at (0,1.95) {$N_3$};
+  \draw[force] (-0.6,0) -- (-1.9,0);
+  \node[left] at (-1.95,0) {$f_3$};
+  \draw[force] (0,-0.6) -- (0,-1.55);
+  \node[below] at (0,-1.65) {$N_{31}$};
+  \draw[force] (0.6,0) -- (1.9,0);
+  \node[right] at (1.95,0) {$f_{31h}$};
+  \draw[force] (0,0) -- (0.417,-1.147);
+  \node[right] at (0.55,-1.32) {$Mg$};
+\end{scope}
+\end{tikzpicture}
+\\[2pt]{\small Forces acting on the front cylindrical wheel.}
+\end{figbox}
+
+\paragraph{(3) Possible forms of motion and the corresponding accelerations}
+
+From equations (2), (5) and (9),
+\begin{align}
+m_1g\cos\theta&=N_2-m_2g\cos\theta+N_3-m_3g\cos\theta,\notag\\
+N_2+N_3&=(m_1+m_2+m_3)g\cos\theta=7Mg\cos\theta. \tag{12}
+\end{align}
+From equations (3), (5) and (8),
+\begin{align}
+(N_3-Mg\cos\theta)l-(N_2-Mg\cos\theta)l
+&=h_1(f_2+Ma-Mg\sin\theta+f_3+Ma-Mg\sin\theta),\notag\\
+N_3-N_2&=\frac{h_1}{l}(f_2+2Ma-2Mg\sin\theta+f_3). \tag{13}
+\end{align}
+
+\emph{Both front and rear wheels in pure rolling.}
+
+From equations (4) and (6),
+\begin{equation}
+f_{21h}=\left(\frac{I}{R^2}\right)a+Ma-Mg\sin\theta. \tag{14}
+\end{equation}
+From equations (8) and (10),
+\begin{equation}
+f_{31h}=\left(\frac{I}{R^2}\right)a+Ma-Mg\sin\theta. \tag{15}
+\end{equation}
+From equations (1), (14) and (15),
+\begin{align*}
+5Mg\sin\theta&-\left[\left(\frac{I}{R^2}\right)a+Ma-Mg\sin\theta\right]
+-\left[\left(\frac{I}{R^2}\right)a+Ma-Mg\sin\theta\right]=m_1a,\\
+7Mg\sin\theta&=\left(\frac{2I}{R^2}+7M\right)a.
+\end{align*}
+Hence
+\begin{equation}
+a=\frac{7Mg\sin\theta}{7M+2\dfrac{I}{R^2}}
+=\frac{7Mg\sin\theta}{7M+2\cdot\dfrac{0.7MR^2}{R^2}}
+=0.833g\sin\theta. \tag{16}
+\end{equation}
+The normal forces are
+\begin{align*}
+N_3&=\frac{7M}{2}g\cos\theta+\frac{h_1}{l}\left[\left(M+\frac{I}{R^2}\right)\times0.833g\sin\theta-Mg\sin\theta\right]\\
+&=3.5Mg\cos\theta+\frac{h_1}{l}\left[(M+0.7M)\times0.833g\sin\theta-Mg\sin\theta\right]\\
+&=3.5Mg\cos\theta+0.41\frac{h_1}{l}Mg\sin\theta,\\[4pt]
+N_2&=\frac{7M}{2}g\cos\theta-\frac{h_1}{l}\left[\left(\frac{I}{R^2}+M\right)\times0.833g\sin\theta-Mg\sin\theta\right]\\
+&=3.5Mg\cos\theta-\frac{h_1}{l}\left[(0.7M+M)\frac{7Mg\sin\theta}{2\times0.7M+7M}-Mg\sin\theta\right]\\
+&=3.5Mg\cos\theta-0.41\frac{h_1}{l}Mg\sin\theta.
+\end{align*}
+
+The condition for pure rolling is
+\begin{equation}
+f_2\le\mu_sN_2\quad\text{and}\quad f_3\le\mu_sN_3,
+\qquad
+\frac{I}{R^2}a\le\mu_sN_2\quad\text{and}\quad\frac{I}{R^2}a\le\mu_sN_3. \tag{17}
+\end{equation}
+From the left-hand inequality of (17),
+\[
+0.7M\times0.833g\sin\theta\le\mu_s\left(3.5Mg\cos\theta-0.41\frac{h_1}{l}Mg\sin\theta\right),
+\]
+so
+\[
+\tan\theta\le\frac{3.5\mu_s}{0.5831+0.41\mu_s\dfrac{h_1}{l}}.
+\]
+From the right-hand inequality of (17),
+\[
+0.7M\times0.833g\sin\theta\le\mu_s\left(3.5Mg\cos\theta+0.41\frac{h_1}{l}Mg\sin\theta\right),
+\]
+so
+\[
+\tan\theta\le\frac{3.5\mu_s}{0.5831-0.41\mu_s\dfrac{h_1}{l}}.
+\]
+The former inequality should be taken.
+
+\emph{Both front and rear wheels rolling with slipping.}
+
+From equation (4),
+\begin{equation}
+f_{21h}=Ma+\mu_kN_2-Mg\sin\theta. \tag{18}
+\end{equation}
+From equation (8),
+\begin{equation}
+f_{31h}=Ma+\mu_kN_3-Mg\sin\theta. \tag{19}
+\end{equation}
+Substituting (18) and (19) into (1),
+\begin{align*}
+5Mg\sin\theta&-(Ma+\mu_kN_2-Mg\sin\theta)-(Ma+\mu_kN_3-Mg\sin\theta)=m_1a,\\
+a&=\frac{7Mg\sin\theta-\mu_kN_2-\mu_kN_3}{7M}
+=g\sin\theta-\frac{\mu_k(N_2+N_3)}{7M}. \tag{20}
+\end{align*}
+Since
+\[
+N_3+N_2=7Mg\cos\theta,
+\]
+the above two equations give
+\[
+a=g\sin\theta-\mu_kg\cos\theta.
+\]
+The condition for both front and rear wheels to slip simultaneously is the opposite of the pure-rolling condition, namely
+\begin{equation}
+f_2>\mu_sN_2'\quad\text{and}\quad f_3>\mu_sN_3',
+\qquad
+\frac{I}{R^2}a>\mu_sN_2'\quad\text{and}\quad\frac{I}{R^2}a>\mu_sN_3', \tag{21}
+\end{equation}
+where $N_2'$ and $N_3'$ are the values calculated for pure rolling of both wheels.
+
+Finally,
+\[
+\tan\theta>\frac{3.5\mu_s}{0.5831+0.41\mu_s\dfrac{h_1}{l}},
+\]
+and
+\[
+\tan\theta>\frac{3.5\mu_s}{0.5831-0.41\mu_s\dfrac{h_1}{l}}.
+\]
+The latter inequality should be taken.
+
+\emph{One wheel in pure rolling and the other rolling with slipping.}
+
+From (17) it is seen that it must be the front wheel that rolls purely and the rear wheel that slips.
+
+From equation (4),
+\begin{equation}
+f_{21h}=m_2a+\mu_kN_2-m_2g\sin\theta. \tag{22}
+\end{equation}
+From equation (10),
+\begin{equation}
+f_{31h}=m_3a+\left(\frac{I}{R^2}\right)a-m_3g\sin\theta. \tag{23}
+\end{equation}
+From equations (1), (22) and (23),
+\begin{align*}
+m_1g\sin\theta&-(m_2a+\mu_kN_2-m_2g\sin\theta)\\
+&-\left[m_3a+\left(\frac{I}{R^2}\right)a-m_3g\sin\theta\right]=m_1a,\\
+m_1g\sin\theta+m_2g\sin\theta+m_3g\sin\theta-\mu_kN_2
+&=\left[\left(\frac{I}{R^2}\right)+m_3\right]a+m_2a+m_1a,\\
+5Mg\sin\theta+Mg\sin\theta+Mg\sin\theta-\mu_kN_2
+&=(0.7M+M)a+Ma+5Ma.
+\end{align*}
+Hence
+\begin{equation}
+a=\frac{7Mg\sin\theta-\mu_kN_2}{7.7M}
+=0.9091g\sin\theta-\frac{\mu_kN_2}{7.7M}. \tag{24}
+\end{equation}
+Also,
+\begin{align*}
+N_3-N_2&=\frac{h_1}{l}\left(\mu_kN_2+\frac{I}{R^2}a+2Ma-2Mg\sin\theta\right),\\
+N_3-N_2&=\frac{h_1}{l}\left(\mu_kN_2+2.7\times0.9091Mg\sin\theta-\frac{2.7\mu_kN_2}{7.7}-2Mg\sin\theta\right),\\
+N_3-N_2\left(1+0.65\mu_k\frac{h_1}{l}\right)&=0.4546\frac{h_1}{l}Mg\sin\theta.
+\end{align*}
+Together with
+\[
+N_3+N_2=7Mg\cos\theta,
+\]
+this gives
+\begin{align}
+N_2&=\frac{7Mg\cos\theta-0.4546\dfrac{h_1}{l}Mg\sin\theta}{2+0.65\mu_k\dfrac{h_1}{l}},\notag\\
+N_3&=7Mg\cos\theta-\frac{7Mg\cos\theta-0.4546\dfrac{h_1}{l}Mg\sin\theta}{2+0.65\mu_k\dfrac{h_1}{l}}. \tag{25}
+\end{align}
+Substituting the above results into (24) gives
+\begin{align}
+a&=0.9091g\sin\theta-\frac{\mu_kN_2}{7.7M}\notag\\
+&=0.9091g\sin\theta-\frac{\mu_k}{7.7}\cdot
+\frac{7g\cos\theta-0.4546\dfrac{h_1}{l}g\sin\theta}{2+0.65\mu_k\dfrac{h_1}{l}}. \tag{26}
+\end{align}
+The condition for this rolling-and-slipping case is
+\begin{equation}
+f_2>\mu_sN_2'\quad\text{and}\quad f_3\le\mu_sN_3',
+\qquad
+\frac{I}{R^2}a>\mu_sN_2'\quad\text{and}\quad\frac{I}{R^2}a\le\mu_sN_3', \tag{27}
+\end{equation}
+where $N_2'$ and $N_3'$ are the normal forces in the pure-rolling case.
+
+\paragraph{(4) Motion after the friction coefficients decrease}
+
+Suppose that, after rolling through a distance of $d$ metres, both the front and rear wheels begin to slip, and that the total distance travelled is $s$ metres. Let $t_1$ be the time taken to cover the distance $d$. Then
+\[
+v_1=v_0+a_1t_1=0+a_1t_1=a_1t_1,
+\]
+\[
+d=v_0t_1+\frac{1}{2}a_1t_1^2=\frac{1}{2}a_1t_1^2.
+\]
+

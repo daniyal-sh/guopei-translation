@@ -1,0 +1,1243 @@
+\begin{solution}{4.01}
+(1) $\delta$ should be the sum of the angles of deviation produced in the two refractions. From
+Fig.~4.01-1,
+\begin{equation*}
+\delta = i-r+r'-i'.
+\end{equation*}
+From the geometry,
+\begin{equation}
+r+i' = A. \tag{1}
+\end{equation}
+Hence
+\begin{equation}
+\delta = i+r'-A. \tag{2}
+\end{equation}
+By the law of refraction,
+\begin{align}
+\sin i &= n\sin r, \tag{3}\\
+\sin r' &= n\sin i'. \tag{4}
+\end{align}
+
+\begin{figbox}{4.01-1}
+\begin{tikzpicture}[scale=1.15]
+  % prism
+  \draw[thickline] (0,2.2) -- (-1.6,0) -- (1.6,0) -- cycle;
+  \node[above] at (0,2.26) {$A$};
+  % normals
+  \draw[thinline,dashed] (-1.005,1.753) -- (-0.115,1.107);
+  \draw[thinline,dashed] (0.159,1.046) -- (1.049,1.693);
+  % incident ray
+  \draw[thickline,->] (-2.90,0.647) -- (-0.56,1.43);
+  \draw[dashedline] (-0.56,1.43) -- (0.83,1.891);
+  % ray inside the prism
+  \draw[thickline,->] (-0.56,1.43) -- (0.604,1.3695);
+  % emergent ray
+  \draw[dashedline] (0.604,1.3695) -- (0.167,1.672);
+  \draw[thickline,->] (0.604,1.3695) -- (1.95,0.436);
+  % angle i at the first face
+  \draw ( -0.56,1.43) ++(144:0.42) arc (144:198.4:0.42);
+  \node at (-1.26,1.60) {$i$};
+  % angle r at the first face
+  \draw (-0.56,1.43) ++(-36:0.46) arc (-36:-3:0.46);
+  \node at (-0.20,1.13) {$r$};
+  % angle i' at the second face
+  \draw (0.604,1.3695) ++(177:0.42) arc (177:216:0.42);
+  \node at (0.42,1.05) {$i'$};
+  % angle r' at the second face
+  \draw (0.604,1.3695) ++(36:0.62) arc (36:-34.7:0.62);
+  \node at (1.52,1.70) {$r'$};
+  % deviation
+  \draw (0.167,1.672) ++(18.4:0.46) arc (18.4:-34.7:0.46);
+  \node at (0.86,1.90) {$\delta$};
+\end{tikzpicture}
+\end{figbox}
+
+From (1), $i'=A-r$; substituting this into (4) and using (3), we have
+\begin{align*}
+\sin r' &= n\sin(A-r) = n\left(\sin A\cos r-\cos A\sin r\right)\\
+&= \sin A\sqrt{n^2-\sin^2 i}-\cos A\sin i.
+\end{align*}
+Substituting this into (2), we obtain
+\begin{equation*}
+\delta = i+\arcsin\left(\sin A\sqrt{n^2-\sin^2 i}-\cos A\sin i\right)-A.
+\end{equation*}
+
+(2) For $\delta$ to be minimum we must have $\dd\delta/\dd i=0$. Differentiating (2) and setting the
+derivative equal to zero,
+\begin{equation*}
+\frac{\dd\delta}{\dd i} = 1+\frac{\dd r'}{\dd i} = 0,
+\end{equation*}
+we obtain
+\begin{equation}
+\frac{\dd r'}{\dd i} = -1. \tag{5}
+\end{equation}
+
+Differentiating (3) and (4),
+\begin{align*}
+\cos i\,\dd i &= n\cos r\,\dd r,\\
+\cos r'\,\dd r' &= n\cos i'\,\dd i'.
+\end{align*}
+Dividing the first of these by the second, and using the result $\dd r=-\dd i'$ obtained by
+differentiating (1) together with (5), we obtain
+\begin{equation*}
+\frac{\cos i}{\cos r} = \frac{\cos r'}{\cos i'}.
+\end{equation*}
+Substituting (3) and (4) into this, we obtain
+\begin{equation*}
+\frac{1-\sin^2 i}{1-\sin^2 r'} = \frac{n^2-\sin^2 i}{n^2-\sin^2 r'}.
+\end{equation*}
+Since $n\neq 1$, for the above equation to hold we must have
+\begin{equation*}
+i = r',
+\end{equation*}
+and hence
+\begin{equation*}
+r = i'.
+\end{equation*}
+It is thus seen that when the incident and emergent rays are symmetric, the deviation $\delta$
+takes an extremal value $\delta_m$. Further verification shows that $\delta$ then takes its
+minimum value, i.e. $\delta_m=\delta_{\min}$.
+
+In the case $\delta=\delta_m$, from (1) and (2),
+\begin{align*}
+r &= i' = A/2,\\
+i &= r' = (\delta_m+A)/2.
+\end{align*}
+Substituting into (3), we obtain
+\begin{equation}
+n = \frac{\sin\left[(\delta_m+A)/2\right]}{\sin(A/2)}, \tag{6}
+\end{equation}
+or
+\begin{equation*}
+\delta_m = 2\arcsin\left(n\sin\frac{A}{2}\right)-A.
+\end{equation*}
+
+\begin{commentary}
+In experiments the minimum angle of deviation can be measured precisely with ease, so equation
+(6) is often used to determine the refractive index of the material of a prism.
+
+If it is only required to prove that the deviation takes an extremal value when the light path is
+symmetric, a simpler method can also be used; it is described briefly below.
+
+Let the symmetric path be $1$--$1'$, as shown in Fig.~4.01-2. For this path the angle of
+incidence and the angle of emergence are equal ($i=r'$); let its deviation be $\delta$. Now let
+the light be incident at a slightly larger angle of incidence; then its angle of emergence is
+slightly smaller. Denote this path by $2$--$2'$ and its deviation by $\delta'\neq\delta$. By the
+principle of reversibility of the light path, the light can also travel in the reverse direction
+along the same path $2'$--$2$. This is equivalent to reducing the angle of incidence of the light
+relative to its value for the symmetric path (and increasing the angle of emergence), while the
+deviation of $2'$--$2$ remains $\delta'$. Since the deviation is the same whether the angle of
+incidence is increased or decreased relative to its value for the symmetric path, it is evident
+that the deviation of the symmetric path must be extremal.
+
+\begin{figbox}{4.01-2}
+\begin{tikzpicture}[scale=1.15]
+  \draw[thickline] (0,2.5) -- (-1.8,0) -- (1.8,0) -- cycle;
+  \node[above] at (0,2.52) {$A$};
+  % symmetric path 1-1'
+  \draw[thickline,->] (-3.10,0.91) -- (-0.792,1.40);
+  \draw[thickline,->] (-0.792,1.40) -- (0.792,1.40);
+  \draw[thickline,->] (0.792,1.40) -- (3.10,0.91);
+  % perturbed path 2-2'
+  \draw[thickline,dashed,->] (-3.10,0.60) -- (-0.922,1.22);
+  \draw[thickline,dashed,->] (-0.922,1.22) -- (0.93,1.16);
+  \draw[thickline,dashed,->] (0.93,1.16) -- (3.10,0.66);
+  % labels
+  \node[left] at (-3.16,0.56) {$2$};
+  \node[left] at (-3.16,0.88) {$1$};
+  \node[right] at (3.12,0.62) {$2'$};
+  \node[right] at (3.12,0.88) {$1'$};
+  % deviation
+  \draw[dashedline] (0.792,1.40) -- (-1.30,1.86);
+  \draw[dashedline] (0.93,1.16) -- (-1.15,1.90);
+  \node at (0.34,2.02) {$\delta$};
+\end{tikzpicture}
+\end{figbox}
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.02}
+(1) From symmetry it is known that a ray of light travelling in an isosceles prism must be parallel
+to the base, as shown in Fig.~4.02-1. Applying the law of refraction at the first and the second
+interface, we have
+\begin{align}
+\sin i_1 &= n_1\sin r_1, \tag{1}\\
+n_1\sin i_2 &= n_2\sin r_2. \tag{2}
+\end{align}
+From the geometry,
+\begin{align*}
+i_1 &= \frac{\pi}{2}-\frac{\alpha}{2},\\
+i_2 &= \frac{\pi}{2}-r_1,\\
+r_2 &= \frac{\alpha}{2}.
+\end{align*}
+Substituting these into (1) and (2), we obtain
+\begin{align*}
+\cos\frac{\alpha}{2} &= n_1\sin r_1,\\
+n_1\cos r_1 &= n_2\sin\frac{\alpha}{2}.
+\end{align*}
+From these two equations we can solve for
+\begin{equation*}
+\sin\frac{\alpha}{2} = \sqrt{\frac{n_1^2-1}{n_2^2-1}},
+\end{equation*}
+that is,
+\begin{equation}
+\alpha = 2\arcsin\sqrt{\frac{n_1^2-1}{n_2^2-1}}. \tag{3}
+\end{equation}
+
+\begin{figbox}{4.02-1}
+\begin{tikzpicture}[scale=1.1]
+  \draw[thickline] (0,3.0) -- (-2.0,0) -- (2.0,0) -- cycle;
+  \draw[dashedline] (0,3.0) -- (0,0);
+  \node[above] at (0,3.04) {$A$};
+  % apex angles
+  \node[scale=0.9] at (0.34,2.80) {$\alpha$};
+  \draw (0,3.0) ++(236.31:0.62) arc (236.31:270:0.62);
+  \node[scale=0.8] at (-0.21,2.39) {$\frac{\alpha}{2}$};
+  % incident ray
+  \draw[thickline,->] (-3.40,0.85) -- (-0.9667,1.55);
+  % normals
+  \draw[thinline,dashed] (-0.9667,1.55) ++(146.31:0.75) -- ++(326.31:1.40);
+  \draw[thinline,dashed] (0.9667,1.55) ++(33.69:0.85) -- ++(213.69:1.55);
+  % ray inside the prism
+  \draw[thickline,->] (-0.9667,1.55) -- (0.9667,1.55);
+  % emergent ray
+  \draw[thickline,->] (0.9667,1.55) -- (2.72,0.82);
+  % angles
+  \draw (-0.9667,1.55) ++(146.31:0.60) arc (146.31:196.05:0.60);
+  \node at (-1.70,1.72) {$i_1$};
+  \draw (-0.9667,1.55) ++(-33.69:0.50) arc (-33.69:0:0.50);
+  \node at (-0.52,1.22) {$r_1$};
+  \draw (0.9667,1.55) ++(180:0.50) arc (180:213.69:0.50);
+  \node at (0.52,1.20) {$i_2$};
+  \draw (0.9667,1.55) ++(33.69:0.80) arc (33.69:-22.6:0.80);
+  \node at (1.94,1.64) {$r_2$};
+\end{tikzpicture}
+\end{figbox}
+
+(2) From the table, for the $F$ line,
+\begin{equation*}
+n_1^F = 1.515\,65,\qquad n_2^F = 1.774\,75.
+\end{equation*}
+Substituting into (3), we obtain
+\begin{equation*}
+\alpha = 2\arcsin\sqrt{\frac{1.515\,65^2-1}{1.774\,75^2-1}} = 101.94\degree.
+\end{equation*}
+For the $C$ line and the $G$ line,
+\begin{align*}
+n_1^C &= 1.507\,60,\qquad n_2^C = 1.747\,32,\\
+n_1^G &= 1.520\,16,\qquad n_2^G = 1.792\,05.
+\end{align*}
+The angles of refraction are calculated one after another and listed in the table below. The last
+column gives the deviation $\delta$ of the emergent light with respect to the incident light, taken
+positive in the anticlockwise sense.
+\end{solution}
+
+\begin{solution}{4.11}
+(1) Consider an arbitrary ray $PA$ issuing from $P$, and let the angle it makes with the principal
+axis be $\theta$, as shown in Fig.~4.11-1. Let the angle of incidence of the ray at the spherical
+surface be $i$ and the angle of refraction be $r$. By the law of refraction,
+\begin{equation}
+\frac{\sin i}{\sin r} = \frac{1}{n}. \tag{1}
+\end{equation}
+
+\begin{figbox}{4.11-1}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-2.9,0) -- (2.1,0);
+  \draw[thickline] (0,0) circle (1.6);
+  \fill (0,0) circle (1.3pt) node[below] {$C$};
+  \fill (-1.0667,0) circle (1.3pt) node[below] {$P$};
+  \fill (-2.4,0) circle (1.2pt) node[below] {$Q$};
+  % incident ray inside the sphere
+  \draw[thickline,->] (-1.0667,0) -- (0.666,1.455);
+  % refracted ray
+  \draw[thickline,->] (0.666,1.455) -- (1.90,2.043);
+  % backward extension of the refracted ray
+  \draw[dashedline] (0.666,1.455) -- (-2.40,0);
+  % radius (normal) at A
+  \draw[dashedline] (0.666,1.455) -- (0,0);
+  \fill (0.666,1.455) circle (1.3pt) node[above left,inner sep=1pt] {$A$};
+  % theta at P
+  \draw (-1.0667,0) ++(0:0.50) arc (0:40:0.50);
+  \node at (-0.50,0.22) {$\theta$};
+  % i and r at A
+  \draw (0.666,1.455) ++(220:0.45) arc (220:245.4:0.45);
+  \node at (0.28,0.96) {$i$};
+  \draw (0.666,1.455) ++(65.4:0.62) arc (65.4:25.4:0.62);
+  \node at (1.28,2.05) {$r$};
+  % media
+  \node at (0.32,0.52) {$n$};
+  \node at (1.18,1.70) {$1$};
+  % dimensions
+  \draw[dim] (0,-0.30) -- (1.6,-0.30) node[midway,below] {$R$};
+  \draw[dim] (-2.4,-0.75) -- (0,-0.75) node[midway,below] {$nR$};
+\end{tikzpicture}
+\end{figbox}
+
+In $\triangle PCA$, applying the sine rule, we have
+\begin{equation*}
+\frac{\sin i}{R/n} = \frac{\sin\theta}{R},
+\end{equation*}
+or
+\begin{equation}
+\frac{\sin i}{\sin\theta} = \frac{1}{n}. \tag{2}
+\end{equation}
+
+Comparing (1) and (2), in the case where $\theta$ is an acute angle ($r$ must be acute), we have
+\begin{equation*}
+\theta = r.
+\end{equation*}
+But $r=\angle QAC$, where $Q$ is the point of intersection of the backward extension of the
+refracted ray with the principal axis; hence $\triangle QAC\sim\triangle APC$, and
+$\overline{QC}/R=R/(R/n)=n$, i.e.
+\begin{equation*}
+\overline{QC} = nR,
+\end{equation*}
+independently of the angle $\theta$, which was to be proved.
+
+(2) The geometrical configuration of the two lenses is shown in Fig.~4.11-2.
+
+\begin{figbox}{4.11-2}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (-6.6,0) -- (2.9,0);
+  % objective lens L1
+  \draw[thickline] (-3.00,0) circle (0.60);
+  \node at (-2.78,0.16) {$n_1$};
+  \draw[thinline,dashed] (-3.00,0) -- (-3.00,0.60);
+  \node at (-3.42,0.56) {$R_1$};
+  \fill (-3.00,0) circle (1.2pt) node[below] {$C_1$};
+  \node[above] at (-3.00,0.66) {$L_1$};
+  \fill (-2.40,0) circle (1.0pt) node[above right,inner sep=1pt] {$O_1$};
+  % second lens L2
+  \draw[thickline] (-4.60,0) ++(10.8:4.00) arc (10.8:-10.8:4.00);
+  \draw[thickline] (-0.90,0) ++(56.4:0.90) arc (56.4:-56.4:0.90);
+  \draw[thickline] (-0.67,0.75) -- (-0.40,0.75);
+  \draw[thickline] (-0.67,-0.75) -- (-0.40,-0.75);
+  \node[above] at (-1.95,0.82) {$L_2$};
+  \node at (-0.36,0.60) {$n_2$};
+  \fill (-0.90,0) circle (1.2pt) node[below,inner sep=2pt] {$C_3$};
+  \fill (-0.60,0) circle (1.0pt) node[below right,inner sep=1pt] {$O_2$};
+  \fill (0,0) circle (1.0pt) node[below right,inner sep=1pt] {$O_3$};
+  % object and images
+  \fill (-6.00,0) circle (1.3pt) node[below] {$S$};
+  \fill (-4.60,0) circle (1.3pt) node[below] {$S'$};
+  \fill (2.40,0) circle (1.3pt) node[below] {$S''$};
+  % aperture angle at S
+  \draw[thickline] (-6.00,0) -- (-3.58,0.42);
+  \draw[thickline] (-6.00,0) -- (-3.58,-0.42);
+  \draw (-6.00,0) ++(0:1.10) arc (0:10.4:1.10);
+  \node at (-4.92,0.42) {$\alpha$};
+  % dimensions
+  \draw[dim] (-2.40,-0.95) -- (-0.60,-0.95) node[midway,below] {$d_1$};
+  \draw[dim] (-0.60,-1.30) -- (0,-1.30) node[midway,below] {$d_2$};
+  \node at (-1.30,0.72) {$R_2$};
+  \node at (-0.12,0.95) {$R_3$};
+\end{tikzpicture}
+\end{figbox}
+
+(i) Let $C_1$ be the centre of the sphere of the objective lens ($L_1$). The light emitted from $S$
+(the object) is refracted by $L_1$ and forms an image at $S'$. From part (1) of this problem,
+$\overline{S'C_1}=n_1R_1$, so
+\begin{equation*}
+\overline{S'O_1} = n_1R_1+R_1 = (n_1+1)R_1.
+\end{equation*}
+The light emitted from $S'$ should enter the front spherical surface of the second lens ($L_2$)
+without refraction. Hence $S'$ is the centre of the front spherical surface, and the radius of the
+front spherical surface is
+\begin{equation*}
+R_2 = \overline{S'O_2} = \overline{S'O_1}+d_1 = (n_1+1)R_1+d_1.
+\end{equation*}
+In order that $S'$ be located at the aplanatic point of $L_2$, and that the central thickness of
+$L_2$ be $d_2$, we must have
+\begin{equation*}
+\overline{S'O_3} = R_3+\frac{R_3}{n_2}
+\end{equation*}
+and
+\begin{equation*}
+\overline{S'O_3} = R_2+d_2 = (n_1+1)R_1+d_1+d_2.
+\end{equation*}
+From these two equations we can solve for the radius of the back spherical surface:
+\begin{equation*}
+R_3 = \frac{(n_1+1)R_1+d_1+d_2}{1+\dfrac{1}{n_2}}.
+\end{equation*}
+In Fig.~4.11-2, $S''$ is the image of $S'$ formed by $L_2$ [$\overline{S''O_3}=(n_2+1)R_3$], and
+$C_3$ is the centre of the back spherical surface.
+
+(ii) The aperture angle $\alpha$ of the light emitted from $S$ satisfies
+\begin{equation*}
+\tan\alpha = \frac{R_1}{R_1/n_1} = n_1.
+\end{equation*}
+Let the aperture angle of the image $S'$ formed by $S$ through $L_1$ be $\beta_1$; then
+\begin{equation*}
+\tan\beta_1 = \frac{R_1}{n_1R_1} = \frac{1}{n_1}.
+\end{equation*}
+$\beta_1$ is also the aperture angle of the object point of $L_2$, and $\beta$ is the aperture angle
+of the final image $S''$. From Fig.~4.11-2 it is easily seen that
+\begin{equation*}
+\tan\beta = \frac{\overline{S'A}\sin\beta_1}{\overline{S'A}\cos\beta_1+\overline{S'S''}}
+\approx \frac{R_2\sin\beta_1}{R_2\cos\beta_1+\overline{S'S''}}
+\qquad\text{(the edge thickness of the lens being neglected)}.
+\end{equation*}
+Moreover,
+\begin{equation*}
+\overline{S'S''} = n_2R_3-\frac{1}{n_2}R_3,
+\end{equation*}
+therefore
+\begin{equation*}
+\tan\beta = \frac{R_2\sin\beta_1}{R_2\cos\beta_1+\left(n_2-\dfrac{1}{n_2}\right)R_3}.
+\end{equation*}
+
+(iii) $k = k_1\cdot k_2 = \dfrac{n_1R_1}{R_1/n_1}\cdot\dfrac{n_2R_2}{R_2/n_2} = n_1^2\cdot n_2^2$.
+
+(iv) Substituting the data, we obtain $R_2=9.5\unitv{mm}$, $R_3=6.77\unitv{mm}$,
+$\beta=20.0\degree$, $k=5.76$.
+
+\begin{commentary}
+This problem is an application of the concept of aplanatic points to the microscope objective. Such
+an objective is called an oil-immersion objective and is one of the main types of microscope
+objective.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.12}
+(1) From Fig.~4.12-1, the deviation of the light emitted from $S$ after two refractions by the
+prism is
+\begin{equation}
+\delta = i-r+r'-i' = i+r'-(r+i'). \tag{1}
+\end{equation}
+But
+\begin{equation}
+r+i' = \alpha. \tag{2}
+\end{equation}
+From the statement of the problem, $i$ is a small angle, hence $r$, $i'$ and $r'$ are also small
+angles; therefore, by the law of refraction,
+\begin{equation*}
+i = nr,\qquad r' = ni'.
+\end{equation*}
+Substituting these into (1) and using (2), we obtain
+\begin{align}
+\delta &= nr+ni'-(r+i')\notag\\
+&= (n-1)\alpha. \tag{3}
+\end{align}
+
+\begin{figbox}{4.12-1}
+\begin{tikzpicture}[scale=1.45]
+  \draw[thickline] (0,3.0) -- (0,-0.8) -- (0.85,-0.8) -- cycle;
+  \node[left] at (0,3.0) {$A$};
+  \draw (0,3.0) ++(270:0.55) arc (270:257.4:0.55);
+  \node at (0.30,2.62) {$\alpha$};
+  % normals
+  \draw[thinline,dashed] (-0.55,1.35) -- (0.55,1.35);
+  \draw[thinline,dashed] (0.334,1.509) ++(12.6:0.55) -- ++(192.6:1.10);
+  % incident ray
+  \draw[thickline,->] (-1.60,0.00) -- (0,1.35);
+  \draw[dashedline] (0,1.35) -- (0.48,1.75);
+  % ray inside the prism
+  \draw[thickline,->] (0,1.35) -- (0.334,1.509);
+  % emergent ray
+  \draw[thickline,->] (0.334,1.509) -- (1.95,1.315);
+  % angles at the first face
+  \draw (0,1.35) ++(180:0.42) arc (180:220.2:0.42);
+  \node at (-0.72,1.16) {$i$};
+  \draw (0,1.35) ++(0:0.55) arc (0:25.4:0.55);
+  \node at (0.30,1.20) {$r$};
+  % angles at the second face
+  \draw (0.334,1.509) ++(192.6:0.34) arc (192.6:205.4:0.34);
+  \node at (0.02,1.28) {$i'$};
+  \draw (0.334,1.509) ++(12.6:0.62) arc (12.6:-6.8:0.62);
+  \node at (1.02,1.18) {$r'$};
+  % deviation
+  \node at (0.66,1.74) {$\delta$};
+\end{tikzpicture}
+\end{figbox}
+
+Since $\delta$ is independent of the angle of incidence, the backward extensions $S_1A$ and $S_1B$ of
+any two rays $SA$ and $SB$ emitted from $S$ with an angle $\Delta\theta$ between them, after
+refraction through the upper half of the prism, still make the angle $\Delta\theta$ (see
+Fig.~4.12-2), and the arc which they subtend is the same arc $AB$; hence the distance of $S_1$
+(i.e. the image of $S$) from the prism is also $a$. In the same way, the image $S_2$ formed by $S$
+through refraction at the lower half of the prism is also at a distance $a$ from the prism. Thus
+(using (3)) the distance between the two coherent sources is
+\begin{equation*}
+\overline{S_1S_2} = 2a\delta = 2a(n-1)\alpha.
+\end{equation*}
+
+\begin{figbox}{4.12-2}
+\begin{tikzpicture}[scale=1.1]
+  % biprism
+  \draw[thickline] (0,1.4) -- (-0.28,0) -- (0.28,0) -- cycle;
+  \draw[thickline] (0,-1.4) -- (-0.28,0) -- (0.28,0) -- cycle;
+  % screen
+  \draw[thickline] (3.6,-1.5) -- (3.6,1.5);
+  % axis
+  \draw[dashedline] (-4.0,0) -- (4.0,0);
+  % object and virtual images
+  \fill (-2.90,0) circle (1.3pt) node[below] {$S$};
+  \fill (-3.65,0.50) circle (1.2pt) node[above left,inner sep=1pt] {$S_1$};
+  \fill (-3.65,-0.50) circle (1.2pt) node[below left,inner sep=1pt] {$S_2$};
+  % rays from S through the upper half prism
+  \draw[thickline] (-2.90,0) -- (-0.15,0.62);
+  \draw[thickline] (-0.15,0.62) -- (3.6,0.30);
+  \draw[thickline] (-2.90,0) -- (-0.15,0.12);
+  \draw[thickline] (-0.15,0.12) -- (3.6,0.30);
+  \fill (-0.15,0.62) circle (1.1pt) node[above right,inner sep=1pt] {$A$};
+  \fill (-0.15,0.12) circle (1.1pt) node[below right,inner sep=1pt] {$B$};
+  % rays from S through the lower half prism
+  \draw[thickline] (-2.90,0) -- (-0.15,-0.62);
+  \draw[thickline] (-0.15,-0.62) -- (3.6,0.30);
+  \draw[thickline] (-2.90,0) -- (-0.15,-0.12);
+  \draw[thickline] (-0.15,-0.12) -- (3.6,0.30);
+  % backward extensions
+  \draw[dashedline] (-0.15,0.62) -- (-3.65,0.50);
+  \draw[dashedline] (-0.15,0.12) -- (-3.65,0.50);
+  \draw[dashedline] (-0.15,-0.62) -- (-3.65,-0.50);
+  \draw[dashedline] (-0.15,-0.12) -- (-3.65,-0.50);
+  % observation point
+  \fill (3.6,0.30) circle (1.3pt) node[above right,inner sep=1pt] {$P$};
+  \fill (3.6,0) circle (1.2pt) node[below right,inner sep=1pt] {$O$};
+  \draw[dim] (3.42,0) -- (3.42,0.30) node[midway,left] {$x$};
+  % aperture angle
+  \draw (-2.90,0) ++(2.5:1.20) arc (2.5:12.7:1.20);
+  \node at (-2.05,0.58) {$\Delta\theta$};
+  % distances
+  \draw[dim] (-2.90,-1.75) -- (0,-1.75) node[midway,below] {$a$};
+  \draw[dim] (0,-1.75) -- (3.6,-1.75) node[midway,below] {$b$};
+\end{tikzpicture}
+\end{figbox}
+
+It is not difficult to see that the optical path difference from $S_1$ and $S_2$ to the point $P$
+(the distance of $P$ from the central point $O$ being $x$) is
+\begin{equation}
+\Delta = \overline{S_1S_2}\cdot\frac{x}{a+b} = \frac{2a(n-1)\alpha x}{a+b}. \tag{4}
+\end{equation}
+Setting $\Delta=m\lambda$, we obtain the distance $x$ of the $m$-th bright fringe:
+\begin{equation*}
+x = \frac{m\lambda(a+b)}{2a(n-1)\alpha}.
+\end{equation*}
+
+(2) When $S$ is moved up to $S'$, imagine that a thin plate of thickness $d$ is cut away from the
+biprism along the dashed line; then the zero-order fringe would move up to $O'$ (Fig.~4.12-3). The
+presence of the thin plate of thickness $d$ produces for $S'$ an additional optical path difference
+$(n-1)d$ in the lower half of the prism, so that the zero-order fringe moves down from $O'$ by a
+distance $y'$, and [cf. (4)]
+\begin{equation*}
+\frac{2a(n-1)\alpha y'}{a+b} = (n-1)d.
+\end{equation*}
+From the geometrical relation $d=(h/\cos\alpha)\cdot\sin 2\alpha\approx 2h\alpha$; substituting this
+into the above equation gives $y'=(a+b)h/a$. Hence the upward displacement of $S$ to $S'$ finally
+makes the zero-order fringe move down from the point $O$ by a distance
+\begin{equation*}
+y = y'-h = \frac{b}{a}h.
+\end{equation*}
+
+\begin{figbox}{4.12-3}
+\begin{tikzpicture}[scale=0.95]
+  \draw[thickline] (0,1.3) -- (-0.28,0) -- (0.28,0) -- cycle;
+  \draw[thickline] (0,-1.3) -- (-0.28,0) -- (0.28,0) -- cycle;
+  \fill[black!30] (-0.30,-0.09) rectangle (0.30,0.09);
+  \draw[thickline] (-0.30,-0.09) rectangle (0.30,0.09);
+  \node at (-0.52,0.16) {$d$};
+  \draw[thickline] (2.30,-1.0) -- (2.30,1.20);
+  \draw[dashedline] (-3.20,0.45) -- (2.30,0.45);
+  \draw[dashedline] (-3.20,0) -- (2.30,0);
+  \fill (-2.55,0.45) circle (1.3pt) node[above] {$S'$};
+  \fill (-2.55,0) circle (1.3pt) node[below] {$S$};
+  \fill (2.30,0.45) circle (1.2pt) node[right] {$O'$};
+  \fill (2.30,0) circle (1.2pt) node[right] {$O$};
+  \draw[dim] (-2.25,0) -- (-2.25,0.45) node[midway,right] {$h$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+There are three keys to the solution of this problem. First, to prove that the light emitted from
+the source $S$ is deviated through a small angle $(n-1)\alpha$ after refraction by the prism;
+second, to show that the image of $S$ formed by refraction through the prism is still at a distance
+$a$ from the prism, and thereby to obtain the distance between the two coherent sources; finally,
+to find the distance through which the zero-order fringe moves down when the source moves up, by
+imagining a thin plate cut away from the prism.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.13}
+(1) From the conditions of the problem the geometrical light path is as shown in Fig. 4.13(a).
+On the screen $M$ one obtains the interference fringes of the parallel beam 1, formed from the
+light of $S$ after refraction by $L_1$, and of the divergent beam 2, emitted from the image
+point $S'$ after refraction and imaging by $L_2$; interference occurs only in the region above
+the optical axis, so the fringes are concentric semicircles centred on the optical axis, as
+shown on the right of Fig. 4.13(a). At the centre $O$ the optical path difference of the two
+beams is originally zero, but the converging beam 2 undergoes a phase jump of $\pi$ when it
+passes through its focal point $S'$, so that the optical path difference of the two beams at
+the centre $O$ is $\lambda/2$; the centre is therefore dark.
+
+The occurrence of a $\pi$ phase jump when a converging beam passes through its focal point can
+be explained as follows. For the divergent wave emitted from the point $S$ (Fig. 4.13(b)), in
+order to obtain by Fresnel's half-period-zone method the correct phase of the wave disturbance
+arriving at $P$, one must take the phase of every secondary wavelet emitted from the wavefront
+$\Sigma$ to be ahead of the phase of the wave arriving at $\Sigma$ from $S$ by $\pi/2$. For the
+converging wave $\Sigma'$ focused at $S'$, when the observation point $P$ lies between $\Sigma'$
+and $S'$ (Fig. 4.13(c)(1)), it is enough to assume that the phase of the secondary wavelets on
+$\Sigma'$ is ahead of the phase of the wave on $\Sigma'$ by $\pi/2$; the correct phase of the
+wave disturbance at $P$ is still obtained, because the distances from the half-period zones on
+$\Sigma'$ to $P$ still increase gradually. But when $P$ lies outside $\Sigma'$ and $S'$
+(Fig. 4.13(c)(2)), since, counting from the first half-period zone, the distances from the
+successive half-period zones to $P$ decrease one after another, their phases advance one after
+another; adding the $\pi/2$ by which the wavelets on $\Sigma'$ were originally ahead, the phase
+of the wave disturbance at $P$ will differ by $\pi$ from the phase obtained from $\Sigma'$
+together with the optical path. This is the origin of the $\pi$ phase jump.
+
+(2) The two beams have equal optical paths at $S'$. At a point $P$ of the screen $M$ at a
+distance $x$ from $O$, beam 1 has in addition traversed the optical path $S'O$, while beam 2 has
+traversed $S'P$. Taking further into account the $\pi$ phase jump of beam 2 at $S'$, the optical
+path difference of the two beams at $P$ is
+\begin{equation*}
+\Delta = S'P + \frac{\lambda}{2} - S'O = \sqrt{f^2+x^2} + \frac{\lambda}{2} - f .
+\end{equation*}
+Putting $\Delta = m\lambda$, we obtain the position of the $m$-th bright fringe:
+\begin{equation*}
+x = \sqrt{\left(m-\frac{1}{2}\right)^2\lambda^2 + 2\left(m-\frac{1}{2}\right)\lambda f } .
+\end{equation*}
+It is seen that the interference fringes become denser towards the outside.
+
+\begin{commentary}
+The $\pi$ phase jump undergone by light on passing through a focus is easily overlooked, and
+special attention should be paid to it.
+\end{commentary}
+
+\begin{figbox}{4.13(a)}
+\begin{tikzpicture}[scale=1.0]
+  % optical axis
+  \draw[axis] (-0.2,0) -- (10.4,0);
+  \fill (0.4,0) circle (1.2pt);
+  \node[below left] at (0.4,0) {$S$};
+  % lens L1 (above the axis)
+  \draw[thickline] (3.8,1.80) .. controls (4.12,1.42) and (4.12,0.58) .. (3.8,0.20);
+  \draw[thickline] (3.8,1.80) .. controls (3.48,1.42) and (3.48,0.58) .. (3.8,0.20);
+  \node[above] at (3.8,1.80) {$L_1$};
+  % lens L2 (below the axis)
+  \draw[thickline] (6.2,-1.80) .. controls (6.52,-1.42) and (6.52,-0.58) .. (6.2,-0.20);
+  \draw[thickline] (6.2,-1.80) .. controls (5.88,-1.42) and (5.88,-0.58) .. (6.2,-0.20);
+  \node[below] at (6.2,-1.80) {$L_2$};
+  % beam 1
+  \draw[thickline] (0.4,0) -- (3.80,1.55);
+  \draw[thickline] (3.80,1.55) -- (9.8,1.55);
+  \node at (7.6,1.78) {1};
+  % beam 2
+  \draw[thickline] (0.4,0) -- (6.20,-1.55);
+  \draw[thickline] (6.20,-1.55) -- (8.2,0);
+  \fill[black!8] (8.2,0) -- (9.8,1.70) -- (9.8,-1.70) -- cycle;
+  \draw[thickline] (8.2,0) -- (9.8,1.70);
+  \draw[thickline] (8.2,0) -- (9.8,-1.70);
+  \node at (9.25,-1.05) {2};
+  \fill (8.2,0) circle (1.2pt);
+  \node[below] at (8.2,-0.06) {$S'$};
+  % screen
+  \draw[thickline] (9.8,-2.0) -- (9.8,2.2);
+  \node[above] at (9.8,2.2) {$M$};
+  \fill (9.8,0) circle (1.1pt);
+  \node[below left] at (9.8,-0.02) {$O$};
+  \fill (9.8,2.0) circle (1.1pt);
+  \node[right] at (9.8,2.0) {$A$};
+  \fill (9.8,0.80) circle (1.1pt);
+  \node[right] at (9.8,0.82) {$P$};
+  % fringes on the screen
+  \foreach \r in {0.22,0.38,0.54,0.70}
+    \draw[thickline] (9.8,0) ++(-90:\r) arc (-90:90:\r);
+  % distances
+  \draw[dim] (0.4,-2.45) -- (3.8,-2.45) node[midway,below] {$f$};
+  \draw[dim] (6.2,-2.45) -- (9.8,-2.45) node[midway,below] {$2f$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.13(b)}
+\begin{tikzpicture}[scale=0.85]
+  \fill (0,0) circle (1.2pt);
+  \node[left] at (0,0) {$S$};
+  \draw[thickline] (2.6,-1.60) arc (-31.6:31.6:3.0);
+  \node[above] at (2.62,1.62) {$\Sigma$};
+  \fill (3.0,0) circle (1.1pt);
+  \node[left,fill=white,inner sep=1pt] at (2.92,0) {$A$};
+  \draw[thickline] (0,0) -- (2.6,1.55);
+  \draw[thickline] (0,0) -- (2.6,-1.55);
+  \draw[thickline] (2.6,1.55) -- (5.5,0);
+  \draw[thickline] (2.6,-1.55) -- (5.5,0);
+  \fill (5.5,0) circle (1.1pt);
+  \node[right] at (5.5,0) {$P$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.13(c)}
+\begin{tikzpicture}[scale=0.8]
+  % panel (1)
+  \begin{scope}
+    \fill (5.4,0) circle (1.1pt);
+    \node[right,fill=white,inner sep=1pt] at (5.4,0) {$S'$};
+    \draw[thickline] (5.4,0) ++(140:3.5) arc (140:220:3.5);
+    \node[above] at (2.75,2.30) {$\Sigma'$};
+    \fill (1.9,0) circle (1.1pt);
+    \node[below left,fill=white,inner sep=1pt] at (1.9,0) {$A$};
+    \fill (3.4,0) circle (1.1pt);
+    \node[above] at (3.4,0.05) {$P$};
+    \draw[thickline] (2.72,2.25) -- (5.4,0);
+    \draw[thickline] (2.72,-2.25) -- (5.4,0);
+    \node at (2.7,-2.6) {(1)};
+  \end{scope}
+  % panel (2)
+  \begin{scope}[xshift=7.0cm]
+    \fill (5.4,0) circle (1.1pt);
+    \node[below,fill=white,inner sep=1pt] at (5.4,0) {$S'$};
+    \draw[thickline] (5.4,0) ++(140:3.5) arc (140:220:3.5);
+    \node[above] at (2.75,2.30) {$\Sigma'$};
+    \fill (1.9,0) circle (1.1pt);
+    \node[below left,fill=white,inner sep=1pt] at (1.9,0) {$A$};
+    \fill (6.6,0) circle (1.1pt);
+    \node[above,fill=white,inner sep=1pt] at (6.6,0.05) {$P$};
+    \draw[thickline] (2.72,2.25) -- (7.0,-1.34);
+    \draw[thickline] (2.72,-2.25) -- (7.0,1.34);
+    \node at (4.3,-2.6) {(2)};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+\end{solution}
+
+\begin{solution}{4.14}
+(1) If the amplitudes of the incident, reflected and transmitted waves are as shown in
+Fig. 4.14(a)(1) (the amplitude of the incident wave has already been set equal to 1), then
+time-reversal invariance requires that the situation of Fig. 4.14(a)(2) is also possible. The
+superposition principle, on the other hand, allows the situation of Fig. 4.14(a)(2) to be
+regarded as the sum of Fig. 4.14(a)(3) and Fig. 4.14(a)(4). Making the incident and emergent
+waves of this sum equal to the incident and emergent waves of Fig. 4.14(a)(2) gives the Stokes
+relations
+\begin{align*}
+r^2 + tt' &= 1,\\
+r' + r &= 0.
+\end{align*}
+
+(2) Let $A$ denote the amplitude of the incident wave I, and let $r_1$, $r_1'$, $t$, $t'$
+denote respectively the (amplitude) reflection and transmission coefficients at the first
+interface, while $r_2$ denotes the reflection coefficient at the second interface. Then the
+amplitudes of the reflected waves $R_0, R_1, R_2, R_3, \ldots$ (Fig. 4.14(b); for clarity the
+incidence is drawn obliquely) are as given in the following table:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{cccccc}
+$R_0$ & $R_1$ & $R_2$ & $R_3$ & $R_4$ & $\cdots$\\ \hline
+$Ar_1$ & $Att'r_2$ & $Att'r_2r_1'r_2$ & $Att'r_2(r_1'r_2)^2$ & $Att'r_2(r_1'r_2)^3$ & $\cdots$
+\end{tabular}
+\end{center}
+
+Taking into account the phase changes of the various reflected waves, the total amplitude of the
+wave reflected into vacuum is
+\begin{align*}
+A_R &= Ar_1 + Att'r_2\ee^{-2\ii kd}\left[1 + r_1'r_2\ee^{-2\ii kd}
+      + (r_1'r_2)^2\ee^{-4\ii kd} + \cdots\right]\\
+    &= Ar_1 + \frac{Att'r_2\ee^{-2\ii kd}}{1 - r_1'r_2\ee^{-2\ii kd}}\\
+    &= \frac{A\left(r_1 - r_1r_1'r_2\ee^{-2\ii kd} + tt'r_2\ee^{-2\ii kd}\right)}
+            {1 - r_1'r_2\ee^{-2\ii kd}}\\
+    &= \frac{A\left[r_1 + r_2\ee^{-2\ii kd}(tt' - r_1r_1')\right]}
+            {1 - r_1'r_2\ee^{-2\ii kd}} .
+\end{align*}
+
+\begin{figbox}{4.14(a)}
+\begin{tikzpicture}[scale=0.92]
+  \foreach \dx/\lab in {0/(1), 3.0/(2), 6.0/(3), 9.0/(4)}{
+    \begin{scope}[xshift=\dx cm]
+      \draw[thickline] (-1.0,0) -- (1.0,0);
+      \node[left] at (-1.0,0.30) {1};
+      \node[left] at (-1.0,-0.30) {2};
+      \node at (0,-1.75) {\lab};
+    \end{scope}
+  }
+  % panel (1)
+  \begin{scope}
+    \draw[force] (0,1.15) -- (0,0.05);
+    \node[above] at (0,1.18) {$1$};
+    \draw[force] (0.55,0.05) -- (0.55,1.15);
+    \node[above] at (0.55,1.18) {$r$};
+    \draw[force] (-0.55,-0.05) -- (-0.55,-1.15);
+    \node[below] at (-0.55,-1.18) {$t$};
+  \end{scope}
+  % panel (2)
+  \begin{scope}[xshift=3.0cm]
+    \draw[force] (0.55,0.05) -- (0.55,1.15);
+    \node[above] at (0.55,1.18) {$1$};
+    \draw[force] (0,1.15) -- (0,0.05);
+    \node[above] at (0,1.18) {$r$};
+    \draw[force] (-0.55,-0.05) -- (-0.55,-1.15);
+    \node[below] at (-0.55,-1.18) {$t$};
+  \end{scope}
+  % panel (3)
+  \begin{scope}[xshift=6.0cm]
+    \draw[force] (0,-1.15) -- (0,-0.05);
+    \node[below] at (0,-1.18) {$t$};
+    \draw[force] (0.55,0.05) -- (0.55,1.15);
+    \node[above] at (0.55,1.18) {$tt'$};
+    \draw[force] (-0.55,-0.05) -- (-0.55,-1.15);
+    \node[below] at (-0.55,-1.18) {$tr'$};
+  \end{scope}
+  % panel (4)
+  \begin{scope}[xshift=9.0cm]
+    \draw[force] (0,1.15) -- (0,0.05);
+    \node[above] at (0,1.18) {$r$};
+    \draw[force] (0.55,0.05) -- (0.55,1.15);
+    \node[above] at (0.55,1.18) {$r^2$};
+    \draw[force] (-0.55,-0.05) -- (-0.55,-1.15);
+    \node[below] at (-0.55,-1.18) {$rt$};
+  \end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.14(b)}
+\begin{tikzpicture}[scale=0.9]
+  % media
+  \draw[thickline] (0,1.5) -- (9.9,1.5);
+  \draw[thickline] (0,0.5) -- (9.9,0.5);
+  \node at (9.1,1.72) {$n=1$};
+  \node at (0.8,1.0) {$n_1$};
+  \node at (9.2,0.05) {$n_2$};
+  % thickness
+  \draw[dim] (-0.45,0.5) -- (-0.45,1.5) node[midway,left] {$d$};
+  % incident ray
+  \draw[force] (0.7,3.05) -- (2.0,1.5);
+  \node[left] at (0.85,2.85) {I};
+  % multiple reflections
+  \draw[force] (2.0,1.5) -- (3.05,3.05);
+  \node[above] at (2.52,2.86) {$R_0$};
+  \draw[thickline] (2.0,1.5) -- (2.8,0.5);
+  \draw[thickline] (2.8,0.5) -- (3.6,1.5);
+  \draw[force] (3.6,1.5) -- (4.65,3.05);
+  \node[above] at (4.12,2.86) {$R_1$};
+  \draw[thickline] (3.6,1.5) -- (4.4,0.5);
+  \draw[thickline] (4.4,0.5) -- (5.2,1.5);
+  \draw[force] (5.2,1.5) -- (6.25,3.05);
+  \node[above] at (5.72,2.86) {$R_2$};
+  \draw[thickline] (5.2,1.5) -- (6.0,0.5);
+  \draw[thickline] (6.0,0.5) -- (6.8,1.5);
+  \draw[force] (6.8,1.5) -- (7.85,3.05);
+  \node[above] at (7.32,2.86) {$R_3$};
+  \draw[thickline] (6.8,1.5) -- (7.6,0.5);
+  \draw[thickline] (7.6,0.5) -- (8.4,1.5);
+  \draw[force] (8.4,1.5) -- (9.45,3.05);
+  \node[above] at (8.92,2.86) {$R_4$};
+  \node at (9.55,2.86) {$\cdots$};
+\end{tikzpicture}
+\end{figbox}
+
+Here $k = 2\pi n_1/\lambda$, $\lambda$ being the wavelength in vacuum. The factor
+$\ee^{-2\ii kd}$ is the phase change of the wave after it has traversed a distance $2d$ in the
+medium of refractive index $n_1$. Using the Stokes relations derived in (1), we obtain
+\begin{equation*}
+\frac{A_R}{A} = \frac{r_1 + r_2\ee^{-2\ii kd}}{1 + r_1r_2\ee^{-2\ii kd}} .
+\end{equation*}
+From the above expression, the condition for the reflected wave to vanish is
+\begin{equation*}
+\text{1)}\quad
+\begin{cases}
+r_1 = -r_2,\\
+\ee^{-2\ii kd} = 1,
+\end{cases}
+\qquad\text{or}\qquad
+\text{2)}\quad
+\begin{cases}
+r_1 = r_2,\\
+\ee^{-2\ii kd} = -1.
+\end{cases}
+\end{equation*}
+Let us connect the coefficients $r_1$, $r_2$ with the refractive indices. By the Fresnel
+formulae,
+\begin{equation*}
+r_1 = \frac{1-n_1}{1+n_1},\qquad
+r_2 = \frac{n_1-n_2}{n_1+n_2}.
+\end{equation*}
+Expressed in terms of the refractive indices, the condition for the reflected wave to vanish
+becomes
+\begin{equation*}
+\text{1)}\quad
+\begin{cases}
+n_2 = 1,\\[2pt]
+\dfrac{n_1d}{\lambda} = \dfrac{p}{2},
+\end{cases}
+\qquad\text{or}\qquad
+\text{2)}\quad
+\begin{cases}
+n_2 = n_1^2,\\[2pt]
+\dfrac{n_1d}{\lambda} = \dfrac{2p-1}{4},
+\end{cases}
+\end{equation*}
+where $p$ is a positive integer. The physical meaning of the above conditions is evident.
+
+\begin{commentary}
+This problem is precisely the physical principle of the antireflection coating. The result agrees
+with that obtained by considering only the interference of the two reflected waves from the upper
+and lower surfaces. This is because at normal incidence the reflection coefficients are very
+small, so that apart from these first two reflected waves, which are relatively strong, all the
+remaining reflected waves are very weak.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.15}
+The speed of light in the lower tube is $c/n$, while its speed in the upper tube (relative to
+the laboratory frame) is given by the relativistic velocity-addition formula as
+\begin{equation*}
+v' = \frac{\dfrac{c}{n}+u}{1+\dfrac{1}{c^2}\dfrac{c}{n}u}
+   = \frac{\dfrac{c}{n}+u}{1+\dfrac{u}{cn}} .
+\end{equation*}
+Hence the equivalent refractive index of the upper tube is
+\begin{align*}
+n' &= \frac{c}{v'} = \frac{c}{\dfrac{c}{n}+u}
+     \left(1+\frac{u}{cn}\right)
+   = \frac{n}{1+\dfrac{nu}{c}}\left(1+\frac{u}{cn}\right)\\
+   &\approx n\left(1+\frac{u}{cn}\right)\left(1-\frac{u}{cn}\right)
+   \approx n-\frac{u}{c}(n^2-1).
+\end{align*}
+Therefore the optical path difference of the light in the upper and lower tubes is
+\begin{equation*}
+\Delta = L(n-n') = \frac{u}{c}(n^2-1)L .
+\end{equation*}
+When $\Delta = (2p-1)\frac{\lambda}{2}$ ($p$ a positive integer), destructive interference
+occurs at $S'$. Setting $p=1$, we obtain the minimum value of $u$:
+\begin{equation*}
+u_{\min} = \frac{1}{2}\frac{\lambda}{L}\frac{c}{n^2-1} .
+\end{equation*}
+\end{solution}
+
+\begin{solution}{4.16}
+Let $\delta = \frac{2\pi}{\lambda}d\sin\theta$ be the phase difference between the light rays
+emitted from two adjacent slits in the direction $\theta$, and let $a$ be the amplitude coming
+from a single slit in that direction. Then the total amplitude is
+\begin{equation*}
+A = a\left[(1+\alpha) + (1-\alpha)\ee^{\ii\delta} + (1+\alpha)\ee^{\ii 2\delta}
+    + (1-\alpha)\ee^{\ii 3\delta} + \cdots + (1-\alpha)\ee^{\ii(N-1)\delta}\right].
+\end{equation*}
+Here we take $N$ to be even. After rearranging, we have
+\begin{align*}
+A &= a\left[\sum_{n=0}^{N-1}\ee^{\ii n\delta}
+     + \alpha\sum_{n=0}^{N-1}(-1)^n\ee^{\ii n\delta}\right]\\
+  &= a\left[\frac{1-\ee^{\ii N\delta}}{1-\ee^{\ii\delta}}
+     + \alpha\frac{1-\ee^{\ii N\delta}}{1+\ee^{\ii\delta}}\right]\\
+  &= a\,\frac{\ee^{\ii N\delta/2}}{\ee^{\ii\delta/2}}
+     \left[\frac{\ee^{-\ii N\delta/2}-\ee^{\ii N\delta/2}}
+                {\ee^{-\ii\delta/2}-\ee^{\ii\delta/2}}
+     + \alpha\frac{\ee^{-\ii N\delta/2}-\ee^{\ii N\delta/2}}
+                {\ee^{-\ii\delta/2}+\ee^{\ii\delta/2}}\right]\\
+  &= a\ee^{\ii(N-1)\delta/2}
+     \left[\frac{\sin(N\delta/2)}{\sin(\delta/2)}
+     - \ii\alpha\frac{\sin(N\delta/2)}{\cos(\delta/2)}\right].
+\end{align*}
+The intensity is proportional to
+\begin{equation*}
+AA^* = a^2\left[\frac{\sin^2(N\delta/2)}{\sin^2(\delta/2)}
+      + \alpha^2\frac{\sin^2(N\delta/2)}{\cos^2(\delta/2)}\right].
+\end{equation*}
+Noting that $I_0\propto N^2a^2$ is the central maximum, the above expression can be written as
+\begin{equation*}
+I = I_0\,\frac{\sin^2(N\delta/2)}{N^2\sin^2(\delta/2)}
+    \left[1+\alpha^2\tan^2\frac{\delta}{2}\right].
+\end{equation*}
+When $\delta \approx (2p+1)\pi$ ($p$ an integer), the effect of $\alpha$ is most easily detected.
+\end{solution}
+
+\begin{solution}{4.17}
+The displacement of the $i$-th step of the drunkard can be represented by the vector
+$\vec{L}_i$. After a certain time, the vector $\vec{R}$ from the hotel to the drunkard is the sum
+of many vectors $\vec{L}_i$ of various directions:
+\begin{equation*}
+\vec{R} = \sum_{i=1}^{N}\vec{L}_i .
+\end{equation*}
+$N$ is the number of steps taken by the drunkard during this time and is a large number. What we
+require is actually the modulus of the vector $\vec{R}$. Taking the hotel as the origin and
+choosing $x$, $y$ coordinates arbitrarily, we have
+\begin{equation*}
+\vec{L}_i = L\cos\alpha_i\,\hat{x} + L\sin\alpha_i\,\hat{y},
+\end{equation*}
+where $\alpha_i$ is the angle between $\vec{L}_i$ and the $x$-axis (as shown in the figure).
+Then
+\begin{align*}
+R^2 = R_x^2+R_y^2
+&= \left(\sum_{i=1}^{N}L\cos\alpha_i\right)^2
+ + \left(\sum_{i=1}^{N}L\sin\alpha_i\right)^2\\
+&= \sum_{i=1}^{N}L^2\cos^2\alpha_i + \sum_{i\neq j}L^2\cos\alpha_i\cos\alpha_j
+ + \sum_{i=1}^{N}L^2\sin^2\alpha_i + \sum_{i\neq j}L^2\sin\alpha_i\sin\alpha_j\\
+&= L^2\sum_{i=1}^{N}\left(\cos^2\alpha_i+\sin^2\alpha_i\right)
+ + L^2\sum_{i\neq j}\left(\cos\alpha_i\cos\alpha_j+\sin\alpha_i\sin\alpha_j\right).
+\end{align*}
+Since the $\alpha_i$ are arbitrary and $N$ is very large, the second term above evidently
+vanishes through the cancellation of positive and negative contributions, while the first term
+is evidently $NL^2$.
+
+\begin{figbox}{4.17}
+\begin{tikzpicture}[scale=1.15]
+  \draw[axis] (-0.3,0) -- (6.6,0) node[right] {$x$};
+  \draw[axis] (0,-0.3) -- (0,4.4) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % random path
+  \coordinate (P0) at (0,0);
+  \coordinate (P1) at (1.7,0.55);
+  \coordinate (P2) at (2.6,1.55);
+  \coordinate (P3) at (4.3,1.35);
+  \coordinate (P4) at (5.2,2.55);
+  \coordinate (P5) at (4.5,3.75);
+  \draw[dashedline] (P0) -- (P1) -- (P2) -- (P3) -- (P4) -- (P5);
+  \draw[force] (P0) -- (P1);
+  \draw[force] (P1) -- (P2);
+  \draw[force] (P2) -- (P3);
+  \draw[force] (P3) -- (P4);
+  \draw[force] (P4) -- (P5);
+  % labels
+  \node[fill=white,inner sep=1pt] at (0.85,0.44) {$L_1$};
+  \node[fill=white,inner sep=1pt] at (2.42,1.32) {$L_2$};
+  \node[fill=white,inner sep=1pt] at (3.45,1.10) {$L_3$};
+  \node[fill=white,inner sep=1pt] at (5.02,1.78) {$L_4$};
+  \node[fill=white,inner sep=1pt] at (4.28,3.38) {$L_5$};
+  % resultant
+  \draw[force,dashed] (P0) -- (P5);
+  \node[fill=white,inner sep=1pt] at (2.05,1.95) {$R$};
+  % angles
+  \draw (0.55,0) arc (0:17.9:0.55);
+  \node at (0.80,0.16) {$\alpha_1$};
+  \draw (P1) ++(17.9:0.45) arc (17.9:48.0:0.45);
+  \node at (2.02,0.78) {$\alpha_2$};
+  \draw (P2) ++(48.0:0.45) arc (48.0:-6.7:0.45);
+  \node at (2.95,1.80) {$\alpha_3$};
+  \draw (P3) ++(-6.7:0.45) arc (-6.7:53.1:0.45);
+  \node at (4.60,1.78) {$\alpha_4$};
+  \draw (P4) ++(53.1:0.45) arc (53.1:120.3:0.45);
+  \node at (4.88,2.90) {$\alpha_5$};
+\end{tikzpicture}
+\end{figbox}
+
+Hence
+\begin{equation*}
+R^2 = NL^2,
+\end{equation*}
+so that
+\begin{equation*}
+R = \sqrt{N}L .
+\end{equation*}
+If the drunkard takes the same time for every step, then $N\propto t$, and hence
+\begin{equation*}
+R \propto \sqrt{t}\,L,
+\end{equation*}
+that is, the distance between the drunkard and the hotel is proportional to the square root of
+the time.
+
+\begin{commentary}
+The physical ideas and methods of this problem are manifested in many fields of physics. In
+optics it corresponds to the superposition of $N$ light waves whose phases vary at random, the
+result being the absence of any interference phenomenon; in molecular physics it is the physical
+basis of Brownian motion.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.18}
+Let $O$ be the geometrical focus of the rays (as shown in the figure). Let $M$ be the plane
+through $O$ perpendicular to the principal axis of the lens, and let $r_0$ be the shortest
+distance from the lens to the point $O$. Draw a spherical surface $S$ with centre $O$ and radius
+$r_0$, its edge being defined by the aperture stop. When calculating the light field on the
+surface $S$, geometrical optics may be applied approximately. In this way the light field on $S$
+can be written in complex form as
+\begin{equation*}
+E_S = \frac{1}{r_0}\ee^{\ii(\omega t+k r_0)} .
+\end{equation*}
+Let $P$ be an observation point on the plane $M$, $\dd S$ an area element on $S$, and $r$ the
+distance between $\dd S$ and $P$. According to Huygens' principle, the light field at the point
+$P$ can be obtained from the following formula:
+\begin{equation}
+E_P = \int_S \frac{1}{r_0r}\ee^{\ii[\omega t-k(r-r_0)]}\,\dd S . \tag{1}
+\end{equation}
+Putting $OP=\rho$, we have $\vec{r}=\vec{r}_0+\vec{\rho}$, so that
+$r^2 = r_0^2+\rho^2+2\vec{\rho}\cdot\vec{r}_0$ and
+$r = r_0\sqrt{1+\frac{\rho^2}{r_0^2}+\frac{2\vec{\rho}\cdot\vec{r}_0}{r_0^2}}$. Since $\rho$ is
+a small quantity, Newton's binomial formula is applicable, and to accuracy of order $\rho^2$,
+\begin{equation}
+r-r_0 = \vec{\rho}\cdot\hat{r}_0 + \frac{\rho^2}{2r_0}
+       - \frac{1}{2}\frac{(\vec{\rho}\cdot\vec{r}_0)^2}{r_0^3} . \tag{2}
+\end{equation}
+When $\rho \ll r,\,r_0$, to first approximation,
+\begin{equation*}
+r-r_0 = \vec{\rho}\cdot\hat{r}_0 ,
+\end{equation*}
+where $\hat{r}_0$ is the unit vector in the direction of $\vec{r}_0$. The error permitted in
+calculating $(r-r_0)$ must be much smaller than the wavelength; from (2),
+$r-r_0-\vec{\rho}\cdot\vec{r}_0\approx \rho^2/r_0$, so when calculating $(r-r_0)$ the following
+condition must be satisfied:
+\begin{equation}
+\rho^2/r_0 \ll \lambda . \tag{3}
+\end{equation}
+We now calculate the light field in the neighbourhood of $O$ under condition (3). Introduce
+rectangular coordinates in the observation plane, with the origin at $O$, the coordinate axes
+$x$ and $y$ parallel to adjacent sides of the square aperture, and the optical axis as the
+$z$-axis. Let $x$ and $y$ denote the coordinates of $P$. The direction of the unit vector
+$\hat{r}_0$ can be expressed by the angles $\varphi$ and $\psi$, where $\varphi$ and $\psi$ are
+respectively the angles made by $r_0$ with the $yz$-plane and the $xz$-plane. Thus
+\begin{equation*}
+r-r_0 = \vec{\rho}\cdot\hat{r}_0 = x\sin\varphi + y\sin\psi \approx x\varphi + y\psi ,
+\end{equation*}
+\begin{equation*}
+\dd S = r_0^2\,\dd\varphi\,\dd\psi .
+\end{equation*}
+
+\begin{figbox}{4.18}
+\begin{tikzpicture}[scale=1.0]
+  % lens
+  \draw[thickline,fill=black!10]
+    (1.0,2.2) .. controls (0.45,0.8) and (0.45,-0.8) .. (1.0,-2.2)
+    .. controls (1.55,-0.8) and (1.55,0.8) .. cycle;
+  % wavefront S
+  \draw[thickline] (7,0) ++(152:6.0) arc (152:208:6.0);
+  \node[right] at (1.62,-1.95) {$S$};
+  \node[above left] at (1.40,2.33) {$\dd S$};
+  \fill (1.44,2.25) circle (1.2pt);
+  % plane M
+  \draw[thickline] (7,-2.7) -- (7,2.8);
+  \node[left] at (6.82,2.85) {$M$};
+  \fill (7,0) circle (1.2pt);
+  \node[below right] at (7,-0.02) {$O$};
+  \fill (7,1.35) circle (1.1pt);
+  \node[right] at (7,1.35) {$P$};
+  % rays
+  \draw[thickline] (7,0) -- (1.44,2.25) node[midway,above] {$r_0$};
+  \draw[thickline] (1.44,2.25) -- (7,1.35) node[midway,above right] {$r$};
+  \draw[dim] (7,0) -- (7,1.35) node[midway,right] {$\rho$};
+  \draw[thinline,dashed] (1.0,2.2) -- (7,0);
+  \draw[thinline,dashed] (1.0,-2.2) -- (7,0);
+  % axes
+  \draw[axis] (7,0) -- (0.3,0) node[left] {$z$};
+  \draw[axis] (7,0) -- (8.9,-0.55) node[right] {$x$};
+  \draw[axis] (7,0) -- (7,2.30) node[above right,fill=white,inner sep=1pt] {$y$};
+\end{tikzpicture}
+\end{figbox}
+
+We assume that the half-angle subtended at $O$ by the square aperture,
+$\alpha = \arctan\frac{D}{2r_0}$, is very small, so that $\sin\varphi$ and $\sin\psi$ may be
+replaced by $\varphi$ and $\psi$. Apart from this, since $\rho \ll r,\,r_0$, the quantity $r$ in
+the denominator of (1) may be replaced approximately by $r_0$. Finally we obtain
+\begin{equation*}
+E_P = \ee^{\ii\omega t}\int_{-\alpha}^{+\alpha}\!\!\int_{-\alpha}^{+\alpha}
+      \ee^{-\ii k(x\varphi+y\psi)}\,\dd\varphi\,\dd\psi .
+\end{equation*}
+Integrating the above expression, taking the amplitude at $O$ as unity and noting that
+$k = \frac{2\pi}{\lambda}$, we obtain the amplitude at $P$:
+\begin{equation*}
+A_P = \frac{\sin\dfrac{2\pi x\alpha}{\lambda}}{\dfrac{2\pi x\alpha}{\lambda}}
+      \cdot
+      \frac{\sin\dfrac{2\pi y\alpha}{\lambda}}{\dfrac{2\pi y\alpha}{\lambda}} ,
+\end{equation*}
+and the intensity is
+\begin{equation*}
+I_P = \left[\frac{\sin\dfrac{2\pi x\alpha}{\lambda}}
+             {\dfrac{2\pi x\alpha}{\lambda}}\right]^2
+      \left[\frac{\sin\dfrac{2\pi y\alpha}{\lambda}}
+             {\dfrac{2\pi y\alpha}{\lambda}}\right]^2 .
+\end{equation*}
+The diffraction pattern obtained is the same as the Fraunhofer diffraction pattern of a square
+aperture. The distance from the centre of the central maximum to the first minimum, and the
+distance between two adjacent minima, are both equal to
+\begin{equation*}
+\Delta x = \Delta y = \frac{\lambda/2}{\alpha} .
+\end{equation*}
+It remains to check whether condition (3) is satisfied. Since the range of perceptible intensity
+is $\Delta x$, we may take $\rho \approx \lambda/\alpha$; substituting into (3) changes the
+condition into
+\begin{equation*}
+\alpha \gg \sqrt{\lambda/r_0} .
+\end{equation*}
+This condition is satisfied in all optical instruments constructed from lenses or plane mirrors.
+
+\begin{commentary}
+This problem concerns the basic method for calculating a diffracted light field. The result shows
+that it is not necessary to satisfy strictly the Fraunhofer diffraction conditions (the source
+and the image field both at infinity, or both in the focal plane of a lens) in order to observe
+a Fraunhofer diffraction pattern; it can also be observed in the geometrical image plane of the
+source, provided that the geometrical conditions for imaging are satisfied and the observation
+region lies near the geometrical image point.
+\end{commentary}
+\end{solution}
+
+\begin{solution}{4.19}
+(1) Let the intensities of the elliptically polarised component along the $x$- and $y$-axes be
+$I_{ex}$ and $I_{ey}$ respectively; the unpolarised component has the same intensity along the
+$x$- and $y$-axes, which we denote by $I_u$. Then from the conditions of the problem,
+\begin{align}
+I_u + I_{ex} &= 1.5I_0, \tag{1}\\
+I_u + I_{ey} &= 1.0I_0. \tag{2}
+\end{align}
+When the transmission axis of the polariser makes an angle $\theta$ with the $x$-axis, the
+unpolarised component passing through the polariser is still $I_u$, while the amplitude of the
+elliptically polarised component passing through it is
+\begin{equation*}
+E_\theta = E_x\cos\theta + E_y\sin\theta .
+\end{equation*}
+Since $x$ and $y$ are the principal axes of the ellipse, the phase difference between $E_x$ and
+$E_y$ is $90^\circ$, and hence
+$E_\theta^2 = E_x^2\cos^2\theta + E_y^2\sin^2\theta$; therefore
+\begin{align*}
+I_\theta &= I_{ex}\cos^2\theta + I_{ey}\sin^2\theta + I_u\\
+          &= (I_u+I_{ex})\cos^2\theta + (I_u+I_{ey})\sin^2\theta\\
+          &= 1.5I_0\cos^2\theta + 1.0I_0\sin^2\theta .
+\end{align*}
+The result is independent of the unpolarised component.
+
+(2) After passing through the quarter-wave plate, the phase difference between $E_x$ and $E_y$ is
+changed by $90^\circ$, so that they become in phase. Since the transmitted intensity is maximum
+when the polariser makes an angle of $30^\circ$ with the $x$-axis, it is seen that
+\begin{equation*}
+\frac{E_x}{E_y} = \cot 30^\circ = \sqrt{3},
+\qquad\text{i.e.}\qquad
+\frac{I_{ex}}{I_{ey}} = 3 .
+\end{equation*}
+Substituting into (1), we obtain
+\begin{align*}
+I_{ex} &= 0.75I_0,\\
+I_{ey} &= 0.25I_0,\\
+I_u &= 0.75I_0 .
+\end{align*}
+Hence the maximum intensity at $\theta = 30^\circ$ is
+\begin{equation*}
+I = I_{ex}+I_{ey}+I_u = 1.75I_0 .
+\end{equation*}
+The percentage of the unpolarised component in the total incident intensity is
+\begin{equation*}
+\frac{2I_u}{2I_u+I_{ex}+I_{ey}}
+= \frac{2\times 0.75I_0}{2\times 0.75I_0+0.75I_0+0.25I_0} = 60\% .
+\end{equation*}
+\end{solution}
+
+\begin{solution}{4.20}
+In a birefringent crystal, light waves polarised parallel and perpendicular to the optic axis
+travel with different phase velocities, so that the linearly polarised wave
+$E_0(\hat{x}+\hat{y})/\sqrt{2}$ emerging from the polarising film becomes, after entering the
+crystal and travelling a distance $z$,
+\begin{equation*}
+\vec{E} = \frac{E_0}{\sqrt{2}}
+          \left(\hat{x}\,\ee^{\ii k n_+ z} + \hat{y}\,\ee^{\ii k n_- z}\right)\ee^{-\ii\omega t},
+\end{equation*}
+where $\hat{y}$ is chosen parallel to the optic axis, $\hat{x}$ perpendicular to $\hat{y}$ and
+to the direction of propagation $\hat{z}$, the phase velocity of the wave polarised along $x$ is
+$c/n_+$, and that of the wave polarised along $y$ is $c/n_-$; the plane of the polariser is
+parallel to $\vec{l} = (\hat{x}+\hat{y})/\sqrt{2}$. After travelling the whole length $2^N d$ of
+the crystal, the amplitude of the wave transmitted through the polariser is $\vec{E}\cdot\vec{l}$,
+namely
+\begin{equation*}
+\vec{E}\cdot\vec{l}
+= \frac{E_0}{2}\left(\ee^{\ii k n_+ 2^N d} + \ee^{\ii k n_- 2^N d}\right).
+\end{equation*}
+With
+\begin{equation*}
+n_+ = \frac{1}{2}\left[(n_+ + n_-) + (n_+ - n_-)\right],\qquad
+n_- = \frac{1}{2}\left[(n_+ + n_-) - (n_+ - n_-)\right],
+\end{equation*}
+substitution into the above gives
+\begin{align*}
+\vec{E}\cdot\vec{l}
+&= \frac{E_0}{2}\left\{\ee^{\ii k 2^{N-1}d\left[(n_+ + n_-)+(n_+ - n_-)\right]}
+   + \ee^{\ii k 2^{N-1}d\left[(n_+ + n_-)-(n_+ - n_-)\right]}\right\}\\
+&= \frac{E_0}{2}\,\ee^{\ii k 2^{N-1}d(n_+ + n_-)}
+   \left[\ee^{\ii k 2^{N-1}d(n_+ - n_-)}
+   + \ee^{-\ii k 2^{N-1}d(n_+ - n_-)}\right]\\
+&= \frac{E_0}{2}\,\ee^{\ii k 2^{N-1}d(n_+ + n_-)}
+   \left[\ee^{\ii k 2^N d(n_+ - n_-)/2}
+   + \ee^{-\ii k 2^N d(n_+ - n_-)/2}\right]\\
+&= E_0\,\ee^{\ii k 2^{N-1}d(n_+ + n_-)}\cos\left(2^N\varphi\right).
+\end{align*}
+\end{solution}
+

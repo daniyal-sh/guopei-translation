@@ -1,0 +1,423 @@
+\section{Optics}
+
+\begin{problem}{4.01}
+Light is incident on the principal section of a prism of apex angle $A$ at an angle of incidence $i$, and emerges after two refractions, as shown in the figure. The refractive index of the prism material is $n$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the angle of deviation $\delta$ between the emergent ray and the incident ray.
+\item Under what condition is the angle of deviation $\delta$ a minimum? Find this minimum angle of deviation $\delta_m$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{4.01}
+\begin{tikzpicture}[scale=0.9]
+  % prism
+  \coordinate (T) at (0,2.2);
+  \coordinate (BL) at (-1.55,-1.9);
+  \coordinate (BR) at (1.55,-1.9);
+  \draw[thickline] (T) -- (BL) -- (BR) -- cycle;
+  \node at (0,1.55) {$A$};
+  % entry and exit points
+  \coordinate (E) at (-1.04,-0.55);
+  \coordinate (X) at (1.115,-0.75);
+  % incident ray
+  \draw[thickline,->] (-4.6,-2.35) -- (E);
+  % refracted ray inside
+  \draw[thickline] (E) -- (X);
+  % emergent ray
+  \draw[thickline,->] (X) -- (4.2,-2.8);
+  % normal at the entry point
+  \draw[dashedline] (-1.85,-0.29) -- (-0.24,-0.85);
+  % extension of incident ray and backward extension of emergent ray
+  \draw[dashedline] (E) -- (2.40,1.18);
+  \draw[dashedline] (X) -- (0.01,-0.02);
+  % angle of incidence
+  \draw (E) ++(159.3:0.62) arc[start angle=159.3,end angle=206.8,radius=0.62];
+  \node at (-1.78,-0.62) {$i$};
+  % deviation angle
+  \draw (0.01,-0.02) ++(-33.6:0.75) arc[start angle=-33.6,end angle=26.8,radius=0.75];
+  \node at (0.95,0.02) {$\delta$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.02}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=4pt,topsep=2pt]
+\item An Amici prism is made by cementing together two right-angle prisms and one isosceles prism, as shown in the figure. The refractive indices of the two prism materials are $n_1$ and $n_2$ respectively. By choosing the apex angle $a$ of the isosceles prism appropriately, a ray incident parallel to the base in the principal section can emerge without any deviation, thus forming a direct-vision prism. Find $a$.
+\item Suppose the right-angle prisms and the isosceles prism are made of crown glass and flint glass respectively. Calculate the value of $a$ for the $F$ line ($\lambda = 4861\text{\AA}$), and also calculate the angle of dispersion between the $C$ line ($\lambda = 6563\text{\AA}$) and the $G$ line ($\lambda = 4341\text{\AA}$). The refractive indices of crown glass and flint glass for the $D$ ($\lambda = 5893\text{\AA}$), $F$, $C$ and $G$ lines are shown in the table below.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Material & $n_D$ & $n_F-n_C$ & $n_F-n_D$ & $n_G-n_F$\\
+\midrule
+Crown glass & 1.5100 & 0.00805 & 0.00565 & 0.00451\\
+Flint glass & 1.7550 & 0.02743 & 0.01975 & 0.01730\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{problem}
+
+\begin{figbox}{4.02}
+\begin{tikzpicture}[scale=0.9]
+  % outline of the three cemented prisms
+  \draw[thickline] (-4.4,0) -- (-2.2,2.0) -- (2.2,2.0) -- (4.4,0) -- cycle;
+  \draw[thickline] (-2.2,2.0) -- (0,0) -- (2.2,2.0);
+  % right-angle marks
+  \draw (-2.41,1.81) -- (-2.2,1.62) -- (-1.99,1.81);
+  \draw (2.41,1.81) -- (2.2,1.62) -- (1.99,1.81);
+  % ray parallel to the base
+  \draw[thickline,->] (-5.8,1.0) -- (-3.3,1.0);
+  \draw[dashedline] (-3.3,1.0) -- (3.3,1.0);
+  \draw[thickline,->] (3.3,1.0) -- (5.8,1.0);
+  % labels
+  \node at (-2.95,0.42) {$n_1$};
+  \node at (2.95,0.42) {$n_1$};
+  \node at (0,1.45) {$n_2$};
+  \draw (0,0) ++(42.3:0.45) arc[start angle=42.3,end angle=137.7,radius=0.45];
+  \node at (0,0.66) {$a$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.03}
+A surface of revolution separating two homogeneous media of refractive indices $n$ and $n'$ has the following property: light emitted from a fixed point $P$ on the axis of revolution, after refraction at the surface, converges without aberration to another point $P'$ on the same axis. This surface is called a Cartesian oval. Taking a plane through the axis to cut this surface, find the equation of the curve of intersection. Investigate under what conditions this curve becomes a conic.
+\end{problem}
+
+\begin{problem}{4.04}
+According to Descartes' theory, the rainbow is formed by the refraction and reflection of sunlight in water drops. The angular radius of the rainbow can be determined from the requirement that the light emerging after one internal reflection and refraction has maximum intensity. Treating the water drop as a sphere of refractive index $n$, find the angular radius $\alpha$ of the rainbow. Given that the refractive indices of water for red and violet light are $n_{\text{red}} = 1.329$ and $n_{\text{violet}} = 1.343$ respectively, find the values of the angular radii $\alpha_{\text{red}}$ and $\alpha_{\text{violet}}$ of the rainbow for red and violet light.
+\end{problem}
+
+\begin{problem}{4.05}
+A person stands on a long straight runway. Owing to the temperature difference, the refractive index of the air above the runway varies linearly with height, namely $n = n_0(1+\alpha y)$, where $|\alpha| = 1.5\times 10^{-6}\unitv{m^{-1}}$. As a result, he cannot see clearly the runway at a distance $d$ away ($y=0$). If his eyes are at a height of $1.7\unitv{m}$ above the ground, find $d$. Also, how does the temperature vary with height?
+\end{problem}
+
+\begin{problem}{4.06}
+Astronomical refraction is the change in the azimuth $\alpha$ of a star (the angle between the direction of the star and the normal to the ground) caused by refraction in the atmosphere. Let the apparent azimuth of the star be $\alpha_0$ and the refractive index at the ground be $n_0$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=2pt,topsep=2pt]
+\item Neglecting the curvature of the Earth's surface, prove that the astronomical refraction is independent of the law according to which the refractive index of the air varies with height and depends only on the values of $n_0$ and $\alpha_0$. Find an approximate expression for the astronomical refraction $\alpha-\alpha_0$ (this formula is valid for $\alpha<75\degree$).
+\item If the curvature of the Earth's surface is taken into account, the astronomical refraction does depend on the law of variation of the refractive index of the air with height. Suppose the air is a uniform transparent layer of refractive index $n$ and height $h$; find an expression for the astronomical refraction $\alpha-\alpha_0$.
+\item Let $n = 1.00028$, $h = 4.0\unitv{km}$, the Earth's radius $R = 6370\unitv{km}$ and $\alpha_0 = 90\degree$; find the value of the astronomical refraction $\alpha-\alpha_0$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{4.07}
+A plano-convex lens of diameter $2a$ and radius of curvature $R$ of its convex surface is placed horizontally and illuminated by a vertically upward laser beam, as shown in the figure. What should be the power $P$ and the intensity $I$ of the laser so that the lens can hover in the air without falling? The refractive index of the lens material is $n$ and its density is $\rho$. Assume that the laser beam fills the lens and that all rays are paraxial.
+
+Let $n = 1.50$, $R = 5\unitv{mm}$, $a = 1\unitv{mm}$, $\rho = 2.5\unitv{g\cdot cm^{-3}}$ and $g = 9.8\unitv{m\cdot s^{-2}}$; find the numerical values of $P$ and $I$.
+\end{problem}
+
+\begin{figbox}{4.07}
+\begin{tikzpicture}[scale=0.9]
+  % plano-convex lens
+  \draw[thickline] (-2.2,0) -- (2.2,0);
+  \draw[thickline] (-2.2,0) .. controls (-1.6,1.15) and (1.6,1.15) .. (2.2,0);
+  \node at (-2.0,1.0) {$R$};
+  \node at (-0.75,0.42) {$n$};
+  \node at (0.75,0.42) {$\rho$};
+  % diameter
+  \draw[dim] (-2.2,-0.55) -- (2.2,-0.55) node[midway,below] {$2a$};
+  % laser beam
+  \foreach \x in {-1.7,-0.55,0.55,1.7}{%
+    \draw[thickline,->] (\x,-1.65) -- (\x,-0.85);}
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.08}
+A thin biconvex lens of refractive index $n$ and radii of curvature $R_1$ and $R_2$ is placed between media of refractive indices $n_1$ and $n_2$, as shown in the figure. Find the focal length of the lens and the object-image formula.
+\end{problem}
+
+\begin{figbox}{4.08}
+\begin{tikzpicture}[scale=0.9]
+  % biconvex lens
+  \draw[thickline] (0,1.3) .. controls (-0.38,0.62) and (-0.38,-0.62) .. (0,-1.3);
+  \draw[thickline] (0,1.3) .. controls (0.38,0.62) and (0.38,-0.62) .. (0,-1.3);
+  % labels
+  \node at (-0.85,1.35) {$R_1$};
+  \node at (0.85,1.35) {$R_2$};
+  \node at (-1.7,0) {$n_1$};
+  \node at (0,0) {$n$};
+  \node at (1.7,0) {$n_2$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.09}
+Lenses $L_1$ and $L_2$ of focal lengths $f$ and $-f$ respectively are placed coaxially, separated by a distance $f$. An opaque screen $P$ with a small hole of diameter $d$ is placed exactly midway between them, the centre of the hole lying on the axis. A screen $Q$ is placed at a distance $f$ to the right of $L_2$. In order that the diameter of the light spot formed on $Q$ by a point source $S$ on the principal axis to the left of $L_1$ be not greater than $0.4d$, find the range of positions of $S$ (expressed in terms of the distance $u$ from $L_1$).
+\end{problem}
+
+\begin{figbox}{4.09}
+\begin{tikzpicture}[scale=0.85]
+  % optical axis
+  \draw[thickline] (-3.4,0) -- (7.2,0);
+  % source
+  \fill (-2.6,0) circle (1.4pt) node[above left] {$S$};
+  % L1
+  \draw[thickline] (0,1.3) .. controls (-0.22,0.6) and (-0.22,-0.6) .. (0,-1.3);
+  \draw[thickline] (0,1.3) .. controls (0.22,0.6) and (0.22,-0.6) .. (0,-1.3);
+  \node[above] at (0,1.3) {$L_1$};
+  % screen P with hole
+  \draw[thickline] (1.7,1.3) -- (1.7,0.32);
+  \draw[thickline] (1.7,-0.32) -- (1.7,-1.3);
+  \node[above] at (1.7,1.3) {$P$};
+  \draw[dim] (1.7,-0.32) -- (1.7,0.32);
+  \node[right] at (1.72,0.04) {$d$};
+  % L2 (concave)
+  \draw[thickline] (3.4,1.3) .. controls (3.62,0.6) and (3.62,-0.6) .. (3.4,-1.3);
+  \draw[thickline] (3.66,1.3) .. controls (3.44,0.6) and (3.44,-0.6) .. (3.66,-1.3);
+  \draw[thickline] (3.4,1.3) -- (3.66,1.3);
+  \draw[thickline] (3.4,-1.3) -- (3.66,-1.3);
+  \node[above] at (3.53,1.3) {$L_2$};
+  % screen Q
+  \draw[thickline] (6.8,1.3) -- (6.8,-1.3);
+  \node[above] at (6.8,1.3) {$Q$};
+  % dimensions
+  \draw[dim] (-2.6,-0.95) -- (0,-0.95) node[midway,below] {$u$};
+  \draw[dim] (0,-1.75) -- (1.7,-1.75) node[midway,below] {$f$};
+  \draw[dim] (1.7,-1.75) -- (3.4,-1.75) node[midway,below] {$f$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.10}
+An object $O$ is placed in front of the focal point of a convex lens $L$ and is imaged by the lens together with a concave mirror $M$ placed behind the lens, as shown in the figure.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=2pt,topsep=2pt]
+\item Prove that, with the positions of the object and the lens fixed, there exist two positions of the concave mirror for which the magnification of the final image of the object is $+1$.
+\item Let $u = 10\unitv{cm}$, the radius of the concave mirror $R = 7\unitv{cm}$, and the distance between the two positions of the concave mirror for which the magnification is $+1$ be $l = 2\unitv{cm}$; find the focal length $f$ of the lens.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{4.10}
+\begin{tikzpicture}[scale=0.95]
+  % optical axis
+  \draw[thickline] (-3.8,0) -- (6.2,0);
+  % object
+  \draw[thickline,->] (-3.0,0) -- (-3.0,0.8);
+  \node at (-3.35,0.95) {$O$};
+  % focal point
+  \fill (-0.9,0) circle (1.3pt) node[below] {$F$};
+  % lens
+  \draw[thickline] (0,1.3) .. controls (-0.22,0.6) and (-0.22,-0.6) .. (0,-1.3);
+  \draw[thickline] (0,1.3) .. controls (0.22,0.6) and (0.22,-0.6) .. (0,-1.3);
+  \node[above] at (0,1.3) {$L$};
+  % concave mirror
+  \draw[thickline] (5.6,0) ++(150:1.4) arc[start angle=150,end angle=210,radius=1.4];
+  \foreach \a in {156,168,180,192,204}{%
+    \draw (5.6,0) ++(\a:1.4) -- ++(\a:-0.17);}
+  \node[above] at (4.55,0.85) {$M$};
+  % radius
+  \draw[thickline,->] (2.9,0) -- (4.31,0.55);
+  \node[above] at (3.62,0.42) {$R$};
+  % object distance
+  \draw[dim] (-3.0,-0.95) -- (0,-0.95) node[midway,below] {$u$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.11}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=2pt,topsep=2pt]
+\item A transparent sphere of radius $R$ has refractive index $n$. $P$ is a point on the principal axis, located at a distance $R/n$ to the left of the centre $C$ of the sphere, as shown in the figure. Prove that any ray emitted from $P$ to the right (not necessarily a paraxial ray), after refraction at the spherical surface, converges to a single point. Find the position of this point $Q$. $P$ and $Q$ are called aplanatic points.
+\item The concept of aplanatic points is often used in microscope objectives in order to increase the aperture angle of the light entering the microscope. Suppose that the objective of a microscope is a hemisphere of refractive index $n_1$ and radius $R_1$, whose plane base and the object are both immersed in oil of refractive index equal to that of the objective material, and that the object is located at an aplanatic point.
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em,itemsep=1pt,topsep=2pt]
+\item Design the radii $R_2$ and $R_3$ of the two spherical surfaces of the second lens of the objective and its configuration, so that its object and image are also aplanatic points. It is known that the refractive index of this lens material is $n_2$, the distance between the front spherical surface of this lens and the rear spherical surface of the first lens is $d_1$, and the central thickness of the lens is $d_2$.
+\item Estimate the aperture angle $\beta$ of the light emerging from the second lens.
+\item Find the magnification $k$ after imaging through the two lenses.
+\item Let $n_1 = 1.5$, $n_2 = 1.6$, $R_1 = 3\unitv{mm}$, $d_1 = 2.0\unitv{mm}$ and $d_2 = 1.5\unitv{mm}$; find the numerical values of $R_2$, $R_3$, $\beta$ and $k$.
+\end{enumerate}
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{4.11}
+\begin{tikzpicture}[scale=0.9]
+  % sphere
+  \draw[thickline] (0,0) circle (1.5);
+  % axis
+  \draw[thickline] (-3.2,0) -- (3.2,0);
+  % centre and aplanatic point
+  \fill (0,0) circle (1.3pt) node[below] {$C$};
+  \fill (-1.0,0) circle (1.3pt) node[below] {$P$};
+  % ray from P
+  \draw[thickline,->] (-1.0,0) -- (0.86,1.23);
+  \node at (0.62,0.62) {$R$};
+  % dimension PC
+  \draw[dim] (-1.0,-0.85) -- (0,-0.85) node[midway,below] {$R/n$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.12}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=2pt,topsep=2pt]
+\item A Fresnel biprism has refractive index $n$ and refracting edge angle $\alpha$ ($\alpha\ll 1$). A monochromatic slit $S$ (wavelength $\lambda$) lying on the axis of symmetry is at a distance $a$ from the prism, and the observation screen is at a distance $b$ from the prism. Find an expression for the distance $x$ from the centre of the interference pattern to the $m$-th bright fringe.
+\item If the slit source $S$ is displaced slightly upward by a distance $h$ in the direction perpendicular to the principal axis, in which direction will the zero-order fringe move? What is the distance $y$ by which it moves?
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{4.12}
+\begin{tikzpicture}[scale=0.9]
+  % axis
+  \draw[thickline] (-3.8,0) -- (5.6,0);
+  % source
+  \fill (-3.0,0) circle (1.4pt) node[above left] {$S$};
+  % biprism
+  \draw[thickline] (0,1.15) -- (-0.34,-1.15) -- (0.20,-1.15) -- cycle;
+  \draw (0,1.15) ++(261.6:0.8) arc[start angle=261.6,end angle=275,radius=0.8];
+  \node at (-0.52,0.40) {$\alpha$};
+  % screen
+  \draw[thickline] (4.4,1.15) -- (4.4,-1.15);
+  % dimensions
+  \draw[dim] (-3.0,-1.55) -- (0,-1.55) node[midway,below] {$a$};
+  \draw[dim] (0,-1.55) -- (4.4,-1.55) node[midway,below] {$b$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.13}
+The figure shows a schematic of an arrangement for observing interference fringes with a Billet split lens. A lens of focal length $f$ is cut into two equal halves $L_1$ and $L_2$, which are displaced relative to each other along the principal axis by a distance $f$. A monochromatic point source $S$ of wavelength $\lambda$ is placed on the optical axis to the left of $L_1$, at a distance $f$ from $L_1$. A screen is placed at a distance $3f$ to the right of $L_2$ to observe the interference fringes.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Describe the shape of the fringes. Is the centre of the pattern dark or bright?
+\item Calculate the distance $r$ of the $m$-th bright fringe from the axis.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{4.13}
+\begin{tikzpicture}[scale=0.9]
+  % axis
+  \draw[thickline] (-3.9,0) -- (5.4,0);
+  % source
+  \fill (-2.6,0) circle (1.4pt) node[above left] {$S$};
+  % upper half-lens L1
+  \draw[thickline] (-0.24,0) -- (0.24,0);
+  \draw[thickline] (-0.24,0) .. controls (-0.34,0.7) and (-0.16,1.15) .. (0,1.25)
+                            .. controls (0.16,1.15) and (0.34,0.7) .. (0.24,0);
+  \node[above] at (0,1.3) {$L_1$};
+  % lower half-lens L2
+  \draw[thickline] (2.36,0) -- (2.84,0);
+  \draw[thickline] (2.36,0) .. controls (2.26,-0.7) and (2.44,-1.15) .. (2.6,-1.25)
+                            .. controls (2.76,-1.15) and (2.94,-0.7) .. (2.84,0);
+  \node[below] at (2.6,-1.3) {$L_2$};
+  % dimensions
+  \draw[dim] (-2.6,-1.75) -- (0,-1.75) node[midway,below] {$f$};
+  \draw[dim] (0,-1.75) -- (2.6,-1.75) node[midway,below] {$f$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.14}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=4pt,topsep=2pt]
+\item A plane electromagnetic wave is incident normally on the interface between two media labelled 1 and 2. The amplitude reflection and transmission coefficients for a wave incident from medium 1 into medium 2 are $r$ and $t$, and those for a wave incident from medium 2 into medium 1 are $r'$ and $t'$. Using the superposition principle and time-reversal invariance, derive the Stokes relations
+\[
+r^2+tt'=1,\qquad r=-r'.
+\]
+\item A plane electromagnetic wave is incident from vacuum normally on a thin film of thickness $d$ covering a semi-infinite dielectric. Suppose the relative permeability of the two media is $\mu_r=1$, and the refractive indices of the film and of the substrate are $n_1$ and $n_2$. Express, in terms of $n_1$, $n_2$ and the vacuum wavelength $\lambda$, the expression for the wave reflected back into vacuum. Under what condition is the reflected wave zero?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{4.15}
+A monochromatic slit source $S$ of wavelength $\lambda$ is placed in the focal plane of lens $L_1$. The lens splits the light into two parallel beams, which after passing through two narrow tubes filled with liquid are focused by lens $L_2$ onto the focal plane $S'$, where interference fringes are observed, as shown in the figure. The liquid in both tubes has refractive index $n$; the liquid in the upper tube moves with velocity $u$, while the liquid in the lower tube is at rest. Both tubes have length $L$. Find the minimum value of $u$ for which destructive interference occurs at $S'$.
+\end{problem}
+
+\begin{figbox}{4.15}
+\begin{tikzpicture}[scale=0.85]
+  % optical axis
+  \draw[thickline] (-5.0,0) -- (5.3,0);
+  % source and lenses
+  \fill (-4.4,0) circle (1.4pt) node[above left] {$S$};
+  \draw[thickline] (-3.3,1.0) .. controls (-3.52,0.5) and (-3.52,-0.5) .. (-3.3,-1.0);
+  \draw[thickline] (-3.3,1.0) .. controls (-3.08,0.5) and (-3.08,-0.5) .. (-3.3,-1.0);
+  \node[above] at (-3.3,1.0) {$L_1$};
+  \draw[thickline] (3.3,1.0) .. controls (3.52,0.5) and (3.52,-0.5) .. (3.3,-1.0);
+  \draw[thickline] (3.3,1.0) .. controls (3.08,0.5) and (3.08,-0.5) .. (3.3,-1.0);
+  \node[above] at (3.3,1.0) {$L_2$};
+  % upper tube
+  \draw[thickline] (-1.8,0.55) -- (1.8,0.55);
+  \draw[thickline] (-1.8,0.55) -- (-1.8,2.3);
+  \draw[thickline] (1.8,0.55) -- (1.8,2.3);
+  \draw[thickline] (-1.6,1.45) -- (-1.6,2.3);
+  \draw[thickline] (1.6,1.45) -- (1.6,2.3);
+  \draw[thickline] (-1.6,1.45) -- (1.6,1.45);
+  \draw[thickline,->] (-1.7,2.2) -- (-1.7,1.55);
+  \draw[thickline,->] (1.7,1.55) -- (1.7,2.2);
+  \node at (-2.15,2.1) {$u$};
+  \node at (2.15,2.1) {$u$};
+  % lower tube
+  \draw[thickline] (-1.8,-0.55) -- (1.8,-0.55);
+  \draw[thickline] (-1.8,-0.55) -- (-1.8,-2.3);
+  \draw[thickline] (1.8,-0.55) -- (1.8,-2.3);
+  \draw[thickline] (-1.6,-1.45) -- (-1.6,-2.3);
+  \draw[thickline] (1.6,-1.45) -- (1.6,-2.3);
+  \draw[thickline] (-1.6,-1.45) -- (1.6,-1.45);
+  % length of the tubes
+  \draw[dim] (-1.7,-1.28) -- (1.7,-1.28) node[midway,below] {$L$};
+  % light path
+  \draw[dashedline] (-4.4,0) -- (-3.3,1.0);
+  \draw[dashedline] (-4.4,0) -- (-3.3,-1.0);
+  \draw[dashedline] (-3.3,1.0) -- (3.3,1.0);
+  \draw[dashedline] (-3.3,-1.0) -- (3.3,-1.0);
+  \draw[dashedline] (3.3,1.0) -- (4.9,0);
+  \draw[dashedline] (3.3,-1.0) -- (4.9,0);
+  \draw[->] (-0.12,1.0) -- (0.12,1.0);
+  \draw[->] (-0.12,-1.0) -- (0.12,-1.0);
+  \fill (4.9,0) circle (1.4pt) node[right] {$S'$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{4.16}
+Consider a reflection grating whose grooves are equally spaced with spacing $d$, but whose reflectivity alternates: $(1+\alpha)$, $(1-\alpha)$, $(1+\alpha)$, $(1-\alpha)$, and so on, where $\alpha$ is a constant much smaller than $1$. Discuss the angular distribution of the diffracted intensity. Under what circumstances is the effect of $\alpha$ most significant?
+\end{problem}
+
+\begin{problem}{4.17}
+A sailor comes out of a tavern drunk and staggers along many steps, each step having the same length $L$, but the direction of each step being random. After walking $N$ steps over a fairly long time, on average how far is he from the tavern?
+\end{problem}
+
+\begin{problem}{4.18}
+The aperture of a lens is square, with side $D$, and a monochromatic point source is placed on the principal axis of the lens. On the plane passing through its geometrical image point and perpendicular to the principal axis, find the intensity distribution near the geometrical image point produced by diffraction at the edge of the aperture.
+\end{problem}
+
+\begin{problem}{4.19}
+A beam of monochromatic partially elliptically polarised light propagates along the $z$ direction and passes through a linear polariser. When the transmission axis of the polariser is along the $x$ direction, the transmitted intensity is maximum, with value $1.5I_0$. When the transmission axis is along the $y$ direction, the transmitted intensity is minimum, with value $I_0$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=2pt,topsep=2pt]
+\item When the transmission axis makes an angle $\theta$ with the $x$ axis, what is the transmitted intensity? Does your answer depend on the unpolarised part of the beam?
+\item Let the original beam first pass through a quarter-wave plate and then through a linear polariser, the axis of the quarter-wave plate being along the $x$ axis or the $y$ axis. It is now found that when the transmission axis of the polariser makes an angle of $30\degree$ with the $x$ axis the transmitted intensity is maximum. Find this maximum intensity. Also find the percentage of the unpolarised component in the incident light.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{4.20}
+In order to observe monochromatic light from the sun, the French astronomer B.~Lyot invented a birefringent filter consisting of a set of birefringent crystals (C). Starting from the first crystal (thickness $d$), the thickness of each subsequent crystal is twice that of the preceding one. Polarising films (P) are placed between the crystals and at both ends (see Fig.~1). The optic axes of all the crystals are parallel to each other and perpendicular to the direction of propagation of the light. The transmission axes of the polarising films are also all parallel, but make an angle of $45\degree$ with the direction of the optic axes (see Fig.~2). Only certain wavelength bands can pass through the filter. For a filter consisting of $s$ crystals, calculate the transmission coefficient as a function of the wavelength $\lambda$, and find the bandwidth $\Delta\lambda$ of the light that can pass through the filter.
+\end{problem}
+
+\begin{figbox}{4.20(a)}
+\begin{tikzpicture}[scale=0.78]
+  % incident light
+  \draw[thickline,->] (-2.5,0) -- (-1.65,0);
+  \node[above] at (-2.07,0.2) {light};
+  % polarising films and crystals
+  \fill (-1.60,-1.0) rectangle (-1.48,1.0);
+  \draw[thickline] (-1.48,-0.9) rectangle (-0.93,0.9);
+  \node[font=\small] at (-1.205,0) {$C_1$};
+  \fill (-0.93,-1.0) rectangle (-0.81,1.0);
+  \draw[thickline] (-0.81,-0.9) rectangle (0.29,0.9);
+  \node[font=\small] at (-0.26,0) {$C_2$};
+  \fill (0.29,-1.0) rectangle (0.41,1.0);
+  \draw[thickline] (0.41,-0.9) rectangle (2.61,0.9);
+  \node[font=\small] at (1.51,0) {$C_3$};
+  \fill (2.61,-1.0) rectangle (2.73,1.0);
+  % emergent light
+  \draw[thickline,->] (2.73,0) -- (3.55,0);
+  \node[above] at (3.14,0.2) {light};
+  % labels of the films
+  \node[below] at (-1.54,-1.0) {$P_1$};
+  \node[below] at (-0.87,-1.0) {$P_2$};
+  \node[below] at (0.35,-1.0) {$P_3$};
+  \node[below] at (2.67,-1.0) {$P_4$};
+  % thicknesses
+  \draw[dim] (-1.48,1.25) -- (-0.93,1.25) node[midway,above] {$d$};
+  \draw[dim] (-0.81,1.25) -- (0.29,1.25) node[midway,above] {$2d$};
+  \draw[dim] (0.41,1.25) -- (2.61,1.25) node[midway,above] {$4d$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{4.20(b)}
+\begin{tikzpicture}[scale=0.9]
+  % optic axes
+  \draw[thickline,->] (0,0) -- (0,2.6);
+  \node[rotate=90,above] at (-0.12,1.3) {optic axes of all crystals};
+  % polarisation planes
+  \draw[thickline,->] (0,0) -- (2.2,2.2);
+  \node[rotate=45,below] at (1.2,1.2) {polarisation planes of all $P$};
+  % angle
+  \draw (0,0) ++(45:0.75) arc[start angle=45,end angle=90,radius=0.75];
+  \node at (0.33,0.9) {$45\degree$};
+\end{tikzpicture}
+\end{figbox}

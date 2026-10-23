@@ -1,0 +1,494 @@
+\begin{problem}{1.28}
+Two small balls $A$ and $B$, each of mass $m$, are connected by a light rod of length $l$ and stand vertically on a smooth horizontal surface, as shown in the figure. A constant horizontal force $F$ is applied to the lower ball $B$, so that $B$ moves through a certain distance; at this moment the rod makes an angle $\theta$ with the horizontal. Find the force exerted by the horizontal surface on ball $B$ at this moment.
+\end{problem}
+
+\begin{figbox}{1.28}
+\begin{tikzpicture}[scale=0.95]
+  % ground
+  \draw[thickline] (-1.0,0) -- (4.5,0);
+  \foreach \xx in {-0.9,-0.6,...,4.4}
+    \draw[thinline] (\xx,0) -- ++(-0.11,-0.11);
+  % balls and rod
+  \coordinate (B) at (1.45,0.27);
+  \coordinate (A) at (1.45,3.15);
+  \draw[thickline] (B) -- (A);
+  \draw[thickline,fill=white] (B) circle (0.25);
+  \draw[thickline,fill=white] (A) circle (0.25);
+  \node[left] at ($(A)+(-0.30,0)$) {$A$};
+  \node[left] at ($(B)+(-0.30,0)$) {$B$};
+  \node[right] at ($(A)+(0.16,-1.40)$) {$l$};
+  % applied force
+  \draw[force] ($(B)+(0.26,0)$) -- ++(1.55,0) node[right] {$F$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.29}
+A small ring $A$ of mass $m$ is threaded on a smooth fixed horizontal rod and is connected by a string of length $l$ to a small ball $B$, also of mass $m$. The string is first held straight in the horizontal direction, and the system is then released from rest. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the angle $\theta$ between the string and the horizontal rod at which the speed of the ball is greatest, and this maximum speed;
+\item the tension in the string when the speed of the ball is greatest.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.29}
+\begin{tikzpicture}[scale=0.95]
+  % horizontal rod
+  \draw[thickline] (-2.7,0.10) -- (4.6,0.10);
+  \draw[thickline] (-2.7,-0.10) -- (4.6,-0.10);
+  % ring and ball
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.95,-1.75);
+  \draw[thickline] (A) -- (B);
+  \draw[thickline,fill=white] (A) circle (0.14);
+  \draw[thickline,fill=white] (B) circle (0.17);
+  \node[above] at ($(A)+(0,0.22)$) {$A$};
+  \node[right] at ($(B)+(0.22,0)$) {$B$};
+  % angle
+  \draw[thinline] (0.95,0) arc (0:-30.7:0.95);
+  \node at (1.12,-0.34) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.30}
+A thin hollow tube is bent into a ring of radius $R$. The ring is fixed upright on a slider which rests on a smooth horizontal surface; the total mass of the ring and the slider is $M$. Inside the cavity of the tube there is a small ball of mass $m$, which can move along the cavity without friction, as shown in the figure. Initially the ball is at the highest point of the cavity, and both the ring and the ball are at rest. Under a small disturbance the ball slides down along the cavity from the right-hand side. When the ball has turned through an angle $\theta=\frac{\pi}{4}$ about the centre $O$ of the ring, the leftward speed of the ring reaches its maximum. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the value of the ratio $\dfrac{M}{m}$ and the maximum leftward speed of the ring;
+\item the radius of curvature of the trajectory of the ball at this position.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.30}
+\begin{tikzpicture}[scale=1.0]
+  \def\R{1.85}
+  \coordinate (O) at (0,2.25);
+  % tube
+  \draw[thickline] (O) circle (\R);
+  \draw[thickline] (O) circle ({0.92*\R});
+  % slider
+  \draw[thickline,fill=black!15] (-0.95,0.22) rectangle (0.95,0.40);
+  % ground
+  \draw[thickline] (-1.9,0.22) -- (1.9,0.22);
+  \foreach \xx in {-1.8,-1.5,...,1.8}
+    \draw[thinline] (\xx,0.22) -- ++(-0.11,-0.11);
+  % ball on the tube
+  \coordinate (Ball) at ({\R*sin(45)},{\R*cos(45)});
+  \draw[dashedline] (O) -- (Ball);
+  \draw[dashedline] (O) -- (0,{2.25+\R});
+  \fill[black] (Ball) circle (0.11);
+  \node[above right] at ($(Ball)+(0.05,0.05)$) {$m$};
+  % angle theta
+  \draw[thinline] (0,3.25) arc (90:45:1.00);
+  \node at (0.47,3.16) {$\theta$};
+  % labels
+  \node[below left] at (O) {$O$};
+  \node at (1.12,0.40) {$M$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.31}
+A string passes over two small bearings $a$ and $b$ at the same height, the distance between them being $2l$. To the two ends of the string are attached bodies $A$ and $B$, each of mass $m$, and to the midpoint of the part of the string between the two bearings is attached a body $C$ of mass $M$, as shown in the figure. The system is released from rest, and body $C$ moves vertically downward. Neglect the mass of the bearings and all friction.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item When the angle between the string joining $C$ and the vertical is $\alpha=60\degree$, the speed of $C$ is greatest. Find the value of $\dfrac{M}{m}$ and the maximum speed of $C$;
+\item If $\dfrac{M}{m}=1$, find the acceleration of body $C$ when $\alpha=60\degree$.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.31}
+\begin{tikzpicture}[scale=0.95]
+  % bearings
+  \coordinate (a) at (-2.25,2.60);
+  \coordinate (b) at (2.25,2.60);
+  \draw[thickline,fill=white] (a) circle (0.13);
+  \draw[thickline,fill=white] (b) circle (0.13);
+  \node[above left] at ($(a)+(-0.05,0.10)$) {$a$};
+  \node[above right] at ($(b)+(0.05,0.10)$) {$b$};
+  % string between the bearings and body C
+  \draw[thickline] (a) -- (b);
+  \draw[thickline,fill=white] (-0.32,1.90) rectangle (0.32,2.60);
+  \node at (0,2.26) {$M$};
+  \node[right] at (0.40,2.26) {$C$};
+  % lower position of C (dashed) and the string at angle alpha
+  \coordinate (V) at (0,1.05);
+  \draw[dashedline] (a) -- (V);
+  \draw[dashedline] (b) -- (V);
+  \draw[dashedline] (-0.32,1.05) rectangle (0.32,0.45);
+  \draw[dashedline] (0,1.90) -- (0,0.30);
+  % angle alpha
+  \draw[thinline] (V) ++(90:0.52) arc (90:144:0.52);
+  \draw[thinline] (V) ++(90:0.52) arc (90:36:0.52);
+  \node at (-0.36,1.72) {$\alpha$};
+  \node at (0.36,1.72) {$\alpha$};
+  % hanging masses
+  \draw[thickline] (a) -- (-2.25,0.55);
+  \draw[thickline] (b) -- (2.25,0.55);
+  \draw[thickline,fill=white] (-2.55,0.05) rectangle (-1.95,0.55);
+  \draw[thickline,fill=white] (1.95,0.05) rectangle (2.55,0.55);
+  \node at (-2.25,0.30) {$m$};
+  \node[left] at (-2.62,0.30) {$A$};
+  \node at (2.25,0.30) {$m$};
+  \node[right] at (2.62,0.30) {$B$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.32}
+Two blocks $A$ and $B$ of masses $M=3.60\unitv{kg}$ and $m=1.80\unitv{kg}$ respectively are connected to the two ends of an elastic string of natural length $l_0=0.300\unitv{m}$ and stiffness $k=24.0\unitv{N/m}$, and are placed on a horizontal table, as shown in the figure. The coefficient of friction between either block and the table is $\mu=0.300$. The two blocks are now pulled apart until the distance between them is $l=1.200\unitv{m}$, and are released from rest. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the speeds $v_A$ and $v_B$ of the two blocks when they collide;
+\item the time elapsed from the release to the collision.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.32}
+\begin{tikzpicture}[scale=0.95]
+  % table
+  \draw[thickline] (-3.3,0) -- (3.4,0);
+  \foreach \xx in {-3.2,-2.9,...,3.3}
+    \draw[thinline] (\xx,0) -- ++(-0.11,-0.11);
+  % blocks
+  \draw[thickline,fill=white] (-3.05,0) rectangle (-2.35,0.78);
+  \node at (-2.70,0.38) {$M$};
+  \node[above] at (-2.70,0.82) {$A$};
+  \draw[thickline,fill=white] (2.35,0) rectangle (3.05,0.78);
+  \node at (2.70,0.38) {$m$};
+  \node[above] at (2.70,0.82) {$B$};
+  % elastic string
+  \draw[thickline,decorate,decoration={coil,aspect=0.5,segment length=4.2pt,amplitude=2.0pt}]
+    (-2.35,0.42) -- (2.35,0.42);
+  \node[above] at (0,0.58) {$k$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.33}
+Two supernovae of masses $M$ and $m$ respectively are separated by a distance $d$ and move in their own circular orbits about their fixed centre of mass. In the explosion of the supernova, the star of mass $M$ loses an amount $\Delta M$ of mass. Assume that the explosion is instantaneous and completely spherically symmetric, and neglect the direct action of the explosion debris on the star of mass $m$. What relation must $\Delta M$ satisfy in order that the remaining binary system should stay bound and not separate from each other?
+\end{problem}
+
+\begin{problem}{1.34}
+A particle of mass $m_1$ moving with speed $v_1$ is captured by a stationary nucleus. As a result, a particle of mass $m_2$ is produced and emitted in a direction perpendicular to $v_1$, the mass of the remaining nucleus being $m_3$. In this process an amount $Q$ of non-mechanical energy is converted into mechanical energy. Find the kinetic energy of the newly produced particle.
+\end{problem}
+
+\begin{problem}{1.35}
+A block initially at rest explodes into three blocks $1$, $2$ and $3$ of equal mass. The total kinetic energy released in the explosion has a fixed value $Q$, but the kinetic energies $T_1$, $T_2$, $T_3$ of the individual blocks can take many possible values. They can be represented by the lengths of the perpendiculars drawn from a point $P$ inside an equilateral triangle of height $Q$ to its three sides, as shown in the figure; however, not every set of kinetic energies corresponding to a point inside the triangle is physically allowed.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the boundary of the region of physically allowed points;
+\item If instead a positronium at rest annihilates into three $\gamma$ photons whose energies have the total value $Q$, find likewise the boundary of the region of physically allowed points.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.35}
+\begin{tikzpicture}[scale=1.15]
+  \coordinate (V1) at (-2.0,0);
+  \coordinate (V2) at (2.0,0);
+  \coordinate (V3) at (0,3.464);
+  \coordinate (P)  at (0.45,1.35);
+  \draw[thickline] (V1) -- (V2) -- (V3) -- cycle;
+  % perpendiculars from P to the three sides
+  \draw[dashedline] (P) -- (-0.803,2.074);
+  \draw[dashedline] (P) -- (1.028,1.684);
+  \draw[dashedline] (P) -- (0.45,0);
+  \fill (P) circle (1.3pt);
+  \node[above left] at ($(P)+(0.05,0.05)$) {$P$};
+  \node at (-0.68,1.58) {$T_1$};
+  \node at (1.02,1.28) {$T_3$};
+  \node at (0.72,0.68) {$T_2$};
+  % height Q
+  \draw[dim] (2.75,0) -- (2.75,3.464);
+  \draw[thinline] (2.55,0) -- (2.95,0);
+  \draw[thinline] (2.55,3.464) -- (2.95,3.464);
+  \node[right] at (2.85,1.73) {$Q$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.36}
+On a smooth conical surface of semi-vertical angle $\theta=60\degree$, a small ball of mass $m=1.0\unitv{kg}$ is connected to a string which passes through a small hole at the apex of the cone, and moves in uniform circular motion with speed $v_0=\frac{\sqrt{15}}{4}\unitv{m/s}$; the length of the string from the ball to the hole is $r_0=0.50\unitv{m}$, as shown in the figure. The other end of the string is now pulled down slowly until the ball just leaves the conical surface. Find the work done by the pulling force during this process.
+\end{problem}
+
+\begin{figbox}{1.36}
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,3.45);
+  \coordinate (C) at (0,0.55);
+  % generators
+  \draw[thickline] (O) -- (-2.3,0.55);
+  \draw[thickline] (O) -- (2.3,0.55);
+  % base ellipse: front solid, back dashed
+  \draw[thickline] (2.3,0.55) arc (0:-180:2.3 and 0.55);
+  \draw[dashedline] (-2.3,0.55) arc (180:0:2.3 and 0.55);
+  % axis
+  \draw[axis] (O) -- (0,-0.10);
+  % ball on the surface
+  \coordinate (B) at (1.38,1.71);
+  \draw[thickline] (O) -- (B);
+  \fill[black] (B) circle (0.11);
+  \node[right] at ($(B)+(0.12,0.10)$) {$m$};
+  \node[right] at (0.86,2.66) {$r_0$};
+  % angle at the apex
+  \draw[thinline] (O) ++(-90:0.80) arc (-90:-51.6:0.80);
+  \node at (0.38,2.42) {$\theta$};
+  \node[above] at ($(O)+(0,0.05)$) {$O$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.37}
+On a smooth horizontal surface, two small balls $A$ and $B$, each of mass $m$, are connected by a light spring of stiffness $k$, the natural length of the spring being $a$. Initially both balls are at rest and the spring is undeformed. A lead pellet, also of mass $m$, is shot with a horizontal velocity perpendicular to the line joining the two balls into one of the balls, $B$, and remains inside it, as shown in the figure. It is known that in the subsequent motion the maximum length of the spring is $2a$. Find the speed $v_0$ of the pellet before it entered the ball.
+\end{problem}
+
+\begin{figbox}{1.37}
+\begin{tikzpicture}[scale=1.0]
+  % balls
+  \coordinate (A) at (0,3.10);
+  \coordinate (B) at (0,0.55);
+  \draw[thickline,fill=white] (A) circle (0.23);
+  \draw[thickline,fill=white] (B) circle (0.23);
+  % spring
+  \draw[thickline,decorate,decoration={coil,aspect=0.5,segment length=4.4pt,amplitude=4.2pt}]
+    (0,2.87) -- (0,0.78);
+  \node[right] at (0.22,1.82) {$k$};
+  \node[above] at (-0.10,3.36) {$m$};
+  \node[right] at (0.28,3.05) {$A$};
+  \node[right] at (0.28,0.60) {$B$};
+  \node[below] at (0.10,0.28) {$m$};
+  % pellet
+  \draw[thickline,fill=white] (-1.35,0.55) circle (0.10);
+  \node[left] at (-1.48,0.55) {$m$};
+  \draw[force] (-1.20,0.55) -- (-0.30,0.55);
+  \node[above] at (-0.78,0.63) {$v_0$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.38}
+Two comets of masses $m_1$ and $m_2$ move in their own parabolic orbits about the Sun, the two orbits being coplanar. When the two comets arrive at a distance $R$ from the Sun, they collide at right angles and combine into a single body. Discuss the orbit of this combined body afterwards.
+\end{problem}
+
+\begin{problem}{1.39}
+A lunar lander of mass $m$ is attached to a space shuttle of mass $M(=2m)$; together they move in a circular orbit about the Moon, the radius of the orbit being $3$ times the Moon's radius $R_m$. At a certain moment the shuttle ejects the lander in the direction opposite to the motion. Afterwards the lander still moves in the original direction and, along the elliptical orbit shown in the figure, descends to the Moon's surface. It stays on the Moon's surface for a period of time, and after completing its survey work it starts again quickly along the original elliptical orbit and returns to the point of separation, where it docks with the shuttle. Find the time for which the lander can stay on the Moon's surface. Given that the gravitational acceleration at the Moon's surface is $g_m=1.62\unitv{m/s^2}$ and the Moon's radius is $R_m=1.74\times10^6\unitv{m}$.
+\end{problem}
+
+\begin{figbox}{1.39}
+\begin{tikzpicture}[scale=1.22]
+  \def\Rm{0.9}
+  \coordinate (M) at (0,0);
+  % original circular orbit
+  \draw[thickline] (M) circle (2.7);
+  % transfer ellipse: apocentre (0,2.7), pericentre (0,-0.9)
+  \draw[dashedline,postaction={decorate,decoration={markings,
+        mark=at position 0.26 with {\arrow{>}}}}]
+    plot[domain=360:0,samples=140] ({1.72*sin(\x)},{0.9+1.8*cos(\x)});
+  % the Moon
+  \draw[thickline,fill=black!10] (M) circle (\Rm);
+  \draw[thickline] (0,-0.05) -- (-38:0.86);
+  \node at (-0.02,0.30) {$R_m$};
+  % point of separation
+  \draw[thickline,fill=white] (0,2.7) ellipse (0.10 and 0.07);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.40}
+An ``interstellar bullet'' is regarded as a dense gas cloud which passes like a ballistic particle through low-density interstellar gas clouds. Somewhere in the universe there is a spherical low-density uniform gas cloud of mass $M$ and radius $R$; an ``interstellar bullet'' has a radius much smaller than $R$ and a mass $m\ll M$. The angular momentum of the bullet about the centre of the gas cloud is
+\[
+L=m\sqrt{\frac{GMR}{32}},
+\]
+and the total energy of the bullet is
+\[
+E=-\frac{5GMm}{4R}.
+\]
+Neglect all non-gravitational forces.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Is the motion of the bullet always inside the cloud, always outside the cloud, or sometimes inside and sometimes outside?
+\item Find the distances from the centre of the gas cloud of the turning points of the bullet's orbit;
+\item Discuss the shape of the bullet's orbit and find its period of motion.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.41}
+To launch a spacecraft from the Earth to outside the solar system there are two schemes. Scheme I: launch it directly with a sufficiently large speed (greater than the escape speed from the solar system). Scheme II: make the spacecraft approach an outer planet of the solar system (for example Mars), let its direction of motion be changed under the action of that planet, and then escape from the solar system. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the minimum speed $v_0$ relative to the Earth required for launching from the ground in scheme I, and the direction of launch;
+\item the speed of the spacecraft when it crosses the orbit of Mars, if it is launched from the ground with speed $v_0$ relative to the Earth in the direction of part (1). Assume that when the spacecraft crosses the orbit of Mars it is very far from Mars;
+\item the speed of launch from the ground required for the spacecraft to enter the gravitational field of Mars and yet still be able to fly out of the solar system. Assume that the direction of launch relative to the Earth is the same as in part (1), and that the spacecraft leaves the gravitational field of Mars along the tangent to the orbit of Mars;
+\item the maximum percentage of energy saved by scheme II compared with scheme I.
+\end{enumerate}
+Assume that all the planets move in the same plane in the same direction about the Sun in circular orbits, and that air resistance and the effect of the Earth's rotation may be neglected.
+\end{problem}
+
+\begin{problem}{1.42}
+Around a star of mass $M$, dust of mass density $\rho$ is distributed uniformly and spherically symmetrically over a very large region. Within the dust region a planet of mass $m$ moves in a circular orbit of radius $r_0$ about the star (neglect the drag of the dust on the planet). If the planet receives a small radial disturbance which makes it deviate slightly from the circular orbit, describe quantitatively the subsequent motion of the planet.
+\end{problem}
+
+\begin{problem}{1.43}
+A particle of mass $m$ moves in a circular orbit of radius $r_0$ under the action of a central attractive force, the magnitude of which can be written as
+\[
+F=kr^{n},
+\]
+where $r$ is the distance from the particle to the fixed centre of force, $k$ is a positive constant and $n$ is a constant which may be positive or negative (not necessarily an integer).
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item For what values of $n$ is this circular orbit stable against small radial disturbances?
+\item For a stable circular orbit, find the period of the radial oscillations of the particle under a small radial disturbance, in terms of $r_0$, $m$, $k$ and $n$.
+\item For what values of $n$ is the period of motion in the stable circular orbit an integral multiple of the period of the small radial oscillations?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{1.44}
+The flyball governor of a steam engine consists of two balls, each of mass $m$, connected by four hinged arms, each of length $l$, to the upper and lower sleeves on a vertical shaft; the upper sleeve is fixed, while the lower sleeve, of mass $M$, can slide up and down the shaft without friction, as shown in the figure. The whole device rotates uniformly about the vertical shaft with constant angular velocity $\omega_0$. Neglect the mass of the arms and the moment of inertia of the sleeve $M$.
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item Find the distance between sleeve $M$ and the upper sleeve in equilibrium;
+\item Find the frequency of small up-and-down oscillations of the sleeve $M$ about the equilibrium position;
+\item If the shaft can rotate freely and the system rotates steadily with initial angular velocity $\omega_0$, and the sleeve $M$ is given a small up-and-down disturbance, is the frequency of its small oscillations the same as the value in (2)? If not, find this frequency.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.44}
+\begin{tikzpicture}[scale=1.0]
+  % shaft
+  \draw[thickline] (0,-0.30) -- (0,4.45);
+  % fixed upper sleeve
+  \draw[thickline,fill=black!75] (-0.14,4.12) rectangle (0.14,4.44);
+  % balls
+  \coordinate (L) at (-1.95,2.75);
+  \coordinate (R) at (1.95,2.75);
+  \draw[thickline,fill=white] (L) circle (0.16);
+  \draw[thickline,fill=white] (R) circle (0.16);
+  % arms
+  \draw[thickline] (0,4.10) -- (L);
+  \draw[thickline] (0,4.10) -- (R);
+  \draw[thickline] (L) -- (0,1.40);
+  \draw[thickline] (R) -- (0,1.40);
+  % sliding sleeve
+  \draw[thickline,fill=white] (-0.17,1.08) rectangle (0.17,1.40);
+  \node[right] at (0.22,1.24) {$M$};
+  % ball labels
+  \node[left] at (-2.25,2.75) {$m$};
+  \node[right] at (2.12,2.75) {$m$};
+  % arm lengths
+  \node at (-1.12,3.66) {$l$};
+  \node at (1.12,3.66) {$l$};
+  \node at (-1.12,1.86) {$l$};
+  \node at (1.12,1.86) {$l$};
+  % rotation
+  \draw[force] (-0.62,0.18) arc (180:10:0.62 and 0.20);
+  \node[right] at (0.70,0.18) {$\omega_0$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.45}
+A small ball of mass $m$ is attached to one end of an elastic string of stiffness $k$. The string passes through a small hole $O$ in a fixed vertical board, and its other end is attached to the ground directly below the hole. When the ball is at the hole, the string is just at its natural length, as shown in Fig.~1.45(1). The ball is now pulled along the board in the horizontal ($x$) direction through a distance $a$, and is set in motion with initial speed $v_0=2\sqrt{ga}$; the direction of $v_0$ is parallel to the board and makes an angle $\theta=60\degree$ with the $x$ direction, as shown in Fig.~1.45(2). Let $ka=mg$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the time after which the ball reaches its highest position, and this height;
+\item the position and the velocity of the ball when it next passes through the $x$ axis, and the time required.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.45(1)}
+\begin{tikzpicture}[scale=1.12]
+  % board (seen edge-on)
+  \draw[thickline,fill=black!8] (-0.12,0) rectangle (0.12,4.05);
+  % ground
+  \draw[thickline] (-1.25,0) -- (1.25,0);
+  \foreach \xx in {-1.15,-0.90,...,1.20}
+    \draw[thinline] (\xx,0) -- ++(-0.10,-0.10);
+  % hole
+  \coordinate (O) at (0,2.55);
+  \draw[thickline,fill=white] (O) circle (0.075);
+  \node[above left] at ($(O)+(-0.06,0.06)$) {$O$};
+  % ball
+  \coordinate (B) at (0.72,2.55);
+  \draw[thickline,fill=white] (B) circle (0.16);
+  % string: ball - hole - elastic part down to the ground
+  \draw[thickline] (B) -- (0.06,2.55);
+  \draw[thickline] (-0.18,2.50) -- (-0.18,2.55) -- (-0.06,2.55);
+  \draw[thickline,decorate,decoration={coil,aspect=0.5,segment length=3.3pt,amplitude=1.5pt}]
+    (-0.18,2.46) -- (-0.18,0.03);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{1.45(2)}
+\begin{tikzpicture}[scale=1.0]
+  % board (front view)
+  \draw[thickline] (-2.55,-1.55) rectangle (2.40,2.25);
+  % axes
+  \draw[axis] (0,0) -- (3.10,0) node[right] {$x$};
+  \draw[axis] (0,0) -- (0,2.00) node[above] {$y$};
+  % hole
+  \draw[thickline,fill=white] (0,0) circle (0.075);
+  \node[left] at (-0.14,-0.02) {$O$};
+  % ball
+  \coordinate (B) at (1.75,0);
+  \draw[thickline,fill=white] (B) circle (0.14);
+  % elastic string
+  \draw[thickline,decorate,decoration={coil,aspect=0.5,segment length=2.4pt,amplitude=0.85pt}]
+    (0.08,0) -- (1.60,0);
+  \node[above] at (0.92,0.08) {$a$};
+  % initial velocity
+  \draw[force] ($(B)+(60:0.15)$) -- ++(60:1.10);
+  \node[right] at ($(B)+(0.55,0.85)$) {$v_0$};
+  % angle
+  \draw[thinline] ($(B)+(0.55,0)$) arc (0:60:0.55);
+  \node at ($(B)+(0.72,0.24)$) {$\theta$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.46}
+A long cylinder of mass $M$ and length $l$, with its bottom upward and its mouth downward, is suspended from a spring of stiffness $k$. At the inner bottom of the cylinder there is a piston of mass $m$ and negligible thickness; between the piston and the bottom of the cylinder a small spring of negligible natural length is compressed and locked, and the whole system is in equilibrium, as shown in the figure. The lock is now released, so that the cylinder and the piston acquire velocities in an extremely short time. It is known that the velocity acquired by the cylinder is $v_0=\frac{l}{2}\sqrt{\frac{m}{k}}$, and that in the subsequent motion the friction between the piston and the cylinder is $f=\frac{1}{2}mg$; let $M=3m$. Find:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em,itemsep=1pt,topsep=2pt]
+\item the lowest position which the cylinder can reach in the subsequent motion, and the time taken;
+\item the relation which the length $l$ of the cylinder must satisfy in order that the cylinder can reach this lowest position.
+\end{enumerate}
+\end{problem}
+
+\begin{figbox}{1.46}
+\begin{tikzpicture}[scale=1.02]
+  % ceiling
+  \draw[thickline] (-1.55,5.00) -- (1.55,5.00);
+  \foreach \xx in {-1.45,-1.20,...,1.50}
+    \draw[thinline] (\xx,5.00) -- ++(-0.10,0.16);
+  % spring
+  \draw[thickline,decorate,decoration={coil,aspect=0.5,segment length=4.4pt,amplitude=4.0pt}]
+    (0,5.00) -- (0,3.58);
+  \node[right] at (0.16,4.30) {$k$};
+  % cylinder: closed top (drawn at the upper end) and open mouth below
+  \draw[thickline,fill=black!20] (-0.72,3.40) rectangle (0.72,3.56);
+  \draw[thickline] (-0.72,3.40) -- (-0.72,0.90);
+  \draw[thickline] (0.72,3.40) -- (0.72,0.90);
+  \draw[thinline] (0.74,3.53) -- (0.86,3.62);
+  \node[right] at (0.86,3.63) {$M$};
+  % piston
+  \draw[thickline,fill=black!80] (-0.66,3.12) rectangle (0.66,3.26);
+  \draw[thinline] (0.68,3.19) -- (0.78,3.19);
+  \node[right] at (0.78,3.19) {$m$};
+  % length l
+  \draw[dim] (-1.15,3.42) -- (-1.15,0.90);
+  \draw[thinline] (-0.78,3.42) -- (-1.25,3.42);
+  \draw[thinline] (-0.78,0.90) -- (-1.25,0.90);
+  \node[left] at (-1.30,2.16) {$l$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{problem}{1.47}
+On a smooth horizontal table, a small ball of mass $m$ is connected to a fine string which passes through a small hole $O$ in the table, and to the other end of the string a block of mass $M$ is suspended. The ball moves on the table in uniform circular motion about the hole $O$ with angular velocity $\omega_0$, while the block below the table remains at rest, as shown in the figure. If the block is now given a small vertical disturbance, prove that it will oscillate up and down in simple harmonic motion, and find its period of oscillation.
+\end{problem}
+
+\begin{figbox}{1.47}
+\begin{tikzpicture}[scale=1.08]
+  % table
+  \coordinate (T1) at (-2.70,-0.75);
+  \coordinate (T2) at (1.50,-0.75);
+  \coordinate (T3) at (2.80,1.05);
+  \coordinate (T4) at (-1.40,1.05);
+  \draw[thickline] (T1) -- (T2) -- (T3) -- (T4) -- cycle;
+  % hole
+  \coordinate (O) at (0.15,0.15);
+  \draw[thickline,fill=white] (O) circle (0.07);
+  \node[above left] at ($(O)+(-0.06,0.06)$) {$O$};
+  % circular path of the ball
+  \draw[dashedline] (O) ellipse (1.55 and 0.72);
+  % ball and string on the table
+  \coordinate (B) at ($(O)+(1.55,0)$);
+  \draw[thickline,fill=white] (B) circle (0.13);
+  \node[above right] at ($(B)+(0.08,0.02)$) {$m$};
+  \draw[thickline] (O) -- (B);
+  % sense of motion
+  \draw[force] ($(O)+(0.90,0.58)$) -- ($(O)+(1.13,0.49)$);
+  % string below the table and the block
+  \draw[thickline] (O) -- ($(O)+(0,-1.60)$);
+  \draw[thickline,fill=white] ($(O)+(-0.28,-1.95)$) rectangle ($(O)+(0.28,-1.40)$);
+  \node at ($(O)+(0,-1.68)$) {$M$};
+\end{tikzpicture}
+\end{figbox}

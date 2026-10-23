@@ -1,0 +1,986 @@
+\subsection*{Experiment 7.11 \quad Study of the characteristics of half-wave rectification}
+
+\textbf{[Apparatus and materials available]}
+
+A signal generator, a dual-trace oscilloscope, a rectifying diode, a multimeter, and a number of connecting wires.
+
+\textbf{[Requirements]}
+
+(1) Draw the circuit diagram of a half-wave rectifier.
+
+(2) Observe with the oscilloscope the waveform of the input voltage and the waveform of the voltage across the load; draw the waveforms and calculate the frequency and the voltage amplitude.
+
+(3) Measure the voltage across the load with the multimeter, compare it with the voltage value measured with the oscilloscope, and explain the relation between them.
+
+\textbf{Solution 7.11}\quad \textbf{1.} The circuit diagram of the half-wave rectifier is shown in Fig.~7.11(a). In the figure $\mathrm{CH}_1$ is the $Y_1$-axis input of the oscilloscope (channel 1), and $\mathrm{CH}_2$ is the $Y_2$-axis input of the oscilloscope (channel 2).
+
+\begin{figbox}{7.11(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% source
+\draw (0.6,2.4) circle (0.36);
+\draw plot[domain=0:6.283,samples=60,smooth] ({0.6+0.13*sin(\x r)},{2.4+0.19*cos(\x r)});
+\node[below] at (0.62,1.92) {\small $\sim$};
+% top rail with diode
+\draw (0.6,2.76) -- (0.6,3.5);
+\draw (0.6,3.5) -- (2.55,3.5);
+\draw[fill=white] (2.55,3.25) -- (2.55,3.75) -- (3.05,3.5) -- cycle;
+\draw (3.05,3.25) -- (3.05,3.75);
+\node[above] at (2.80,3.85) {$D$};
+\draw (3.05,3.5) -- (4.95,3.5);
+\draw (4.95,3.5) -- (4.95,2.95);
+% load
+\draw (4.72,2.95) rectangle (5.18,1.75);
+\node[right] at (5.24,2.35) {$R$};
+\draw (4.95,1.75) -- (4.95,1.0);
+\draw (4.95,1.0) -- (0.6,1.0);
+\draw (0.6,1.0) -- (0.6,2.04);
+% input measurement CH1
+\fill (1.75,3.5) circle (0.05);
+\node[above] at (1.75,3.56) {\small $\mathrm{CH}_1$};
+\draw (1.75,3.5) -- (1.75,4.35);
+\draw (1.75,4.35) -- (2.70,4.35);
+\fill (2.70,4.35) circle (0.05);
+\node[right] at (2.76,4.35) {\small to $Y_1$};
+\draw (1.75,1.0) -- (1.75,0.45);
+\draw (1.75,0.45) -- (2.70,0.45);
+\fill (2.70,0.45) circle (0.05);
+\node[right] at (2.76,0.45) {\small to earth};
+% output measurement CH2
+\fill (3.90,3.5) circle (0.05);
+\node[above] at (3.90,3.56) {\small $\mathrm{CH}_2$};
+\draw (3.90,3.5) -- (3.90,4.35);
+\draw (3.90,4.35) -- (2.70,4.35);
+\fill (4.60,1.0) circle (0.05);
+\draw (4.60,1.0) -- (4.60,0.45);
+\draw (4.60,0.45) -- (2.70,0.45);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2.} With $\mathrm{CH}_1$ the input-voltage wave is observed, and the sinusoidal waveform shown in Fig.~7.11(b)(1) is seen; with $\mathrm{CH}_2$ the waveform of the voltage across the load is observed, and the half-wave waveform shown in Fig.~7.11(b)(2) is seen.
+
+\begin{figbox}{7.11(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\begin{scope}
+\draw[->] (0,1.3) -- (4.4,1.3);
+\draw[->] (0,0) -- (0,2.6);
+\draw[line width=0.8pt] plot[domain=0:12.566,samples=120,smooth] ({0.35*\x},{1.30+0.95*sin(\x r)});
+\node at (2.20,0.70) {\small (1)};
+\end{scope}
+\begin{scope}[xshift=5.6cm]
+\draw[->] (0,1.3) -- (4.4,1.3);
+\draw[->] (0,0) -- (0,2.6);
+\draw[line width=0.8pt] plot[domain=0:3.1416,samples=40,smooth] ({0.30+0.55*\x},{1.30+0.95*sin(\x r)});
+\draw[line width=0.8pt] (2.03,1.30) -- (2.55,1.30);
+\draw[line width=0.8pt] plot[domain=0:3.1416,samples=40,smooth] ({2.55+0.55*\x},{1.30+0.95*sin(\x r)});
+\draw[line width=0.8pt] (4.28,1.30) -- (4.40,1.30);
+\node at (2.20,0.70) {\small (2)};
+\end{scope}
+\end{tikzpicture}
+\end{figbox}
+
+Measurement of the frequency $f$ of an unknown sine wave with the oscilloscope.
+
+If on the oscilloscope screen a length $l$ (in cm) contains $n$ complete periods of the sine wave, and the sweep setting of the oscilloscope is $m$ (in ms/cm), then the period $T$ of the sine wave to be measured is
+\[
+T=\frac{l\cdot m}{n}.
+\]
+Hence the frequency of the sine wave to be measured is
+\[
+f=\frac{1}{T}=\frac{n}{l\cdot m}.
+\]
+
+For example, $n=4$ complete periods of the sine wave, $l=8.00\,\mathrm{cm}$, $m=10.0\,\mathrm{ms/cm}$. Then
+\[
+f=\frac{n}{l\cdot m}=\frac{4}{8.00\times10.0}\;(\mathrm{kHz})=50.0\,(\mathrm{Hz}).
+\]
+
+The method of measuring the amplitude of a sine wave with the oscilloscope is as follows: read from the oscilloscope screen the peak-to-peak value $l_{\text{p--p}}$ of the sine wave and the scale value of the $y$-axis (in V/cm); then the amplitude of the sine wave ($U_{\text{peak}}=U_{\text{p--p}}/2$) is
+\[
+U_{\text{peak}}=(\text{scale value})\times\frac{l_{\text{p--p}}}{2}.
+\]
+
+\textbf{[Note]}\quad When reading the sweep setting of the oscilloscope and the scale value of the $Y$-axis, the fine-adjustment knob must in both cases be turned to its maximum position.
+
+\textbf{3.} The amplitude $U_{\text{peak}}$ of the half-wave rectified voltage across the load is measured with the oscilloscope, while the effective value $U_{\text{rms}}$ of the half-wave rectified voltage is measured with the AC range of the multimeter; these two satisfy
+\[
+U_{\text{rms}}=\frac{U_{\text{peak}}}{2\sqrt{2}}.
+\]
+
+\begin{commentary}
+An oscilloscope can display the waveform of an alternating current correctly. In the experiment one should master the principle of sweep synchronisation of the oscilloscope, its use and the method of reading it: for instance, how to display one stable alternating-current waveform, how to measure with the oscilloscope the period (or frequency) of a waveform to be measured, and how to measure the amplitude of an alternating-current waveform. These are all basic uses and experimental methods of the oscilloscope, and these essential points must be mastered in study.
+\end{commentary}
+
+\subsection*{Experiment 7.12 \quad Measurement of the capacitance of a given capacitor}
+
+\textbf{[Apparatus and materials available]}
+
+An oscilloscope, a signal generator (using a square wave), a resistance box, the capacitor to be measured, graph paper, a ruler, a switch and connecting wires.
+
+\textbf{[Requirements]}
+
+(1) State the measuring principle briefly, and draw the measuring circuit.
+
+(2) Adjust the oscilloscope to its working state, and observe the waveform so that it is displayed stably on the fluorescent screen.
+
+(3) Give the experimental data.
+
+(4) Find the capacitance to be measured by a graphical method.
+
+\textbf{Solution 7.12}\quad \textbf{1.} It is known that when a capacitor $C$ discharges through a resistor $R$ connected in series with it, the voltage on the capacitor and the discharge time $t$ satisfy the relation
+\[
+U_C=U_0\ee^{-t/RC},
+\]
+where $U_0$ is the voltage on the capacitor at time $t=0$. Taking logarithms of both sides of this functional equation gives
+\[
+\ln U_C(t)=\ln U_0-\frac{t}{RC}.
+\]
+The relation $U_C(t)$--$t$ is measured, the straight line $\ln U_C(t)$--$t$ is plotted, and its slope $k$ is obtained; then
+\[
+C=-\frac{1}{R\cdot k}.
+\]
+
+\textbf{2.} The measuring circuit is shown in Fig.~7.12(a).
+
+\begin{figbox}{7.12(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% outer loop
+\draw (0.9,0.6) -- (0.9,1.70);
+\draw (0.9,2.50) -- (0.9,3.6);
+\draw (0.9,3.6) -- (1.75,3.6);
+\draw (1.75,3.44) rectangle (3.15,3.76);
+\node[above] at (2.45,3.80) {$R$};
+\draw (3.15,3.6) -- (4.55,3.6);
+\draw (4.55,3.6) -- (4.55,2.55);
+% capacitor
+\draw (4.25,2.55) -- (4.85,2.55);
+\draw (4.25,2.25) -- (4.85,2.25);
+\node[right] at (4.90,2.40) {$C$};
+\draw (4.55,2.25) -- (4.55,0.6);
+\draw (4.55,0.6) -- (0.9,0.6);
+% source, square-wave symbol
+\draw (0.9,2.10) circle (0.40);
+\draw (0.66,2.02) -- (0.66,2.20) -- (0.90,2.20) -- (0.90,2.02) -- (1.14,2.02);
+% oscilloscope
+\draw (5.65,1.30) rectangle (7.55,3.10);
+\node at (6.60,1.62) {\small oscilloscope};
+\draw (5.95,2.48) circle (0.30);
+\draw[line width=0.6pt] (5.72,2.30) -- (5.90,2.30) -- (5.90,2.62) -- (6.06,2.62) -- (6.06,2.30) -- (6.20,2.30);
+\draw (4.55,3.20) -- (5.40,3.20) -- (5.40,2.95) -- (5.65,2.95);
+\fill (4.55,3.20) circle (0.05);
+\draw (4.55,1.00) -- (5.40,1.00) -- (5.40,1.45) -- (5.65,1.45);
+\fill (4.55,1.00) circle (0.05);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{3.} The waveform of $U_C(t)$ is shown in Fig.~7.12(b).
+
+\begin{figbox}{7.12(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (6.2,0) node[below] {$t$};
+\draw[->] (0,0) -- (0,4.4) node[left] {$U_C$};
+\draw (0,3.7) -- (-0.08,3.7);
+\node[left] at (-0.10,3.70) {$U_0$};
+\draw[line width=0.8pt] plot[domain=0:5.6,samples=100,smooth] ({\x},{3.7*exp(-\x/1.7)});
+\node[right] at (2.35,1.55) {\small discharge curve};
+\node[below] at (0,-0.10) {\small $O$};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{4.} The data of the relation $U_C(t)$--$t$ are measured, at least 6 points being taken; the method of recording the readings of $U_C(t)$ and $t$ is the method described in Solution 7.11 for reading the $Y$-axis voltage value and the $X$-axis time value.
+
+\textbf{5.} The straight-line graph $\ln U_C(t)$--$t$ is plotted, its slope $k$ is found, and then the value of the capacitance $C$ is obtained from the known value of the resistance $R$.
+
+\begin{commentary}
+The relation $U_C(t)$--$t$ is measured by the discharge method, and from the straight line $\ln U_C$--$t$ the value of $RC$ (or of $C$) is found by calculating the slope of the line; this is a method often used in experiment. In this experiment, however, the period $T$ of the input square wave must satisfy $T\geqslant10RC$, that is,
+\[
+\frac{T}{2}\geqslant5RC,
+\]
+for the discharge to be complete. That is, at $t=0$, $U_C(t)=U_0$, and at $t=T/2$, $U_C(t)=0$. In an examination, if the problem states that only one measurement is to be made, one may also measure directly the half-life $T_{1/2}$ in the discharge curve: from
+\[
+RC=\frac{T_{1/2}}{\ln 2}=\frac{T_{1/2}}{0.693}
+\]
+the value of $RC$ (or of $C$) is obtained.
+\end{commentary}
+
+\subsection*{Experiment 7.13 \quad Measurement of the inductance of a given inductor by two different methods}
+
+\textbf{[Apparatus and materials available]}
+
+An oscilloscope, a signal generator (using a sine wave), a resistance box, a capacitance box, the inductor to be measured, and connecting wires.
+
+\textbf{[Requirements]}
+
+(1) Draw the circuit diagrams of two different methods of measuring an inductance.
+
+(2) Write down the experimental method and the calculation formulas.
+
+(3) Measure the inductance of the inductor to be measured and its loss resistance.
+
+\textbf{Solution 7.13}\quad \textbf{1.} The circuit for measuring the inductance of the unknown inductor by the RLC series resonance method is shown in Fig.~7.13(a); the circuit for measuring the inductance of the unknown inductor by the vector-synthesis method (that is, the AC volt--ampere method) is shown in Fig.~7.13(b).
+
+\begin{figbox}{7.13(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% outer loop
+\draw (0.8,0.5) -- (0.8,1.45);
+\draw (0.8,2.25) -- (0.8,3.2);
+\draw (0.8,3.2) -- (1.60,3.2);
+% inductor L
+\foreach \x in {1.60,1.75,1.90,2.05} {
+  \draw (\x,3.2) arc (180:0:0.075);
+}
+\node[above] at (1.90,3.46) {$L$};
+\draw (2.20,3.2) -- (2.55,3.2);
+% capacitor C
+\draw (2.55,2.92) -- (2.55,3.48);
+\draw (2.70,2.92) -- (2.70,3.48);
+\node[above] at (2.62,3.52) {$C$};
+\draw (2.70,3.2) -- (3.85,3.2);
+\draw (3.85,3.2) -- (3.85,2.55);
+% resistor R
+\draw (3.65,2.55) rectangle (4.05,1.55);
+\node[right] at (4.10,2.05) {$R$};
+\draw (3.85,1.55) -- (3.85,0.5);
+\draw (3.85,0.5) -- (0.8,0.5);
+% source
+\draw (0.8,1.85) circle (0.40);
+\draw plot[domain=0:6.283,samples=60,smooth] ({0.8+0.13*sin(\x r)},{1.85+0.19*cos(\x r)});
+% oscilloscope across R
+\draw (3.85,2.55) -- (5.10,2.55) -- (5.10,2.30);
+\draw (5.10,2.30) circle (0.26);
+\draw[line width=0.6pt] (4.88,2.18) -- (5.04,2.18) -- (5.04,2.42) -- (5.18,2.42) -- (5.18,2.18) -- (5.30,2.18);
+\draw (5.10,2.04) -- (5.10,1.55) -- (3.85,1.55);
+\node[right] at (5.40,2.18) {\small oscilloscope};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.13(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% series chain at the top
+\draw (0.9,2.4) -- (1.30,2.4);
+\draw (1.30,2.24) rectangle (2.10,2.56);
+\node[above] at (1.70,2.60) {$R$};
+\draw (2.10,2.4) -- (2.55,2.4);
+\draw (2.55,2.24) rectangle (3.35,2.56);
+\node[above] at (2.95,2.60) {$R_L$};
+\draw (3.35,2.4) -- (3.70,2.4);
+\foreach \x in {3.70,3.85,4.00,4.15} {
+  \draw (\x,2.4) arc (180:0:0.075);
+}
+\node[above] at (4.00,2.64) {$L_x$};
+\draw (4.30,2.4) -- (4.95,2.4);
+\draw (4.95,2.4) -- (4.95,0.9);
+\draw (4.95,0.9) -- (0.9,0.9);
+\draw (0.9,0.9) -- (0.9,1.25);
+\draw (0.9,2.05) -- (0.9,2.4);
+% source
+\draw (0.9,1.65) circle (0.40);
+\draw plot[domain=0:6.283,samples=60,smooth] ({0.9+0.13*sin(\x r)},{1.65+0.19*cos(\x r)});
+% voltage arrows
+\draw[<->] (1.30,3.05) -- (2.10,3.05);
+\node[above] at (1.70,3.03) {\small $U_R$};
+\draw[<->] (2.55,3.05) -- (4.22,3.05);
+\node[above] at (3.38,3.03) {\small $U_L$};
+\draw[<->] (1.30,3.75) -- (4.22,3.75);
+\node[above] at (2.76,3.73) {\small $U$};
+\draw[dashed] (1.30,2.62) -- (1.30,3.10);
+\draw[dashed] (2.10,2.62) -- (2.10,3.10);
+\draw[dashed] (2.55,2.62) -- (2.55,3.10);
+\draw[dashed] (4.22,2.62) -- (4.22,3.10);
+\draw[dashed] (1.30,3.10) -- (1.30,3.80);
+\draw[dashed] (4.22,3.10) -- (4.22,3.80);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2.} Measurement of the inductance and of the loss resistance by the series resonance method.
+
+In Fig.~7.13(a) the earth lead of the oscilloscope must be connected to the earth lead of the signal generator, so as to prevent the short-circuiting of a component or of the source. In the experiment the capacitance of the capacitance box may be taken in the range $0.1\,\mu\mathrm{F}$--$0.5\,\mu\mathrm{F}$, and the resistance $R$ is generally taken in the range $10\,\Omega$--$30\,\Omega$, so as to ensure a comparatively large $Q$ of the series circuit and a comparatively small experimental error. The output frequency $f$ of the signal generator is changed so that the voltage $U_R$ across the resistor $R$ reaches a maximum; the circuit is then in resonance. We have
+\[
+f_0=\frac{1}{2\pi\sqrt{LC}}.
+\]
+Knowing the capacitance $C$ and the resonant frequency $f_0$, the unknown inductance can be found as
+\[
+L=\frac{1}{4\pi^2 f_0^2\,C}.
+\]
+The loss resistance $R_L$ of the inductor can be found by the following method. When the RLC series circuit is in resonance, the output voltage $U$ of the signal generator and the voltage $U_R$ across the resistor are measured. Since the circuit is then purely resistive, it satisfies
+\[
+\frac{U_R}{R}=\frac{U}{R+R_L},
+\]
+so
+\[
+R_L=\frac{U}{U_R}\cdot R-R.
+\]
+The value of $R_L$ so obtained is the loss resistance $R_L$ of the inductor at the frequency $f_0$.
+
+\textbf{3.} Measurement of the inductance and of the loss resistance by the AC volt--ampere method.
+
+The inductance of the coil is measured by the AC volt--ampere method using Fig.~7.13(b). The resistor $R$ and the inductor $L$ to be measured are connected in series in an alternating-current circuit, in which the resistance value of $R$ is known. A practical inductor may be regarded as an ideal inductance $L_x$ and a loss resistance $R_L$ in series. With the oscilloscope the voltages $U_R$ and $U_z$ across the resistor $R$ and across the inductor $L$ to be measured, and the total voltage $U_T$, are measured separately; using the vector diagram of Fig.~7.13(c), one obtains
+\begin{equation}
+(U_R+IR_L)^2+(IX_L)^2=U_T^2 \tag{1}
+\end{equation}
+\begin{equation}
+(IR_L)^2+(IX_L)^2=U_z^2 \tag{2}
+\end{equation}
+where $I$ is the current, $X_L$ the reactance, and $R_L$ the loss resistance of the inductor. Note that when $U_R$ is measured the resistor and the inductor must be interchanged, to prevent a short circuit.
+
+\begin{figbox}{7.13(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (6.0,0);
+\node[above right] at (6.0,0) {\small $I$};
+\draw (0,0) -- (2.40,0);
+\node[below] at (1.20,0) {\small $U_R$};
+\draw (2.40,0) -- (4.40,0);
+\node[below] at (3.40,0) {\small $IR_L$};
+\draw[line width=0.8pt] (4.40,0) -- (4.40,3.20);
+\node[right] at (4.46,1.60) {\small $IX_L$};
+\draw[line width=0.8pt,->] (0,0) -- (4.40,3.20);
+\node[above left] at (1.95,1.95) {\small $U_T$};
+\draw[line width=0.8pt] (2.40,0) -- (4.40,3.20);
+\node[right] at (3.62,2.05) {\small $U_z$};
+\end{tikzpicture}
+\end{figbox}
+
+Solving the two equations above and eliminating $IX_L$, one obtains
+\[
+R_L=\frac{U_T^2-U_R^2-U_z^2}{2U_RI}.
+\]
+Substituting $R_L$ into (1) and (2) gives
+\begin{equation}
+X_L=\frac{\sqrt{\left[U_T^2-(U_R-U_z)^2\right]\left[(U_R+U_z)^2-U_T^2\right]}}{2U_RI} \tag{3}
+\end{equation}
+in which $I$ can be calculated from $U_R/R$. Then, from $X_L$ and the frequency $f$ of the alternating voltage, the inductance can be calculated, namely
+\begin{equation}
+L=\frac{X_L}{2\pi f}. \tag{4}
+\end{equation}
+
+\begin{commentary}
+The series resonance method and the AC volt--ampere method for measuring the inductance of a coil are two of the basic methods of measuring inductance. In measuring inductance by the resonance method attention must be paid to the $Q$ of the circuit: if $Q$ is too small, a comparatively large measurement error will be introduced, and therefore the series resistance $R$ should not be chosen too large. In measuring inductance by the AC volt--ampere method, a suitable sine-wave frequency must be chosen so that the values of $U_z$ and $U_R$ are approximately equal (the same is true if the resistance $R$ is changed while the frequency is kept constant), and in the experiment $U_T$ should be as close as possible to the full scale of the AC voltmeter. Only in this way can the inductance and the loss resistance be measured with comparatively high accuracy. The two methods described above for measuring the inductance and the loss resistance of a coil are often used in competitions.
+\end{commentary}
+
+\subsection*{Experiment 7.14 \quad Measurement of the DC resistance, the AC impedance and the inductance of an inductor}
+
+Design a circuit to measure the DC resistance of a certain inductor and its AC impedance and inductance when a sinusoidal current is passed through it.
+
+\textbf{[Apparatus and materials available]}
+
+A low-frequency signal generator, a dry cell, a resistance box, two MF30 multimeters (with no battery inside), the inductor to be measured (with a ceramic dielectric), connecting wires, a switch, etc.
+
+\textbf{[Requirements]}
+
+(1) Draw the experimental circuit, and measure the DC resistance $R_L$ of the inductor.
+
+(2) Measure the AC impedance $Z$ of the inductor when a sinusoidal current of frequency $f=50.0\,\mathrm{Hz}$ is passed through it.
+
+(3) Calculate the inductance $L$ of the inductor.
+
+\textbf{Solution 7.14}\quad The circuit for measuring the DC resistance $R_L$ (the loss resistance of the inductor) is shown in Fig.~7.14(a); during the experiment the multimeter should be set to the DC voltage range. The circuit shown in Fig.~7.14(b) is used to measure the AC impedance $Z$ of the inductor, but before measuring, the multimeters must be set to the AC voltage range.
+
+\begin{figbox}{7.14(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% top chain
+\draw (0.9,3.3) -- (1.20,3.3);
+\draw (1.20,3.14) rectangle (2.00,3.46);
+\node[above] at (1.60,3.50) {$R_L$};
+\draw (2.00,3.3) -- (2.40,3.3);
+\foreach \x in {2.40,2.55,2.70,2.85} {
+  \draw (\x,3.3) arc (180:0:0.075);
+}
+\node[above] at (2.70,3.56) {$L$};
+\draw (3.00,3.3) -- (3.60,3.3);
+\draw (3.60,3.14) rectangle (4.40,3.46);
+\node[above] at (4.00,3.50) {$R$};
+\draw (4.40,3.3) -- (4.90,3.3);
+\draw (4.90,3.3) -- (4.90,1.0);
+\draw (0.9,1.0) -- (2.10,1.0);
+\draw (2.30,1.0) -- (3.10,1.0);
+\draw (3.86,1.0) -- (4.90,1.0);
+\draw (0.9,1.0) -- (0.9,3.3);
+% battery in bottom rail
+\draw (2.10,0.72) -- (2.10,1.28);
+\draw (2.30,0.86) -- (2.30,1.14);
+\node[below] at (2.20,0.68) {$\varepsilon$};
+% switch
+\draw (3.10,1.0) -- (3.30,1.0);
+\draw (3.30,1.0) -- (3.68,1.22);
+% voltmeter 1 across RL + L
+\fill (0.90,3.3) circle (0.05);
+\fill (2.92,3.3) circle (0.05);
+\draw (0.90,3.3) -- (0.90,2.05);
+\draw (0.90,2.05) -- (1.55,2.05);
+\draw (1.55,1.75) circle (0.30);
+\node at (1.55,1.75) {$V$};
+\draw (1.55,1.45) -- (1.55,1.00);
+% voltmeter 2 across R
+\fill (3.60,3.3) circle (0.05);
+\fill (4.40,3.3) circle (0.05);
+\draw (4.40,3.3) -- (4.40,2.05);
+\draw (4.15,2.05) -- (4.40,2.05);
+\draw (4.15,1.75) circle (0.30);
+\node at (4.15,1.75) {$V$};
+\draw (4.15,1.45) -- (4.15,1.00);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{figbox}{7.14(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% top chain
+\draw (0.9,3.3) -- (1.20,3.3);
+\draw (1.20,3.14) rectangle (2.00,3.46);
+\node[above] at (1.60,3.50) {$R_L$};
+\draw (2.00,3.3) -- (2.40,3.3);
+\foreach \x in {2.40,2.55,2.70,2.85} {
+  \draw (\x,3.3) arc (180:0:0.075);
+}
+\node[above] at (2.70,3.56) {$L$};
+\draw (3.00,3.3) -- (3.60,3.3);
+\draw (3.60,3.14) rectangle (4.40,3.46);
+\node[above] at (4.00,3.50) {$R$};
+\draw (4.40,3.3) -- (4.90,3.3);
+\draw (4.90,3.3) -- (4.90,1.0);
+\draw (4.90,1.0) -- (3.90,1.0);
+% switch in the bottom rail
+\draw (3.90,1.0) -- (3.70,1.0);
+\draw (3.70,1.0) -- (3.32,1.22);
+\draw (3.14,1.0) -- (0.9,1.0);
+\draw (0.9,1.0) -- (0.9,3.3);
+% voltmeter 1 across RL + L
+\fill (0.90,3.3) circle (0.05);
+\fill (2.92,3.3) circle (0.05);
+\draw (0.90,3.3) -- (0.90,2.05);
+\draw (0.90,2.05) -- (1.55,2.05);
+\draw (1.55,1.75) circle (0.30);
+\node at (1.55,1.75) {$V$};
+\draw (1.55,1.45) -- (1.55,1.00);
+% voltmeter 2 across R
+\fill (3.60,3.3) circle (0.05);
+\fill (4.40,3.3) circle (0.05);
+\draw (4.40,3.3) -- (4.40,2.05);
+\draw (4.15,2.05) -- (4.40,2.05);
+\draw (4.15,1.75) circle (0.30);
+\node at (4.15,1.75) {$V$};
+\draw (4.15,1.45) -- (4.15,1.00);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{1. Measurement of the DC resistance $R_L$}
+
+Take $R=35.00\,\Omega$; the measured values are $U_1=0.705\,\mathrm{V}$ and $U_2=0.680\,\mathrm{V}$.
+\[
+\therefore\quad R_L=\frac{U_1}{I}=\frac{U_1}{U_2}\cdot R=\frac{0.705}{0.680}\times35.00=36.3\,(\Omega).
+\]
+
+\textbf{2. Measurement of the AC impedance $Z$ of the inductor}
+
+The frequency of the sinusoidal alternating current is $f=50.00\,\mathrm{Hz}$, $R=50.00\,\Omega$; the measured values are $U_1=9.00\,\mathrm{V}$ and $U_2=9.35\,\mathrm{V}$.
+\[
+Z=\frac{U_1}{I}=\frac{U_1}{U_2}\cdot R=50.00\times\frac{9.00}{9.35}=48.1\,(\Omega).
+\]
+
+\textbf{3.} Since $U^2=U_{R_L}^2+U_L^2$, we have $Z^2=R_L^2+(\omega L)^2$. At the low frequency $f=50.0\,\mathrm{Hz}$ the loss resistance $R_L$ of the inductor is approximately equal to the loss resistance in the DC case.
+\[
+\text{Hence,}\quad L=\frac{\sqrt{Z^2-R_L^2}}{\omega}=\frac{\sqrt{48.1^2-36.3^2}}{2\pi\cdot50.00}=0.100\,(\mathrm{H}).
+\]
+
+\textbf{4.} From Fig.~7.14(c) it can be seen that, when a sinusoidal alternating current passes through the inductor, the phase angle $\alpha$ between the voltage across the inductor and the current through it is
+\[
+\cos\alpha=\frac{R_L}{Z}=\frac{36.3}{48.1}=0.7547,
+\]
+so that $\alpha=41.0\degree$.
+
+\begin{figbox}{7.14(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[line width=0.8pt,->] (0,0) -- (0,3.4);
+\node[left] at (0,3.42) {$U_L$};
+\draw[line width=0.8pt,->] (0,0) -- (3.3,0);
+\node[below] at (3.32,-0.02) {$U_{R_L}$};
+\draw[line width=0.8pt,->] (0,0) -- (3.3,3.4);
+\node[right] at (3.32,3.42) {$U$};
+\draw[dashed] (3.3,0) -- (3.3,3.4);
+\draw (0.95,0) arc (0:45.9:0.95);
+\node at (1.25,0.36) {\small $\alpha$};
+\end{tikzpicture}
+\end{figbox}
+
+\subsection*{Experiment 7.15 \quad Determination of the relative permittivity of the insulating medium between the two conductors of a coaxial cable}
+
+A coaxial cable is a transmission line commonly used in industry and in research laboratories. The relative permittivity of the medium between the conductors of a coaxial cable (the conductors consisting of a single solid wire and a copper braid) determines the capacitance formed by the two conductors. It is now required to determine experimentally the relative permittivity $\varepsilon_r$ of this cable.
+
+\textbf{[Apparatus and materials available]}
+
+A low-frequency signal generator, an oscilloscope, a resistance box, a standard inductor, a section of the cable to be tested (about 1\,m long, which may be cut as required), scissors, a ruler, a micrometer, connecting wires, and 2 sheets of graph paper.
+
+\textbf{[Requirements]}
+
+(1) Write down the test scheme or the experimental steps.
+
+(2) Draw the experimental circuit.
+
+(3) Measure the necessary data (repeated measurements are required).
+
+(4) Process the data.
+
+(5) Calculate the value of the relative permittivity $\varepsilon_r$ of the insulating medium.
+
+\textbf{Hint 7.15}
+
+1. The relative permittivity of a material is $\varepsilon_r=C_x/C_0$, where $C_x$ is the capacitance of the capacitor when it is filled with a certain medium, and $C_0$ is the capacitance of the capacitor in vacuum.
+
+2. For the coaxial cable to be tested, neglecting the edge effects at its two ends, the capacitance $C_0$ when the medium is vacuum can be calculated by the following formula:
+\[
+C_0=\frac{2\pi\varepsilon_0 l}{\ln\dfrac{b}{a}},
+\]
+where $a$ is the inner radius and $b$ the outer radius of the cable. The structure of the cable is shown in the figure.
+
+\begin{figbox}{7.15(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% cable body
+\draw (1.10,3.30) -- (6.40,3.30);
+\draw (1.10,2.70) -- (6.40,2.70);
+\draw (1.10,3.30) arc (90:270:0.30);
+\draw (6.40,3.30) arc (90:-90:0.30);
+% braid hatching
+\foreach \x in {1.60,1.90,...,6.10} {
+  \draw (\x,2.70) -- (\x+0.22,3.30);
+}
+% inner conductor
+\draw (0.70,3.00) -- (6.10,3.00);
+\node[left] at (0.66,3.00) {\small core};
+% length dimension
+\draw[dashed] (1.10,2.40) -- (1.10,1.95);
+\draw[dashed] (6.40,2.40) -- (6.40,1.95);
+\draw[<->] (1.10,2.10) -- (6.40,2.10);
+\node[above] at (3.75,2.12) {$l$};
+% cross-section
+\draw (2.55,0.75) circle (0.75);
+\draw (2.55,0.75) circle (0.22);
+\fill[black!80] (2.55,0.75) circle (0.22);
+\draw[->] (2.55,0.75) -- (3.12,1.29);
+\node[right] at (3.16,1.34) {$b$ (outer radius)};
+\draw[->] (2.55,0.75) -- (2.30,0.32);
+\node[left] at (2.26,0.26) {$a$ (inner radius)};
+\end{tikzpicture}
+\end{figbox}
+
+The permittivity of vacuum is $\varepsilon_0=8.90\times10^{-12}\,\mathrm{C^2/(N\cdot m^2)}$.
+
+3. In the experiment, the distributed capacitance between the leads and the distributed capacitance in the standard inductor, etc., form a background capacitance $C'$. When the relative positions and shapes of the leads are unchanged, this value is a constant. In the experiment the influence of this value on the measurement result must be eliminated.
+
+\textbf{Solution 7.15}\quad \textbf{1. Test scheme and experimental steps.}
+
+(1) The key of this experiment is to obtain the result for $C_x$; the measuring method may be the RLC series resonance method. With scissors strip the centre conductor and the outer shielding braid of the cable, then connect them in series with $R$ and $L$ and connect the combination to the output terminals of the low-frequency signal generator; by changing the frequency, measure the resonant frequency $f_0$ of this series circuit.
+
+(2) At the other end of the cable cut off 5--10\,cm at a time, and measure the resonant frequency corresponding to each different length of cable.
+
+(3) From the formula $f_0=1/(2\pi\sqrt{LC})$, find the corresponding capacitance $C$ values.
+
+(4) Plot the straight-line graph of $C$ against $l$, and from it obtain the value $C'$ at $l=0$ (the intercept); $C'$ is the background capacitance.
+
+(5) $C_x=C-C'$ is then the capacitance of the cable for each different length.
+
+(6) Use the micrometer to measure the values of $a$ and $b$ of the cable, and the ruler to measure the value of $l$; from the formula for the capacitance of a coaxial cable obtain the value of $C_0$.
+
+(7) From the values of $C_x$ and $C_0$ measured for cables of different lengths, the result for $\varepsilon_r$ can be calculated.
+
+\textbf{2.} The experimental circuit is shown in the figure.
+
+\begin{figbox}{7.15(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% outer loop
+\draw (0.9,0.7) -- (0.9,1.72);
+\draw (0.9,2.48) -- (0.9,3.5);
+\draw (0.9,3.5) -- (3.10,3.5);
+% inductor L along the top
+\foreach \x in {3.10,3.25,3.40,3.55} {
+  \draw (\x,3.5) arc (180:0:0.075);
+}
+\node[above] at (3.40,3.74) {$L$};
+\node[right] at (3.72,3.74) {\small $0.1\,\mathrm{H}$};
+\draw (3.70,3.5) -- (5.10,3.5);
+\draw (5.10,3.5) -- (5.10,3.05);
+% capacitor Cx
+\draw (4.80,3.05) -- (5.40,3.05);
+\draw (4.80,2.75) -- (5.40,2.75);
+\node[right] at (5.46,2.90) {$C_x$};
+\draw (5.10,2.75) -- (5.10,1.85);
+% resistor R
+\draw (4.80,1.85) rectangle (5.40,1.15);
+\node[left] at (4.74,1.50) {$R$};
+\node[left] at (4.74,1.05) {\small $0\sim100\,\Omega$};
+\draw (5.10,1.15) -- (5.10,0.7);
+\draw (5.10,0.7) -- (0.9,0.7);
+% source
+\draw (0.9,2.10) circle (0.38);
+\draw plot[domain=0:6.283,samples=60,smooth] ({0.9+0.12*sin(\x r)},{2.10+0.18*cos(\x r)});
+% oscilloscope in parallel with R
+\draw (5.10,1.85) -- (6.30,1.85) -- (6.30,1.72);
+\draw (6.30,1.30) circle (0.24);
+\draw[line width=0.6pt] (6.14,1.20) -- (6.24,1.20) -- (6.24,1.38) -- (6.36,1.38) -- (6.36,1.20) -- (6.46,1.20);
+\node[below] at (6.30,0.98) {\small oscilloscope};
+\draw (6.30,1.06) -- (6.30,0.84) -- (5.10,0.84);
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{3.} The measured experimental data are as follows.
+
+$l=1.000\,\mathrm{m}$, $a=0.740\,\mathrm{mm}$, $b=2.200\,\mathrm{mm}$.
+
+\begin{center}
+{\small Table 7.15-1}\\*[2pt]
+\begin{tabular}{lcccccc}
+\toprule
+$l/\mathrm{m}$ & 1.000 & 0.900 & 0.800 & 0.700 & 0.600 & 0.500\\
+\midrule
+$f_{01}/\mathrm{Hz}$ & 30\,430 & 30\,970 & 31\,660 & 32\,370 & 33\,080 & 33\,880\\
+$f_{02}/\mathrm{Hz}$ & 30\,440 & 30\,940 & 31\,640 & 32\,380 & 33\,050 & 33\,840\\
+$f_{03}/\mathrm{Hz}$ & 30\,450 & 30\,950 & 31\,640 & 32\,300 & 33\,100 & 33\,900\\
+\midrule
+$\overline{f}_0/\mathrm{Hz}$ & 30\,440 & 30\,953 & 31\,647 & 32\,350 & 33\,080 & 33\,873\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{4. Data processing}
+
+(1) The intercept $C'$ is obtained graphically: $C'=166.0\,\mathrm{pF}$. The $C$--$l$ graph is omitted.
+
+(2) The values of $C_0$ for the different lengths $l$ are calculated.
+
+\begin{center}
+{\small Table 7.15-2}\\*[2pt]
+\begin{tabular}{lcccccc}
+\toprule
+$l/\mathrm{m}$ & 1.000 & 0.900 & 0.800 & 0.700 & 0.600 & 0.500\\
+\midrule
+$C_0/10^{-12}\,\mathrm{F}$ & 51.3 & 46.2 & 41.0 & 35.9 & 30.8 & 25.6\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(3) For $l=1.000$, $0.900$, $0.800$, $0.700$, $0.600$ and $0.500\,\mathrm{m}$, the value $C'$ is subtracted from the measured capacitance $C$, and the value $C_x$ is then obtained.
+
+\begin{center}
+{\small Table 7.15-3}\\*[2pt]
+\begin{tabular}{lcccccc}
+\toprule
+$l/\mathrm{m}$ & 1.000 & 0.900 & 0.800 & 0.700 & 0.600 & 0.500\\
+\midrule
+$C/10^{-12}\,\mathrm{F}$ & 276.7 & 264.7 & 253.2 & 242.3 & 231.8 & 221.0\\
+$C_x/10^{-12}\,\mathrm{F}$ & 110.7 & 98.7 & 87.2 & 76.3 & 65.8 & 55.0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{5. Calculation of the result.}
+
+\begin{center}
+{\small Table 7.15-4}\\*[2pt]
+\begin{tabular}{lccccccc}
+\toprule
+$l/\mathrm{m}$ & 1.000 & 0.900 & 0.800 & 0.900 & 0.700 & 0.600 & 0.500\\
+\midrule
+$\varepsilon_r$ & 2.16 & 2.14 & 2.13 & 2.13 & 2.13 & 2.14 & 2.15\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\[
+\varepsilon_r=\frac{C_x}{C_0};\qquad \overline{\varepsilon}_r=2.14.
+\]
+
+\begin{commentary}
+The content learnt in this experiment is quite rich; it contains several important experimental items. 1. Measurement of capacitance by the resonance method. If the object to be measured is a small capacitance (a capacitance of $1\times10^2\,\mathrm{pF}$ to $1\times10^3\,\mathrm{pF}$), the resonant frequency may then be greater than $1\times10^4\,\mathrm{Hz}$; if the experimenter makes a correct analysis and estimate, the resonance point can be found comparatively quickly. 2. The distributed capacitance of an inductor means that in a practical coil the potential difference existing between one turn and another also forms a capacitance, so that a practical coil may be regarded as a pure inductance in parallel with a distributed capacitance. When the resonant frequency is greater than $1\times10^4\,\mathrm{Hz}$, the effect of the distributed capacitance of the inductor cannot be neglected. In this experiment the extrapolation method is used to measure the distributed capacitance of the inductor (including the distributed capacitance of the leads), which is an important experimental method. 3. This experiment is also a method of measuring the permittivity of a solid.
+\end{commentary}
+
+\subsection*{Experiment 7.16 \quad Measurement of the characteristic of the resistance $R$ of a thermistor versus the temperature $t$}
+
+\textbf{[Apparatus and materials available]}
+
+Three resistance boxes, one type-A cell (1.5\,V), a galvanometer, a thermistor (its resistance at room temperature is about $10\,\mathrm{k}\Omega$; during the experiment the current through it must be less than $500\,\mu\mathrm{A}$), a vacuum flask, hot water, cold water, a switch, connecting wires, a thermometer, a stirrer, drawing paper, etc.
+
+\textbf{[Requirements]}
+
+(1) Draw the experimental circuit.
+
+(2) Measure the data of the resistance $R$ of the thermistor versus the temperature $t$.
+
+(3) Find the empirical formula for the relation between the resistance of the thermistor and the thermodynamic temperature $T$.
+
+\textbf{Solution 7.16}\quad \textbf{1.} The resistance of a thermistor is
+\[
+R_T=A\ee^{B/T},
+\]
+where $T$ is the thermodynamic temperature and $A$ and $B$ are constants to be determined, with $T=273.15+t$.
+
+The experimental circuit is shown in the figure.
+
+\begin{figbox}{7.16(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% bridge nodes
+\coordinate (A) at (-1.4,2.9);
+\coordinate (B) at (0.8,4.5);
+\coordinate (C) at (0.8,1.4);
+\coordinate (D) at (3.0,2.9);
+\draw (A) -- (B) -- (D);
+\draw (A) -- (C);
+% R1 on A-B
+\draw[fill=white,rotate around={36:(-0.30,3.70)}] (-0.68,3.55) rectangle (0.08,3.85);
+\node[above left] at (-0.60,3.90) {$R_1$};
+% R2 on B-D
+\draw[fill=white,rotate around={-36:(1.90,3.70)}] (1.52,3.55) rectangle (2.28,3.85);
+\node[above right] at (2.28,3.90) {$R_2$};
+% R3 on A-C
+\draw[fill=white,rotate around={-36:(-0.30,2.15)}] (-0.68,2.00) rectangle (0.08,2.30);
+\node[below left] at (-0.60,1.95) {$R_3$};
+% fourth arm: thermistor immersed in the bath
+\draw (C) -- (0.8,-0.40) -- (2.30,-0.40);
+\draw (2.30,-0.55) rectangle (3.30,-0.25);
+\node[above] at (2.10,-0.30) {$R_t$};
+\draw (3.30,-0.40) -- (3.30,0.55) -- (4.90,0.55) -- (4.90,2.10) -- (3.0,2.10) -- (D);
+% galvanometer branch B-C
+\draw (B) -- (0.8,3.60);
+\draw (0.8,3.30) circle (0.28);
+\draw[->] (0.68,3.20) -- (0.92,3.42);
+\node[right] at (1.14,3.30) {$G$};
+\draw (0.8,3.02) -- (0.8,2.30);
+\fill (0.8,2.30) circle (0.04);
+\draw (0.8,2.14) -- (1.06,2.42);
+\fill (0.8,2.14) circle (0.04);
+\draw (0.8,2.14) -- (0.8,1.4);
+\node[right] at (1.10,2.24) {$K_2$};
+% source branch A-D
+\draw (A) -- (-2.40,2.9) -- (-2.40,-1.8) -- (-1.85,-1.8);
+\draw (-1.85,-2.10) -- (-1.85,-1.50);
+\draw (-1.65,-1.94) -- (-1.65,-1.66);
+\node[below] at (-1.75,-2.12) {$E$};
+\draw (-1.65,-1.8) -- (-0.55,-1.8);
+\draw (-0.55,-1.96) rectangle (0.35,-1.64);
+\node[below] at (-0.10,-2.02) {$10\,\mathrm{k}\Omega$};
+\draw (0.35,-1.8) -- (1.10,-1.8);
+\draw (1.10,-1.8) -- (1.48,-1.58);
+\draw (1.66,-1.8) -- (5.60,-1.8) -- (5.60,2.9) -- (D);
+\node[above] at (1.30,-1.60) {$K$};
+% beaker with liquid
+\draw[line width=0.6pt] (1.40,-1.30) -- (1.40,0.30);
+\draw[line width=0.6pt] (4.40,-1.30) -- (4.40,0.30);
+\draw[line width=0.6pt] (1.40,-1.30) -- (4.40,-1.30);
+\draw (1.40,0.05) -- (4.40,0.05);
+\node[below] at (2.90,-1.38) {\small bath};
+% thermometer
+\draw (1.75,1.90) -- (1.75,-0.75);
+\draw (1.75,-0.75) circle (0.10);
+\node[right] at (1.86,1.70) {\small thermometer};
+% stirrer
+\draw (3.95,0.20) -- (3.95,-0.90);
+\draw (3.77,-0.90) -- (4.13,-0.90);
+\node[right] at (4.16,-0.70) {\small stirrer};
+\end{tikzpicture}
+\end{figbox}
+
+\textbf{2.} The experimental data are given in Table 7.16-1.
+
+\[
+R_1=1000\,\Omega,\qquad R_2=1000\,\Omega,\qquad R_T=\frac{R_1}{R_2}\cdot R_4.
+\]
+
+\begin{center}
+{\small Table 7.16-1}\\*[2pt]
+\begin{tabular}{ccccc}
+\toprule
+$R_T/\Omega$ & $t/\degree\mathrm{C}$ & $\ln R_T$ & $T/\mathrm{K}$ & $\dfrac{1}{T}/10^{-3}\,\mathrm{K^{-1}}$\\
+\midrule
+1\,630 & 94.71 & 7.3963 & 367.86 & 2.7184\\
+2\,136 & 82.57 & 7.6667 & 355.72 & 2.8112\\
+2\,565 & 75.11 & 7.8497 & 348.26 & 2.8714\\
+3\,747 & 62.29 & 8.2287 & 335.44 & 2.9812\\
+5\,184 & 50.25 & 8.5533 & 323.40 & 3.0921\\
+7\,324 & 38.70 & 8.8989 & 311.85 & 3.2067\\
+9\,486 & 30.43 & 9.1576 & 303.58 & 3.2940\\
+$6.163\times10^4$ & 24.50 & 9.3613 & 297.65 & 3.3597\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Plotting the straight line $\ln R_T$--$1/T$ gives $B=3.05\times10^3\,\mathrm{K}$, $\ln A=-0.888$, $A=0.411\,\Omega$, and hence
+\[
+R_T=0.411\,\ee^{3.05\times10^3/T}\ \Omega.
+\]
+If this thermistor is used to measure a certain temperature, it is only necessary to measure the resistance at that temperature, and the temperature $T$ can then be calculated from the above formula.
+
+\begin{commentary}
+In this experiment the required temperature is obtained in the thermostat by mixing hot and cold water; the sensing parts of the thermometer and of the thermistor should be placed as close to each other as possible, and the mixture must be stirred continuously, so that an accurate temperature is obtained. In data processing, the curve equation is transformed into a linear equation, and the undetermined constants are then found by fitting a straight line; this is also often used in physics experiments.
+\end{commentary}
+
+\subsection*{Experiment 7.17 \quad Measurement of the characteristics of a new two-terminal integrated-circuit temperature sensor}
+
+When the temperature is constant, the output current of the integrated temperature sensor supplied in this problem is a constant value. Its working voltage ranges from $U_r$ to $20\,\mathrm{V}$, where $U_r$ is the minimum working voltage. Measure the volt--ampere characteristic of this sensor at constant temperature, and its temperature characteristic at constant working voltage.
+
+\textbf{[Apparatus and materials available]}
+
+A DC stabilised power supply, a digital DC voltmeter (with automatic range switching), three resistance boxes, one integrated temperature sensor, one $0$--$50\,\degree\mathrm{C}$ thermometer, one beaker (containing water at room temperature), two thermos cups (containing an ice--water mixture and hot water), two sheets of drawing paper, a switch, a stirring rod, connecting wires, etc.
+
+\textbf{[Requirements]}
+
+(1) At $0\,\degree\mathrm{C}$ measure the output current $I$ of the integrated temperature sensor and the voltage $U$ applied across its terminals; plot the $I$--$U$ graph and find the minimum voltage $U_r$ at which the current is constant at $0\,\degree\mathrm{C}$.
+
+(2) In the temperature range from room temperature to $50\,\degree\mathrm{C}$, measure the relation between the current $I$ and the temperature $\theta$, find the empirical formula, and state the meaning of each constant in the empirical formula.
+
+(3) Using a 12\,V DC source, a digital DC voltmeter, etc., assemble a Celsius thermometer such that the reading of the digital voltmeter is $0\,\mathrm{mV}$ when the sensor temperature is $0\,\degree\mathrm{C}$, and $50\,\mathrm{mV}$ when the sensor temperature is $50\,\degree\mathrm{C}$. Use the Celsius thermometer so assembled to measure the temperature of water at room temperature, and compare the result with the value measured by a mercury thermometer. Draw the circuit of your design.
+
+\textbf{Solution 7.17}\quad \textbf{1.} The circuit for measuring the integrated temperature sensor AD590 is shown in Fig.~7.17(a).
+
+The resistance is $R=1000\,\Omega$, and $I=U/R$. The experimental data are shown in Table 7.17-1.
+
+\begin{figbox}{7.17(a)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% left branch with the sensor
+\draw (0.9,0.7) -- (0.9,2.10);
+\draw (0.9,2.10) -- (0.35,2.10);
+% AD590 symbol
+\draw (0.35,2.95) circle (0.42);
+\draw (0.35,2.10) -- (0.35,2.53);
+\draw (0.35,3.37) -- (0.35,4.10);
+\draw[->] (0.35,2.62) -- (0.35,3.20);
+\node[left] at (-0.12,3.22) {$+$};
+\node[left] at (-0.12,2.45) {$-$};
+\node[left] at (-0.55,3.40) {\small AD590};
+% top rail with battery
+\draw (0.35,4.10) -- (2.30,4.10);
+\draw (2.30,4.50) -- (2.30,3.70);
+\draw (2.55,4.34) -- (2.55,3.86);
+\node[above] at (2.42,4.55) {$12\,\mathrm{V}$};
+\draw (2.55,4.10) -- (4.20,4.10);
+\draw (4.20,4.10) -- (4.20,3.55);
+% switch K
+\draw (4.20,3.55) -- (4.42,3.85);
+\draw (4.20,3.25) -- (4.20,0.70);
+\node[right] at (4.46,3.60) {$K$};
+% bottom rail with R and voltmeter
+\draw (4.20,0.70) -- (3.90,0.70);
+\draw (3.90,0.54) rectangle (2.10,0.86);
+\node[below] at (3.00,0.50) {$R=1000\,\Omega$};
+\draw (2.10,0.70) -- (0.90,0.70);
+\draw (2.10,0.70) -- (2.10,0.0);
+\draw (3.90,0.70) -- (3.90,0.0);
+\draw (2.10,0.0) -- (2.62,0.0);
+\draw (3.18,0.0) circle (0.28);
+\node at (3.18,0.0) {$V$};
+\draw (3.46,0.0) -- (3.90,0.0);
+\end{tikzpicture}
+\end{figbox}
+
+\begin{center}
+{\small Table 7.17-1\quad (temperature $\theta=3.0\,\degree\mathrm{C}$)}\\*[2pt]
+\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{l*{13}{c}}
+\toprule
+$U_\Sigma/\mathrm{V}$ & 1.326 & 1.589 & 1.736 & 2.065 & 2.342 & 2.456 & 2.533 & 2.680 & 2.713 & 2.880 & 3.010 & 3.252 & 3.643\\
+$U_r/\mathrm{V}$ & 0.200 & 0.777 & 1.130 & 1.795 & 2.306 & 2.495 & 2.616 & 2.770 & 2.775 & 2.760 & 2.759 & 2.759 & 2.760\\
+$I/\mu\mathrm{A}$ & 20.0 & 77.7 & 113.0 & 179.5 & 230.6 & 249.5 & 261.6 & 277.0 & 276.0 & 275.9 & 275.9 & 275.9 & 276.0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The relation between $I$ and $U_r$ is shown in Fig.~7.17(b).
+
+\begin{figbox}{7.17(b)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\draw[->] (0,0) -- (7.2,0) node[below] {$U_r/\mathrm{V}$};
+\draw[->] (0,0) -- (0,5.6) node[left] {$I/\mu\mathrm{A}$};
+% grid
+\foreach \i in {1,2,...,14} {
+  \draw[black!35,line width=0.2pt] (\i*0.45,0) -- (\i*0.45,5.0);
+}
+\foreach \j in {1,2,...,10} {
+  \draw[black!35,line width=0.2pt] (0,\j*0.5) -- (6.3,\j*0.5);
+}
+\foreach \i in {0,2,4,6,8,10,12,14} {
+  \draw (\i*0.45,0) -- (\i*0.45,-0.08);
+  \node[below] at (\i*0.45,-0.10) {\small \pgfmathparse{\i/4}\pgfmathresult};
+}
+\foreach \j/\lab in {2/100,4/200,6/300,8/400} {
+  \draw (0,\j*0.6) -- (-0.08,\j*0.6);
+  \node[left] at (-0.10,\j*0.6) {\small \lab};
+}
+\node[below] at (0,-0.10) {\small 0};
+% characteristic
+\draw[line width=0.9pt] plot[smooth,tension=0.7] coordinates {
+(0.36,0.24) (1.40,0.93) (2.03,1.36) (3.23,2.15) (4.15,2.77) (4.49,2.99)
+(4.71,3.14) (4.99,3.32) (5.60,3.32) (6.30,3.32)};
+\node[right] at (2.30,4.30) {\small $I$--$U$ graph};
+\draw[dashed] (4.82,0) -- (4.82,3.32);
+\node[below] at (4.82,-0.10) {\small $2.68$};
+\node[above] at (4.60,3.38) {\small $U_r=2.68\,\mathrm{V}$};
+\end{tikzpicture}
+\end{figbox}
+
+The minimum working voltage is $U_r=2.68\,\mathrm{V}$.
+
+\textbf{2. Determination of the empirical formula and its constants}
+
+\begin{center}
+{\small Table 7.17-2}\\*[2pt]
+\begin{tabular}{lccccccc}
+\toprule
+$\theta/\degree\mathrm{C}$ & 29.0 & 34.2 & 37.0 & 40.0 & 42.8 & 45.8 & 49.2\\
+$U_r/\mathrm{V}$ & 3.036 & 3.086 & 3.112 & 3.143 & 3.168 & 3.196 & 3.239\\
+$I/\mu\mathrm{A}$ & 303.6 & 308.6 & 311.2 & 314.3 & 316.8 & 319.6 & 323.9\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A straight line is fitted to the $I$--$\theta$ data in order to find the empirical formula. By the method of least squares, the correlation coefficient is $r=0.999$, the slope is $B=0.9873\,\mu\mathrm{A/^{\circ}C}$, and the intercept is $A=274.8\,\mu\mathrm{A}$. Hence
+\[
+I=0.9873\,\theta+274.8 .
+\]
+The current--temperature sensitivity of this sensor is approximately $1\,\mu\mathrm{A/^{\circ}C}$, and the numerical value of the intercept is approximately $273\,\mu\mathrm{A}$.
+
+\textbf{3. Construction of a Celsius thermometer}
+
+The compensation circuit of Fig.~7.17(c) is used. In it $R_4$ and $R_3$ form a voltage divider; $R_2=1000.9\,\Omega$, $R_3=1000\,\Omega$, and the supply voltage is $12\,\mathrm{V}$. When the self-made Celsius temperature sensor AD590 is placed in an ice--water mixture, $\theta=1.2\,\degree\mathrm{C}$ and the voltmeter reading is $1.2\,\mathrm{mV}$.
+
+When the AD590 sensor is placed in water at room temperature, the reading of the thermometer is $28.8\,\mathrm{mV}$ (taken as $28.8\,\degree\mathrm{C}$), while a mercury thermometer measures $28.7\,\degree\mathrm{C}$.
+
+\begin{figbox}{7.17(c)}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+% bridge nodes
+\coordinate (A) at (0.30,2.70);
+\coordinate (B) at (2.30,4.60);
+\coordinate (C) at (2.30,0.80);
+\coordinate (D) at (4.30,2.70);
+\draw (B) -- (D) -- (C) -- cycle;
+% sensor in A-B
+\draw (A) -- (0.92,3.28);
+\draw (1.68,4.00) -- (B);
+\draw (1.30,3.65) circle (0.28);
+\draw[->] (1.20,3.48) -- (1.40,3.65);
+\node[left] at (0.94,3.70) {\small AD590};
+\node[above] at (1.30,3.95) {$+$};
+% R4 in B-D
+\draw[fill=white,rotate around={-43.5:(3.30,3.65)}] (2.92,3.50) rectangle (3.68,3.80);
+\node[right] at (3.76,3.70) {$R_4$};
+% R2 in A-C
+\draw[fill=white,rotate around={43.5:(1.30,1.75)}] (0.92,1.60) rectangle (1.68,1.90);
+\node[left] at (0.82,1.60) {$R_2$};
+% R3 in C-D
+\draw[fill=white,rotate around={-43.5:(3.30,1.75)}] (2.92,1.60) rectangle (3.68,1.90);
+\node[right] at (3.76,1.60) {$R_3$};
+% voltmeter between A and D
+\draw (A) -- (2.30,2.70);
+\draw (2.30,2.70) circle (0.30);
+\node at (2.30,2.70) {$V$};
+\draw (2.60,2.70) -- (D);
+% source from B to C on the right
+\draw (B) -- (5.30,4.60) -- (5.30,3.75);
+\draw (5.05,3.75) -- (5.55,3.75);
+\draw (5.15,3.52) -- (5.45,3.52);
+\draw (5.30,3.52) -- (5.30,1.60);
+\node[right] at (5.58,3.62) {$12\,\mathrm{V}$};
+\draw (5.30,1.60) -- (5.66,1.92);
+\draw (5.30,1.60) -- (5.30,0.80) -- (C);
+\node[right] at (5.70,1.96) {$K$};
+\end{tikzpicture}
+\end{figbox}
+
+\begin{commentary}
+The reading of such a thermometer at $0\,\degree\mathrm{C}$ is not zero. In this case the compensation method may be used to make it zero, and this is also a commonly used experimental method.
+\end{commentary}
